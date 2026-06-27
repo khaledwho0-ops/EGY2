@@ -138,3 +138,18 @@ Goal (from `…\Desktop\New folder (20)\…\TASK.txt`): **every page** gets (a) 
 **Bottom line for the next agent:** the platform is shippable now (run §4 gate → deploy). The biggest remaining
 *feature* is the per-page help system (Priority 2) — finish it data-first via the page-guides registry, never by editing
 135 pages. Keep the One-Law, keep it name-free, keep it bilingual, and re-run the cognition validators after any data change.
+
+---
+
+## 6 · GIT / DEPLOY TARGET — EGY2 (critical, do not confuse with the backup)
+- **`origin` = `github.com/khaledwho0-ops/EGY2`** (PRIVATE) — THIS is the deploy target. Push here.
+- **`backup` = `github.com/khaledwho0-ops/EGY-awareness-library`** — the user's SAFE BACKUP. **NEVER push to `backup`.**
+- Local working branch is **`egy2clean`** which tracks **`origin/master`**. EGY2 was seeded as a clean single-commit
+  snapshot (no old history — full history is preserved on `backup`). Normal flow: edit → `git add -A && git commit` →
+  `git push` (goes to EGY2 `master`).
+- **Token limitation:** the `gh` token lacks `workflow` scope, so **`.github/workflows/*` files cannot be pushed**
+  (that's why CI isn't in the repo). To enable CI: add `.github/workflows/ci.yml` via GitHub's web UI (YAML is in
+  `DEPLOYMENT_PLAN.md §3`), OR run `gh auth refresh -h github.com -s workflow` (interactive) then push the file.
+- **First Vercel deploy:** vercel.com → Add New → Project → Import `khaledwho0-ops/EGY2` → it auto-detects Next.js +
+  `vercel.json` → add env vars (≥1 AI key + `JWT_SECRET`; rest optional, app fails loud not crash) → Deploy. After that,
+  every `git push` to EGY2 auto-deploys; branches get preview URLs; rollback is one click in Vercel.

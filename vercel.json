@@ -3,6 +3,5 @@
   "installCommand": "npm install --legacy-peer-deps",
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "ignoreCommand": "exit 0",
-  "maxDuration": 60
+  "ignoreCommand": "exit 0"
 }

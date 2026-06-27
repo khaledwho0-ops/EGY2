@@ -1,0 +1,98 @@
+{
+  "id": "subgroup_analysis",
+  "phase": 2,
+  "week": 16,
+  "day": 32,
+  "title": "Subgroup Analysis Pitfalls",
+  "titleAr": "مزالق تحليل المجموعات الفرعية",
+  "description": "Understand the statistical dangers of subgroup analyses, multiplicity problems, and how to distinguish pre-specified from exploratory subgroup analyses.",
+  "descriptionAr": "فهم المخاطر الإحصائية لتحليلات المجموعات الفرعية، ومشاكل التعدد، وكيفية التمييز بين التحليلات المحددة مسبقاً والاستكشافية.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Subgroup Analysis and Multiplicity",
+    "nameAr": "تحليل المجموعات الفرعية والتعدد",
+    "definition": "Subgroup analysis examines treatment effects within specific subsets of a trial population (e.g., by age, sex, disease severity). The multiplicity problem arises because testing many subgroups inflates the family-wise error rate. With k independent subgroup tests at α=0.05, P(≥1 false positive) = 1−(0.95)^k. Proper subgroup analysis requires pre-specification, biological rationale, interaction tests (not separate p-values per subgroup), and correction for multiple comparisons.",
+    "definitionAr": "تحليل المجموعات الفرعية يفحص تأثيرات العلاج ضمن مجموعات فرعية محددة. مشكلة التعدد تنشأ لأن اختبار عدة مجموعات يضخم معدل الخطأ.",
+    "realWorldExample": "ISIS-2 trial of aspirin for myocardial infarction: subgroup analysis by astrological sign 'showed' that Gemini and Libra patients had no benefit from aspirin while other signs did. This absurd finding (published to illustrate the danger) demonstrated how spurious subgroup effects arise with enough slicing.",
+    "detectionMethod": "Check if subgroups were pre-specified in the protocol. Look for interaction tests (treatment × subgroup) rather than separate within-subgroup tests. Apply Bonferroni or Hochberg correction. Assess biological plausibility. Require replication."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A trial of a blood pressure drug shows no overall effect (p=0.34). Post-hoc subgroup analyses test 12 subgroups (age, sex, race, BMI categories, smoking status, etc.). One subgroup (women aged 60-70) shows a significant benefit (p=0.02). The researchers propose a new trial specifically for this subgroup. What is the statistical concern?",
+      "promptAr": "تجربة دواء ضغط دم لا تُظهر تأثيراً عاماً. تحليلات فرعية بعدية تختبر 12 مجموعة فرعية. مجموعة واحدة (نساء 60-70 سنة) تُظهر فائدة معنوية (p=0.02). ما القلق الإحصائي؟",
+      "options": [
+        "The finding is valid because p<0.05",
+        "With 12 tests, P(≥1 false positive) = 1−(0.95)^12 ≈ 46%. A single p=0.02 among 12 tests is entirely expected by chance and should not drive a new trial without independent corroboration",
+        "Only pre-specified subgroups need correction",
+        "The overall null result confirms the subgroup finding"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Testing 12 subgroups gives a 46% chance of at least one false positive at α=0.05. A p=0.02 finding does not survive Bonferroni correction (threshold would be 0.05/12 = 0.004). Sun et al. (2010, BMJ) found that most post-hoc subgroup findings do not replicate. The proper test is an interaction test (treatment × subgroup) in the full model, not a within-subgroup test.",
+      "explanationAr": "اختبار 12 مجموعة يعطي احتمال 46% لإيجابية خاطئة واحدة على الأقل. نتيجة p=0.02 لا تصمد أمام تصحيح بونفيروني (العتبة ستكون 0.004)."
+    },
+    {
+      "id": 2,
+      "type": "identify",
+      "prompt": "What is the correct statistical test for a subgroup effect — i.e., to test whether a treatment effect differs between men and women?",
+      "promptAr": "ما الاختبار الإحصائي الصحيح لتأثير المجموعة الفرعية — أي لاختبار ما إذا كان تأثير العلاج يختلف بين الرجال والنساء؟",
+      "options": [
+        "Use a chi-square test comparing men and women",
+        "Run separate analyses within men and women: if p<0.05 in men but p>0.05 in women, the treatment works only for men",
+        "Test the treatment × sex interaction in a single model. The interaction p-value tests whether the treatment effect DIFFERS between groups, not whether each group individually achieves significance",
+        "Compare the means of men and women regardless of treatment"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A common error is comparing separate within-subgroup p-values. As Gelman & Stern (2006) showed, 'the difference between significant and not significant is not itself significant.' The correct approach is a formal interaction test in a single model: outcome = treatment + sex + treatment×sex. The interaction term tests whether the treatment effect is modified by sex. Altman & Bland (2003) in BMJ: 'It is wrong to compare P values in two subgroups.'",
+      "explanationAr": "الخطأ الشائع مقارنة قيم p منفصلة داخل المجموعات. النهج الصحيح هو اختبار التفاعل الرسمي في نموذج واحد: حد التفاعل يختبر ما إذا كان تأثير العلاج يتعدل بالمجموعة."
+    },
+    {
+      "id": 3,
+      "type": "scenario",
+      "prompt": "The ISIS-2 trial (1988) famously showed that aspirin reduced mortality after myocardial infarction. A subgroup analysis by zodiac sign found that patients born under Gemini and Libra showed no benefit (even slight harm), while all other signs benefited. What lesson does this teach?",
+      "promptAr": "تجربة ISIS-2 (1988) أظهرت أن الأسبرين يقلل الوفيات بعد احتشاء عضلة القلب. تحليل فرعي حسب البرج الفلكي وجد أن مواليد الجوزاء والميزان لم يستفيدوا. ما الدرس المستفاد؟",
+      "options": [
+        "The sample sizes within each zodiac sign were too small",
+        "The analysis should have used a different statistical test",
+        "Aspirin may interact with astrological birth signs through seasonal effects",
+        "With enough subgroups, spurious findings are inevitable. This was published intentionally to demonstrate the absurdity of post-hoc subgroup claims without biological plausibility or multiplicity correction"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The ISIS-2 investigators deliberately included this analysis to illustrate the danger of subgroup analyses. With 12 zodiac signs, finding 1-2 subgroups where the effect is non-significant or reversed is statistically expected. No one would seriously claim that astrological sign modifies aspirin's pharmacology, yet the same statistical pattern underlies many published 'personalized medicine' subgroup claims that appear more plausible but are equally spurious.",
+      "explanationAr": "محققو ISIS-2 ضمنوا هذا التحليل عمداً لتوضيح خطر تحليلات المجموعات الفرعية. مع 12 برجاً، إيجاد 1-2 مجموعات بدون تأثير متوقع إحصائياً."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "A systematic review by Sun et al. (2010) examined the credibility of 207 claimed subgroup effects. What percentage of initially claimed subgroup effects were confirmed in subsequent replication studies?",
+      "promptAr": "مراجعة منهجية لسن وآخرين (2010) فحصت مصداقية 207 تأثيرات مزعومة للمجموعات الفرعية. ما نسبة تأثيرات المجموعات الفرعية المؤكدة في دراسات التكرار اللاحقة؟",
+      "options": [
+        "Fewer than 20% replicated — the vast majority of claimed subgroup effects failed to reproduce",
+        "About 35% replicated",
+        "About 80% replicated",
+        "About 50% replicated"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Sun et al. (2010) in BMJ found that the majority of claimed subgroup effects failed to replicate. Of studies that assessed credibility using established criteria (pre-specification, interaction test, biological plausibility, consistency across studies), fewer than 20% met all criteria. This is consistent with most subgroup findings being artifacts of multiple testing and post-hoc selection.",
+      "explanationAr": "وجد سن وآخرون أن أقل من 20% من تأثيرات المجموعات الفرعية المزعومة تم تكرارها. هذا متسق مع كون معظم النتائج نتاج اختبارات متعددة واختيار بعدي."
+    },
+    {
+      "id": 5,
+      "type": "identify",
+      "prompt": "Which of the following criteria make a subgroup finding more credible (as outlined by Sun et al., 2014)?",
+      "promptAr": "أي من المعايير التالية تجعل نتيجة المجموعة الفرعية أكثر مصداقية (كما حددها سن وآخرون، 2014)؟",
+      "options": [
+        "Large sample size within the subgroup alone",
+        "Pre-specified hypothesis, biological plausibility, significant interaction test, consistent direction across related studies, small number of subgroup analyses, and the subgroup variable is measured at baseline",
+        "The subgroup finding has a smaller p-value than the overall result",
+        "The finding was discovered through machine learning"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sun et al. outlined credibility criteria: (1) Pre-specification in the protocol, (2) one of a small number of analyses, (3) biological rationale, (4) significant interaction test (not just within-subgroup test), (5) consistent across related studies, (6) subgroup variable measured at baseline (not post-randomization). Meeting all criteria substantially increases (but does not guarantee) credibility. These criteria are now incorporated into CONSORT-subgroup recommendations.",
+      "explanationAr": "معايير المصداقية: تحديد مسبق، عدد قليل من التحليلات، مبرر بيولوجي، اختبار تفاعل معنوي، اتساق عبر الدراسات، ومتغير المجموعة مقاس عند خط الأساس."
+    }
+  ]
+}

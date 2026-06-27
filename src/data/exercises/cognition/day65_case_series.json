@@ -1,0 +1,121 @@
+{
+  "id": "day65_case_series",
+  "phase": 2,
+  "week": 10,
+  "day": 65,
+  "title": "The Case Series — A Few Patients, Still a Question",
+  "titleAr": "سلسلة الحالات — كام مريض، ولسه سؤال",
+  "description": "Several similar patients in a row. It hints louder than one — and most online sellers stop exactly here, because 'five people improved' sounds like proof. It isn't.",
+  "descriptionAr": "كام مريض متشابهين ورا بعض. بيلمّح أعلى من حالة واحدة — وأغلب بائعي النت بيقفوا هنا بالظبط، لأن «خمسة اتحسّنوا» بيبان دليل. وهو مش كده.",
+  "type": "science",
+  "difficulty": 2,
+  "estimatedMinutes": 15,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Dr. Ismail now sees five factory workers, all with the same red eye and rash. He writes up the group together. What kind of evidence is this — and how strong?",
+      "claimAr": "د. إسماعيل دلوقتي شاف خمس عمّال مصنع، كلهم نفس العين الحمرا والطفح. وثّقهم كمجموعة سوا. ده نوع دليل إيه — وقد إيه قوي؟",
+      "options": [
+        "A randomized trial — very strong",
+        "A case series: several similar patients written up together; it hints at something real but still cannot prove cause",
+        "A systematic review — the strongest",
+        "Proof the factory caused it"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When you describe several similar patients together, that's a case series. It's a step up from one patient because a pattern is harder to dismiss as pure coincidence — five people with the identical strange rash is worth noticing. But it's still near the bottom of the ladder: there is still no comparison group, no one asking 'how many similar workers did NOT get the rash?' A case series sharpens the hypothesis; it does not test it.",
+      "explanationAr": "لمّا توصف كذا مريض متشابهين سوا، ده اسمه «سلسلة حالات». خطوة فوق المريض الواحد لأن النمط بيبقى أصعب نرفضه كصدفة محضة — خمسة بنفس الطفح الغريب يستاهلوا الملاحظة. لكنه لسه قريب من أسفل السلّم: لسه مفيش مجموعة للمقارنة، ومحدّش بيسأل «كام عامل مشابه ما طلعش عنده الطفح؟». سلسلة الحالات بتشحذ الفرضية؛ ما بتختبرهاش.",
+      "sources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/"],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "The fictional quack 'Dr. K' posts: \"Eight of my patients improved on my herbs — that's not one story, that's a pattern, so it's basically proven.\" Before seeing the analysis: how confident are you that this reasoning is flawed?",
+      "claimAr": "الدجّال الخيالي «د. ك» بينشر: «تمن مرضى عندي اتحسّنوا على أعشابي — ده مش قصة واحدة، ده نمط، يبقى تقريباً مثبت». قبل ما تشوف التحليل: قد إيه واثق إن التفكير ده فيه خلل؟",
+      "options": [
+        "There is no flaw — eight improved patients is strong evidence",
+        "The reasoning is flawed — eight is a case series with a missing denominator and no control group"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The hidden trick is the missing denominator. 'Eight improved' means nothing until you ask: eight out of how many? If he treated 200 and is showing you the eight who happened to improve, that's not a pattern — it's a highlight reel. And without a comparison group, we still don't know how many would have improved with no herbs at all. Calibration note: if you felt uncertain before, that's good — the claim was designed to feel convincing while skipping everything that makes it science.",
+      "explanationAr": "الحيلة الخفيّة هي المقام الناقص. «تمنية اتحسّنوا» ما بيعنيش حاجة لحد ما تسأل: تمنية من كام؟ لو عالج 200 وبيوريك التمنية اللي صادف إنهم اتحسّنوا، ده مش نمط — ده ملخّص لقطات مختارة. ومن غير مجموعة للمقارنة، لسه مش عارفين كام كانوا هيتحسّنوا من غير أي أعشاب أصلاً. ملاحظة معايرة: لو حسيت بتردّد قبل، ده كويس — الادعاء متصمَّم يحسّس بالإقناع وهو متخطّي كل اللي بيخلّيه علم.",
+      "sources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/"],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The «نظام الطيبات» community shared collection after collection of 'success' testimonials. Why does collecting more and more of them never climb the evidence ladder?",
+      "claimAr": "مجتمع «نظام الطيبات» شارك مجموعة ورا مجموعة من شهادات «النجاح». ليه تجميع أكتر وأكتر منها عمره ما بيطلع السلّم؟",
+      "options": [
+        "It does climb — more stories means stronger proof",
+        "Because adding stories without a control group, without counting the harmed, and without blinding just makes a bigger pile of the same weak evidence"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what are the THREE structural things missing from a pile of success stories that stop them from being real evidence?",
+        "promptAr": "بكلماتك: إيه التلات حاجات الهيكلية الناقصة من كومة قصص النجاح اللي بتمنعها تبقى دليل حقيقي؟"
+      },
+      "explanation": "The three missing ingredients are: (1) a comparison group — people who tried nothing or a different thing, so you can see whether the treatment did anything extra; (2) an honest count of everyone who did NOT improve or was harmed, not just the vocal successes; (3) blinding, so that hope and expectation don't quietly tilt what people report. A case series doesn't become a trial by getting longer. Naming these gaps yourself is what turns a rule into a tool you'll actually use.",
+      "explanationAr": "التلات مكوّنات الناقصة هي: (1) مجموعة للمقارنة — ناس ما جرّبوش حاجة أو جرّبوا حاجة تانية، علشان تشوف هل العلاج عمل حاجة إضافية؛ (2) عدّ أمين لكل اللي ما اتحسّنوش أو اتأذّوا، مش بس النجاحات المُعلَنة؛ (3) تعمية، علشان الأمل والتوقّع ما يميّلوش في صمت ما بيبلّغ الناس. سلسلة الحالات ما بتبقاش تجربة بمجرد إنها تطوّل. إنك تسمّي الفجوات دي بنفسك هو اللي بيحوّل قاعدة لأداة هتستخدمها فعلاً.",
+      "sources": ["EAL-case-001:ems-2026-03", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/"],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A wellness page boasts: \"Read these 30 testimonials — thirty real people can't all be wrong!\" This feels compelling.",
+      "claimAr": "صفحة عافية بتفاخر: «اقرا الـ30 شهادة دول — تلاتين شخص حقيقي ما ممكنوش كلهم يبقوا غلطانين!». ده بيحسّ مقنع.",
+      "prompt": "What would DISPROVE this claim? What ordinary explanations could account for 30 people all reporting improvement?",
+      "promptAr": "إيه اللي يكذّب الادعاء ده؟ إيه التفسيرات العادية اللي ممكن تفسّر إن تلاتين شخص كلهم بيبلّغوا عن تحسّن؟",
+      "modelPoints": [
+        "If we're wrong to trust the 30: we'd expect exactly this pattern — people who improved post, people who were harmed or unchanged don't. The page is pre-filtered by who stayed loyal enough to still be there.",
+        "Placebo effect alone can produce real, subjective improvement in 30–40% of participants with no active treatment.",
+        "Many conditions improve on their own over time (natural remission) — 30 people feeling better after starting a diet may just mean 'time passed'.",
+        "We are never told the denominator: 30 out of how many? If 300 tried the diet, 30 testimonials is a 10% success rate, not a pattern of universal benefit."
+      ],
+      "modelPointsAr": [
+        "لو إحنا غلطانين في ثقتنا في الـ30: هنتوقع بالظبط النمط ده — اللي اتحسّن ينشر، واللي اتأذّى أو ما تغيّرش مش موجود. الصفحة متفلتَرة مسبقاً بمين فضل مخلصاً بما يكفي إنه لسه موجود.",
+        "التأثير الوهمي لوحده ممكن ينتج تحسّناً ذاتياً حقيقياً في 30-40% من المشاركين من غير علاج نشط.",
+        "حالات كتير بتتحسّن لوحدها مع الوقت (مغفرة طبيعية) — 30 شخص حاسّين أحسن بعد ما بدأوا حمية ممكن معناه بس «الوقت مشى».",
+        "عمرنا ما بيقولوا لنا المقام: 30 من كام؟ لو 300 جرّبوا الحمية، 30 شهادة هي معدّل نجاح 10%، مش نمط فائدة شاملة."
+      ],
+      "sources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/", "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "True or false: if a case series of patients improves, the next honest step is to randomly compare the treatment against a control — not to start selling it.",
+      "claimAr": "صح ولا غلط: لو سلسلة حالات اتحسّنت، الخطوة الأمينة اللي بعدها إننا نقارن العلاج عشوائياً بمجموعة ضابطة — مش إننا نبدأ نبيعه.",
+      "correctAnswer": true,
+      "myth_en": "Once a few patients improve, the treatment is ready to sell.",
+      "myth_ar": "بمجرد ما كام مريض يتحسّنوا، العلاج يبقى جاهز للبيع.",
+      "explanation": "True. A promising case series is an invitation to do a real study, not a finish line. The honest path goes up the ladder: design a controlled comparison so you can finally separate the treatment from coincidence and placebo. The whole tragedy of the «الطيبات» pattern is that it monetised the bottom rung — turning a 'we should study this' into a 'buy this now' — and skipped every step that could have protected people.",
+      "explanationAr": "صح. سلسلة حالات واعدة هي دعوة لعمل دراسة حقيقية، مش خط نهاية. الطريق الأمين بيطلع لفوق في السلّم: تصمّم مقارنة مضبوطة علشان أخيراً تقدر تفصل العلاج عن الصدفة والتأثير الوهمي. مأساة نمط «الطيبات» كلها إنه ربّح من أسفل درجة — حوّل «لازم ندرس ده» لـ«اشتري ده دلوقتي» — وتخطّى كل خطوة كانت ممكن تحمي الناس.",
+      "sources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/", "https://www.cochranelibrary.com/about/about-cochrane-reviews"],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 6,
+      "mechanic": "retrieve",
+      "retrievalOf": 64,
+      "claim": "Back to the previous lesson: Dr. Ismail wrote up one factory worker's strange rash and called it a 'case report'. Now that he has five, he has a case series. What was the key contribution of that very first single case report?",
+      "claimAr": "رجعنا للدرس اللي فات: د. إسماعيل وثّق طفح غريب لعامل مصنع واحد وسمّاه «تقرير حالة». دلوقتي بعد ما عنده خمسة، عنده سلسلة حالات. إيه كان الإسهام الأساسي لتقرير الحالة الفردي الأول ده؟",
+      "options": [
+        "It proved the factory was dangerous",
+        "It generated a hypothesis worth investigating — the weakest step but the necessary first step up the ladder",
+        "It proved vitamin D deficiency was the cause",
+        "It was too weak to contribute anything"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A case report's job is to say 'something unusual happened here — this is worth looking into.' It is the beginning of the scientific story, not its end. The five-patient case series builds on exactly that hypothesis. Without the first careful write-up, the investigation might never have started. Remembering this chain — case report → case series → controlled study → RCT — is how you track how far any claim has actually climbed.",
+      "explanationAr": "وظيفة تقرير الحالة إنه يقول «حاجة غير عادية حصلت هنا — ده يستاهل البحث». هو بداية القصة العلمية، مش نهايتها. سلسلة الحالات بالخمسة بتبني على بالظبط الفرضية دي. من غير التوثيق الدقيق الأول، التحقيق ممكن ما كانش بدأ أصلاً. إنك تفتكر السلسلة دي — تقرير حالة ← سلسلة حالات ← دراسة مضبوطة ← تجربة عشوائية — هو إزاي بتتتبّع قد إيه طلع أي ادعاء فعلاً.",
+      "sources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/"],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

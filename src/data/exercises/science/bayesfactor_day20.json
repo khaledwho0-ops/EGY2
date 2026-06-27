@@ -1,0 +1,97 @@
+{
+  "id": "bayes_factor",
+  "phase": 2,
+  "week": 11,
+  "day": 20,
+  "title": "Bayes Factor",
+  "titleAr": "عامل بايز",
+  "description": "Understanding Bayes Factors as a measure of evidence strength, the Kass & Raftery (1995) interpretation scale, and how they compare to traditional p-values in hypothesis testing.",
+  "descriptionAr": "فهم عوامل بايز كمقياس لقوة الدليل، ومقياس تفسير كاس ورافتيري (1995)، وكيفية مقارنتها بقيم p التقليدية في اختبار الفرضيات.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "statisticalConcept": {
+    "name": "Bayes Factor",
+    "nameAr": "عامل بايز",
+    "definition": "A Bayes Factor (BF₁₀) is the ratio of the marginal likelihood of the data under one hypothesis (H₁) to the marginal likelihood under another (H₀). It quantifies how much the observed data should update our relative belief in two competing hypotheses. Unlike p-values, Bayes Factors can provide evidence FOR the null hypothesis, not just against it.",
+    "definitionAr": "عامل بايز (BF₁₀) هو نسبة الاحتمال الهامشي للبيانات تحت فرضية (H₁) إلى الاحتمال الهامشي تحت فرضية أخرى (H₀). يحدد مقدار ما يجب أن تحدّث البيانات المرصودة اعتقادنا النسبي في فرضيتين متنافستين. على عكس قيم p، يمكن لعوامل بايز تقديم دليل لصالح الفرضية الصفرية وليس فقط ضدها.",
+    "realWorldExample": "A clinical trial comparing a new drug to placebo finds BF₁₀ = 0.15. Using the Kass & Raftery scale, this translates to BF₀₁ = 1/0.15 ≈ 6.7, providing 'positive' evidence favoring the null hypothesis — meaning the data support the conclusion that the drug is NOT effective. A p-value of 0.08 would only tell us we 'failed to reject' the null, without quantifying evidence for it.",
+    "detectionMethod": "Check whether authors confuse 'failure to reject H₀' with 'evidence for H₀.' If a study claims a treatment has no effect based solely on p > 0.05, ask whether a Bayes Factor analysis was performed. A BF₁₀ close to 1 means the data are uninformative, while a very small BF₁₀ (or large BF₀₁) provides genuine evidence for the null."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A researcher reports BF₁₀ = 45 for the hypothesis that a cognitive training program improves memory. Using the Kass & Raftery (1995) interpretation scale, how should this evidence be classified?",
+      "promptAr": "أبلغ باحث عن BF₁₀ = 45 لفرضية أن برنامج التدريب المعرفي يحسن الذاكرة. باستخدام مقياس تفسير كاس ورافتيري (1995)، كيف يجب تصنيف هذا الدليل؟",
+      "options": [
+        "Positive evidence (BF 3–20)",
+        "Strong evidence (BF 20–150)",
+        "Very strong evidence (BF > 150)",
+        "Not worth more than a bare mention (BF 1–3)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "On the Kass & Raftery (1995) scale, a Bayes Factor between 20 and 150 is classified as 'strong' evidence. BF₁₀ = 45 falls squarely in this range, indicating the data are 45 times more likely under H₁ than H₀. Note: Jeffreys' scale would call this 'very strong' (>30), highlighting that interpretation depends on the chosen scale.",
+      "explanationAr": "على مقياس كاس ورافتيري (1995)، يُصنف عامل بايز بين 20 و150 كدليل 'قوي'. BF₁₀ = 45 يقع مباشرة في هذا النطاق، مما يشير إلى أن البيانات أكثر احتمالًا بـ 45 مرة تحت H₁ من H₀. ملاحظة: مقياس جيفريز سيسمي هذا 'قويًا جدًا' (>30)، مما يبرز أن التفسير يعتمد على المقياس المختار."
+    },
+    {
+      "id": 2,
+      "type": "evaluate",
+      "prompt": "A pharmaceutical study reports p = 0.12 and concludes: 'The drug has no effect on blood pressure.' What is the fundamental problem with this conclusion, and how could a Bayes Factor help?",
+      "promptAr": "دراسة دوائية تبلغ عن p = 0.12 وتستنتج: 'الدواء ليس له تأثير على ضغط الدم.' ما المشكلة الأساسية في هذا الاستنتاج، وكيف يمكن لعامل بايز أن يساعد؟",
+      "options": [
+        "The study needs a larger sample size but the conclusion is logically sound",
+        "The conclusion is correct because p > 0.05 proves no effect exists",
+        "A p-value can only reject H₀, not provide evidence FOR H₀; a Bayes Factor could quantify evidence for no effect",
+        "The p-value should have been one-tailed to reach significance"
+      ],
+      "correctAnswer": 2,
+      "explanation": "P-values cannot provide evidence FOR the null hypothesis. Failing to reject H₀ (p > 0.05) could mean: (a) the null is true, (b) the study was underpowered, or (c) the effect is small. This ambiguity is a fundamental limitation of frequentist testing. A Bayes Factor like BF₀₁ = 8 would tell us the data are 8 times more likely under 'no effect' than under 'effect,' providing positive evidence for H₀. This distinction matters enormously in drug safety and non-inferiority trials.",
+      "explanationAr": "لا يمكن لقيم p تقديم دليل لصالح الفرضية الصفرية. عدم رفض H₀ (p > 0.05) قد يعني: (أ) الفرضية الصفرية صحيحة، (ب) الدراسة كانت ناقصة القوة، أو (ج) التأثير صغير. هذا الغموض هو قيد أساسي للاختبار التكراري. عامل بايز مثل BF₀₁ = 8 سيخبرنا أن البيانات أكثر احتمالًا بـ 8 مرات تحت 'لا تأثير' من تحت 'تأثير'، مما يقدم دليلًا إيجابيًا لـ H₀."
+    },
+    {
+      "id": 3,
+      "type": "calculate",
+      "prompt": "Prior odds for H₁ vs H₀ are 1:4 (you believe H₀ is 4 times more likely a priori). You obtain BF₁₀ = 12. What are the posterior odds for H₁ vs H₀?",
+      "promptAr": "الاحتمالات المسبقة لـ H₁ مقابل H₀ هي 1:4 (تعتقد أن H₀ أكثر احتمالًا بـ 4 مرات مسبقًا). حصلت على BF₁₀ = 12. ما هي الاحتمالات اللاحقة لـ H₁ مقابل H₀؟",
+      "options": [
+        "12:1 (H₁ is 12 times more likely)",
+        "48:1 (H₁ is 48 times more likely)",
+        "1:4 (unchanged)",
+        "3:1 (H₁ is now 3 times more likely)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Posterior odds = Prior odds × Bayes Factor. Prior odds for H₁:H₀ = 1:4 = 0.25. Posterior odds = 0.25 × 12 = 3. So posterior odds are 3:1 in favor of H₁. Even though the Bayes Factor provides strong evidence (12×), the skeptical prior (1:4) tempers the final conclusion. This illustrates how Bayesian reasoning formally incorporates prior beliefs.",
+      "explanationAr": "الاحتمالات اللاحقة = الاحتمالات المسبقة × عامل بايز. الاحتمالات المسبقة لـ H₁:H₀ = 1:4 = 0.25. الاحتمالات اللاحقة = 0.25 × 12 = 3. إذن الاحتمالات اللاحقة هي 3:1 لصالح H₁. رغم أن عامل بايز يقدم دليلًا قويًا (12×)، فإن الاحتمال المسبق المتشكك (1:4) يخفف الاستنتاج النهائي."
+    },
+    {
+      "id": 4,
+      "type": "analyze",
+      "prompt": "Two studies on the same research question report: Study A: BF₁₀ = 2.8, Study B: BF₁₀ = 0.35. A meta-analyst wants to combine the evidence. What is the combined Bayes Factor, and what does it suggest?",
+      "promptAr": "دراستان حول نفس سؤال البحث تبلغان: الدراسة أ: BF₁₀ = 2.8، الدراسة ب: BF₁₀ = 0.35. يريد محلل تلوي دمج الدليل. ما هو عامل بايز المدمج، وماذا يشير؟",
+      "options": [
+        "BF₁₀ = 0.98 (product), suggesting the data are essentially uninformative",
+        "BF₁₀ = 1.575 (average), suggesting weak evidence for H₁",
+        "Cannot be combined without knowing sample sizes",
+        "BF₁₀ = 3.15 (sum), suggesting positive evidence for H₁"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Under independence, Bayes Factors from separate studies can be multiplied: 2.8 × 0.35 = 0.98. A combined BF₁₀ ≈ 1 means the data across both studies are roughly equally likely under H₁ and H₀ — essentially uninformative. Study A provided weak evidence for H₁ while Study B provided moderate evidence for H₀, and they effectively cancel out. This multiplicative property is a natural advantage of the Bayesian framework for evidence synthesis.",
+      "explanationAr": "في حالة الاستقلال، يمكن ضرب عوامل بايز من دراسات منفصلة: 2.8 × 0.35 = 0.98. BF₁₀ مدمج ≈ 1 يعني أن البيانات عبر الدراستين متساوية الاحتمال تقريبًا تحت H₁ وH₀ — أي غير إعلامية بشكل أساسي. الدراسة أ قدمت دليلًا ضعيفًا لـ H₁ بينما الدراسة ب قدمت دليلًا معتدلًا لـ H₀، وقد ألغيا بعضهما فعليًا."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "A journal requires authors to report Bayes Factors alongside p-values. A study reports p = 0.03 but BF₁₀ = 1.4. How should a reader interpret this apparent contradiction?",
+      "promptAr": "مجلة تطلب من المؤلفين الإبلاغ عن عوامل بايز إلى جانب قيم p. دراسة تبلغ عن p = 0.03 لكن BF₁₀ = 1.4. كيف يجب على القارئ تفسير هذا التناقض الظاهر؟",
+      "options": [
+        "This is impossible; p < 0.05 always produces large Bayes Factors",
+        "The BF suggests only anecdotal evidence despite statistical significance — the p-value may reflect a large sample detecting a trivially small effect",
+        "The Bayes Factor should be ignored when it conflicts with p-values",
+        "The p-value is correct and the Bayes Factor is calculated wrong"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This scenario is well-documented and is called the Jeffreys-Lindley paradox. With large samples, p-values can be very small while Bayes Factors remain unimpressive because: (1) p-values are sensitive to sample size — large N can yield p < 0.05 for trivially small effects, and (2) Bayes Factors penalize H₁ for vague predictions via the prior. A BF₁₀ = 1.4 is merely 'anecdotal' evidence, suggesting the 'significant' p-value may be misleading. This divergence is one of the strongest arguments for routine Bayes Factor reporting.",
+      "explanationAr": "هذا السيناريو موثق جيدًا ويسمى مفارقة جيفريز-ليندلي. مع عينات كبيرة، يمكن أن تكون قيم p صغيرة جدًا بينما تظل عوامل بايز غير مؤثرة لأن: (1) قيم p حساسة لحجم العينة — N كبير يمكن أن ينتج p < 0.05 لتأثيرات صغيرة تافهة، و(2) عوامل بايز تعاقب H₁ على التنبؤات الغامضة عبر الاحتمال المسبق. BF₁₀ = 1.4 هو مجرد دليل 'حكائي'، مما يشير إلى أن قيمة p 'الدالة' قد تكون مضللة."
+    }
+  ]
+}

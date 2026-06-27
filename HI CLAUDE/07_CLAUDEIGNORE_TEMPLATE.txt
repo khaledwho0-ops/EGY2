@@ -1,0 +1,42 @@
+# Build outputs
+.next/
+out/
+build/
+
+# Dependencies (2.5GB!)
+node_modules/
+
+# Package lock (496KB — would fill entire context window)
+package-lock.json
+
+# Large generated files
+tsconfig.tsbuildinfo
+a11y_out.json
+tmp-blueprint.txt
+tailwind-test.css
+
+# Test outputs
+test-results/
+test_output.txt
+test_output_2.txt
+
+# Build/dev logs
+build-output.txt
+build_log.txt
+build_output.txt
+dev_server.log
+start-*.log
+
+# IDE / deploy
+.vscode/
+.vercel/
+.runtime/
+
+# Git internals
+.git/
+
+# Scratch files
+scratch/
+
+# Temporary files
+tmp-*.tsx

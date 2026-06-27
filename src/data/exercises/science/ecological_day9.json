@@ -1,0 +1,99 @@
+{
+  "id": "ecological_fallacy",
+  "phase": 2,
+  "week": 10,
+  "day": 9,
+  "title": "Ecological Fallacy",
+  "titleAr": "المغالطة البيئية",
+  "description": "Understand the ecological fallacy — the error of inferring individual-level relationships from group-level (aggregate) data. Study Robinson's (1950) landmark demonstration using literacy and immigration data, and learn why ecological correlations can drastically differ from individual correlations.",
+  "descriptionAr": "افهم المغالطة البيئية — خطأ استنتاج علاقات على مستوى الفرد من بيانات على مستوى المجموعة (المجمعة). ادرس عرض روبنسون (1950) التاريخي باستخدام بيانات محو الأمية والهجرة، وتعلم لماذا يمكن أن تختلف الارتباطات البيئية جذرياً عن الارتباطات الفردية.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Ecological Fallacy",
+    "nameAr": "المغالطة البيئية",
+    "definition": "The ecological fallacy (also called ecological inference fallacy) occurs when statistical relationships observed at the aggregate or group level are incorrectly assumed to hold at the individual level. First formally identified by William S. Robinson in his 1950 paper 'Ecological Correlations and the Behavior of Individuals' (American Sociological Review, 15:351-357), Robinson demonstrated that ecological (group-level) correlations can be substantially different in magnitude — and even opposite in direction — from individual-level correlations. The fallacy arises because group-level data obscures within-group variation and can reflect compositional effects rather than individual-level causal processes.",
+    "definitionAr": "المغالطة البيئية (تُعرف أيضاً بمغالطة الاستدلال البيئي) تحدث عندما يُفترض خطأً أن العلاقات الإحصائية الملاحظة على المستوى المجمع أو مستوى المجموعة تنطبق على المستوى الفردي. حددها ويليام إس. روبنسون رسمياً لأول مرة في ورقته عام 1950 'الارتباطات البيئية وسلوك الأفراد'، حيث أثبت أن الارتباطات البيئية (على مستوى المجموعة) يمكن أن تختلف جوهرياً في الحجم — بل وحتى معاكسة في الاتجاه — عن الارتباطات على مستوى الفرد.",
+    "realWorldExample": "Robinson (1950) examined the relationship between foreign birth and literacy across US states using 1930 Census data. At the state level (ecological correlation), there was a positive correlation (r = +0.53) between the percentage of foreign-born residents and the literacy rate — suggesting immigrants were MORE literate. However, at the individual level, the correlation was negative (r = -0.12) — foreign-born individuals were actually slightly LESS literate on average. The ecological correlation was misleading because immigrants concentrated in states with high overall literacy (e.g., New York, urban states), masking the individual-level relationship.",
+    "realWorldExampleAr": "درس روبنسون (1950) العلاقة بين الولادة في الخارج ومحو الأمية عبر الولايات الأمريكية باستخدام بيانات تعداد 1930. على مستوى الولاية (الارتباط البيئي)، كان هناك ارتباط إيجابي (ر = +0.53) بين نسبة المولودين في الخارج ومعدل محو الأمية. لكن على المستوى الفردي، كان الارتباط سلبياً (ر = -0.12). كان الارتباط البيئي مضللاً لأن المهاجرين تركزوا في ولايات ذات معدلات محو أمية عالية.",
+    "detectionMethod": "Use multi-level or hierarchical modeling to distinguish group-level and individual-level effects. Avoid drawing individual-level conclusions from aggregate data. When only aggregate data is available, use ecological inference methods (e.g., King's EI method, 1997) with explicit acknowledgment of uncertainty. Always check whether within-group variation has been accounted for."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A study finds that countries with higher average chocolate consumption per capita have more Nobel Prize laureates per capita (Messerli, 2012, NEJM). A commentator concludes: 'Eating more chocolate makes individuals smarter.' What fallacy is being committed?",
+      "promptAr": "وجدت دراسة أن الدول ذات متوسط استهلاك أعلى للشوكولاتة للفرد لديها عدد أكبر من الحائزين على جائزة نوبل للفرد (ميسيرلي، 2012، NEJM). يستنتج معلق: 'أكل المزيد من الشوكولاتة يجعل الأفراد أذكى.' ما المغالطة المرتكبة؟",
+      "options": [
+        "Selection bias",
+        "Confirmation bias",
+        "Ecological fallacy — a country-level correlation is being used to infer an individual-level causal effect",
+        "Anchoring bias"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Messerli's (2012) tongue-in-cheek NEJM paper showed a strong country-level correlation (r = 0.79) between chocolate consumption and Nobel laureates. Concluding that chocolate makes individuals smarter is a classic ecological fallacy — the correlation exists at the aggregate level but cannot be attributed to individuals. The confounders include national wealth, education spending, and research funding, which correlate with both chocolate consumption and Nobel Prizes. This paper is widely used as a teaching example of the ecological fallacy.",
+      "explanationAr": "أظهرت ورقة ميسيرلي (2012) الساخرة في NEJM ارتباطاً قوياً على مستوى الدول (ر = 0.79) بين استهلاك الشوكولاتة والحائزين على نوبل. الاستنتاج بأن الشوكولاتة تجعل الأفراد أذكى هو مغالطة بيئية كلاسيكية — الارتباط موجود على المستوى المجمع لكن لا يمكن نسبه للأفراد. المتغيرات المُربكة تشمل الثروة الوطنية والإنفاق على التعليم."
+    },
+    {
+      "id": 2,
+      "type": "analyze",
+      "prompt": "In Robinson's 1950 study, the ecological correlation between percentage foreign-born and literacy rate across US states was r = +0.53, while the individual-level correlation was r = -0.12. These correlations are in OPPOSITE directions. How is this possible?",
+      "promptAr": "في دراسة روبنسون 1950، كان الارتباط البيئي بين نسبة المولودين في الخارج ومعدل محو الأمية عبر الولايات الأمريكية ر = +0.53، بينما كان الارتباط على المستوى الفردي ر = -0.12. هذه الارتباطات في اتجاهين متعاكسين. كيف يكون هذا ممكناً؟",
+      "options": [
+        "Literacy was measured differently at each level",
+        "The sample sizes were too different to compare",
+        "Robinson made calculation errors in one of the correlations",
+        "Immigrants settled in urban, industrialized states (e.g., New York, Illinois) where NATIVE-born residents had high literacy, making those states appear more literate overall despite immigrants being slightly less literate individually"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Immigrants in 1930 disproportionately settled in northern, urban, industrialized states where the native-born population had high literacy rates (due to better schools and lower rates of illiteracy among native-born whites). This compositional effect made high-immigration states appear more literate overall. At the individual level, foreign-born persons were on average slightly less literate than native-born persons (r = -0.12). The aggregate correlation reflected WHERE immigrants lived, not the effect of being foreign-born on individual literacy. This reversal is the hallmark of the ecological fallacy.",
+      "explanationAr": "استقر المهاجرون في عام 1930 بشكل غير متناسب في ولايات شمالية حضرية صناعية حيث كان للسكان المولودين محلياً معدلات محو أمية عالية. هذا التأثير التركيبي جعل الولايات ذات الهجرة العالية تبدو أكثر محو أمية إجمالياً. على المستوى الفردي، كان المولودون في الخارج أقل محو أمية قليلاً في المتوسط. عكس الارتباط المجمع أين عاش المهاجرون وليس تأثير الولادة في الخارج على محو الأمية الفردية."
+    },
+    {
+      "id": 3,
+      "type": "evaluate",
+      "prompt": "A political analyst reports: 'Counties with higher median income voted more Democratic in 2020, therefore richer individuals vote Democratic.' Based on individual-level exit poll data, higher-income individuals actually voted more Republican. What level-of-analysis error is this?",
+      "promptAr": "يبلغ محلل سياسي: 'المقاطعات ذات الدخل المتوسط الأعلى صوتت أكثر للحزب الديمقراطي في 2020، لذلك الأفراد الأغنياء يصوتون للديمقراطيين.' بناءً على بيانات استطلاعات الخروج الفردية، صوت الأفراد ذوو الدخل الأعلى أكثر للجمهوريين. ما هو خطأ مستوى التحليل هذا؟",
+      "options": [
+        "Ecological fallacy — wealthy counties vote Democratic because of their demographic composition (urban, diverse, educated), not because wealthy individuals within them vote Democratic",
+        "The exit poll data is unreliable",
+        "Gerrymandering effects",
+        "Sampling error in exit polls"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This is a well-documented case of the ecological fallacy in political science. Gelman, Park, Shor, and Cortina (2008, 'Red State, Blue State, Rich State, Poor State') showed that rich states (e.g., Connecticut, New Jersey) tend to vote Democratic, while within those states, richer individuals tend to vote Republican. The ecological correlation (state-level income vs. Democratic vote) is positive, while the individual correlation (personal income vs. Democratic vote) is negative. The county-level relationship reflects the demographic composition of wealthy areas (urban, diverse, college-educated populations).",
+      "explanationAr": "هذه حالة موثقة للمغالطة البيئية في العلوم السياسية. أظهر جيلمان وبارك وشور وكورتينا (2008) أن الولايات الغنية تميل للتصويت الديمقراطي، بينما داخل تلك الولايات يميل الأفراد الأغنياء للتصويت الجمهوري. الارتباط على مستوى الولاية إيجابي بينما الارتباط الفردي سلبي."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "A researcher observes that neighborhoods with more police officers per capita have higher crime rates. They conclude: 'Police presence causes crime.' What statistical error most directly applies?",
+      "promptAr": "يلاحظ باحث أن الأحياء التي بها عدد أكبر من ضباط الشرطة للفرد لديها معدلات جريمة أعلى. يستنتج: 'وجود الشرطة يسبب الجريمة.' ما الخطأ الإحصائي الأكثر انطباقاً مباشرة؟",
+      "options": [
+        "Survivorship bias",
+        "Ecological fallacy combined with reverse causation — police are deployed TO high-crime areas, and the aggregate correlation does not reflect individual-level effects",
+        "Regression to the mean",
+        "Hawthorne effect"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This involves both reverse causation (police are deployed to areas BECAUSE of high crime, not the other way around) and the ecological fallacy (inferring that an individual's proximity to police makes them more likely to commit crime). At the neighborhood level, police and crime correlate positively due to resource allocation. At the individual level, policing may deter crime (Chalfin & McCrary, 2018, Review of Economics and Statistics). Confounders like poverty, unemployment, and population density drive both crime rates and police deployment.",
+      "explanationAr": "يتضمن هذا سببية عكسية (تُنشر الشرطة في المناطق بسبب ارتفاع الجريمة وليس العكس) والمغالطة البيئية (استنتاج أن قرب الفرد من الشرطة يجعله أكثر عرضة لارتكاب الجريمة). على مستوى الحي، ترتبط الشرطة والجريمة إيجابياً بسبب تخصيص الموارد."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "Which statistical method is specifically designed to avoid the ecological fallacy when only aggregate data is available?",
+      "promptAr": "أي طريقة إحصائية مصممة خصيصاً لتجنب المغالطة البيئية عندما تتوفر بيانات مجمعة فقط؟",
+      "options": [
+        "Simple linear regression on aggregate data",
+        "Chi-square test on aggregate contingency tables",
+        "King's Ecological Inference (EI) method (1997) — uses statistical models to estimate individual-level behavior from aggregate data with explicit bounds on uncertainty",
+        "Computing the arithmetic mean of group-level values"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Gary King's Ecological Inference (EI) method, published in 'A Solution to the Ecological Inference Problem' (1997, Princeton University Press), uses a statistical model that combines deterministic bounds on individual-level quantities (derived from aggregate data) with distributional assumptions to estimate individual-level parameters from aggregate data. It provides explicit measures of uncertainty, acknowledging that ecological data inherently limits individual-level inference. Extensions include King, Rosen, and Tanner's (2004) hierarchical EI models. This method is widely used in voting rights litigation, political science, and epidemiology.",
+      "explanationAr": "طريقة الاستدلال البيئي لغاري كينغ (1997) تستخدم نموذجاً إحصائياً يجمع بين الحدود الحتمية على الكميات الفردية المستمدة من البيانات المجمعة مع افتراضات توزيعية لتقدير المعلمات الفردية. توفر مقاييس صريحة لعدم اليقين. تُستخدم على نطاق واسع في قضايا حقوق التصويت والعلوم السياسية وعلم الأوبئة."
+    }
+  ]
+}

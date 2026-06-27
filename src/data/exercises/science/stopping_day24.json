@@ -1,0 +1,98 @@
+{
+  "id": "optional_stopping",
+  "phase": 2,
+  "week": 14,
+  "day": 24,
+  "title": "Optional Stopping",
+  "titleAr": "التوقف الاختياري",
+  "description": "Understand how peeking at data during collection and stopping when significant inflates false positive rates, and learn about sequential analysis corrections.",
+  "descriptionAr": "فهم كيف يؤدي النظر في البيانات أثناء جمعها والتوقف عند الدلالة إلى تضخيم معدلات الإيجابيات الخاطئة، وتعلم تصحيحات التحليل التتابعي.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Optional Stopping Problem",
+    "nameAr": "مشكلة التوقف الاختياري",
+    "definition": "Optional stopping occurs when a researcher repeatedly tests accumulating data and stops data collection when a significant p-value is obtained. Under standard null hypothesis testing, this inflates the Type I error rate well above the nominal α level. Armitage et al. (1969) showed that with 5 interim looks, the actual α inflates from 0.05 to approximately 0.14.",
+    "definitionAr": "يحدث التوقف الاختياري عندما يختبر الباحث البيانات المتراكمة بشكل متكرر ويوقف جمع البيانات عند الحصول على قيمة p معنوية. هذا يضخم معدل خطأ النوع الأول.",
+    "realWorldExample": "Simmons et al. (2011) demonstrated that with optional stopping at n=10, 20, or 30 per group, combined with other researcher degrees of freedom, false positive rates can exceed 60%. Legitimate sequential designs use group sequential methods (O'Brien-Fleming, Pocock boundaries) to control α-spending.",
+    "detectionMethod": "Check if sample size was pre-registered. Look for round-number sample sizes suggesting stopping rules. Examine whether interim analyses were planned. Verify α-spending functions were used for sequential designs."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A researcher collects data from 10 participants, runs a t-test (p=0.12), collects 10 more (p=0.08), then 10 more (p=0.04), and stops, declaring the result significant at p<0.05. What is the actual Type I error rate of this procedure?",
+      "promptAr": "باحث يجمع بيانات من 10 مشاركين، يجري اختبار t (p=0.12)، يجمع 10 آخرين (p=0.08)، ثم 10 آخرين (p=0.04)، ويتوقف معلناً النتيجة معنوية. ما معدل خطأ النوع الأول الفعلي؟",
+      "options": [
+        "Exactly 5% as declared",
+        "Approximately 11-14%, because repeated testing with optional stopping inflates α above the nominal level",
+        "Less than 5% because the researcher was conservative",
+        "Approximately 50%"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Armitage et al. (1969) proved that repeated significance testing with optional stopping inflates α. With 3 interim looks at α=0.05, the actual error rate is approximately 0.08-0.11. With 5 looks, it rises to ~0.14. The more you peek, the higher the false positive rate. This is because under the null, p-values follow a random walk and will eventually cross any threshold given enough peeks.",
+      "explanationAr": "أثبت أرميتاج وآخرون (1969) أن اختبار الدلالة المتكرر مع التوقف الاختياري يضخم α. مع 3 نظرات مؤقتة، المعدل الفعلي حوالي 0.08-0.11."
+    },
+    {
+      "id": 2,
+      "type": "scenario",
+      "prompt": "A clinical trial plans 5 interim analyses. To maintain an overall α=0.05, an O'Brien-Fleming boundary is used. At the first interim analysis (20% of data), what is the approximate p-value threshold required for early stopping?",
+      "promptAr": "تجربة سريرية تخطط لـ 5 تحليلات مؤقتة. للحفاظ على α=0.05 إجمالي، تُستخدم حدود أوبراين-فليمنج. عند التحليل المؤقت الأول (20% من البيانات)، ما عتبة p التقريبية المطلوبة للتوقف المبكر؟",
+      "options": [
+        "p < 0.10, more lenient because less data is available",
+        "p < 0.05, same as the final analysis",
+        "p < 0.0001, extremely stringent early on to preserve α for later looks",
+        "p < 0.01, moderately stringent"
+      ],
+      "correctAnswer": 2,
+      "explanation": "O'Brien-Fleming boundaries are very conservative at early interim analyses and approach the conventional α at the final analysis. At the first of 5 looks, the boundary is approximately p < 0.0001 (z ≈ 4.56). At the final look, it is approximately p < 0.041. This α-spending approach preserves the overall Type I error rate at 0.05 while allowing legitimate early stopping for overwhelming efficacy or futility.",
+      "explanationAr": "حدود أوبراين-فليمنج متحفظة جداً في التحليلات المبكرة وتقترب من α التقليدي في التحليل النهائي. عند أول نظرة من 5، الحد تقريباً p < 0.0001."
+    },
+    {
+      "id": 3,
+      "type": "calculate",
+      "prompt": "Under the null hypothesis, if a researcher peeks at data continuously (infinite number of looks), what is the probability of eventually observing p<0.05 at some point?",
+      "promptAr": "تحت الفرضية الصفرية، إذا نظر الباحث في البيانات باستمرار (عدد لا نهائي من النظرات)، ما احتمال ملاحظة p<0.05 في مرحلة ما؟",
+      "options": [
+        "95%",
+        "5%",
+        "50%",
+        "100% — with continuous monitoring under the null, a random walk will eventually cross any threshold"
+      ],
+      "correctAnswer": 3,
+      "explanation": "This follows from the properties of Brownian motion and the optional stopping theorem. Under the null hypothesis, the test statistic follows a random walk. By the recurrence property of random walks in one dimension, the process will cross any finite boundary with probability 1 given infinite time. This is why sequential designs MUST specify maximum sample sizes and use α-spending functions.",
+      "explanationAr": "هذا يتبع من خصائص الحركة البراونية. تحت الفرضية الصفرية، إحصائية الاختبار تتبع مشياً عشوائياً سيتجاوز أي حد بعتبة محدودة باحتمال 1 مع الوقت اللانهائي."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "Which of the following is a legitimate sequential analysis method that controls Type I error while allowing early stopping?",
+      "promptAr": "أي مما يلي هو طريقة تحليل تتابعي مشروعة تتحكم في خطأ النوع الأول مع السماح بالتوقف المبكر؟",
+      "options": [
+        "The Lan-DeMets α-spending function approach, which allocates portions of α across planned interim analyses",
+        "Running the analysis weekly and stopping at the first significant result",
+        "Collecting data until the confidence interval excludes zero",
+        "Stopping whenever p<0.05 at any sample size"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The Lan-DeMets (1983) α-spending function approach allows flexible timing of interim analyses while controlling the overall Type I error rate. It allocates 'portions' of the total α across interim looks using a pre-specified spending function (e.g., O'Brien-Fleming-type or Pocock-type). This is the standard approach used in modern clinical trials and is implemented in software like EAST, gsDesign, and rpact.",
+      "explanationAr": "نهج دالة إنفاق α لان-ديميتس يسمح بتوقيت مرن للتحليلات المؤقتة مع التحكم في معدل خطأ النوع الأول الإجمالي. هذا هو النهج المعياري في التجارب السريرية الحديثة."
+    },
+    {
+      "id": 5,
+      "type": "scenario",
+      "prompt": "A tech company runs an A/B test and checks results daily. After 3 days with no significance, the product manager says 'let it run longer.' On day 12, p=0.048, and the test is stopped. Later, when the effect doesn't replicate, the data scientist explains the problem. What is the core issue?",
+      "promptAr": "شركة تقنية تجري اختبار A/B وتتحقق من النتائج يومياً. بعد 3 أيام بدون دلالة، مدير المنتج يقول 'دعه يعمل أكثر.' في اليوم 12، p=0.048، ويتوقف الاختبار. لاحقاً، التأثير لا يتكرر. ما المشكلة الجوهرية؟",
+      "options": [
+        "The test needed more than 12 days to be valid",
+        "Daily checking constitutes optional stopping; with 12 looks at α=0.05, the true Type I error rate is approximately 0.20, making the p=0.048 finding likely a false positive",
+        "A/B tests don't need statistical correction",
+        "The product change simply wore off over time"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the classic optional stopping problem in industry A/B testing. With 12 daily peeks at α=0.05, the actual false positive rate inflates to approximately 0.17-0.22 (depending on the correlation structure). Companies like Optimizely and Google have published guidelines recommending either fixed-horizon tests or sequential testing with proper α-spending. Johari et al. (2017) from LinkedIn proposed 'always-valid p-values' to address this exact problem.",
+      "explanationAr": "هذه مشكلة التوقف الاختياري الكلاسيكية في اختبارات A/B. مع 12 نظرة يومية، معدل الإيجابيات الخاطئة الفعلي يرتفع إلى حوالي 0.17-0.22."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "day160_ask_dont_tell",
+  "phase": 4,
+  "week": 23,
+  "day": 160,
+  "title": "Conversations II — Ask, Don't Tell",
+  "titleAr": "محادثات 2 — اسأل، ما تقولش",
+  "description": "A good question does what no statement can: it lets a person discover the gap themselves, with their dignity intact.",
+  "descriptionAr": "السؤال الكويس بيعمل اللي مفيش جملة تقدر عليه: بيخلّي الشخص يكتشف الفجوة بنفسه، وكرامته سليمة.",
+  "type": "integration",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://www.nature.com/articles/s41599-025-06143-6",
+  "exercises": [
+    {
+      "id": 1, "mechanic": "recognize",
+      "claim": "Which reply is most likely to make a believer actually think — rather than dig in?",
+      "claimAr": "أنهي ردّ الأرجح يخلّي مؤمن *يفكّر* فعلاً — بدل ما يتشبّت؟",
+      "options": ["'That's been debunked a hundred times.'", "'That's interesting — how would we be able to tell if it WASN'T working?'", "'You always fall for this.'", "'Just trust the doctors.'"],
+      "correctAnswer": 1,
+      "explanation": "Asking 'how would we tell if it WASN'T working?' invites them to define a test — gently exposing unfalsifiability from the inside, without an attack. Statements invite defense; honest questions invite thought.",
+      "explanationAr": "سؤال «إزاي نعرف لو ده *ماكانش* بيشتغل؟» بيدعوه يحدّد اختبار — وبيكشف عدم القابلية للتفنيد من جوّه بلطف، من غير هجوم. الجُمل بتدعو للدفاع؛ الأسئلة الصادقة بتدعو للتفكير.",
+      "sources": ["https://www.nature.com/articles/s41599-025-06143-6"],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2, "mechanic": "consider_opposite",
+      "claim": "You're tempted to deliver one perfect crushing fact that will end the debate.",
+      "claimAr": "بتتغري إنك تنزّل حقيقة واحدة قاضية تنهي النقاش.",
+      "prompt": "Consider the opposite: why might a humble question outperform your 'killer fact'?",
+      "promptAr": "فكّر في العكس: ليه السؤال المتواضع ممكن يتفوّق على «الحقيقة القاضية» بتاعتك؟",
+      "modelPoints": [
+        "A 'killer fact' feels like a checkmate — and people resent losing more than they value being right.",
+        "A question lets them reach the conclusion themselves, so it becomes THEIR idea, not your imposition.",
+        "Questions gather information: you may learn their real reason (a cost, a fear) that no fact addresses.",
+        "If your fact is wrong or oversimplified, a question fails gracefully; a confident assertion loses your credibility."
+      ],
+      "modelPointsAr": [
+        "«الحقيقة القاضية» بتحسّ كـكِش مات — والناس بتكره الخسارة أكتر ما بتقدّر إنها تكون صح.",
+        "السؤال بيخلّيهم يوصلوا للخلاصة بنفسهم، فتبقى فكرتهم *هم*، مش فرض منك.",
+        "الأسئلة بتجمع معلومات: ممكن تعرف سببهم الحقيقي (تكلفة، خوف) اللي مفيش حقيقة بتعالجه.",
+        "لو حقيقتك غلط أو مبسّطة زيادة، السؤال بيفشل بهدوء؛ الجزم الواثق بيخسّرك مصداقيتك."
+      ],
+      "explanation": "Questions beat assertions because they protect dignity, surface the real driver, and hand ownership of the insight to the other person. Save the facts for when they're asked for.",
+      "explanationAr": "الأسئلة بتغلب الجزم لأنها بتحمي الكرامة، وبتطلّع المحرّك الحقيقي، وبتدّي ملكية الفكرة للطرف التاني. سيب الحقائق لما يتطلبوها.",
+      "sources": ["https://www.nature.com/articles/s41599-025-06143-6"],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 3, "mechanic": "recognize",
+      "claim": "A believer asks YOU: 'so what would convince you that the diet DOES work?' What's the strong, honest answer?",
+      "claimAr": "مؤمن بيسألك إنت: «طب إيه اللي يقنعك إن الحمية *فعلاً* بتشتغل؟». إيه الإجابة القوية الصادقة؟",
+      "options": ["'Nothing — I'll never believe it.'", "'A large, controlled trial where it beats placebo — and I'd genuinely update if that existed.'", "'My doctor said so.'", "'It's haram to ask.'"],
+      "correctAnswer": 1,
+      "explanation": "Modeling falsifiability about your OWN view is disarming and honest: you name the evidence that would change your mind. 'Nothing would convince me' makes you a mirror of the dogmatist. Showing you'd update earns you the standing to ask the same of them.",
+      "explanationAr": "إنك تنمذج القابلية للتفنيد على رأيك *أنت* بينزع السلاح وصادق: بتسمّي الدليل اللي هيغيّر رأيك. «مفيش حاجة هتقنعني» بتخلّيك مرايا للمتعصّب. وإظهار إنك ممكن تحدّث رأيك بيكسبك الحق إنك تطلب نفس الحاجة منهم.",
+      "sources": ["https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"],
+      "cognitivebiasAtPlay": "Intellectual Humility"
+    }
+  ]
+}

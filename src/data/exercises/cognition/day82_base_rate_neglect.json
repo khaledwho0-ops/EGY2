@@ -1,0 +1,134 @@
+{
+  "id": "day82_base_rate_neglect",
+  "phase": 2,
+  "week": 12,
+  "day": 82,
+  "title": "Base Rate Neglect — The Hidden Denominator",
+  "titleAr": "إهمال المعدل الأساسي — المقام الخفي",
+  "description": "A test that is '99% accurate' can still produce mostly wrong results. Learn why ignoring the background rate of a disease leads to panic — and how pseudoscience sellers exploit this blind spot.",
+  "descriptionAr": "تحليل «دقته 99%» ممكن يطلع نتائج غلط في الغالب. اتعلّم ليه تجاهل معدل انتشار المرض بيودّي للذعر — وكيف بائعو العلم الزائف بيستغلوا النقطة العمياء دي.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A rare disease affects 1 in 1,000 Egyptians. A test for it is 99% accurate (1% false positive rate). You test positive. Should you panic that you almost certainly have the disease?",
+      "claimAr": "مرض نادر بيصيب 1 من كل 1,000 مصري. تحليل كشفه دقيق بنسبة 99% (معدل إيجابي كاذب 1%). طلعت إيجابي. المفروض تتذعّر لأنك على الأرجح مصاب؟",
+      "options": [
+        "Yes — a 99% accurate test is essentially conclusive",
+        "No — with a 1/1,000 base rate, most positive results are actually false positives; only about 1 in 11 positives is a true case",
+        "Yes — any positive test means disease",
+        "No — tests are never reliable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Apply base rates: out of 1,000 people tested, about 1 truly has the disease (1/1,000). The test correctly identifies that person (true positive). But the 999 who don't have it: 1% get a false positive = about 10 false positives. So among all positives (~11 total), only 1 truly has the disease — roughly a 9% chance you're actually sick. Ignoring the base rate turns a rare disease into a panic. Always ask: 'How common is this condition in people like me?'",
+      "explanationAr": "طبّق المعدلات الأساسية: من أصل 1,000 شخص مُختبَر، واحد تقريباً عنده المرض فعلاً (1/1,000). التحليل بيتعرّف عليه بشكل صحيح (إيجابي حقيقي). لكن الـ999 اللي ما عندهمش: 1% بيطلعوا إيجابي كاذب = تقريباً 10 إيجابيات كاذبة. إذاً من بين كل الإيجابيات (~11 إجمالاً)، واحد فقط عنده المرض فعلاً — احتمال تقريباً 9% إنك مريض فعلاً. تجاهل المعدل الأساسي بيحوّل مرضاً نادراً لذعر. اسأل دايماً: «قد إيه ده منتشر في ناس زيّي؟»",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/2-quantifying-disease-community"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A WhatsApp message says: \"Scientists found that people who eat [food X] are twice as likely to develop a certain cancer!\" The cancer's base rate is 0.1%. 'Twice as likely' actually means risk goes from 0.1% to 0.2% — barely a change in absolute terms.",
+      "claimAr": "رسالة واتساب بتقول: «علماء لاقوا إن الناس اللي بياكلوا [أكل X] عندهم ضعف احتمال الإصابة بسرطان معين!» معدل انتشار السرطان ده 0.1%. «ضعف الاحتمال» يعني في الحقيقة إن الخطر بيرتفع من 0.1% لـ0.2% — بالكاد تغيير بالأرقام المطلقة.",
+      "options": [
+        "It means your risk is now 50% — very alarming",
+        "It means risk goes from 0.1% to 0.2% — your absolute risk barely moved, from 1 in 1,000 to 2 in 1,000"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why do health headlines almost always use relative risk ('twice as likely') rather than absolute risk ('0.1% more') — and who benefits from that choice?",
+        "promptAr": "بكلماتك: ليه عناوين الصحة دايماً تقريباً بتستخدم الخطر النسبي («ضعف الاحتمال») بدل الخطر المطلق («0.1% أكتر») — ومين بيستفيد من الاختيار ده؟"
+      },
+      "explanation": "This is the difference between relative risk and absolute risk. 'Twice as likely' (relative risk = 2) sounds dramatic. But if the base rate is 0.1%, doubling it gives 0.2% — an absolute increase of 0.1 percentage points, meaning 1 extra case per 1,000 people. Headlines almost always use relative risk because it sounds bigger; honest communication requires showing the absolute numbers alongside it.",
+      "explanationAr": "ده الفرق بين الخطر النسبي والخطر المطلق. «ضعف الاحتمال» (الخطر النسبي = 2) بيبان دراماتيكياً. لكن لو المعدل الأساسي 0.1%، مضاعفته بيدّي 0.2% — زيادة مطلقة 0.1 نقطة مئوية، يعني حالة إضافية واحدة لكل 1,000 شخص. عناوين الأخبار دايماً بتستخدم الخطر النسبي لأنه بيبان أكبر؛ التواصل الأمين يتطلّب عرض الأرقام المطلقة جنبه.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/5-differences-between-means-type-i-and-type-ii"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "Followers of the viral «نظام الطيبات» diet argued: 'Many people in our community improved after following the system — this shows the diet works for most people who try it.'",
+      "claimAr": "أتباع نظام «الطيبات» جادلوا: «ناس كتير في مجتمعنا تحسّنوا بعد اتّباع النظام — ده بيوضح إن الحِمية شغّالة مع معظم الناس اللي بتجرّبها.»",
+      "prompt": "What base-rate question are they skipping — and if we answered it, what would it reveal about the diet's actual contribution?",
+      "promptAr": "أنهي سؤال عن المعدل الأساسي بيتخطّوه — ولو أجبنا عليه، إيه اللي هيكشفه عن الإسهام الحقيقي للحِمية؟",
+      "modelPoints": [
+        "The missing question: what is the natural improvement rate for those same conditions WITHOUT any diet intervention?",
+        "If 60% of IBS patients improve over any 3-month period regardless of diet, then a '70% improvement rate' is only 10 percentage points above baseline — barely meaningful.",
+        "Natural fluctuation (symptoms wax and wane), regression to the mean (people seek treatment when worst, then improve naturally), and placebo all inflate perceived effectiveness.",
+        "Without a control group experiencing the same conditions over the same period, you cannot separate the diet's effect from natural history.",
+        "This is the core of base-rate neglect in health claims: comparing to nothing instead of to what happens without the intervention."
+      ],
+      "modelPointsAr": [
+        "السؤال الناقص: إيه معدل التحسّن الطبيعي لنفس الحالات من غير أي تدخّل غذائي؟",
+        "لو 60% من مرضى القولون بيتحسّنوا على مدى أي 3 أشهر بغضّ النظر عن النظام الغذائي، فـ«70% تحسّن» هي 10 نقاط مئوية بس فوق الخط الأساسي — بالكاد ذو معنى.",
+        "التذبذب الطبيعي (الأعراض بتشتد وبتخفّ)، والانحدار للمتوسط (الناس بتلتمس العلاج في أسوأ أوقاتها ثم بتتحسّن طبيعياً)، والوهمي — كلها بتنفّخ الفعالية المُدرَكة.",
+        "من غير مجموعة ضابطة تمرّ بنفس الظروف على نفس الفترة، ما تقدرش تفصل تأثير الحِمية عن التاريخ الطبيعي.",
+        "ده جوهر إهمال المعدل الأساسي في الادعاءات الصحية: المقارنة بلا شيء بدل المقارنة بما يحدث بدون التدخّل."
+      ],
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 4,
+      "mechanic": "recognize",
+      "claim": "A seller advertises: \"9 out of 10 of our customers say they feel healthier after 1 month!\" Without a base rate or comparison group, is this evidence the product works?",
+      "claimAr": "بائع بيعلن: «9 من أصل 10 عملاءنا بيقولوا إنهم أصحّ صحة بعد شهر!» من غير معدل أساسي أو مجموعة مقارنة، ده دليل على إن المنتج شغّال؟",
+      "options": [
+        "Yes — 90% satisfaction is overwhelming",
+        "No — without knowing how many people feel healthier after 1 month doing nothing at all (the base rate), the 90% figure is uninterpretable",
+        "Yes — customer testimonials are the gold standard",
+        "No — because the customers might be lying"
+      ],
+      "correctAnswer": 1,
+      "explanation": "People generally feel better after one month if they are paying attention to their health, sleeping more regularly, eating a little differently, and expecting improvement (placebo effect). If 80% of people who made no change also felt better after one month, the seller's 90% is only 10 percentage points above baseline — which may not be meaningful at all. Surveys without a control group cannot prove a product caused anything.",
+      "explanationAr": "الناس عموماً بتحسّ بتحسّن بعد شهر لو كانت منتبهة لصحتها، وبتنام بانتظام أكتر، وبتاكل بشكل مختلف قليلاً، وبتتوقع تحسّن (تأثير الوهمي). لو 80% من الناس اللي ما عملتش تغيير برضه حسّت بتحسّن بعد شهر، فنسبة البائع 90% هي 10 نقاط مئوية فوق خط الأساس بس — اللي ممكن لا يكون ذا معنى أبداً. الاستطلاعات من غير مجموعة ضابطة ما تقدرش تثبت إن منتجاً سبّب أي حاجة.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/2-quantifying-disease-community"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "exploiting base rate neglect with relative risk",
+      "techniqueAr": "استغلال إهمال المعدل الأساسي عبر الخطر النسبي",
+      "task": "Write a short alarming health post about a completely harmless habit (say, drinking cold water in summer) that uses a real-sounding relative risk statistic to make it seem dangerous — without lying about the relative number itself, just hiding the tiny base rate.",
+      "taskAr": "اكتب بوست صحي مقلق قصير عن عادة غير ضارة تماماً (مثلاً شرب مية باردة في الصيف) بيستخدم إحصائية خطر نسبي تبدو حقيقية عشان تجعلها تبدو خطيرة — من غير الكذب في الرقم النسبي نفسه، بس بإخفاء المعدل الأساسي الضئيل.",
+      "tells": [
+        "Quoting only relative risk ('twice as likely') without the absolute risk ('from 0.02% to 0.04%') — the small base rate makes the relative jump meaningless.",
+        "Using alarming language ('danger', 'warning', 'scientists found') to make a technically true statistic feel catastrophic.",
+        "No mention of the base rate — the reader has no denominator to judge the number against.",
+        "No citation for the actual study, or citing an obscure study the reader cannot check.",
+        "The post feels urgent and shareable — that emotional urgency is the manipulation, not the math."
+      ],
+      "tellsAr": [
+        "اقتباس الخطر النسبي بس («ضعف الاحتمال») من غير الخطر المطلق («من 0.02% لـ0.04%») — المعدل الأساسي الصغير بيجعل القفزة النسبية بلا معنى.",
+        "استخدام لغة مثيرة للقلق («خطر»، «تحذير»، «العلماء وجدوا») عشان تجعل إحصائية صحيحة تقنياً تحسّ كارثية.",
+        "لا ذكر للمعدل الأساسي — القارئ ما عنده مقام يحكم على الرقم بناءً عليه.",
+        "لا استشهاد للدراسة الفعلية، أو استشهاد بدراسة غامضة ما يقدرش القارئ يتحقق منها.",
+        "البوست بيحسّس بإلحاح وقابلية للمشاركة — الإلحاح العاطفي ده هو التلاعب، مش الرياضيات."
+      ],
+      "explanation": "Building this post from the inside reveals how effortless it is to use a technically true relative risk number to create disproportionate fear. The trained response is always to find the absolute numbers: 'doubles from what to what?' Once you can construct the manipulation, you can spot it instantly when a seller, journalist, or well-meaning friend forwards you the next alarming health statistic.",
+      "explanationAr": "بناء البوست ده من الداخل بيكشف كم السهل استخدام رقم خطر نسبي صحيح تقنياً لإيجاد خوف غير متناسب. الاستجابة المُدرَّبة دايماً هي إيجاد الأرقام المطلقة: «بيتضاعف من كام لكام؟» بمجرد ما تقدر تبني التلاعب، هتكشفه على الفور لمّا بائع أو صحفي أو صاحب بنية تقدّم لك الإحصائية الصحية المقلقة الجديدة.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/5-differences-between-means-type-i-and-type-ii"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    }
+  ]
+}

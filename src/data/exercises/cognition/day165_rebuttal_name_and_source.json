@@ -1,0 +1,65 @@
+{
+  "id": "day165_rebuttal_name_and_source",
+  "phase": 4,
+  "week": 24,
+  "day": 165,
+  "title": "Capstone I — Name the Move, Bring the Evidence",
+  "titleAr": "التتويج 1 — سمّي الحركة، وهات الدليل",
+  "description": "The first half of a real rebuttal: precisely name the fallacy, then anchor your reply to strong evidence — not a louder opinion.",
+  "descriptionAr": "أول نص ردّ حقيقي: سمّي المغالطة بدقّة، وبعدين ثبّت ردّك على دليل قوي — مش رأي أعلى صوت.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009",
+  "exercises": [
+    {
+      "id": 1, "mechanic": "recognize",
+      "claim": "A viral post: 'Thousands tried this herbal cure and got better, so it works — and doctors hide it because sickness is profitable.' Which TWO moves is it stacking?",
+      "claimAr": "بوست منتشر: «آلاف جرّبوا العلاج العشبي ده واتحسّنوا، يبقى بيشتغل — والأطباء بيخفوه لأن المرض مربح». أنهي حركتين بيركّبهم؟",
+      "options": ["Strong evidence + fair disclosure", "Testimonials-as-proof + a conspiracy shield to pre-discredit critics", "A randomized trial + peer review", "Nothing wrong"],
+      "correctAnswer": 1,
+      "explanation": "Two moves stacked: testimonials-as-proof (anecdotes can't separate the cure from placebo or natural recovery) and a conspiracy shield ('they hide it') that pre-discredits every critic so no evidence can land. Naming both precisely is the first step of a real rebuttal.",
+      "explanationAr": "حركتين مركّبتين: الشهادات-كدليل (الحكايات ما بتفصلش العلاج عن الوهمي أو الشفاء الطبيعي) ودرع المؤامرة («بيخفوه») اللي بيُسقِط كل ناقد مقدماً علشان مايوصلش دليل. تسميتهم بدقّة أول خطوة في الردّ الحقيقي.",
+      "sources": ["EAL-case-001:redflag-3", "EAL-case-001:conspiracy-1"],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 2, "mechanic": "decompose",
+      "claim": "Map this claim so you know exactly what to answer: 'My aunt stopped her blood-pressure pills, ate only \"pure\" foods, and felt great for a month — so the pills were poison all along.'",
+      "claimAr": "فكّك الادعاء ده علشان تعرف بالظبط تردّ على إيه: «خالتي بطّلت حبوب الضغط، وأكلت بس أكل \"طاهر\"، وحسّت كويس لشهر — يبقى الحبوب كانت سُم من الأول».",
+      "parts": [
+        { "text": "The pills were poison.", "textAr": "الحبوب كانت سُم.", "role": "conclusion" },
+        { "text": "She felt great for a month after stopping.", "textAr": "حسّت كويس لشهر بعد ما بطّلت.", "role": "premise" },
+        { "text": "(Unstated) Feeling fine short-term means the condition is gone.", "textAr": "(غير مذكور) الإحساس الكويس على المدى القصير معناه المرض راح.", "role": "assumption" },
+        { "text": "The foods were 'pure'.", "textAr": "الأكل كان «طاهر».", "role": "irrelevant" }
+      ],
+      "explanation": "The weak joint is the hidden assumption: high blood pressure is usually symptom-free, so 'feeling fine' for a month says nothing about the silent damage building up. Once you target the assumption, the conclusion collapses — and the 'pure foods' framing is an irrelevant moral label.",
+      "explanationAr": "المفصل الضعيف هو الافتراض الخفي: الضغط العالي غالباً بلا أعراض، فـ«الإحساس الكويس» لشهر ما بيقولش حاجة عن الضرر الصامت اللي بيتراكم. أول ما تستهدف الافتراض، الخلاصة تقع — و«الأكل الطاهر» لافتة أخلاقية غير ذات صلة.",
+      "sources": ["https://www.who.int/news-room/fact-sheets/detail/hypertension"],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 3, "mechanic": "self_explain",
+      "claim": "You want to reply with EVIDENCE, not just 'you're wrong.' Which is the stronger evidence to cite about blood-pressure treatment?",
+      "claimAr": "عايز تردّ بـدليل، مش بس «إنت غلطان». أنهي دليل أقوى تستشهد بيه عن علاج الضغط؟",
+      "options": ["Another testimonial from someone you know", "A WHO fact sheet / systematic reviews showing treated hypertension lowers stroke and heart-attack risk", "A YouTube video", "Your own opinion stated confidently"],
+      "correctAnswer": 1,
+      "selfExplain": { "prompt": "Why does climbing to a WHO/systematic-review source beat answering one story with another story?", "promptAr": "ليه إنك تصعد لمصدر زي WHO/مراجعة منهجية أحسن من إنك تردّ على قصة بقصة تانية؟" },
+      "explanation": "Trading anecdotes keeps the argument at the weakest rung, where it's just your story vs theirs. Citing a high-rung source (WHO guidance, systematic reviews) moves the conversation onto ground where evidence — not volume or confidence — decides. That's how you rebut without it becoming a personal contest.",
+      "explanationAr": "تبادل الحكايات بيخلّي النقاش في أضعف درجة، قصتك ضد قصتهم. الاستشهاد بمصدر عالي (إرشاد WHO، مراجعات منهجية) بينقل النقاش لأرض الدليل — مش الصوت ولا الثقة — هو اللي بيحسم. وكده بتردّ من غير ما يبقى تحدّي شخصي.",
+      "sources": ["https://www.who.int/news-room/fact-sheets/detail/hypertension"],
+      "cognitivebiasAtPlay": "Intellectual Humility"
+    },
+    {
+      "id": 4, "mechanic": "calibrate", "calibrated": true,
+      "claim": "You've named the fallacy and found a strong source. Is your rebuttal now ready to send?",
+      "claimAr": "سمّيت المغالطة ولقيت مصدر قوي. ردّك بقى جاهز يتبعت؟",
+      "options": ["Yes — name + evidence is enough", "Not yet — without empathy for WHY they believe, evidence alone often backfires"],
+      "correctAnswer": 1,
+      "explanation": "Name + evidence is only half. The research on changing minds is clear: dropping facts on someone whose belief is tied to fear, identity, or a real grievance often entrenches them (the backfire risk). Tomorrow's half — empathy for why the belief persists — is what makes the evidence land. Notice if you felt 'done' too early; that confidence is the trap.",
+      "explanationAr": "الاسم + الدليل نص بس. أبحاث تغيير العقول واضحة: إنك ترمي حقائق على حد معتقده مربوط بخوف أو هوية أو مظلمة حقيقية غالباً بيرسّخه (خطر الارتداد). النص بتاع بكرة — التعاطف مع سبب استمرار المعتقد — هو اللي بيخلّي الدليل يوصل. لاحظ لو حسّيت «خلصت» بدري؛ الثقة دي الفخّة.",
+      "sources": ["https://www.nature.com/articles/s41599-025-06143-6"],
+      "cognitivebiasAtPlay": "Overconfidence"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "simpsons_paradox",
+  "phase": 2,
+  "week": 10,
+  "day": 8,
+  "title": "Simpson's Paradox",
+  "titleAr": "مفارقة سيمبسون",
+  "description": "Explore Simpson's Paradox — where a trend that appears in several subgroups reverses when the groups are combined. Study the classic UC Berkeley admissions case (1973) and kidney stone treatment data (Charig et al., 1986).",
+  "descriptionAr": "استكشف مفارقة سيمبسون — حيث ينعكس الاتجاه الذي يظهر في عدة مجموعات فرعية عند دمج المجموعات. ادرس حالة قبول جامعة كاليفورنيا بيركلي الكلاسيكية (1973) وبيانات علاج حصوات الكلى (شاريج وآخرون، 1986).",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Simpson's Paradox",
+    "nameAr": "مفارقة سيمبسون",
+    "definition": "Simpson's Paradox (also called the Yule-Simpson effect, after Udny Yule 1903 and Edward Simpson 1951) occurs when a trend or relationship that appears in several different groups of data reverses or disappears when these groups are combined. The paradox arises from a lurking confounding variable that changes the composition of subgroups. It demonstrates why aggregate data can produce misleading conclusions and why controlling for confounders is essential in causal inference. Judea Pearl (2014) formalized the resolution using causal diagrams (DAGs), showing that the correct analysis depends on the causal structure, not merely the statistical association.",
+    "definitionAr": "مفارقة سيمبسون (تُعرف أيضاً بتأثير يول-سيمبسون، نسبة إلى أودني يول 1903 وإدوارد سيمبسون 1951) تحدث عندما ينعكس أو يختفي اتجاه أو علاقة تظهر في عدة مجموعات مختلفة من البيانات عند دمج هذه المجموعات. تنشأ المفارقة من متغير مُربك خفي يغير تركيبة المجموعات الفرعية. توضح لماذا يمكن أن تنتج البيانات المجمعة استنتاجات مضللة ولماذا يعد التحكم في المتغيرات المُربكة أساسياً في الاستدلال السببي.",
+    "realWorldExample": "UC Berkeley Graduate Admissions (1973): Overall admission rates showed 44% of male applicants were admitted versus only 35% of female applicants, suggesting gender discrimination. However, Bickel, Hammel, and O'Connell (1975) published in Science that when examined department by department, women were actually admitted at equal or higher rates in most departments. The confound was that women disproportionately applied to more competitive departments (e.g., English) with lower overall acceptance rates, while men more often applied to less competitive departments (e.g., Engineering) with higher acceptance rates. The lurking variable was department competitiveness.",
+    "realWorldExampleAr": "قبول الدراسات العليا في جامعة كاليفورنيا بيركلي (1973): أظهرت معدلات القبول الإجمالية أن 44% من المتقدمين الذكور تم قبولهم مقابل 35% فقط من المتقدمات الإناث، مما يوحي بتمييز على أساس الجنس. لكن بيكل وهامل وأوكونيل (1975) نشروا في مجلة ساينس أنه عند الفحص قسماً بقسم، كانت النساء تُقبل بمعدلات مساوية أو أعلى في معظم الأقسام. كان المتغير المُربك هو أن النساء تقدمن بشكل غير متناسب للأقسام الأكثر تنافسية.",
+    "detectionMethod": "Stratify data by potential confounders before drawing conclusions. Compare subgroup-level trends with aggregate trends. Use directed acyclic graphs (DAGs) to model causal relationships and determine which variables to condition on. Apply the Cochran-Mantel-Haenszel test for stratified 2×2 tables."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A hospital reports that Drug A has a higher overall recovery rate (78%) than Drug B (83%). However, when patients are separated by disease severity, Drug B has a higher recovery rate for BOTH mild and severe cases. What explains this apparent contradiction?",
+      "promptAr": "يبلغ مستشفى أن الدواء أ لديه معدل شفاء إجمالي أعلى (78%) من الدواء ب (83%). لكن عند فصل المرضى حسب شدة المرض، يكون للدواء ب معدل شفاء أعلى في كل من الحالات الخفيفة والشديدة. ما الذي يفسر هذا التناقض الظاهري؟",
+      "options": [
+        "The data must contain errors",
+        "Simpson's Paradox — Drug A was disproportionately given to mild cases (higher baseline recovery), inflating its aggregate rate",
+        "Drug A is genuinely better overall despite being worse in subgroups",
+        "Recovery rates cannot be compared across severity levels"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This mirrors the kidney stone treatment study by Charig et al. (1986). Treatment A (open surgery) had a higher overall success rate (78%) than Treatment B (percutaneous nephrolithotomy, 83%), but Treatment B was superior for both small stones (93% vs 87%) and large stones (73% vs 69%). The paradox arose because Treatment A was disproportionately used for small (easy) stones. The confounding variable — stone size — reversed the aggregate trend.",
+      "explanationAr": "هذا يماثل دراسة علاج حصوات الكلى بواسطة شاريج وآخرين (1986). كان للعلاج أ (الجراحة المفتوحة) معدل نجاح إجمالي أعلى من العلاج ب (تفتيت الحصوات عن طريق الجلد)، لكن العلاج ب كان متفوقاً لكل من الحصوات الصغيرة والكبيرة. نشأت المفارقة لأن العلاج أ استُخدم بشكل غير متناسب للحصوات الصغيرة (السهلة)."
+    },
+    {
+      "id": 2,
+      "type": "analyze",
+      "prompt": "In the 1973 UC Berkeley admissions data, the overall admission rate for men was 44% and for women was 35%. Bickel, Hammel, and O'Connell (1975) found that in 4 of the 6 largest departments, women had a HIGHER admission rate than men. What was the lurking confounding variable?",
+      "promptAr": "في بيانات قبول جامعة كاليفورنيا بيركلي عام 1973، كان معدل القبول الإجمالي للرجال 44% وللنساء 35%. وجد بيكل وهامل وأوكونيل (1975) أنه في 4 من أكبر 6 أقسام، كان للنساء معدل قبول أعلى من الرجال. ما كان المتغير المُربك الخفي؟",
+      "options": [
+        "Geographic origin of the applicants",
+        "Test score differences between applicants",
+        "Department choice — women applied disproportionately to highly competitive departments with low acceptance rates for all applicants",
+        "Age differences between male and female applicants"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Bickel et al. (1975, Science, 187:398-404) showed that women tended to apply to departments like English and History that had acceptance rates around 20-30%, while men more often applied to departments like Mechanical Engineering and Chemistry that had acceptance rates of 60-70%. When the data was stratified by department, the apparent gender bias disappeared. This case became a canonical example of Simpson's Paradox and is cited in virtually every introductory statistics textbook.",
+      "explanationAr": "أظهر بيكل وآخرون (1975، ساينس، 187:398-404) أن النساء مالت للتقدم لأقسام مثل الأدب الإنجليزي والتاريخ التي كانت معدلات قبولها حوالي 20-30%، بينما تقدم الرجال أكثر لأقسام مثل الهندسة الميكانيكية والكيمياء التي كانت معدلات قبولها 60-70%. عند تقسيم البيانات حسب القسم، اختفى التحيز الجنسي الظاهري."
+    },
+    {
+      "id": 3,
+      "type": "evaluate",
+      "prompt": "A public health report shows that Country A has a higher overall cancer survival rate than Country B. However, for every individual type of cancer (lung, breast, colon, etc.), Country B has equal or higher survival rates. Which factor most likely explains this?",
+      "promptAr": "يُظهر تقرير صحة عامة أن الدولة أ لديها معدل بقاء إجمالي من السرطان أعلى من الدولة ب. لكن لكل نوع فردي من السرطان (الرئة، الثدي، القولون، إلخ)، الدولة ب لديها معدلات بقاء مساوية أو أعلى. ما العامل الأكثر احتمالاً لتفسير هذا؟",
+      "options": [
+        "Country B is falsifying its cancer data",
+        "Cancer types are not comparable between countries",
+        "Country A has better hospitals",
+        "Country A diagnoses more of the less-lethal cancers (e.g., through aggressive screening), shifting its cancer mix toward higher-survival types"
+      ],
+      "correctAnswer": 3,
+      "explanation": "This is a real phenomenon known as the 'cancer survival paradox' or lead-time bias interacting with Simpson's Paradox. Countries with aggressive screening programs (like the US) detect many slow-growing, less-lethal cancers (e.g., early prostate cancer via PSA screening), inflating their denominator with high-survival cases. This shifts the aggregate cancer mix toward easier cancers. Welch et al. (2000, JAMA) documented how overdiagnosis of indolent cancers inflates survival statistics without necessarily reducing mortality.",
+      "explanationAr": "هذه ظاهرة حقيقية تُعرف بمفارقة البقاء من السرطان أو تحيز وقت الاستباق المتفاعل مع مفارقة سيمبسون. الدول ذات برامج الفحص المكثف تكتشف العديد من السرطانات البطيئة النمو والأقل فتكاً، مما يضخم مقامها بحالات ذات معدل بقاء عالٍ."
+    },
+    {
+      "id": 4,
+      "type": "calculate",
+      "prompt": "Consider this data from Charig et al. (1986) kidney stone study: Treatment A — Small stones: 81/87 success (93%), Large stones: 192/263 success (73%). Treatment B — Small stones: 234/270 success (87%), Large stones: 55/80 success (69%). Calculate the OVERALL success rate for each treatment and identify the paradox.",
+      "promptAr": "تأمل هذه البيانات من دراسة حصوات الكلى لشاريج وآخرين (1986): العلاج أ — حصوات صغيرة: 81/87 نجاح (93%)، حصوات كبيرة: 192/263 نجاح (73%). العلاج ب — حصوات صغيرة: 234/270 نجاح (87%)، حصوات كبيرة: 55/80 نجاح (69%). احسب معدل النجاح الإجمالي لكل علاج وحدد المفارقة.",
+      "options": [
+        "Treatment A: 78% overall, Treatment B: 83% overall — B appears better overall despite A being better in BOTH subgroups",
+        "Treatment A: 83% overall, Treatment B: 78% overall — A is better in every way",
+        "Both treatments are equally effective at 80%",
+        "The data is insufficient to calculate overall rates"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Treatment A overall: (81+192)/(87+263) = 273/350 = 78.0%. Treatment B overall: (234+55)/(270+80) = 289/350 = 82.6%. So Treatment B appears better overall (83% vs 78%), yet Treatment A is superior for BOTH small stones (93% vs 87%) and large stones (73% vs 69%). The paradox arises because Treatment A was preferentially assigned to large stones (263/350 = 75% of A's cases were large), while Treatment B was preferentially assigned to small stones (270/350 = 77% of B's cases were small). Stone size confounds the aggregate comparison.",
+      "explanationAr": "العلاج أ إجمالياً: (81+192)/(87+263) = 273/350 = 78.0%. العلاج ب إجمالياً: (234+55)/(270+80) = 289/350 = 82.6%. يبدو العلاج ب أفضل إجمالياً، لكن العلاج أ متفوق في كلا المجموعتين الفرعيتين. المفارقة تنشأ لأن العلاج أ خُصص بشكل تفضيلي للحصوات الكبيرة (75% من حالاته)."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "A researcher encounters Simpson's Paradox in their data. According to Judea Pearl's causal inference framework, what is the correct approach to resolve the paradox?",
+      "promptAr": "يواجه باحث مفارقة سيمبسون في بياناته. وفقاً لإطار الاستدلال السببي لجوديا بيرل، ما هو النهج الصحيح لحل المفارقة؟",
+      "options": [
+        "Always use the stratified data because subgroups are more informative",
+        "Draw a causal DAG (directed acyclic graph) to determine whether the confounding variable should be conditioned on — the correct level of analysis depends on the causal structure",
+        "Average the aggregated and stratified results",
+        "Always use the aggregated data because larger samples are more reliable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Pearl (2014, 'Comment: Understanding Simpson's Paradox,' The American Statistician) argued that Simpson's Paradox cannot be resolved by statistics alone — it requires causal reasoning. Using a DAG, one determines whether the lurking variable is a confounder (condition on it), a mediator (do not condition on it), or a collider (do not condition on it). In the Berkeley case, department is a confounder of the gender-admission relationship, so stratifying is correct. But in other scenarios, stratifying could introduce bias (e.g., conditioning on a collider). The resolution is always structural, not statistical.",
+      "explanationAr": "جادل بيرل (2014) بأن مفارقة سيمبسون لا يمكن حلها بالإحصاء وحده — بل تتطلب استدلالاً سببياً. باستخدام رسم بياني موجه غير دوري (DAG)، يُحدد ما إذا كان المتغير الخفي مُربكاً (يجب التحكم فيه) أو وسيطاً (لا يجب التحكم فيه) أو متصادماً (لا يجب التحكم فيه). الحل دائماً هيكلي وليس إحصائياً."
+    }
+  ]
+}

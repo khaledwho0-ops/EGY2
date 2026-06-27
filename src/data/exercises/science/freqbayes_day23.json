@@ -1,0 +1,97 @@
+{
+  "id": "frequentist_vs_bayesian",
+  "phase": 2,
+  "week": 11,
+  "day": 23,
+  "title": "Frequentist vs Bayesian",
+  "titleAr": "التكراري مقابل البايزي",
+  "description": "Comparing the frequentist and Bayesian philosophical frameworks for statistical inference, understanding when each approach is more appropriate, and recognizing common misinterpretations.",
+  "descriptionAr": "مقارنة الإطارين الفلسفيين التكراري والبايزي للاستدلال الإحصائي، وفهم متى يكون كل نهج أكثر ملاءمة، والتعرف على التفسيرات الخاطئة الشائعة.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "statisticalConcept": {
+    "name": "Frequentist vs Bayesian Inference",
+    "nameAr": "الاستدلال التكراري مقابل البايزي",
+    "definition": "Frequentist inference treats probability as long-run frequency: parameters are fixed but unknown, and probability statements are about data, not hypotheses. P-values, confidence intervals, and NHST (Neyman-Pearson framework) are frequentist tools. Bayesian inference treats probability as a degree of belief: parameters have probability distributions, and Bayes' theorem updates prior beliefs with observed data to produce posterior distributions. Each framework answers fundamentally different questions: frequentist asks 'How surprising are these data if H₀ is true?' while Bayesian asks 'How probable is H₁ given these data?'",
+    "definitionAr": "الاستدلال التكراري يعامل الاحتمال كتكرار طويل المدى: المعلمات ثابتة لكن مجهولة، وبيانات الاحتمال عن البيانات وليس الفرضيات. الاستدلال البايزي يعامل الاحتمال كدرجة اعتقاد: المعلمات لها توزيعات احتمالية، ونظرية بايز تحدث المعتقدات المسبقة بالبيانات المرصودة لإنتاج توزيعات لاحقة. كل إطار يجيب عن أسئلة مختلفة جوهريًا.",
+    "realWorldExample": "Consider a clinical trial testing whether a drug reduces mortality. A frequentist analysis reports: '95% CI for risk reduction: [2%, 15%], p = 0.01.' This means if we repeated the trial infinitely, 95% of such intervals would contain the true effect. A Bayesian analysis using a skeptical prior reports: 'Posterior probability that the drug reduces mortality by at least 5%: 73%.' The Bayesian result directly answers the clinician's question about how likely the drug works, while the frequentist result describes the procedure's long-run properties.",
+    "detectionMethod": "Watch for Bayesian interpretations of frequentist results. When someone says 'there is a 95% probability the true effect is in this confidence interval,' they are giving a Bayesian interpretation to a frequentist procedure — a confidence interval does NOT have a 95% probability of containing the parameter. Similarly, p = 0.05 does NOT mean there is a 5% probability H₀ is true."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A researcher reports: 'We found a 95% confidence interval of [3.2, 7.8] kg for the mean weight loss. There is a 95% probability that the true population mean falls within this interval.' What error has been made?",
+      "promptAr": "باحث يبلغ: 'وجدنا فاصل ثقة 95% من [3.2, 7.8] كجم لمتوسط فقدان الوزن. هناك احتمال 95% أن المتوسط السكاني الحقيقي يقع ضمن هذا الفاصل.' ما الخطأ المرتكب؟",
+      "options": [
+        "The researcher gave a Bayesian interpretation to a frequentist procedure; a 95% CI means that 95% of similarly constructed intervals would contain the true parameter",
+        "The error is in the percentage — it should be 97.5% for a two-tailed test",
+        "The interval is too narrow and should be reported as a 99% CI instead",
+        "No error — this is the correct interpretation of a confidence interval"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This is one of the most common misinterpretations in statistics. A frequentist 95% confidence interval does NOT mean there is a 95% probability the parameter lies within it. After computation, the true parameter is either in the interval or it isn't — probability is 0 or 1. The '95%' refers to the long-run coverage rate: if we repeated the experiment and computed CIs, 95% of them would contain the true parameter. To make probabilistic statements about parameters, you need a Bayesian credible interval, which genuinely has a 95% posterior probability of containing the parameter.",
+      "explanationAr": "هذا أحد أكثر التفسيرات الخاطئة شيوعًا في الإحصاء. فاصل ثقة 95% التكراري لا يعني أن هناك احتمال 95% أن المعلمة تقع فيه. بعد الحساب، المعلمة الحقيقية إما في الفاصل أو لا — الاحتمال 0 أو 1. '95%' تشير إلى معدل التغطية طويل المدى."
+    },
+    {
+      "id": 2,
+      "type": "evaluate",
+      "prompt": "Which of the following scenarios is BEST suited for a Bayesian approach rather than a frequentist one?",
+      "promptAr": "أي من السيناريوهات التالية هو الأنسب لنهج بايزي بدلاً من تكراري؟",
+      "options": [
+        "An FDA Phase III trial with a pre-registered analysis plan and regulatory requirements for Type I error control",
+        "A rare disease where prior evidence from related conditions is substantial but new data are sparse",
+        "A simple A/B test on a website comparing two button colors with millions of visitors",
+        "A large-scale quality control process in manufacturing where decisions are repeated thousands of times daily"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Bayesian methods excel when: (1) prior information is available and valuable, (2) sample sizes are small, (3) sequential updating is natural, and (4) probabilistic statements about parameters are desired. Rare disease research with limited patients but substantial prior knowledge from related conditions is the ideal use case — the prior carries genuinely useful information, and small sample sizes make frequentist methods unreliable. Manufacturing QC and web A/B testing benefit from the simplicity and well-understood error control of frequentist methods with their large samples. FDA trials typically require frequentist frameworks for regulatory consistency, though Bayesian designs are increasingly accepted.",
+      "explanationAr": "تتفوق الطرق البايزية عندما: (1) المعلومات المسبقة متاحة وقيمة، (2) أحجام العينات صغيرة، (3) التحديث المتسلسل طبيعي، و(4) البيانات الاحتمالية عن المعلمات مطلوبة. بحث الأمراض النادرة مع مرضى محدودين لكن معرفة مسبقة كبيرة هو حالة الاستخدام المثالية."
+    },
+    {
+      "id": 3,
+      "type": "analyze",
+      "prompt": "Two statisticians analyze the same dataset. The frequentist reports p = 0.048, declaring the result 'statistically significant.' The Bayesian, using a default prior, reports BF₁₀ = 2.1, classifying the evidence as 'anecdotal.' Who is more justified, and why might the results differ?",
+      "promptAr": "إحصائيان يحللان نفس مجموعة البيانات. التكراري يبلغ عن p = 0.048 معلنًا النتيجة 'دالة إحصائيًا'. البايزي باستخدام مسبق افتراضي يبلغ عن BF₁₀ = 2.1 مصنفًا الدليل كـ 'حكائي'. من أكثر تبريرًا، ولماذا قد تختلف النتائج؟",
+      "options": [
+        "The frequentist is correct — p < 0.05 is the gold standard",
+        "The Bayesian is correct — Bayes Factors always give the right answer",
+        "Both are answering different questions correctly; the divergence around p ≈ 0.05 is well-documented and reflects the Bayes Factor's penalty for vague alternative hypotheses",
+        "Both are wrong — they should have used a different test entirely"
+      ],
+      "correctAnswer": 2,
+      "explanation": "This divergence is a well-known phenomenon documented by Sellke, Bayarri, & Berger (2001) and Held & Ott (2018). P-values near 0.05 often correspond to Bayes Factors of only 2–5, which Bayesian guidelines classify as weak or anecdotal evidence. The discrepancy arises because: (1) p-values measure tail-area probability under H₀, while BFs compare full predictive performance of both models; (2) BFs penalize H₁ for making vague predictions (via the prior on effect size). Neither is 'wrong' — they answer different questions. The practical lesson: a single p-value just below 0.05 should not be treated as strong evidence.",
+      "explanationAr": "هذا التباعد ظاهرة معروفة موثقة من سيلك وبايري وبيرغر (2001). قيم p قرب 0.05 غالبًا تقابل عوامل بايز من 2-5 فقط. التباين ينشأ لأن: (1) قيم p تقيس احتمال الذيل تحت H₀، بينما BFs تقارن الأداء التنبؤي الكامل لكلا النموذجين."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "What is the fundamental philosophical difference between how frequentists and Bayesians define 'probability'?",
+      "promptAr": "ما الفرق الفلسفي الأساسي بين كيفية تعريف التكراريين والبايزيين لـ 'الاحتمال'؟",
+      "options": [
+        "Frequentists use probability only for discrete outcomes; Bayesians only for continuous ones",
+        "Bayesians reject the concept of probability entirely and use 'plausibility' instead",
+        "There is no difference — both define probability the same way but use different formulas",
+        "Frequentists define probability as the limit of relative frequency in repeated trials; Bayesians define it as a degree of rational belief that can apply to one-time events"
+      ],
+      "correctAnswer": 3,
+      "explanation": "This is the core philosophical split. For a frequentist, probability only makes sense for repeatable events — saying 'the probability of rain tomorrow is 60%' means that in many similar atmospheric conditions, it rains 60% of the time. A Bayesian interprets the same statement as a degree of belief: given current information, I'm 60% confident it will rain. This distinction has practical consequences: frequentists cannot assign probabilities to hypotheses (a hypothesis is either true or false), while Bayesians naturally do so. Fisher, Neyman, and Pearson built the frequentist framework, while Laplace, Jeffreys, and de Finetti developed the Bayesian tradition.",
+      "explanationAr": "هذا هو الانقسام الفلسفي الجوهري. للتكراري، الاحتمال منطقي فقط للأحداث القابلة للتكرار. البايزي يفسر نفس العبارة كدرجة اعتقاد: بالنظر إلى المعلومات الحالية. هذا التمييز له عواقب عملية: التكراريون لا يمكنهم تخصيص احتمالات للفرضيات، بينما البايزيون يفعلون ذلك طبيعيًا."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "A clinical trial uses a Bayesian adaptive design that allows the sample size to change based on interim results. A regulatory reviewer objects, saying this inflates the Type I error rate. Is the reviewer's concern valid?",
+      "promptAr": "تجربة سريرية تستخدم تصميمًا بايزيًا تكيفيًا يسمح بتغيير حجم العينة بناءً على نتائج مؤقتة. مراجع تنظيمي يعترض قائلًا إن هذا يضخم معدل الخطأ من النوع الأول. هل اعتراض المراجع صحيح؟",
+      "options": [
+        "Partially valid from a frequentist perspective, but Bayesian adaptive designs control error differently — through prior specification and posterior probability thresholds — and can be calibrated to maintain acceptable frequentist error rates",
+        "No — adaptive designs always have lower error rates than fixed designs",
+        "Yes — any design that peeks at data inflates Type I error, period",
+        "No — Bayesian methods are immune to Type I error inflation because they don't use p-values"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The concern reflects a frequentist framework being applied to a Bayesian procedure. In pure Bayesian theory, the likelihood principle holds: inference should depend only on the data observed, not on the stopping rule. However, regulatory agencies often require frequentist operating characteristics (Type I and II error rates) even for Bayesian designs. Modern Bayesian adaptive trials (e.g., those approved by FDA under the 2019 guidance) are typically calibrated via simulation to ensure that the posterior probability threshold (e.g., P(treatment effective|data) > 0.975) produces acceptable frequentist Type I error rates. Berry (2006) and the FDA's 2010 Bayesian guidance document address this hybrid approach.",
+      "explanationAr": "الاعتراض يعكس إطارًا تكراريًا مطبقًا على إجراء بايزي. في النظرية البايزية البحتة، مبدأ الاحتمال ينطبق: الاستدلال يجب أن يعتمد فقط على البيانات المرصودة وليس قاعدة التوقف. لكن الوكالات التنظيمية غالبًا تتطلب خصائص تشغيلية تكرارية حتى للتصميمات البايزية."
+    }
+  ]
+}

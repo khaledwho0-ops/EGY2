@@ -1,0 +1,128 @@
+/* ═══════════════════════════════════════════════════════════════
+ * hero.css — co-located scope for «النزول / THE DESCENT» (scene 1).
+ *
+ * Hero-only polish, extracted from the old inline <style> so the
+ * showpiece carries its own CSS per the scene contract. The shared
+ * tokens (--dw-*), the .dw-word / .dw-orb / .dw-marquee / .dw-pill /
+ * .dw-box / .dw-spark recipes and their keyframes all live in
+ * dw/design-wave.css (imported once by DescentExperience). Nothing
+ * here leaks: every selector is prefixed .dw-hero*.
+ *
+ * Motion contract: the floating wordmark + drifting figure honour
+ * prefers-reduced-motion (loops disabled below). 320px fallbacks come
+ * from design-wave.css's <768px block + the inline clamp()s.
+ * ═══════════════════════════════════════════════════════════════ */
+
+/* the slow wireframe globe spin (hero-local) */
+@keyframes dw-hero-globe-spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* a gentle float on the whole wordmark stack — cinematic life */
+@keyframes dw-hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* stronger ghost echo, driven by the parallax var written by the JSX */
+.dw-hero-word .dw-ghost {
+  -webkit-text-stroke: 2px rgba(255, 46, 154, 0.32);
+  transform: translate(var(--dw-ghost-shift, 10px), 14px) scale(1.025);
+  filter: blur(0.4px);
+}
+
+/* DELIBERATE bilingual side-label — brighter + larger than the default
+ * mono kicker, with a glow so it reads as intentional atmosphere. */
+.dw-hero-sidelabel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.26em;
+  color: var(--dw-bone-dim);
+  text-shadow: 0 0 18px rgba(255, 46, 154, 0.28);
+}
+.dw-hero-sidelabel__en {
+  color: var(--dw-bone);
+}
+.dw-hero-sidelabel__dot {
+  color: var(--dw-magenta-b);
+  opacity: 0.9;
+}
+.dw-hero-sidelabel__ar {
+  font-family: var(--font-body-ar), 'Tajawal', 'Cairo', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--dw-bone-dim);
+}
+
+/* tape ribbon — bone/white, ≥18px floor, high-contrast violet plate */
+.dw-hero-tape .dw-marquee {
+  background: linear-gradient(90deg, #1a0e2e, var(--dw-violet-deep) 50%, #1a0e2e);
+  box-shadow: 0 10px 40px var(--dw-glow-violet),
+    0 0 0 1px rgba(168, 85, 247, 0.4) inset;
+  padding: 0.7rem 0;
+}
+.dw-hero-tape .dw-marquee__track {
+  color: #ffffff;
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem); /* ≥18px floor */
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
+}
+.dw-hero-tape .dw-marquee__track > span {
+  opacity: 1;
+}
+
+/* finished case box — solid plate, intentional corner ticks (no longer a
+ * brand box: it frames a DESCRIPTION of the case, never a name) */
+.dw-hero-box {
+  background: linear-gradient(180deg, rgba(255, 31, 143, 0.22), rgba(124, 58, 237, 0.16));
+  border: 2px solid var(--dw-magenta-core);
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: right;
+  box-shadow: 0 0 0 1px rgba(255, 31, 143, 0.35),
+    0 10px 30px rgba(255, 46, 154, 0.22),
+    0 0 36px -8px var(--dw-glow-magenta);
+}
+.dw-hero-box::before,
+.dw-hero-box::after {
+  width: 13px;
+  height: 13px;
+  border-width: 2.5px;
+  border-color: var(--dw-magenta-a);
+}
+.dw-hero-box::before {
+  top: -5px;
+  left: -5px;
+}
+.dw-hero-box::after {
+  bottom: -5px;
+  right: -5px;
+}
+
+/* the floating wordmark stack — only when motion is allowed */
+.dw-hero-stack--float {
+  animation: dw-hero-float 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dw-hero-word .dw-ghost {
+    transform: translate(10px, 14px) scale(1.025);
+  }
+  .dw-hero-stack--float {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "day142_system_architecture",
+  "phase": 4,
+  "week": 21,
+  "day": 142,
+  "title": "Layer 2 — The System: Reading the Diet's Architecture",
+  "titleAr": "الطبقة الثانية — النظام: قراءة معمار الحمية",
+  "description": "The full Taybat case, layer by layer. Today you apply your logic and science tools to the diet's internal design: the binary 'pure vs poison' frame, the toxin-free 'detox' claim, and the unfalsifiable safety valve.",
+  "descriptionAr": "حالة الطيبات كاملة، طبقة بطبقة. النهاردة بتطبّق أدوات المنطق والعلم على تصميم الحمية الداخلي: إطار «طاهر ضد سام» الثنائي، وادعاء «الديتوكس» بلا سُمّ، وصمام الأمان غير القابل للتفنيد.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "The viral Taybat diet («نظام الطيبات») split all food into «طيبات» (pure, allowed) and «خبائث» (foul, forbidden) — no gradations, no dose, no individual biology. Chicken, milk, eggs, and raw vegetables were declared unconditionally toxic. Which design red flag is this?",
+      "claimAr": "نظام الطيبات قسّم كل الطعام لـ«طيبات» (طاهر، مسموح) و«خبائث» (خبيث، محرّم) — لا تدرّج ولا جرعة ولا بيولوجيا فردية. الفراخ واللبن والبيض والخضار النيئة أُعلِنت سامة بإطلاق. أنهي علامة خطر تصميمية دي؟",
+      "options": [
+        "No real flag — it's a personal dietary choice",
+        "Binary 'pure vs poison' thinking (red flag #9) — nutrition is dose, context, and individual biology, never absolutes",
+        "It claims to cure everything (red flag #1)",
+        "Authority outside specialty (red flag #7)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Red flag #9: nutrition works with dose, context, and individual biology — not moral absolutes. Chicken is a high-quality complete protein recommended by the WHO and every major dietary guideline. Declaring it 'unconditionally toxic' is a persuasion move, not a scientific position. The binary frame makes the system easy to follow and hard to argue with — which is exactly what helps it spread.",
+      "explanationAr": "علامة الخطر رقم 9: التغذية بتشتغل بالجرعة والسياق والبيولوجيا الفردية — مش بمُطلقات أخلاقية. الفراخ بروتين كامل عالي الجودة موصى بيه من الـWHO وكل التوجيهات الغذائية الكبرى. الإعلان عنه «سام بإطلاق» حركة إقناع، مش موقف علمي. الإطار الثنائي بيخلّي النظام سهل الاتباع وصعب الجدال معاه — وده بالظبط اللي بيساعده ينتشر.",
+      "sources": [
+        "EAL-case-001:redflag-9",
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "The system promised its approved foods 'leave minimal waste' and avoid 'toxins.' A fair evaluator asks: which toxin, by which pathway is it removed, and which assay measures it before and after?",
+      "claimAr": "النظام وعد إن أطعمته المسموحة «تترك فضلات أقل» وبتتجنّب «السموم». المقيّم المنصف بيسأل: أنهي سُمّ، وبأي مسار يُزال، وأي تحليل يقيسه قبل وبعد؟",
+      "options": [
+        "These three questions are nitpicking",
+        "These three questions are the test of whether a 'detox' claim is actually biomedical"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does a 'detox' claim collapse the moment it can't name the toxin, the removal pathway, or a measuring test?",
+        "promptAr": "بكلماتك: ليه ادعاء «الديتوكس» بيقع أول ما يعجز يسمّي السُمّ، أو مسار إزالته، أو تحليل يقيسه؟"
+      },
+      "explanation": "Red flag #10. A real biomedical claim can be specified and measured: name the molecule, the organ/pathway that clears it, and the lab assay that shows the level dropping. 'Detox' language that can answer none of these is marketing, not medicine — the liver and kidneys already do the body's clearance, and no food accelerates that beyond normal physiology. Putting the reasoning into your own words is itself a method (self-explanation) that makes the test stick.",
+      "explanationAr": "علامة الخطر رقم 10. الادعاء الطبي الحقيقي يمكن تحديده وقياسه: سمِّ الجزيء، والعضو/المسار اللي بيصفّيه، والتحليل المعملي اللي بيوريك المستوى نزل. لغة «الديتوكس» اللي ما تقدرش تجاوب على أي من دول دعاية مش طب — الكبد والكلى أصلاً بيعملوا تصفية الجسم، ومفيش طعام بيسرّع ده فوق الفسيولوجيا الطبيعية. وإنك تحطّ الاستدلال بكلماتك ده نفسه منهج (الشرح الذاتي) بيثبّت الاختبار في دماغك.",
+      "sources": [
+        "EAL-case-001:redflag-10",
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 3,
+      "mechanic": "decompose",
+      "claim": "Map this piece of the system's reasoning: \"Forbidden foods leave toxins. Toxins cause chronic disease. So eating only «طيبات» prevents chronic disease — and if you still get sick, you ate something «خبيث» without noticing.\"",
+      "claimAr": "فكّك جزء الاستدلال ده من النظام: «الأطعمة المحرّمة بتسيب سموم. السموم بتسبب المرض المزمن. يبقى أكل الـ«طيبات» بس بيمنع المرض المزمن — ولو لسه مرضت، يبقى أكلت حاجة «خبيثة» من غير ما تاخد بالك».",
+      "parts": [
+        { "text": "Eating only «طيبات» prevents chronic disease.", "textAr": "أكل الـ«طيبات» بس بيمنع المرض المزمن.", "role": "conclusion" },
+        { "text": "Forbidden foods leave toxins.", "textAr": "الأطعمة المحرّمة بتسيب سموم.", "role": "premise" },
+        { "text": "(Unstated) There is a defined toxin, with a known disease-causing pathway.", "textAr": "(غير مذكور) في سُمّ محدّد، بمسار معروف بيسبب المرض.", "role": "assumption" },
+        { "text": "If you still get sick, you must have secretly eaten something «خبيث».", "textAr": "لو لسه مرضت، يبقى لازم أكلت حاجة «خبيثة» في السرّ.", "role": "irrelevant" }
+      ],
+      "explanation": "The argument rests on an unproven hidden ASSUMPTION — that a specific, mechanism-defined toxin exists. The last clause is the unfalsifiable safety valve (red flag #4): it is logically IRRELEVANT to whether the diet works, because it can absorb any failure ('you cheated'). Strip those two out and the conclusion is left standing on nothing. Mapping the parts shows you exactly where the structure breaks.",
+      "explanationAr": "الحُجّة قايمة على افتراض خفي غير مُثبَت — إن في سُمّ محدّد بآلية معروفة. الجملة الأخيرة هي صمام الأمان غير القابل للتفنيد (علامة الخطر رقم 4): غير ذات صلة منطقياً بإذا كانت الحمية شغّالة، لأنها بتمتصّ أي فشل («إنت غششت»). شيل الاتنين دول والخلاصة تفضل واقفة على لا شيء. تفكيك الأجزاء بيوريك بالظبط فين البنية بتتكسّر.",
+      "sources": [
+        "EAL-case-001:redflag-4",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Sunk-Cost Fallacy"
+    },
+    {
+      "id": 4,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A member followed the diet strictly for four months and says his ten-year IBS vanished, offering it as decisive proof the system works. Before you read on — set your confidence: does one person's improvement, with no control condition, prove the diet caused it?",
+      "claimAr": "عضو اتبع الحمية بدقة أربع شهور وبيقول قولونه اللي معاه عشر سنين راح، وبيقدّمه كدليل حاسم إن النظام شغّال. قبل ما تكمّل — حدّد ثقتك: هل تحسّن شخص واحد، بدون شرط ضابط، يثبت إن الحمية هي السبب؟",
+      "options": [
+        "Yes — a clear before/after on a real person is proof",
+        "No — with no control, the improvement can't be separated from placebo, natural IBS fluctuation, or other simultaneous changes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "One uncontrolled story can't separate the diet from placebo, the natural ups-and-downs of IBS, reduced stress from finally having a plan, or unrelated dietary improvements (more fibre, less processed food). This is anecdotal reasoning plus illusory correlation — two things happened together, but timing is not cause. Notice whether your confidence matched the evidence: feeling sure a vivid story is decisive is the exact pull this case is built on.",
+      "explanationAr": "قصة واحدة بدون ضابط ما تقدرش تفصل الحمية عن الوهمي، أو التقلّب الطبيعي للقولون، أو انخفاض التوتر لمّا بقى في خطة، أو تحسينات غذائية غير مرتبطة (ألياف أكتر، أكل مصنّع أقل). ده استدلال حكائي + ترابط وهمي — حاجتان حصلتا مع بعض، لكن التزامن مش سبب. لاحظ ثقتك طابقت الأدلة ولا لأ: إحساسك إن قصة حيّة حاسمة هو بالظبط الشدّ اللي الحالة دي مبنية عليه.",
+      "sources": [
+        "EAL-case-001:bias-anecdotal",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6368644/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 141,
+      "claim": "Back to Layer 1 for a moment: the diet's whole architecture was designed by a board-certified anaesthesiologist, and it set rules for cancer and diabetes nutrition. A follower says 'but he's a real doctor, so the system is sound.' Which move is this?",
+      "claimAr": "رجوع للطبقة الأولى لحظة: معمار الحمية كله صمّمه طبيب تخدير معتمد، وحطّ قواعد لتغذية السرطان والسكري. تابع بيقول «بس هو دكتور حقيقي، يبقى النظام سليم». الحركة دي إيه؟",
+      "options": [
+        "A fair appeal to relevant expertise",
+        "Authority bias (red flag #7) — credentials are domain-specific; anaesthesia is not nutrition, endocrinology, or oncology",
+        "The Dunning–Kruger effect",
+        "A correlation-causation error"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Authority bias, red flag #7 — re-tested here because it underwrites the entire system. Credentials are domain-specific: anaesthesia training covers airway, anaesthetic agents, and intensive care, not clinical nutrition, endocrinology, or oncology. A real title in one field is not evidence in another. The architecture can look 'medical' and still rest on no evidence base in the fields it actually touches.",
+      "explanationAr": "انحياز السلطة، علامة الخطر رقم 7 — بنعيد اختباره هنا لأنه بيسند النظام كله. الشهادات خاصة بالمجال: تدريب التخدير بيغطّي مجرى الهواء والعقاقير التخديرية والعناية المركزة، مش التغذية الإكلينيكية ولا الغدد ولا الأورام. لقب حقيقي في مجال مش دليل في مجال تاني. المعمار ممكن يبان «طبي» وهو واقف على صفر دليل في المجالات اللي بيمسّها فعلاً.",
+      "sources": [
+        "EAL-case-001:redflag-7",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

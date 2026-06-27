@@ -1,0 +1,62 @@
+{
+  "id": "day161_plant_seeds_know_when_to_stop",
+  "phase": 4,
+  "week": 23,
+  "day": 161,
+  "title": "Conversations III — Plant Seeds, Know When to Stop",
+  "titleAr": "محادثات 3 — ازرع بذور، واعرف امتى تقف",
+  "description": "You will not change a mind in one sitting. Your job is to introduce a little doubt — and protect the relationship that lets you talk again.",
+  "descriptionAr": "مش هتغيّر عقل في جلسة واحدة. شغلتك تدخّل شكّ بسيط — وتحمي العلاقة اللي بتخلّيك تتكلّم تاني.",
+  "type": "integration",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://www.nature.com/articles/s41599-025-06143-6",
+  "exercises": [
+    {
+      "id": 1, "mechanic": "recognize",
+      "claim": "Realistically, what is a SUCCESSFUL outcome of one conversation with a committed believer?",
+      "claimAr": "واقعياً، إيه النتيجة *الناجحة* لمحادثة واحدة مع مؤمن متمسّك؟",
+      "options": ["A full public retraction", "A small seed of doubt planted, and the relationship intact so you can talk again", "Winning in front of the family", "Them blocking you"],
+      "correctAnswer": 1,
+      "explanation": "Plant seeds, not trees. One good conversation introduces a crack of doubt and keeps trust alive for the next one. Demanding a full retraction triggers the backfire effect and ends the relationship that was your only real channel.",
+      "explanationAr": "ازرع بذور، مش أشجار. المحادثة الكويسة بتدخّل شقّ شكّ وبتحافظ على الثقة للمرة الجاية. المطالبة باعتراف كامل بتشعل تأثير الارتداد وبتنهي العلاقة اللي كانت قناتك الوحيدة.",
+      "sources": ["https://www.nature.com/articles/s41599-025-06143-6"],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2, "mechanic": "self_explain",
+      "claim": "Knowing WHEN to stop a conversation (before it turns into a fight) is itself a skill.",
+      "claimAr": "إنك تعرف *امتى* توقف المحادثة (قبل ما تبقى خناقة) ده نفسه مهارة.",
+      "options": ["True", "False"],
+      "correctAnswer": 0,
+      "selfExplain": { "prompt": "Name two signs it's time to pause a conversation — and how you'd leave the door open as you stop.", "promptAr": "سمّي علامتين إن الوقت حان توقّف المحادثة — وإزاي تسيب الباب مفتوح وإنت بتقف." },
+      "explanation": "Signs to stop: voices rising, identity-defense ('you think I'm stupid?'), or repeating in circles. Leave the door open: 'I respect you too much to fight about this — let's grab tea, and if you ever want to look at it together, I'm here.' Stopping well protects the long game.",
+      "explanationAr": "علامات التوقّف: الصوت بيعلا، دفاع عن الهوية («إنت شايفني غبي؟»)، أو تكرار في دواير. سيب الباب مفتوح: «بحترمك أكتر من إني أتخانق على ده — تعالى نشرب شاي، ولو حبيت في أي وقت نبص عليه سوا، أنا هنا». التوقّف الكويس بيحمي اللعبة الطويلة.",
+      "sources": ["https://www.nature.com/articles/s41599-025-06143-6"],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 3, "mechanic": "inoculate",
+      "technique": "the gentle doubt-seed (used for GOOD here)",
+      "techniqueAr": "بذرة الشكّ اللطيفة (مستخدمة للخير هنا)",
+      "task": "Flip the skill to the good side: write ONE short, non-threatening question you could leave a loved one with that gently plants doubt about a 'stop your medicine' claim — without attacking them. (e.g. about what a doctor would say, or a simple test.)",
+      "taskAr": "اقلب المهارة للجانب الكويس: اكتب سؤال واحد قصير غير مهدِّد تقدر تسيبه لحد بتحبّه يزرع شكّ بلطف حوالين ادعاء «بطّل دواك» — من غير ما تهاجمه. (مثلاً عن رأي دكتور، أو اختبار بسيط.)",
+      "tells": [
+        "A good seed is a QUESTION, not a verdict — it invites, never corners.",
+        "It ties to something they value (their own health, their kids, a trusted doctor).",
+        "It's small enough to sit with after you leave — doubt grows in private.",
+        "It keeps your warmth: the seed only sprouts if the relationship survives."
+      ],
+      "tellsAr": [
+        "البذرة الكويسة *سؤال*، مش حُكم — بتدعو، ما بتحاصرش.",
+        "بتتربط بحاجة بيقدّروها (صحتهم، عيالهم، دكتور موثوق).",
+        "صغيرة بما يكفي تفضل معاهم بعد ما تمشي — الشكّ بيكبر في الخفا.",
+        "بتحافظ على دفئك: البذرة بتنبت بس لو العلاقة عاشت."
+      ],
+      "explanation": "You just practiced the constructive version of influence — the same understanding of persuasion that manipulators abuse, turned toward planting honest doubt and protecting someone you love. That is the whole curriculum in one move: see the technique, and choose to use your power for clarity, not control.",
+      "explanationAr": "لسه دلوقتي مارست النسخة البنّاءة من التأثير — نفس فهم الإقناع اللي المتلاعبين بيسيئوا استخدامه، موجَّه لزرع شكّ صادق وحماية حد بتحبّه. ده المنهج كله في حركة واحدة: تشوف الحركة، وتختار تستخدم قوّتك للوضوح، مش للسيطرة.",
+      "sources": ["https://www.jmir.org/2023/1/e49255"],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

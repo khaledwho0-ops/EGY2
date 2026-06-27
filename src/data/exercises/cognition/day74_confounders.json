@@ -1,0 +1,119 @@
+{
+  "id": "day74_confounders",
+  "phase": 2,
+  "week": 11,
+  "day": 74,
+  "title": "Confounders — The Hidden Third Variable",
+  "titleAr": "العوامل المربِكة — المتغيّر الثالث الخفي",
+  "description": "Coffee drinkers used to look like they got more cancer — until researchers noticed they also smoked more. The real culprit was hiding behind coffee. A confounder is any third variable that links exposure to outcome and fakes a relationship.",
+  "descriptionAr": "شاربو القهوة كانوا بيبدوا بيصابوا بسرطان أكثر — لحد ما الباحثون لاحظوا إنهم كمان كانوا بيدخّنوا أكثر. المجرم الحقيقي كان مختبي وراء القهوة. العامل المربِك هو أي متغيّر ثالث بيربط التعرّض بالنتيجة ويُزيّف علاقة.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-and-aetiological-research",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Early studies found that people who drank more coffee had higher rates of certain cancers. Researchers then controlled for smoking and the association mostly disappeared. What does this example teach?",
+      "claimAr": "دراسات مبكّرة لاقت إن الناس اللي بتشرب قهوة أكثر عندها معدلات أعلى من بعض السرطانات. لمّا الباحثون ضبطوا عامل التدخين، الارتباط اختفى تقريباً. إيه اللي بيعلّمنا إياه المثال ده؟",
+      "options": [
+        "Coffee causes cancer",
+        "Smoking was a confounder — it was linked to both coffee drinking and cancer, creating a spurious association between coffee and cancer that was not causal",
+        "Cancer causes coffee drinking",
+        "The studies were all fraudulent"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the classic confounder example in epidemiology. Smoking was associated with both coffee consumption (smokers of that era tended to drink more coffee) and cancer. When smoking was statistically controlled, coffee's apparent risk evaporated. The lesson: before concluding that A causes B, always ask 'is there a C that is independently linked to both A and B?' This is one reason that current meta-analyses find moderate coffee consumption is actually neutral-to-slightly-protective for several conditions.",
+      "explanationAr": "ده المثال الكلاسيكي للعامل المربِك في علم الأوبئة. التدخين كان مرتبطاً بكلٍّ من استهلاك القهوة وبالسرطان. لمّا التدخين اتضبط إحصائياً، اختفى الخطر الظاهري للقهوة. الدرس: قبل ما تستنتج إن أ يسبّب ب، اسأل دايماً «هل في جـ مرتبط باستقلالية بكلٍّ من أ وب؟»",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-and-aetiological-research",
+        "https://www.hsph.harvard.edu/nutritionsource/food-features/coffee/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "Followers of the viral «نظام الطيبات» diet stopped chicken, dairy, and eggs all at the same time as they also began sleeping earlier, reducing stress (joining a supportive online community), and eating more vegetables. Some genuinely felt better. The system's advocates credited the diet alone.",
+      "claimAr": "أتباع نظام «الطيبات» أوقفوا الفراخ واللبن والبيض في نفس الوقت اللي بدأوا فيه ينامو مبكّراً ويقلّلوا التوتر (بانضمامهم لمجتمع أونلاين داعم) ويأكلوا خضار أكثر. بعضهم تحسّن فعلاً. المدافعون عن النظام أسبوا ذلك للحمية وحدها.",
+      "options": [
+        "They are right — if the diet changed and health improved, the diet caused it",
+        "They cannot know — sleep, stress reduction, social support, and increased vegetables are all independently beneficial confounders that changed simultaneously"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: name at least two specific confounders that changed alongside the diet, and explain why each one alone could have caused the improvement — without any dietary change at all.",
+        "promptAr": "بكلماتك: اذكر على الأقل عاملَين مربِكَين محدّدَين اتغيّروا جنباً إلى جنب مع الحمية، واشرح ليه كل واحد منهم لوحده ممكن يكون سبّب التحسّن — من غير أي تغيير غذائي أصلاً."
+      },
+      "explanation": "Sleep is a powerful independent pathway to improved wellbeing — even one extra hour per night produces measurable changes in inflammation, mood, and gut function. Social support (joining a community) reduces cortisol and improves resilience. Increased vegetables independently improve gut microbiome and energy levels. When five things change at once and you feel better, you cannot isolate which change (if any) was responsible without a control condition. This is why 'my patients are my research' is not research.",
+      "explanationAr": "النوم مسار مستقل قوي لتحسّن الصحة — حتى ساعة إضافية في الليل تنتج تغييرات قابلة للقياس في الالتهاب والمزاج ووظيفة الأمعاء. الدعم الاجتماعي (الانضمام لمجتمع) بيقلّل الكورتيزول ويحسّن المرونة. الخضار المزيدة تحسّن ميكروبيوم الأمعاء ومستويات الطاقة باستقلالية. لمّا خمس حاجات تتغيّر في وقت واحد وتتحسّن، ما تقدرش تعزل أنهي تغيير (إن وُجد) كان مسؤولاً بدون شرط ضابط. علشان كده «مرضايا هم بحثي» مش بحث.",
+      "sources": [
+        "EAL-case-001:redflag-3",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-and-aetiological-research"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "A study finds that Egyptian schoolchildren who walk to school score higher on reading tests than those who are driven. A journalist concludes: 'Walking boosts reading ability!'",
+      "claimAr": "دراسة على أطفال مدارس مصريين لاقت إن الأطفال اللي بيمشوا للمدرسة بيحصّلوا درجات أعلى في قراءة من اللي بيُقلّوا. صحفي يستنتج: «المشي بيعزّز القراءة!»",
+      "prompt": "What would have to be true if walking is NOT the cause? What third variables could link transport mode to reading scores independently of any exercise effect?",
+      "promptAr": "إيه اللي لازم يكون صح لو المشي مش السبب؟ إيه المتغيّرات الثالثة اللي ممكن تربط وسيلة التنقّل بدرجات القراءة باستقلالية عن أي أثر للتمرين؟",
+      "modelPoints": [
+        "Socioeconomic status (SES): families with cars are often wealthier, and wealth independently predicts reading scores through better books, tutoring, quieter homes, and parental education.",
+        "Neighbourhood quality: children who walk to a nearby school live closer to the school — possibly in denser urban areas with different school resources than car-commute suburbs.",
+        "Parental engagement: families who choose an active commute may also be more engaged in children's education generally.",
+        "If SES is the confounder, then improving reading scores requires addressing socioeconomic inequality — not building more walking paths."
+      ],
+      "modelPointsAr": [
+        "الوضع الاجتماعي-الاقتصادي: العائلات اللي عندها سيارات غالباً أكثر ثراءً، والثراء يتنبّأ باستقلالية بدرجات القراءة من خلال كتب أفضل ودروس خصوصية وبيوت أهدأ وتعليم الوالدين.",
+        "جودة الحي: الأطفال اللي بيمشوا بيسكنوا قريب من المدرسة — ربما في مناطق حضرية أكثر كثافة بموارد مدرسية مختلفة عن ضواحي السيارات.",
+        "انخراط الوالدين: العائلات اللي بتختار التنقّل النشط ممكن تكون أكثر اهتماماً بتعليم أطفالها بشكل عام.",
+        "لو الوضع الاجتماعي-الاقتصادي هو العامل المربِك، تحسين درجات القراءة بيستلزم معالجة التفاوت الاجتماعي-الاقتصادي — مش بناء ممرات مشي أكثر."
+      ],
+      "explanation": "The consider-opposite exercise forces you to ask: 'What else could explain this finding?' Before any causal claim, identifying at least one plausible confounder is the minimum standard of critical thinking about correlation data. Good researchers list potential confounders explicitly and attempt to measure and control for the most important ones.",
+      "explanationAr": "تمرين 'فكّر في العكس' بيجبرك تسأل: «إيه التاني اللي ممكن يفسّر النتيجة دي؟» قبل أي ادعاء سببي، تحديد عامل مربِك واحد على الأقل محتمل هو الحد الأدنى لمعيار التفكير النقدي في بيانات الارتباط. الباحثون الجيدون بيسردوا العوامل المربِكة المحتملة صراحةً وبيحاولوا يقيسوا أهمّها ويضبطوه.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 4,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if you match your case group and control group on age, sex, and smoking status, you have eliminated ALL confounding from the study.",
+      "claimAr": "صح ولا غلط: لو طابقت مجموعة الحالات والضابطة في السن والجنس وحالة التدخين، بتكون قضيت على كل العوامل المربِكة من الدراسة.",
+      "correctAnswer": false,
+      "myth_en": "Matching on known confounders removes all confounding.",
+      "myth_ar": "مطابقة العوامل المربِكة المعروفة بيزيل كل الإرباك.",
+      "explanation": "False — you can only control for confounders you know about and measure. Residual confounding from unmeasured variables always remains. Diet quality, socioeconomic status, physical activity, sleep, genetic predispositions, occupational exposures — all could be lurking behind your observed association. This is why even in carefully matched studies, researchers say 'associated with' rather than 'causes'. Randomization in an RCT is the only design that distributes both known AND unknown confounders equally. Calibration: if you were confident this was true, that confidence reveals a common assumption — 'I covered the obvious ones' — which is not the same as 'I covered them all.'",
+      "explanationAr": "غلط — تقدر فقط تتحكّم في العوامل المربِكة اللي تعرفها وتقيسها. الإرباك المتبقّي من متغيّرات غير مقيسة بيفضل دايماً موجود. جودة التغذية والوضع الاجتماعي-الاقتصادي والنشاط البدني والنوم والاستعدادات الجينية والتعرّضات المهنية — كل دي ممكن تكون مختبية. علشان كده حتى في الدراسات المطابَقة بعناية، الباحثون بيقولوا «مرتبط بـ» بدل «يسبّب». العشوائية في التجربة العشوائية المحكَمة هي التصميم الوحيد اللي بيوزّع العوامل المربِكة المعروفة والمجهولة. المعايرة: لو كنت واثق إنها صح، اليقين ده بيكشف افتراضاً شائعاً — «غطّيت الواضحين» — وهو مش نفس «غطّيت كلهم».",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "A study finds that people who carry lighters have a higher lung-cancer rate than those who don't. Should we ban lighters to prevent cancer?",
+      "claimAr": "دراسة لاقت إن الناس اللي بتشيل ولاعات عندها معدل سرطان رئة أعلى من اللي ما بتشيلش. هل لازم نحظر الولاعات لنمنع السرطان؟",
+      "options": [
+        "Yes — the data clearly shows lighters cause cancer",
+        "No — smoking is the confounder: smokers carry lighters AND develop lung cancer; the lighter is just correlated with smoking, not the cause of cancer",
+        "The study proves the ban is needed",
+        "The association is meaningless because it seems absurd"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Lighters and lung cancer are both downstream of the real cause: smoking. Confounders create exactly this kind of absurd-seeming association when you don't account for them. This is why correlation does not equal causation: two things can move together without one causing the other, because a third variable drives both. Controlling for smoking in the analysis would remove the association with lighters entirely.",
+      "explanationAr": "الولاعات وسرطان الرئة كليهما نتيجة للسبب الحقيقي: التدخين. العوامل المربِكة بتخلق بالضبط هذا النوع من الارتباطات التي تبدو عبثية لمّا ما تأخذها بالاعتبار. علشان كده الارتباط لا يساوي السببية: حاجتان ممكن تتحرّكا معاً من غير ما إحداهما تسبّب الأخرى، لأن متغيّر ثالث يقود كليهما.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-and-aetiological-research"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    }
+  ]
+}

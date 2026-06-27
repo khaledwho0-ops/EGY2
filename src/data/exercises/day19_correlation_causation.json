@@ -1,0 +1,29 @@
+{
+  "id": "day19_correlation_causation",
+  "phase": 0,
+  "week": 3,
+  "day": 19,
+  "title": "Correlation vs Causation",
+  "titleAr": "الترابط مقابل السببية",
+  "description": "The most common reasoning error in Egyptian social media.",
+  "descriptionAr": "أكثر أخطاء الاستدلال شيوعاً في وسائل التواصل المصرية.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 12,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "Egypt increased internet speed. Economy improved. Therefore faster internet caused growth.",
+      "claimAr": "مصر زادت سرعة الإنترنت. الاقتصاد تحسن. إذن الإنترنت سبب النمو.",
+      "truthValue": "misleading",
+      "category": "economics",
+      "difficulty": 3,
+      "explanation": "Classic correlation ≠ causation. Both could be from infrastructure investment (third variable). Need controlled studies.",
+      "explanationAr": "ترابط كلاسيكي ≠ سببية. كلاهما قد يكون من استثمار البنية التحتية.",
+      "sources": [
+        "https://www.bmj.com/content/350/bmj.h1065"
+      ],
+      "cognitivebiasAtPlay": "Correlation-Causation Confusion"
+    }
+  ]
+}

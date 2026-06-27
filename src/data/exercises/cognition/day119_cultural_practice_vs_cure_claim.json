@@ -1,0 +1,148 @@
+{
+  "id": "day119_cultural_practice_vs_cure_claim",
+  "phase": 3,
+  "week": 17,
+  "day": 119,
+  "title": "Cultural Practice vs Cure Claim — Drawing the Line",
+  "titleAr": "الممارسة الثقافية مقابل ادعاء الشفاء — رسم الخطّ",
+  "description": "Egypt has rich food traditions. Most are fine. A few have been elevated — without evidence — into disease cures. Today we practise drawing the line and responding with empathy.",
+  "descriptionAr": "مصر عندها تقاليد غذائية غنية. معظمها كويسة. بعضها اتحوّل — بدون دليل — لادعاءات شفاء من الأمراض. النهاردة بنتدرّب على رسم الخطّ والردّ بتعاطف.",
+  "type": "integration",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Sort these into 'cultural practice' vs 'disease-cure claim': (A) Eating koshary brings the family together on Fridays. (B) Drinking fenugreek (حلبة) daily lowers blood sugar enough to replace metformin. (C) Putting onion on a child's forehead for a cold is a comforting tradition. (D) Eating raw garlic cures H. pylori infection.",
+      "claimAr": "صنّف دول في «ممارسة ثقافية» مقابل «ادعاء شفاء مرض»: (أ) أكل الكشري بيجمّع العيلة الجُمَع. (ب) شرب الحلبة يومياً بيخفّض السكر بما يكفي لاستبدال الميتفورمين. (ج) وضع البصل على جبهة طفل عنده برد تقليد مريح. (د) أكل الثوم النيّ بيشفي عدوى الهيليكوباكتر.",
+      "options": [
+        "All four are disease-cure claims",
+        "A and C are cultural practices; B and D are disease-cure claims requiring clinical evidence",
+        "B and C are cultural practices; A and D are cure claims",
+        "All four are equally valid medically"
+      ],
+      "correctAnswer": 1,
+      "explanation": "(A) and (C) are cultural/comfort practices — they make no claim about disease biology and need no clinical trial. (B) and (D) are medical claims: they name a specific disease, a specific intervention, and a specific outcome (replaces medication, cures infection). These must meet the same evidence bar as any drug. Note: fenugreek has some modest blood-sugar effects studied in trials, but the claim 'replaces metformin' is a much stronger statement not currently supported by evidence. Garlic has some antimicrobial properties, but is not a clinically validated H. pylori treatment.",
+      "explanationAr": "(أ) و(ج) ممارسات ثقافية/طمأنينة — ما بيدّعوش حاجة عن بيولوجيا المرض وما محتاجينش تجربة سريرية. (ب) و(د) ادعاءات طبية: بيسمّوا مرضاً محدّداً وتدخّلاً محدّداً ونتيجة محدّدة. دول لازم يوفّوا نفس معيار الدليل اللي أي دواء بيوفّيه. الحلبة عندها تأثيرات متواضعة مدروسة في تجارب، لكن «بيستبدل الميتفورمين» أقوى بكثير من الدليل المتاح.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4525086/",
+        "https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A kind relative tells a diabetic person: 'Try cinnamon instead of insulin — it's natural and there are studies.' Is this a potentially dangerous recommendation even though the intention is good?",
+      "claimAr": "قريب حسن النية بيقول لمريض سكري: «جرّب القرفة بدل الأنسولين — طبيعية وفيه دراسات». هل دي توصية خطيرة محتمل رغم النية الطيّبة؟",
+      "options": [
+        "No — if the intention is kind, the recommendation is safe",
+        "Yes — intention and safety are independent; 'instead of' adds a claim that goes far beyond the evidence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Intention and safety are independent. Cinnamon has modest blood-sugar study results but no rigorous trial supports replacing insulin in type-1 diabetes, which is life-threatening without it. 'Instead' is the danger word: it adds a specific medical claim far beyond what evidence supports. Kind intention + weak evidence = still harmful. Calibration check: notice how certain you felt before seeing the explanation — and whether that certainty was earned.",
+      "explanationAr": "النية والسلامة مستقلّتان. القرفة عندها نتائج متواضعة لكن لا تجربة صارمة تدعم استبدال الأنسولين في سكري النوع الأول. كلمة «بدل» هي الخطر: بتضيف ادعاءً طبياً يتجاوز كثيراً الدليل المتاح. نية طيّبة + دليل ضعيف = لسّه ضارّ. تحقق من المعايرة: لاحظ كنت متأكد قد إيه قبل الشرح — وهل اليقين ده كان مكسوباً.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6676166/",
+        "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD007170.pub3/full"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A family grandmother's remedy — rubbing warm olive oil on a child's chest for a cough — has been done for generations and the child always recovers. A relative says this proves olive oil cures upper respiratory infections.",
+      "claimAr": "علاج جدّة — دهن زيت زيتون دافي على صدر طفل عنده سعال — اتعمل على مدار أجيال والطفل دايماً بيتعافى. قريب بيقول ده دليل إن زيت الزيتون بيشفي التهابات الجهاز التنفّسي.",
+      "options": [
+        "Yes — generations of use is strong evidence for a cure",
+        "No — upper respiratory infections mostly resolve on their own in 7–10 days; the recovery coincides with, but is not caused by, the remedy"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does 'always recovering after grandma's remedy' NOT prove the remedy cured the infection?",
+        "promptAr": "بكلماتك: ليه «دايماً بيتعافى بعد علاج الجدّة» مش دليل إن العلاج شفى العدوى؟"
+      },
+      "explanation": "Upper respiratory infections are mostly viral — the immune system clears them in 7–10 days with or without olive oil. Warmth and comfort may genuinely help the child feel better (a real comfort effect), but that is not a medical cure for the infection. Generations of use establishes safety, not efficacy against the pathogen. The correlation is real; the causation is not proven. The tradition has value as comfort; it should not replace antibiotics if a bacterial infection is actually present.",
+      "explanationAr": "التهابات الجهاز التنفّسي غالباً فيروسية — الجهاز المناعي بيُطهّرها في 7–10 أيام مع أو بدون زيت الزيتون. الدفء والراحة ممكن يساعد الطفل يحسّ أحسن (تأثير راحة حقيقي) لكن ده مش شفاء طبي للعدوى. الأجيال من الاستخدام بتُثبت السلامة مش الفاعلية. الترابط حقيقي؛ السببية غير مُثبَتة.",
+      "sources": [
+        "https://www.nhs.uk/conditions/common-cold/",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A post says: 'Egyptian herbal traditions have been healing people for thousands of years — that alone proves they work better than modern medicine for chronic disease.'",
+      "claimAr": "بوست بيقول: «التقاليد العشبية المصرية بتشفي الناس من آلاف السنين — ده لوحده يُثبت إنها بتشتغل أحسن من الطب الحديث في الأمراض المزمنة».",
+      "prompt": "Before accepting this: what would DISPROVE it? What else could explain why people felt better after traditional remedies across centuries?",
+      "promptAr": "قبل تقبّله: إيه اللي يكذّبه؟ وإيه التفسيرات التانية لإن الناس حسّت أحسن بعد العلاجات التقليدية على مرّ القرون؟",
+      "modelPoints": [
+        "Most ailments that traditional healers treated were self-limiting (colds, minor wounds, digestive upsets that resolve anyway) — the healer got credit for natural recovery.",
+        "Placebo effect is real and measurable: expecting to be helped, combined with care and ritual, can produce genuine symptom relief without the remedy doing anything biologically.",
+        "Survivorship bias: remedies that caused harm were quietly abandoned; we only remember the 'successes,' skewing the record toward apparent effectiveness.",
+        "Length of tradition says nothing about mechanism: bloodletting was practised for 2,000 years and actively killed patients. Age is not evidence of efficacy."
+      ],
+      "modelPointsAr": [
+        "معظم الأمراض اللي المعالجون التقليديون عالجوها كانت محدودة ذاتياً (برد، جروح صغيرة، اضطرابات هضمية بتتعافى لوحدها) — المعالج أخد الفضل في التعافي الطبيعي.",
+        "الأثر الوهمي حقيقي وقابل للقياس: توقّع المساعدة مع الرعاية والطقوس ممكن ينتج تخفيف فعلي للأعراض من غير أن يعمل العلاج بيولوجياً.",
+        "انحياز الناجين: العلاجات اللي سبّبت أذى اتتركت بهدوء؛ بنتذكّر بس «النجاحات»، مما يُشوّه السجل نحو فاعلية ظاهرية.",
+        "طول التقليد ما بيقولش حاجة عن الآلية: الحجامة الدموية اتمارست 2000 سنة وكانت بتقتل المرضى فعلاً. القِدَم مش دليل على الفاعلية."
+      ],
+      "sources": [
+        "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD007170.pub3/full",
+        "https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'My father took this herbal blend for his blood pressure for 20 years and never had a stroke. Modern medicine never proved it doesn't work. So it must be effective for blood pressure and should replace amlodipine.'",
+      "claimAr": "فكّك الحجة دي: «والدي اخد الخلطة دي العشبية للضغط 20 سنة وما عنده سكتة دماغية. الطب الحديث ما أثبتش إنها ما بتشتغلش. يبقى لازم تكون فعّالة للضغط ولازم تحلّ محلّ أملوديبين».",
+      "parts": [
+        { "text": "The herbal blend must be effective for blood pressure and should replace amlodipine.", "textAr": "الخلطة العشبية لازم تكون فعّالة للضغط ولازم تحلّ محلّ أملوديبين.", "role": "conclusion" },
+        { "text": "My father took this blend for 20 years and never had a stroke.", "textAr": "والدي اخد الخلطة 20 سنة وما عنده سكتة دماغية.", "role": "premise" },
+        { "text": "(Unstated) Not having a stroke while taking something proves that thing prevents strokes.", "textAr": "(غير مذكور) عدم الإصابة بسكتة أثناء تناول شيء ما يُثبت أن هذا الشيء يمنع السكتة.", "role": "assumption" },
+        { "text": "Modern medicine never proved it doesn't work.", "textAr": "الطب الحديث ما أثبتش إنها ما بتشتغلش.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption is that correlation in one person proves causation (it doesn't — no control, no blinding, placebo effect, natural course of disease). The 'not proved it doesn't work' line is irrelevant and reverses the burden of proof: the standard is that a treatment must prove it works, not that critics must prove it doesn't. Without a controlled trial, his father's good health could be due to genetics, lifestyle, diet, luck, or other medications — we cannot tell.",
+      "explanationAr": "الافتراض الخفي إن الترابط عند شخص واحد يُثبت السببية (مش بيثبت — لا ضابط ولا تعمية، وفيه تأثير وهمي ومسار طبيعي للمرض). جملة «ما أثبتش إنها ما بتشتغلش» غير ذات صلة وبتعكس عبء الإثبات: المعيار هو إن العلاج يُثبت إنه بيشتغل، مش إن الناقدين يُثبتوا إنه ما بيشتغلش.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/hypertension",
+        "https://www.nhs.uk/medicines/amlodipine/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 6,
+      "mechanic": "inoculate",
+      "technique": "upgrading a cultural practice into a disease cure",
+      "techniqueAr": "ترقية ممارسة ثقافية إلى علاج مرض",
+      "task": "Feel this from the inside (weakened, harmless version). Write a short, convincing post that takes a real cultural food tradition (e.g. drinking anise tea after meals) and upgrades it into a specific disease cure. Make it sound warm, personal, and credible.",
+      "taskAr": "احسّ بالحركة من جوّه (نسخة مخفّفة وغير ضارة). اكتب بوست قصير مُقنع بيأخد تقليد طعام ثقافي حقيقي (زي شرب شاي اليانسون بعد الأكل) وبيرقّيه لعلاج مرض محدد. خلّيه يبان دافي وشخصي وموثوق.",
+      "tells": [
+        "Sliding from 'eases digestion' (plausible, often true) to 'cures IBS' (a clinical claim needing clinical evidence) — the slide happens inside one sentence.",
+        "Personal testimony ('my mother/father') replaces data — we feel the warmth but that warmth is not evidence.",
+        "The word 'natural' or 'generations of use' substitutes for a mechanism: how exactly does it work, and has anyone measured it?",
+        "No comparison group: people 'got better' — but what happened to people with the same condition who did NOT use the remedy?",
+        "No dose, no duration, no safety data for specific conditions — real treatments specify all of these."
+      ],
+      "tellsAr": [
+        "الانزلاق من «بيهدّي الهضم» (معقول، وصح كثير) لـ«بيشفي القولون العصبي» (ادعاء إكلينيكي يحتاج دليل إكلينيكي) — الانزلاق بيحصل جوّه جملة واحدة.",
+        "الشهادة الشخصية («أمّي/أبويا») بتحلّ محلّ البيانات — بنحسّ الدفء لكن الدفء ده مش دليل.",
+        "كلمة «طبيعي» أو «أجيال من الاستخدام» بتحلّ محلّ الآلية: بيشتغل إزاي بالضبط، وحد قاسه؟",
+        "لا مجموعة مقارنة: الناس «اتحسنت» — لكن إيه اللي حصل لناس عندهم نفس الحالة وما استخدموش العلاج؟",
+        "لا جرعة ولا مدة ولا بيانات أمان لحالات محددة — العلاجات الحقيقية بتحدّد كل ده."
+      ],
+      "sources": [
+        "https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    }
+  ]
+}

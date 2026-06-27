@@ -1,0 +1,50 @@
+[
+  {
+    "week": 5,
+    "days": [29, 30, 31, 32, 33, 34, 35],
+    "description": "Week 5: Formal Fallacies & Foundational Logic",
+    "dailyPattern": {
+      "fallaciesPerDay": 5,
+      "logicConstructsPerDay": 2,
+      "heuristicsPerDay": 1.5,
+      "eiCompetenciesPerDay": 1.5,
+      "components": ["fallacy-engine/page.tsx", "debate-sim/page.tsx", "reaction-test/page.tsx", "comb-tracker/page.tsx", "myth-autopsy.tsx"]
+    }
+  },
+  {
+    "week": 6,
+    "days": [36, 37, 38, 39, 40, 41, 42],
+    "description": "Week 6: Informal Fallacies (Relevance & Presumption)",
+    "dailyPattern": {
+      "fallaciesPerDay": 5,
+      "logicConstructsPerDay": 2,
+      "heuristicsPerDay": 1.5,
+      "eiCompetenciesPerDay": 1.5,
+      "components": ["fallacy-engine/page.tsx", "debate-sim/page.tsx", "reaction-test/page.tsx", "comb-tracker/page.tsx", "myth-autopsy.tsx"]
+    }
+  },
+  {
+    "week": 7,
+    "days": [43, 44, 45, 46, 47, 48, 49],
+    "description": "Week 7: Informal Fallacies (Ambiguity) & Statistical Intro",
+    "dailyPattern": {
+      "fallaciesPerDay": 5,
+      "logicConstructsPerDay": 2,
+      "heuristicsPerDay": 1.5,
+      "eiCompetenciesPerDay": 1.5,
+      "components": ["fallacy-engine/page.tsx", "debate-sim/page.tsx", "reaction-test/page.tsx", "comb-tracker/page.tsx", "myth-autopsy.tsx"]
+    }
+  },
+  {
+    "week": 8,
+    "days": [50, 51, 52, 53, 54, 55, 56],
+    "description": "Week 8: Egyptian-dialect & Islamic-rhetoric fallacies consolidation",
+    "dailyPattern": {
+      "fallaciesPerDay": 5,
+      "logicConstructsPerDay": 2,
+      "heuristicsPerDay": 1.5,
+      "eiCompetenciesPerDay": 1.5,
+      "components": ["fallacy-engine/page.tsx", "debate-sim/page.tsx", "reaction-test/page.tsx", "comb-tracker/page.tsx", "myth-autopsy.tsx"]
+    }
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "day": 1,
+    "file": "data/exercises/day1_calibration.json",
+    "components": ["assessment-engine.tsx", "confidence-slider.tsx", "CalmReveal.tsx"],
+    "logicEngine": "CIVO-Router computes baseline EIS=0",
+    "psychometricHook": "Administers MIST-20"
+  },
+  {
+    "day": 2,
+    "file": "data/exercises/day2_trust_battery_sprint1.json",
+    "components": ["trust-battery.ts"],
+    "logicEngine": "None (data collection only)",
+    "psychometricHook": "Source-ranking sprint #1"
+  },
+  {
+    "day": 3,
+    "file": "data/exercises/day3_thumbnail_traps.json",
+    "components": ["thumbnail-trap-test.tsx"],
+    "logicEngine": "Records click-impulse latency",
+    "psychometricHook": "Clickbait susceptibility baseline"
+  },
+  {
+    "day": 4,
+    "file": "data/exercises/day4_emotion_vs_evidence.json",
+    "components": ["confidence-slider.tsx"],
+    "logicEngine": "EIS calibration per item",
+    "psychometricHook": "Emotion-vs-evidence trial"
+  },
+  {
+    "day": 5,
+    "file": "data/exercises/day5_calm_breath.json",
+    "components": ["CalmReveal.tsx", "time-friction-gate.tsx"],
+    "logicEngine": "First friction-gate exposure",
+    "psychometricHook": "Self-regulation baseline"
+  },
+  {
+    "day": 6,
+    "file": "data/exercises/day6_help_seeking_intro.json",
+    "components": ["HelpSeekingWizard.tsx"],
+    "logicEngine": "Routes to GHSQ instrument",
+    "psychometricHook": "GHSQ baseline (mental health)"
+  },
+  {
+    "day": 7,
+    "file": "data/exercises/day7_deepreal_teaser.json",
+    "components": ["ParticleField.tsx"],
+    "logicEngine": "First DeepReal Layer-1 OSINT exposure",
+    "psychometricHook": "DeepReal baseline awareness"
+  },
+  {
+    "day": 8,
+    "file": "data/exercises/day8_bias_fingerprint.json",
+    "components": ["bias-fingerprint/page.tsx", "expert-voice-capsule.tsx"],
+    "logicEngine": "Computes initial Cognitive Immunity Score (CIS_0)",
+    "psychometricHook": "Phase-0 mid-point assessment"
+  },
+  {
+    "day": 15,
+    "file": "data/exercises/day15_reaction_test_baseline.json",
+    "components": ["decision-tree.tsx", "reaction-test/page.tsx"],
+    "logicEngine": "First Reaction-Test latency metrics",
+    "psychometricHook": "Emotional-impulsivity baseline"
+  },
+  {
+    "day": 22,
+    "file": "data/exercises/day22_inoculation.json",
+    "components": ["inoculation-passport/page.tsx", "religion-hub/exercise/[1]"],
+    "logicEngine": "Passport Level 1 unlocked",
+    "psychometricHook": "Triple-baseline complete (MIST + GHSQ + DeepReal)"
+  }
+]

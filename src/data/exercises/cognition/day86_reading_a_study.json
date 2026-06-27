@@ -1,0 +1,139 @@
+{
+  "id": "day86_reading_a_study",
+  "phase": 2,
+  "week": 13,
+  "day": 86,
+  "title": "How to Read a Research Paper Without a PhD",
+  "titleAr": "إزاي تقرأ ورقة بحثية من غير دكتوراه",
+  "description": "You don't need to read every line — five questions unlock any study and tell you how much to trust it.",
+  "descriptionAr": "مش محتاج تقرأ كل سطر — خمسة أسئلة بيفتحوا أي دراسة وبيقولوا لك قد إيه تثق فيها.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A WhatsApp message says: \"STUDY PROVES: herb X reverses diabetes in 3 weeks!\" Before you believe or share, which part of the original study should you check FIRST?",
+      "claimAr": "رسالة واتساب بتقول: «دراسة تُثبت: عشبة س بتعكس السكري في 3 أسابيع!» قبل ما تصدّق أو تبعت، أنهي جزء في الدراسة الأصلية تراجع الأول؟",
+      "options": [
+        "The author's photo and hospital affiliation",
+        "Sample size, study design, and whether there was a control group",
+        "The date it was published",
+        "How many people shared the news article"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The three most load-bearing facts are: how many people were studied (sample size), what type of study it was (design), and whether there was a control group. A study of 12 patients with no control group cannot prove anything — no matter what the headline says. Headlines routinely strip these details.",
+      "explanationAr": "أهم ثلاث حاجات: عدد المشاركين (حجم العيّنة)، نوع الدراسة (التصميم)، وهل كانت في مجموعة ضابطة. دراسة على 12 مريض من غير مجموعة ضابطة ما تثبتش حاجة — مهما قال العنوان. العناوين بتحذف دايماً التفاصيل دي.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A study reports: 'Group A (took supplement) improved by 40%; Group B (no supplement) improved by 35%.' The headline says: 'SUPPLEMENT DOUBLES HEALTH OUTCOMES.'",
+      "claimAr": "دراسة بتقول: «مجموعة أ (أخدت مكمّل) تحسّنت 40%؛ مجموعة ب (من غير مكمّل) تحسّنت 35%.» العنوان بيقول «المكمّل بيضاعف نتائج الصحة».",
+      "options": [
+        "Yes — 40% is much bigger than 35%",
+        "No — the actual difference is 5 percentage points, and a control group improved too"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why is '5 percentage points difference' not the same as 'doubles health outcomes' — and what two questions would you need answered before trusting even the 5-point gap?",
+        "promptAr": "بكلماتك: ليه «فرق 5 نقاط مئوية» مش هو نفسه «ضعف نتائج الصحة» — وأنهي سؤالين لازم يتجاوَب عليهم قبل ما تثق حتى في الفرق الـ5 نقاط؟"
+      },
+      "explanation": "The supplement group improved 5 percentage points more than the control group — not double. Even that 5-point gap needs two checks: (1) statistical significance — could the gap be random chance given the sample size? (2) clinical significance — does a 5-point difference on this scale actually matter for patients' lives? Headlines inflate small differences into dramatic claims because relative-sounding language ('twice as good') bypasses the reader's check against the actual baseline numbers.",
+      "explanationAr": "مجموعة المكمّل تحسّنت 5 نقاط مئوية أكتر من المجموعة الضابطة — مش ضعف. حتى الفرق الـ5 ده محتاج فحصين: (1) الدلالة الإحصائية — هل الفرق ممكن يكون صدفة عشوائية بالنظر لحجم العيّنة؟ (2) الدلالة السريرية — هل فرق 5 نقاط على هذا المقياس بيفرّق فعلاً في حياة المرضى؟ العناوين بتضخّم الفروق الصغيرة في ادعاءات ضخمة لأن اللغة النسبية («ضعف أفضل») بتتجاوز فحص القارئ للأرقام الأساسية الحقيقية.",
+      "sources": [
+        "https://www.bmj.com/content/343/bmj.d7849",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3088812/"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if a study is published in a journal, it has been checked by independent experts and its conclusions are reliable.",
+      "claimAr": "صح ولا غلط: لو دراسة اتنشرت في مجلة، يبقى خبراء مستقلّون فحصوها واستنتاجاتها موثوقة.",
+      "correctAnswer": false,
+      "myth_en": "Published = peer-reviewed = reliable.",
+      "myth_ar": "منشور = خضع لمراجعة الأقران = موثوق.",
+      "explanation": "False on both links. First, not all journals use genuine peer review — predatory journals charge authors a fee and publish almost anything. Second, even real peer review is not a guarantee: reviewers can miss fraud, flawed statistics, or conflicts of interest. 'Published' is a starting point, not a seal of truth. The question is always: which journal, what review process? How confident were you before reading this? If very confident — notice how the word 'published' carries authority that can be manufactured.",
+      "explanationAr": "غلط في الحلقتين. أولاً، مش كل المجلات بتستخدم مراجعة أقران حقيقية — المجلات الجشعة بتاخد رسوم من المؤلّفين وبتنشر أي حاجة تقريباً. ثانياً، حتى المراجعة الحقيقية مش ضمان: المراجعون ممكن يفوتهم تزوير أو إحصاءات معيبة أو تضارب مصالح. «منشور» هي نقطة بداية مش ختم حقيقة. السؤال دايماً: أنهي مجلة، وأنهي عملية مراجعة؟ كنت متأكد قد إيه قبل ما تقرأ ده؟ لو بيقين عالي — لاحظ إزاي كلمة «منشور» بتحمل سلطة ممكن تتصنع.",
+      "sources": [
+        "https://www.nature.com/articles/d41586-023-03542-4",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309038/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A nutrition study funded entirely by the supplement manufacturer shows very positive results. The researcher is prominent and the paper is in a real (non-predatory) journal. This conflicts of interest probably doesn't change much — good researchers stay objective.",
+      "claimAr": "دراسة تغذية ممولة بالكامل من الشركة المصنّعة للمكمّل بتُظهر نتائج إيجابية جداً. الباحث بارز والورقة في مجلة حقيقية (مش جشعة). تضارب المصالح ده على الأرجح ما بيغيّرش كتير — الباحثون الكويّسين بيفضلوا موضوعيين.",
+      "prompt": "What does the evidence on industry-funded research actually show? What would have to be true for 'good researchers stay objective despite funding' to be the full story?",
+      "promptAr": "الأدلة على البحث الممول من الصناعة بتُظهر إيه فعلاً؟ وإيه اللي لازم يكون صح علشان «الباحثون الكويّسون بيفضلوا موضوعيين رغم التمويل» تكون القصة الكاملة؟",
+      "modelPoints": [
+        "Systematic reviews show industry-funded studies publish positive results significantly more often than independently funded ones — this is a documented, large-scale pattern, not a conspiracy.",
+        "The bias often operates through study design choices, not conscious fraud: which endpoints to measure, when to stop the trial, how to define 'improvement.'",
+        "Even honest researchers are influenced by what they expect and want to find — funding shapes the questions asked before a single data point is collected.",
+        "Independent replication by researchers with no financial stake is the only reliable check — not faith in individual integrity."
+      ],
+      "modelPointsAr": [
+        "المراجعات المنهجية بتُظهر إن الدراسات الممولة من الصناعة بتنشر نتائج إيجابية بشكل أكثر كثيراً من الممولة باستقلالية — ده نمط موثّق على نطاق واسع، مش مؤامرة.",
+        "الانحياز غالباً بيشتغل عن طريق خيارات تصميم الدراسة، مش التزوير الواعي: أنهي نتائج نقيس، إمتى نوقف التجربة، إزاي نعرّف «التحسّن».",
+        "حتى الباحثون الأمناء بيتأثّروا بما يتوقّعوه ويريدوا إيجاده — التمويل بيشكّل الأسئلة المطروحة قبل جمع نقطة بيانات واحدة.",
+        "التكرار المستقل من باحثين بلا مصلحة مالية هو الفحص الموثوق الوحيد — مش الإيمان في النزاهة الفردية."
+      ],
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4572812/",
+        "https://www.bmj.com/content/356/bmj.j686"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "\"Dates every day prevent liver cancer — and I have the study to prove it.\" (The study: 400 people, one country, 6 months, observational design.)",
+      "claimAr": "«التمر يومياً بيمنع سرطان الكبد — وعندي الدراسة اللي بتثبت ده.» (الدراسة: 400 شخص، دولة واحدة، 6 شهور، تصميم رصدي.)",
+      "parts": [
+        { "text": "Dates every day prevent liver cancer.", "textAr": "التمر يومياً بيمنع سرطان الكبد.", "role": "conclusion" },
+        { "text": "A study of 400 people over 6 months in one country found an association.", "textAr": "دراسة على 400 شخص لمدة 6 شهور في دولة واحدة لقت ارتباطاً.", "role": "premise" },
+        { "text": "(Unstated) A 6-month observational study is sufficient to measure and prove cancer prevention.", "textAr": "(غير مذكور) دراسة رصدية لمدة 6 شهور كافية لقياس وإثبات الوقاية من السرطان.", "role": "assumption" },
+        { "text": "(Unstated) Association in one country generalises to all populations.", "textAr": "(غير مذكور) الارتباط في دولة واحدة يُعمَّم على كل المجتمعات.", "role": "assumption" }
+      ],
+      "explanation": "The conclusion ('prevents') is a causal word — but the hidden assumptions do all the heavy lifting and both are false: (1) cancer develops over years, not 6 months — the study cannot observe prevention; (2) one country's genetics, diet, and lifestyle don't represent everyone. The premise (an association was found) is real, but the two unstated assumptions silently transform a modest finding into a bold causal claim. Mapping the argument reveals exactly where it overreaches.",
+      "explanationAr": "الخلاصة («بيمنع») كلمة سببية — لكن الافتراضات الخفية بتعمل كل الشغل الثقيل وكلاهما غلط: (1) السرطان بيتطوّر على سنين مش 6 شهور — الدراسة ما تقدرش ترصد الوقاية؛ (2) جينات ودية وأسلوب حياة دولة واحدة ما بيمثّلوش كل الناس. المقدّمة (اكتُشف ارتباط) حقيقية، لكن الافتراضين الصامتين بيحوّلان نتيجة متواضعة بهدوء لادعاء سببي جرئ. رسم الحُجّة يكشف بالظبط أين بتتجاوز.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measuring-disease-frequency",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3770576/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 6,
+      "mechanic": "retrieve",
+      "retrievalOf": 63,
+      "claim": "A seller says: 'Many studies back me up' — but he can't name one, give a journal, or answer whether there was a control group. You now have the five questions. A friend says: 'He seems sincere, and studies can be biased too — maybe he's right.' How do you respond?",
+      "claimAr": "بائع بيقول: «دراسات كتير بتدعمني» — لكن ما يقدرش يسمّي واحدة أو يدّي مجلة أو يجاوب إذا كانت في مجموعة ضابطة. دلوقتي عندك الخمسة أسئلة. صاحب بيقول: «بيبدو صادق، والدراسات ممكن تكون منحازة هي كمان — ممكن يكون صح.» إيه ردّك؟",
+      "options": [
+        "The friend is right — studies can be biased, so personal sincerity matters",
+        "'Many studies' without naming one is a rhetorical move, not a citation. Sincerity is not evidence. The five questions cut through both problems",
+        "Agree — no one can be completely certain",
+        "Reject the claim entirely because the seller can't answer"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is a spaced retrieval of the five-questions framework from the evidence-pyramid phase. 'Many studies' without names, journals, or design answers is a persuasion technique, not evidence. Sincerity matters for trust between people — but it cannot substitute for controlled evidence when health is at stake. The five questions protect you from both: manipulative sellers AND sincere-but-uninformed promoters. Real researchers can always name their studies.",
+      "explanationAr": "ده استرجاع متباعد لإطار الخمسة أسئلة من مرحلة هرم الأدلة. «دراسات كتير» من غير أسماء أو مجلات أو إجابات تصميم هو أسلوب إقناع مش دليل. الصدق مهم للثقة بين الناس — لكن ما يقدرش يعوّض الأدلة المضبوطة لمّا الصحة على المحك. الخمسة أسئلة بتحميك من الاتنين: البائعون المتلاعبون والمروّجون الصادقون-لكن-غير-مستنيرين. الباحثون الحقيقيون بيقدروا دايماً يسمّوا دراساتهم.",
+      "sources": [
+        "https://www.sciencebasedmedicine.org/reading-scientific-papers/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3088812/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "day92_detox_without_chemistry",
+  "phase": 2,
+  "week": 14,
+  "day": 92,
+  "title": "\"Detox\" — Three Questions That Dissolve It",
+  "titleAr": "«الديتوكس» — ثلاثة أسئلة بتفكّكه",
+  "description": "Every real medical claim can name the substance, the pathway, and the test. A 'detox' that can't answer those three is a feeling dressed as chemistry.",
+  "descriptionAr": "أي ادعاء طبي حقيقي يقدر يسمّي المادة، والمسار، والتحليل. «الديتوكس» اللي ما يقدرش يجاوب التلاتة دول إحساس مُلبَّس لبس كيمياء.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A WhatsApp post says a 7-day juice plan 'flushes the toxins out of your body.' You want to test it fairly, not just reject it. Which question gets to the heart of the claim?",
+      "claimAr": "بوست على واتساب بيقول إن نظام عصير 7 أيام «بيطلّع السموم من جسمك». عايز تختبره بإنصاف، مش بس ترفضه. أنهي سؤال بيمسك جوهر الادعاء؟",
+      "options": [
+        "How much does the plan cost?",
+        "Which specific toxin? Through which organ or pathway is it removed? And what lab test measures it before and after?",
+        "How many followers does the page have?",
+        "Does the juice taste nice?"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A real biomedical claim can name three things: the substance, the route the body uses to clear it, and a test that measures it. 'Toxins' (vague, plural, unnamed) that leave by an unstated pathway and were never measured is not chemistry — it is a feeling. Asking these three calm questions is fair, not hostile; it just lets the claim show whether there is anything underneath it.",
+      "explanationAr": "الادعاء الطبي الحقيقي يقدر يسمّي ثلاث حاجات: المادة، والطريق اللي الجسم بيتخلّص بيها منها، والتحليل اللي بيقيسها. «سموم» (مبهمة، جمع، بلا اسم) بتخرج بمسار غير مذكور وماتقاستش أبداً ده مش كيمياء — ده إحساس. الأسئلة الثلاثة الهادية دي إنصاف مش عداء؛ بس بتخلّي الادعاء يبيّن لو تحته أي حاجة.",
+      "sources": [
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/",
+        "EAL-case-001:redflag-10"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A healthy body has no built-in way to remove waste, which is why it needs an external 'detox' product.",
+      "claimAr": "الجسم السليم ماعندوش طريقة جوّانية يتخلّص بيها من الفضلات، علشان كده محتاج منتج «ديتوكس» من بَرّه.",
+      "correctAnswer": false,
+      "myth_en": "Your body can't clean itself — you must buy a detox.",
+      "myth_ar": "جسمك ما يقدرش ينضّف نفسه — لازم تشتري ديتوكس.",
+      "explanation": "False. The liver chemically transforms waste and the kidneys filter the blood and excrete it — this is the body's actual, continuously running detox system, alongside the lungs, gut, and skin. No juice, tea, or foot pad has ever been shown to outperform a healthy liver and kidneys. Calibration check: if you felt uncertain, consider how pervasive 'detox' marketing is — that commercial repetition, not biology, is what makes the claim feel plausible.",
+      "explanationAr": "غلط. الكبد بيحوّل الفضلات كيميائياً والكلى بتفلتر الدم وتطرحها — ده جهاز التخلّص الحقيقي الشغّال على طول في الجسم، جنب الرئتين والأمعاء والجلد. مفيش عصير ولا شاي ولا لزقة قدم اتثبت إنها بتتفوّق على كبد وكلى سليمة. معايرة ذاتية: لو كنت متردّد، فكّر قد إيه تسويق «الديتوكس» منتشر — التكرار التجاري ده، مش الأحياء، هو اللي بيخلّي الادعاء يبان معقول.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4517027/",
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Inside «نظام الطيبات», foods were sorted by how much 'waste' they supposedly leave, and certain foods were said to 'leave minimal waste' — never naming any toxin or mechanism. This is Red Flag #10.",
+      "claimAr": "جوّه «نظام الطيبات»، الأكل اتقسّم حسب قد إيه «فضلات» بيسيبها، واتقال إن أطعمة معيّنة «بتسيب فضلات أقل» — من غير ما يتسمّى أي سُمّ أو آلية. ده علامة الخطر رقم 10.",
+      "options": ["True — this is Red Flag #10: detox without chemistry", "False — this is a careful scientific distinction"],
+      "correctAnswer": 0,
+      "selfExplain": {
+        "prompt": "In your own words: what are the three chemistry questions that 'minimal waste' fails to answer — and why does that make it marketing, not medicine?",
+        "promptAr": "بكلماتك: إيه الأسئلة الكيميائية الثلاثة اللي «فضلات أقل» بيفشل في الإجابة عليها — وليه ده بيخلّيه تسويق مش طب؟"
+      },
+      "explanation": "Red Flag #10. 'Leaves minimal waste' sounds clinical but names no substance, no pathway, and no measurement — the three things a real claim must provide. That vagueness is not an accident: an unnamed toxin can never be tested for, so the claim can never be proven wrong. The empathy point is that this language feels caring and intuitive — 'clean food, clean body' — which is exactly why so many sincere people trusted it.",
+      "explanationAr": "علامة الخطر رقم 10. «بتسيب فضلات أقل» بتبان عيادية لكن ما بتسمّيش مادة ولا مسار ولا قياس — التلات حاجات اللي لازم الادعاء الحقيقي يقدّمها. الإبهام ده مش صدفة: السُمّ اللي مالوش اسم ما يتقاسش، فالادعاء ما يقدرش حد يثبت إنه غلط. ونقطة التعاطف إن اللغة دي بتبان حنيّنة وبديهية — «أكل نضيف، جسم نضيف» — وده بالظبط اللي خلّى ناس صادقين كتير يثقوا فيها.",
+      "sources": [
+        "EAL-case-001:redflag-10"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "After using a juice cleanse, people feel lighter and have more energy. This proves that toxins were removed.",
+      "claimAr": "بعد استخدام كلينز بالعصير، الناس بتحسّ بخفّة وطاقة أكتر. ده بيثبت إن السموم اتشالت.",
+      "prompt": "What alternative explanations could produce 'feeling lighter' without any toxin removal? What is the simplest test that would separate the cleanse from these alternatives?",
+      "promptAr": "إيه التفسيرات البديلة اللي ممكن تولّد «الإحساس بالخفّة» من غير أي إزالة سموم؟ وإيه أبسط اختبار يفصل الكلينز عن البدائل دي؟",
+      "modelPoints": [
+        "Eating less during any 7-day period (not just a cleanse) reduces the sensation of heaviness — caloric restriction, not detox.",
+        "Drinking more water reduces fatigue and is independently linked to improved energy in mildly dehydrated people.",
+        "Skipping heavy, salty, or processed meals naturally reduces bloating — this is the meal change, not a toxin mechanism.",
+        "The placebo effect: expecting to feel better is a documented physiological and subjective experience.",
+        "The simplest test: a control group that eats less and drinks more but takes no supplement — if they feel equally 'lighter,' the cleanse product adds nothing."
+      ],
+      "modelPointsAr": [
+        "تناول كميات أقل في أي فترة 7 أيام (مش بس الكلينز) بيقلّل إحساس الثقل — تقليل السعرات، مش ديتوكس.",
+        "شرب مياه أكتر بيقلّل التعب ومرتبط باستقلالية بتحسين الطاقة عند الناس مع جفاف خفيف.",
+        "تخطّي الوجبات التقيلة والمالحة والمعالجة بشكل طبيعي بيقلّل الانتفاخ — ده تغيير الوجبة مش آلية سُمّ.",
+        "التأثير الوهمي: توقّع التحسّن هو تجربة فيزيولوجية وذاتية موثّقة.",
+        "أبسط اختبار: مجموعة ضابطة بتاكل أقل وبتشرب أكتر لكن ما تاخدش أي مكمّل — لو حسّوا بنفس الخفّة، المنتج ما بيضيفش حاجة."
+      ],
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4517027/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "detox without chemistry",
+      "techniqueAr": "الديتوكس بدون كيمياء",
+      "task": "Feel this manipulation from the inside. Write a short post marketing a harmless herbal tea using vague 'toxin' language — without naming a single toxin, pathway, or test. Make it sound scientific and caring.",
+      "taskAr": "حسّ بالتلاعب ده من جوّه. اكتب بوست قصير بيسوّق شاي عشبي غير ضار باستخدام لغة «السموم» المبهمة — من غير ما تسمّي سُمّاً واحداً أو مساراً أو تحليلاً. خلّيه يبان علمي ومهتم.",
+      "tells": [
+        "Vague collective nouns ('toxins,' 'waste,' 'impurities') with no named molecule — science names substances.",
+        "Pathway is unstated or poetic ('flushes,' 'purifies,' 'cleanses') — biology names organs and processes.",
+        "No before/after measurement proposed — because no test exists for an unnamed substance.",
+        "Appeals to 'naturalness' to bypass the three chemistry questions.",
+        "The three questions kill the claim in under a minute: which toxin? which pathway? which test?"
+      ],
+      "tellsAr": [
+        "أسماء جمعية مبهمة («سموم»، «فضلات»، «شوائب») من غير جزيء مسمَّى — العلم بيسمّي المواد.",
+        "المسار غير مذكور أو شاعري («يطرد»، «ينقّي»، «ينظّف») — الأحياء بتسمّي الأعضاء والعمليات.",
+        "لا قياس قبل/بعد مقترح — لأن ما فيش تحليل لمادة غير مسمَّاة.",
+        "الاستناد للـ«طبيعية» عشان يتجاوز الأسئلة الكيميائية الثلاثة.",
+        "الأسئلة الثلاثة بتقتل الادعاء في أقل من دقيقة: أنهي سُمّ؟ أنهي مسار؟ أنهي تحليل؟"
+      ],
+      "sources": [
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4517027/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    }
+  ]
+}

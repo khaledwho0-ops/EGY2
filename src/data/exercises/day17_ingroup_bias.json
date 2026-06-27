@@ -1,0 +1,29 @@
+{
+  "id": "day17_ingroup_bias",
+  "phase": 0,
+  "week": 3,
+  "day": 17,
+  "title": "In-Group Bias Detection",
+  "titleAr": "كشف تحيز المجموعة الداخلية",
+  "description": "Do you apply different standards depending on who makes a claim?",
+  "descriptionAr": "هل تطبق معايير مختلفة حسب من يقدم الادعاء؟",
+  "type": "debiasing",
+  "difficulty": 3,
+  "estimatedMinutes": 12,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "Egyptian scientist vs German scientist says same drug cures liver disease. Do you evaluate both equally?",
+      "claimAr": "عالم مصري مقابل عالم ألماني يقولان نفس الشيء عن دواء. هل تقيّمهما بنفس الطريقة؟",
+      "truthValue": "reflection",
+      "category": "meta",
+      "difficulty": 3,
+      "explanation": "In-group bias may cause trust based on nationality. Both claims should be evaluated by same criteria: peer-reviewed evidence, sample size.",
+      "explanationAr": "تحيز المجموعة قد يؤثر على ثقتك. كلا الادعاءين يجب تقييمهما بنفس المعايير.",
+      "sources": [
+        "https://www.nature.com/articles/s44271-023-00003-2"
+      ],
+      "cognitivebiasAtPlay": "In-Group Bias"
+    }
+  ]
+}

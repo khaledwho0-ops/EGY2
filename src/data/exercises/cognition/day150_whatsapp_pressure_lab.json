@@ -1,0 +1,142 @@
+{
+  "id": "day150_whatsapp_pressure_lab",
+  "phase": 4,
+  "week": 22,
+  "day": 150,
+  "title": "The WhatsApp Pressure Lab",
+  "titleAr": "معمل ضغط الواتساب",
+  "description": "A family WhatsApp group pushing a false health claim is one of the most psychologically demanding situations you will face. Today you simulate it and learn what works — and what backfires.",
+  "descriptionAr": "جروب واتساب عيلة بيضغط بادعاء صحي زائف ده واحد من أكتر المواقف صعوبة نفسياً هتواجهها. النهارده بتحاكيه وبتتعلّم إيه اللي بينفع — وإيه اللي بيجيب نتيجة عكسية.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 15,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2193502/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "The family WhatsApp group is celebrating: 'Grandma started the Taybat system and her blood sugar improved!' Six relatives respond with praise emojis. You know she has type-2 diabetes and stopped her medication. What is the FIRST right move?",
+      "claimAr": "جروب الواتساب العيلي بيحتفل: «تيتا بدأت نظام الطيبات وسكّرها اتحسّن!» ستة أقارب ردّوا بتعبيرات إعجاب. إنت عارف إنها عندها سكري نوع 2 ووقّفت دواؤها. إيه الخطوة الأولى الصح؟",
+      "options": [
+        "Post a long fact-check article in the group immediately",
+        "Call or message your grandmother privately to understand what medication she stopped and encourage her to contact her doctor before continuing",
+        "Stay silent — it's not your business",
+        "Post: 'This is dangerous misinformation!' in the group"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The highest-priority action is the safety of the person, not the argument in the group. A private, caring conversation with your grandmother — focused on her medication situation and a doctor's checkup — is lower-pressure, more likely to be heard, and avoids publicly shaming the relatives who shared the message. The group battle can come later, or may not be necessary at all.",
+      "explanationAr": "الأولوية الأعلى هي سلامة الشخص، مش الجدال في الجروب. محادثة خاصة دافية مع تيتا — مركّزة على وضع دواؤها وزيارة الدكتور — ضغطها أقل وأرجح تنوصلها، وبتتجنّب الإحراج العلني للأقارب اللي شاركوا الرسالة. معركة الجروب ممكن تيجي بعدين، أو ممكن ما تبقاش ضرورية خالص.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2193502/",
+        "EAL-case-001:moh-eg-2026-05"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "decompose",
+      "claim": "Map the cousin's reply: \"You're always so negative — we've seen it work, so are you saying Grandma is lying?\"",
+      "claimAr": "فكّك ردّ ابن العم: «إنت دايماً سلبي — احنا شفناه بيشتغل، يبقى بتقول إن تيتا بتكذب؟»",
+      "parts": [
+        { "text": "So you're saying Grandma is lying (you must either believe or call her a liar).", "textAr": "يبقى بتقول إن تيتا بتكذب (يا بتصدّق يا بتكذّبها).", "role": "conclusion" },
+        { "text": "We've seen it work.", "textAr": "احنا شفناه بيشتغل.", "role": "premise" },
+        { "text": "(Unstated) A personal experience improving proves the diet was the cause.", "textAr": "(غير مذكور) تجربة شخصية اتحسّنت بتثبت إن الحمية هي السبب.", "role": "assumption" },
+        { "text": "You're always so negative.", "textAr": "إنت دايماً سلبي.", "role": "irrelevant" }
+      ],
+      "explanation": "Two moves hide in one sentence. The conclusion is a false dilemma ('believe, or you're calling her a liar') — but a third path exists: her experience is real AND the diet may not be its cause. The hidden assumption is illusory correlation: improvement near the diet doesn't prove the diet caused it. 'You're always negative' is an IRRELEVANT personal attack. Labeling the parts lets you reply without taking the bait: 'No one's lying — her experience is real; I'm only asking whether the diet was the cause or if other things changed too.'",
+      "explanationAr": "حركتين متخبّيين في جملة واحدة. الخلاصة ثنائية زائفة («تصدّق، أو بتكذّبها») — لكن في طريق ثالث: تجربتها حقيقية والحمية ممكن ما تكونش السبب. الافتراض الخفي ترابط وهمي: التحسّن قرب الحمية ما بيثبتش إن الحمية سبّبته. و«إنت دايماً سلبي» هجوم شخصي غير ذي صلة. تسمية الأجزاء بتخلّيك تردّ من غير ما تاكل الطُعم: «محدّش بيكذب — تجربتها حقيقية؛ أنا بس بسأل هل الحمية هي السبب ولا حاجات تانية اتغيّرت كمان».",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2193502/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "In a high-pressure group where everyone is praising the system, you tell yourself: 'Staying silent is the neutral, safe choice — it has no consequences.'",
+      "claimAr": "في جروب بضغط عالي والكل بيمدح النظام، بتقول لنفسك: «السكوت هو الاختيار المحايد الآمن — مالوش عواقب».",
+      "prompt": "Consider the opposite: in a social setting, what could silence actually communicate? And what is a third option that isn't 'post publicly' OR 'do nothing'?",
+      "promptAr": "فكّر في العكس: في سياق اجتماعي، السكوت ممكن يوصّل إيه فعلاً؟ وإيه الخيار الثالث اللي مش «انشر علناً» ولا «ما تعملش حاجة»؟",
+      "modelPoints": [
+        "In a social context, silence usually reads as agreement or quiet validation — not as neutrality.",
+        "When someone has stopped medication and the group is applauding, silence is effectively a vote for the status quo.",
+        "A third path exists: silence INSIDE the group can coexist with a caring private conversation OUTSIDE it.",
+        "Neutral feels safe for you, but the question is the cost to the person at medical risk — that reframes 'safe.'"
+      ],
+      "modelPointsAr": [
+        "في السياق الاجتماعي، السكوت غالباً بيُقرأ كموافقة أو تزكية صامتة — مش حياد.",
+        "لمّا حد وقّف دواه والجروب بيصفّق، السكوت عملياً تصويت لصالح الوضع الحالي.",
+        "في طريق ثالث: السكوت جوّه الجروب ممكن يتعايش مع محادثة خاصة دافية برّاه.",
+        "الحياد بيحسّ آمن ليك، لكن السؤال هو التكلفة على الشخص اللي في خطر طبي — وده بيعيد تعريف «آمن»."
+      ],
+      "explanation": "Considering the opposite breaks the comforting story that silence is free. In a social setting silence reads as validation, so when your grandmother has stopped medication and the group is applauding, doing nothing is not neutral. The freeing insight is the third option: you can stay quiet in the group while having a warm private conversation outside it — the choice was never only 'post publicly vs. do nothing.'",
+      "explanationAr": "التفكير في العكس بيكسر القصة المريّحة إن السكوت مجاني. في السياق الاجتماعي السكوت بيُقرأ كتزكية، فلمّا تيتا وقّفت دواها والجروب بيصفّق، ما تعملش حاجة مش حياد. البصيرة المُحرِّرة هي الخيار الثالث: تقدر تسكت في الجروب وتعمل محادثة خاصة دافية برّاه — الاختيار عمره ما كان بس «انشر علناً مقابل ما تعملش حاجة».",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5069360/"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    },
+    {
+      "id": 4,
+      "mechanic": "recognize",
+      "claim": "An aunt says in the group: 'You're breaking the family up with your negativity. We all feel better on this system.' Which pressure tactic is this, and what does it try to do to your thinking?",
+      "claimAr": "خالة قالت في الجروب: «إنت بتكسّر العيلة بسلبيتك. احنا كلنا حاسين بتحسّن على النظام ده». أنهي أسلوب ضغط ده، وبيعمل إيه في تفكيرك؟",
+      "options": [
+        "An honest report of family feeling",
+        "An appeal to in-group loyalty designed to make critical thinking feel like a social threat — it conflates questioning the claim with attacking the family",
+        "A valid scientific argument from personal experience",
+        "A request for clarification"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is an in-group loyalty appeal: it re-frames the question from 'is this claim true?' to 'are you loyal to your family?' Once that swap happens in your mind, evaluating evidence starts to feel like a betrayal. The defence is to name the swap internally — 'I love my family AND I want to protect their health; those are the same thing, not opposites' — and then refocus on the safety question, not the loyalty question.",
+      "explanationAr": "ده نداء الولاء للجماعة: بيعيد تأطير السؤال من «الادعاء ده صح؟» لـ«إنت وفي لعيلتك؟» لمّا الاستبدال ده بيحصل في دماغك، تقييم الدليل يبدأ يحسّسك بالخيانة. الدفاع إنك تسمّي الاستبدال داخلياً — «أنا بحبّ عيلتي وعايز أحمي صحتهم؛ دول نفس الحاجة مش ضدّين» — وبعدين تعيد التركيز على سؤال السلامة، مش سؤال الولاء.",
+      "sources": [
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261",
+        "EAL-case-001:redflag-11"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "self_explain",
+      "claim": "After the group pressure, you feel rattled and start to doubt yourself: 'Maybe I'm wrong — six people feel better, who am I to say?' What is the right inner move at this moment?",
+      "claimAr": "بعد ضغط الجروب، حسّيت بالاهتزاز وبدأت تشكّك في نفسك: «يمكن أنا الغلطان — ستة ناس حاسين بتحسّن، مين أنا عشان أقول؟». إيه الحركة الداخلية الصح في اللحظة دي؟",
+      "options": [
+        "Accept the group consensus — six people cannot be wrong",
+        "Notice that social pressure is not evidence — separate 'I feel uncertain' from 'the evidence got weaker'"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does feeling rattled by six applauding relatives NOT mean the evidence changed — and what is the difference between healthy humility and caving to social pressure?",
+        "promptAr": "بكلماتك: ليه إنك تتهزّ من ستة أقارب بيصفّقوا ما معناهوش إن الدليل اتغيّر — وإيه الفرق بين التواضع الصحي والانهيار تحت الضغط الاجتماعي؟"
+      },
+      "explanation": "Feeling rattled by social pressure is human and expected — it does not mean the evidence changed. The intellectual move is to separate two things: 'I feel uncertain (because of social pressure)' vs. 'the evidence became weaker.' It didn't. Six people feeling better is survivorship bias — the ones harmed are not in the group celebrating. Healthy humility ('maybe I'm wrong') should be triggered by NEW evidence, not by applause counts. Saying that distinction in your own words is what keeps you steady next time.",
+      "explanationAr": "الاهتزاز بالضغط الاجتماعي إنساني ومتوقّع — مش معناه إن الدليل اتغيّر. الحركة المعرفية إنك تفصل بين حاجتين: «حاسس بعدم اليقين (بسبب الضغط الاجتماعي)» مقابل «الدليل بقى أضعف». ما بقاش كده. ستة ناس حاسين بتحسّن ده انحياز الناجين — اللي اتأذوا مش موجودين في الجروب بيحتفل. التواضع الصحي («يمكن أنا الغلطان») المفروض يتفعّل بدليل جديد، مش بعدد التصفيق. وإنك تقول الفرق ده بكلماتك هو اللي بيثبّتك المرة الجاية.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5069360/",
+        "EAL-case-001:survivorship"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 6,
+      "mechanic": "recognize",
+      "claim": "What is the most important thing to remember after a difficult WhatsApp debate where you didn't 'win'?",
+      "claimAr": "إيه أهم حاجة تتذكّرها بعد نقاش واتساب صعب ما «انتصرتش» فيه؟",
+      "options": [
+        "You failed — next time post more facts faster",
+        "Changing a belief anchored in identity and family belonging rarely happens in one conversation; planting a single seed of doubt is a victory",
+        "You should have been more aggressive",
+        "Some people are hopeless"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Motivational interviewing research shows belief change is a process — not a single debate. The goal in one conversation is not to 'win' but to keep the relationship open, leave one question ringing in their mind, and protect whoever is at medical risk. If you stayed empathetic, asked honest questions, and shared one real source, you did everything right — even if the group chat ended with emojis against you.",
+      "explanationAr": "بحوث المقابلة التحفيزية بتُثبت إن تغيير المعتقد عملية — مش نقاش واحد. الهدف في محادثة واحدة مش إنك «تنتصر» لكن إنك تفضل العلاقة مفتوحة، تسيب سؤالاً واحداً رنّان في دماغهم، وتحمي اللي في خطر طبي. لو فضلت متعاطفاً وسألت أسئلة صادقة وشاركت مصدراً حقيقياً واحداً، عملت كل حاجة صح — حتى لو جروب الشات خِلِص برموز ضدّك.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2193502/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    }
+  ]
+}

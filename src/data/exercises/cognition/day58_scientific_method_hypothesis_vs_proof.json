@@ -1,0 +1,131 @@
+{
+  "id": "day58_scientific_method_hypothesis_vs_proof",
+  "phase": 2,
+  "week": 9,
+  "day": 58,
+  "title": "The Scientific Method — A Hunch Is Not a Proof",
+  "titleAr": "المنهج العلمي — الحدس مش دليل",
+  "description": "Science is a loop: a question, a testable guess, a fair test, and a result that can humble you. The honest part is being ready to be wrong.",
+  "descriptionAr": "العلم حلقة: سؤال، تخمين قابل للاختبار، اختبار عادل، ونتيجة ممكن تكسر غرورك. الجزء الأمين إنك تكون مستعد تكون غلط.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://undsci.berkeley.edu/understanding-science-101/how-science-works/the-real-process-of-science/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A man notices he ate honey three mornings and felt more energetic, and concludes: 'Honey cured my fatigue.' In the scientific method, what is his statement actually — and what step did he skip?",
+      "claimAr": "راجل لاحظ إنه أكل عسل تلات صبحيات وحسّ بطاقة أكتر، واستنتج: «العسل شفى إرهاقي». في المنهج العلمي، عبارته دي بالظبط إيه — وأنهي خطوة فاتها؟",
+      "options": [
+        "A proven conclusion; he is done",
+        "A hypothesis (a testable guess) — he skipped the actual fair test to rule out coincidence, sleep, and expectation",
+        "A law of nature",
+        "A meaningless thought"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Noticing a pattern is a great start — it gives you a hypothesis, a testable guess. But a hypothesis is the beginning of science, not the end. He skipped the test: maybe he also slept better those nights, or expected to feel good (placebo), or fatigue naturally comes and goes. A hunch becomes knowledge only after a fair test that could have proven it wrong.",
+      "explanationAr": "ملاحظة نمط بداية ممتازة — بتديك فرضية، تخمين قابل للاختبار. لكن الفرضية بداية العلم مش نهايته. هو فاته الاختبار: يمكن كمان نام أحسن الليالي دي، أو توقّع إنه هيحسّ كويس (تأثير وهمي)، أو الإرهاق طبيعي بيروح ويرجع. الحدس بيبقى معرفة بس بعد اختبار عادل كان ممكن يثبت إنه غلط.",
+      "sources": [
+        "https://www.khanacademy.org/science/biology/intro-to-biology/science-of-biology/a/the-science-of-biology"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: in real science, the goal of a good experiment is to confirm that the researcher's favourite idea is correct.",
+      "claimAr": "صح ولا غلط: في العلم الحقيقي، هدف التجربة الكويسة إنها تأكّد إن فكرة الباحث المفضّلة صح.",
+      "options": [
+        "True — confirming your idea is the whole point",
+        "False — a good experiment is designed to give the idea a real chance to FAIL"
+      ],
+      "correctAnswer": 1,
+      "explanation": "False — and this flips most people's intuition. A good experiment is designed to give the idea a real chance to FAIL. If you only ever try to confirm what you already believe, you'll always succeed and learn nothing, because you'll unconsciously ignore the misses. The trustworthiest scientists tried hardest to break their own idea — and reported it honestly when it survived OR when it didn't. Before checking: did you hesitate? That hesitation is worth examining.",
+      "explanationAr": "غلط — وده بيعكس حدس معظم الناس. التجربة الكويسة بتتصمّم علشان تدّي الفكرة فرصة حقيقية إنها تفشل. لو إنت بس بتحاول تأكّد اللي مصدّقه أصلاً، هتنجح دايماً وما تتعلّمش حاجة. أكتر العلماء جدارة بالثقة حاولوا بأقصى جهد يكسروا فكرتهم — وأبلغوا بأمانة لمّا الفكرة صمدت أو لمّا ما صمدتش. قبل الكشف: هل ترددت؟ التردد ده يستحق الفحص.",
+      "sources": [
+        "https://www.scientificamerican.com/article/the-importance-of-replicating-research/",
+        "https://undsci.berkeley.edu/understanding-science-101/how-science-works/the-real-process-of-science/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The «نظام الطيبات» originator was asked by the Medical Syndicate for just three documented cases with before-and-after lab results. He produced none, saying the truth would 'be proven in the future.' Which part of the scientific method did he refuse?",
+      "claimAr": "صاحب «نظام الطيبات» طلبت منه نقابة الأطباء ثلاث حالات موثّقة بتحاليل قبل وبعد بس. ما قدّمش ولا واحدة، وقال إن الحقيقة «هتثبت في المستقبل». أنهي جزء من المنهج العلمي رفضه؟",
+      "options": [
+        "He skipped nothing — future proof is fine",
+        "He refused the test itself: he had a hypothesis but would not let it face any check that could fail"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why is 'it will be proven in the future' not a scientifically acceptable response to a request for evidence right now?",
+        "promptAr": "بكلماتك: ليه «هتثبت في المستقبل» مش رد علمي مقبول لطلب أدلة الآن؟"
+      },
+      "explanation": "He had a hypothesis (his diet cures disease) but refused the one thing that turns a hypothesis into knowledge: an actual test that could fail. Three documented before/after cases is the most minimal test imaginable. 'It'll be proven later' is a way to keep the idea forever in the safe, untested zone. A claim that is never allowed to be tested can never be trusted — no matter how sincere or confident the person.",
+      "explanationAr": "كان عنده فرضية (حميته بتشفي المرض) بس رفض الحاجة الوحيدة اللي بتحوّل الفرضية لمعرفة: اختبار فعلي ممكن يفشل. ثلاث حالات موثّقة قبل/بعد هو أقل اختبار ممكن تتخيله. «هتثبت بعدين» طريقة علشان تفضّل الفكرة للأبد في المنطقة الآمنة غير المختبَرة. الادعاء اللي عمره ما اتسمح له يتختبر عمره ما هيتوثق بيه — مهما كان الشخص صادق أو واثق.",
+      "sources": [
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A person says: 'I've been taking this herbal supplement for six months, and my chronic back pain has greatly improved. The supplement must be responsible — I haven't changed anything else.'",
+      "claimAr": "شخص بيقول: «اتناولت المكمّل العشبي ده ستة أشهر، وآلام ظهري المزمنة تحسّنت كتير. المكمّل لازم يكون السبب — ما غيّرتش أي حاجة تانية».",
+      "prompt": "Before accepting the supplement caused the improvement: what would have to be true if it had NO effect? What other explanations fit the same six-month improvement?",
+      "promptAr": "قبل قبول إن المكمّل سبّب التحسّن: لو ما كانلوش أي تأثير، إيه اللي لازم يكون صح؟ وإيه التفسيرات التانية اللي تنطبق على نفس التحسّن في ستة أشهر؟",
+      "modelPoints": [
+        "Chronic pain naturally fluctuates over months — regression to the mean means that people typically start supplements when pain is at its worst, and it would have improved anyway.",
+        "Placebo effect is real and documented for pain: expecting to improve, especially when paying for a treatment, produces measurable pain reduction even with inert substances.",
+        "'I haven't changed anything else' is harder to verify than it sounds — sleep, stress, activity, hydration, and posture all shift subtly over six months and all affect back pain.",
+        "Without a control period (six months on the supplement vs. six months off, measured the same way), there is no way to separate supplement effects from time effects."
+      ],
+      "modelPointsAr": [
+        "الآلام المزمنة بتتقلّب طبيعياً عبر الأشهر — الارتداد للمتوسط معناه إن الناس بتبدأ المكمّلات غالباً لمّا الألم في أشدّ حالاته، وكان هيتحسّن على أي حال.",
+        "تأثير الدواء الوهمي حقيقي وموثَّق للألم: توقّع التحسّن، خاصةً لمّا بتدفع تمن علاج، بينتج تخفيضاً قابلاً للقياس في الألم حتى مع مواد خاملة.",
+        "«ما غيّرتش أي حاجة تانية» أصعب تحقّقاً مما يبدو — النوم والتوتر والنشاط والترطيب والوضعية كلها بتتغيّر بشكل خفي على مدار ستة أشهر وكلها بتؤثّر على آلام الظهر.",
+        "بدون فترة مقارنة (ستة أشهر بالمكمّل مقابل ستة أشهر بدونه، مقاسَة بنفس الطريقة)، ما في طريقة لفصل آثار المكمّل عن آثار الوقت."
+      ],
+      "explanation": "Considering the opposite reveals that the same improvement is completely explainable without the supplement doing anything. The scientific method's control requirement exists precisely because human bodies and perceptions shift over time in ways that feel invisible to the person living through them.",
+      "explanationAr": "التفكير في العكس بيكشف إن نفس التحسّن قابل للتفسير الكامل بدون ما المكمّل يعمل حاجة. اشتراط الضابط في المنهج العلمي موجود بالتحديد لأن أجسام البشر وتصوّراتهم بتتغيّر على مرور الوقت بطرق تبدو غير مرئية للشخص اللي يعيشها.",
+      "sources": [
+        "https://undsci.berkeley.edu/understanding-science-101/how-science-works/the-real-process-of-science/",
+        "https://www.khanacademy.org/science/biology/intro-to-biology/science-of-biology/a/the-science-of-biology"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "presenting a hypothesis as proof",
+      "techniqueAr": "تقديم الفرضية كدليل",
+      "task": "Feel the persuasion technique from the inside. Write three sentences promoting a completely harmless claim — say, 'drinking warm water in the morning boosts alertness' — using the structure: (1) 'I noticed X,' (2) 'This makes perfect sense because Y,' (3) 'Try it yourself — you'll see.' Make it sound like evidence, but include NO actual test.",
+      "taskAr": "حسّ بأسلوب الإقناع من جوّه. اكتب تلات جمل بتروّج لادعاء غير ضار خالص — مثلاً «شرب مية دافية في الصبح بيعزّز اليقظة» — باستخدام البنية دي: (1) «أنا لاحظت X»، (2) «ده منطقي تماماً لأن Y»، (3) «جرّبه بنفسك — هتشوف». خلّيها تبدو كأدلة، بس من غير أي اختبار حقيقي.",
+      "tells": [
+        "Personal observation ('I noticed') is a hypothesis, not a finding — it hasn't been tested against alternatives.",
+        "'This makes perfect sense' is a logical story, not evidence — many false things 'make sense' when told convincingly.",
+        "'Try it yourself' is an invitation to confirmation bias: if you feel alert, you'll attribute it to the water; if you don't, you'll forget you tried.",
+        "The structure skips the step that separates science from anecdote: a fair test that could have shown the opposite.",
+        "The persuasive feeling of coherence (it sounds right) is exactly what the technique is designed to produce — not the truth."
+      ],
+      "tellsAr": [
+        "الملاحظة الشخصية («أنا لاحظت») فرضية، مش نتيجة — ما اختُبِرت في مقابل البدائل.",
+        "«ده منطقي تماماً» قصة منطقية، مش دليل — كتير من الأشياء الغلط «منطقية» لمّا تُروى بإقناع.",
+        "«جرّبه بنفسك» دعوة لانحياز التأكيد: لو حسّيت بيقظة، هتنسبها للمية؛ ولو ما حسّيتش، هتنسى إنك جرّبت.",
+        "البنية دي بتتخطّى الخطوة اللي بتفصل العلم عن الحكاية: اختبار عادل كان ممكن يُظهِر العكس.",
+        "الإحساس المقنع بالتماسك (بيبدو صح) هو بالظبط اللي الأسلوب متصمّم لإنتاجه — مش الحقيقة."
+      ],
+      "explanation": "Building the 'hypothesis as proof' technique from the inside makes it easier to spot when it appears in health claims, sales pitches, or news stories. The key marker: does the argument contain a fair test that could have shown the opposite — or only reasons why it 'makes sense'?",
+      "explanationAr": "بناء أسلوب «الفرضية كدليل» من الداخل بيسهّل كشفه لمّا يظهر في ادعاءات صحية أو عروض بيع أو أخبار. العلامة الأساسية: هل الحُجّة بتحتوي على اختبار عادل كان ممكن يُظهِر العكس — أم بس أسباب لماذا «منطقي»؟",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://undsci.berkeley.edu/understanding-science-101/how-science-works/the-real-process-of-science/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    }
+  ]
+}

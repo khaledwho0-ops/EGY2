@@ -1,0 +1,123 @@
+{
+  "id": "day143_religious_shield",
+  "phase": 4,
+  "week": 21,
+  "day": 143,
+  "title": "Layer 3 — The Religious Shield: When a Food List Borrows the Quran's Words",
+  "titleAr": "الطبقة الثالثة — الدرع الديني: لمّا قائمة طعام بتستعير ألفاظ القرآن",
+  "description": "The load-bearing trick of the case: importing «الطيبات» and «الخبائث» into a diet, so disagreeing with a food list felt like disagreeing with the Quran. We defend the faith from those who weaponise it — using the tradition's own words.",
+  "descriptionAr": "الحيلة الحاملة في الحالة: استيراد «الطيبات» و«الخبائث» إلى حِمية، فيصير الاعتراض على قائمة طعام كأنه اعتراض على القرآن. بندافع عن الدين ممّن يُسلّحه — بكلمات التراث نفسه.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "The system labelled allowed foods «طيبات» (the good/pure) and banned foods «خبائث» (the foul) — Quranic vocabulary moved into nutrition, so that questioning a food list felt like questioning scripture. Why does this move make the claim so hard to challenge?",
+      "claimAr": "النظام سمّى الأطعمة المسموحة «طيبات» والممنوعة «خبائث» — مفردات قرآنية اتنقلت للتغذية، فيصير التشكيك في قائمة طعام كأنه تشكيك في الوحي. ليه الحركة دي بتخلّي الادعاء صعب جداً يتحدّى؟",
+      "options": [
+        "Because the food list is genuinely a religious ruling",
+        "Because sacred-sounding words trigger identity and faith, so data has to get past 'am I a good Muslim?' before it can even be heard",
+        "Because the Quran does contain a specific diet plan",
+        "Because anaesthesiologists are religious authorities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Red flag #6: moral/religious words for food. Once a food judgement is dressed in «طيبات/خبائث», disagreeing feels like a sin, not a scientific correction. Karl Popper's principle applies: what is made sacred cannot be tested — and a fraud wrapped in religion is harder to debunk than a secular one, because the evidence must first get past identity. This is a misuse of the faith, not the faith itself.",
+      "explanationAr": "علامة الخطر رقم 6: ألفاظ أخلاقية/دينية للطعام. أول ما يتلبّس حُكم غذائي بـ«طيبات/خبائث»، الاعتراض بيحسّ إنه ذنب، مش تصحيح علمي. ومبدأ كارل بوبر بينطبق: اللي بيُجعَل مقدّساً ما بيتختبرش — والاحتيال الملفوف بالدين أصعب تفنيداً من العلماني، لأن الدليل لازم يعدّي الهوية الأول. ده إساءة استخدام للدين، مش الدين نفسه.",
+      "sources": [
+        "EAL-case-001:redflag-6",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "recognize",
+      "claim": "The system declared lawful, everyday foods — chicken and milk — forbidden. Read carefully: «يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحَرِّمُوا طَيِّبَاتِ مَا أَحَلَّ اللَّهُ لَكُمْ» (Al-Mā'idah 5:87): 'do not prohibit the good things which Allah has made lawful to you.' What does this verse do to the system's own claim?",
+      "claimAr": "النظام أعلن أطعمة حلالاً يومية — الفراخ واللبن — محرّمة. اقرأ بتمعّن: «يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحَرِّمُوا طَيِّبَاتِ مَا أَحَلَّ اللَّهُ لَكُمْ» (المائدة ٥:٨٧). الآية دي بتعمل إيه في ادعاء النظام نفسه؟",
+      "options": [
+        "It supports the diet's food bans",
+        "It refutes the system from within the tradition: forbidding lawful good foods is exactly what the verse prohibits",
+        "It is unrelated to food",
+        "It only applies to scholars"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The defence comes from inside the faith, not against it. The verse forbids declaring lawful good foods (طيّبات) unlawful — which is precisely what the system did to chicken and milk. A second verse, Al-Naḥl 16:116, warns against the tongue inventing 'this is lawful and this is unlawful' as a lie against Allah. The vocabulary the system borrowed for authority actually condemns the system. We cite real verses with their references — never paraphrasing scripture loosely.",
+      "explanationAr": "الدفاع جاي من جوّه الدين، مش ضدّه. الآية بتنهى عن تحريم الطيّبات الحلال — وهو بالظبط اللي عمله النظام مع الفراخ واللبن. وفي آية تانية، النحل ١٦:١١٦، بتحذّر من إن اللسان يخترع «هذا حلال وهذا حرام» افتراءً على الله. المفردات اللي استعارها النظام للسلطة بتدينه فعلاً. وإحنا بنستشهد بآيات حقيقية بمراجعها — من غير ما نتصرّف في الوحي بتساهل.",
+      "sources": [
+        "EAL-case-001:religious-verse-5-87",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "decompose",
+      "claim": "Map this argument the system used: \"The Prophet ﷺ did not eat chicken and milk. The Prophet's ﷺ diet is the healthiest. So chicken and milk are unhealthy — and a Muslim who eats them is leaving the Sunnah.\"",
+      "claimAr": "فكّك الحُجّة اللي استخدمها النظام: «النبي ﷺ ما كانش بياكل فراخ ولبن. وأكل النبي ﷺ هو الأصحّ. يبقى الفراخ واللبن مش صحيين — والمسلم اللي بياكلهم بيسيب السُنّة».",
+      "parts": [
+        { "text": "Chicken and milk are unhealthy.", "textAr": "الفراخ واللبن مش صحيين.", "role": "conclusion" },
+        { "text": "The Prophet's ﷺ diet is the healthiest.", "textAr": "أكل النبي ﷺ هو الأصحّ.", "role": "premise" },
+        { "text": "(Unstated, and false) The Prophet ﷺ never ate chicken or milk.", "textAr": "(غير مذكور، وغير صحيح) إن النبي ﷺ ما أكلش فراخ ولا لبن أبداً.", "role": "assumption" },
+        { "text": "A Muslim who eats them is leaving the Sunnah.", "textAr": "المسلم اللي بياكلهم بيسيب السُنّة.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION is factually false: authenticated hadith in the Six Books (e.g. Sunan Abī Dāwūd, Sunan Ibn Mājah) document the Prophet ﷺ consuming both chicken and milk. The last clause is IRRELEVANT to the health question — it adds religious pressure, not evidence. With a false premise and an emotional add-on removed, the conclusion has no support. Even if the diet claim were true, medical efficacy must be tested by the same evidence bar as any other claim; reverence is not a study.",
+      "explanationAr": "الافتراض الخفي غلط واقعياً: حديث صحيح في الكتب الستة (مثل سنن أبي داود وسنن ابن ماجه) بيوثّق أكل النبي ﷺ للفراخ واللبن. والجملة الأخيرة غير ذات صلة بسؤال الصحة — بتضيف ضغط ديني مش دليل. بشيل مقدّمة كاذبة وإضافة عاطفية، الخلاصة بتفضل بلا سند. وحتى لو كان ادعاء الحمية صح، الفعالية الطبية لازم تتختبر بنفس معيار الدليل زي أي ادعاء؛ التوقير مش دراسة.",
+      "sources": [
+        "EAL-case-001:religious-hadith-fabrication",
+        "EAL-case-001:alain-2026-04-28"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A comforting thought for a believer following the system: 'This diet must be right — it uses the Quran's own words, and following it feels like an act of worship that protects my health.'",
+      "claimAr": "فكرة مريّحة لمؤمن بيتبع النظام: «الحمية دي لازم تكون صح — بتستخدم كلام القرآن نفسه، واتباعها بيحسّ إنه عبادة بتحمي صحتي».",
+      "prompt": "Hold it loosely first. What would have to be TRUE if this diet were actually wrong — even while using sacred words? What ordinary facts could explain why it feels so right?",
+      "promptAr": "امسكها بخفّة الأول. لو الحمية دي فعلاً غلط — حتى وهي بتستخدم ألفاظ مقدّسة — إيه اللي لازم يكون صح؟ وإيه الحقائق العادية اللي ممكن تفسّر ليه بتحسّ إنها صح كده؟",
+      "modelPoints": [
+        "Using a holy word does not make a medical claim true — anyone can attach «طيبات» to any food list; the words add feeling, not evidence.",
+        "The two verses (5:87, 16:116) actually forbid declaring lawful foods unlawful — so the tradition argues against this diet, not for it.",
+        "The sense of worship is real and valuable, but it explains why the diet feels right, not whether it works — comfort and truth are different questions.",
+        "If it were genuinely effective, it would survive a fair test with documented before/after labs; the originator was asked for three such cases and provided none."
+      ],
+      "modelPointsAr": [
+        "استخدام كلمة مقدّسة ما بيخلّيش الادعاء الطبي صح — أي حد يقدر يلصق «طيبات» على أي قائمة طعام؛ الكلام بيضيف إحساس مش دليل.",
+        "الآيتان (٥:٨٧، ١٦:١١٦) فعلاً بتنهى عن تحريم الحلال — يبقى التراث بيحاجج ضد الحمية دي، مش معاها.",
+        "إحساس العبادة حقيقي وقيّم، لكنه بيفسّر ليه الحمية بتحسّ صح، مش إذا كانت بتشتغل — الراحة والحقيقة سؤالان مختلفان.",
+        "لو كانت فعّالة فعلاً، كانت هتعدّي اختباراً منصفاً بتحاليل موثّقة قبل/بعد؛ صاحب النظام اتطلب منه ثلاث حالات كده وما قدّمش ولا واحدة."
+      ],
+      "explanation": "Considering the opposite breaks the spell of a claim that fuses faith and health into one un-questionable bundle. Separating the two — 'is this devotion?' from 'is this medicine?' — is the core defensive skill of this layer. You can honour the religious feeling and still demand that the medical claim earn its keep with evidence.",
+      "explanationAr": "التفكير في العكس بيكسر سحر ادعاء بيدمج الإيمان والصحة في حزمة واحدة غير قابلة للسؤال. والفصل بين الاتنين — «ده تعبّد؟» عن «ده طب؟» — هو المهارة الدفاعية الأساسية في الطبقة دي. تقدر تحترم الإحساس الديني وتفضل تطالب الادعاء الطبي إنه يستحقّ مكانه بالدليل.",
+      "sources": [
+        "EAL-case-001:religious-verse-16-116",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 130,
+      "claim": "A type-2 diabetic in the community is told that staying on his medication shows 'weak faith,' and that trusting «الطيبات» alone is the pious path. Apply what you learned earlier: is taking prescribed medicine a sign of weak faith?",
+      "claimAr": "مريض سكري نوع تاني في المجتمع بيتقال له إن استمراره على دوايه بيدلّ على «ضعف إيمان»، وإن التوكّل على «الطيبات» وحدها هو طريق التقوى. طبّق اللي اتعلمته قبل كده: هل أخذ الدواء الموصوف علامة ضعف إيمان؟",
+      "options": [
+        "Yes — real trust in God means refusing medicine",
+        "No — seeking treatment is encouraged in the tradition ('there is no disease Allah created without also creating its cure'); using means and trusting God are not opposites",
+        "Only for minor illnesses",
+        "It depends on the doctor's religiosity"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Re-tested from the religious-shield phase: framing medicine as the opposite of faith is a false dichotomy weaponised against the patient. The prophetic guidance encourages seeking treatment; using a doctor's prescription is a 'means' that sits comfortably with trust in God (tawakkul). The dangerous step here is red flag #8 — telling people to drop tested treatment — dressed up as piety. Defending the patient means separating genuine devotion from a manipulation that uses devotion as a lever.",
+      "explanationAr": "بنعيد اختباره من طور الدرع الديني: تأطير الدواء كنقيض للإيمان ثنائية كاذبة مُستخدَمة كسلاح ضد المريض. والهَدْي النبوي بيشجّع على التداوي؛ واستخدام وصفة الطبيب «سبب» بيتماشى مع التوكّل. والخطوة الخطيرة هنا علامة الخطر رقم 8 — إنك تقول للناس يسيبوا علاج مُختبَر — متلبّسة بثوب التقوى. والدفاع عن المريض معناه إنك تفصل التعبّد الحقيقي عن تلاعب بيستخدم التعبّد كرافعة.",
+      "sources": [
+        "EAL-case-001:redflag-8",
+        "https://sunnah.com/bukhari:5678"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    }
+  ]
+}

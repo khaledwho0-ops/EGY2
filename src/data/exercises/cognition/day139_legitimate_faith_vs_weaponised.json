@@ -1,0 +1,119 @@
+{
+  "id": "day139_legitimate_faith_vs_weaponised",
+  "phase": 3,
+  "week": 20,
+  "day": 139,
+  "title": "Sorting at Speed — Twelve Scenarios, Two Categories",
+  "titleAr": "الفرز بسرعة — اثنا عشر سيناريو، فئتان",
+  "description": "Consolidation day: rapid-fire sorting of mixed scenarios — some are genuine, harmless expressions of faith in health contexts; others weaponise religious framing to push unverified medical claims. Build the sorting reflex.",
+  "descriptionAr": "يوم توطيد: فرز سريع لسيناريوهات مختلطة — بعضها تعبيرات إيمانية حقيقية وغير ضارة في سياقات صحية؛ وبعضها يُسلّح التأطير الديني لدفع ادعاءات طبية غير مُتحقَّق منها. ابنِ ردّ الفعل التلقائي للفرز.",
+  "type": "religion-literacy",
+  "difficulty": 4,
+  "estimatedMinutes": 18,
+  "source": "https://quran.com/5/87",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "scenario": "Scenario A: A patient prays before surgery and tells the surgeon: 'I trust in Allah's will alongside your skill.' Scenario B: A seller says: 'Our supplement is blessed (mubarak); using it is an act of worship (ibadah); refusing it is arrogance before God.'",
+      "scenarioAr": "سيناريو أ: مريض بيصلّي قبل الجراحة ويقول للجراح: «توكّلت على الله مع مهارتك». سيناريو ب: بائع بيقول: «مكمّلنا الغذائي مبارك؛ استخدامه عبادة؛ رفضه كبر أمام الله».",
+      "question": "Which scenario uses religious language to make a product choice into a religious obligation?",
+      "questionAr": "أنهي سيناريو بيستخدم اللغة الدينية لتحويل اختيار منتج إلى واجب ديني؟",
+      "answer": "B",
+      "key_differentiators": [
+        "Scenario A: prayer and tawakkul alongside medical treatment — faith and medicine cooperate; no product claim, no obligation",
+        "Scenario B: 'blessed + worship + refusing = arrogance' converts product rejection into a moral/religious failure; this is the vocabulary exploit weaponising identity"
+      ],
+      "explanation": "Scenario A is a textbook example of legitimate faith expression alongside conventional medicine — compatible with Islamic tradition, makes no efficacy claim, and places no obligation on others. Scenario B converts a purchasing decision into a test of religious character. The three-word sequence 'mubarak → ibadah → arrogance' is an escalating identity threat designed to make the word 'no' feel sinful.",
+      "explanationAr": "سيناريو أ مثال كلاسيكي لتعبير إيماني مشروع جنباً إلى جنب مع الطب التقليدي — متوافق مع التقليد الإسلامي، لا يدّعي فعالية، ولا يفرض التزاماً على الآخرين. سيناريو ب بيحوّل قرار شراء إلى اختبار لشخصية دينية. تسلسل الكلمات الثلاث «مبارك ← عبادة ← كبر» تهديد هوية متصاعد مصمَّم لجعل كلمة «لا» تحسّ إنها إثم.",
+      "sources": ["EAL-case-001:redflag-6", "https://quran.com/5/87"],
+      "cognitivebiasAtPlay": "Identity-Protective Cognition"
+    },
+    {
+      "id": 2,
+      "mechanic": "recognize",
+      "scenario": "Scenario A: A mother refuses to take her diabetic child for insulin because 'Allah will heal him through pure food.' Scenario B: A doctor says 'Your surgery went well; I will pray for your recovery — please take your antibiotics as prescribed.'",
+      "scenarioAr": "سيناريو أ: أم ترفض أخذ طفلها المصاب بالسكري للأنسولين لأن «الله سيشفيه بالطعام الطاهر». سيناريو ب: دكتور يقول «عمليتك نجحت؛ سأدعو لشفائك — من فضلك خذ مضادات الحيوية كما وُصِفت».",
+      "question": "Which scenario puts a life at risk by substituting faith FOR evidence-based treatment (rather than alongside it)?",
+      "questionAr": "أنهي سيناريو بيعرّض حياة للخطر بإحلال الإيمان محلّ العلاج القائم على الدليل (بدلاً من جانبه)؟",
+      "answer": "A",
+      "key_differentiators": [
+        "Scenario A: faith replaces insulin — for Type 1 diabetes, this is life-threatening within hours; the Maqasid (hifz al-nafs) are violated",
+        "Scenario B: faith supplements medicine — prayer and antibiotics coexist; no medical claim, no risk"
+      ],
+      "explanation": "The critical distinction is 'instead of' vs 'alongside.' Islamic tradition does not require patients to reject medicine — the hadith tradition includes 'seek treatment, for Allah has not created a disease without creating a cure' (Sunan Abī Dāwūd). Refusing insulin for a Type 1 diabetic child is not an act of faith; it is a life-threatening medical decision that contradicts hifz al-nafs.",
+      "explanationAr": "التمييز الجوهري هو «بدلاً من» مقابل «إلى جانب». التقليد الإسلامي لا يُلزم المرضى برفض الدواء — تقليد الحديث يشمل «تداووا فإن الله لم يضع داءً إلا وضع له دواءً» (سنن أبي داود). رفض الأنسولين لطفل مصاب بالسكري نوع 1 ليس عملاً إيمانياً؛ هو قرار طبي خطير على الحياة يتعارض مع حفظ النفس.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "EAL-case-001:moh-eg-2026-05",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A wellness influencer posts: 'I want to warn my community: الطيبات — the pure foods — protect the body from disease. If you truly love your family, feed them as Allah intended.' The next post provides a product link with paid affiliate tracking.",
+      "claimAr": "مؤثر عافية بيكتب: «أريد أن أحذّر مجتمعي: الطيبات — الأطعمة الطاهرة — تحمي الجسم من المرض. لو بتحبّ عيلتك فعلاً، أطعمهم كما أراد الله». البوست التالي يتضمن رابط منتج بمتابعة عمولة مدفوعة.",
+      "options": [
+        "This is legitimate public health advice framed in faith language",
+        "This is Red Flag 6 (moral/religious words for food) combined with Red Flag 12 (undisclosed financial interest) — love for family is weaponised to bypass product evaluation"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: identify the exact moment the post crosses from expressing faith to manipulating. What does the affiliate link add to the moral picture?",
+        "promptAr": "بكلماتك: حدّد اللحظة الدقيقة التي يتجاوز فيها البوست التعبير عن الإيمان إلى التلاعب. ماذا يُضيف رابط العمولة إلى الصورة الأخلاقية؟"
+      },
+      "explanation": "The sequence: (1) 'warn my community' — positions the influencer as a selfless protector; (2) «الطيبات» — imports Quranic vocabulary into a product category; (3) 'if you truly love your family' — converts refusal of the product into failure of love; (4) affiliate link — reveals the financial motive that was absent from the emotional framing. The affiliate link is not a sin — it is a disclosure problem. The post is written to create a moral obligation ('love your family') and then immediately converts that obligation into a purchase. Red Flag 12 demands disclosure upfront; its absence here is not accidental.",
+      "explanationAr": "التسلسل: (١) «أريد أن أحذّر مجتمعي» — يضع المؤثر في موضع الحامي غير الأناني؛ (٢) «الطيبات» — تستورد مفردة قرآنية في فئة منتج؛ (٣) «لو بتحبّ عيلتك فعلاً» — بيحوّل رفض المنتج إلى إخفاق في الحبّ؛ (٤) رابط العمولة — بيكشف الدافع المالي الغائب عن التأطير العاطفي. رابط العمولة ليس خطيئة — هو مشكلة إفصاح. البوست مكتوب ليخلق التزاماً أخلاقياً («أحبّ عيلتك») ثم يحوّل هذا الالتزام فوراً إلى عملية شراء. العلامة التحذيرية 12 تتطلب الإفصاح مقدّماً؛ غيابه هنا ليس صدفة.",
+      "sources": ["EAL-case-001:redflag-6", "EAL-case-001:redflag-12"],
+      "cognitivebiasAtPlay": "Appeal to Emotion"
+    },
+    {
+      "id": 4,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A person says: 'I believe honey is healing because the Quran mentions it (Al-Naḥl 16:69). This belief is identical in epistemic status to a clinical trial showing honey's antibacterial properties in wound care.' How confident are you that these two statements carry the same evidential weight for a medical decision?",
+      "claimAr": "شخص بيقول: «أؤمن أن العسل شافٍ لأن القرآن ذكره (النحل ١٦:٦٩). هذا المعتقد مساوٍ من حيث الثقة المعرفية لتجربة سريرية تُظهر خصائص العسل المضادة للبكتيريا في علاج الجروح». قد إيه أنت متأكد أن الجملتين دول يحملان نفس القوة الدليلية لقرار طبي؟",
+      "options": [
+        "Equally confident — Quranic mention and clinical trial are equivalent sources for health decisions",
+        "Not equally confident — the Quranic mention is a spiritual/theological statement; the trial is an empirical test of a specific mechanism; they are different types of claim requiring different evaluation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Calibration point: Al-Naḥl 16:69 says honey 'contains healing for people (fīhi shifā' lil-nās)' — a broad spiritual statement, not a clinical trial design. Separately, peer-reviewed evidence (Cochrane-reviewed) does support honey's antibacterial properties in wound care in specific contexts. Both can be true simultaneously — but they are different types of claim with different standards of evidence. The Quranic mention does not replace the clinical evidence; nor does the clinical evidence diminish the Quranic significance. Conflating them is the error.",
+      "explanationAr": "نقطة المعايرة: النحل ١٦:٦٩ بتقول العسل «فيه شفاء للناس» — جملة روحية/روحانية واسعة، لا تصميم تجربة سريرية. بشكل منفصل، الأدلة المحكّمة بالنظراء (مراجعة كوكرين) تدعم خصائص العسل المضادة للبكتيريا في علاج الجروح في سياقات بعينها. الاثنان يمكن أن يكونا صحيحين في نفس الوقت — لكنهما نوعان مختلفان من الادعاءات بمعايير مختلفة للأدلة. الذكر القرآني لا يحلّ محل الدليل الإكلينيكي؛ ولا الدليل الإكلينيكي يُقلّل من الأهمية القرآنية. الجمع بينهما هو الخطأ.",
+      "sources": [
+        "https://quran.com/16/69",
+        "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD006526.pub5/full"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "faith-identity pressure — 'a true believer would do X'",
+      "techniqueAr": "ضغط هوية الإيمان — «المؤمن الحقيقي سيفعل X»",
+      "task": "Feel the technique from the inside (harmless topic). You are promoting regular sleep hygiene — a genuinely healthy behaviour. Write a post that uses 'a true believer takes care of the trust (amanah) of their body' to pressure the reader into feeling that not following your sleep tips is a failure of religious character. Keep to 3–4 sentences.",
+      "taskAr": "احسّ بالتقنية من جوّه (موضوع غير ضار). بتروّج لصحة نوم منتظمة — سلوك صحي حقيقي. اكتب بوست بيستخدم «المؤمن الحقيقي بيحافظ على أمانة جسمه» لتضغط على القارئ ليحسّ إن عدم اتّباع نصائح نومك إخفاق ديني. ابقى في 3-4 جمل.",
+      "tells": [
+        "'A true believer does X' makes product/behaviour adoption a test of religious identity, not a personal health choice.",
+        "The argument bypasses evidence ('does this actually help?') and goes straight to moral character ('are you a good Muslim/faithful person?').",
+        "Failure to adopt = spiritual deficiency — this shame mechanism is the driver, not the health benefit.",
+        "The technique works especially well with a genuinely good recommendation (sleep IS healthy) because the virtue of the claim launders the manipulation.",
+        "Counter-evidence or preference becomes spiritually suspect — 'I prefer a different sleep schedule' is reframed as 'you don't care about amanah.'"
+      ],
+      "tellsAr": [
+        "«المؤمن الحقيقي يفعل X» يجعل تبنّي المنتج/السلوك اختباراً للهوية الدينية، لا خياراً صحياً شخصياً.",
+        "الحُجّة تتجاوز الدليل («هل هذا مفيد فعلاً؟») وتذهب مباشرةً للشخصية الأخلاقية («هل أنت مسلم جيد/مؤمن؟»).",
+        "عدم التبنّي = قصور روحي — آلية العار هي المحرّك، لا الفائدة الصحية.",
+        "التقنية تنجح بشكل خاص مع توصية جيدة حقاً (النوم صحي فعلاً) لأن فضيلة الادعاء تُبيّض التلاعب.",
+        "الدليل المضاد أو التفضيل يصبح مشبوهاً روحياً — «أفضل جدولاً مختلفاً للنوم» يُعاد تأطيره كـ«أنت لا تهتم بالأمانة»."
+      ],
+      "sources": [
+        "EAL-case-001:redflag-6",
+        "https://doi.org/10.1177/0956797611424748"
+      ],
+      "cognitivebiasAtPlay": "Identity-Protective Cognition"
+    }
+  ]
+}

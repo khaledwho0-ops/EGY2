@@ -1,0 +1,22 @@
+[
+  { "id": "q1", "headline": "Scientific consensus agrees that...", "isReal": true },
+  { "id": "q2", "headline": "100% of scientists hide this secret", "isReal": false, "distractorType": "Cn" },
+  { "id": "q3", "headline": "New WHO report indicates lower transmission rates", "isReal": true },
+  { "id": "q4", "headline": "Doctors hate this one weird trick", "isReal": false, "distractorType": "F" },
+  { "id": "q5", "headline": "Global temperature rising steadily", "isReal": true },
+  { "id": "q6", "headline": "You must choose between total lockdown or death", "isReal": false, "distractorType": "L" },
+  { "id": "q7", "headline": "Elections completely rigged according to insider", "isReal": false, "distractorType": "Cn" },
+  { "id": "q8", "headline": "Vaccine rollout reaches 50% milestone", "isReal": true },
+  { "id": "q9", "headline": "Study ignores 90% of data to prove point", "isReal": false, "distractorType": "C" },
+  { "id": "q10", "headline": "Unemployment drops to 4%", "isReal": true },
+  { "id": "q11", "headline": "Unless a system is perfect, it is useless", "isReal": false, "distractorType": "I" },
+  { "id": "q12", "headline": "FDA approves new treatment for condition", "isReal": true },
+  { "id": "q13", "headline": "He's a terrible person so his claim is false", "isReal": false, "distractorType": "L" },
+  { "id": "q14", "headline": "Local elections conclude peacefully", "isReal": true },
+  { "id": "q15", "headline": "They don't want you to know about this cure", "isReal": false, "distractorType": "Cn" },
+  { "id": "q16", "headline": "City opens new public transit lines", "isReal": true },
+  { "id": "q17", "headline": "A single person suffered side effects so the drug is poison", "isReal": false, "distractorType": "L" },
+  { "id": "q18", "headline": "Budget surplus reported for Q3", "isReal": true },
+  { "id": "q19", "headline": "This fake expert with no degree says it's safe", "isReal": false, "distractorType": "F" },
+  { "id": "q20", "headline": "School funding increased by 5%", "isReal": true }
+]

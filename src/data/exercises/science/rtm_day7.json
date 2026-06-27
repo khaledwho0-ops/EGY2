@@ -1,0 +1,98 @@
+{
+  "id": "regression_to_mean",
+  "phase": 2,
+  "week": 9,
+  "day": 7,
+  "title": "Regression to the Mean",
+  "titleAr": "الانحدار نحو المتوسط",
+  "description": "Understand regression to the mean — the statistical phenomenon where extreme measurements tend to be followed by less extreme ones, independent of any intervention. Learn how RTM creates false impressions of treatment efficacy in medicine and explains the 'Sports Illustrated jinx.'",
+  "descriptionAr": "افهم الانحدار نحو المتوسط — الظاهرة الإحصائية حيث تميل القياسات المتطرفة إلى أن يتبعها قياسات أقل تطرفاً، بصرف النظر عن أي تدخل. تعلم كيف ينشئ الانحدار نحو المتوسط انطباعات خاطئة عن فعالية العلاج.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "statisticalConcept": {
+    "name": "Regression to the Mean",
+    "nameAr": "الانحدار نحو المتوسط",
+    "definition": "Regression to the mean (RTM) is a statistical phenomenon first described by Sir Francis Galton in 1886 while studying the heights of parents and children. He observed that extremely tall parents tended to have children shorter than themselves, while extremely short parents had taller children — both groups' offspring 'regressed' toward the population mean. RTM occurs whenever there is imperfect correlation between successive measurements of a variable with random variation. It is not a causal force but a mathematical inevitability: extreme values are partly due to chance, and chance is unlikely to repeat in the same direction.",
+    "definitionAr": "الانحدار نحو المتوسط ظاهرة إحصائية وصفها لأول مرة السير فرانسيس غالتون عام 1886 أثناء دراسة أطوال الآباء والأبناء. لاحظ أن الآباء طوال القامة جداً يميلون لإنجاب أطفال أقصر منهم، بينما الآباء قصار القامة جداً ينجبون أطفالاً أطول. الانحدار نحو المتوسط ليس قوة سببية بل حتمية رياضية: القيم المتطرفة ناتجة جزئياً عن الصدفة، والصدفة من غير المرجح أن تتكرر في نفس الاتجاه.",
+    "realWorldExample": "In medicine: Patients are typically selected for clinical trials when their symptoms are at their worst (e.g., highest blood pressure readings). Even without treatment, their subsequent measurements will tend to be lower — closer to their true average — simply due to RTM. This creates the illusion that a placebo or ineffective treatment 'worked.' Davis (1976) estimated that RTM accounts for a substantial portion of perceived drug effects in hypertension trials when patients are selected based on elevated readings. In sports: The 'Sports Illustrated cover jinx' — athletes who appear on the cover after exceptional performances often perform worse afterward, not due to a curse but because exceptional performances are extreme values that naturally regress.",
+    "realWorldExampleAr": "في الطب: يُختار المرضى عادةً للتجارب السريرية عندما تكون أعراضهم في أسوأ حالاتها. حتى بدون علاج، ستميل قياساتهم اللاحقة لتكون أقل. في الرياضة: 'لعنة غلاف سبورتس إلستريتد' — الرياضيون الذين يظهرون على الغلاف بعد أداء استثنائي غالباً ما يؤدون بشكل أسوأ بعد ذلك، ليس بسبب لعنة بل لأن الأداء الاستثنائي قيم متطرفة تنحدر طبيعياً.",
+    "detectionMethod": "To distinguish RTM from a genuine treatment effect: (1) Use a control group — if the control group also improves, RTM is likely responsible; (2) Use multiple baseline measurements to establish a stable baseline; (3) Select participants based on their average across multiple measurements, not a single extreme reading; (4) Apply Lord's paradox awareness; (5) Use ANCOVA adjusting for baseline values; (6) Calculate the expected RTM effect using the formula: Expected RTM = (1 - r) × (X₁ - μ), where r is the test-retest correlation."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A clinic selects the 50 patients with the highest blood pressure readings (>160 mmHg systolic) from a screening day. They give all 50 patients a herbal supplement for 4 weeks. At follow-up, the average blood pressure drops to 148 mmHg. The clinic claims the supplement lowered blood pressure. What is the most likely explanation?",
+      "promptAr": "تختار عيادة أعلى 50 مريضاً في قراءات ضغط الدم (أكثر من 160 ملم زئبقي انقباضي) من يوم فحص. يعطون جميع المرضى مكملاً عشبياً لمدة 4 أسابيع. في المتابعة، ينخفض متوسط ضغط الدم إلى 148. تدعي العيادة أن المكمل خفض ضغط الدم. ما التفسير الأكثر احتمالاً؟",
+      "options": [
+        "Regression to the mean — patients were selected at their most extreme readings, and subsequent readings would have decreased regardless of intervention",
+        "The blood pressure devices were miscalibrated",
+        "The patients changed their diet simultaneously",
+        "The supplement is genuinely effective"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This is a textbook example of RTM in medicine. By selecting patients with the highest single-day readings, the clinic captured people whose blood pressure was elevated partly by transient factors (stress, caffeine, white-coat effect, measurement error). On any subsequent measurement, these transient factors are unlikely to align in the same direction, so readings naturally decrease. Without a randomized control group receiving a placebo, it is impossible to attribute the decline to the supplement. Morton and Torgerson (2003) in the BMJ specifically warned about RTM confounding uncontrolled clinical studies.",
+      "explanationAr": "هذا مثال كلاسيكي للانحدار نحو المتوسط في الطب. باختيار المرضى بأعلى قراءات يوم واحد، التقطت العيادة أشخاصاً كان ضغط دمهم مرتفعاً جزئياً بسبب عوامل عابرة. في أي قياس لاحق، من غير المرجح أن تتوافق هذه العوامل العابرة في نفس الاتجاه."
+    },
+    {
+      "id": 2,
+      "type": "analyze",
+      "prompt": "Daniel Kahneman, in 'Thinking, Fast and Slow' (2011), describes how Israeli Air Force flight instructors believed that praise led to worse performance and criticism led to better performance. How does regression to the mean explain this illusion?",
+      "promptAr": "يصف دانيال كانمان في 'التفكير، السريع والبطيء' (2011) كيف اعتقد مدربو سلاح الجو الإسرائيلي أن المديح يؤدي إلى أداء أسوأ والنقد يؤدي إلى أداء أفضل. كيف يفسر الانحدار نحو المتوسط هذا الوهم؟",
+      "options": [
+        "The instructors were correct — praise does harm performance",
+        "Instructors praised after unusually GOOD flights (extreme high) and criticized after unusually BAD flights (extreme low). Due to RTM, good flights were naturally followed by more average flights (appearing as decline), and bad flights by more average ones (appearing as improvement) — regardless of the feedback given",
+        "The pilots were deliberately performing worse after praise",
+        "The sample size was too small"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Kahneman called this one of his most important insights about human cognition. The instructors praised after exceptionally good landings and criticized after exceptionally poor ones. Due to RTM, an exceptional performance (positive extreme) is most likely followed by a more average one, creating the appearance that praise caused decline. Similarly, a terrible performance (negative extreme) is most likely followed by something closer to average, creating the appearance that criticism caused improvement. The feedback was irrelevant — the regression would have occurred regardless.",
+      "explanationAr": "سمّى كانمان هذا واحداً من أهم رؤاه حول الإدراك البشري. مدح المدربون بعد هبوطات جيدة استثنائياً وانتقدوا بعد هبوطات سيئة استثنائياً. بسبب الانحدار نحو المتوسط، الأداء الاستثنائي يتبعه غالباً أداء أكثر عادية، مما يخلق مظهر أن المديح سبب تراجعاً."
+    },
+    {
+      "id": 3,
+      "type": "calculate",
+      "prompt": "The test-retest correlation for a blood pressure measurement is r = 0.70. A patient's first reading is 180 mmHg and the population mean is 120 mmHg. What is the expected value of their second reading due to RTM alone (assuming no intervention)?",
+      "promptAr": "ارتباط إعادة الاختبار لقياس ضغط الدم هو ر = 0.70. القراءة الأولى للمريض 180 ملم زئبقي ومتوسط السكان 120 ملم زئبقي. ما القيمة المتوقعة لقراءتهم الثانية بسبب الانحدار نحو المتوسط وحده (بافتراض عدم وجود تدخل)؟",
+      "options": [
+        "120 mmHg — full regression to mean",
+        "180 mmHg — no change expected",
+        "162 mmHg — Expected = μ + r × (X₁ - μ) = 120 + 0.70 × (180-120) = 120 + 42 = 162",
+        "150 mmHg"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Using the RTM formula: Expected X₂ = μ + r × (X₁ - μ) = 120 + 0.70 × (180 - 120) = 120 + 42 = 162. So a 18 mmHg drop from 180 to 162 is expected purely from RTM, with no treatment whatsoever. If a drug trial enrolled this patient at 180 and measured 162 at follow-up, the apparent 18-point reduction could be entirely RTM. This is why randomized controlled trials with placebo groups are essential — the placebo group quantifies the RTM effect.",
+      "explanationAr": "باستخدام صيغة الانحدار نحو المتوسط: القيمة المتوقعة = المتوسط + ر × (القراءة الأولى - المتوسط) = 120 + 0.70 × (180 - 120) = 120 + 42 = 162. انخفاض 18 نقطة من 180 إلى 162 متوقع من الانحدار نحو المتوسط وحده."
+    },
+    {
+      "id": 4,
+      "type": "evaluate",
+      "prompt": "Which study design BEST controls for regression to the mean?",
+      "promptAr": "أي تصميم دراسة يتحكم بشكل أفضل في الانحدار نحو المتوسط؟",
+      "options": [
+        "A case series selecting the most severe patients",
+        "A cross-sectional survey",
+        "A before-after study with no control group",
+        "A randomized controlled trial — both treatment and control groups experience the same RTM, so the difference between groups reflects the true treatment effect"
+      ],
+      "correctAnswer": 3,
+      "explanation": "In an RCT, both the treatment group and the control group are selected using the same criteria (e.g., blood pressure >160). Both groups will experience the same degree of RTM at follow-up. Therefore, any DIFFERENCE between the groups at follow-up reflects the true treatment effect above and beyond RTM. This is why uncontrolled before-after studies consistently overestimate treatment effects — they confound genuine improvement with RTM.",
+      "explanationAr": "في التجربة المعشاة المضبوطة، كلتا المجموعتين (العلاج والضبط) يُختاران بنفس المعايير. كلتا المجموعتين ستشهدان نفس درجة الانحدار نحو المتوسط. لذلك، أي اختلاف بين المجموعتين يعكس التأثير العلاجي الحقيقي."
+    },
+    {
+      "id": 5,
+      "type": "identify",
+      "prompt": "The 'Sports Illustrated cover jinx' refers to the observation that athletes often perform worse after appearing on the magazine's cover following a stellar season. What is the statistical explanation?",
+      "promptAr": "'لعنة غلاف سبورتس إلستريتد' تشير إلى ملاحظة أن الرياضيين غالباً ما يؤدون بشكل أسوأ بعد الظهور على غلاف المجلة بعد موسم ممتاز. ما التفسير الإحصائي؟",
+      "options": [
+        "Regression to the mean — athletes appear on the cover after extreme positive performances, which are partly due to luck; subsequent seasons naturally tend toward their career average",
+        "Other teams study cover athletes more carefully",
+        "The jinx is a real supernatural phenomenon",
+        "The media attention creates performance anxiety"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Athletes are selected for the SI cover BECAUSE they just had an exceptional season — an extreme positive value. Since athletic performance has inherent variability (injuries, team dynamics, opponent quality, luck), an extreme season is partly due to favorable random factors that are unlikely to repeat. The next season naturally tends toward the athlete's true mean performance level. This is pure RTM, not a jinx. The same logic explains the 'sophomore slump' (Rookie of the Year winners performing worse in year 2) and the 'Madden curse' in video games.",
+      "explanationAr": "يُختار الرياضيون لغلاف المجلة لأنهم حققوا للتو موسماً استثنائياً — قيمة إيجابية متطرفة. بما أن الأداء الرياضي فيه تقلبات متأصلة، فإن الموسم الاستثنائي ناتج جزئياً عن عوامل عشوائية مواتية من غير المرجح أن تتكرر. الموسم التالي يميل طبيعياً نحو المستوى الحقيقي للرياضي."
+    }
+  ]
+}

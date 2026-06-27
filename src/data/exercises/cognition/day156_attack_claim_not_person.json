@@ -1,0 +1,126 @@
+{
+  "id": "day156_attack_claim_not_person",
+  "phase": 4,
+  "week": 23,
+  "day": 156,
+  "title": "Attack the Claim, Not the Person",
+  "titleAr": "اهجم على الادعاء مش على الشخص",
+  "description": "The most important separation in any belief conversation: what someone believes and who that person is are not the same thing. Learn to target ideas while protecting the relationship.",
+  "descriptionAr": "أهم فصل في أي محادثة معتقدات: اللي الشخص بيصدّقه ومين الشخص ده مش نفس الحاجة. اتعلّم إنك تستهدف الأفكار وأنت بتحافظ على العلاقة.",
+  "type": "psychology",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/ad-hominem/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A colleague defends the viral «نظام الطيبات» diet loudly at a family gathering. You respond: \"Anyone who still believes in that after people died is either ignorant or wants to be fooled.\" What have you done to the conversation?",
+      "claimAr": "زميل بيدافع عن نظام «الطيبات» بصوت عالي في فرح عيلي. بتردّ: «أي حد لسّه مصدّق ده بعد ما ناس ماتت إمّا جاهل أو عايز يتخدع.» إيه اللي عملته للمحادثة؟",
+      "options": [
+        "Opened a productive discussion",
+        "Ended any chance of learning — the colleague now defends his identity, not just his belief",
+        "Correctly named the problem",
+        "Applied the claim-not-person principle"
+      ],
+      "correctAnswer": 1,
+      "explanation": "You've attacked the person, not the claim. Now he isn't defending a diet — he is defending his intelligence and dignity. The conversation will generate heat but no light, and the audience will remember the attack, not your evidence. The separation that works: 'The claim that one diet cures cancer contradicts two decades of oncology research' — same information, zero accusation about the believer.",
+      "explanationAr": "هاجمت الشخص مش الادعاء. دلوقتي هو مش بيدافع عن حِمية — هو بيدافع عن ذكاءه وكرامته. المحادثة هتولّد حرارة بس مش نور، والجمهور هيفتكر الهجوم مش دليلك. الفصل اللي بينجح: «ادعاء إن حِمية واحدة بتعالج السرطان بيناقض عقدين من أبحاث الأورام» — نفس المعلومة، صفر اتهام للمصدّق.",
+      "sources": [
+        "https://plato.stanford.edu/entries/ad-hominem/",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Backfire Effect"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "When a person's belief is causing direct physical harm to themselves, it is NOT acceptable to call them foolish or gullible — even though the high stakes feel like they justify being blunt.",
+      "claimAr": "لمّا معتقد شخص بيسبّبله ضرر جسدي مباشر، مش مقبول إنك تقوله غبي أو سهل التخديع — رغم إن ضخامة الموضوع بتحسّ إنها بتبرّر الصراحة الجارحة.",
+      "options": [
+        "High stakes justify shaming",
+        "Higher stakes make empathy more important, not less"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why do HIGHER stakes (someone's health is on the line) make shaming MORE dangerous, not more justified?",
+        "promptAr": "بكلماتك: ليه الموضوع لمّا يبقى أخطر (صحة حد على المحكّ) بيخلّي التخجيل أخطر، مش أكثر تبريراً؟"
+      },
+      "explanation": "Higher stakes make empathy more important, not less. Research on health communication shows shame is the single strongest predictor of disengagement: a humiliated person withdraws from the conversation, from the helper, and sometimes from all medical contact — which, when their health is already at risk, removes the very lifeline that could have saved them. The goal is behaviour change, not a moment of moral superiority. Calling someone gullible doesn't save them; earning their trust does. The higher the stakes, the more you cannot afford to lose them.",
+      "explanationAr": "الموضوع لمّا يبقى أخطر بيخلّي التعاطف أهم، مش أقل. أبحاث الاتصال الصحي بتوضح إن الخجل هو أقوى منبئ لقطع التواصل: الشخص المُتأهَن بيسحب نفسه من المحادثة ومن المساعِد وأحياناً من أي تواصل طبي — وده، لمّا صحته أصلاً في خطر، بيشيل طوق النجاة اللي كان ممكن ينقذه. الهدف تغيير السلوك مش لحظة تفوّق أخلاقي. تقول لحد إنه سهل التخديع مش بينقذه؛ بس كسب ثقته هو اللي بينقذه. كل ما الموضوع أخطر، كل ما ما تقدرش تخسره.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4831151/",
+        "https://www.apa.org/monitor/2011/10/motivational-interviewing"
+      ],
+      "cognitivebiasAtPlay": "Backfire Effect"
+    },
+    {
+      "id": 3,
+      "mechanic": "decompose",
+      "claim": "Map your uncle's argument so you can answer the claim without taking the ad hominem bait: \"The Medical Syndicate shut it down because they're all corrupt and protecting the pharmaceutical lobby — so the diet must actually work.\"",
+      "claimAr": "فكّك حُجّة عمّك علشان تردّ على الادعاء من غير ما تاخد طُعم الهجوم الشخصي: «النقابة أغلقته لأنهم كلهم فاسدين وبيحموا لوبي الدواء — يبقى الحمية أكيد شغّالة فعلاً».",
+      "parts": [
+        { "text": "The diet must actually work.", "textAr": "الحمية أكيد شغّالة فعلاً.", "role": "conclusion" },
+        { "text": "The Syndicate shut it down.", "textAr": "النقابة أغلقته.", "role": "premise" },
+        { "text": "(Unstated) If a corrupt body opposes something, that thing must be true.", "textAr": "(غير مذكور) لو جهة فاسدة عارضت حاجة، يبقى الحاجة دي لازم تكون صح.", "role": "assumption" },
+        { "text": "They're all corrupt and protecting the pharmaceutical lobby.", "textAr": "كلهم فاسدين وبيحموا لوبي الدواء.", "role": "irrelevant" }
+      ],
+      "explanation": "Mapping shows the conclusion ('the diet works') rests on a hidden ASSUMPTION that a corrupt body opposing something makes it true — which is a non-sequitur; corrupt people can still ban genuinely dangerous things. The 'they're all corrupt' line is an IRRELEVANT ad hominem against the regulators, not evidence about the diet. Once mapped, you can sidestep the personal attack and engage the real question. A Socratic reply works well: 'You think the doctors are compromised — what would honest evidence AGAINST the diet look like to you?' If he can name a fair test, you can discuss that test together.",
+      "explanationAr": "التفكيك بيبيّن إن الخلاصة («الحمية شغّالة») قايمة على افتراض خفي إن جهة فاسدة بتعارض حاجة بيخليها صح — وده استنتاج فاسد؛ الفاسدين ممكن يحظروا حاجات خطرة فعلاً. وجملة «كلهم فاسدين» هجوم شخصي غير ذي صلة على المنظّمين، مش دليل عن الحمية. بعد التفكيك، تقدر تتفادى الهجوم الشخصي وتشتبك مع السؤال الحقيقي. الردّ السقراطي بينفع: «إنت شايف الدكاترة متواطئين — إيه الدليل النزيه ضد الحمية اللي إنت هتقبله؟» لو قدر يسمّي اختباراً عادلاً، تقدروا تناقشوه سوا.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://plato.stanford.edu/entries/ad-hominem/"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 4,
+      "mechanic": "recognize",
+      "scenario": "Scenario A: 'The claim that one diet cures both Type 1 diabetes and cancer is biologically impossible — they are mechanistically unrelated diseases.' || Scenario B: 'Only a naive person would believe one diet cures both cancer and diabetes.'",
+      "scenarioAr": "السيناريو أ: «ادعاء إن حِمية واحدة بتعالج السكري نوع 1 والسرطان معاً مستحيل بيولوجياً — دول أمراض مختلفة آلياً.» || السيناريو ب: «بس شخص ساذج يصدّق إن حِمية واحدة بتعالج السرطان والسكري معاً.»",
+      "question": "Which statement attacks the claim and which attacks the person?",
+      "questionAr": "أنهي جملة بتهاجم الادعاء وأنهي بتهاجم الشخص؟",
+      "answer": "A-attacks-claim",
+      "key_differentiators": [
+        "A makes a falsifiable biological claim that can be discussed on its merits",
+        "B makes a character judgment that puts the believer on trial, not the belief",
+        "A gives the believer information they can use without needing to lose face",
+        "B forces the believer to defend their intelligence before they can hear any content"
+      ],
+      "explanation": "Statement A is a claim about biology — it can be verified, agreed with, or contested on its own terms without anyone losing face. Statement B is a verdict on the person's intelligence; the listener can only agree ('I am naive') or defend ('No I am not'), neither of which moves them toward the evidence. Claim-based language is far more likely to be heard.",
+      "explanationAr": "الجملة أ هي ادعاء عن البيولوجيا — تقدر تتحقّق منه أو توافق عليه أو تعترضه بموضوعيته من غير ما حد يخسر ماء وجهه. الجملة ب هي حكم على ذكاء الشخص؛ المستمع يقدر بس يوافق («أنا ساذج») أو يدافع («لا أنا مش ساذج»)، ولا الاتنين بيقرّبوه من الدليل. اللغة المبنية على الادعاء أرجح بكتير تتسمَّع.",
+      "sources": [
+        "https://plato.stanford.edu/entries/ad-hominem/",
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "the ad hominem (attacking the person to dodge the claim)",
+      "techniqueAr": "الهجوم الشخصي (مهاجمة الشخص للهروب من الادعاء)",
+      "task": "Feel the move from the inside so you can catch yourself doing it. Imagine a HARMLESS disagreement — a friend says 'tea is healthier than coffee.' Instead of engaging the claim, write 2–3 lines that dodge it entirely by attacking HIM: question his motives, his expertise, who 'pays' him, or his character. Make it sound persuasive.",
+      "taskAr": "حسّ بالحركة من جوّه علشان تمسك نفسك وإنت بتعملها. تخيّل خلاف غير ضار — صاحبك بيقول «الشاي أصحّ من القهوة». بدل ما تشتبك مع الادعاء، اكتب 2–3 سطور بتتفاداه خالص بمهاجمته هو: شكّك في دوافعه، أو خبرته، أو مين «بيدفعله»، أو شخصيته. خلّيها تبان مقنعة.",
+      "tells": [
+        "Not a single word addresses whether tea IS healthier — the actual claim is left completely untouched.",
+        "The target shifted from the idea to the person: motives, expertise, character, who funds him.",
+        "It FEELS like winning, but nothing about the claim was tested — that satisfying 'gotcha' is the bait.",
+        "If 'he's compromised, so ignore him' worked here, it would let you dismiss any inconvenient claim forever — which is exactly how the conspiracy shield silences every critic."
+      ],
+      "tellsAr": [
+        "ولا كلمة بتتكلم عن إن الشاي أصحّ ولا لأ — الادعاء الفعلي اتساب من غير ما يتلمس خالص.",
+        "الهدف اتنقل من الفكرة للشخص: دوافع، خبرة، شخصية، مين بيموّله.",
+        "بيحسّ كأنه كسب، بس مفيش حاجة في الادعاء اتختبرت — الـ«مسكتك» المُرضية دي هي الطُعم.",
+        "لو «هو متواطئ، يبقى تجاهله» نفعت هنا، هتخلّيك ترفض أي ادعاء مزعج للأبد — وده بالظبط إزاي درع المؤامرة بيسكّت كل ناقد."
+      ],
+      "explanation": "Building the manipulation in a weakened, harmless dose is 'active inoculation' (signal-detection meta-analysis, N=37,025): doing the move yourself, on a topic where no one is hurt, makes you far quicker to DISCRIMINATE it when it's aimed at you or at a doctor or a regulator. You just felt how an ad hominem can feel like victory while answering nothing — that's the tell you'll now catch instantly, including when the temptation is your own.",
+      "explanationAr": "إنك تبني التلاعب بجرعة مخفّفة غير ضارة ده «التلقيح النشط» (تحليل بَعدي بنظرية كشف الإشارة، ن=37,025): إنك تعمل الحركة بنفسك، على موضوع محدش بيتأذى فيه، بيخلّيك أسرع بكتير تميّزها لمّا تتوجّه ليك أو لدكتور أو لجهة تنظيمية. لسه حسّيت إزاي الهجوم الشخصي بيحسّ كانتصار وهو ما بيجاوبش على حاجة — دي العلامة اللي هتمسكها فوراً دلوقتي، حتى لمّا الإغراء يكون إغراءك إنت.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://plato.stanford.edu/entries/ad-hominem/"
+      ],
+      "cognitivebiasAtPlay": "Cognitive Narcissism (ego-defense)"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "day8_bias_fingerprint",
+  "phase": 0,
+  "week": 2,
+  "day": 8,
+  "title": "Bias Fingerprint",
+  "titleAr": "بصمة التحيز",
+  "description": "Identify which of the 6 major cognitive biases you are most susceptible to. Answer 8 scenario-based questions drawn from real Egyptian contexts. Your responses reveal your personal 'bias fingerprint.' Reference: Kahneman, D. (2011). Thinking, Fast and Slow. Farrar, Straus and Giroux.",
+  "descriptionAr": "تعرّف على أيّ الأنماط الستة الكبرى للتحيز المعرفي أكثر تأثيراً فيك. أجب على ٨ أسئلة قائمة على سياقات مصرية حقيقية. مرجع: كانيمان، تفكير سريع وبطيء (٢٠١١).",
+  "type": "bias_fingerprint",
+  "difficulty": 2,
+  "estimatedMinutes": 12,
+  "instrument": "Bias_Fingerprint_v1",
+  "biases_assessed": [
+    "confirmation_bias",
+    "availability_heuristic",
+    "anchoring_bias",
+    "dunning_kruger",
+    "in_group_bias",
+    "survivorship_bias"
+  ],
+  "reference": {
+    "citation": "Kahneman, D. (2011). Thinking, Fast and Slow. Farrar, Straus and Giroux. ISBN 978-0-374-27563-1",
+    "url": "https://www.worldcat.org/title/thinking-fast-and-slow/oclc/706020998"
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "question_en": "You believe COVID-19 vaccines are generally safe based on your research. A friend sends you an article claiming vaccines caused 200 deaths in Egypt. What is your FIRST instinct?",
+      "question_ar": "تعتقد أن لقاحات كوفيد-١٩ آمنة بشكل عام استناداً إلى بحثك. يرسل إليك صديق مقالاً يدّعي أن اللقاحات تسببت في وفاة ٢٠٠ شخص في مصر. ما هو أول رد فعلك؟",
+      "scenario": "During Egypt's COVID-19 vaccination campaign (2021-2022), vaccine hesitancy reached 43% according to a survey published in The Lancet Regional Health – Eastern Mediterranean (2022). Social media was flooded with anecdotal death reports. The Egyptian MOHP administered over 70 million doses with adverse events monitored by the Egyptian Drug Authority.",
+      "scenario_source": "https://www.thelancet.com/journals/lanwpc/article/PIIS2666-6065(22)00103-X/fulltext",
+      "options": {
+        "A": "Immediately share the article with other friends to warn them",
+        "B": "Dismiss it completely — you already know vaccines are safe",
+        "C": "Look for the original data source and check if the 200 deaths were actually caused by vaccines or coincidental",
+        "D": "Agree with the article because you've always had doubts about vaccines"
+      },
+      "correct_option": "C",
+      "bias_detected": "confirmation_bias",
+      "bias_name_ar": "تحيز التأكيد",
+      "explanation_en": "Options B and D are both forms of confirmation bias — B dismisses disconfirming evidence, D accepts confirming evidence uncritically. Option C is the correct approach: check whether the claimed deaths are *caused by* vaccines vs. temporally coincident. Regulatory pharmacovigilance distinguishes 'died after vaccination' from 'died because of vaccination.' The Egyptian Drug Authority (EDA) uses the WHO-UMC causality assessment system. Source: WHO (2022) Causality Assessment of Adverse Events Following Immunization.",
+      "explanation_ar": "الخياران ب و د كلاهما تحيز تأكيد — ب يرفض الأدلة المعارضة، و د يقبل الأدلة المؤيدة بدون نقد. الخيار ج هو الصواب: تحقق مما إذا كانت الوفيات *مُسببة* باللقاح أم مصادفة زمنية. الهيئة المصرية للدواء تستخدم نظام WHO-UMC لتقييم السببية.",
+      "source_url": "https://www.who.int/publications/i/item/9789241513746"
+    },
+    {
+      "id": 2,
+      "question_en": "You read a shocking news story about a violent robbery in Zamalek, Cairo. How does this affect your overall sense of crime rates in Egypt?",
+      "question_ar": "تقرأ خبراً مثيراً عن سرقة بالعنف في الزمالك بالقاهرة. كيف يؤثر ذلك على إحساسك العام بمعدلات الجريمة في مصر؟",
+      "scenario": "Egypt's Central Agency for Public Mobilization and Statistics (CAPMAS) reports overall crime statistics annually. The 2022 CAPMAS report showed a decrease in total registered crimes compared to 2017. However, vivid media coverage of individual crimes creates strong emotional impressions that override statistical baselines.",
+      "scenario_source": "https://www.capmas.gov.eg/Pages/StaticPages.aspx?page_id=5035",
+      "options": {
+        "A": "You think crime in Cairo must be much worse than statistics show — this story proves it",
+        "B": "You consult the CAPMAS crime statistics before forming an opinion",
+        "C": "You feel unsafe but recognize this is just one incident and look up crime trends",
+        "D": "You ignore the story entirely because media sensationalizes crime"
+      },
+      "correct_option": "C",
+      "bias_detected": "availability_heuristic",
+      "bias_name_ar": "إرشاد التوفر",
+      "explanation_en": "Option A is the availability heuristic at its most dangerous: a vivid, recent, emotionally-charged event (the robbery) becomes the dominant input for estimating probability of crime, overriding base-rate statistics. Kahneman (2011, Ch.12) called this 'What You See Is All There Is' (WYSIATI). Option C acknowledges the emotional response while anchoring to data. The CAPMAS 2022 Security Statistics Bulletin is the correct reference for Egyptian crime base rates.",
+      "explanation_ar": "الخيار أ هو إرشاد التوفر في أخطر صوره: حدث حي وعاطفي (السرقة) يصبح المدخل الرئيسي لتقدير احتمالية الجريمة، متجاوزاً الإحصاءات الأساسية. كانيمان (٢٠١١) يسمي هذا 'ما تراه هو كل ما هناك'. الخيار ج يعترف بالاستجابة العاطفية مع الاستناد إلى البيانات.",
+      "source_url": "https://www.capmas.gov.eg/Pages/StaticPages.aspx?page_id=5035"
+    },
+    {
+      "id": 3,
+      "question_en": "A used-car dealer in Alexandria tells you the car is worth 350,000 EGP before you negotiate. You eventually agree to 310,000 EGP and feel you got a great deal. What cognitive error might have occurred?",
+      "question_ar": "يخبرك تاجر سيارات مستعملة في الإسكندرية أن السيارة تساوي ٣٥٠,٠٠٠ جنيه قبل التفاوض. توافق في النهاية على ٣١٠,٠٠٠ جنيه وتشعر أنك حصلت على صفقة ممتازة. ما هو الخطأ المعرفي الذي ربما حدث؟",
+      "scenario": "Anchoring bias is well-documented in negotiation research. A study by Ariely, Loewenstein & Prelec (2003) in the Quarterly Journal of Economics showed that arbitrary initial numbers ('anchors') powerfully influence final judgments. In Egyptian car markets, dealers are trained to set high initial prices. The correct starting point is the car's market value per resources like Contactcars.com or OLX Egypt.",
+      "scenario_source": "https://doi.org/10.1162/00335530360535144",
+      "options": {
+        "A": "You made a rational decision based on your negotiation skills",
+        "B": "You were anchored to the dealer's initial price of 350,000 EGP, so 310,000 EGP felt like a bargain even if the real market value is 280,000 EGP",
+        "C": "You overpaid but that is normal in Egyptian markets",
+        "D": "The dealer was dishonest and you had no way to avoid this"
+      },
+      "correct_option": "B",
+      "bias_detected": "anchoring_bias",
+      "bias_name_ar": "تحيز التثبيت",
+      "explanation_en": "Anchoring bias (Kahneman & Tversky, 1974) occurs when an initial piece of information disproportionately influences subsequent judgments. The dealer's opening price of 350,000 EGP became the psychological anchor. Your 'discount' of 40,000 EGP felt significant relative to that anchor, even if the car's actual market value was lower. The correct defense: research the fair market value independently BEFORE entering any negotiation. In Egypt, Contactcars.com and OLX Egypt provide market pricing data.",
+      "explanation_ar": "تحيز التثبيت (كانيمان وتفرسكي، ١٩٧٤) يحدث عندما تؤثر المعلومات الأولية بشكل غير متناسب على الأحكام اللاحقة. سعر الافتتاح ٣٥٠,٠٠٠ جنيه أصبح المرساة النفسية. 'خصمك' ٤٠,٠٠٠ جنيه بدا مهماً نسبة إلى تلك المرساة. الدفاع الصحيح: ابحث عن القيمة السوقية العادلة بشكل مستقل قبل أي تفاوض.",
+      "source_url": "https://doi.org/10.1162/00335530360535144"
+    },
+    {
+      "id": 4,
+      "question_en": "After watching 5 YouTube videos about Egyptian economics, you feel confident enough to debate an economics professor from Cairo University. How accurate is your self-assessment?",
+      "question_ar": "بعد مشاهدة ٥ مقاطع فيديو على يوتيوب عن الاقتصاد المصري، تشعر بثقة كافية للنقاش مع أستاذ اقتصاد في جامعة القاهرة. ما مدى دقة تقييمك لنفسك؟",
+      "scenario": "The Dunning-Kruger effect (Kruger & Dunning, 1999) describes how people with limited knowledge in a domain tend to overestimate their competence. In Egyptian social media, economic commentary is extremely common among non-experts. A 2021 study in Computers in Human Behavior found that social media 'echo chambers' amplify perceived expertise. Cairo University's Faculty of Economics and Political Science requires 4 years of undergraduate study plus research for a professorship.",
+      "scenario_source": "https://doi.org/10.1037/0022-3514.77.6.1121",
+      "options": {
+        "A": "Very accurate — you understand the key concepts from the videos",
+        "B": "Somewhat accurate — videos give you the basics",
+        "C": "Likely inaccurate — 5 YouTube videos represent the early phase of the Dunning-Kruger 'peak of Mt. Stupid' where limited knowledge creates maximum overconfidence",
+        "D": "Completely inaccurate — YouTube cannot teach anything useful"
+      },
+      "correct_option": "C",
+      "bias_detected": "dunning_kruger",
+      "bias_name_ar": "تأثير دانينج-كروجر",
+      "explanation_en": "The Dunning-Kruger effect (Kruger & Dunning, 1999, JPSP) is the cognitive bias where people with limited knowledge in a domain overestimate their competence. Five YouTube videos place you in the 'peak of Mount Stupid' — enough knowledge to feel confident, but nowhere near enough to understand the depth of the field. An economics professor has years of training, peer-reviewed research experience, and domain-specific tacit knowledge that YouTube cannot convey. Option D is also wrong — educational content exists, but quantity doesn't equal depth.",
+      "explanation_ar": "تأثير دانينج-كروجر (كروجر ودانينج، ١٩٩٩) هو التحيز المعرفي حيث يُبالغ الأشخاص ذوو المعرفة المحدودة في تقدير كفاءتهم. خمسة مقاطع فيديو تضعك في 'قمة جبل الغباء' — معرفة كافية للشعور بالثقة، لكن ليست كافية لفهم عمق المجال.",
+      "source_url": "https://doi.org/10.1037/0022-3514.77.6.1121"
+    },
+    {
+      "id": 5,
+      "question_en": "A study shows that traffic violations are equally common among drivers from Cairo, Alexandria, and Assiut. Your friend from Cairo says 'that can't be right — everyone knows Upper Egyptian drivers are more reckless.' What bias is your friend demonstrating?",
+      "question_ar": "تظهر دراسة أن مخالفات المرور شائعة بالتساوي بين سائقي القاهرة والإسكندرية وأسيوط. يقول صديقك من القاهرة: 'هذا مستحيل — الجميع يعلم أن سائقي الصعيد أكثر تهوراً.' ما هو التحيز الذي يُظهره صديقك؟",
+      "scenario": "In-group bias (also called in-group favoritism or intergroup bias) is the tendency to favor members of one's own group while viewing out-group members less favorably. Regional stereotypes in Egypt (Cairo vs. Upper Egypt, rural vs. urban) are a documented social phenomenon. The Egyptian Traffic Authority (2023) data shows urban areas (Cairo, Alexandria) account for the majority of registered traffic accidents due to traffic density, not driver recklessness.",
+      "scenario_source": "https://www.who.int/publications/i/item/9789241565684",
+      "options": {
+        "A": "Confirmation bias — he already believed this",
+        "B": "In-group bias — he favors his in-group (Cairo) and applies negative stereotypes to the out-group (Upper Egyptians) without examining the data",
+        "C": "Availability heuristic — he recalls bad Upper Egyptian drivers he has seen",
+        "D": "Anchoring bias — his first experience with an Upper Egyptian driver was bad"
+      },
+      "correct_option": "B",
+      "bias_detected": "in_group_bias",
+      "bias_name_ar": "تحيز المجموعة الداخلية",
+      "explanation_en": "While elements of availability heuristic (C) may also play a role, the core bias here is in-group favoritism. Your friend automatically assigns positive traits to his own regional group (Cairo) and negative stereotypes to the out-group (Upper Egyptians) when confronted with evidence that contradicts his worldview. Tajfel & Turner's Social Identity Theory (1979) explains this as a mechanism to boost self-esteem through group membership. The WHO Global Status Report on Road Safety provides objective traffic accident data.",
+      "explanation_ar": "بينما قد يلعب إرشاد التوفر أيضاً دوراً، فإن التحيز الجوهري هنا هو تفضيل المجموعة الداخلية. صديقك يُسند تلقائياً صفات إيجابية لمجموعته الإقليمية (القاهرة) وصور نمطية سلبية للمجموعة الخارجية (الصعيد). نظرية الهوية الاجتماعية لتاجفيل وتيرنر (١٩٧٩) تفسر هذا.",
+      "source_url": "https://www.simplypsychology.org/social-identity-theory.html"
+    },
+    {
+      "id": 6,
+      "question_en": "You hear about 10 Egyptian entrepreneurs who dropped out of college and became millionaires. You consider dropping out of university yourself. What bias might be influencing you?",
+      "question_ar": "تسمع عن ١٠ رواد أعمال مصريين تركوا الجامعة وأصبحوا من أصحاب الملايين. تفكر في ترك الجامعة بنفسك. ما هو التحيز الذي قد يؤثر عليك؟",
+      "scenario": "Survivorship bias involves focusing on the outcomes of 'survivors' while ignoring the much larger population that attempted the same path and failed. A 2019 study by GEM (Global Entrepreneurship Monitor) Egypt showed the entrepreneurial success rate in Egypt is estimated at 10-15%, while the failure rate for startups within 3 years is approximately 70-80%. You are not hearing from the thousands who dropped out and struggled.",
+      "scenario_source": "https://www.gemconsortium.org/economy-profiles/egypt",
+      "options": {
+        "A": "Confirmation bias — you already wanted to drop out",
+        "B": "Availability heuristic — the 10 success stories are vivid",
+        "C": "Survivorship bias — you are only seeing the successful dropouts, not the vastly larger number who dropped out and did not succeed",
+        "D": "Dunning-Kruger — you overestimate your entrepreneurial skills"
+      },
+      "correct_option": "C",
+      "bias_detected": "survivorship_bias",
+      "bias_name_ar": "تحيز البقاء",
+      "explanation_en": "Survivorship bias (coined by statistician Abraham Wald, 1943, famously applied in WWII bomber analysis) occurs when we concentrate on entities that 'survived' a process and overlook those that did not. The 10 successful Egyptian entrepreneurs are visible because they survived; the thousands who attempted the same and failed are invisible. The correct analysis examines the full denominator. GEM Egypt data shows Egyptian startup failure rates of 70-80% within 3 years. Options A, B, D may also be present but survivorship bias is the primary mechanism.",
+      "explanation_ar": "تحيز البقاء (صاغه الإحصائي أبراهام والد، ١٩٤٣) يحدث عندما نركز على الكيانات التي 'نجت' من عملية ما ونتجاهل من لم ينجح. العشرة من رواد الأعمال المصريين الناجحين مرئيون لأنهم نجوا؛ الآلاف الذين حاولوا ذات الشيء وفشلوا غير مرئيين.",
+      "source_url": "https://www.gemconsortium.org/economy-profiles/egypt"
+    },
+    {
+      "id": 7,
+      "question_en": "A viral post claims the Pyramids of Giza were built by ancient aliens, citing the 'impossibility' of humans moving 2.5-tonne stones without modern machinery. How do you evaluate this claim?",
+      "question_ar": "منشور فيروسي يدّعي أن أهرامات الجيزة بناها كائنات فضائية قديمة، مستشهداً بـ'استحالة' نقل حجارة تزن ٢.٥ طن بدون آلات حديثة. كيف تُقيّم هذا الادعاء؟",
+      "scenario": "The 'ancient aliens' theory regarding the Pyramids is a form of availability and in-group bias combined with confirmation bias toward pseudoscience. Experimental archaeology has conclusively demonstrated how pyramids were built: Egyptologist Mark Lehner and engineer Roger Hopkins (NOVA, 1997) moved 2.5-tonne stones using wooden sleds, sand lubrication, and manpower. Papyrus Merer (discovered 2013, Wadi el-Jarf) is the actual logbook of a pyramid construction supervisor documenting labor, rations, and stone transport.",
+      "scenario_source": "https://www.smithsonianmag.com/travel/who-built-the-pyramids-2071372/",
+      "options": {
+        "A": "It's compelling — modern humans couldn't do it without machinery",
+        "B": "It might be true — official Egyptologists could be hiding the truth",
+        "C": "It's almost certainly false — experimental archaeology has demonstrated multiple plausible human construction methods, and Papyrus Merer (2013) directly documents pyramid construction logistics",
+        "D": "It's definitely true — there is no other explanation"
+      },
+      "correct_option": "C",
+      "bias_detected": "confirmation_bias",
+      "bias_name_ar": "تحيز التأكيد",
+      "explanation_en": "The 'ancient aliens' theory exploits the 'argument from ignorance' fallacy ('we don't know HOW, therefore ALIENS'). Option A reflects availability heuristic (inability to imagine the methods) and confirmation bias (accepting evidence that confirms a dramatic narrative). Option B is conspiracy thinking. The correct answer is C: experimental archaeology (NOVA 1997 experiment) and direct documentary evidence (Papyrus Merer, found at Wadi el-Jarf in 2013, now in the Cairo Egyptian Museum) provide detailed, first-hand accounts of pyramid construction by Egyptian workers.",
+      "explanation_ar": "نظرية 'الكائنات الفضائية القديمة' تستغل مغالطة 'الجهل كدليل'. الخيار أ يعكس إرشاد التوفر (العجز عن تخيل الطرق) وتحيز التأكيد. الإجابة الصحيحة ج: علم الآثار التجريبي وبردية مرير (٢٠١٣، وادي الجرف) تقدم أدلة مباشرة على بناء الأهرامات من قِبل عمال مصريين.",
+      "source_url": "https://www.smithsonianmag.com/travel/who-built-the-pyramids-2071372/"
+    },
+    {
+      "id": 8,
+      "question_en": "Your WhatsApp family group shares a message: 'Egyptian doctors discovered that drinking boiled cumin water cures kidney stones — my neighbor tried it and it worked!' How do you respond?",
+      "question_ar": "مجموعة واتساب العائلية تشارك رسالة: 'أطباء مصريون اكتشفوا أن شرب ماء الكمون المغلي يشفي حصوات الكلى — جارتي جربته ونجح!' كيف ترد؟",
+      "scenario": "Anecdotal evidence ('my neighbor tried it') is the weakest form of evidence in the hierarchy of medical evidence. Cumin (Cuminum cyminum) has been studied for some pharmacological properties, but there is no peer-reviewed clinical trial evidence supporting it as a treatment for kidney stones. The Egyptian National Cancer Institute and the Egyptian Medical Syndicate both caution against unverified home remedies circulated on social media. Kidney stone treatment depends on stone type, size, and composition.",
+      "scenario_source": "https://pubmed.ncbi.nlm.nih.gov/29849094/",
+      "options": {
+        "A": "Share the message further — it sounds believable and could help others",
+        "B": "Ask your neighbor for more details and try it yourself",
+        "C": "Do not share, and note that 'Egyptian doctors discovered' is unverifiable, a single neighbor's experience is anecdotal evidence (N=1), and there is no peer-reviewed research supporting this specific claim — recommend consulting a urologist",
+        "D": "Dismiss it entirely — traditional medicine never works"
+      },
+      "correct_option": "C",
+      "bias_detected": "availability_heuristic",
+      "bias_name_ar": "إرشاد التوفر",
+      "explanation_en": "Options A and B reflect availability heuristic (one vivid, personal story makes the cure seem plausible) combined with in-group bias (trusting claims from family/neighbors over scientific literature). Option D is incorrect — some traditional remedies have been validated scientifically (e.g., Nigella sativa has documented anti-inflammatory properties — PubMed PMID: 34232280). The correct approach (C) applies the hierarchy of evidence: systematic reviews > RCTs > anecdotal reports. 'My neighbor tried it' is the lowest possible evidence tier. Reference: Sackett et al. (1996) Evidence-Based Medicine, BMJ.",
+      "explanation_ar": "الخياران أ وب يعكسان إرشاد التوفر (قصة شخصية حية تجعل العلاج يبدو معقولاً) مع تحيز المجموعة الداخلية (الثقة في ادعاءات العائلة على الأدبيات العلمية). الخيار د خاطئ — بعض العلاجات التقليدية مُصادق عليها علمياً. النهج الصحيح يطبق تسلسل هرمي الأدلة.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/29849094/"
+    }
+  ],
+  "scoring": {
+    "algorithm": "bias_profile",
+    "description": "Each answer maps to a bias category. Count the bias type selected for each wrong answer to identify the user's dominant bias pattern. Note: correct answers score 0 bias points. The bias with the highest count is the 'fingerprint bias.'",
+    "bias_map": {
+      "confirmation_bias": ["q1_option_B", "q1_option_D", "q7_option_A", "q7_option_B"],
+      "availability_heuristic": ["q2_option_A", "q8_option_A", "q8_option_B"],
+      "anchoring_bias": ["q3_option_A", "q3_option_C"],
+      "dunning_kruger": ["q4_option_A", "q4_option_B"],
+      "in_group_bias": ["q5_option_A", "q5_option_C"],
+      "survivorship_bias": ["q6_option_A", "q6_option_B"]
+    },
+    "output": {
+      "dominant_bias": "The bias type with the highest frequency in wrong answers",
+      "bias_score": "Integer 0-8 (number of non-optimal choices)",
+      "profile_label": {
+        "0-2": "Low susceptibility — strong critical thinking foundation",
+        "3-5": "Moderate susceptibility — targeted bias training recommended",
+        "6-8": "High susceptibility — comprehensive debiasing curriculum indicated"
+      }
+    }
+  }
+}

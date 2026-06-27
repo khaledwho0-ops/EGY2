@@ -1,0 +1,125 @@
+{
+  "id": "day29_affirming_the_consequent",
+  "phase": 1,
+  "week": 5,
+  "day": 29,
+  "title": "Affirming the Consequent",
+  "titleAr": "إثبات التالي",
+  "description": "\"If the remedy works, you feel better. You feel better — so the remedy worked.\" Today you learn to catch the most common backwards-logic trap in Egyptian daily life.",
+  "descriptionAr": "«لو الوصفة شغّالة، هتتحسّن. إنت اتحسّنت — يبقى الوصفة هي اللي ظبطتك». النهاردة هتتعلّم تمسك أشهر فخّ في المنطق المقلوب في حياتنا اليومية.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A neighbour reasons: \"If the «نظام الطيبات» diet really cures diabetes, the patient's sugar drops. My uncle's sugar dropped — so the diet cured him.\" Where does the logic break?",
+      "claimAr": "جار بيقول: «لو حمية الطيبات بتشفي السكّر، يبقى سكّر المريض هينزل. عمّي سكّره نزل — يبقى الحمية شفته». المنطق بيقع منين؟",
+      "options": [
+        "It doesn't break — sugar dropping proves the diet worked",
+        "It affirms the consequent: many other things drop sugar (insulin, exercise, eating less, the disease's own ups and downs), so the result doesn't point back to that one cause",
+        "The uncle must have cheated on the diet",
+        "Sugar can never drop without a special diet"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The form is: 'If A then B. B is true, therefore A.' That is invalid, because B can have many causes. The uncle's sugar could have dropped from his prescribed medicine, eating less that week, more walking, or the natural swing of the illness. Seeing the result (B) does not prove your favourite cause (A). This is the engine behind countless 'it worked for me' stories — the result is real, but the arrow back to the cause is missing.",
+      "explanationAr": "الشكل هو: «لو أ يبقى ب. ب حصل، إذن أ». ده غير صحيح، لأن ب ممكن يكون ليه أسباب كتير. سكّر العم ممكن يكون نزل من دوايه الموصوف، أو إنه أكل أقل الأسبوع ده، أو مشي أكتر، أو من تقلّب المرض الطبيعي. إنك تشوف النتيجة (ب) ما بيثبتش السبب اللي إنت عايزه (أ). دي الماكينة ورا ملايين قصص «نفعت معايا» — النتيجة حقيقية، بس السهم الراجع للسبب مفقود.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A seller says: \"Real cures are always attacked by the establishment. My system is attacked by the Medical Syndicate — so my system is a real cure.\" Is this a valid logical argument?",
+      "claimAr": "بائع بيقول: «العلاجات الحقيقية دايماً بتتهاجم من المؤسسة. نظامي بتهاجمه نقابة الأطباء — يبقى نظامي علاج حقيقي». هل دي حُجّة منطقية صحيحة؟",
+      "options": [
+        "Yes — being attacked confirms he is right",
+        "No — affirming the consequent: 'real cures get attacked' doesn't mean 'everything attacked is a real cure', frauds get attacked too"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The hidden form is: 'If real cure (A), then attacked (B). Attacked (B), therefore real cure (A).' Invalid — because being attacked has many causes, and the most common one is being genuinely harmful. The Egyptian Medical Syndicate asked for just three documented cases with before/after labs and received none, then revoked the licence. 'They attacked me' fits a fraud at least as well as a hidden truth, so it cannot tell the two apart.",
+      "explanationAr": "الشكل المخفي: «لو علاج حقيقي (أ) يبقى بيتهاجم (ب). بيتهاجم (ب)، إذن علاج حقيقي (أ)». غير صحيح — لأن التعرّض للهجوم ليه أسباب كتير، وأشهرها إنه مؤذٍ فعلاً. نقابة الأطباء المصرية طلبت ثلاث حالات موثّقة بتحاليل قبل/بعد وما وصلهاش حاجة، وبعدين ألغت الترخيص. «هم هاجموني» بتناسب الاحتيال بنفس قدر ما بتناسب الحقيقة المخفية، فما تقدرش تفرّق بينهم.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "\"If you eat only from my allowed list, your body becomes pure. Your body feels pure after two weeks — so eating from my list caused it.\" What is the hidden logical move here?",
+      "claimAr": "«لو أكلت بس من قايمتي المسموحة، جسمك بيتطهّر. جسمك حاسس بالنقاء بعد أسبوعين — يبقى الأكل من قايمتي هو اللي سبّبه». إيه الحركة المنطقية المخفية هنا؟",
+      "options": [
+        "A valid deduction — the feeling confirms the diet worked",
+        "Affirming the consequent — the 'pure feeling' could have many other causes (placebo, less stress, more sleep, the body's own variation)"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why can't a positive feeling prove which cause produced it?",
+        "promptAr": "بكلماتك: ليه إحساس إيجابي ما يقدرش يثبت أيّ سبب هو اللي أنتجه؟"
+      },
+      "explanation": "The 'pure feeling' is real — but it sits at the end of an 'if-then' arrow, not at the beginning. Feelings of improvement come from placebo, from rest, from reduced anxiety about what to eat, from the diet itself, or from all of them together. Without a control comparison — some people who changed nothing — there is no way to point the arrow back to any single cause. Self-explaining this forces the insight that feelings are data about the result, not about the cause.",
+      "explanationAr": "إحساس «النقاء» حقيقي — بس هو واقف في نهاية السهم «لو-يبقى»، مش في البداية. إحساسات التحسّن بتيجي من الوهمي، أو من الراحة، أو من انخفاض القلق بشأن الأكل، أو من الحمية نفسها، أو من كلهم مع بعض. من غير مقارنة ضابطة — ناس ما غيّرتش حاجة — مفيش طريقة ترجع السهم لأي سبب واحد. إنك تشرح ده بنفسك بيجبر الفكرة: الإحساسات بيانات عن النتيجة، مش عن السبب.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "\"My aunt stopped her blood-pressure pills, started the diet, and felt great for two weeks. That proves the diet replaced her medicine.\"",
+      "claimAr": "«خالتي بطّلت حبوب الضغط، بدأت الحمية، وحسّت إنها تمام أسبوعين. ده يثبت إن الحمية بدّلت دوايها».",
+      "prompt": "What would DISPROVE this conclusion? What else could explain feeling great for two weeks after stopping medication?",
+      "promptAr": "إيه اللي يكذّب الاستنتاج ده؟ وإيه تفسيرات تانية ممكن تفسّر الإحساس بالتحسّن أسبوعين بعد إيقاف الدوا؟",
+      "modelPoints": [
+        "High blood pressure is often silent — feeling fine doesn't mean the pressure is controlled; only a reading proves that.",
+        "Antihypertensives take time to fully clear the body; residual effect from two weeks ago can make someone feel okay for longer.",
+        "Placebo and relief from anxiety about taking pills could easily produce a feeling of wellbeing for two weeks.",
+        "The real test is: measure the blood pressure number, not the feeling. If it's normal, the diet might help; if it's silently climbing, the 'fine' feeling is a dangerous illusion.",
+        "The dangerous outcome — a silent hypertensive crisis or stroke — may not arrive until week three, four, or later. Two weeks of feeling good proves nothing about week five."
+      ],
+      "modelPointsAr": [
+        "ارتفاع الضغط غالباً بلا أعراض — إحساسها إنها كويسة ما يعنيش إن الضغط متحكَّم فيه؛ القراءة بس هي اللي بتثبت ده.",
+        "أدوية الضغط بتاخد وقت تخرج من الجسم بالكامل؛ الأثر المتبقي من أسبوعين فات ممكن يخلّي الواحد يحسّ بخير لفترة أطول.",
+        "الوهمي والراحة من القلق بتاع الأدوية ممكن ينتج إحساس بالرفاهية بسهولة لأسبوعين.",
+        "الاختبار الحقيقي: قيس رقم الضغط، مش الإحساس. لو عادي، ممكن الحمية بتساعد؛ لو بيطلع بصمت، الإحساس «بالكويس» وهم خطير.",
+        "النتيجة الخطيرة — أزمة ضغط صامتة أو جلطة — ممكن ما تيجيش غير في الأسبوع التالت أو الرابع أو بعد كده. أسبوعين من الإحساس بالتحسّن ما بيثبتش حاجة عن الأسبوع الخامس."
+      ],
+      "explanation": "Considering the opposite forces us to ask 'what would the world look like if the diet didn't cause this?' — and the answer is: exactly the same. Feeling fine for two weeks after stopping medication is fully consistent with residual drug effect, placebo, and the silent-damage window of hypertension. Only a blood pressure reading separates the explanations, not the feeling.",
+      "explanationAr": "التفكير في العكس بيجبرنا نسأل «الدنيا تبقى إزاي لو الحمية ما سبّبتش ده؟» — والإجابة: بالظبط نفس الشيء. الإحساس بالكويس أسبوعين بعد إيقاف الدوا متوافق تماماً مع الأثر المتبقي للدوا، والوهمي، ونافذة الضرر الصامت في ارتفاع الضغط. قراءة الضغط بس هي اللي بتفرّق بين التفسيرات، مش الإحساس.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/hypertension",
+        "EAL-case-001:moh-eg-2026-05"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"If someone loses weight on my plan, their health improves. Followers on my plan have lost weight. Therefore my plan improves health — and anyone still on medication is just not trusting the process.\"",
+      "claimAr": "فكّك الحُجّة دي: «لو حد بيتخسّس على خطّتي، صحته بتتحسّن. أتباعي على خطّتي اتخسّسوا. يبقى خطّتي بتحسّن الصحة — وأي حد لسه بياخد دوا هو بس مش واثق في الخطوات».",
+      "parts": [
+        { "text": "My plan improves health.", "textAr": "خطّتي بتحسّن الصحة.", "role": "conclusion" },
+        { "text": "Followers on my plan lost weight.", "textAr": "أتباعي على خطّتي اتخسّسوا.", "role": "premise" },
+        { "text": "(Unstated) Weight loss on a plan proves the plan improves all aspects of health.", "textAr": "(غير مذكور) الخسارة في الوزن على خطّة بتثبت إن الخطّة بتحسّن كل جوانب الصحة.", "role": "assumption" },
+        { "text": "Anyone still on medication is just not trusting the process.", "textAr": "أي حد لسه بياخد دوا هو بس مش واثق في الخطوات.", "role": "irrelevant" }
+      ],
+      "explanation": "Decomposing the argument reveals two weak joints: (1) the hidden assumption that weight loss equals full health — it does not; blood sugar, blood pressure, and organ function are separate measures. (2) The 'not trusting the process' line is irrelevant — it dismisses people who need medication as psychologically deficient, blocking a real challenge to the premise. Once the structure is visible, the confident conclusion no longer holds.",
+      "explanationAr": "تفكيك الحُجّة بيكشف مفصلين ضعيفين: (1) الافتراض المخفي إن الخسارة في الوزن = صحة كاملة — وهو مش كده؛ سكّر الدم والضغط ووظائف الأعضاء مقاييس منفصلة. (2) جملة «مش واثق في الخطوات» غير ذات صلة — بتصف الناس اللي محتاجين دوا على إنهم قاصرين نفسياً، وبتمنع أي تحدٍّ حقيقي للمُقدّمة. أول ما البنية تبقى واضحة، النتيجة الواثقة ما بتلزمش.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-9"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    }
+  ]
+}

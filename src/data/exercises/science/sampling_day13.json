@@ -1,0 +1,99 @@
+{
+  "id": "sampling_bias",
+  "phase": 2,
+  "week": 10,
+  "day": 13,
+  "title": "Sampling Bias",
+  "titleAr": "تحيز أخذ العينات",
+  "description": "Understand sampling bias — when the sample systematically differs from the target population due to flawed sampling methods. Study the catastrophic 1936 Literary Digest poll failure and learn proper probability sampling techniques.",
+  "descriptionAr": "افهم تحيز أخذ العينات — عندما تختلف العينة بشكل منهجي عن السكان المستهدفين بسبب طرق أخذ عينات معيبة. ادرس فشل استطلاع مجلة ليتراري دايجست الكارثي عام 1936 وتعلم تقنيات أخذ العينات الاحتمالية السليمة.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Sampling Bias",
+    "nameAr": "تحيز أخذ العينات",
+    "definition": "Sampling bias occurs when the method of selecting participants produces a sample that is systematically unrepresentative of the target population. Unlike random sampling error (which decreases with sample size), sampling bias is a systematic error that persists regardless of sample size. A large biased sample gives precise but wrong estimates — increasing sample size only increases confidence in the wrong answer. Sources include convenience sampling, non-probability sampling, coverage bias (sampling frame does not cover the target population), and non-response bias (respondents differ from non-respondents). Squire (1988, Public Opinion Quarterly) provides the definitive analysis of how the 1936 Literary Digest poll failure illustrates these principles.",
+    "definitionAr": "تحيز أخذ العينات يحدث عندما تنتج طريقة اختيار المشاركين عينة غير ممثلة بشكل منهجي للسكان المستهدفين. على عكس خطأ أخذ العينات العشوائي (الذي يتناقص مع حجم العينة)، تحيز أخذ العينات خطأ منهجي يستمر بغض النظر عن حجم العينة.",
+    "realWorldExample": "The 1936 Literary Digest presidential poll is history's most famous sampling disaster. The magazine mailed 10 million questionnaires and received 2.4 million responses — an enormous sample. It predicted Alf Landon would defeat Franklin Roosevelt 57% to 43%. Roosevelt won in one of the largest landslides in US history (62% to 38%). The error stemmed from two biases: (1) Coverage bias — the mailing list was drawn from telephone directories, automobile registrations, and magazine subscribers, systematically overrepresenting wealthy Americans (who favored Landon) during the Great Depression when millions of Roosevelt supporters had no phones or cars. (2) Non-response bias — only 24% responded, and Republican-leaning respondents were more motivated to reply. Meanwhile, George Gallup correctly predicted Roosevelt's victory with a far smaller but properly designed probability sample of ~50,000. The Literary Digest went bankrupt shortly after.",
+    "realWorldExampleAr": "استطلاع مجلة ليتراري دايجست الرئاسي عام 1936 هو أشهر كارثة في تاريخ أخذ العينات. أرسلت المجلة 10 ملايين استبيان وتلقت 2.4 مليون رد. توقعت فوز ألف لاندون على فرانكلين روزفلت بنسبة 57% مقابل 43%. فاز روزفلت بأحد أكبر الانتصارات الساحقة (62% مقابل 38%). نشأ الخطأ من تحيز التغطية (القائمة البريدية أخذت من أدلة الهواتف وتسجيلات السيارات) وتحيز عدم الاستجابة.",
+    "detectionMethod": "Compare sample demographics to known population parameters (census data). Calculate and report response rates. Use probability sampling (simple random, stratified, cluster). Apply post-stratification weighting to adjust for known demographic imbalances. Conduct non-response analysis comparing early vs. late responders. Report the sampling frame and its coverage of the target population."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "In 1936, the Literary Digest mailed 10 million questionnaires to predict the US presidential election and received 2.4 million responses predicting Landon would win. Gallup used only ~50,000 respondents and correctly predicted Roosevelt. What was the key difference?",
+      "promptAr": "في عام 1936، أرسلت مجلة ليتراري دايجست 10 ملايين استبيان للتنبؤ بالانتخابات الرئاسية الأمريكية وتلقت 2.4 مليون رد يتوقع فوز لاندون. استخدم غالوب حوالي 50,000 مستجيب فقط وتوقع بشكل صحيح فوز روزفلت. ما كان الفرق الرئيسي؟",
+      "options": [
+        "Roosevelt voters lied about their preferences",
+        "Gallup had better statistical software",
+        "The Literary Digest had a massive but BIASED sample (telephone/car owners during the Depression were disproportionately wealthy Republicans), while Gallup used quota sampling designed to match the demographic composition of the electorate",
+        "The Literary Digest survey had too few respondents"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Literary Digest's sample of 2.4 million was 480 times larger than Gallup's, but it was systematically biased. Their mailing list came from telephone directories, car registrations, and magazine subscriber lists — during the Great Depression, these sources dramatically overrepresented wealthy Americans who favored Landon. Additionally, only 24% responded, introducing non-response bias. Gallup's quota sampling (later replaced by probability sampling) was designed to include demographic proportions matching the actual voting population. This case proved that a representative small sample beats a biased large one — a foundational principle formalized by Neyman (1934) as probability sampling.",
+      "explanationAr": "عينة ليتراري دايجست البالغة 2.4 مليون كانت أكبر بـ 480 مرة من عينة غالوب، لكنها كانت متحيزة منهجياً. قائمتهم البريدية جاءت من أدلة الهواتف وتسجيلات السيارات — خلال الكساد الكبير، مثّلت هذه المصادر بشكل مفرط الأمريكيين الأثرياء الذين فضلوا لاندون."
+    },
+    {
+      "id": 2,
+      "type": "analyze",
+      "prompt": "A psychology study recruits all participants from undergraduate psychology courses at a single Western university. The researchers claim their findings apply to 'humans in general.' What sampling problem is most relevant?",
+      "promptAr": "تجنّد دراسة نفسية جميع المشاركين من مقررات علم النفس الجامعية في جامعة غربية واحدة. يدّعي الباحثون أن نتائجهم تنطبق على 'البشر عموماً.' ما مشكلة أخذ العينات الأكثر صلة؟",
+      "options": [
+        "University students are representative of all humans",
+        "Psychology courses attract diverse populations",
+        "The sample is too small",
+        "WEIRD sampling bias — Henrich, Heine, and Norenzayan (2010, Behavioral and Brain Sciences) showed that most psychology studies sample from Western, Educated, Industrialized, Rich, and Democratic societies, representing only ~12% of the world's population. Undergraduate psychology students are further non-representative even within WEIRD populations"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Henrich, Heine, and Norenzayan's (2010) landmark paper 'The Weirdest People in the World?' (Behavioral and Brain Sciences, 33:61-83) demonstrated that 96% of psychology study participants came from Western countries, and 68% were American undergraduates. They coined 'WEIRD' (Western, Educated, Industrialized, Rich, Democratic) to highlight this extreme sampling bias. WEIRD populations are documented outliers on numerous psychological dimensions: visual perception (Müller-Lyer illusion), cooperation (ultimatum game), moral reasoning, spatial cognition, and self-concept. Claiming universality from such a narrow sample is a severe generalizability problem rooted in sampling bias.",
+      "explanationAr": "أظهرت ورقة هنريك وهاين ونورنزايان (2010) التاريخية أن 96% من المشاركين في دراسات علم النفس جاءوا من دول غربية، و68% كانوا طلاب جامعيين أمريكيين. مجموعات WEIRD هي قيم متطرفة موثقة في أبعاد نفسية عديدة."
+    },
+    {
+      "id": 3,
+      "type": "evaluate",
+      "prompt": "An online health survey receives 100,000 responses showing that 60% of people exercise daily. National health survey data (using probability sampling) shows only 23% exercise daily. Which estimate is more reliable and why?",
+      "promptAr": "يتلقى استطلاع صحي عبر الإنترنت 100,000 رد يظهر أن 60% من الناس يمارسون الرياضة يومياً. بيانات المسح الصحي الوطني (باستخدام أخذ عينات احتمالي) تظهر أن 23% فقط يمارسون الرياضة يومياً. أي تقدير أكثر موثوقية ولماذا؟",
+      "options": [
+        "The national survey using probability sampling is more reliable despite smaller sample size, because it avoids the systematic biases of self-selected online samples: health-conscious individuals are more likely to visit health websites and complete health surveys, creating massive volunteer bias",
+        "Both are equally valid since they measure the same thing",
+        "Neither is reliable because exercise is hard to measure",
+        "The online survey — 100,000 is a larger sample"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This illustrates the fundamental principle that a representative small sample is superior to a biased large one (demonstrated by the 1936 Literary Digest disaster). The online survey suffers from: (1) volunteer bias — health-conscious people are more likely to complete health surveys; (2) coverage bias — only internet users are reached; (3) non-response bias — people embarrassed about not exercising may skip the survey. Couper (2000, Public Opinion Quarterly) showed that volunteer web surveys can produce estimates 20-40 percentage points off from probability-based surveys. The CDC's BRFSS and NHANES use random digit dialing and household probability sampling specifically to avoid these biases.",
+      "explanationAr": "هذا يوضح المبدأ الأساسي أن العينة الصغيرة الممثلة أفضل من العينة الكبيرة المتحيزة. الاستطلاع عبر الإنترنت يعاني من تحيز المتطوعين وتحيز التغطية وتحيز عدم الاستجابة. أظهر كوبر (2000) أن استطلاعات الويب التطوعية يمكن أن تنتج تقديرات بعيدة 20-40 نقطة مئوية عن الاستطلاعات الاحتمالية."
+    },
+    {
+      "id": 4,
+      "type": "calculate",
+      "prompt": "A telephone survey about internet usage calls only landline numbers. According to CDC data, in 2020, 62% of US adults lived in wireless-only households (no landline). What type of sampling bias is this, and which demographic groups are most underrepresented?",
+      "promptAr": "يتصل استطلاع هاتفي عن استخدام الإنترنت بأرقام الخطوط الأرضية فقط. وفقاً لبيانات CDC، في 2020، عاش 62% من البالغين الأمريكيين في أسر لاسلكية فقط (بدون خط أرضي). ما نوع تحيز أخذ العينات هذا، وأي المجموعات الديموغرافية الأكثر تمثيلاً ناقصاً؟",
+      "options": [
+        "Random sampling error — easily corrected with more calls",
+        "Coverage bias — the sampling frame (landlines) excludes 62% of the population. Blumberg and Luke (2020, NCHS) showed wireless-only adults are disproportionately young (18-34), lower-income, racial minorities, and renters — precisely the groups with different internet usage patterns",
+        "This is not a problem because landline users are representative",
+        "Non-response bias only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is coverage bias — the sampling frame (landline telephone numbers) systematically fails to cover a large segment of the target population. Blumberg and Luke's NCHS reports document that wireless-only households in the US are disproportionately: adults aged 25-34 (83% wireless-only), Hispanic adults (72%), adults living in poverty (73%), and renters (79%). Since internet usage patterns vary dramatically across these demographics, a landline-only survey produces biased estimates. This is why the CDC's BRFSS added cell phone sampling in 2011, and most modern surveys now use dual-frame (landline + cell) or address-based sampling approaches.",
+      "explanationAr": "هذا تحيز تغطية — إطار أخذ العينات (أرقام الخطوط الأرضية) يفشل منهجياً في تغطية شريحة كبيرة من السكان المستهدفين. الأسر اللاسلكية فقط تشمل بشكل غير متناسب: البالغين 25-34 سنة (83%)، والبالغين من أصل لاتيني (72%)، والبالغين تحت خط الفقر (73%)."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "Which of the following sampling methods produces the LEAST biased sample for estimating national disease prevalence?",
+      "promptAr": "أي من طرق أخذ العينات التالية تنتج العينة الأقل تحيزاً لتقدير انتشار الأمراض على المستوى الوطني؟",
+      "options": [
+        "Convenience sampling from a large teaching hospital",
+        "Snowball sampling through patient support groups",
+        "Multi-stage stratified probability sampling from the national census frame, with oversampling of minority populations and adjustment weights — as used by NHANES (National Health and Nutrition Examination Survey)",
+        "Voluntary online survey promoted through health-focused social media"
+      ],
+      "correctAnswer": 2,
+      "explanation": "NHANES (run by the CDC's National Center for Health Statistics) uses a complex multi-stage probability design: (1) counties are selected with probability proportional to size, (2) census blocks are sampled within counties, (3) households are sampled within blocks, (4) individuals are sampled within households. Minority populations (Hispanic, Black, Asian, low-income) are deliberately oversampled to ensure sufficient subgroup precision, with survey weights applied to produce nationally representative estimates. This design, formalized by Kish (1965, 'Survey Sampling'), minimizes both coverage bias and selection bias. Convenience, snowball, and voluntary online samples all produce systematic biases that cannot be corrected by increasing sample size.",
+      "explanationAr": "يستخدم NHANES تصميم احتمالي معقد متعدد المراحل: (1) اختيار مقاطعات باحتمال متناسب مع الحجم، (2) أخذ عينات من كتل التعداد، (3) أخذ عينات من الأسر، (4) أخذ عينات من الأفراد. هذا التصميم يقلل من تحيز التغطية وتحيز الاختيار."
+    }
+  ]
+}

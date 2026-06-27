@@ -1,0 +1,98 @@
+{
+  "id": "forking_paths",
+  "phase": 2,
+  "week": 9,
+  "day": 5,
+  "title": "Garden of Forking Paths",
+  "titleAr": "حديقة المسارات المتشعبة",
+  "description": "Explore the Garden of Forking Paths problem — how undisclosed analytical flexibility creates an illusion of statistical significance even without deliberate p-hacking. Learn about multiverse analysis as a solution.",
+  "descriptionAr": "استكشف مشكلة حديقة المسارات المتشعبة — كيف تخلق المرونة التحليلية غير المعلنة وهماً بالدلالة الإحصائية حتى بدون اختراق متعمد للقيمة الاحتمالية. تعلم عن التحليل متعدد الأكوان كحل.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "statisticalConcept": {
+    "name": "Garden of Forking Paths",
+    "nameAr": "حديقة المسارات المتشعبة",
+    "definition": "The Garden of Forking Paths, described by Andrew Gelman and Eric Loken (2013), refers to the vast number of possible data-analysis choices a researcher faces: which variables to include, how to code them, which observations to exclude, which statistical model to use, which covariates to control for, and how to handle outliers. Even when a researcher makes each choice for seemingly good reasons (not deliberately p-hacking), the cumulative effect of many contingent decisions — each potentially influenced by the data — can produce a nominally significant result that would not replicate. Unlike deliberate p-hacking, the researcher may genuinely believe their specific analytical path was the only reasonable one.",
+    "definitionAr": "حديقة المسارات المتشعبة، التي وصفها أندرو غيلمان وإريك لوكن (2013)، تشير إلى العدد الهائل من خيارات تحليل البيانات الممكنة التي يواجهها الباحث: أي المتغيرات يشمل، كيف يرمّزها، أي الملاحظات يستبعد، أي نموذج إحصائي يستخدم، أي المتغيرات المشتركة يضبط، وكيف يتعامل مع القيم الشاذة. حتى عندما يتخذ الباحث كل خيار لأسباب تبدو جيدة، يمكن أن ينتج التأثير التراكمي للعديد من القرارات المشروطة نتيجة مهمة اسمياً لن تتكرر.",
+    "realWorldExample": "Silberzahn et al. (2018) conducted a landmark crowdsourced study where 29 independent research teams analyzed the identical dataset to answer one question: 'Are soccer referees more likely to give red cards to dark-skinned players?' The 29 teams used 29 different analytical strategies and obtained odds ratios ranging from 0.89 to 2.93. Twenty teams (69%) found a statistically significant effect, while nine (31%) did not. This demonstrated how the garden of forking paths produces dramatically different conclusions from identical data, purely through legitimate analytical choices.",
+    "realWorldExampleAr": "أجرى سيلبرزان وآخرون (2018) دراسة تعاونية بارزة حيث حلل 29 فريقاً بحثياً مستقلاً نفس مجموعة البيانات للإجابة على سؤال واحد: 'هل حكام كرة القدم أكثر ميلاً لإعطاء بطاقات حمراء للاعبين ذوي البشرة الداكنة؟' استخدم الفرق 29 استراتيجية تحليلية مختلفة وحصلوا على نسب أرجحية تتراوح من 0.89 إلى 2.93. عشرون فريقاً (69%) وجدوا تأثيراً ذا دلالة إحصائية، بينما تسعة (31%) لم يجدوا.",
+    "detectionMethod": "Use multiverse analysis (Steegen et al., 2016): systematically enumerate all defensible analytical specifications and report the distribution of results across them. Also check: (1) Are data-contingent analytical choices disclosed? (2) Was the analysis plan pre-registered? (3) Does the paper justify each exclusion criterion, variable coding, and model choice? (4) Use specification curve analysis (Simonsohn, Simmons & Nelson, 2020) to visualize result robustness across specifications."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "In Silberzahn et al.'s (2018) many-analysts study on soccer red cards, 29 teams analyzed the same dataset. What was the range of odds ratios obtained, and what does this demonstrate?",
+      "promptAr": "في دراسة سيلبرزان وآخرين (2018) متعددة المحللين حول البطاقات الحمراء في كرة القدم، حلل 29 فريقاً نفس مجموعة البيانات. ما كان نطاق نسب الأرجحية التي تم الحصول عليها، وماذا يوضح هذا؟",
+      "options": [
+        "The dataset was flawed and should not have been analyzed",
+        "All 29 teams obtained the same result, confirming the finding",
+        "Odds ratios ranged from 0.89 to 2.93, demonstrating how different defensible analytical choices from identical data can produce contradictory conclusions",
+        "The differences were due to calculation errors by some teams"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The range from 0.89 (suggesting dark-skinned players get FEWER red cards) to 2.93 (suggesting they get nearly 3× MORE) from the identical dataset powerfully demonstrates the garden of forking paths. Each team made legitimate analytical choices — different control variables, different statistical models (logistic regression, multilevel models, Bayesian approaches), different inclusion/exclusion criteria — yet reached dramatically different conclusions. This is why pre-registration and multiverse analysis are essential.",
+      "explanationAr": "النطاق من 0.89 (يشير إلى أن اللاعبين ذوي البشرة الداكنة يحصلون على بطاقات حمراء أقل) إلى 2.93 (يشير إلى أنهم يحصلون على ما يقرب من 3 أضعاف) من نفس البيانات يوضح بقوة حديقة المسارات المتشعبة. كل فريق اتخذ خيارات تحليلية مشروعة لكنه توصل إلى استنتاجات مختلفة جذرياً."
+    },
+    {
+      "id": 2,
+      "type": "analyze",
+      "prompt": "A researcher studying the relationship between screen time and depression must make the following choices: (1) Define 'screen time' as total hours vs. only social media vs. only passive scrolling; (2) Measure depression via PHQ-9 total score vs. PHQ-9 binary cutoff vs. BDI-II; (3) Include or exclude participants with prior diagnoses; (4) Control for age only, or age+gender, or age+gender+SES. How many analytical paths exist from these four decisions alone?",
+      "promptAr": "باحث يدرس العلاقة بين وقت الشاشة والاكتئاب يجب أن يتخذ الخيارات التالية: (1) تعريف 'وقت الشاشة' كساعات إجمالية مقابل وسائل التواصل فقط مقابل التصفح السلبي فقط؛ (2) قياس الاكتئاب عبر درجة PHQ-9 الإجمالية مقابل قطع ثنائي مقابل BDI-II؛ (3) تضمين أو استبعاد المشاركين بتشخيصات سابقة؛ (4) التحكم بالعمر فقط أو العمر+الجنس أو العمر+الجنس+الحالة الاجتماعية. كم عدد المسارات التحليلية من هذه القرارات الأربعة وحدها؟",
+      "options": [
+        "4 paths — one for each decision",
+        "12 paths",
+        "36 paths (3 × 3 × 2 × 2 = 36, but 3 × 3 × 2 × 3 = 54 is the correct calculation)",
+        "54 paths (3 screen-time definitions × 3 depression measures × 2 exclusion choices × 3 covariate sets = 54)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Each independent decision multiplies the analytical paths: 3 (screen time) × 3 (depression measure) × 2 (inclusion/exclusion) × 3 (covariates) = 54 possible analytical specifications. And these are only FOUR decisions — real studies involve dozens more (outlier treatment, transformation choice, interaction terms, subgroup analyses), potentially creating thousands of forking paths. Steegen et al. (2016) call this the 'multiverse' of analyses.",
+      "explanationAr": "كل قرار مستقل يضاعف المسارات التحليلية: 3 (وقت الشاشة) × 3 (مقياس الاكتئاب) × 2 (تضمين/استبعاد) × 3 (متغيرات مشتركة) = 54 مواصفة تحليلية ممكنة. وهذه أربعة قرارات فقط — الدراسات الحقيقية تتضمن عشرات أكثر."
+    },
+    {
+      "id": 3,
+      "type": "evaluate",
+      "prompt": "What is multiverse analysis, and how does it address the garden of forking paths?",
+      "promptAr": "ما هو التحليل متعدد الأكوان، وكيف يعالج مشكلة حديقة المسارات المتشعبة؟",
+      "options": [
+        "It systematically runs ALL defensible analytical specifications and reports the distribution of results across them, rather than reporting only one path",
+        "It uses multiple datasets to replicate the finding",
+        "It averages results from different statistical software packages",
+        "It runs the analysis once with the best possible specification"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Multiverse analysis (Steegen et al., 2016) requires the researcher to identify every defensible analytical choice, then run ALL possible combinations and report the full distribution of results. If the finding is robust, most specifications will produce similar results. If the finding is fragile, the multiverse will reveal that it depends heavily on specific analytical choices. Specification curve analysis (Simonsohn et al., 2020) provides a visual tool: results from all specifications are plotted from most negative to most positive, with each specification's choices shown below.",
+      "explanationAr": "يتطلب التحليل متعدد الأكوان (ستيجن وآخرون، 2016) من الباحث تحديد كل خيار تحليلي قابل للدفاع، ثم تشغيل جميع التركيبات الممكنة والإبلاغ عن التوزيع الكامل للنتائج. إذا كان الاكتشاف قوياً، ستنتج معظم المواصفات نتائج مماثلة."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "How does the Garden of Forking Paths differ from deliberate p-hacking?",
+      "promptAr": "كيف تختلف حديقة المسارات المتشعبة عن اختراق القيمة الاحتمالية المتعمد؟",
+      "options": [
+        "They are exactly the same thing",
+        "In the Garden of Forking Paths, the researcher may genuinely believe their chosen analytical path was the only reasonable one — the bias is unconscious, whereas deliberate p-hacking involves knowingly trying multiple analyses to achieve p < 0.05",
+        "The Garden of Forking Paths only applies to qualitative research",
+        "P-hacking is worse because it involves data fabrication"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Gelman and Loken (2013) specifically distinguished the Garden of Forking Paths from deliberate p-hacking. In p-hacking, the researcher knowingly runs multiple tests seeking significance. In the Garden of Forking Paths, each analytical choice seems reasonable and data-independent, but the choices are subtly influenced by the data in ways the researcher doesn't recognize. Both inflate false-positive rates, but the forking-paths problem is harder to address because the researcher sincerely believes their analysis was straightforward and predetermined.",
+      "explanationAr": "ميّز غيلمان ولوكن (2013) حديقة المسارات المتشعبة عن اختراق القيمة الاحتمالية المتعمد تحديداً. في اختراق القيمة الاحتمالية، يقوم الباحث عن علم بإجراء اختبارات متعددة. في حديقة المسارات المتشعبة، يبدو كل خيار تحليلي معقولاً لكنه يتأثر بشكل خفي بالبيانات بطرق لا يدركها الباحث."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "A specification curve analysis of a published study shows that 80% of defensible analytical specifications produce non-significant results, while the 20% that are significant all share one specific feature: they exclude participants over age 65. What should you conclude?",
+      "promptAr": "يُظهر تحليل منحنى المواصفات لدراسة منشورة أن 80% من المواصفات التحليلية القابلة للدفاع تنتج نتائج غير مهمة، بينما 20% المهمة تشترك جميعها في ميزة واحدة: استبعاد المشاركين فوق 65 عاماً. ماذا يجب أن تستنتج؟",
+      "options": [
+        "Excluding participants over 65 is always scientifically justified",
+        "The effect is robust because 20% of specifications show significance",
+        "The finding is fragile and depends critically on the exclusion of older adults — this is a forking-path dependency that should be investigated as a potential moderator, not treated as a confirmed main effect",
+        "The specification curve analysis is invalid"
+      ],
+      "correctAnswer": 2,
+      "explanation": "When a finding survives only in a specific subset of the multiverse — here, only when participants over 65 are excluded — the effect is fragile and specification-dependent. The responsible interpretation is that the main effect is not robust, and the age-exclusion sensitivity should be explicitly investigated as a potential moderator effect. Reporting only the specifications that exclude older adults without acknowledging the full multiverse would be a forking-paths problem. Simonsohn et al. (2020) emphasize that robust effects should survive across the majority of defensible specifications.",
+      "explanationAr": "عندما ينجو اكتشاف فقط في مجموعة فرعية محددة من الأكوان المتعددة — هنا فقط عند استبعاد المشاركين فوق 65 — يكون التأثير هشاً ومعتمداً على المواصفة. التفسير المسؤول هو أن التأثير الرئيسي ليس قوياً، ويجب التحقيق في حساسية استبعاد العمر كتأثير مُعدِّل محتمل."
+    }
+  ]
+}

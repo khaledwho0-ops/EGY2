@@ -1,0 +1,126 @@
+{
+  "id": "day78_mean_sd_distributions",
+  "phase": 2,
+  "week": 12,
+  "day": 78,
+  "title": "The Average Isn't the Whole Story",
+  "titleAr": "المتوسط مش كل الحكاية",
+  "description": "Two diets can have the same average weight loss while one is far more dangerous. Learn what the mean, standard deviation, and distribution shape tell you that a single number can't.",
+  "descriptionAr": "حِميتان ممكن يكون عندهم نفس متوسط خسارة الوزن، بينما إحداهما أخطر بكتير. اتعلّم إيه اللي بيقوله المتوسط والانحراف المعياري وشكل التوزيع اللي رقم واحد ما يقدرش يقوله.",
+  "type": "science",
+  "difficulty": 2,
+  "estimatedMinutes": 15,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/2-mean-and-standard-deviation",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A diet program claims: \"Our participants lost an average of 5 kg in one month!\" You later discover that out of 10 participants, 9 lost 1 kg each and 1 lost 14 kg. Does that average of ~5 kg represent a typical result?",
+      "claimAr": "برنامج حِمية بيقول: «متوسط خسارة المشاركين 5 كيلو في شهر!» وبعدين اكتشفت إن من أصل 10 مشاركين، 9 منهم خسّوا 1 كيلو لكل واحد و1 خسّ 14 كيلو. هل المتوسط ده (~5 كيلو) بيمثّل نتيجة نموذجية؟",
+      "options": [
+        "Yes — the average is always representative",
+        "No — one outlier pulled the average far above what 9 out of 10 people actually experienced",
+        "Yes — as long as the math is correct",
+        "No — averages are never useful"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The mean (average) is distorted by extreme outliers. When one participant loses 14 kg and nine lose 1 kg, 90% of participants never experienced the 5 kg average. This is why honest research reports the median and the standard deviation alongside the mean — to show you the spread, not just the centre.",
+      "explanationAr": "المتوسط (المين) بيتشوّه بالقيم الشاذة المتطرفة. لمّا مشارك واحد بيخسّ 14 كيلو وتسعة بيخسّوا 1 كيلو، 90% من المشاركين ما عاشوش متوسط الـ5 كيلو ده أبداً. علشان كده البحث الأمين بيحكي الوسيط والانحراف المعياري جنب المتوسط — عشان يوريك الانتشار، مش مجرد المركز.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/2-mean-and-standard-deviation"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A supplement seller says both his supplement and a standard diet produced the same average blood-sugar drop (3 mmol/L). Therefore, they are equally effective. True or false?",
+      "claimAr": "بائع مكمّل بيقول إن مكمّله والحِمية العادية كلاهما نتج عنهم نفس متوسط انخفاض السكر في الدم (3 مليمول/لتر). وبالتالي هما بنفس الفاعلية. صح ولا غلط؟",
+      "options": [
+        "True — same average means same treatment",
+        "False — two treatments can share an average while one is far more dangerous due to wider variance"
+      ],
+      "correctAnswer": 1,
+      "myth_en": "Same average = same treatment.",
+      "myth_ar": "نفس المتوسط = نفس العلاج.",
+      "explanation": "False. Two treatments can share an average while one is far safer. If the supplement causes wild swings (some patients crash to 1 mmol/L, some spike to 9 mmol/L) while the diet keeps everyone close to 3 mmol/L, the standard deviation reveals a crucial safety difference invisible in the mean. Low blood sugar (hypoglycaemia) is a medical emergency — variance matters enormously here.",
+      "explanationAr": "غلط. علاجان ممكن يتشاركوا في المتوسط بينما إحداهما أكثر أماناً بكتير. لو المكمّل بيسبّب تأرجحات حادة (بعض المرضى بينزل السكر عندهم لـ1 مليمول، وبعضهم يرتفع لـ9) بينما الحِمية بتخلّي الكل قريب من الـ3، فالانحراف المعياري بيكشف فرقاً أمانياً مهماً مخفي في المتوسط. انخفاض السكر حالة طوارئ طبية — التباين مهم هنا للغاية.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/2-mean-and-standard-deviation",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The viral «نظام الطيبات» system's promoters pointed to a group of followers and said: \"On average, their lab results improved.\" Without knowing the standard deviation, you cannot trust this claim.",
+      "claimAr": "مروّجو نظام «الطيبات» أشاروا لمجموعة أتباع وقالوا: «في المتوسط، نتائج تحاليلهم تحسّنت.» من غير ما تعرف الانحراف المعياري، ما تقدرش تثق في الادعاء ده.",
+      "options": [
+        "You can trust it — average improvement is all that matters",
+        "The average hides individual variation: a few extreme improvers could pull it up while most patients deteriorated or were hospitalized"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: how could 5 extreme improvers among 25 followers create a misleading average — and who gets hurt by that illusion?",
+        "promptAr": "بكلماتك: كيف ممكن 5 أشخاص تحسّنوا بشكل كبير من أصل 25 تابع ينتجوا متوسطاً مضلِّلاً — ومين اللي بيتأذّى من الوهم ده؟"
+      },
+      "explanation": "Without the spread, the average is potentially misleading. If five followers improved dramatically while 20 deteriorated (and some ended up in intensive care), the mean might still look positive. Survivorship bias worsens this: the patients who were harmed never reported their outcome. Every honest headline number needs the spread sitting next to it.",
+      "explanationAr": "من غير الانتشار، المتوسط ممكن يكون مضلّلاً. لو خمسة أتباع تحسّنوا بشكل كبير بينما 20 تدهوروا (وبعضهم دخلوا العناية المركزة)، المتوسط ممكن يفضل إيجابي. انحياز الناجين بيفاقم الموضوع: المرضى اللي اتأذّوا ما أبلغوا عن نتيجتهم أبداً. كل رقم أساسي أمين محتاج الانتشار يقعد جنبه.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/2-mean-and-standard-deviation"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "recognize",
+      "claim": "A nutrition study reports: \"Mean weight loss = 4 kg, SD = 0.4 kg\" vs another that reports \"Mean weight loss = 4 kg, SD = 6 kg.\" Which result should you trust more as a *predictable, consistent* intervention?",
+      "claimAr": "دراسة تغذية بتحكي: «متوسط خسارة الوزن = 4 كيلو، الانحراف المعياري = 0.4 كيلو» مقابل دراسة تانية بتحكي «متوسط خسارة الوزن = 4 كيلو، الانحراف المعياري = 6 كيلو». أنهي نتيجة المفروض تثق فيها أكتر كتدخّل *متوقّع ومتسق*؟",
+      "options": [
+        "The second (SD = 6 kg) — higher numbers are better",
+        "Both are equally trustworthy since the mean is the same",
+        "The first (SD = 0.4 kg) — small spread means the result was consistent across participants",
+        "Neither can be trusted without the p-value"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A small standard deviation (0.4 kg) means almost everyone lost close to 4 kg — the treatment is predictable. An SD of 6 kg means some people lost 10 kg while others gained 2 kg. Same average; completely different reliability. When choosing a medical intervention, consistency across patients matters as much as the average.",
+      "explanationAr": "انحراف معياري صغير (0.4 كيلو) يعني تقريباً كل الناس خسّوا قريب من 4 كيلو — التدخّل متوقّع. SD = 6 كيلو يعني ناس خسّوا 10 كيلو وناس كسبوا 2 كيلو. نفس المتوسط؛ موثوقية مختلفة تماماً. لمّا تختار تدخّلاً طبياً، الاتساق بين المرضى مهم بنفس أهمية المتوسط.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/2-mean-and-standard-deviation"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "hiding variance behind the average",
+      "techniqueAr": "إخفاء التباين وراء المتوسط",
+      "task": "Write a short promotional post for a harmless product (say, a branded water bottle) that uses only an average outcome to make it look impressively consistent — without lying about the number itself, just hiding the spread.",
+      "taskAr": "اكتب بوست ترويجي قصير لمنتج غير ضار (مثلاً زجاجة مية ذات علامة تجارية) بيستخدم بس متوسط نتيجة عشان يجعلها تبان متسقة بشكل مثير — من غير ما يكذب في الرقم نفسه، بس يخبّي الانتشار.",
+      "tells": [
+        "Quoting only one number (mean) without any range, SD, or 'some people experienced X while others experienced Y'.",
+        "Using words like 'consistently', 'reliably', or 'proven results' when no variance data is shown.",
+        "Omitting the number of participants — a small N makes the single average almost meaningless.",
+        "No mention of whether a control group was used, so the comparison baseline is invisible.",
+        "The post feels complete and reassuring — that comfort is the manipulation, not the data."
+      ],
+      "tellsAr": [
+        "اقتباس رقم واحد بس (المتوسط) من غير أي مدى أو انحراف معياري أو «بعض الناس اختبروا X بينما اختبر آخرون Y».",
+        "استخدام كلمات زي «باستمرار»، «بموثوقية»، أو «نتائج مُثبَتة» لمّا ما فيش بيانات تباين تتعرض.",
+        "إغفال عدد المشاركين — N الصغير بيجعل المتوسط الواحد بلا معنى تقريباً.",
+        "لا ذكر لاستخدام مجموعة ضابطة — يبقى خط أساس المقارنة مخفي.",
+        "البوست بيحسّ كامل ومطمئن — الراحة دي هي التلاعب، مش البيانات."
+      ],
+      "explanation": "Hiding variance while quoting only the mean is a real manipulation tactic used in health marketing. Building this post from the inside lets you feel the gap between 'technically true' and 'honestly informative.' Every time you see a single impressive number in a health claim, the trained question is: 'What is the spread — and how many people were in this study?'",
+      "explanationAr": "إخفاء التباين مع اقتباس المتوسط بس هو أسلوب تلاعب حقيقي بيُستخدم في تسويق الصحة. بناء البوست ده من الداخل بيخلّيك تحسّ بالفجوة بين «صحيح تقنياً» و«معلوماتي بأمانة». كل مرة تشوف رقم مثير واحد في ادعاء صحي، السؤال المُدرَّب هو: «وإيه الانتشار — وكام شخص كان في الدراسة دي؟»",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/2-mean-and-standard-deviation",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    }
+  ]
+}

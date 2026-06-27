@@ -1,0 +1,133 @@
+{
+  "id": "day128_hifz_al_nafs",
+  "phase": 3,
+  "week": 19,
+  "day": 128,
+  "title": "Hifz al-Nafs: Preserving Your Life Is an Act of Worship",
+  "titleAr": "حفظ النفس: الحفاظ على حياتك عبادة",
+  "description": "Across every major school of Islamic law, protecting your own life is not optional — it is obligatory. Today we see what that means when someone pressures you to stop your medicine.",
+  "descriptionAr": "في كل المذاهب الإسلامية الكبرى، حماية حياتك مش اختياري — ده فرض. النهاردة بنشوف معنى ده لمّا حد بيضغط عليك تسيب دوائك.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A person with Type 1 diabetes is told by followers of an online diet system: 'Insulin is artificial — pure food is all you need. Stop the injection and trust God.' Hifz al-nafs says:",
+      "claimAr": "شخص عنده سكري النوع الأول قال له أتباع نظام حمية أونلاين: «الأنسولين صناعي — الطعام الطيب هو كل اللي محتاجه. وقّف الحقنة وتوكّل على الله». حفظ النفس بيقول:",
+      "options": [
+        "Stop the insulin — the advice is religiously sound",
+        "Continue the insulin — stopping a life-sustaining treatment violates hifz al-nafs, the obligation to preserve your life; no diet overrides that",
+        "It depends on the person's level of faith",
+        "Consult only a religious scholar, not a doctor"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Insulin is a biological necessity for Type 1 diabetes. Without it, the body's cells cannot use glucose and life-threatening diabetic ketoacidosis develops within days. Islamic legal principles — including 'do not cast yourselves into destruction' (2:195) — impose an obligation to preserve life by all effective means. No diet claim, however pious-sounding, overrides a documented medical necessity.",
+      "explanationAr": "الأنسولين ضرورة بيولوجية لمريض سكري النوع الأول. بدونه، خلايا الجسم ما تقدرش تستخدم الجلوكوز ويتطوّر الحماض الكيتوني السكري المهدد للحياة في أيام. المبادئ القانونية الإسلامية — بما فيها «ولا تلقوا بأيديكم إلى التهلكة» (2:195) — تُوجِب حفظ الحياة بكل الوسائل الفعّالة. لا ادعاء حمية، مهما بدا تقياً، يتجاوز ضرورة طبية موثّقة.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        "https://www.ncbi.nlm.nih.gov/books/NBK560723/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "The Quran states: 'Do not cast yourselves into destruction with your own hands.' (Al-Baqara 2:195). Classical scholars (Ibn Kathir, al-Tabari) applied this verse to which of the following?",
+      "claimAr": "القرآن يقول: «وَلَا تُلْقُوا بِأَيْدِيكُمْ إِلَى التَّهْلُكَةِ» (البقرة 2:195). العلماء الكلاسيكيون (ابن كثير، الطبري) طبّقوا الآية دي على أنهي مما يلي؟",
+      "options": [
+        "Only warfare",
+        "Any deliberate act that endangers life — including abandoning necessary medical treatment",
+        "Only financial risk-taking",
+        "It has no application to health decisions"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: how does a person stopping their life-saving medicine because of an unverified online claim fall under the meaning of 'casting yourself into destruction'?",
+        "promptAr": "بكلماتك: إزاي شخص بيوقّف دواءه المنقذ للحياة بسبب ادعاء أونلاين غير مُثبَت بيقع تحت معنى «إلقاء النفس في التهلكة»؟"
+      },
+      "explanation": "The verse is broadly applied in classical tafsir to any deliberate self-endangerment. Al-Tabari's commentary includes neglecting what preserves life under this prohibition. Applied here: deliberately stopping a medically necessary treatment — on the advice of an unqualified source — falls within the prohibition's scope according to this well-established interpretive tradition.",
+      "explanationAr": "الآية تُطبَّق على نطاق واسع في التفسير الكلاسيكي على أي خطر متعمّد على النفس. تفسير الطبري يشمل إهمال ما يحفظ الحياة ضمن هذا النهي. مُطبَّقاً هنا: وقف علاج ضروري طبياً بشكل متعمّد — بنصيحة من مصدر غير مؤهّل — يقع ضمن نطاق النهي وفق هذا التقليد التفسيري الراسخ.",
+      "sources": [
+        "https://quran.com/2/195",
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A cancer patient stops chemotherapy after a religious-sounding diet system promises a 'natural cure.' Three months later her tumour has grown. Which move in the system caused this harm?",
+      "claimAr": "مريضة سرطان وقّفت العلاج الكيميائي بعد ما نظام حمية ذو طابع ديني وعد بـ«شفاء طبيعي». بعد ثلاثة شهور الورم كبر. أنهي حركة في النظام سبّبت الأذى ده؟",
+      "options": [
+        "The chemotherapy was ineffective anyway",
+        "Red Flag #8: instructing people to stop their medicine — the single most dangerous signal in pseudo-medical claims",
+        "She should have believed more strongly",
+        "Cancer is untreatable so it makes no difference"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Red Flag #8 — 'tells you to stop your medicine' — is the most dangerous single move in pseudo-medicine. No diet has been validated as a replacement for oncology treatment. The harm is documented: followers of the viral «نظام الطيبات» who stopped cancer therapy suffered exactly this outcome. From the Maqasid perspective, the system violated hifz al-nafs by persuading her to abandon protection of her life.",
+      "explanationAr": "علامة الخطر رقم 8 — «يأمرك بإيقاف دوائك» — هي أخطر حركة منفردة في الطب الزائف. لا حمية تم التحقق منها كبديل لعلاج الأورام. الضرر موثّق: أتباع نظام «الطيبات» اللي وقّفوا علاج السرطان عانوا بالضبط من هذه النتيجة. من منظور المقاصد، النظام انتهك حفظ النفس بإقناعها بترك حماية حياتها.",
+      "sources": [
+        "EAL-case-001:moh-eg-2026-05",
+        "https://www.cancer.gov/about-cancer/treatment/types/chemotherapy"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "True or false: in Islamic law, a person who deliberately harms their own health by following dangerous, unproven advice bears no moral responsibility — they are purely a victim.",
+      "claimAr": "صح ولا غلط: في الشريعة الإسلامية، الشخص اللي يضرّ بصحته عمداً باتباع نصيحة غير مثبتة وخطرة ما عليه مسؤولية أخلاقية — هو ضحية بحتة.",
+      "prompt": "Before accepting 'purely a victim': what disconfirming points exist? And what is the compassionate view that holds both truths at once?",
+      "promptAr": "قبل قبول «ضحية بحتة»: إيه النقاط المعاكسة الموجودة؟ وإيه الرأي المتعاطف اللي بيحمل الحقيقتين في نفس الوقت؟",
+      "modelPoints": [
+        "Classical scholars (al-Nawawi, Ibn Qudama) teach that humans are trustees (amana) of their bodies — they cannot harm them carelessly without a form of accountability.",
+        "There is no contradiction between compassion and accountability: a person can be manipulated (which deserves empathy) AND have had the option to verify (which implies responsibility).",
+        "The victim framing, taken to an extreme, would mean no one is ever responsible for any choice — a position that Islamic ethics does not hold.",
+        "The practical implication is not blame but duty: because health is a trust, seeking verified care is an ongoing personal obligation, not just a preference."
+      ],
+      "modelPointsAr": [
+        "علماء كلاسيكيون (النووي، ابن قدامة) بيعلّموا إن البشر أمناء (أمانة) على أجسادهم — لا يمكنهم إيذاءها باستهتار بدون نوع من المساءلة.",
+        "لا تناقض بين التعاطف والمساءلة: شخص ممكن يكون تعرّض للتلاعب (يستحق التعاطف) وكان عنده خيار التحقّق (مما يستلزم مسؤولية).",
+        "التأطير كضحية، لو اتأخذ للمطلق، سيعني إنه لا أحد مسؤول عن أي اختيار أبداً — موقف الأخلاق الإسلامية ما بتتبنّاهوش.",
+        "التضمين العملي مش اللوم بل الواجب: لأن الصحة أمانة، السعي لرعاية مُثبَتة التزام شخصي مستمر، مش مجرد تفضيل."
+      ],
+      "sources": [
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482",
+        "https://plato.stanford.edu/entries/islamic-law/"
+      ],
+      "cognitivebiasAtPlay": "Sunk-Cost Fallacy"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "spiritual framing of a physical necessity",
+      "techniqueAr": "التأطير الروحاني لضرورة جسدية",
+      "task": "Feel this move from the inside. Write a short social media post for a harmless scenario — say, encouraging someone to sleep 8 hours — but frame skipping sleep as a 'spiritual sacrifice' and frame following a sleep schedule as 'weak faith in God's provision.' Use the vocabulary of trust and piety to make the medical advice seem worldly and inferior.",
+      "taskAr": "احسّ بالحركة دي من جوّه. اكتب بوست سوشيال ميديا قصير لسيناريو غير ضار — مثلاً تشجيع حد على النوم 8 ساعات — لكن أطّر الاستغناء عن النوم كـ«تضحية روحية» وأطّر اتباع جدول النوم كـ«ضعف في التوكّل على رزق الله». استخدم مفردات التوكّل والتقوى علشان تجعل النصيحة الطبية تبدو دنيوية وأدنى.",
+      "tells": [
+        "A normal bodily need (sleep, insulin, chemotherapy) is reframed as a 'worldly weakness' that spiritual people transcend.",
+        "Trust in God is set as the opposite of medical compliance — not as its companion.",
+        "The more pious framing always points away from the safer, verifiable option.",
+        "No qualified Islamic scholar is cited — the framing relies on emotional religious vocabulary, not scholarly opinion.",
+        "The argument cannot be falsified: if you follow the advice and feel better → God's blessing; if you follow it and feel worse → your faith was insufficient."
+      ],
+      "tellsAr": [
+        "حاجة جسدية طبيعية (النوم، الأنسولين، الكيماوي) تُعاد صياغتها كـ«ضعف دنيوي» يتجاوزه الناس الروحانيون.",
+        "التوكّل على الله يُقدَّم كنقيض للالتزام الطبي — لا كرفيق له.",
+        "التأطير الأكثر تقوى دائماً يُبعد عن الخيار الأكثر أماناً والقابل للتحقّق.",
+        "لا عالم إسلامي مؤهّل يُستشهد به — التأطير يعتمد على مفردات دينية عاطفية، لا على رأي علمي.",
+        "الحجة لا يمكن تفنيدها: لو اتبّعت النصيحة وحسّيت أحسن ← بركة الله؛ لو اتبّعتها وحسّيت أسوأ ← إيمانك كان ناقصاً."
+      ],
+      "sources": [
+        "https://sunnah.com/tirmidhi:2517",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "id": "day45_moving_goalposts",
+  "phase": 1,
+  "week": 7,
+  "day": 45,
+  "title": "Moving the Goalposts — The Bar That Always Moves",
+  "titleAr": "تحريك الهدف — العارضة اللي دايماً بتتحرّك",
+  "description": "When someone keeps raising the standard of proof each time you meet it, the debate can never be won by evidence. Learn to spot this classic evasion — and why it signals a belief that cannot be tested.",
+  "descriptionAr": "لمّا حد يفضل يرفع معيار الإثبات كل مرة بتفي بيه، النقاش ما ينتهيش بالدليل أبداً. اتعلّم تكتشف التملّص الكلاسيكي ده — وليه بيدلّ على معتقد ما ينفعش يُختبَر.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 12,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A critic asks the viral Taybat diet system's supporters: 'Give me just one lab-confirmed recovery from a Type 1 diabetic who stopped insulin.' They reply: 'A few cases were posted online.' The critic finds the posts and says: 'These have no before/after blood tests.' The supporters say: 'We need video proof.' The critic finds video. They say: 'It must be a double-blind study.' Which fallacy is this pattern?",
+      "claimAr": "ناقد بيطلب من مؤيدي نظام «الطيبات»: «هاتوا حالة واحدة بتحليل مؤكّد لمريض سكري نوع أول وقف الأنسولين». يردّوا: «في حالات اتنشرت أونلاين». الناقد يلاقي المنشورات ويقول: «دول بلا تحاليل قبل/بعد». يردّوا: «محتاجين تسجيل فيديو». الناقد يلاقي فيديو. يقولوا: «لازم دراسة مزدوجة التعمية». أنهي مغالطة في النمط ده؟",
+      "options": [
+        "A fair scientific standard",
+        "Moving the Goalposts — each time evidence is provided, the required standard shifts higher, so no evidence can ever satisfy the demand",
+        "Ad hominem",
+        "False dichotomy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Moving the goalposts means agreeing (implicitly or explicitly) on a standard of proof, then raising it once it is met — and doing this repeatedly. It signals that the person is not genuinely asking for evidence; they are protecting the belief. Notice: a legitimate scientist can raise the standard once for good reason, but consistently moving it every time is a sign the belief is unfalsifiable.",
+      "explanationAr": "تحريك الهدف معناه الموافقة (ضمنياً أو صريحاً) على معيار إثبات، ثم رفعه لما يُستوفَى — وتكرار ده مراراً. يدلّ إن الشخص مش بيطلب أدلة بصدق؛ هو بيحمي المعتقد. لاحظ: العالِم الشريف ممكن يرفع المعيار مرة لسبب وجيه، لكن تحريكه باستمرار كل مرة علامة إن المعتقد غير قابل للتفنيد.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "The Medical Syndicate's investigation requested only three documented cases with before/after labs from the Taybat system — and received none. A response like 'Three cases aren't enough — we need a cohort study of 500 patients' is automatically goalpost-moving.",
+      "claimAr": "تحقيق نقابة الأطباء طلب ثلاث حالات موثّقة بتحاليل قبل/بعد من نظام «الطيبات» — وما اتلقّاش حاجة. رد زي «ثلاث حالات مش كافية — محتاجين دراسة مجموعة 500 مريض» تحريك هدف بشكل أوتوماتيكي.",
+      "options": [
+        "True — any raised standard is goalpost-moving",
+        "False — raising the standard can be legitimate science; what matters is whether it was agreed in advance and applied consistently"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what is the difference between a scientist legitimately raising the standard and someone moving the goalposts? What is the key test?",
+        "promptAr": "بكلماتك: إيه الفرق بين عالِم بيرفع المعيار بشكل مشروع وحد بيحرّك الهدف؟ وإيه الاختبار الأساسي؟"
+      },
+      "explanation": "This is a nuanced question. Requesting a larger study or independent verification are scientifically legitimate requests — they are NOT automatically goalpost-moving. The key is whether (a) the new standard was agreed in advance, (b) the same standard would be applied to any competing claim, and (c) the reason is explicitly stated. Goalpost-moving is defined by the intent to evade, not simply by raising the bar.",
+      "explanationAr": "ده سؤال دقيق. طلب دراسة أكبر أو تحقّق مستقل طلبات علمية شرعية — مش تلقائياً تحريك الهدف. المفتاح هل (أ) المعيار الجديد اتُّفق عليه مسبقاً، و(ب) نفس المعيار ينطبق على أي ادعاء منافس، و(ج) السبب مُصرَّح بيه. تحريك الهدف محدّد بنية التهرّب، مش بمجرد رفع المعيار.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "If a belief system's supporters can always redefine what would count as proof after each piece of evidence is presented, then the belief is genuinely scientific.",
+      "claimAr": "لو أنصار نظام اعتقادي يقدروا دايماً يعيدوا تعريف إيه اللي يُعدّ دليلاً بعد تقديم كل قطعة أدلة، يبقى المعتقد علمي فعلاً.",
+      "correctAnswer": false,
+      "myth_en": "Flexible standards show open-mindedness.",
+      "myth_ar": "المعايير المرنة دليل على انفتاح الذهن.",
+      "explanation": "False — this is Karl Popper's falsifiability principle. A claim is scientific only if there is some possible evidence that could prove it wrong. When supporters can always move the goalposts so no evidence ever counts as disproof, they have described an unfalsifiable belief — which is not scientific, regardless of how many scientific words appear in its defence. Calibrate: how certain were you of your answer?",
+      "explanationAr": "غلط — ده مبدأ قابلية التفنيد عند كارل بوبر. الادعاء علمي بس لو في دليل محتمل ممكن يثبت إنه غلط. لمّا الأنصار يقدروا دايماً يحرّكوا الهدف علشان ما يُعدّش أي دليل تفنيداً، بيكونوا وصفوا معتقداً غير قابل للتفنيد — وده مش علمي، بصرف النظر عن كم كلمة علمية بتظهر في دفاعه.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "Always asking for more evidence before updating a belief shows admirable scientific scepticism.",
+      "claimAr": "المطالبة دايماً بمزيد من الأدلة قبل تغيير قناعة بيُظهِر شكّاً علمياً تحسد عليه.",
+      "prompt": "What would need to be true for endless evidence-demanding to be EVASION rather than scepticism? What distinguishes the two?",
+      "promptAr": "إيه اللي لازم يكون صح علشان المطالبة اللانهائية بالأدلة تكون تهرّب مش شكّ؟ وإيه اللي يميّز الاتنين؟",
+      "modelPoints": [
+        "Genuine scepticism applies the same standard to every claim — including claims the person already likes. Goalpost-moving applies a stricter standard only to disfavoured claims.",
+        "Genuine scepticism commits in advance to what would constitute sufficient evidence. Goalpost-moving never does — it defines 'enough' only after evidence has been presented.",
+        "Genuine scepticism updates when the standard is met. Goalpost-moving raises the bar instead of updating.",
+        "The test question: 'What specific evidence would change your mind?' If the person cannot or will not answer, the question is about identity or fear, not evidence.",
+        "A useful follow-up: 'Would you apply this same standard to a claim you already believe?' Inconsistent application is the diagnostic sign."
+      ],
+      "modelPointsAr": [
+        "الشكّ الحقيقي بيطبّق نفس المعيار على كل ادعاء — بما فيه الادعاءات اللي الشخص أصلاً بيحبّها. تحريك الهدف بيطبّق معياراً أكثر صرامة على الادعاءات المكروهة بس.",
+        "الشكّ الحقيقي بيلتزم مسبقاً بإيه اللي سيشكّل أدلة كافية. تحريك الهدف ما بيعملش ده أبداً — بيعرّف «كافي» بس بعد ما تُقدَّم الأدلة.",
+        "الشكّ الحقيقي بيتحدّث لمّا المعيار يُستوفَى. تحريك الهدف بيرفع العارضة بدل ما يتحدّث.",
+        "سؤال الاختبار: «إيه الدليل المحدّد اللي هيغيّر رأيك؟» لو ما يقدرش أو ما يريدش يجاوب، السؤال عن الهوية أو الخوف مش الأدلة.",
+        "سؤال تكميلي مفيد: «هل كنت هتطبّق نفس المعيار ده على ادعاء أنت أصلاً بتؤمن بيه؟» التطبيق غير المتسق هو العلامة التشخيصية."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this goalpost-moving exchange: 'Give me one documented case.' [Case provided.] 'That case has no blood tests.' [Blood tests provided.] 'Those labs aren't from a certified hospital.' [Certified labs provided.] 'But this isn't a peer-reviewed study.'",
+      "claimAr": "فكّك تبادل تحريك الهدف ده: «هاتلي حالة موثّقة واحدة». [الحالة تُقدَّم]. «الحالة دي فيها تحاليل دم». [التحاليل تُقدَّم]. «التحاليل دي مش من مستشفى معتمَد». [التحاليل المعتمَدة تُقدَّم]. «لكن ده مش دراسة محكَّمة».",
+      "parts": [
+        { "text": "The implicit conclusion: this diet cannot be validated by any evidence I present.", "textAr": "الخلاصة الضمنية: الحمية دي ما تنفعش تتأكّد بأي دليل أقدّمه.", "role": "conclusion" },
+        { "text": "Each standard was agreed (implicitly) before being abandoned when met.", "textAr": "كل معيار اتُّفق عليه (ضمنياً) قبل ما يُتخلَّى عنه لمّا يُستوفَى.", "role": "premise" },
+        { "text": "(Unstated) The belief must be protected regardless of evidence.", "textAr": "(غير مذكور) المعتقد لازم يُحمَى بصرف النظر عن الأدلة.", "role": "assumption" },
+        { "text": "Peer review is the only acceptable standard.", "textAr": "التحكيم العلمي هو المعيار الوحيد المقبول.", "role": "irrelevant" }
+      ],
+      "explanation": "The decomposition reveals the hidden assumption driving the whole pattern: the belief must survive no matter what evidence arrives. Each raised standard is not a genuine scientific requirement — it is a rationalisation that only appears after evidence is provided, not before. The IRRELEVANT final demand (peer review) is not irrelevant in general — peer review is genuinely important — but it is irrelevant here because the pattern shows no standard will ever be final.",
+      "explanationAr": "التفكيك يكشف الافتراض الخفي اللي بيقود النمط كله: المعتقد لازم ينجو بصرف النظر عن أي أدلة بتوصل. كل معيار مرفوع مش متطلّب علمي حقيقي — ده تبرير بيظهر بس بعد تقديم الأدلة، مش قبلها. المطالبة الأخيرة (التحكيم العلمي) مش غير ذات صلة بشكل عام — التحكيم العلمي مهم فعلاً — لكنها غير ذات صلة هنا لأن النمط بيُظهِر إن ما في معيار سيكون نهائياً أبداً.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    }
+  ]
+}

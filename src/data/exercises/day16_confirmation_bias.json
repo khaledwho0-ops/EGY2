@@ -1,0 +1,29 @@
+{
+  "id": "day16_confirmation_bias",
+  "phase": 0,
+  "week": 3,
+  "day": 16,
+  "title": "Confirmation Bias Sprint",
+  "titleAr": "سباق تحيز التأكيد",
+  "description": "Actively seek disconfirming evidence for common Egyptian beliefs.",
+  "descriptionAr": "ابحث بنشاط عن أدلة مخالفة لمعتقدات مصرية شائعة.",
+  "type": "debiasing",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "Most Egyptians believe honey cures everything. Find limitations.",
+      "claimAr": "معظم المصريين يعتقدون العسل يعالج كل شيء. ابحث عن القيود.",
+      "truthValue": "misleading",
+      "category": "health",
+      "difficulty": 3,
+      "explanation": "Honey has genuine antimicrobial properties but its not a cure-all. High sugar, can cause infant botulism, doesnt replace antibiotics.",
+      "explanationAr": "العسل له خصائص مضادة للميكروبات لكنه ليس علاجاً شاملاً.",
+      "sources": [
+        "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD005083.pub4/full"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    }
+  ]
+}

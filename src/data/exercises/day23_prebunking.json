@@ -1,0 +1,29 @@
+{
+  "id": "day23_prebunking",
+  "phase": 0,
+  "week": 4,
+  "day": 23,
+  "title": "Prebunking Workshop",
+  "titleAr": "ورشة التحصين المسبق",
+  "description": "Pre-expose yourself to manipulation techniques.",
+  "descriptionAr": "عرّض نفسك لتقنيات التلاعب قبل مواجهتها.",
+  "type": "inoculation",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "False Authority: Nobel Prize physicist says vaccines cause autism.",
+      "claimAr": "سلطة زائفة: حاصل على نوبل في الفيزياء يقول اللقاحات تسبب التوحد.",
+      "truthValue": "false",
+      "category": "health",
+      "difficulty": 3,
+      "explanation": "False authority technique. Physicist has no immunology expertise. Always check if expert has credentials in specific field.",
+      "explanationAr": "تقنية السلطة الزائفة. الفيزيائي ليس لديه خبرة في المناعة.",
+      "sources": [
+        "https://sciencebasedmedicine.org/"
+      ],
+      "cognitivebiasAtPlay": "False Authority"
+    }
+  ]
+}

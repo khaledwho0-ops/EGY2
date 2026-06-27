@@ -1,0 +1,136 @@
+{
+  "id": "day152_the_gallop_under_fire",
+  "phase": 4,
+  "week": 22,
+  "day": 152,
+  "title": "The Gallop Under Fire",
+  "titleAr": "الجري السريع تحت النار",
+  "description": "When the group buries you in ten claims at once, you cannot — and should not — chase every one. Today: stay calm under a flood, pick the load-bearing claim, and protect your own thinking.",
+  "descriptionAr": "لمّا الجروب يدفنك في عشر ادعاءات مرة واحدة، ما تقدرش — ولا المفروض — تجري ورا كل واحد. النهاردة: اهدا تحت الطوفان، اختار الادعاء الحامل، واحمِ تفكيرك إنت.",
+  "type": "integration",
+  "difficulty": 5,
+  "estimatedMinutes": 15,
+  "source": "https://en.wikipedia.org/wiki/Firehose_of_falsehood",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "In sixty seconds the group sends ten messages: a verse, a testimonial, a 'detox' claim, a Big-Pharma line, a 'doctor said,' a meme, and more. You feel overwhelmed. What technique is being used on you — by accident or design?",
+      "claimAr": "في ستين ثانية الجروب بيبعت عشر رسايل: آية، شهادة، ادعاء «ديتوكس»، جملة عن شركات الدوا، «الدكتور قال»، ميم، وأكتر. حاسس إنك مغمور. أنهي أسلوب بيتستخدم عليك — بقصد أو من غير قصد؟",
+      "options": [
+        "A fair, complete argument you must fully answer",
+        "The Gish gallop / firehose: burying you in so many claims at once that answering all is impossible, so the sheer volume feels like being right",
+        "Proof the diet works",
+        "Nothing — you should reply to each one"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the Gish gallop (a 'firehose of falsehood'): the power isn't in any single claim but in the volume. Each falsehood takes seconds to assert and minutes to refute, so chasing all ten guarantees you lose the thread and your composure — and onlookers mistake the flood for strength. Recognizing the technique is the first defense: you are not obligated to answer everything, and trying to is the trap.",
+      "explanationAr": "ده «الجري السريع» («خرطوم الأكاذيب»): القوة مش في أي ادعاء لوحده بل في الكمية. كل كذبة بتتقال في ثواني وتحتاج دقايق للتفنيد، فالجري ورا العشرة بيضمن إنك تضيّع الخيط وهدوءك — والمتفرّجين بيخلطوا بين الطوفان والقوة. إدراك الأسلوب أول دفاع: إنت مش ملزَم تردّ على كل حاجة، والمحاولة هي الفخّ نفسه.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gish_gallop",
+        "https://www.rand.org/pubs/perspectives/PE198.html"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "Instead of answering all ten claims, the disciplined integration move is to triage: pick the single load-bearing, highest-stakes claim — usually 'stop your medicine' — and address that one calmly and fully.",
+      "claimAr": "بدل ما تردّ على العشر ادعاءات، حركة الدمج المنضبطة هي الفرز: اختار الادعاء الواحد الحامل الأعلى مخاطرة — غالباً «وقف دواك» — وعالجه بهدوء وكامل.",
+      "options": [
+        "Answer the easiest one to feel a quick win",
+        "Triage to the one claim that carries the real danger and, if false, makes the rest irrelevant"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why is answering ONE dangerous claim well better than answering all ten poorly — and how do you decide which claim is the load-bearing one?",
+        "promptAr": "بكلماتك: ليه الردّ الكويس على ادعاء خطير واحد أحسن من الردّ الوحش على العشرة — وإزاي تقرّر أنهي ادعاء هو الحامل؟"
+      },
+      "explanation": "The disciplined move is triage: find the one claim that, if false, makes the rest irrelevant — and that carries the real danger. Here it's almost always 'stop your prescribed medicine' (Red Flag #8), because that's the one that can kill. You say, kindly and clearly, 'I'm not going to debate ten things, but I love you and I have to be honest about this one, because lives are at stake.' Answering the dangerous claim well beats answering all ten poorly — and saying why in your own words is what keeps you from being dragged into the gallop next time.",
+      "explanationAr": "الحركة المنضبطة هي الفرز: لاقي الادعاء الواحد اللي لو غلط بيخلّي الباقي مالوش لازمة — واللي شايل الخطر الحقيقي. هنا تقريباً دايماً «وقف دواك الموصوف» (علامة الخطر 8)، لأنه اللي ممكن يقتل. تقول بلطف ووضوح: «مش هتجادل في عشر حاجات، بس بحبك ولازم أكون أمين في الواحدة دي، لأن في أرواح على المحكّ». الردّ الكويس على الادعاء الخطير أحسن من ردّ وحش على العشرة — وإنك تقول ليه بكلماتك هو اللي بيمنعك تتجرّ للجري المرة الجاية.",
+      "sources": [
+        "EAL-case-001:redflag-8",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "Mid-flood you start to feel it: 'If I can't immediately refute every single claim, then the ones I didn't answer are probably true.'",
+      "claimAr": "وسط الطوفان بدأت تحسّها: «لو ما قدرتش أفنّد فوراً كل ادعاء، يبقى اللي ما رددتش عليه غالباً صح».",
+      "prompt": "Consider the opposite: where does the burden of proof actually sit? What is an unanswered claim — proven, or just unproven? And what could you honestly say instead of guessing?",
+      "promptAr": "فكّر في العكس: عبء الإثبات بيقع على مين فعلاً؟ والادعاء اللي ما اتردّش عليه هو إيه — مُثبَت ولا بس غير مُثبَت؟ وإيه اللي تقدر تقوله بأمانة بدل ما تخمّن؟",
+      "modelPoints": [
+        "The burden of proof sits with whoever makes a claim — not with whoever fails to refute it in real time.",
+        "An unanswered claim is simply an UNPROVEN claim, not a proven one; silence under a flood concedes nothing.",
+        "'You didn't answer point #7, so it's true' is the exact lever the gallop pulls — naming it disarms it.",
+        "You can honestly say 'I'd need to check that one properly rather than guess' — intellectual humility, not defeat.",
+        "Refusing to be rushed protects the quality of your own thinking, which is the real target of the flood."
+      ],
+      "modelPointsAr": [
+        "عبء الإثبات على اللي بيدّعي — مش على اللي ما قدرش يفنّد في اللحظة.",
+        "الادعاء اللي ما اتردّش عليه هو ببساطة ادعاء غير مُثبَت، مش مُثبَت؛ السكوت تحت الطوفان ما بيسلّمش بحاجة.",
+        "«ما رددتش على النقطة 7، يبقى صح» هي بالظبط الرافعة اللي الجري بيشدّها — تسميتها بتنزع سلاحها.",
+        "تقدر تقول بأمانة «دي محتاجة أتأكّد منها صح بدل ما أخمّن» — تواضع معرفي مش هزيمة.",
+        "رفض الاستعجال بيحمي جودة تفكيرك، وهي الهدف الحقيقي للطوفان."
+      ],
+      "explanation": "Considering the opposite flips the gallop's main lever. The burden of proof sits with whoever makes a claim, not with whoever fails to refute it on the spot — so an unanswered claim is unproven, not conceded. Saying 'I'd need to check that one properly' is intellectual humility, and refusing to be rushed is exactly how you protect the quality of your own thinking.",
+      "explanationAr": "التفكير في العكس بيقلب الرافعة الأساسية للجري. عبء الإثبات على اللي بيدّعي مش على اللي ما فنّدش في اللحظة — فالادعاء اللي ما اتردّش عليه غير مُثبَت، مش مُسلَّم به. وقول «دي محتاجة أتأكّد منها صح» تواضع معرفي، ورفض الاستعجال هو بالظبط إزاي بتحمي جودة تفكيرك.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950"
+      ],
+      "cognitivebiasAtPlay": "Bias Blind Spot"
+    },
+    {
+      "id": 4,
+      "mechanic": "inoculate",
+      "technique": "scientific-sounding word salad",
+      "techniqueAr": "سلطة الكلام العلمي الزائف",
+      "task": "Feel the trick from the inside (then we expose it). Write one short, impressive-sounding 'mechanism' for a totally harmless claim — say, why drinking water in the morning is good — using big chained science words that mean nothing precise ('cellular hydro-osmotic re-alkalisation cascade'). Make it SOUND like real biochemistry. Notice how the words do all the persuading and zero of the explaining.",
+      "taskAr": "حِسّ بالحركة من جوّه (وبعدها نفضحها). اكتب «آلية» قصيرة بتبان مبهرة لادعاء غير ضار خالص — مثلاً ليه شرب المية الصبح كويس — باستخدام كلمات علمية متسلسلة مالهاش معنى دقيق («سلسلة إعادة القلونة الهيدرو-أوزموزية الخلوية»). خلّيها تبان كأنها كيمياء حيوية حقيقية. لاحظ إزاي الكلمات بتعمل كل الإقناع وصفر من الشرح.",
+      "tells": [
+        "Impressive chained terms with no single defined substance — ask 'which specific molecule?' and there's no answer.",
+        "No measurable pathway: real mechanisms name an assay or test; word-salad names none.",
+        "No publication: 'where is this shown?' has no reply, only more vocabulary.",
+        "The words persuade by sounding scientific, not by explaining anything — the costume IS the argument.",
+        "It collapses at the first concrete question; real biochemistry survives all three (substance / pathway / publication)."
+      ],
+      "tellsAr": [
+        "مصطلحات متسلسلة مبهرة بلا مادة محدّدة واحدة — اسأل «أنهي جزيء بالظبط؟» وما في إجابة.",
+        "لا مسار يُقاس: الآليات الحقيقية بتسمّي تحليل أو اختبار؛ سلطة الكلام ما بتسمّيش.",
+        "لا نشر: «ده متبيّن فين؟» مالوش ردّ، بس مفردات أكتر.",
+        "الكلمات بتقنع لأنها بتبان علمية، مش لأنها بتشرح حاجة — الزِيّ هو الحُجّة.",
+        "بينهار عند أول سؤال محدّد؛ الكيمياء الحقيقية بتنجو من الثلاثة (مادة / مسار / نشر)."
+      ],
+      "explanation": "Building the jargon yourself is active inoculation: once you've assembled the costume from the inside, you instantly see that borrowed vocabulary is decoration, not data. The integration defence against any 'detox' or pseudo-mechanism is the same three questions — which specific substance, by what measurable pathway, published where? Real biochemistry answers all three; word-salad collapses at the first. You don't need a chemistry degree, just the calm to ask, instead of being dazzled.",
+      "explanationAr": "إنك تبني المصطلحات بنفسك ده تلقيح نشط: أول ما تركّب الزِيّ من جوّه، بتشوف فوراً إن المفردات المستعارة زينة مش بيانات. الدفاع التكاملي ضد أي «ديتوكس» أو آلية زائفة هو نفس الأسئلة الثلاثة — أنهي مادة محدّدة، بأنهي مسار يُقاس، منشور فين؟ الكيمياء الحقيقية بتجاوب الثلاثة؛ وسلطة الكلام بتنهار عند الأول. مش محتاج شهادة كيمياء، بس الهدوء إنك تسأل بدل ما تنبهر.",
+      "sources": [
+        "EAL-case-001:redflag-10",
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/"
+      ],
+      "cognitivebiasAtPlay": "Dunning–Kruger Effect"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "After the flood, you notice you're exhausted and starting to doubt things you actually know well. What does today's lesson say is happening, and what protects you?",
+      "claimAr": "بعد الطوفان، لاحظت إنك مرهق وبدأت تشكّك في حاجات إنت فعلاً عارفها كويس. درس النهاردة بيقول إيه اللي بيحصل، وإيه اللي بيحميك؟",
+      "options": [
+        "You're discovering you were wrong all along",
+        "Cognitive fatigue from the flood erodes confidence even in true knowledge; the protection is to step back, rest, verify offline against your real sources, and not decide while overwhelmed",
+        "You should accept the group's view to end the stress",
+        "Doubt always means the other side is right"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A sustained flood is mentally exhausting by design, and a tired mind starts to wobble even on solid ground — this is how a firehose works on a person over time, the slow erosion of trust in one's own ability to know. The protection is exactly the inner training of this whole curriculum: step back, rest, and verify offline against real sources rather than deciding mid-storm. Never settle a belief while overwhelmed. Reclaiming your calm is not retreat — it's how you keep the wall between true and false standing.",
+      "explanationAr": "الطوفان المستمرّ مرهق ذهنياً بالتصميم، والعقل التعبان بيبدأ يتمايل حتى على أرض صلبة — كده الخرطوم بيشتغل على الشخص مع الوقت، التآكل البطيء للثقة في قدرتك على المعرفة. الحماية هي بالظبط التدريب الداخلي للمنهج كله: ارجع خطوة، ارتاح، واتأكّد بعيداً عن الجروب من مصادرك الحقيقية بدل ما تقرّر وسط العاصفة. عمرك ما تحسم معتقد وإنت مغمور. استرجاع هدوءك مش انسحاب — ده إزاي بتحافظ على الجدار بين الصح والغلط واقف.",
+      "sources": [
+        "https://www.rand.org/pubs/perspectives/PE198.html",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    }
+  ]
+}

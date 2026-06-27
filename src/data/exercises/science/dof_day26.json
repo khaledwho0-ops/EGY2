@@ -1,0 +1,98 @@
+{
+  "id": "degrees_of_freedom",
+  "phase": 2,
+  "week": 14,
+  "day": 26,
+  "title": "Researcher Degrees of Freedom",
+  "titleAr": "درجات حرية الباحث",
+  "description": "Understand how undisclosed flexibility in data analysis — researcher degrees of freedom — inflates false positive rates, based on Simmons, Nelson & Simonsohn (2011).",
+  "descriptionAr": "فهم كيف تؤدي المرونة غير المعلنة في تحليل البيانات — درجات حرية الباحث — إلى تضخيم معدلات الإيجابيات الخاطئة.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Researcher Degrees of Freedom",
+    "nameAr": "درجات حرية الباحث",
+    "definition": "Researcher degrees of freedom (Simmons, Nelson & Simonsohn, 2011) refer to the many undisclosed choices researchers make during data collection and analysis: which variables to include, how to code them, which participants to exclude, when to stop collecting data, which statistical test to use. Each choice is defensible individually, but the cumulative flexibility can inflate the false positive rate from 5% to over 60%.",
+    "definitionAr": "درجات حرية الباحث تشير إلى الخيارات العديدة غير المعلنة التي يتخذها الباحثون أثناء جمع البيانات وتحليلها. كل خيار يمكن الدفاع عنه بشكل فردي، لكن المرونة التراكمية يمكن أن تضخم معدل الإيجابيات الخاطئة من 5% إلى أكثر من 60%.",
+    "realWorldExample": "Simmons et al. (2011) demonstrated that playing the Beatles song 'When I'm 64' could make participants significantly younger through exploiting researcher degrees of freedom — a deliberately absurd finding meant to show how flexibility produces false positives.",
+    "detectionMethod": "Pre-registration of analysis plans, multiverse analysis (Steegen et al., 2016), specification curve analysis (Simonsohn et al., 2020), and 21-word solution disclosure statements."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A researcher has two dependent variables (DV1 and DV2), can include or exclude a covariate, can analyze data with or without 3 outliers, and can use a t-test or Mann-Whitney U test. How many unique analysis combinations ('forking paths') are possible?",
+      "promptAr": "باحث لديه متغيرين تابعين، يمكنه تضمين أو استبعاد متغير مشترك، يمكنه تحليل البيانات مع أو بدون 3 قيم شاذة، ويمكنه استخدام اختبار t أو اختبار مان-ويتني. كم عدد مجموعات التحليل الفريدة الممكنة؟",
+      "options": [
+        "8 combinations",
+        "16 combinations",
+        "32 combinations: 2 (DVs) × 2 (covariate) × 8 (outlier subsets: 2³) × 2 (tests) = 64... actually 2 × 2 × 2 × 2 = 16",
+        "16 combinations: 2 (DVs) × 2 (covariate) × 2 (outliers in/out) × 2 (test type)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Each binary choice doubles the analysis paths: 2 DVs × 2 covariate options × 2 outlier decisions × 2 tests = 16 unique analyses. If the researcher runs all 16 and reports only the significant one(s), the false positive rate far exceeds 5%. With just 4 binary choices, the probability of at least one false positive is 1−(0.95)^16 ≈ 56%. This is the core insight of Simmons et al. (2011).",
+      "explanationAr": "كل خيار ثنائي يضاعف مسارات التحليل: 2 × 2 × 2 × 2 = 16 تحليلاً فريداً. احتمال إيجابية خاطئة واحدة على الأقل هو 1−(0.95)^16 ≈ 56%."
+    },
+    {
+      "id": 2,
+      "type": "scenario",
+      "prompt": "Simmons et al. (2011) proposed the '21-word solution' to combat researcher degrees of freedom. What does it state?",
+      "promptAr": "اقترح سيمونز وآخرون (2011) 'حل الـ 21 كلمة' لمكافحة درجات حرية الباحث. ماذا ينص؟",
+      "options": [
+        "'We report how we determined our sample size, all data exclusions, all manipulations, and all measures in the study'",
+        "Authors must use Bayesian statistics exclusively",
+        "Authors must have their analyses replicated by an independent lab",
+        "Authors must report all p-values below 0.10"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 21-word solution requires authors to disclose: (1) how sample size was determined, (2) all data exclusions, (3) all experimental manipulations, and (4) all measures collected. This simple disclosure prevents selective reporting by making all researcher choices transparent. Many journals now require similar disclosure as part of their submission guidelines.",
+      "explanationAr": "حل الـ 21 كلمة يتطلب من المؤلفين الإفصاح عن: كيف تم تحديد حجم العينة، جميع استبعادات البيانات، جميع التلاعبات التجريبية، وجميع المقاييس المجمعة."
+    },
+    {
+      "id": 3,
+      "type": "identify",
+      "prompt": "A multiverse analysis (Steegen et al., 2016) of a published finding runs all 210 reasonable analysis specifications. Results: 35% show p<0.05, 65% show p>0.05. What is the appropriate conclusion?",
+      "promptAr": "تحليل متعدد الأكوان لنتيجة منشورة يُجري جميع الـ 210 مواصفات تحليل معقولة. النتائج: 35% تُظهر p<0.05، و65% تُظهر p>0.05. ما الاستنتاج المناسب؟",
+      "options": [
+        "The finding is robust because 35% is a large proportion",
+        "The finding is fragile: its significance depends heavily on arbitrary analysis choices, and the originally reported p<0.05 likely reflected selective specification",
+        "Only the original published analysis matters",
+        "The multiverse analysis is invalid because it includes unreasonable specifications"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A robust finding should be significant across most reasonable specifications. When only 35% of specifications yield significance, the original result was likely an artifact of particular (possibly cherry-picked) analysis choices. Steegen et al. (2016) introduced multiverse analysis precisely to reveal how sensitive conclusions are to the 'garden of forking paths' (Gelman & Loken, 2014).",
+      "explanationAr": "نتيجة قوية يجب أن تكون معنوية عبر معظم المواصفات المعقولة. عندما 35% فقط تعطي دلالة، النتيجة الأصلية كانت على الأرجح نتاج خيارات تحليل معينة."
+    },
+    {
+      "id": 4,
+      "type": "calculate",
+      "prompt": "If a researcher has 6 independent binary analysis decisions (each with 2 options), how many total analysis paths exist, and what is the probability of at least one false positive if all paths are explored at α=0.05?",
+      "promptAr": "إذا كان لدى الباحث 6 قرارات تحليل ثنائية مستقلة (كل منها بخيارين)، كم عدد مسارات التحليل الإجمالية، وما احتمال إيجابية خاطئة واحدة على الأقل إذا تم استكشاف جميع المسارات عند α=0.05؟",
+      "options": [
+        "64 paths, P(≥1 false positive) ≈ 5%",
+        "36 paths, P(≥1 false positive) ≈ 84%",
+        "64 paths, P(≥1 false positive) ≈ 96%",
+        "12 paths, P(≥1 false positive) ≈ 46%"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Total paths = 2⁶ = 64. P(≥1 false positive) = 1 − (1−0.05)^64 = 1 − 0.95^64 = 1 − 0.038 ≈ 0.962, or about 96%. With just 6 binary choices, the probability of finding at least one 'significant' result by chance alone is overwhelming. This is why pre-registration and multiverse analysis are essential safeguards.",
+      "explanationAr": "المسارات = 2⁶ = 64. احتمال إيجابية خاطئة واحدة على الأقل = 1 − 0.95^64 ≈ 96%. مع 6 خيارات ثنائية فقط، احتمال إيجاد نتيجة 'معنوية' بالصدفة ساحق."
+    },
+    {
+      "id": 5,
+      "type": "scenario",
+      "prompt": "A specification curve analysis (Simonsohn et al., 2020) plots all reasonable analysis specifications sorted by effect size, with confidence intervals. What pattern would indicate a genuinely robust finding?",
+      "promptAr": "تحليل منحنى المواصفات يرسم جميع مواصفات التحليل المعقولة مرتبة حسب حجم التأثير مع فترات الثقة. ما النمط الذي يشير إلى نتيجة قوية حقاً؟",
+      "options": [
+        "About half the specifications are positive and half negative",
+        "Only a few specifications are significant but they have very large effects",
+        "The specifications show a random pattern with no consistency",
+        "All specifications show effects in the same direction with most being statistically significant, and the median effect is meaningfully different from zero"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A robust finding in a specification curve shows consistent direction of effects across most reasonable specifications, with the majority being individually significant and the joint test of all specifications being significant. Simonsohn et al. (2020) proposed a permutation-based joint test that evaluates whether the overall pattern of results across all specifications is more extreme than expected under the null.",
+      "explanationAr": "نتيجة قوية في منحنى المواصفات تُظهر اتجاهاً متسقاً للتأثيرات عبر معظم المواصفات المعقولة، مع كون الأغلبية معنوية فردياً."
+    }
+  ]
+}

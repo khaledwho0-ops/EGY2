@@ -1,0 +1,103 @@
+{
+  "id": "day68_cohort_selection_bias",
+  "phase": 2,
+  "week": 10,
+  "day": 68,
+  "title": "Looking Forward — Cohort Studies & Selection Bias",
+  "titleAr": "البصّ لقدّام — دراسات الأتراب وانحياز الاختيار",
+  "description": "Take healthy people and follow them forward for years. Stronger than looking back — but slow, costly, and still shaped by who agrees to join and who quietly drops out.",
+  "descriptionAr": "خُد ناس أصحّاء وتابعهم لقدّام لسنين. أقوى من البصّ للورا — لكن بطيئة، ومكلّفة، ولسه بيشكّلها مين بيوافق يدخل ومين بينسحب في صمت.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-ecological-studies",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Dr. Ismail enrolls 500 HEALTHY factory workers and follows them forward for three years to see who develops the rash. By year three, 64 out of every 100 in the high-exposure section had symptoms. What design is this?",
+      "claimAr": "د. إسماعيل سجّل 500 عامل مصنع أصحّاء وتابعهم لقدّام لتلات سنين علشان يشوف مين هيطلع عنده الطفح. بحلول السنة التالتة، 64 من كل 100 في القسم عالي التعرّض ظهرت عندهم أعراض. ده تصميم إيه؟",
+      "options": [
+        "A case-control study looking backward",
+        "A cohort study: start with healthy people and follow them FORWARD over time to see who develops the outcome",
+        "A single case report",
+        "A randomized controlled trial"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A cohort study runs the opposite way to case-control: you start with healthy people, record their exposures now, and follow them forward to see who develops the disease. Because exposure is measured before anyone is sick, it sidesteps recall bias — you're not relying on memory. That makes it stronger and higher on the ladder. The price is time and money: a three-year follow-up is slow, expensive, and hard to keep complete.",
+      "explanationAr": "دراسة الأتراب بتجري عكس الحالات-والشواهد: بتبدأ بناس أصحّاء، تسجّل تعرّضاتهم دلوقتي، وتتابعهم لقدّام علشان تشوف مين هيطلع عنده المرض. ولأن التعرّض بيتقاس قبل ما حد يمرض، فهي بتتفادى انحياز التذكّر — إنت مش معتمد على الذاكرة. ده بيخلّيها أقوى وأعلى في السلّم. الثمن وقت وفلوس: متابعة تلات سنين بطيئة، ومكلّفة، وصعب تفضل كاملة.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-ecological-studies"],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "Out of 500 workers invited, the healthiest and most motivated agreed to join, while many who already felt unwell declined. Before seeing the analysis: how confident are you this CANNOT distort the study's results, since all 500 were initially invited?",
+      "claimAr": "من 500 عامل اتدعوا، الأصحّ والأكتر تحفيزاً وافقوا يدخلوا، بينما كتير من اللي حاسّين بتعب أصلاً رفضوا. قبل ما تشوف التحليل: قد إيه واثق إن ده ما يقدرش يشوّه نتايج الدراسة، طالما الـ500 كلهم اتدعوا أصلاً؟",
+      "options": [
+        "Very confident — everyone was invited, so there's no bias",
+        "Not confident — who actually joins, not who is invited, is what determines the sample"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Selection bias: if the people who join differ systematically from those who don't, the cohort no longer represents everyone, and the results may not transfer to them. It also strikes when people drop out: if the sickest quietly leave the study, the survivors look healthier than they should. Who is in and who is out silently shapes the answer — not who was invited. Calibration check: the 'everyone was invited' framing is a common misdirection that conflates invitation with participation.",
+      "explanationAr": "انحياز الاختيار: لو المتطوّعين أصحّ أو أغنى أو أكتر تحفيزاً بشكل منهجي من اللي رفضوا، فالتِّربة مبقتش صورة عادلة لكل العمالة — ونتايجك ممكن ما تنطبقش عليهم. وبيضرب كمان لمّا الناس تنسحب: لو الأمرض ساب الدراسة في صمت، الباقيين بيبانوا أصحّ من الحقيقة. مين داخل ومين خارج بيشكّل الإجابة في صمت — مش مين اتدعى. فحص المعايرة: صياغة «الكل اتدعى» تشتيت شائع بيخلط بين الدعوة والمشاركة.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-ecological-studies"],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The cohort finds that workers who drink more coffee get more lung disease. Before blaming coffee, what lurking third factor should you check?",
+      "claimAr": "التِّربة لقت إن العمّال اللي بيشربوا قهوة أكتر بيجيلهم أمراض رئة أكتر. قبل ما تلوم القهوة، أنهي عامل تالت خفيّ لازم تتأكد منه؟",
+      "options": [
+        "Nothing — coffee clearly causes lung disease",
+        "Smoking: coffee drinkers may also smoke more, so smoking (a confounder) could explain both the coffee link and the lung disease"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what makes something a 'confounder' — and how does a confounder fool a cohort study into pointing at the wrong cause?",
+        "promptAr": "بكلماتك: إيه اللي بيخلّي حاجة «عاملاً مربِكاً» — وإزاي العامل المربِك بيخدع دراسة الأتراب علشان تأشّر على السبب الغلط؟"
+      },
+      "explanation": "A confounder is a third variable that is linked to both the exposure (coffee) and the outcome (lung disease) — and if you don't measure and adjust for it, it can make a harmless association look causal. Coffee drinkers are often also smokers, and smoking causes lung disease — so coffee can look guilty while the real culprit is smoking riding along beside it. A good cohort study measures and adjusts for confounders like smoking, age, and job type. Without that, a real-looking association can point at completely the wrong cause. Naming this in your own words builds the habit of always asking 'what else could explain this link?' before accepting a causal claim.",
+      "explanationAr": "العامل المربِك هو متغيّر تالت مرتبط بالتعرّض (القهوة) وبالنتيجة (مرض الرئة) في نفس الوقت — ولو ما قستوش وما عدّلتوش له، ممكن يخلّي ارتباط غير ضار يبان سببياً. شرّابين القهوة غالباً مدخّنين كمان، والتدخين بيسبّب أمراض رئة — فالقهوة ممكن تبان مذنبة والجاني الحقيقي هو التدخين ماشي جنبها. الدراسة الأترابية الكويسة بتقيس وبتعدّل للعوامل المربِكة. من غير ده، ارتباط شكله حقيقي ممكن يأشّر على سبب غلط تماماً. إنك تسمّي ده بكلماتك بيبني عادة إنك دايماً تسأل «إيه تاني ممكن يفسّر الرابط ده؟» قبل ما تقبل أي ادعاء سببي.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-ecological-studies"],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A wellness influencer says: 'A long study followed thousands of people who eat like «نظام الطيبات» followers and they lived longer — proof the diet works.'",
+      "claimAr": "مؤثّر عافية بيقول: «دراسة طويلة تابعت آلاف الناس اللي بياكلوا زي أتباع نظام الطيبات وعاشوا أطول — دليل إن الحمية بتنفع».",
+      "prompt": "What would disprove this claim? What other explanations could account for the longer life of people who follow strict 'clean eating' diets, even if the specific banned-food rules are irrelevant?",
+      "promptAr": "إيه اللي يكذّب الادعاء ده؟ إيه التفسيرات التانية اللي ممكن تفسّر طول عمر اللي بيتّبعوا حميات «الأكل النظيف» الصارمة، حتى لو القواعد المحدّدة للأكل الممنوع غير ذات صلة؟",
+      "modelPoints": [
+        "People who commit to a strict long-term diet tend to be more health-conscious in many other ways: they exercise more, smoke less, see doctors more regularly, and sleep better — any of these could explain longer life.",
+        "Strong evidence supports legumes and leafy vegetables as longevity foods; if 'clean eaters' happen to eat more of those, that (not the banned-food rules) could explain the result.",
+        "The specific «الطيبات» claim was not that eating well is good — it was that chicken and milk are toxic. A cohort showing 'clean eaters live longer' says nothing about whether chicken and milk are harmful to people who eat them.",
+        "Wealthier, more educated people are both more likely to adopt strict diets AND to live longer for entirely unrelated reasons — wealth and education are confounders, not evidence for the diet itself."
+      ],
+      "modelPointsAr": [
+        "الناس اللي بتلتزم بحمية صارمة طويلة الأمد غالباً بتكون أكثر وعياً بالصحة بطرق كتير تانية: بتتمرّن أكتر، بتدخّن أقل، بتروح للدكاترة بانتظام أكبر، وبتنام أحسن — أي من دول ممكن يفسّر طول العمر.",
+        "الأدلة القوية بتدعم البقوليات والخضار الورقية كأطعمة طول عمر؛ لو «الآكلين النظيف» صادف إنهم بياكلوا أكتر منها، ده (مش قواعد الأكل الممنوع) ممكن يفسّر النتيجة.",
+        "الادعاء المحدّد لـ«الطيبات» مش كان إن الأكل الكويس مفيد — كان إن الفراخ واللبن سُم. تِربة بتبيّن إن «الآكلين النظيف» بيعيشوا أطول ما بتقولش حاجة عن هل الفراخ واللبن ضارّين للناس اللي بتاكلهم.",
+        "الناس الأغنى والأكثر تعليماً أكثر احتمالاً يتّبعوا حميات صارمة وأكثر احتمالاً يعيشوا أطول لأسباب غير ذات صلة تماماً — الثروة والتعليم عوامل مربِكة، مش دليل على الحمية نفسها."
+      ],
+      "sources": ["EAL-case-001:ems-2026-03", "https://www.hsph.harvard.edu/nutritionsource/healthy-eating-plate/"],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "True or false: because a cohort study follows real people forward in time, it removes all bias and proves cause as well as an experiment.",
+      "claimAr": "صح ولا غلط: بما إن دراسة الأتراب بتتابع ناس حقيقيين لقدّام في الزمن، فهي بتشيل كل انحياز وبتثبت السبب زيها زي التجربة.",
+      "correctAnswer": false,
+      "myth_en": "A long forward-looking study is as good as an experiment.",
+      "myth_ar": "الدراسة الطويلة اللي بتبصّ لقدّام زيها زي التجربة.",
+      "explanation": "False. A cohort study is genuinely stronger than looking backward — it dodges recall bias and shows the time-order of events. But it is still observational: you only watched who got exposed, you didn't assign it. So selection bias (who joins, who drops out) and confounders (lurking third factors) can still creep in. To truly nail down cause, you need to take control and randomly assign the exposure yourself — which is the next and strongest rung: the randomized controlled trial.",
+      "explanationAr": "غلط. دراسة الأتراب فعلاً أقوى من البصّ للورا — بتتفادى انحياز التذكّر وبتوري ترتيب الأحداث في الزمن. لكنها لسه رصدية: إنت بس اتفرّجت على مين اتعرّض، إنت ما حدّدتش التعرّض. فانحياز الاختيار (مين بيدخل، مين بينسحب) والعوامل المربِكة (عوامل تالتة خفيّة) لسه ممكن يتسلّلوا. علشان تثبت السبب فعلاً، لازم تاخد زمام الأمور وتوزّع التعرّض عشوائياً بنفسك — وهي الدرجة اللي بعدها والأقوى: التجربة العشوائية المُحكَمة.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-ecological-studies"],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

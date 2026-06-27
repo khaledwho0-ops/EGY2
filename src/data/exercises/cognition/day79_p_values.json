@@ -1,0 +1,119 @@
+{
+  "id": "day79_p_values",
+  "phase": 2,
+  "week": 12,
+  "day": 79,
+  "title": "p < 0.05 — What It Actually Means",
+  "titleAr": "p < 0.05 — إيه اللي يعنيه فعلاً",
+  "description": "The p-value is the most misquoted number in health media. It does NOT mean the treatment works, or that the chance of error is 5%. Learn what it really says — and the three things it can never tell you.",
+  "descriptionAr": "الـp-value هو أكتر رقم بيتاقل معاه بالغلط في إعلام الصحة. مش معناه إن العلاج شغّال، ولا إن احتمال الغلط 5%. اتعلّم إيه اللي بيقوله فعلاً — والثلاث حاجات اللي ما يقدرش يقولها أبداً.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 17,
+  "source": "https://www.bmj.com/content/355/bmj.i5161",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A YouTube health presenter says: \"The study found p = 0.03, which means there is a 97% chance the supplement works!\" Is that an accurate reading?",
+      "claimAr": "مقدّم صحة على يوتيوب بيقول: «الدراسة لقت p = 0.03، يعني في 97% احتمال إن المكمّل شغّال!» ده قراءة دقيقة؟",
+      "options": [
+        "Yes — p = 0.03 means 97% probability of effectiveness",
+        "No — the p-value says nothing about the probability the treatment works; it measures something else entirely",
+        "Yes — any p below 0.05 proves effectiveness",
+        "No — it means the supplement has a 3% chance of working"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The p-value measures the probability of seeing a result this extreme (or more extreme) purely by chance IF the null hypothesis were true — meaning IF the supplement actually had no effect. It does NOT tell you the probability that the supplement works. A p of 0.03 means 'if there were truly no effect, random chance would produce results this large only 3% of the time.' That's useful but narrow, and it is still routinely misread by journalists and even by some researchers.",
+      "explanationAr": "الـp-value بيقيس احتمال مشاهدة نتيجة بهذا الشدّة (أو أشد) بالصدفة البحتة — لو كانت الفرضية الصفرية صحيحة، يعني لو المكمّل ما عنده تأثير فعلاً. مش بيقول لك احتمال إن المكمّل شغّال. p = 0.03 يعني «لو ما كانش في تأثير حقيقي، الصدفة العشوائية كانت هتنتج نتائج بالحجم ده بس في 3% من الوقت». ده مفيد لكن محدود، وما زال بيتقلب غلط باستمرار من الصحفيين وحتى بعض الباحثين.",
+      "sources": [
+        "https://www.bmj.com/content/355/bmj.i5161",
+        "https://www.nature.com/articles/d41586-019-00857-9"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A study testing whether the viral «نظام الطيبات» diet reduces blood glucose gets p = 0.04. The only correct conclusion the p-value alone can support is: 'the result is unlikely to be pure coincidence at this sample size and measurement method.'",
+      "claimAr": "دراسة بتختبر إذا كان نظام «الطيبات» بيقلّل سكر الدم حصلت على p = 0.04. الاستنتاج الوحيد الصحيح اللي قيمة p بمفردها تقدر تدعمه هو: «النتيجة من المرجّح إنها مش ناتجة عن الصدفة البحتة في ظل حجم العيّنة ومنهج القياس ده».",
+      "options": [
+        "The diet definitely lowers blood glucose",
+        "The result is unlikely to be pure coincidence at this sample size and measurement method — and that is all",
+        "The diet is safe to use in place of insulin",
+        "The result will replicate in future studies"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: if p = 0.04 cannot tell you the diet works, what three questions would you still need answered before advising a diabetic family member to try it?",
+        "promptAr": "بكلماتك: لو p = 0.04 ما تقدرش تقولك إن الحِمية شغّالة، إيه الثلاث أسئلة اللي لازم تُجاب قبل ما تنصح قريب مريض بالسكري يجرّبها؟"
+      },
+      "explanation": "A p-value below 0.05 tells you only one narrow thing: the result is unlikely to arise from chance alone under the conditions tested. It says nothing about whether the effect size is clinically meaningful, whether the study was well designed, whether it replicates, or whether the treatment is safe. The three questions it cannot answer: (1) Is this a large or small effect? (2) Is it safe? (3) Will it hold for a different population?",
+      "explanationAr": "قيمة p أقل من 0.05 بتقولك حاجة واحدة ضيّقة بس: النتيجة من المرجّح إنها مش ناتجة عن الصدفة لوحدها في ظل الشروط المُختبَرة. مش بتقول حاجة عن إذا كان حجم التأثير مهم سريرياً، ولا إذا كانت الدراسة مصمّمة كويس، ولا إذا كانت هتتكرّر، ولا إذا كان العلاج آمن. الثلاث أسئلة اللي ما تقدرش تجاوب عليها: (1) التأثير كبير ولا صغير؟ (2) آمن؟ (3) هيصمد لمجتمع مختلف؟",
+      "sources": [
+        "https://www.bmj.com/content/355/bmj.i5161"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "recognize",
+      "claim": "True or false: if a study gets p = 0.06 it proves the treatment has no effect.",
+      "claimAr": "صح ولا غلط: لو دراسة حصلت على p = 0.06 ده بيثبت إن العلاج ما عنده تأثير.",
+      "correctAnswer": false,
+      "myth_en": "p > 0.05 means no effect.",
+      "myth_ar": "p > 0.05 يعني لا تأثير.",
+      "explanation": "False. A p-value above 0.05 means only that the evidence did not cross the conventional significance threshold in THIS study — it could be a small sample, high variability, or a real but modest effect the study was underpowered to detect. 'Not statistically significant' is not the same as 'no effect exists.' This common misreading has caused real treatments to be prematurely abandoned.",
+      "explanationAr": "غلط. قيمة p فوق 0.05 تعني بس إن الدليل ما عدّش عتبة الأهمية الاصطلاحية في الدراسة دي — ممكن يكون عيّنة صغيرة، أو تباين عالٍ، أو تأثير حقيقي متواضع الدراسة ما كانتش عندها القوة الكافية لاكتشافه. «ليس ذا أهمية إحصائية» مش نفس «لا يوجد تأثير». القراءة الغلط دي الشائعة سبّبت التخلّي المبكر عن علاجات حقيقية.",
+      "sources": [
+        "https://www.nature.com/articles/d41586-019-00857-9",
+        "https://www.bmj.com/content/355/bmj.i5161"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A researcher runs 40 different analyses on the same dataset looking for any result with p < 0.05. She finds three. She is inclined to publish all three as real discoveries.",
+      "claimAr": "باحثة عملت 40 تحليل مختلف على نفس مجموعة البيانات بتدوّر على أي نتيجة p < 0.05. لقت تلاتة. بتميل لنشر التلاتة كاكتشافات حقيقية.",
+      "prompt": "What would have to be true for all three findings to be REAL effects? And what is the simpler, more likely explanation?",
+      "promptAr": "إيه اللي لازم يكون صح عشان التلاتة النتائج تكون تأثيرات حقيقية؟ وإيه التفسير الأبسط والأكثر احتمالاً؟",
+      "modelPoints": [
+        "For all three to be real: each would need to survive pre-registered replication in an independent sample — a far higher bar than passing p < 0.05 in one dataset.",
+        "The simpler explanation: running 40 tests at p < 0.05 expects about 2 false positives by chance alone (40 × 0.05 = 2). Three significant results is close to the expected noise level.",
+        "Legitimate research pre-registers analyses before data collection so fishing is impossible — the absence of pre-registration is a major red flag.",
+        "Publishing all three without acknowledging multiple testing inflates the scientific literature with false leads that may harm patients when acted upon."
+      ],
+      "modelPointsAr": [
+        "عشان التلاتة تكون حقيقية: كل واحدة محتاجة تصمد أمام تكرار مُسجَّل مسبقاً في عيّنة مستقلة — معيار أعلى بكتير من مجرد اجتياز p < 0.05 في مجموعة بيانات واحدة.",
+        "التفسير الأبسط: تشغيل 40 اختبار بـp < 0.05 بيتوقع تقريباً نتيجتين إيجابيتين كاذبتين بالصدفة لوحدها (40 × 0.05 = 2). تلاتة نتائج ذات أهمية قريبة من مستوى الضوضاء المتوقّع.",
+        "البحث الشرعي بيسجّل التحليلات قبل جمع البيانات عشان الصيد يبقى مستحيل — غياب التسجيل المسبق علامة تحذير كبيرة.",
+        "نشر التلاتة من غير الاعتراف بالاختبار المتعدد بيضخّم الأدبيات العلمية بخيوط كاذبة ممكن تضر المرضى لو اتُصرِّف بناءً عليها."
+      ],
+      "sources": [
+        "https://www.nature.com/articles/d41586-019-00857-9",
+        "https://www.bmj.com/content/355/bmj.i5161"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this headline argument: \"Breakthrough Study: New Herb Reduces Cancer Marker — Statistically Significant (p = 0.04). You should start taking it.\"",
+      "claimAr": "فكّك حُجّة العنوان ده: «دراسة مُذهلة: عشبة جديدة بتقلّل مؤشر السرطان — ذات أهمية إحصائية (p = 0.04). يجب أن تبدأ في تناولها.»",
+      "parts": [
+        { "text": "You should start taking this herb.", "textAr": "يجب أن تبدأ في تناول العشبة دي.", "role": "conclusion" },
+        { "text": "The study found p = 0.04.", "textAr": "الدراسة لقت p = 0.04.", "role": "premise" },
+        { "text": "(Unstated) p < 0.05 means the treatment works and is safe.", "textAr": "(غير مذكور) p < 0.05 يعني إن العلاج شغّال وآمن.", "role": "assumption" },
+        { "text": "The study is labelled 'breakthrough'.", "textAr": "الدراسة مُسمَّاة «مُذهلة».", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption carries everything: that p < 0.05 means 'the treatment works and is safe.' It does not. The p-value says only that the result is unlikely by chance — it says nothing about effect size, safety, replication, or whether reducing a biomarker translates to better patient outcomes. The word 'breakthrough' is irrelevant — it is marketing language, not evidence. Once the assumption is exposed, the conclusion to 'start taking it' has no scientific support.",
+      "explanationAr": "الافتراض الخفي بيحمل كل حاجة: إن p < 0.05 يعني «العلاج شغّال وآمن». ما بيعنيش كده. الـp-value بيقول بس إن النتيجة مش محتملة بالصدفة — ما بيقولش حاجة عن حجم التأثير أو السلامة أو التكرار أو إذا كان تقليل مؤشر حيوي بيترجم لنتائج أفضل للمريض. كلمة «مُذهلة» غير ذات صلة — لغة تسويقية مش دليل. أول ما الافتراض يتكشّف، خلاصة «ابدأ في تناولها» ما عندهاش أي سند علمي.",
+      "sources": [
+        "https://www.bmj.com/content/355/bmj.i5161",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    }
+  ]
+}

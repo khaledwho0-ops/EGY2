@@ -1,0 +1,146 @@
+{
+  "id": "day7_deepreal_teaser",
+  "phase": 0,
+  "week": 1,
+  "day": 7,
+  "title": "DeepReal Teaser: OSINT Basics",
+  "titleAr": "تشويقة الواقع العميق: أساسيات الاستخبارات المفتوحة",
+  "description": "Introduction to Open Source Intelligence (OSINT) investigation techniques. Learn reverse image search, metadata checking, and source tracing.",
+  "descriptionAr": "مقدمة لتقنيات تحقيق الاستخبارات مفتوحة المصدر (OSINT). تعلم البحث العكسي عن الصور، فحص البيانات الوصفية، وتتبع المصادر.",
+  "type": "osint",
+  "difficulty": 2,
+  "estimatedMinutes": 20,
+  "dataFile": "layer1_osint_chunk.json",
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Reverse Image Search",
+      "titleAr": "البحث العكسي عن الصور",
+      "mediaDescription": "A viral image on Egyptian Facebook claims to show Egyptian military vehicles entering Gaza in 2024.",
+      "mediaDescriptionAr": "صورة فيروسية على فيسبوك مصري تدعي أنها تظهر مركبات عسكرية مصرية تدخل غزة في ٢٠٢٤.",
+      "investigationSteps": [
+        "Save the image to your device",
+        "Go to Google Images (images.google.com) and click the camera icon",
+        "Upload the image or paste its URL",
+        "Check the 'Visually similar images' results",
+        "Look for the EARLIEST date this image appeared online",
+        "Compare the claimed context vs. the original context"
+      ],
+      "investigationStepsAr": [
+        "احفظ الصورة على جهازك",
+        "اذهب إلى صور جوجل وانقر أيقونة الكاميرا",
+        "حمّل الصورة أو الصق رابطها",
+        "تحقق من نتائج 'صور مشابهة بصرياً'",
+        "ابحث عن أبكر تاريخ ظهرت فيه الصورة على الإنترنت",
+        "قارن السياق المدعى مع السياق الأصلي"
+      ],
+      "toolsToUse": ["Google Images", "TinEye.com", "Yandex Images (often better for Middle East content)", "Bing Visual Search"],
+      "correctFindings": "The image actually dates from a 2013 military exercise in Sinai and was reused out of context. The original source is an Egyptian military press release from October 2013.",
+      "correctFindingsAr": "الصورة في الحقيقة من تمرين عسكري في سيناء عام ٢٠١٣ وأُعيد استخدامها خارج سياقها. المصدر الأصلي بيان صحفي عسكري مصري من أكتوبر ٢٠١٣."
+    },
+    {
+      "id": 2,
+      "title": "EXIF Metadata Analysis",
+      "titleAr": "تحليل البيانات الوصفية EXIF",
+      "mediaDescription": "A photo circulating on Twitter claims to show 'current flooding in Alexandria, Egypt'. You need to verify if it's actually from Alexandria and from this year.",
+      "mediaDescriptionAr": "صورة متداولة على تويتر تدعي أنها تظهر 'فيضانات حالية في الإسكندرية'. تحتاج للتحقق هل هي فعلاً من الإسكندرية ومن هذا العام.",
+      "investigationSteps": [
+        "Download the original image (not a screenshot)",
+        "Use an EXIF viewer tool (Jeffrey's EXIF Viewer or exif.tools)",
+        "Check for GPS coordinates in the metadata",
+        "Check the DateTimeOriginal field for the actual capture date",
+        "Check the camera model/software field",
+        "Note: social media strips EXIF data — original source matters"
+      ],
+      "investigationStepsAr": [
+        "حمّل الصورة الأصلية (ليس لقطة شاشة)",
+        "استخدم أداة عرض EXIF",
+        "تحقق من إحداثيات GPS في البيانات الوصفية",
+        "تحقق من حقل تاريخ التقاط الأصلي",
+        "تحقق من حقل طراز الكاميرا/البرنامج",
+        "ملاحظة: وسائل التواصل الاجتماعي تزيل بيانات EXIF"
+      ],
+      "toolsToUse": ["Jeffrey's EXIF Viewer (exif.regex.info)", "exif.tools", "FotoForensics.com", "Our own /forensic-image tool"],
+      "correctFindings": "The EXIF data reveals GPS coordinates from Istanbul, Turkey (not Alexandria). The DateTimeOriginal shows 2021, not 2024. The image was taken with an iPhone 12 and processed with Instagram (indicating social media origin).",
+      "correctFindingsAr": "بيانات EXIF تكشف إحداثيات GPS من إسطنبول، تركيا (وليس الإسكندرية). تاريخ التقاط الأصلي يظهر ٢٠٢١ وليس ٢٠٢٤."
+    },
+    {
+      "id": 3,
+      "title": "Source Tracing via Domain Analysis",
+      "titleAr": "تتبع المصدر عبر تحليل النطاق",
+      "mediaDescription": "A 'news article' circulating on WhatsApp claims that a new Egyptian law will ban TikTok. The article is from a website called 'egypt-news-today.com'.",
+      "mediaDescriptionAr": "مقال 'إخباري' متداول على واتساب يدعي أن قانوناً مصرياً جديداً سيحظر تيك توك. المقال من موقع يسمى 'egypt-news-today.com'.",
+      "investigationSteps": [
+        "Check the domain registration using WHOIS (whois.domaintools.com)",
+        "Look at when the domain was created (recently = suspicious)",
+        "Check who registered it (hidden = red flag)",
+        "Use the Wayback Machine (web.archive.org) to check the site's history",
+        "Look for an 'About Us' or 'Contact' page on the site",
+        "Cross-reference the claim with established news outlets"
+      ],
+      "investigationStepsAr": [
+        "تحقق من تسجيل النطاق باستخدام WHOIS",
+        "انظر متى تم إنشاء النطاق (حديث = مشبوه)",
+        "تحقق من المسجل (مخفي = علامة حمراء)",
+        "استخدم آلة الواي باك للتحقق من تاريخ الموقع",
+        "ابحث عن صفحة 'من نحن' أو 'اتصل بنا'",
+        "قارن الادعاء مع منافذ إخبارية معروفة"
+      ],
+      "toolsToUse": ["WHOIS Lookup", "Wayback Machine (web.archive.org)", "Google News search", "SimilarWeb (traffic analysis)"],
+      "correctFindings": "WHOIS shows the domain was created 3 weeks ago, registered through a privacy service in Panama. The Wayback Machine has no history of the site. No established Egyptian news outlet has reported this law. The site is a misinformation factory.",
+      "correctFindingsAr": "WHOIS يظهر أن النطاق أُنشئ قبل ٣ أسابيع، مسجل عبر خدمة خصوصية في بنما. لا تاريخ للموقع في آلة الواي باك. لم تنشر أي وسيلة إخبارية مصرية معروفة هذا القانون. الموقع مصنع معلومات مضللة."
+    },
+    {
+      "id": 4,
+      "title": "Video Geolocation",
+      "titleAr": "تحديد الموقع الجغرافي للفيديو",
+      "mediaDescription": "A dramatic video claims to show 'Egyptian security forces raiding a protest in Tahrir Square last night.' You need to verify if the location is actually Tahrir Square.",
+      "mediaDescriptionAr": "فيديو درامي يدعي أنه يظهر 'قوات أمن مصرية تداهم احتجاجاً في ميدان التحرير الليلة الماضية.' تحتاج للتحقق هل الموقع هو فعلاً ميدان التحرير.",
+      "investigationSteps": [
+        "Take screenshots of distinctive landmarks in the video",
+        "Use Google Earth/Maps to compare the location",
+        "Look for identifiable street signs, building facades, or infrastructure",
+        "Check the direction of shadows (indicates time of day and hemisphere)",
+        "Compare vegetation, car types, and road markings with known Egyptian footage",
+        "Listen for ambient audio clues (language, call to prayer, traffic patterns)"
+      ],
+      "investigationStepsAr": [
+        "خذ لقطات شاشة لمعالم مميزة في الفيديو",
+        "استخدم خرائط جوجل للمقارنة",
+        "ابحث عن لافتات شوارع قابلة للتعرف أو واجهات مباني",
+        "تحقق من اتجاه الظلال (يشير لوقت اليوم ونصف الكرة)",
+        "قارن النباتات وأنواع السيارات وعلامات الطريق",
+        "استمع لقرائن الصوت المحيط (اللغة، الأذان، أنماط المرور)"
+      ],
+      "toolsToUse": ["Google Earth Pro", "Google Maps Street View", "SunCalc (shadow analysis)", "Wikimapia"],
+      "correctFindings": "The building facades and road layout do NOT match Tahrir Square. The video actually shows a protest in Algiers, Algeria. Key giveaway: the street signs are in French/Arabic (Egypt uses Arabic/English). The car license plates are also non-Egyptian.",
+      "correctFindingsAr": "واجهات المباني وتخطيط الطريق لا تتطابق مع ميدان التحرير. الفيديو يُظهر فعلاً احتجاجاً في الجزائر العاصمة. الدليل الأساسي: لافتات الشوارع بالفرنسية/العربية (مصر تستخدم العربية/الإنجليزية)."
+    },
+    {
+      "id": 5,
+      "title": "Fact-Check Database Cross-Reference",
+      "titleAr": "مرجع تقاطعي مع قواعد بيانات التحقق",
+      "mediaDescription": "A claim circulating in Arabic says: 'NASA confirmed that the Earth will experience 3 days of complete darkness in December.' You need to verify this through fact-checking databases.",
+      "mediaDescriptionAr": "ادعاء متداول بالعربية: 'ناسا أكدت أن الأرض ستشهد ٣ أيام من الظلام التام في ديسمبر.' تحتاج للتحقق عبر قواعد بيانات التحقق.",
+      "investigationSteps": [
+        "Search the claim on Misbar.com (Arabic fact-checking platform)",
+        "Search on Fatabyyano.net (Egyptian Arabic fact-checker)",
+        "Check Snopes.com for the English version of this claim",
+        "Search NASA.gov directly for the specific claim",
+        "Check AFP Fact Check Arabic edition",
+        "Document the earliest origin of this rumor"
+      ],
+      "investigationStepsAr": [
+        "ابحث عن الادعاء في Misbar.com (منصة تحقق عربية)",
+        "ابحث في فتبينوا.نت (منصة تحقق مصرية عربية)",
+        "تحقق من Snopes.com للنسخة الإنجليزية",
+        "ابحث في NASA.gov مباشرةً",
+        "تحقق من وكالة فرانس برس تحقق بالعربية",
+        "وثّق أبكر أصل لهذه الشائعة"
+      ],
+      "toolsToUse": ["Misbar.com", "Fatabyyano.net", "Snopes.com", "AFP Fact Check", "PolitiFact", "Google Fact Check Explorer"],
+      "correctFindings": "All major fact-checking databases debunk this as a recurring hoax since 2012. NASA has explicitly denied the claim multiple times. The '3 days of darkness' is a recurring internet hoax that resurfaces every December. It likely derives from biblical/apocalyptic themes.",
+      "correctFindingsAr": "جميع قواعد بيانات التحقق الرئيسية تدحض هذا كخدعة متكررة منذ ٢٠١٢. ناسا نفت الادعاء صراحةً عدة مرات. 'ثلاثة أيام من الظلام' خدعة إنترنت متكررة تعاود الظهور كل ديسمبر."
+    }
+  ]
+}

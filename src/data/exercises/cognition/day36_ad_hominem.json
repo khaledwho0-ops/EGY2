@@ -1,0 +1,131 @@
+{
+  "id": "day36_ad_hominem",
+  "phase": 1,
+  "week": 6,
+  "day": 36,
+  "title": "Ad Hominem — Attack the Person, Not the Argument",
+  "titleAr": "مغالطة الشخصنة — ضرب الشخص بدل الحجة",
+  "description": "When someone can't answer your argument, they attack you instead. Spotting this move protects you from being distracted and lets you stay focused on the evidence.",
+  "descriptionAr": "لمّا حد ما يقدرش يردّ على حجّتك، بيهاجمك إنت. اكتشاف الحركة دي بيحميك من التشتيت وبيخلّيك تفضل مركّز على الدليل.",
+  "type": "logic",
+  "difficulty": 2,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A nutrition specialist publicly questions the viral Taybat diet system. A follower responds: \"Who is she to speak? She's overweight herself — her advice means nothing.\" What is wrong with this response?",
+      "claimAr": "أخصائية تغذية بتشكّك علناً في نظام الطيبات. ردّ تابع: «هي مين علشان تتكلّم؟ هي نفسها تقيلة — كلامها مالوش قيمة». إيه الغلط في الردّ ده؟",
+      "options": [
+        "Nothing — her weight does undermine her credibility",
+        "It is an ad hominem: the specialist's personal appearance does not affect whether her evidence is correct or wrong",
+        "It is fair criticism because experts must practise what they preach",
+        "The argument is valid because she has a conflict of interest"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is a textbook ad hominem: instead of answering 'is the evidence she cited real?', the response attacks who she is. Her weight says nothing about whether the Taybat system's claims hold up to scrutiny. Good evidence remains good evidence regardless of who presents it. The move works because it shifts your attention away from the actual argument.",
+      "explanationAr": "ده مثال كتابي على الشخصنة: بدل ما يردّ على «هل الدليل اللي ذكرته حقيقي؟»، الردّ بيهاجم مَن هي. وزنها ما بيقولش حاجة عن صحة أو خطأ ادعاءات نظام الطيبات. الدليل الكويس يفضل كويساً مهما كان اللي قدّمه. الحركة بتشتغل لأنها بتحوّل انتباهك من الحجة الأصلية.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Ad Hominem"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if a doctor who smokes tells you that smoking causes cancer, his own smoking habit makes the medical evidence he is citing false.",
+      "claimAr": "صح ولا غلط: لو دكتور بيدخّن قالك إن التدخين بيسبّب السرطان، عادة تدخينه الشخصية بتخلّي الدليل الطبي اللي بيذكره غلط.",
+      "options": ["True — a hypocrite's true statement becomes false", "False — the doctor's personal habit is a separate matter from the truth of the evidence"],
+      "correctAnswer": 1,
+      "explanation": "False. Decades of systematic reviews and millions of cases confirm the smoking–cancer link — the doctor's behaviour doesn't change that data. Pointing out his hypocrisy might be relevant to judging his lifestyle advice, but never to the scientific claim itself. Calibration note: if you felt confident this was true, that pull is exactly what the ad hominem exploits — it feels satisfying to call out hypocrisy even when it's logically irrelevant.",
+      "explanationAr": "غلط. عقود من المراجعات المنهجية وملايين الحالات بتؤكّد العلاقة بين التدخين والسرطان — سلوك الدكتور ما بيغيّرش البيانات دي. ملاحظة المعايرة: لو حسّيت بيقين إن ده صح، الشعور ده هو بالظبط اللي الشخصنة بتستغلّه — بتحسّ بارتياح لمّا تفضح النفاق حتى لو مش وجيه منطقياً.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/tobacco",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Ad Hominem"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "In a health debate, someone says: \"Don't trust Dr. Salma's research on diet and cancer — she received a grant from a food company five years ago.\" When is this actually a relevant point, and when is it an ad hominem distraction?",
+      "claimAr": "في نقاش صحي، حد بيقول: «ما تثقش في بحث دكتورة سلمى عن الأكل والسرطان — هي اخدت منحة من شركة أغذية من خمس سنين». إمتى الكلام ده وجيه فعلاً، وإمتى بيبقى شخصنة مشتّتة؟",
+      "options": [
+        "It is always a valid reason to dismiss her findings",
+        "It is a genuine concern only if her methodology was compromised by that funding — the grant alone says nothing about whether her data is correct or not",
+        "It is never relevant — funding never affects research",
+        "It is relevant only if the food company is large"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what makes a funding-source objection a legitimate concern vs a disguised ad hominem? What would you need to see to make it legitimate?",
+        "promptAr": "بكلماتك: إيه اللي بيخلّي الاعتراض على مصدر التمويل قلقاً حقيقياً مقابل شخصنة متنكّرة؟ إيه اللي محتاج تشوفه علشان يبقى وجيه؟"
+      },
+      "explanation": "A conflict-of-interest objection becomes legitimate only when paired with a specific argument about how the funding biased the method, the sample, the outcome measures, or the reporting. Without that link, it is a character attack dressed as caution. The correct question is always: 'Is there a flaw in the methodology, data, or reasoning?' not 'Who paid this person?'",
+      "explanationAr": "الاعتراض على تضارب المصالح بيبقى وجيهاً بس لو اقترن بحجة محدّدة عن إزاي التمويل أثّر في المنهجية أو العيّنة أو مقاييس النتائج أو التقرير. من غير الربط ده، هي هجوم على الشخصية متنكّر في شكل حذر. السؤال الصح دايماً: «هل في عيب في المنهجية أو البيانات أو المنطق؟» مش «مَن دفع لهذا الشخص؟»",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.bmj.com/content/359/bmj.j4849"
+      ],
+      "cognitivebiasAtPlay": "Ad Hominem"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "When Egyptian followers of the viral diet system were asked to assess a critical review by university professors, many replied: 'These professors are government puppets paid to suppress the truth.' It feels like reasonable institutional skepticism.",
+      "claimAr": "لمّا طُلب من أتباع النظام الغذائي الشائع تقييم مراجعة نقدية من أساتذة جامعة، كثيرون ردّوا: «الأساتذة دول دُمى حكومية بتتدفع علشان تطمّس الحقيقة». بيحسّ زي شك مؤسّسي معقول.",
+      "prompt": "What would have to be TRUE if this blanket dismissal is wrong? What would genuine institutional criticism look like instead?",
+      "promptAr": "لو الرفض الشامل ده غلط، إيه اللي لازم يكون صح؟ وإيه اللي هيبدو عليه النقد المؤسّسي الحقيقي بدل ذلك؟",
+      "modelPoints": [
+        "If the dismissal is wrong, we'd expect: individual professors with no relevant conflicts who applied standard peer-review criteria and found genuine methodological flaws — or found none.",
+        "Genuine institutional criticism targets specific failures: undisclosed funding, flawed methodology, conflicts of interest on a specific study — not 'all experts in this field are corrupt.'",
+        "A self-sealing loop ('all who disagree are puppets') makes it impossible to ever learn you are wrong. That's not skepticism — skepticism tests claims, including your own.",
+        "Real institutional problems (and they exist) are exposed by named evidence and whistleblowers, not by a blanket rule that pre-dismisses every expert who disagrees."
+      ],
+      "modelPointsAr": [
+        "لو الرفض غلط، هنتوقع: أساتذة منفردون من غير تضارب مصالح وجيه طبّقوا معايير المراجعة العلمية العادية ولقوا عيوب منهجية حقيقية — أو ما لقوش.",
+        "النقد المؤسّسي الحقيقي بيستهدف إخفاقات محدّدة: تمويل غير مُفصَح عنه، منهجية معيبة، تضارب مصالح في دراسة محدّدة — مش «كل الخبراء في المجال ده فاسدون».",
+        "الحلقة المغلقة («كل من يختلف دمية») بتجعل من المستحيل إنك تعرف يوماً إنك غلطت. ده مش شك — الشك بيختبر الادعاءات، بما فيها ادعاءاتك إنت.",
+        "المشاكل المؤسّسية الحقيقية (وهي موجودة) بتُكشَف بأدلة مسمّاة ومُبلِّغين عن مخالفات، مش بقاعدة شاملة بترفض كل خبير يختلف مقدّماً."
+      ],
+      "explanation": "Institutional criticism is valid and necessary — the problem is escalating it into a pre-dismissal rule. Once you've decided all critics are corrupt by definition, you've made it impossible to ever learn you're wrong — and that's when beliefs become dangerous.",
+      "explanationAr": "نقد المؤسسات مشروع وضروري — المشكلة هي تصعيده لقاعدة رفض مسبق. لمّا تقرر إن كل المنتقدين فاسدون بحكم التعريف، بتجعل من المستحيل إنك تعرف يوماً إنك غلطت — وده امتى تبقى المعتقدات خطرة.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "ad hominem as a shield",
+      "techniqueAr": "الشخصنة كدرع",
+      "task": "Feel the move from the inside. Write 2–3 sentences that defend a harmless claim (e.g. 'drink 8 glasses of water a day') by attacking the credibility of anyone who questions it — without engaging their actual argument at all.",
+      "taskAr": "احسّ بالحركة من جوّه. اكتب 2–3 جُمَل بتدافع عن ادعاء غير ضار (مثلاً «اشرب 8 كوباية ميّه في اليوم») بإنك تهاجم مصداقية أي حد بيشكّك فيه — من غير ما تتطرّق لحجّته الفعلية خالص.",
+      "tells": [
+        "The actual argument (the evidence question) is never addressed — only the person is.",
+        "The attack sounds like information ('she has a conflict of interest') but carries zero content about the claim's truth.",
+        "It triggers an emotional response (disgust, distrust) rather than inviting evaluation.",
+        "It closes the conversation: once the person is discredited, there is nothing left to discuss.",
+        "It can be used symmetrically against anyone — making it useless as a truth-finding tool."
+      ],
+      "tellsAr": [
+        "الحجة الفعلية (سؤال الدليل) ما بتتناقشش أبداً — بس الشخص هو اللي بيتهاجم.",
+        "الهجوم بيبدو معلومة («عندها تضارب مصالح») لكنه يحمل صفر محتوى عن صحة الادعاء.",
+        "بيُثير استجابة عاطفية (اشمئزاز، عدم ثقة) بدل ما يدعو للتقييم.",
+        "بيُغلق النقاش: لمّا الشخص يتسقط، ما بقيش في حاجة للنقاش.",
+        "ممكن يُستخدم بالتماثل ضد أي حد — وده بيجعله عديم الفائدة كأداة لإيجاد الحقيقة."
+      ],
+      "explanation": "Building the attack from the inside is 'active inoculation' — once you've felt how easy and emotionally satisfying it is to attack the person rather than the argument, you'll recognise the move faster when it's used against you or in front of you. The defence: always ask 'what is the actual claim and what evidence supports or challenges it?'",
+      "explanationAr": "بناء الهجوم من الداخل هو «التلقيح النشط» — لمّا تحسّ بقد إيه بسيط ومُرضي عاطفياً إنك تهاجم الشخص بدل الحجة، هتكتشف الحركة أسرع لمّا تُستخدم ضدّك أو أمامك. الدفاع: دايماً اسأل «إيه الادعاء الفعلي وإيه الدليل اللي بيدعمه أو يتحدّاه؟»",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Ad Hominem"
+    }
+  ]
+}

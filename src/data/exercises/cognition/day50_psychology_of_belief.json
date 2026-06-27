@@ -1,0 +1,129 @@
+{
+  "id": "day50_psychology_of_belief",
+  "phase": 1,
+  "week": 8,
+  "day": 50,
+  "title": "Why We Believe — The Inner Battle",
+  "titleAr": "ليه بنصدّق — المعركة الجوّانية",
+  "description": "The fight against superstition is not a battle of information — it is psychological self-training. Today: the hidden needs that make a false idea feel true.",
+  "descriptionAr": "محاربة الخرافة مش معركة معلومات — دي تدريب نفسي للنفس. النهاردة: الاحتياجات الخفيّة اللي بتخلّي الفكرة الغلط تبان صح.",
+  "type": "psychology",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.apa.org/pubs/journals/releases/psp-783684.pdf",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A relative under stress can't stand 'I don't know why this happened.' Within a day he's certain a hidden group planned it. Which need is driving him?",
+      "claimAr": "قريب تحت ضغط مش طايق «مش عارف ليه ده حصل». في خلال يوم بقى متأكد إن جماعة خفيّة دبّرته. أنهي حاجة بتحرّكه؟",
+      "options": [
+        "He has carefully weighed the evidence",
+        "The need for cognitive closure — a quick, certain answer to escape the discomfort of not-knowing",
+        "He is simply unintelligent",
+        "He enjoys conflict"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the need for cognitive closure: the mind craves a fast, tidy answer to end the discomfort of ambiguity. Many people prefer a bad explanation to sitting with 'I don't know.' Notice it isn't about intelligence — it's about how hard uncertainty feels in that moment.",
+      "explanationAr": "ده «الحاجة للإغلاق المعرفي»: العقل بيشتهي إجابة سريعة مرتبة تنهي ضيق الغموض. ناس كتير بتفضّل تفسير وحش على إنها تقعد مع «مش عارف». لاحظ إنها مش مسألة ذكاء — دي مسألة قد إيه عدم اليقين بيبقى صعب في اللحظة دي.",
+      "sources": [
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf"
+      ],
+      "cognitivebiasAtPlay": "Need for Cognitive Closure"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: people who fall for elaborate conspiracies are usually just less intelligent than others.",
+      "claimAr": "صح ولا غلط: الناس اللي بتقع في نظريات مؤامرة معقّدة عادةً بتكون أقل ذكاءً من غيرها.",
+      "options": [
+        "True — smarter people are better protected",
+        "False — intelligence can actually build a more elaborate defense for a false idea"
+      ],
+      "correctAnswer": 1,
+      "explanation": "False — and believing this myth is itself a trap. Newton practised alchemy; Kepler believed in astrology; the creator of Sherlock Holmes believed in fairy photographs. Intelligence doesn't immunize you; it can build a *more elaborate* defense for a false idea. Before checking your answer, set your confidence level. If you felt sure this was 'obviously false,' notice that certainty — and ask: which of *your* beliefs might be the elaborate illusion?",
+      "explanationAr": "غلط — وتصديق الأسطورة دي هو نفسه فخّ. نيوتن اشتغل بالخيمياء؛ كيبلر آمن بالتنجيم؛ مخترع شيرلوك هولمز صدّق صور الجنيّات. الذكاء ما بيحصّنكش؛ ممكن يبني دفاعاً *أكثر تعقيداً* لفكرة غلط. قبل ما تكشف إجابتك، حدّد مستوى ثقتك. لو حسّيت بيقين إن الإجابة «واضحة»، لاحظ اليقين ده — واسأل: أيٌّ من *معتقداتك* ممكن يكون الوهم المعقّد؟",
+      "sources": [
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Bias Blind Spot"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Someone exhausted by years of costly medication watches a video promising a total cure. He doesn't ask 'is this true?' — he asks (without realizing) 'can I live with this idea?' What is this move called?",
+      "claimAr": "حد أنهكته سنين من دوا غالي بيتفرّج على فيديو بيوعد بشفاء كامل. ما بيسألش «ده صح؟» — بيسأل (من غير ما يحس) «أقدر أعيش مع الفكرة دي؟». الحركة دي اسمها إيه؟",
+      "options": [
+        "Critical thinking",
+        "Motivated reasoning — reasoning toward the conclusion you want, then hunting for evidence to fit"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why is motivated reasoning especially hard to catch in yourself — and what question might help you notice it?",
+        "promptAr": "بكلماتك: ليه الاستدلال المدفوع بالدوافع صعب تكشفه في نفسك خصوصاً — وأيّ سؤال ممكن يساعدك تلاحظه؟"
+      },
+      "explanation": "Motivated reasoning: we often pick the conclusion that comforts, protects, or gives meaning first — then go looking for proof. His desperation is a real, human vulnerability, not a character flaw. The defense is to notice the pull: 'which answer do I *want* to be true here?' — and then deliberately distrust that pull.",
+      "explanationAr": "الاستدلال المدفوع بالدوافع: غالباً بنختار الخلاصة اللي بتريّح أو بتحمي أو بتدّي معنى الأول — وبعدين ندوّر على الدليل. يأسه ضعف إنساني حقيقي، مش عيب في شخصيته. الدفاع إنك تلاحظ الشدّ: «أنهي إجابة *نفسي* تكون هي الصح هنا؟» — وبعدين تشكّك في الشدّ ده بقصد.",
+      "sources": [
+        "https://www.apa.org/pubs/journals/releases/bul-1083480.pdf"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "In an online argument, a follower keeps repeating: 'The masses are asleep — I'm one of the few who are awake and see the truth.' This feels to him like a genuine insight.",
+      "claimAr": "في نقاش أونلاين، تابع بيكرّر: «الناس نايمة — أنا من القلّة الصاحية اللي شايفة الحقيقة». ده بيحسّس إنه بصيرة حقيقية.",
+      "prompt": "Before accepting that this person has special insight: what would the same behaviour look like if it were ego-defence, not insight? What would disconfirm the 'I alone see clearly' claim?",
+      "promptAr": "قبل قبول إن الشخص ده عنده بصيرة خاصة: إيه اللي نفس السلوك كان هيبان عليه لو كان دفاعاً عن الأنا مش بصيرة؟ وإيه اللي يكذّب ادعاء «أنا الوحيد اللي بيرى»؟",
+      "modelPoints": [
+        "If it were ego-defence, we would expect: the person never changes their mind when shown evidence; they describe those who disagree as 'sleeping' or 'brainwashed' rather than engaging their arguments; the belief grants them status without requiring them to produce verifiable results.",
+        "A genuine insight can be communicated, tested, and checked by others — 'I see what others miss' should produce specific, checkable predictions, not just a superior feeling.",
+        "The 'I'm awake, they're asleep' frame is unfalsifiable: anyone who agrees joins the awakened; anyone who disagrees is just proving they're asleep. No outcome can challenge the belief.",
+        "Real understanding usually generates humility ('this is complex') — not the certainty that one has access the masses lack."
+      ],
+      "modelPointsAr": [
+        "لو كان دفاعاً عن الأنا، هنتوقع: الشخص عمره ما بيغيّر رأيه لمّا يتُرى له دليل؛ بيوصف المخالفين بـ«النايمين» أو «المغسولين» بدل ما يناقش حججهم؛ المعتقد بيدّيه مكانة من غير ما يطلب منه نتائج قابلة للتحقّق.",
+        "البصيرة الحقيقية ممكن تتواصل وتتختبر وتتفحّص من الآخرين — «أنا شايف اللي التانيين مش شايفينه» المفروض يُنتِج تنبّؤات محدّدة وقابلة للفحص، مش مجرد إحساس بالتفوّق.",
+        "إطار «أنا صاحي وهم نايمين» غير قابل للتفنيد: أي موافق ينضمّ للصاحيين؛ وأي مخالف بيثبت بس إنه نايم. مفيش نتيجة ممكنة تتحدّى المعتقد.",
+        "الفهم الحقيقي عادةً بيولّد تواضعاً («ده معقّد») — مش اليقين إن الشخص عنده وصول الجموع تفتقده."
+      ],
+      "explanation": "Here the myth has become identity and status — a symbolic superiority ('I know the secret') for someone who may feel ordinary. That's why facts bounce off: you're no longer challenging an idea, you're threatening a self-image. The way in is not ridicule (which entrenches it) but shared respect and curious questions.",
+      "explanationAr": "هنا الخرافة بقت هويّة ومكانة — تفوّق رمزي («أنا عارف السرّ») لشخص ممكن يحسّ إنه عادي. علشان كده الحقائق بترتدّ: إنت مش بتتحدّى فكرة، إنت بتهدّد صورة الذات. المدخل مش السخرية (اللي بترسّخها) لكن الاحترام المشترك والأسئلة الفضولية.",
+      "sources": [
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Cognitive Narcissism (ego-defense)"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "motivated reasoning",
+      "techniqueAr": "الاستدلال المدفوع بالدوافع",
+      "task": "Feel the technique from the inside. Pick a completely harmless desire — say, wanting a particular football team to win. Write three sentences that reason backward from that desire: start with the conclusion ('they will win tonight'), then invent reasons that make it feel likely. Make the reasoning sound logical.",
+      "taskAr": "حسّ بالأسلوب من جوّه. اختار رغبة غير ضارة خالص — مثلاً عايز فريق كرة قدم معيّن يكسب. اكتب تلات جمل بتتفكّر فيهم بالعكس من الرغبة: ابدأ من الخلاصة («هيكسبوا الليلة»)، وبعدين اخترع أسباب تجعلها تبدو محتملة. خلّي المنطق يبدو سليم.",
+      "tells": [
+        "Notice you searched for reasons that fit the wanted conclusion — not for reasons that would test whether it's true.",
+        "Any piece of evidence got interpreted in favour of your team (they lost last week = 'they were saving energy').",
+        "Disconfirming evidence was dismissed as 'irrelevant' or explained away rather than genuinely weighed.",
+        "The reasoning felt fluent and natural — which is exactly when motivated reasoning is hardest to catch.",
+        "The cure: ask 'what evidence would I accept that my conclusion is WRONG?' before forming the conclusion."
+      ],
+      "tellsAr": [
+        "لاحظ إنك بحثت عن أسباب تناسب الخلاصة المرغوبة — مش عن أسباب تختبر ما إذا كانت صحيحة.",
+        "أي دليل اتفسّر لصالح فريقك (خسروا الأسبوع الماضي = «كانوا بيوفّروا طاقتهم»).",
+        "الأدلة المعاكسة اتُرفضت كـ«غير ذات صلة» أو تمّ تفسيرها بدل ما توزن بصدق.",
+        "التفكير حسّ سلس وطبيعي — وده بالظبط لمّا يكون الاستدلال المدفوع أصعب ما يُكشَف.",
+        "العلاج: اسأل «أيّ دليل هأقبله إن خلاصتي غلط؟» قبل تكوين الخلاصة."
+      ],
+      "explanation": "Building motivated reasoning on a harmless topic from the inside is 'active inoculation' — you feel the mechanism operate, making it easier to catch later in high-stakes situations. The key tell: did you search for truth, or for confirmation? The sequence always runs: desire → conclusion → evidence hunt — not: evidence → conclusion.",
+      "explanationAr": "بناء الاستدلال المدفوع على موضوع غير ضار من الداخل ده «التلقيح النشط» — بتحسّ الآلية بتشتغل، وده بيسهّل كشفها لاحقاً في المواقف ذات المخاطر العالية. الإشارة الكاشفة الأساسية: هل بحثت عن الحقيقة، أم عن التأكيد؟ التسلسل دايماً بيسير: رغبة ← خلاصة ← صيد الأدلة — مش: أدلة ← خلاصة.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://www.apa.org/pubs/journals/releases/bul-1083480.pdf"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

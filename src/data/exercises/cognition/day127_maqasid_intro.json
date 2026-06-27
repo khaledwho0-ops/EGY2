@@ -1,0 +1,122 @@
+{
+  "id": "day127_maqasid_intro",
+  "phase": 3,
+  "week": 19,
+  "day": 127,
+  "title": "Maqasid al-Sharia: The Five Necessities",
+  "titleAr": "مقاصد الشريعة: الضروريات الخمس",
+  "description": "Islamic jurisprudence has a framework for priorities. The first necessity — preserving life — means that protecting your health is a religious duty, not a worldly distraction.",
+  "descriptionAr": "الفقه الإسلامي عنده إطار للأولويات. الضرورة الأولى — حفظ النفس — معناها إن حماية صحتك واجب ديني، مش انشغال دنيوي.",
+  "type": "religion-literacy",
+  "difficulty": 2,
+  "estimatedMinutes": 14,
+  "source": "https://www.oxfordislamicstudies.com/article/opr/t125/e1482",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A friend says: 'Caring about my body and going to the doctor is a worldly concern — a true believer should focus on the soul.' Is this consistent with Maqasid al-Sharia?",
+      "claimAr": "صاحبك بيقول: «الاهتمام بجسمي وروحتي للدكتور اهتمام دنيوي — المؤمن الحقيقي يهتم بالروح». ده متسق مع مقاصد الشريعة؟",
+      "options": [
+        "Yes — spiritual focus means ignoring physical health",
+        "No — preserving life (hifz al-nafs) is the first of the five necessities in Maqasid al-Sharia; protecting health is a religious obligation",
+        "There is no Islamic framework for health decisions",
+        "It depends on how sick you are"
+      ],
+      "correctAnswer": 1,
+      "explanation": "No — hifz al-nafs (preservation of life) is among the highest-ranked necessities in the classical Maqasid framework, taught by al-Ghazali, al-Shatibi, and subsequent scholars. Seeking medical care is therefore not a worldly distraction — it is acting on a core duty the Sharia asks you to protect.",
+      "explanationAr": "لا — حفظ النفس هو من أعلى الضرورات في إطار المقاصد الكلاسيكي، اللي درّسه الغزالي والشاطبي وعلماء بعدهم. السعي للعلاج الطبي بالتالي مش انشغال دنيوي — ده تصرّف وفق واجب أساسي الشريعة بتطلب منك تحفظه.",
+      "sources": [
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: the five necessities (Maqasid al-Sharia) ranked by classical scholars are: life, intellect, lineage, property, and religion — and life comes first in every school.",
+      "claimAr": "صح ولا غلط: الضرورات الخمس (مقاصد الشريعة) عند العلماء الكلاسيكيين هي: النفس والعقل والنسل والمال والدين — والنفس تيجي الأول عند كل المذاهب.",
+      "correctAnswer": false,
+      "myth_en": "Life (nafs) comes first in every school's ranking of Maqasid.",
+      "myth_ar": "النفس تيجي الأول في ترتيب كل المذاهب للمقاصد.",
+      "explanation": "Close, but the ranking varies between schools. Al-Ghazali listed religion first, then life, intellect, lineage, property. Al-Shatibi placed life and religion at the peak together. The key point is unanimous: preserving human life is among the highest obligations, not a secondary concern. The exact ranking matters less than the shared verdict that health is a duty.",
+      "explanationAr": "تقريباً صح، لكن الترتيب بيختلف بين المذاهب. الغزالي رتّب الدين أولاً ثم النفس والعقل والنسل والمال. الشاطبي وضع النفس والدين في القمة معاً. النقطة المهمة بإجماع: حفظ الحياة البشرية من أعلى الواجبات، مش اهتمام ثانوي. الترتيب الدقيق أقل أهمية من الحكم المشترك إن الصحة فريضة.",
+      "sources": [
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482",
+        "https://plato.stanford.edu/entries/islamic-law/"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The viral «نظام الطيبات» told followers to stop life-saving medicines for diabetes and cancer. Using the Maqasid lens, what category does this instruction fall under?",
+      "claimAr": "نظام «الطيبات» اللي انتشر قال للأتباع يوقفوا أدوية الإنقاذ للسكري والسرطان. من منظور المقاصد، الأمر ده بيقع تحت أنهي تصنيف؟",
+      "options": [
+        "A valid religious ruling backed by evidence",
+        "A violation of hifz al-nafs — the command to preserve human life, which Islamic law places at the top of its hierarchy of obligations",
+        "A personal lifestyle choice with no religious dimension",
+        "Permissible because the diet was called 'pure' (tayyib)"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does calling a diet by a Quranic name NOT give it authority to override the Maqasid duty to preserve life?",
+        "promptAr": "بكلماتك: ليه تسمية حمية باسم قرآني ما بتمنحهاش سلطة تتجاوز واجب المقاصد في حفظ النفس؟"
+      },
+      "explanation": "Stopping insulin or cancer therapy — without any medical replacement — directly threatens the life that Islamic law commands be preserved. Naming a diet with a Quranic word does not grant it religious authority over medicine. The Maqasid framework would judge the instruction as a breach of the highest necessity, not an act of piety.",
+      "explanationAr": "وقف الأنسولين أو علاج السرطان — بدون بديل طبي — بيهدّد مباشرةً الحياة اللي القانون الإسلامي يأمر بحفظها. تسمية حمية بكلمة قرآنية ما بتمنحهاش سلطة دينية على الطب. إطار المقاصد سيحكم على هذا الأمر بأنه خرق للضرورة الأولى، مش عمل تقوى.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A person says: 'Medicine is a worldly science — the Maqasid is about spiritual priorities, not about whether I take insulin.' It feels like a reasonable separation of domains.",
+      "claimAr": "شخص بيقول: «الطب علم دنيوي — المقاصد بيتكلّم عن أولويات روحية، مش عن أخذي الأنسولين». بيحسّس إنه فصل معقول بين المجالات.",
+      "prompt": "What would disprove this framing? What would you need to show to establish that Maqasid actually does cover medical decisions?",
+      "promptAr": "إيه اللي يكذّب هذا التأطير؟ إيه اللي محتاج تُثبته علشان تثبت إن المقاصد بيغطّي فعلاً القرارات الطبية؟",
+      "modelPoints": [
+        "Classical Maqasid texts (al-Ghazali's Ihya, al-Shatibi's Muwafaqat) explicitly include bodily health under hifz al-nafs — there is no 'spiritual only' carve-out.",
+        "The Quran's verse 2:195 ('do not cast yourselves into destruction') has been applied by classical tafsir scholars to abandoning medical care — not just to warfare.",
+        "The hadith 'seek treatment' (Sunan Abi Dawud:3855) is a Prophetic instruction in a worldly domain that carries religious weight — dismantling any 'worldly vs spiritual' separation.",
+        "If 'Maqasid is only spiritual' were true, no fiqh ruling would touch medicine — but entire chapters of classical fiqh cover medical decisions (treatment obligation, end-of-life, fasting exemptions). The framing is simply false."
+      ],
+      "modelPointsAr": [
+        "نصوص المقاصد الكلاسيكية (إحياء الغزالي، موافقات الشاطبي) تشمل صراحةً صحة الجسم تحت حفظ النفس — لا استثناء «روحاني فقط».",
+        "آية القرآن 2:195 («ولا تلقوا بأيديكم إلى التهلكة») طُبِّقت من علماء التفسير الكلاسيكيين على ترك الرعاية الطبية — مش بس على الحرب.",
+        "حديث «تداووا» (سنن أبي داود:3855) تعليم نبوي في مجال دنيوي يحمل ثقلاً دينياً — مما يهدم أي فصل «دنيوي مقابل روحاني».",
+        "لو «المقاصد روحاني فقط» صح، ما كانش أي حكم فقهي يلمس الطب — لكن فصولاً كاملة من الفقه الكلاسيكي بتتناول القرارات الطبية (وجوب العلاج، نهاية الحياة، الإعفاء من الصيام). التأطير ببساطة غير صحيح."
+      ],
+      "sources": [
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482",
+        "https://sunnah.com/abudawud:3855"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 123,
+      "claim": "The Prophet ﷺ said: 'Make use of medical treatment, for Allah has not made a disease without appointing a remedy for it.' (Sunan Abī Dāwūd, authenticated). What does this hadith imply for someone considering abandoning prescribed medicine?",
+      "claimAr": "قال النبي ﷺ: «تداووا، فإن الله لم يضع داءً إلا وضع له شفاءً». (سنن أبي داود، صحيح). الحديث ده بيعني إيه لحد بيفكر يترك الدواء المقرّر له؟",
+      "options": [
+        "Medicine is forbidden — trust only prayer",
+        "Seeking treatment is Prophetically encouraged; abandoning proven medicine for an unproven alternative contradicts the teaching",
+        "The hadith only applies to herbal remedies",
+        "It means any remedy will work, including unverified ones"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This authentic hadith explicitly encourages seeking medical treatment — 'tadadawaw' means 'seek remedies actively.' Abandoning insulin or chemotherapy for a system with no documented evidence is the opposite of this prophetic teaching. Note also: the hadith says a remedy exists, not that any given claim is that remedy — it does not endorse unverified systems. This retrieval connects to the general evidence-quality lesson from Phase 2: 'a cure exists' and 'this specific product is that cure' are two different propositions needing different proofs.",
+      "explanationAr": "الحديث الصحيح ده بيشجّع صراحةً على طلب العلاج الطبي — «تداووا» معناها ابحثوا عن العلاج بنشاط. ترك الأنسولين أو العلاج الكيميائي لنظام بلا دليل موثّق هو عكس هذا التعليم النبوي. لاحظ كمان: الحديث بيقول إن هناك علاج موجود، مش إن أي ادعاء هو هذا العلاج — مش بيؤيّد أنظمة غير مُثبتة. هذا الاسترجاع يتصل بدرس جودة الدليل من المرحلة الثانية: «علاج موجود» و«هذا المنتج بالذات هو ذلك العلاج» هما ادعاءان مختلفان يحتاجان إثباتين مختلفين.",
+      "sources": [
+        "https://sunnah.com/abudawud:3855",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068720/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    }
+  ]
+}

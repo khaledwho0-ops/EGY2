@@ -1,0 +1,128 @@
+{
+  "id": "day157_shared_values_entry",
+  "phase": 4,
+  "week": 23,
+  "day": 157,
+  "title": "Start from Shared Values",
+  "titleAr": "ابدأ من القيم المشتركة",
+  "description": "You and the person you are talking to almost always agree on the goal — health, family, honesty. Starting from that shared ground makes disagreement about means, not identity.",
+  "descriptionAr": "إنت والشخص اللي بتتكلّم معاه بتتفقوا تقريباً دايماً على الهدف — الصحة، العيلة، الصدق. البداية من الأرضية المشتركة دي بتخلّي الخلاف على الوسيلة، مش على الهوية.",
+  "type": "psychology",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2795254/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Your mother says: \"I'm doing this diet because I love my family and I want to be healthy for them.\" You disagree with the method but not the goal. Which opening builds a shared-values bridge?",
+      "claimAr": "أمّك بتقول: «أنا بعمل الحِمية دي لأني بحبّ عيلتي وعايزة أكون بصحة كويسة عشانهم.» إنت بتختلف مع الطريقة مش مع الهدف. أنهي افتتاحية بتبني جسر القيم المشتركة؟",
+      "options": [
+        "\"The method you chose is dangerous and has been banned.\"",
+        "\"I love you and want you healthy too — that's exactly why I need to tell you something that worries me about this specific method.\"",
+        "\"Your intentions are good but your thinking is wrong.\"",
+        "\"A lot of people are being hurt by that same approach.\""
+      ],
+      "correctAnswer": 1,
+      "explanation": "Option B does three things: it mirrors the shared value (health for the family), it affirms the person's love as genuine, and it positions your concern as coming *from* that shared value, not against it. The implicit message is: 'We want the same thing — the question is only which method actually delivers it.' That reframes the disagreement from 'you're wrong' to 'how do we best achieve what we both care about?'",
+      "explanationAr": "الخيار ب بيعمل ثلاث حاجات: بيعكس القيمة المشتركة (الصحة للعيلة)، وبيؤكّد إن حبّها حقيقي، وبيحطّ قلقك كجاي *من* القيمة المشتركة دي، مش ضدّها. الرسالة الضمنية: «عايزين نفس الحاجة — السؤال بس أنهي طريقة بتوصّل ليها فعلاً.» ده بيعيد تأطير الخلاف من «إنتِ غلطانة» لـ«إزاي نحقّق أفضل اللي بيهمّنا الاتنين؟»",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2795254/"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A relative who follows the viral «نظام الطيبات» diet tells you: \"I care about Islamic values — that's why I follow this system, because it is based on Quranic principles.\" The strongest entry point is HIS OWN stated value — his love of Islam — entered through the verse that defends the faith from this misuse: «لا تحرّموا طيّبات ما أحلّ الله لكم» (Al-Mā'idah 5:87).",
+      "claimAr": "قريب بيتبع نظام «الطيبات» بيقولك: «أنا بهتمّ بالقيم الإسلامية — علشان كده بتبع النظام ده، لأنه مبني على مبادئ قرآنية.» أقوى نقطة دخول هي القيمة اللي هو نفسه صرّح بيها — حبّه للإسلام — من خلال الآية اللي بتدافع عن الدين من سوء الاستخدام ده: «لا تحرّموا طيّبات ما أحلّ الله لكم» (المائدة 5:87).",
+      "options": [
+        "His financial interest in not paying for medication",
+        "His love of Islam — and the Islamic duty not to forbid what Allah made lawful"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does entering through his OWN love of Islam (citing 5:87, which forbids prohibiting the lawful) defend his faith — rather than asking him to set his religion aside for 'secular' safety?",
+        "promptAr": "بكلماتك: ليه الدخول من حبّه هو للإسلام (بآية 5:87 اللي بتنهى عن تحريم الحلال) بيدافع عن دينه — بدل ما تطلب منه يسيب دينه على جنب علشان أمان «دنيوي»؟"
+      },
+      "explanation": "His own stated value is the most powerful entry: his love of Islam. Al-Mā'idah 5:87 says 'do not prohibit the good things which Allah has made lawful to you' — the very verse, already documented in the case, that refutes the system from within the tradition he cares about. Entering from a shared Islamic value means the question becomes 'does this system honour the Quran, or contradict it by forbidding lawful chicken and milk?' — a question he already has a personal stake in. Asking him to set religion aside would feel like an attack on his identity and confirm the system's framing that doubters are enemies of faith; meeting him inside the tradition does the opposite — it lets you stand together as people who both want to honour the Quran honestly.",
+      "explanationAr": "القيمة اللي صرّح بيها هو نفسه هي أقوى نقطة دخول: حبّه للإسلام. المائدة 5:87 بتقول «لا تحرّموا طيّبات ما أحلّ الله لكم» — وهي بالظبط الآية، الموثّقة أصلاً في الحالة، اللي بتردّ على النظام من داخل التراث اللي بيهتمّ بيه. الدخول من قيمة إسلامية مشتركة معناه إن السؤال بيبقى «النظام ده بيكرّم القرآن ولا بيناقضه بتحريم الفراخ واللبن الحلال؟» — سؤال هو أصلاً له مصلحة شخصية فيه. إنك تطلب منه يسيب الدين على جنب هيحسّ بهجوم على هويته وهيأكّد إطار النظام إن الشكّاكين أعداء للدين؛ ومقابلته من جوّه التراث بيعمل العكس — بيخلّيكم تقفوا سوا كناس عايزة تكرّم القرآن بأمانة.",
+      "sources": [
+        "https://quran.com/5/87",
+        "EAL-case-001:religious-shield"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "recognize",
+      "scenario": "Scenario A: Layla starts: 'We both want Grandma to live as long and as healthy as possible, right? That's all I'm thinking about when I bring this up.' || Scenario B: Mariam starts: 'Grandma is taking a huge risk and the people promoting that system have been proven wrong.'",
+      "scenarioAr": "السيناريو أ: ليلى بتبدأ: «إحنا الاتنين عايزين جدّتنا تعيش أطول وأصحّ ما يكون، صح؟ ده كل اللي بفكّر فيه لمّا بأتكلم في الموضوع.» || السيناريو ب: مريم بتبدأ: «جدّتنا بتاخد مخاطرة كبيرة والناس اللي بتروّج للنظام ده اتثبت غلطهم.»",
+      "question": "Which opening is more likely to be heard, and what specifically makes the difference?",
+      "questionAr": "أنهي افتتاحية أرجح تتسمَّع، وإيه اللي بيصنع الفرق تحديداً؟",
+      "answer": "A",
+      "key_differentiators": [
+        "A establishes a shared goal before raising any concern — the listener hears an ally, not a critic",
+        "B leads with a risk-warning and a verdict about the promoters — the listener hears an opponent",
+        "A's first move is 'we both want the same thing' — B's first move is 'the other side is wrong'",
+        "Shared values create emotional safety; emotional safety is the prerequisite for being heard"
+      ],
+      "explanation": "Layla's opening names a shared goal that no one in the family will disagree with. From that shared ground, concern for grandma becomes a team effort, not a criticism. Mariam's opening is accurate but positions her immediately as an adversary delivering a verdict. Even if Mariam's facts are stronger, they will be received more defensively because she missed the shared-values setup.",
+      "explanationAr": "افتتاحية ليلى بتسمّي هدف مشترك ما حدش في العيلة هيختلف عليه. من الأرضية المشتركة دي، القلق على جدّتنا بيبقى جهد جماعي مش انتقاد. افتتاحية مريم دقيقة لكن بتحطّها فوراً كخصم بيصدر حكماً. حتى لو حقائق مريم أقوى، هتتستقبَل بدفاعية أكثر لأنها أخطأت خطوة الإعداد بالقيم المشتركة.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2795254/",
+        "https://www.apa.org/monitor/2011/10/motivational-interviewing"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "It feels intuitive: 'Someone who follows a banned pseudoscientific diet must have different values from me — otherwise how could they fall for it?' That belief makes you feel clear-headed and separate from them.",
+      "claimAr": "بيحسّ بديهي: «اللي بيتبع حِمية محظورة وزائفة علمياً لازم قيمه مختلفة عني — وإلا إزاي وقع فيها؟» المعتقد ده بيخلّيك تحسّ إنك صافي الذهن ومنفصل عنهم.",
+      "prompt": "Consider the opposite: what if they share your exact values? What would that mean for where the real difference lies — and for how you should open the conversation?",
+      "promptAr": "فكّر في العكس: لو قيمهم نفس قيمك بالظبط؟ ده هيعني إيه عن مكان الفرق الحقيقي — وعن إزاي المفروض تبدأ المحادثة؟",
+      "modelPoints": [
+        "Almost everyone who followed the viral diet did so BECAUSE they valued health, family, saving money, and religious authenticity — the same values you hold.",
+        "If the values are shared, the real difference isn't goals at all — it's their assessment of the evidence and who they trusted to give it to them.",
+        "That reframes everything: you're not facing an opponent with alien values, you're facing an ally who reached a different conclusion through understandable pressures (cost, distrust of institutions, a trusted-sounding doctor).",
+        "So the opening should affirm the shared goal first — 'we both want you safe and well' — because it's true, and because it's the ground from which evidence can actually be heard."
+      ],
+      "modelPointsAr": [
+        "تقريباً كل من اتبع الحِمية الانتشرت فعل ده لأنه يقدّر الصحة والعيلة وتوفير الفلوس والأصالة الدينية — نفس قيمك إنت.",
+        "لو القيم مشتركة، الفرق الحقيقي مش في الأهداف أصلاً — هو في تقييمهم للدليل ومين وثقوا فيه إنه يديهولهم.",
+        "ده بيعيد تأطير كل حاجة: إنت مش قدام خصم بقيم غريبة، إنت قدام حليف وصل لنتيجة مختلفة من خلال ضغوط مفهومة (التكلفة، عدم الثقة في المؤسسات، دكتور صوته موثوق).",
+        "فالافتتاحية المفروض تأكّد الهدف المشترك الأول — «إحنا الاتنين عايزينك بأمان وصحة» — لأنها صح، ولأنها الأرضية اللي الدليل يقدر يتسمَّع منها فعلاً."
+      ],
+      "explanation": "Considering the opposite dismantles one of the most common reasons belief conversations fail before they start — the assumption that 'wrong belief = different values.' When you actively check it, you find the goals are usually identical; only the evidence-assessment differs. That correction isn't just kinder, it's more accurate — and it's what makes the shared-values opening honest rather than a tactic.",
+      "explanationAr": "التفكير في العكس بيفكّك واحد من أكثر أسباب فشل محادثات المعتقدات قبل ما تبدأ — الافتراض إن «المعتقد الغلط = قيم مختلفة». لمّا تتحقّق منه بنشاط، بتلاقي الأهداف غالباً متطابقة؛ بس تقييم الدليل اللي مختلف. التصحيح ده مش بس ألطف، ده أدقّ — وهو اللي بيخلّي افتتاحية القيم المشتركة صادقة مش مجرّد تكتيك.",
+      "sources": [
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2795254/"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "retrievalOf": 155,
+      "claim": "You discover your friend has been giving the viral diet protocol to his elderly father who has heart disease, believing it will help him. Your shared value is the father's survival. Which opening honours that?",
+      "claimAr": "اكتشفت إن صاحبك بيديه بروتوكول الحِمية الانتشرت لأبوه الكبير اللي عنده أمراض قلب، مؤمناً إنه هيساعده. القيمة المشتركة بينكم هي بقاء الأب. أنهي افتتاحية بتكرّم ده؟",
+      "options": [
+        "\"You're putting your father at risk and I have to tell you that.\"",
+        "\"You love your father — I can see that. I found something about that same system that has me worried specifically for someone with heart disease, and I couldn't keep it to myself.\"",
+        "\"Your father's doctor needs to know what he's taking immediately.\"",
+        "\"That diet has been banned — you have to stop this now.\""
+      ],
+      "correctAnswer": 1,
+      "explanation": "Set your confidence first, then check it against yesterday's empathy-first lesson. Option B validates his love for his father as real and visible, then delivers concern as something personal to you ('I couldn't keep it to myself') — not a lecture. It also makes the concern medically specific (heart disease) rather than a general refutation, signalling you are engaging with *his* situation. If you felt sure that C or D — the more 'urgent' options — were right, notice they lead with a verdict or an order, which triggers exactly the defensiveness empathy-first is built to avoid. Shared value plus empathetic framing is far more likely to be received as care, not attack.",
+      "explanationAr": "حدّد ثقتك الأول، وبعدين راجعها على درس امبارح التعاطف-أولاً. الخيار ب بيتحقّق من حبّه لأبوه كحقيقي ومرئي، وبعدين بيوصّل القلق كحاجة شخصية عليك («ما قدرتش أسكت عليه») — مش محاضرة. وكمان بيخلّي القلق محدّد طبياً (أمراض القلب) مش ردّ عام، اللي بيشير إنك بتتعامل مع *وضعه هو*. لو حسّيت إن ج أو د — الخيارات «الأكثر إلحاحاً» — صح، لاحظ إنهم بيبدأوا بحكم أو أمر، اللي بيثير بالظبط الدفاعية اللي التعاطف-أولاً متبني علشان يتفاداها. القيمة المشتركة مع التأطير المتعاطف أرجح بكتير يتستقبَل كرعاية مش هجوم.",
+      "sources": [
+        "EAL-case-001:moh-eg-2026-05",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2795254/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

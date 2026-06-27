@@ -1,0 +1,148 @@
+{
+  "id": "day94_unfalsifiability",
+  "phase": 2,
+  "week": 14,
+  "day": 94,
+  "title": "The Unsinkable Claim — When Nothing Could Ever Prove It Wrong",
+  "titleAr": "الادعاء اللي ما بيغرقش — لمّا ما فيش حاجة ممكن تثبت إنه غلط",
+  "description": "A real claim tells you in advance what result would prove it false. A claim that survives every outcome — success or failure — has quietly left science.",
+  "descriptionAr": "الادعاء الحقيقي بيقول لك مقدماً أنهي نتيجة ممكن تثبت إنه غلط. الادعاء اللي بينجو من أي نتيجة — نجاح أو فشل — يكون بهدوء سابِ العلم.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "When a follower of «نظام الطيبات» got sicker, the answer was always: 'You didn't follow it perfectly.' When someone improved, it was: 'The system works.' What property does this give the claim?",
+      "claimAr": "لمّا تابع «نظام الطيبات» يزيد مرضه، الإجابة دايماً: «إنت ماطبّقتوش صح». ولمّا حد يتحسّن: «النظام شغّال». إيه الخاصية اللي بتدّيها للادعاء دي؟",
+      "options": [
+        "It makes the claim very strong",
+        "It makes the claim unfalsifiable — no possible outcome is allowed to count against it",
+        "It proves the system is honest",
+        "It is normal for all medicine"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When improvement proves the system AND deterioration also proves the system (you must have done it wrong), no result in the universe can ever count against it. That is unfalsifiability — and it is the bright line between science and pseudoscience. A real treatment can fail; its honesty lives in the fact that it tells you, in advance, what failure would look like. A claim that can never lose has stopped being a claim about reality.",
+      "explanationAr": "لمّا التحسّن يثبت النظام، والتدهور كمان يثبت النظام (لازم إنت اللي غلطت)، ما يبقى فيش نتيجة في الكون ممكن تتحسب ضده. دي «عدم القابلية للتفنيد» — وهي الخط الفاصل بين العلم والعلم الزائف. العلاج الحقيقي ممكن يفشل؛ وأمانته في إنه بيقول لك مقدماً الفشل هيبان إزاي. الادعاء اللي عمره ما بيخسر بطّل يكون ادعاء عن الواقع.",
+      "sources": [
+        "EAL-case-001:redflag-4",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A good sign that a claim is scientific is that its supporters say 'nothing could ever change my mind about it.'",
+      "claimAr": "علامة كويسة إن الادعاء علمي إن مؤيّديه بيقولوا «مفيش حاجة ممكن تغيّر رأيي فيه».",
+      "correctAnswer": false,
+      "myth_en": "Total certainty is the mark of real science.",
+      "myth_ar": "اليقين المطلق علامة العلم الحقيقي.",
+      "explanation": "False — it is nearly the opposite. Science advances precisely because every claim stays open to being overturned by better evidence; researchers can tell you the experiment that would change their mind. 'Nothing could ever change my mind' describes faith, ideology, or identity — all valuable in their own place, but not a scientific stance. Calibration check: if you were very confident this was true, that itself is worth noticing — the equation of certainty with truth is the core of the trap.",
+      "explanationAr": "غلط — ده تقريباً العكس. العلم بيتقدّم بالظبط لأن كل ادعاء بيفضل مفتوح إنه يتقلب بدليل أحسن؛ الباحثون يقدروا يقولوا لك التجربة اللي هتغيّر رأيهم. «مفيش حاجة ممكن تغيّر رأيي» بيوصف إيمان أو أيديولوجيا أو هوية — كلها قيّمة في مكانها، لكن مش موقف علمي. معايرة ذاتية: لو كنت واثق جداً إن الادعاء ده صح، ده نفسه يستاهل ملاحظة — معادلة اليقين بالحقيقة هي لبّ الفخّ.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://undsci.berkeley.edu/understanding-science-101/what-is-science/the-core-of-science-relating-evidence-and-ideas/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Compare two statements. (A) 'This drug lowers blood sugar; if a trial shows no drop versus placebo, it failed.' (B) 'This energy heals you; if you feel nothing, your channels were blocked.' Statement A is more trustworthy because it is falsifiable.",
+      "claimAr": "قارن بين جملتين. (أ) «الدواء ده بيخفّض السكر؛ لو التجربة ما ورّتش انخفاض مقارنة بالوهمي، يبقى فشل». (ب) «الطاقة دي بتشفيك؛ لو ما حسّيتش بحاجة، يبقى قنواتك كانت مسدودة». الجملة أ أجدر بالثقة لأنها قابلة للتفنيد.",
+      "options": ["True — A is falsifiable and therefore more trustworthy", "False — B explains every case, which makes it more reliable"],
+      "correctAnswer": 0,
+      "selfExplain": {
+        "prompt": "In your own words: why does a claim's willingness to risk being wrong make it more trustworthy — not less?",
+        "promptAr": "بكلماتك: ليه استعداد الادعاء لاحتمال إنه يكون غلط بيخلّيه أجدر بالثقة — مش أقل؟"
+      },
+      "explanation": "(A) is falsifiable: it stakes itself on a measurable outcome and accepts defeat if the numbers don't move. That willingness to lose is exactly what makes a win meaningful — it survived a real test it could have failed. (B) explains every possible outcome (feel better = it worked; feel nothing = your fault), so passing 'the test' proves nothing because there was never a way to fail. Trust is earned by claims brave enough to be wrong.",
+      "explanationAr": "(أ) قابلة للتفنيد: بتراهن على نتيجة قابلة للقياس وبتقبل الهزيمة لو الأرقام ما اتحرّكتش. الاستعداد للخسارة ده بالظبط اللي بيخلّي الفوز ذا معنى — نجى من اختبار حقيقي كان ممكن يفشل فيه. (ب) بتفسّر أي نتيجة ممكنة (حسّيت أحسن = نفع؛ ما حسّيتش = غلطتك)، فاجتياز «الاختبار» ما بيثبتش حاجة لأن ما كانش فيه أصلاً طريقة للفشل. الثقة بتُكتسب بالادعاءات الشجاعة بما يكفي إنها تكون غلط.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A healer says: 'This remedy only fails if your faith was weak.' This is an honest acknowledgment that patient attitude matters in healing.",
+      "claimAr": "مُعالِج بيقول: «العلاج ده ما بيفشلش إلا لو إيمانك كان ضعيف». ده اعتراف أمين بإن موقف المريض بيهمّ في الشفاء.",
+      "prompt": "What question exposes the trap in this framing? What would a genuinely honest claim about patient attitude look like?",
+      "promptAr": "أنهي سؤال بيكشف الفخّ في الصياغة دي؟ وإيه الشكل اللي ادعاء أمين فعلاً عن موقف المريض هياخده؟",
+      "modelPoints": [
+        "The revealing question: 'What result would YOU accept as the remedy not working?' — if no answer exists, the claim is unfalsifiable by design.",
+        "An honest claim about patient attitude would specify in advance what 'enough faith' means and how it is measured — not assign it after the fact.",
+        "If 'weak faith' can be declared retroactively after any failure, it is not a condition — it is a way to protect the claim from any evidence.",
+        "Real medicine does acknowledge patient factors (adherence, lifestyle) but pre-specifies them and still allows the treatment to fail.",
+        "The structure here is: the treatment is always right; the patient is always at fault when it fails — that is not medical honesty, that is unfalsifiability."
+      ],
+      "modelPointsAr": [
+        "السؤال الكاشف: «أنهي نتيجة إنت هتقبلها كفشل للعلاج؟» — لو ما فيش إجابة، الادعاء غير قابل للتفنيد بالتصميم.",
+        "الادعاء الأمين عن موقف المريض هيحدّد مسبقاً معنى «الإيمان الكافي» وطريقة قياسه — مش يعيّنه بعد الحقيقة.",
+        "لو «ضعف الإيمان» ممكن يُعلَن بأثر رجعي بعد أي فشل، ده مش شرط — ده طريقة لحماية الادعاء من أي دليل.",
+        "الطب الحقيقي فعلاً بيعترف بعوامل المريض (الالتزام، نمط الحياة) لكن بيحدّدها مسبقاً ولسّه بيسمح للعلاج يفشل.",
+        "البنية هنا هي: العلاج دايماً صح؛ والمريض دايماً المذنب لمّا يفشل — ده مش أمانة طبية، ده عدم قابلية للتفنيد."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Decompose: 'This system always works. Science hasn't caught up yet. The patients who got worse must have had hidden toxins that the cleanse first needed to remove. And our 5,000 success stories speak for themselves.'",
+      "claimAr": "فكّك: «النظام ده بيشتغل دايماً. العلم لسه ما لحقش. المرضى اللي اتدهوروا لازم كان عندهم سموم خفية كان الكلينز محتاج يشيلها الأول. و5,000 قصة نجاح بتتكلّم عن نفسها.»",
+      "parts": [
+        { "text": "This system always works.", "textAr": "النظام ده بيشتغل دايماً.", "role": "conclusion" },
+        { "text": "5,000 success stories support the system.", "textAr": "5,000 قصة نجاح بتدعم النظام.", "role": "premise" },
+        { "text": "(Unstated) Testimonials prove efficacy.", "textAr": "(غير مذكور) الشهادات بتثبت الفعالية.", "role": "assumption" },
+        { "text": "Science hasn't caught up yet.", "textAr": "العلم لسه ما لحقش.", "role": "premise" },
+        { "text": "Patients who got worse had hidden toxins that needed to come out first.", "textAr": "المرضى اللي اتدهوروا كان عندهم سموم خفية محتاجة تخرج الأول.", "role": "assumption" }
+      ],
+      "explanation": "The architecture is closed-loop unfalsifiability: testimonials (no control group) support the claim; deterioration is reframed as necessary ('hidden toxins coming out'); and 'science hasn't caught up' positions all future evidence as irrelevant in advance. Every possible outcome — improvement, no change, deterioration — is absorbed into 'proof the system works.' This is the precise structure of pseudoscience, and it was the documented architecture of the Taybat system.",
+      "explanationAr": "البنية هي عدم قابلية للتفنيد بحلقة مغلقة: الشهادات (بلا مجموعة ضابطة) بتدعم الادعاء؛ التدهور يُعاد صياغته كحاجة («سموم خفية بتخرج»)؛ و«العلم لسه ما لحقش» بيضع كل الأدلة المستقبلية خارج النطاق مسبقاً. كل نتيجة ممكنة — تحسّن، لا تغيّر، تدهور — بتُمتصّ في «دليل إن النظام شغّال». ده البنية الدقيقة للعلم الزائف، وكانت البنية الموثَّقة لنظام الطيبات.",
+      "sources": [
+        "EAL-case-001:redflag-4",
+        "EAL-case-001:ems-2026-03",
+        "https://plato.stanford.edu/entries/pseudo-science/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 6,
+      "mechanic": "inoculate",
+      "technique": "unfalsifiability by outcome reframing",
+      "techniqueAr": "عدم القابلية للتفنيد بإعادة صياغة النتيجة",
+      "task": "Feel this from the inside. Design a short wellness system for a harmless goal (e.g. 'better sleep') where you pre-define three outcomes that all 'prove' the system works: if you sleep better (it worked), if you feel groggy at first (detox phase), if nothing changes (you need more time). Write the promise post.",
+      "taskAr": "حسّ بالتلاعب ده من جوّه. صمّم نظام صحي قصير لهدف غير ضار (زي «نوم أحسن») بيحدّد مسبقاً ثلاث نتائج بتثبت كلها إن النظام شغّال: لو نمت أحسن (نجح)، لو حسّيت بكسل في البداية (مرحلة التطهير)، لو ما تغيّرش حاجة (محتاج وقت أكتر). اكتب بوست الوعد.",
+      "tells": [
+        "Every outcome is pre-absorbed: success = proof, failure = evidence the process is working, no change = need more time.",
+        "No result can count against the system — that is the definition of unfalsifiability, not robustness.",
+        "The 'detox phase' for worsening symptoms is a common reframe that makes deterioration sound like progress.",
+        "A real wellness intervention specifies in advance what 'not working' looks like — and accepts that result.",
+        "The single question that breaks this: 'What result, after how long, would YOU call failure?'"
+      ],
+      "tellsAr": [
+        "كل نتيجة بتُمتص مسبقاً: نجاح = دليل، فشل = دليل إن العملية شغّالة، لا تغيّر = محتاج وقت أكتر.",
+        "ما فيش نتيجة ممكن تتحسب ضد النظام — ده تعريف عدم القابلية للتفنيد، مش المتانة.",
+        "«مرحلة التطهير» لتفاقم الأعراض هي إعادة صياغة شائعة بتخلّي التدهور يبان تقدّم.",
+        "التدخل الصحي الحقيقي بيحدّد مسبقاً كيف يبان «مش شغّال» — ويقبل النتيجة دي.",
+        "السؤال الواحد اللي بيكسر ده: «أنهي نتيجة، بعد قد إيه، إنت هتسمّيها فشل؟»"
+      ],
+      "sources": [
+        "EAL-case-001:redflag-4",
+        "https://plato.stanford.edu/entries/popper/",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "day13_dunning_kruger",
+  "phase": 0,
+  "week": 2,
+  "day": 13,
+  "title": "Dunning-Kruger Calibration",
+  "titleAr": "معايرة دانينج-كروجر",
+  "description": "Rate your knowledge then test it. The gap reveals calibration accuracy.",
+  "descriptionAr": "قيّم معرفتك ثم اختبرها. الفجوة تكشف دقة المعايرة.",
+  "type": "self_calibration",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "instrument": "Kruger & Dunning 1999",
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "Rate your Egyptian history knowledge 1-10. When was the Suez Canal nationalized?",
+      "claimAr": "قيّم معرفتك بالتاريخ المصري 1-10. متى تم تأميم قناة السويس؟",
+      "truthValue": "true",
+      "category": "history",
+      "difficulty": 2,
+      "explanation": "Nationalized by Nasser on July 26, 1956. If you rated 8/10 but couldnt answer = Dunning-Kruger.",
+      "explanationAr": "تم التأميم على يد عبد الناصر في 26 يوليو 1956.",
+      "sources": [
+        "https://www.britannica.com/event/Suez-Crisis"
+      ],
+      "cognitivebiasAtPlay": "Dunning-Kruger Effect"
+    }
+  ]
+}

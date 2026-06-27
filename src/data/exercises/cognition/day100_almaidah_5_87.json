@@ -1,0 +1,130 @@
+{
+  "id": "day100_almaidah_5_87",
+  "phase": 3,
+  "week": 15,
+  "day": 100,
+  "title": "Al-Mā'idah 5:87 — The Verse That Forbids This",
+  "titleAr": "المائدة ٥:٨٧ — الآية التي تنهى عن هذا",
+  "description": "The Quran itself contains a direct answer: forbidding wholesome, lawful foods is a violation of Quranic instruction. Today we learn to use the text to defend the text.",
+  "descriptionAr": "القرآن نفسه بيحتوي على إجابة مباشرة: تحريم الطيبات الحلال مخالفة صريحة للتعليم القرآني. النهاردة بنتعلّم نستخدم النص عشان ندافع عن النص.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://quran.com/5/87",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Al-Mā'idah 5:87 states: «يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحَرِّمُوا طَيِّبَاتِ مَا أَحَلَّ اللَّهُ لَكُمْ». The viral Taybat diet declared chicken, milk, and eggs categorically forbidden. How does this verse apply?",
+      "claimAr": "المائدة ٥:٨٧ تقول: «يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحَرِّمُوا طَيِّبَاتِ مَا أَحَلَّ اللَّهُ لَكُمْ». نظام الطيبات الفيروسي أعلن تحريم الفراخ واللبن والبيض بإطلاق. الآية دي بتنطبق إزاي؟",
+      "options": [
+        "The verse is about something else entirely — diet systems are exempt",
+        "The verse directly forbids prohibiting things Allah has made lawful — and chicken, milk, and eggs are lawful in the Quran and Sunnah, so declaring them haram contradicts this verse",
+        "The verse allows scholars to prohibit foods for health reasons",
+        "The verse only applies if the prohibition is permanent"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The verse is precise and direct: believers are forbidden from prohibiting the good things (الطيبات) that Allah has made lawful. Chicken, milk, and eggs are explicitly lawful in both the Quran (Al-An'am 6:143–144 covers livestock; Al-Nahl 16:66 praises milk) and authenticated hadith. Calling them categorically 'toxic' or 'forbidden' is exactly the act this verse addresses. Using this verse in response is not a challenge to religion — it is the religious response.",
+      "explanationAr": "الآية دقيقة ومباشرة: المؤمنون منهيّون عن تحريم الطيبات التي أحلّها الله. الفراخ واللبن والبيض حلال بنصٍّ في القرآن الكريم (الأنعام 6:143–144 بتغطّي الأنعام؛ النحل 16:66 بيثني على اللبن) والسنة الصحيحة. وصفهم بـ«سام» أو «محرّم» بالإطلاق هو بالضبط الفعل الذي تتناوله الآية. استخدام الآية رداً ليس تحدياً للدين — بل هو الردّ الديني.",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://quran.com/16/66"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if a Muslim genuinely wants to follow the Quran in their diet, Al-Mā'idah 5:87 supports following the Taybat system's total prohibition of chicken and milk.",
+      "claimAr": "صح ولا غلط: لو مسلم عايز فعلاً يتبع القرآن في أكله، المائدة ٥:٨٧ بتدعم اتباع حظر نظام الطيبات الكامل على الفراخ واللبن.",
+      "correctAnswer": false,
+      "explanation": "False — and the verse makes it the opposite. 5:87 is an explicit Quranic instruction not to prohibit what God has made lawful. Following a system that prohibits lawful foods in God's name is not Quranic compliance — it contradicts this verse. The sincerity of the intention does not protect against the fact of the contradiction. Calibration note: many sincere believers are surprised by this — the surprise itself shows why religious literacy matters for protecting sincere faith.",
+      "explanationAr": "غلط — والآية تقول العكس. المائدة 5:87 تعليم قرآني صريح بعدم تحريم ما أحلّه الله. اتباع نظام يحرّم طعاماً حلالاً باسم الله ليس التزاماً قرآنياً — بل يتناقض مع هذه الآية. صدق النية لا يحمي من واقعة التناقض. ملاحظة معايرة: كتير من المؤمنين الصادقين بيتفاجأوا بده — المفاجأة نفسها بتبيّن ليه الثقافة الدينية مهمة لحماية الإيمان الصادق.",
+      "sources": [
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "Someone says: \"Yes, but 5:87 was revealed about monks who prohibited all pleasures — it doesn't apply to a diet system based on health reasons.\"",
+      "claimAr": "حد بيقول: «آه، بس المائدة 5:87 نزلت في رهبان حرّموا كل الملذّات — مش بتنطبق على نظام غذائي مبني على أسباب صحية.»",
+      "prompt": "What would DISPROVE this narrowing interpretation? What is the Islamic jurisprudential principle for how to apply a Quranic ruling?",
+      "promptAr": "إيه اللي يكذّب التفسير المُضيِّق ده؟ وإيه المبدأ الفقهي الإسلامي لكيفية تطبيق حكم قرآني؟",
+      "modelPoints": [
+        "A foundational principle of Islamic jurisprudence (usul al-fiqh) is that the ruling follows the general wording, not the specific occasion: «العبرة بعموم اللفظ لا بخصوص السبب». The verse's wording is general — 'do not prohibit the good things Allah has made lawful' — no exception for 'health reasons.'",
+        "If the 'health reasons' exception were valid, any prohibited food system could claim health justification and escape the verse. This would make the verse unenforceable.",
+        "The diet does not offer peer-reviewed evidence that chicken and milk are harmful — so the 'health reasons' framing rests on unproven claims, not established medical facts.",
+        "Using a reason-of-revelation argument to narrow a general Quranic prohibition is itself a move that requires rigorous scholarly grounding, not a private claim."
+      ],
+      "modelPointsAr": [
+        "مبدأ أساسي في أصول الفقه هو «العبرة بعموم اللفظ لا بخصوص السبب». لفظ الآية عام — «لا تحرّموا طيّبات ما أحلّ الله لكم» — بلا استثناء لـ«أسباب صحية».",
+        "لو استثناء «الأسباب الصحية» كان صحيحاً، أي نظام يحرّم طعاماً كان يقدر يدّعي مبرراً صحياً ويفلت من الآية. ده هيجعل الآية غير قابلة للتطبيق.",
+        "النظام ما بيقدّمش دليلاً مراجَعاً بالأقران على إن الفراخ واللبن ضارة — فتأطير «الأسباب الصحية» مبني على ادعاءات غير مثبتة، لا على حقائق طبية راسخة.",
+        "استخدام حجة سبب النزول لتضييق نهي قرآني عام هو نفسه حركة تحتاج أساساً علمياً صارماً، مش ادعاءً خاصاً."
+      ],
+      "explanation": "Considering the opposite of the narrowing interpretation reveals its weakness: usul al-fiqh holds that the general wording governs. The 'health reasons' exception is doubly weakened — by jurisprudential principle AND by the lack of evidence that the foods are actually harmful.",
+      "explanationAr": "التفكير في عكس التفسير المُضيِّق بيكشف ضعفه: أصول الفقه تُقرّر إن اللفظ العام هو الحاكم. استثناء «الأسباب الصحية» ضعيف مزدوج — بالمبدأ الأصولي وبغياب الدليل على ضرر الأطعمة فعلاً.",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://islamqa.info/en/answers/260"
+      ],
+      "cognitivebiasAtPlay": "Special Pleading"
+    },
+    {
+      "id": 4,
+      "mechanic": "self_explain",
+      "claim": "The diet forbade chicken and milk by calling them «خبائث». Which action does this most directly violate according to 5:87?",
+      "claimAr": "الحمية حرّمت الفراخ واللبن بتسميتهم «خبائث». أنهي فعل ده بيخالف مباشرةً حسب المائدة 5:87؟",
+      "options": [
+        "Eating food without saying Bismillah",
+        "Prohibiting things Allah has made lawful by relabeling them as foul — the verse explicitly forbids this",
+        "Eating in excess",
+        "Not consulting a nutritionist"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: explain what it means to 'relabel' something Allah has made lawful as 'foul' — and why the verse treats this as a serious matter.",
+        "promptAr": "بكلماتك: شرح معنى «إعادة تسمية» حاجة أحلّها الله بـ«الخبيث» — وليه الآية بتعاملها كأمر خطير."
+      },
+      "explanation": "5:87 targets precisely the act of labeling lawful things as forbidden. Chicken and milk are lawful by Quranic and hadith consensus. Calling them «خبائث» to build a dietary prohibition appropriates a sacred label to override a divine permission. This is what the verse forbids. The application is direct and unmistakable.",
+      "explanationAr": "المائدة 5:87 تستهدف بالضبط فعل تسمية الحلال محرّماً. الفراخ واللبن حلال بإجماع قرآني وحديثي. وصفهم بـ«الخبائث» لبناء تحريم غذائي يستولي على تسمية مقدّسة ليُبطل إذناً إلهياً. هذا ما تنهى عنه الآية. والتطبيق مباشر ولا لبس فيه.",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "using a Quranic verse to unfalsify a personal prohibition",
+      "techniqueAr": "استخدام آية قرآنية لجعل تحريم شخصي غير قابل للتفنيد",
+      "task": "From the inside — harmlessly. Write a short message claiming that a behavior you invented (say, 'avoid sitting on the floor to eat') is Islamically obligatory by weaving in a real Quranic phrase that sounds related but does not actually address that behavior. Keep it harmless and fictional.",
+      "taskAr": "من الداخل — بشكل غير ضار. اكتب رسالة قصيرة تدّعي أن سلوكاً اخترعته (مثلاً «تجنّب الجلوس على الأرض للأكل») واجب إسلامياً بنسج عبارة قرآنية حقيقية تبدو ذات صلة لكنها لا تتناول السلوك فعلاً. خلّيه غير ضار وخيالياً.",
+      "tells": [
+        "The Quranic phrase is real but is doing borrowed authority work — the verse does not actually address the behavior being prohibited.",
+        "The religious framing immediately raises the cost of questioning ('are you questioning the Quran?') before anyone checks whether the verse applies.",
+        "There is no scholar cited — the connection between verse and prohibition is made by the writer, not by a tradition of verified interpretation.",
+        "The prohibition is not falsifiable: any evidence against it can be reframed as 'opposition to Islamic values.'",
+        "Notice how the technique works even when YOU know the verse doesn't apply — this is the power of emotional anchoring."
+      ],
+      "tellsAr": [
+        "العبارة القرآنية حقيقية لكنها تؤدّي عمل السلطة المستعارة — الآية لا تتناول فعلاً السلوك المحرَّم.",
+        "التأطير الديني يرفع فوراً تكلفة التشكيك («هل تشكّك في القرآن؟») قبل أن يتحقق أحد من انطباق الآية.",
+        "لا يُستشهد بعالِم — الربط بين الآية والتحريم يُصنعه الكاتب لا تقليد تفسير موثّق.",
+        "التحريم غير قابل للتفنيد: أي دليل ضده يمكن إعادة تأطيره كـ«معارضة للقيم الإسلامية».",
+        "لاحظ كيف يشتغل الأسلوب حتى لمّا أنت تعرف إن الآية ما بتنطبقش — هذه هي قوة الإرساء العاطفي."
+      ],
+      "explanation": "Having produced the technique from the inside in a harmless context, you now feel its mechanics: real Quranic language creates instant reverence; that reverence blocks question-asking; and the prohibition benefits from the verse's authority without actually being derived from it. When you next encounter a religiously framed prohibition, you can ask: 'Does the verse actually say this — or does it just sound related?'",
+      "explanationAr": "بعد إنك أنتجت الأسلوب من الداخل في سياق غير ضار، دلوقتي بتحسّ بميكانيكته: اللغة القرآنية الحقيقية بتولّد خشوعاً فورياً؛ والخشوع ده بيعوق طرح الأسئلة؛ والتحريم يستفيد من سلطة الآية من غير إنه مشتق منها فعلاً. المرة الجاية تقابل فيها تحريماً مؤطَّراً دينياً، تقدر تسأل: «هل الآية بتقول ده فعلاً — ولا بس بتبدو ذات صلة؟»",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    }
+  ]
+}

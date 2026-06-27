@@ -1,0 +1,145 @@
+{
+  "id": "day141_actor_authority_paradox",
+  "phase": 4,
+  "week": 21,
+  "day": 141,
+  "title": "Layer 1 — The Actor: Real Credentials, Wrong Domain",
+  "titleAr": "الطبقة الأولى — الشخصية: شهادة حقيقية، مجال خاطئ",
+  "description": "Week 21 opens the full Taybat case. Today: why a real doctor's title made a dangerous diet feel safe — and what 'authority bias' actually costs.",
+  "descriptionAr": "الأسبوع 21 بيفتح حالة الطيبات كاملة. النهاردة: ليه لقب دكتور حقيقي خلّى حمية خطيرة تبدو آمنة — وإيه تمن «انحياز السلطة» فعلاً.",
+  "type": "integration",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://journals.sagepub.com/doi/10.1177/0963721417718261",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A board-certified anaesthesiologist designs a detailed diet protocol for managing type-2 diabetes and cancer. A follower says: 'He is a real doctor — that makes his nutrition advice trustworthy.' Is this reasoning sound?",
+      "claimAr": "طبيب تخدير معتمد بيصمّم بروتوكول غذائي مفصّل لإدارة السكري من النوع الثاني والسرطان. تابع بيقول: «هو دكتور حقيقي — ده بيخلّي نصيحته الغذائية موثوقة». الاستدلال ده سليم؟",
+      "options": [
+        "Yes — any doctor knows enough about all of medicine",
+        "No — credentials are domain-specific; anaesthesia training does not cover clinical nutrition, endocrinology, or oncology",
+        "Yes — it depends how many patients he has seen",
+        "No — we should never trust doctors at all"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is Authority Bias (red flag #7). Medical credentials are domain-specific: an anaesthesiologist's training covers airway management, anaesthetic agents, and intensive care — not clinical nutrition, endocrinology, or oncology. Trusting a doctor outside their specialty is the same error as trusting a structural engineer to perform surgery because both are called 'engineer' and 'doctor.' The real question is always: 'What is their evidence base in *this* domain?'",
+      "explanationAr": "ده «انحياز السلطة» (علامة الخطر رقم 7). الشهادات الطبية خاصة بالمجال: تدريب التخدير بيغطّي إدارة مجرى الهواء والعقاقير التخديرية والعناية المركزة — لا التغذية الإكلينيكية ولا الغدد ولا الأورام. الثقة في طبيب خارج تخصصه نفس الغلط إنك تثق في مهندس إنشائي يعمل جراحة لأن كليهم بيُقال له «دكتور» أو «مهندس». السؤال الحقيقي دايماً: «إيه قاعدة الدليل بتاعته في *المجال ده*؟»",
+      "sources": [
+        "EAL-case-001:redflag-7",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a doctor who built a large online following and confidently explains complex-sounding mechanisms has demonstrated that his health claim is backed by research.",
+      "claimAr": "صح ولا غلط: طبيب بنى جمهور أونلاين كبير وبيشرح بثقة آليات تبدو معقّدة أثبت إن ادعاءه الصحي مدعوم بأبحاث.",
+      "correctAnswer": false,
+      "myth_en": "Confidence and a large audience prove expertise.",
+      "myth_ar": "الثقة والجمهور الكبير يُثبتان الخبرة.",
+      "explanation": "False. Confidence is a presentation style, not an evidence grade. A large audience is produced by the algorithm, not by peer review. The Taybat system reached 3.7 million views on a single interview with no medical counter-panel — that is social reach, not scientific validation. The Dunning–Kruger effect also predicts that low knowledge breeds high confidence, so the most confident voice is not always the most informed.",
+      "explanationAr": "غلط. الثقة أسلوب عرض، مش درجة دليل. الجمهور الكبير بتنتجه الخوارزمية، مش المراجعة العلمية. نظام الطيبات وصل لـ3.7 مليون مشاهدة في مقابلة واحدة بدون لجنة طبية مقابلة — ده وصول اجتماعي، مش تحقّق علمي. كمان تأثير دانينغ-كروغر بيتنبّأ إن قلّة المعرفة بتولّد ثقة عالية، يعني الصوت الأكثر ثقة مش دايماً الأكثر خبرة.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.apa.org/topics/expertise"
+      ],
+      "cognitivebiasAtPlay": "Dunning–Kruger Effect"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "You are evaluating a health claim from a well-known Egyptian cardiologist. He says a specific herbal blend reverses kidney failure. The right question is not 'How famous is he?' but 'Has this specific claim been tested and published in nephrology or pharmacology journals?'",
+      "claimAr": "بتقيّم ادعاء صحي من طبيب قلوب مصري مشهور. بيقول إن مزيج عشبي معيّن بيعكس الفشل الكلوي. السؤال الصح مش «قد إيه هو مشهور؟» لكن «هل الادعاء المحدد ده اتختبر ونُشِر في مجلات الكلى أو الصيدلة؟»",
+      "options": [
+        "How many years has he practised medicine?",
+        "Has this specific claim been tested and published in nephrology or pharmacology journals?",
+        "How many followers does he have on social media?",
+        "Does he charge for consultations?"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does a brilliant cardiologist have NO special authority over a kidney pharmacology claim — and what is the one question that actually matters here?",
+        "promptAr": "بكلماتك: ليه طبيب قلوب عبقري ما عندهوش سلطة خاصة على ادعاء في صيدلة الكلى — وإيه السؤال الوحيد اللي بيهمّ هنا فعلاً؟"
+      },
+      "explanation": "The right question is about evidence in the *specific domain*, not general prestige. Even a brilliant cardiologist has no special authority over kidney pharmacology unless he has generated or reviewed evidence in that field. The demand: 'show me the indexed study in the relevant specialty' is the domain-specificity check. Prestige, patient count, and fees are irrelevant to whether the claim is true.",
+      "explanationAr": "السؤال الصح عن الدليل في *المجال المحدد*، مش الهيبة العامة. حتى طبيب قلوب عبقري ما عندوش سلطة خاصة على صيدلة الكلى إلا لو ولّد أو راجع دليلاً في الحقل ده. الطلب: «وريني الدراسة المُفهرسة في التخصص المرتبط» هو اختبار تخصصية المجال. الهيبة وعدد المرضى والأتعاب كلها غير ذات صلة بصحة الادعاء.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'He is a real doctor with 20 years' experience. His clinic is always full. Millions follow him. His patients testify they improved. So his nutrition protocol for cancer must be correct.'",
+      "claimAr": "فكّك الحُجّة دي: «هو دكتور حقيقي بـ20 سنة خبرة. عيادته دايماً ممتلية. ملايين بيتبعوه. مرضاه بيشهدوا إنهم اتحسّنوا. إذن بروتوكوله الغذائي للسرطان لازم يكون صح.»",
+      "parts": [
+        { "text": "His nutrition protocol for cancer must be correct.", "textAr": "بروتوكوله الغذائي للسرطان لازم يكون صح.", "role": "conclusion" },
+        { "text": "He is a real doctor with 20 years' experience.", "textAr": "هو دكتور حقيقي بـ20 سنة خبرة.", "role": "premise" },
+        { "text": "His patients testify they improved.", "textAr": "مرضاه بيشهدوا إنهم اتحسّنوا.", "role": "premise" },
+        { "text": "(Unstated) Medical credentials in any specialty transfer authority to any medical claim, and testimonials prove a treatment works.", "textAr": "(غير مذكور) الشهادات الطبية في أي تخصص تنقل السلطة لأي ادعاء طبي، والشهادات الشخصية بتثبت إن العلاج بيشتغل.", "role": "assumption" },
+        { "text": "Millions of followers and a full clinic.", "textAr": "ملايين المتابعين وعيادة ممتلية.", "role": "irrelevant" }
+      ],
+      "explanation": "Two hidden ASSUMPTIONS collapse the argument: (1) credentials don't transfer across domains — 20 years of anaesthesia experience gives no cancer nutrition authority; (2) testimonials cannot prove efficacy — they cannot separate the treatment from placebo, natural disease variation, or other factors (Red Flag #3). Millions of followers and a full clinic are IRRELEVANT — they measure social reach and financial success, not scientific validity. The Taybat case had all these features and still caused documented deaths.",
+      "explanationAr": "افتراضان خفيان يهدمان الحُجّة: (1) الشهادات لا تنتقل عبر المجالات — 20 سنة من خبرة التخدير لا تمنح سلطة في تغذية السرطان؛ (2) الشهادات الشخصية لا تُثبت الفاعلية — لا تستطيع الفصل بين العلاج والوهمي أو تقلّب المرض الطبيعي أو عوامل أخرى (علامة الخطر رقم 3). ملايين المتابعين وعيادة ممتلية غير ذات صلة — يقيسان الوصول الاجتماعي والنجاح المالي لا الصلاحية العلمية. حالة الطيبات كانت عندها كل هذه السمات ومع ذلك تسبّبت في وفيات موثّقة.",
+      "sources": [
+        "EAL-case-001:redflag-7",
+        "EAL-case-001:redflag-3",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "After the Medical Syndicate's investigation found no documented evidence, the originator of the viral Taybat diet was expelled and his license revoked. A follower argues: 'The Syndicate is jealous of his success.'",
+      "claimAr": "بعد ما تحقيق نقابة الأطباء ما لاقاش دليل موثّق، اتشطب صاحب نظام الطيبات وأُلغي ترخيصه. تابع بيقول: «النقابة غيران من نجاحه».",
+      "prompt": "What would you need to see to DISPROVE that the Syndicate acted from jealousy rather than evidence? What ordinary explanations account for the expulsion?",
+      "promptAr": "إيه اللي محتاج تشوفه عشان تكذّب إن النقابة تصرّفت من غيرة لا من دليل؟ وإيه التفسيرات العادية اللي تفسّر الشطب؟",
+      "modelPoints": [
+        "To disprove jealousy: the Syndicate review was conducted by university specialists with no financial stake in the outcome — jealousy requires a competing interest, which was absent.",
+        "The Syndicate requested 3 documented cases with before/after labs over months and received none — this is a standard evidence request, not a persecution tactic.",
+        "Saudi Arabia issued independent warnings after their own ICU admissions, with no connection to the Egyptian Syndicate — two independent institutions cannot both be 'jealous.'",
+        "Labelling the Syndicate 'jealous' is the In-group/Out-group move: it pre-discredits the reviewer without addressing the evidence, meaning no counter-evidence can ever reach the believer."
+      ],
+      "modelPointsAr": [
+        "لتكذيب الغيرة: مراجعة النقابة تمّت بأساتذة جامعات بلا مصلحة مالية في النتيجة — الغيرة تتطلّب مصلحة منافسة كانت غائبة.",
+        "النقابة طلبت 3 حالات موثّقة بتحاليل قبل/بعد على مدى أشهر ولم تتلقَّ شيئاً — ده طلب دليل معيار لا أسلوب اضطهاد.",
+        "السعودية أصدرت تحذيرات مستقلة بعد حالات العناية المركزة لديها بلا صلة بالنقابة المصرية — مؤسستان مستقلتان لا يمكن أن تكونا «غيراوتين» معاً.",
+        "وصف النقابة بـ«الغيرة» هو حركة الداخل/الخارج: بيُسقِط المراجع مسبقاً دون معالجة الدليل، ما يعني إنه لا دليل مضاد يستطيع الوصول للمؤمن أبداً."
+      ],
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "EAL-case-001:moh-sa-2026-06-08",
+        "https://www.apa.org/topics/personality/motivated-reasoning"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 6,
+      "mechanic": "retrieve",
+      "retrievalOf": 131,
+      "claim": "Two influencers promote the same supplement. Influencer A: professor of nutritional biochemistry, published 40 peer-reviewed papers on the topic, cites a Cochrane review. Influencer B: popular cardiologist, 2 million followers, says 'it cured my own fatigue.' Which endorsement carries more weight for evaluating this specific supplement's efficacy?",
+      "claimAr": "اتنين مؤثّر بيروّجوا لنفس المكمّل. المؤثّر أ: أستاذ كيمياء حيوية تغذوية، نشر 40 ورقة بحثية في الموضوع، بيستشهد بمراجعة كوكرين. المؤثّر ب: طبيب قلوب شهير، 2 مليون متابع، بيقول «شفاني من الإجهاد». أنهي توصية أثقل وزناً لتقييم فاعلية المكمّل ده تحديداً؟",
+      "options": [
+        "Influencer B — more followers means more credibility",
+        "Influencer A — domain match (nutritional biochemistry), Cochrane-level evidence, and a publication record in the relevant field",
+        "Both equally — one uses science, the other personal experience",
+        "Neither — we should only trust government websites"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Influencer A's endorsement carries more weight because it matches the domain (nutritional biochemistry = relevant specialty), references a high-tier evidence source (Cochrane), and is backed by a publication record. Influencer B's testimony is a personal anecdote from outside the specialty — classic Authority Bias bait. His followers trust him on cardiac issues; that trust does not transfer automatically to supplement biochemistry. Follower count is a social metric, not an evidence grade.",
+      "explanationAr": "توصية المؤثّر أ أثقل وزناً لأنها بتطابق المجال (الكيمياء الحيوية التغذوية = التخصص ذو الصلة)، وبتستشهد بمصدر دليل رفيع المستوى (كوكرين)، وخلفها سجل نشر. شهادة المؤثّر ب حكاية شخصية من خارج التخصص — طُعم انحياز السلطة الكلاسيكي. متابعوه بيثقوا فيه في مسائل القلب؛ هذه الثقة ما بتنتقلش تلقائياً لكيمياء المكملات. عدد المتابعين مقياس اجتماعي لا درجة دليل.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

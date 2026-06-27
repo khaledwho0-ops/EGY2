@@ -1,0 +1,29 @@
+{
+  "id": "day12_anchoring",
+  "phase": 0,
+  "week": 2,
+  "day": 12,
+  "title": "Anchoring Effect",
+  "titleAr": "تأثير الإرساء",
+  "description": "How initial numbers bias your judgments with Egyptian market examples.",
+  "descriptionAr": "كيف تؤثر الأرقام الأولية على أحكامك مع أمثلة من السوق المصري.",
+  "type": "debiasing",
+  "difficulty": 2,
+  "estimatedMinutes": 10,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "Car dealer shows price at 1.2M EGP then says only 800K for you. Good deal?",
+      "claimAr": "تاجر يعرض سيارة بـ1.2مليون ثم يقول 800 ألف لك فقط. صفقة جيدة؟",
+      "truthValue": "misleading",
+      "category": "economics",
+      "difficulty": 2,
+      "explanation": "1.2M is the anchor making 800K seem like a bargain. Actual market value might be 600K. Research independently.",
+      "explanationAr": "1.2 مليون هو المرساة يجعل 800 ألف تبدو صفقة. القيمة الفعلية قد تكون 600 ألف.",
+      "sources": [
+        "https://www.britannica.com/science/anchoring-and-adjustment"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    }
+  ]
+}

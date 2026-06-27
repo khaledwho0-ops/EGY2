@@ -1,0 +1,82 @@
+{
+  "id": "day5_calm_breath",
+  "phase": 0,
+  "week": 1,
+  "day": 5,
+  "title": "Calm Breath: Time-Friction Training",
+  "titleAr": "التنفس الهادئ: تدريب احتكاك الوقت",
+  "description": "Train your System 2 thinking. Practice 10-second deliberation before reacting to high-emotion content. Learn the CalmReveal breathing technique.",
+  "descriptionAr": "درّب التفكير البطيء (النظام ٢). تمرّن على التأمل ١٠ ثوانٍ قبل الاستجابة لمحتوى عالي الانفعال. تعلم تقنية التنفس CalmReveal.",
+  "type": "breathing",
+  "difficulty": 1,
+  "estimatedMinutes": 12,
+  "timeFrictionSeconds": 10,
+  "exercises": [
+    {
+      "id": 1,
+      "triggerContent": "Breaking: Your favorite Egyptian football club has been disqualified from the African Champions League due to match-fixing allegations!",
+      "triggerContentAr": "عاجل: تم استبعاد ناديك المفضل من دوري أبطال أفريقيا بسبب اتهامات بالتلاعب في النتائج!",
+      "emotionalIntensity": 8,
+      "calmPrompt": "Before you react: Take 3 deep breaths (4-7-8 technique). Inhale for 4 seconds, hold for 7, exhale for 8.",
+      "calmPromptAr": "قبل أن تتفاعل: خذ ٣ أنفاس عميقة (تقنية ٤-٧-٨). استنشق لمدة ٤ ثوانٍ، احتفظ لـ ٧، ازفر لـ ٨.",
+      "reflectionQuestions": ["Is this from a verified sports news source?", "What evidence is presented?", "How does my emotional reaction affect my ability to evaluate this?"],
+      "reflectionQuestionsAr": ["هل هذا من مصدر أخبار رياضية موثق؟", "ما الدليل المقدم؟", "كيف يؤثر تفاعلي العاطفي على قدرتي على تقييم هذا؟"],
+      "breathingExercise": "4-7-8"
+    },
+    {
+      "id": 2,
+      "triggerContent": "URGENT: New government decree requires all citizens to register their social media accounts with national ID within 72 hours or face fines!",
+      "triggerContentAr": "عاجل: مرسوم حكومي جديد يلزم جميع المواطنين بتسجيل حسابات التواصل الاجتماعي بالرقم القومي خلال ٧٢ ساعة أو مواجهة غرامات!",
+      "emotionalIntensity": 9,
+      "calmPrompt": "STOP. 10-second pause. Ground yourself: name 5 things you see, 4 things you hear, 3 things you feel.",
+      "calmPromptAr": "توقف. وقفة ١٠ ثوانٍ. أرض نفسك: سمّ ٥ أشياء تراها، ٤ أشياء تسمعها، ٣ أشياء تشعر بها.",
+      "reflectionQuestions": ["What is the exact source of this 'decree'?", "Would an official decree give only 72 hours?", "Am I rushing to share because of fear?"],
+      "reflectionQuestionsAr": ["ما المصدر الدقيق لهذا 'المرسوم'؟", "هل مرسوم رسمي سيعطي ٧٢ ساعة فقط؟", "هل أتسرع في المشاركة بسبب الخوف؟"],
+      "breathingExercise": "grounding-5-4-3"
+    },
+    {
+      "id": 3,
+      "triggerContent": "A video shows what appears to be Egyptian soldiers mistreating civilians at a checkpoint. The uploader claims: 'This is happening RIGHT NOW!'",
+      "triggerContentAr": "فيديو يُظهر ما يبدو كجنود مصريين يسيئون معاملة مدنيين عند نقطة تفتيش. المُحمّل يدعي: 'هذا يحدث الآن!'",
+      "emotionalIntensity": 10,
+      "calmPrompt": "This is emotionally heavy. Before processing: box breathing — 4 seconds in, 4 hold, 4 out, 4 hold. Repeat 3 cycles.",
+      "calmPromptAr": "هذا ثقيل عاطفياً. قبل المعالجة: التنفس المربع — ٤ ثوانٍ شهيق، ٤ حبس، ٤ زفير، ٤ حبس. كرر ٣ دورات.",
+      "reflectionQuestions": ["When and where was this actually filmed?", "Can I verify the location through geolocation?", "Is the 'RIGHT NOW' claim verifiable?", "What is the uploader's history?"],
+      "reflectionQuestionsAr": ["متى وأين تم تصوير هذا فعلاً؟", "هل يمكنني التحقق من الموقع عبر تحديد الموقع الجغرافي؟", "هل ادعاء 'الآن' قابل للتحقق؟"],
+      "breathingExercise": "box-breathing"
+    },
+    {
+      "id": 4,
+      "triggerContent": "Your cousin sends a voice message: 'I swear by Allah, my neighbor's daughter got paralyzed after the vaccination. They're hiding it from us. Don't let anyone in our family get vaccinated!'",
+      "triggerContentAr": "ابن عمك يرسل رسالة صوتية: 'والله يا خوي بنت جارنا اتشلت بعد التطعيم. بيخبّوا عننا. ماتخلّيش حد في عيلتنا يتطعم!'",
+      "emotionalIntensity": 9,
+      "calmPrompt": "Family messages trigger trust shortcuts. Pause for 10 seconds. Acknowledge the emotion, then separate the claim from the relationship.",
+      "calmPromptAr": "رسائل العائلة تفعّل اختصارات الثقة. توقف ١٠ ثوانٍ. اعترف بالعاطفة، ثم افصل الادعاء عن العلاقة.",
+      "reflectionQuestions": ["Does my cousin have medical training?", "Is there a documented case or is this hearsay?", "What does the pharmacovigilance data actually show?", "Could the paralysis be coincidental, not causal?"],
+      "reflectionQuestionsAr": ["هل لدى ابن عمي تدريب طبي؟", "هل هناك حالة موثقة أم هذا سمعي؟", "ماذا تظهر بيانات اليقظة الدوائية فعلاً؟", "هل يمكن أن يكون الشلل تزامناً وليس سبباً؟"],
+      "breathingExercise": "4-7-8"
+    },
+    {
+      "id": 5,
+      "triggerContent": "A Facebook group post: 'The price of bread will increase to 5 EGP starting next week. The government admitted this in a secret meeting. Buy now before it's too late!'",
+      "triggerContentAr": "منشور في مجموعة فيسبوك: 'سعر العيش هيزيد لـ ٥ جنيه من الأسبوع الجاي. الحكومة اعترفت بده في اجتماع سري. اشتري دلوقتي قبل ما يفوت الأوان!'",
+      "emotionalIntensity": 7,
+      "calmPrompt": "Food security is deeply emotional in Egyptian culture. Recognize this trigger. Take 5 slow breaths before evaluating the claim's validity.",
+      "calmPromptAr": "الأمن الغذائي مشحون عاطفياً في الثقافة المصرية. اعترف بهذا المحفز. خذ ٥ أنفاس بطيئة قبل تقييم صحة الادعاء.",
+      "reflectionQuestions": ["Can a 'secret meeting' produce public bread price changes?", "Is the Ministry of Supply the source?", "What is the current subsidized bread price?", "Am I being pushed to panic-buy?"],
+      "reflectionQuestionsAr": ["هل يمكن لـ'اجتماع سري' أن ينتج تغييرات عامة في سعر الخبز؟", "هل وزارة التموين هي المصدر؟", "ما السعر الحالي للخبز المدعوم؟"],
+      "breathingExercise": "deep-5"
+    },
+    {
+      "id": 6,
+      "triggerContent": "A credible news source (Reuters) reports: 'Egypt secures $8 billion IMF loan package with conditions including further currency flotation and subsidy reforms.'",
+      "triggerContentAr": "مصدر إخباري موثوق (رويترز): 'مصر تؤمن حزمة قروض صندوق النقد الدولي بقيمة ٨ مليارات دولار بشروط تشمل مزيداً من تعويم العملة وإصلاحات الدعم.'",
+      "emotionalIntensity": 6,
+      "calmPrompt": "Even legitimate news can trigger anxiety. Breathe first. This is factual reporting — your job is to understand it, not react to it.",
+      "calmPromptAr": "حتى الأخبار الشرعية يمكنها إثارة القلق. تنفس أولاً. هذا تقرير واقعي — مهمتك فهمه وليس الاستجابة له.",
+      "reflectionQuestions": ["This is from a credible source — but what do the conditions actually mean?", "Am I confusing understanding with agreeing?", "Can I separate my emotional response from the factual content?"],
+      "reflectionQuestionsAr": ["هذا من مصدر موثوق — لكن ماذا تعني الشروط فعلاً؟", "هل أخلط بين الفهم والموافقة؟", "هل يمكنني فصل استجابتي العاطفية عن المحتوى الواقعي؟"],
+      "breathingExercise": "mindful-pause"
+    }
+  ]
+}

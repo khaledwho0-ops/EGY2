@@ -1,0 +1,131 @@
+{
+  "id": "day77_bias_confounder_integration",
+  "phase": 2,
+  "week": 11,
+  "day": 77,
+  "title": "Week 11 Integration — Spot the Flaw, Protect the Patient",
+  "titleAr": "تكامل الأسبوع 11 — اكتشف العيب واحمِ المريض",
+  "description": "Selection bias, recall bias, information bias, confounders, and generalizability — this week's five tools together. Today you apply all five to real-looking scenarios before anyone has to be harmed.",
+  "descriptionAr": "انحياز الاختيار وانحياز التذكّر وانحياز المعلومات والعوامل المربِكة وقابلية التعميم — أدوات الأسبوع الخمسة معاً. النهاردة بتطبّق الخمسة على سيناريوهات واقعية قبل ما حد يتأذّى.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 18,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "scenario": "A study on a new cholesterol drug recruited only patients who had already tried two other drugs and failed, then compared them to healthy volunteers who had never needed cholesterol treatment. The drug appeared to improve outcomes dramatically.",
+      "scenarioAr": "دراسة عن دواء كوليسترول جديد جنّدت فقط مرضى جرّبوا اثنين من الأدوية الأخرى وفشلوا، وقارنتهم بمتطوّعين أصحّاء ما احتاجوش علاجاً للكوليسترول. الدواء بدا يحسّن النتائج بشكل درامي.",
+      "question": "Which bias type is the PRIMARY flaw in this study design?",
+      "questionAr": "أنهي نوع انحياز هو العيب الأساسي في تصميم الدراسة دي؟",
+      "answer": "selection",
+      "key_differentiators": [
+        "Selection bias: the two groups are not comparable — one group has severe refractory disease, the other is healthy with no relevant history",
+        "This is NOT recall bias (no retrospective memory involved) and NOT information bias (the measurement instrument is not the problem)",
+        "Confounders also exist here (severity of underlying disease) but they are a consequence of the selection bias — selection bias is the root cause",
+        "The fix: randomly assign patients with a similar cholesterol profile at baseline to drug vs control"
+      ],
+      "explanation": "The treatment group represents the most difficult patients (treatment-resistant), while the control group is the healthiest possible. Even if the drug did nothing, the comparison would look impressive because the groups are incomparable by design. This is selection bias at its most harmful: it could make a useless or even dangerous drug appear effective.",
+      "explanationAr": "مجموعة العلاج تمثّل المرضى الأصعب (المقاومون للعلاج)، بينما المجموعة الضابطة هي الأصحّ ممكن. حتى لو الدواء ما عملش حاجة، المقارنة ستبدو مبهرة لأن المجموعتين غير قابلتَين للمقارنة بحكم التصميم. ده انحياز الاختيار في أشد صوره ضرراً: ممكن يجعل دواءً عديم الفائدة أو حتى خطيراً يبدو فعّالاً.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "scenario": "After the ban on a viral diet system, researchers surveyed former followers who had stopped the system about their previous eating habits. Followers who had developed health problems reported eating the 'forbidden' foods (like chicken and dairy) much more frequently before joining than followers who stayed healthy.",
+      "scenarioAr": "بعد حظر نظام غذائي انتشر فيروسياً، باحثون عملوا استطلاعاً لأتباع سابقين أوقفوا النظام عن عاداتهم الغذائية السابقة. الأتباع اللي طوّروا مشاكل صحية أبلغوا عن أكل الأطعمة «المحظورة» (زي الفراخ واللبن) بتكرار أكثر بكتير قبل انضمامهم مقارنةً بالأتباع اللي فضلوا أصحاء.",
+      "question": "Which bias type most likely explains this difference in reported past eating?",
+      "questionAr": "أنهي نوع انحياز من المرجّح أكثر يفسّر الفرق ده في الإبلاغ عن الأكل الماضي؟",
+      "answer": "recall",
+      "key_differentiators": [
+        "Recall bias: sick former followers have a strong narrative reason to 'remember' eating more forbidden foods — it confirms the system's story and explains their illness",
+        "Healthy former followers have no such narrative pressure — so they do not reconstruct elevated past consumption",
+        "The asymmetry in retrospective reporting between sick and healthy groups is the hallmark of recall bias",
+        "This is NOT selection bias (both groups came from the same system) and NOT information bias from the questionnaire wording"
+      ],
+      "explanation": "This is a textbook recall bias scenario. Sick followers who believe the diet's theory are motivated to 'find' evidence in memory that they ate forbidden foods — it explains their illness within the system's framework. Healthy followers do not have this motivation, so they report lower past intake. The result: the case against chicken and dairy looks stronger than it actually is, entirely due to how illness shapes memory.",
+      "explanationAr": "ده سيناريو انحياز تذكّر كلاسيكي. الأتباع المرضى اللي يؤمنون بنظرية الحمية عندهم دافع لـ«يلاقوا» في الذاكرة دليلاً إنهم أكلوا الأطعمة المحظورة — ده يفسّر مرضهم في إطار نظام الحمية. الأتباع الأصحاء ما عندهمش هذا الدافع، فبيُبلّغوا عن استهلاك سابق أقل. النتيجة: القضية ضد الفراخ واللبن تبدو أقوى مما هي عليه فعلاً، بسبب كيفية تشكيل المرض للذاكرة.",
+      "sources": [
+        "EAL-case-001:redflag-3",
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A researcher studying green tea and blood pressure uses the question 'How many cups of healthy green tea do you drink per day?' instead of the neutral 'How many cups of green tea do you drink per day?' The 'healthy' version produces significantly higher reported consumption.",
+      "claimAr": "باحث بيدرس تأثير الشاي الأخضر على ضغط الدم بيستخدم سؤال «كام كوباية شاي أخضر صحي بتشرب يومياً؟» بدل السؤال المحايد «كام كوباية شاي أخضر بتشرب يومياً؟» النسخة «الصحية» بتنتج إبلاغاً عن استهلاك أعلى بشكل ملحوظ.",
+      "options": [
+        "Recall bias — participants can't remember accurately",
+        "Information bias from question wording — labelling green tea 'healthy' inflates reported consumption through social desirability",
+        "Selection bias — only tea drinkers answered",
+        "Confounding from diet quality"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does a single word in a question change what people report — and what does this tell us about health surveys in general?",
+        "promptAr": "بكلماتك: ليه كلمة واحدة في السؤال بتغيّر اللي الناس بتبلّغ عنه — وده بيقولنا إيه عن استطلاعات الصحة بشكل عام؟"
+      },
+      "explanation": "Adding the word 'healthy' triggers social desirability bias: people want to appear health-conscious, so they over-report consuming something labelled good. This is information bias from measurement — the tool itself (question wording) distorts what is measured. Neutral wording produces more valid data. This shows why questionnaire design and pre-testing matter enormously in health research.",
+      "explanationAr": "إضافة كلمة «صحي» بتحرّك انحياز المرغوبية الاجتماعية: الناس عايزة تتراءى كمهتمة بالصحة فبتُبلّغ عن استهلاك أعلى لشيء مُسمَّى صحياً. ده انحياز معلومات من القياس — أداة القياس نفسها (صياغة السؤال) بتشوّه ما بيتقاس. الصياغة المحايدة بتنتج بيانات أكثر صحة. ده بيوضّح ليه تصميم الاستبيان واختباره المسبق مهمّان جداً في البحث الصحي.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias"
+      ],
+      "cognitivebiasAtPlay": "Social Desirability Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A dietary RCT published in a prestigious journal tested a Mediterranean diet on young, healthy, highly educated volunteers in Spain and found a significant benefit on cognitive function. A supplement seller in Egypt cites this study to sell his 'brain-boosting' supplement to elderly patients with mild dementia.",
+      "claimAr": "تجربة عشوائية محكَمة غذائية نُشرت في مجلة مرموقة اختبرت الحمية المتوسطية على متطوّعين شباب أصحّاء ذوي تعليم عالٍ في إسبانيا ووجدت فائدة ملحوظة على الوظيفة المعرفية. بائع مكمّلات في مصر بيستشهد بالدراسة دي لبيع مكمّل «معزّز للدماغ» لمرضى مسنّين مع خرف خفيف.",
+      "prompt": "Before accepting this claim: what would have to be different for this study to NOT support the seller's product? List the gaps.",
+      "promptAr": "قبل قبول الادعاء ده: إيه اللي لازم يكون مختلف عشان الدراسة دي ما تدعمش منتج البائع؟ اعدّد الفجوات.",
+      "modelPoints": [
+        "Age gap: the study tested young, healthy adults — elderly patients with dementia may respond entirely differently to dietary intervention.",
+        "Health-status gap: findings from healthy populations cannot be extended to disease populations without independent testing.",
+        "Intervention gap: the study tested an entire dietary pattern, not one isolated supplement — no single extract can claim the results of a whole diet.",
+        "Nationality and diet-baseline gap: Mediterranean diet contrast effects depend partly on the existing baseline diet, which differs substantially between Spain and Egypt.",
+        "Any ONE of these gaps alone is enough to make the extrapolation scientifically unjustified."
+      ],
+      "modelPointsAr": [
+        "فجوة السن: الدراسة اختبرت بالغين شباباً أصحّاء — المرضى المسنّون مع خرف ممكن يستجيبوا بشكل مختلف تماماً للتدخّل الغذائي.",
+        "فجوة الحالة الصحية: النتائج من تعداد أصحّاء ما تنعمّمش على تعداد مريض بدون اختبار مستقل.",
+        "فجوة التدخّل: الدراسة اختبرت نمطاً غذائياً متكاملاً، لا مكمّلاً معزولاً — لا يمكن لأي مستخلص منفرد الادعاء بنتائج حمية كاملة.",
+        "فجوة الجنسية والخط الأساسي الغذائي: تأثيرات التباين في الحمية المتوسطية تعتمد جزئياً على الخط الأساسي الغذائي القائم، اللي يختلف اختلافاً كبيراً بين إسبانيا ومصر.",
+        "أي فجوة واحدة من دول لوحدها كافية لتجعل التعميم غير مُبرَّر علمياً."
+      ],
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/",
+        "https://www.hsph.harvard.edu/nutritionsource/healthy-weight/diet-reviews/mediterranean-diet/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"All the studies on our product were published in journals, the average lab result improved, and there have been no serious complaints — so our treatment is proven safe and effective for everyone.\"",
+      "claimAr": "فكّك الحُجّة دي: «كل الدراسات على منتجنا نُشرت في مجلات، ومتوسط نتائج التحاليل تحسّن، وما فيش شكاوى جادة — يبقى علاجنا مُثبَت آمن وفعّال للجميع.»",
+      "parts": [
+        { "text": "Our treatment is proven safe and effective for everyone.", "textAr": "علاجنا مُثبَت آمن وفعّال للجميع.", "role": "conclusion" },
+        { "text": "Studies were published in journals.", "textAr": "الدراسات نُشرت في مجلات.", "role": "premise" },
+        { "text": "The average lab result improved.", "textAr": "متوسط نتائج التحاليل تحسّن.", "role": "premise" },
+        { "text": "(Unstated) Publication in any journal equals rigorous peer-reviewed proof.", "textAr": "(غير مذكور) النشر في أي مجلة يساوي إثباتاً محكَّماً دقيقاً.", "role": "assumption" },
+        { "text": "There have been no serious complaints.", "textAr": "ما فيش شكاوى جادة.", "role": "premise" },
+        { "text": "(Unstated) Absence of complaints equals proven safety.", "textAr": "(غير مذكور) غياب الشكاوى يساوي أمان مُثبَت.", "role": "assumption" }
+      ],
+      "explanation": "Two hidden assumptions carry all the weight: (1) that any journal publication equals rigorous proof — but predatory journals publish without peer review; (2) that no complaints equals safety — but harmed people may not know where to complain, or may blame themselves. The 'average improved' premise also hides variance (SD) and lack of a control group. Once the assumptions are exposed, the conclusion 'proven safe and effective for everyone' does not follow from the premises.",
+      "explanationAr": "افتراضان خفيّان بيحملوا كل الثقل: (1) إن أي نشر في مجلة = إثبات دقيق — لكن المجلات الانتهازية بتنشر بدون مراجعة محكَّمة؛ (2) إن غياب الشكاوى = أمان مُثبَت — لكن المتضرّرين ممكن ما يعرفوش يشتكوا فين أو يلوموا نفسهم. مقدّمة «المتوسط تحسّن» كمان بتخبّي التباين (الانحراف المعياري) وغياب مجموعة ضابطة. بمجرد كشف الافتراضات، خلاصة «مُثبَت آمن وفعّال للجميع» ما بتلزمش من المقدّمات.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias",
+        "EAL-case-001:redflag-3"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

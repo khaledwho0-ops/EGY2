@@ -1,0 +1,135 @@
+{
+  "id": "day70_rct_randomization_blinding_placebo",
+  "phase": 2,
+  "week": 10,
+  "day": 70,
+  "title": "The Gold Standard — RCTs, Blinding, and Honest 'No'",
+  "titleAr": "المعيار الذهبي — التجارب العشوائية، التعمية، و«اللأ» الأمينة",
+  "description": "Randomly assign drug vs identical placebo, hide who got what from everyone, and let the result land where it lands. In Dr. Ismail's story, vitamin D did NOT cure the disease — and that honest 'no' is exactly why we trust the method.",
+  "descriptionAr": "وزّع عشوائياً دوا مقابل دواء وهمي مطابق، خبّي عن الكل مين أخد إيه، وسيب النتيجة تقع حيث تقع. في حكاية د. إسماعيل، فيتامين د ما شفاش المرض — و«اللأ» الأمينة دي بالظبط هي سبب ثقتنا في المنهج.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 17,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235704/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "To finally test the vitamin-D idea, Dr. Ismail's team randomly assigns workers to get either vitamin D or an identical-looking dummy pill. Why does flipping a coin to decide who gets what matter so much?",
+      "claimAr": "علشان أخيراً يختبروا فكرة فيتامين د، فريق د. إسماعيل بيوزّع العمّال عشوائياً علشان ياخدوا يا فيتامين د يا حبّة وهمية شكلها مطابق. ليه إن قرعة عملة بتقرّر مين ياخد إيه مهمّة لهذه الدرجة؟",
+      "options": [
+        "It doesn't matter; the doctor should choose who gets the real pill",
+        "Randomization makes the two groups similar by chance, removing selection bias so the only systematic difference between them is the treatment itself",
+        "It makes the study cheaper",
+        "It guarantees the drug will work"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Randomly assigning people is the heart of an RCT. When a coin-flip decides who gets the real pill, the two groups end up similar on average — same mix of ages, habits, and severity — so you can't accidentally (or deliberately) load the healthier people into one group. That kills selection bias. After randomization, the only systematic difference between the groups is the treatment, which is what lets an RCT actually attribute any difference in outcome to the treatment.",
+      "explanationAr": "التوزيع العشوائي للناس هو قلب التجربة المُحكَمة. لمّا قرعة عملة تقرّر مين ياخد الحبّة الحقيقية، المجموعتين بيطلعوا متشابهين في المتوسط — نفس خليط الأعمار والعادات وشدّة المرض — فما تقدرش بالغلط (أو بقصد) تحطّ الأصحّ في مجموعة واحدة. ده بيقتل انحياز الاختيار. بعد العشوائية، الفرق المنهجي الوحيد بين المجموعتين هو العلاج، وده اللي بيخلّي التجربة تقدر فعلاً تنسب أي فرق في النتيجة للعلاج.",
+      "sources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235704/"],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "Neither the patients NOR the doctors are told who received the real pill and who received the placebo until the study ends. What is this called, and what two problems does it fix?",
+      "claimAr": "لا المرضى ولا الأطباء بيعرفوا مين أخد الحبّة الحقيقية ومين أخد الوهمية لحد ما الدراسة تخلص. ده اسمه إيه، وبيحلّ أنهي مشكلتين؟",
+      "options": [
+        "Single-blinding — it fixes cost only",
+        "Double-blinding — it fixes the placebo effect (patients feeling better just from expecting to) and experimenter bias (doctors unconsciously seeing what they hope to see)",
+        "Randomization — it fixes confounders",
+        "Cherry-picking — it fixes nothing"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why must BOTH the patient AND the doctor be kept unaware — what specific error does each one's blindness prevent?",
+        "promptAr": "بكلماتك: ليه لازم المريض والدكتور الاتنين يكونوا مش عارفين — أنهي خطأ محدّد بيمنع جهل كل واحد منهم؟"
+      },
+      "explanation": "Hiding the assignment from both patient and doctor is double-blinding. It fixes two human problems at once. First, the placebo effect: people often feel better simply because they believe they're being treated — an identical dummy pill lets you measure that and subtract it out. Second, experimenter bias: a doctor who knows who got the drug may unconsciously rate them as improved or be more attentive to their care. Blind everyone, and hope and expectation can no longer quietly steer the result. Naming which blindness prevents which error is the key insight — both are necessary, and neither alone is sufficient.",
+      "explanationAr": "إخفاء التوزيع عن المريض والدكتور هو «التعمية المزدوجة». بتحلّ مشكلتين بشريتين في وقت واحد. الأولى، التأثير الوهمي: الناس غالباً بتحسّ أحسن لمجرد إنها مصدّقة إنها بتتعالج — الحبّة الوهمية المطابقة بتخلّيك تقيس ده وتطرحه. التانية، انحياز المُجرِّب: الدكتور اللي عارف مين أخد الدوا ممكن من غير قصد يقيّمه إنه اتحسّن أو يكون أكثر اهتماماً برعايته. عمّي الكل، ويبقى الأمل والتوقّع مش قادرين يوجّهوا النتيجة في صمت. تسمية أي تعمية بتمنع أي خطأ هو الفهم الجوهري — الاتنين ضروريين، وأي واحد منهم لوحده مش كافي.",
+      "sources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235704/"],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "The well-run trial finishes. The result: vitamin D did NOT cure the disease. This feels like a failure — money wasted, time lost, nothing learned.",
+      "claimAr": "التجربة المُتقَنة خلصت. النتيجة: فيتامين د ما شفاش المرض. ده بيحسّ فشل — فلوس اتضيّعت، وقت اتضيّع، ما اتعلّمش حاجة.",
+      "prompt": "What would have to be true if this 'negative result' is actually valuable rather than a waste? What did we learn — and what would have happened without the trial?",
+      "promptAr": "لو النتيجة «السلبية» دي قيّمة فعلاً بدل إنها خسارة، إيه اللي لازم يكون صح؟ إيه اللي اتعلّمناه — وإيه اللي كان هيحصل من غير التجربة؟",
+      "modelPoints": [
+        "If the result is valuable: we now know definitively that vitamin D is not the treatment — without the trial, doctors might have prescribed it for years, spending patients' money and delaying the search for the real cause.",
+        "A trustworthy 'no' is as informative as a 'yes': it rules out one hypothesis, focuses the next research question, and prevents useless interventions from spreading.",
+        "The «الطيبات» system never produced a trustworthy 'no' — every failure was blamed on the patient, the timing, or lack of belief, making the system unfalsifiable and infinitely renewable.",
+        "A method that can only ever say 'yes' is not testing anything — it's confirming. The willingness to find 'no' is what makes 'yes' credible."
+      ],
+      "modelPointsAr": [
+        "لو النتيجة قيّمة: دلوقتي إحنا عارفين بشكل قاطع إن فيتامين د مش هو العلاج — من غير التجربة، ممكن الأطباء كانوا بيصرفوه لسنين، بيضيّعوا فلوس المرضى ويأخّروا البحث عن السبب الحقيقي.",
+        "«اللأ» الموثوقة مفيدة زي الـ«أيوة»: بتستبعد فرضية واحدة، وبتركّز سؤال البحث اللي بعده، وبتمنع التدخّلات العديمة الفايدة من الانتشار.",
+        "نظام «الطيبات» عمره ما أنتج «لأ» موثوقة — كل فشل كان بيتلام على المريض، أو التوقيت، أو نقص الإيمان، وده خلّى النظام غير قابل للتفنيد وقابل للتجديد إلى ما لا نهاية.",
+        "المنهج اللي مش قادر يقول غير «أيوة» مش بيختبر حاجة — هو بيأكّد. الاستعداد لإيجاد «لأ» هو اللي بيخلّي «أيوه» مصداقية."
+      ],
+      "sources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235704/", "EAL-case-001:ems-2026-03"],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "inoculate",
+      "technique": "unfalsifiability shield",
+      "techniqueAr": "درع عدم قابلية التفنيد",
+      "task": "Feel the trick from the inside so you can spot it outside. Write a short post promoting a harmless claim (like 'our morning walk group improves mood') that is designed so it can NEVER be proven wrong — build in a reason why any failure is the participant's fault, not the treatment's.",
+      "taskAr": "حسّ بالحيلة من جوّه علشان تكشفها من برّه. اكتب بوست قصير بيروّج لادعاء غير ضار (زي «مجموعة المشي الصباحي بتحسّن المزاج») متصمَّم علشان ما يتثبتش إنه غلط أبداً — ابني سبب ليه أي فشل غلطة المشارك، مش العلاج.",
+      "taskAr": "حسّ بالحيلة من جوّه علشان تكشفها من برّه. اكتب بوست قصير بيروّج لادعاء غير ضار (زي «مجموعة المشي الصباحي بتحسّن المزاج») متصمَّم علشان ما يتثبتش إنه غلط أبداً — ابني سبب ليه أي فشل غلطة المشارك، مش العلاج.",
+      "tells": [
+        "Any failure is re-attributed to the patient: 'you weren't consistent enough / didn't believe / had a pre-existing issue.' The treatment itself is never at fault.",
+        "Success is evidence the treatment works; failure is evidence the patient didn't follow it properly. This means no possible outcome could ever count against the claim.",
+        "There is no defined test that would count as a 'fair failure' — the goalposts always move to protect the conclusion.",
+        "Compare: an honest claim defines in advance what would disprove it. A shielded claim has no such definition."
+      ],
+      "tellsAr": [
+        "أي فشل بيتعاد نسبه للمريض: «ما كنتش منتظم بما يكفي / ما صدّقتش / كان عندك مشكلة مسبقة». العلاج نفسه مش غلطان أبداً.",
+        "النجاح دليل على إن العلاج بينفع؛ والفشل دليل على إن المريض ما اتّبعوش صح. ده معناه إن مفيش نتيجة ممكنة تُعدّ ضد الادعاء.",
+        "مفيش اختبار محدّد كان هيُعدّ «فشل عادل» — العوارض دايماً بتتحرّك علشان تحمي النتيجة.",
+        "قارن: الادعاء الأمين بيحدّد مسبقاً إيه اللي هيكذّبه. الادعاء المُحصَّن ما عندوش التعريف ده."
+      ],
+      "explanation": "The «الطيبات» system ran exactly on this shield: every documented harm was 'detox symptoms', every death was the patient's pre-existing condition, every failure was 'you didn't follow it correctly.' This pre-empts any falsification. An RCT breaks the shield by design: it pre-defines what counts as failure (the same measured outcome in both groups), and both groups face the same conditions. The inoculation here — writing the shield yourself — lets you recognise the structure instantly when you see it in the wild.",
+      "explanationAr": "نظام «الطيبات» اشتغل بالظبط على الدرع ده: كل ضرر موثَّق كان «أعراض تطهير»، وكل وفاة كانت حالة مسبقة للمريض، وكل فشل كان «ما اتّبعتهوش صح». ده بيُفشل أي تفنيد مسبقاً. التجربة العشوائية بتكسر الدرع بالتصميم: بتحدّد مسبقاً إيه اللي بيُعدّ فشلاً (نفس النتيجة المقاسة في المجموعتين)، والمجموعتان بيواجهوا نفس الظروف. التلقيح هنا — إنك تكتب الدرع بنفسك — بيخلّيك تتعرّف على الهيكل فوراً لمّا تشوفه في الواقع.",
+      "sources": ["EAL-case-001:ems-2026-03", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235704/"],
+      "cognitivebiasAtPlay": "Unfalsifiability"
+    },
+    {
+      "id": 5,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A trial enrolls only 50-year-old male smokers and finds a drug helps them. A seller then markets it to pregnant women and children. Before seeing the analysis: how confident are you that the seller's reasoning is valid?",
+      "claimAr": "تجربة سجّلت مدخّنين رجّالة عندهم 50 سنة بس ولقت إن الدوا بيساعدهم. بعدين بائع بيسوّقه للحوامل والأطفال. قبل ما تشوف التحليل: قد إيه واثق إن استدلال البائع سليم؟",
+      "options": [
+        "Confident — a result that works for one group works for everyone",
+        "Not confident — a trial only speaks for the group actually studied; applying it to very different people is over-generalization"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Even a perfect RCT only speaks confidently about the kind of people who were in it. A drug tested only on 50-year-old male smokers hasn't been shown safe or effective for pregnant women or children — their biology can respond completely differently. Stretching a narrow result to everyone is over-generalization, and it's how genuinely real findings get turned into unsafe advice. Always ask: 'who was actually studied, and am I (or my patient) like them?' Calibration note: feeling confident in a study's result is appropriate — the trap is extending that confidence beyond its actual scope.",
+      "explanationAr": "حتى التجربة المثالية بتتكلم بثقة بس عن نوع الناس اللي كانوا فيها. دوا اتجرّب على مدخّنين رجّالة عندهم 50 سنة بس ما اتثبتش إنه آمن أو فعّال للحوامل أو الأطفال — بيولوجيتهم ممكن تتفاعل بشكل مختلف تماماً. مطّ نتيجة ضيّقة على الكل ده «تعميم زائد»، وبيه نتائج حقيقية فعلاً بتتحوّل لنصيحة غير آمنة. اسأل دايماً: «مين اللي اتدرس فعلاً، وأنا (أو مريضي) زيّهم؟». ملاحظة معايرة: إنك تحسّ بثقة في نتيجة الدراسة مناسب — الفخّ هو إنك تمدّ الثقة دي أبعد من نطاقها الحقيقي.",
+      "sources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235704/"],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 6,
+      "mechanic": "retrieve",
+      "retrievalOf": 67,
+      "claim": "Week recap. From day 67 (case-control): recall bias meant sick people 'remembered' exposures more vividly than healthy people. An RCT completely solves recall bias in measuring outcomes. Why?",
+      "claimAr": "مراجعة الأسبوع. من يوم 67 (الحالات-والشواهد): انحياز التذكّر خلّى المرضى «يتذكّروا» التعرّضات بوضوح أكبر من الأصحّاء. التجربة العشوائية بتحلّ انحياز التذكّر بالكامل في قياس النتايج. ليه؟",
+      "options": [
+        "Because it uses memory more carefully",
+        "Because outcomes are measured prospectively and objectively at the time they happen — not reconstructed from memory after the fact",
+        "Because the patients are smarter",
+        "Because recall bias only affects case-control studies and disappears automatically in any other design"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The reason recall bias damages case-control studies is that people are asked to reconstruct past exposures from memory — and memory is rewritten by current health status and beliefs. An RCT avoids this by measuring outcomes *at the time they happen*, using objective clinical measures (lab tests, standardised rating scales, observed symptoms) rather than retrospective recall. Connecting the fix here to the problem on day 67 is the ladder's logic: each design step removes a specific flaw that the step below suffered from.",
+      "explanationAr": "السبب اللي انحياز التذكّر بيضرّ دراسات الحالات-والشواهد بيه هو إن الناس بيتطلب منهم يعيدوا بناء تعرّضات ماضية من الذاكرة — والذاكرة بتتعاد كتابتها بالحالة الصحية الحالية والمعتقدات. التجربة العشوائية بتتجنّب ده بإنها تقيس النتايج *في وقت حدوثها*، باستخدام مقاييس سريرية موضوعية (تحاليل معملية، مقاييس تقييم موحَّدة، أعراض ملحوظة) بدل التذكّر بأثر رجعي. ربط الحلّ هنا بالمشكلة في يوم 67 هو منطق السلّم: كل خطوة تصميمية بتشيل عيب محدّد الخطوة اللي تحتها كانت بتعاني منه.",
+      "sources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235704/", "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies"],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "day32_illicit_major",
+  "phase": 1,
+  "week": 5,
+  "day": 32,
+  "title": "The Illicit Major",
+  "titleAr": "إساءة استغراق الحدّ الأكبر",
+  "description": "\"All approved medicines are tested. This isn't an approved medicine — so it isn't tested\" flips a rule onto everything outside it. Today: why 'all A are B' never tells you about the non-A.",
+  "descriptionAr": "«كل الأدوية المعتمَدة مُختبَرة. ده مش دوا معتمَد — يبقى مش مُختبَر» بتقلب القاعدة على كل اللي بَرّاها. النهاردة: ليه «كل أ هي ب» عمرها ما بتقول لك حاجة عن اللي مش أ.",
+  "type": "logic",
+  "difficulty": 4,
+  "estimatedMinutes": 15,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A speaker argues: \"All toxic things are forbidden by me, and chicken is forbidden, so chicken is toxic — and nothing I allow can ever be toxic.\" Focus on the LAST clause: 'nothing I allow is toxic.' Why is that an illicit leap?",
+      "claimAr": "متحدّث بيقول: «كل حاجة سامة أنا بحرّمها، والفراخ محرّمة عندي، يبقى الفراخ سامة — ومفيش حاجة بسمح بيها ممكن تكون سامة أبداً». ركّز على آخر جملة: «مفيش حاجة بسمح بيها سامة». ليه دي قفزة غير مشروعة؟",
+      "options": [
+        "It's fine — if he forbids all toxins, his allowed list is automatically safe",
+        "Illicit major: 'all toxic things are forbidden' tells you about the forbidden group, not about the allowed group; allowed foods could still be harmful for reasons he never tested",
+        "Chicken really is toxic",
+        "He should forbid everything to be safe"
+      ],
+      "correctAnswer": 1,
+      "explanation": "From 'all toxic things are forbidden by me' you cannot conclude 'nothing I allow is toxic.' The premise distributes the term 'forbidden,' but the conclusion makes a sweeping claim about the 'allowed' group that the premise never covered — that is the illicit major. His say-so over a list does not make the allowed items safe or the forbidden items toxic; only evidence about each food can do that. The whole 'pure vs poison' split rests on this hidden over-reach.",
+      "explanationAr": "من «كل حاجة سامة بحرّمها» ما تقدرش تستنتج «مفيش حاجة بسمح بيها سامة». المُقدّمة بتتكلّم عن مجموعة «المحرّم»، لكن النتيجة بتعمل ادعاء شامل عن مجموعة «المسموح» اللي المُقدّمة ما غطّتهاش — دي «إساءة استغراق الحدّ الأكبر». كلامه على قايمة ما بيخلّيش المسموح آمن ولا المحرّم سام؛ الدليل عن كل أكل لوحده هو اللي بيعمل ده. كل ثنائية «طاهر ضد سام» قايمة على التجاوز المخفي ده.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-9"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "\"All quack remedies make extravagant promises. This seller makes only modest claims — so this seller cannot be a quack, AND anything modest-sounding is automatically trustworthy.\" Is the SECOND part of this valid?",
+      "claimAr": "«كل وصفات الدجل بتعمل وعود مبالَغ فيها. البائع ده بيعمل بس ادعاءات متواضعة — يبقى البائع ده مش دجّال، وكمان أي حاجة بتبان متواضعة موثوقة تلقائياً». هل الجزء التاني صحيح؟",
+      "options": [
+        "Yes — modest claims signal honest intentions",
+        "No — illicit major: avoiding extravagant promises doesn't certify the rest; a quiet scam still exists"
+      ],
+      "correctAnswer": 1,
+      "explanation": "False — the second half is an illicit major. 'All quack remedies make big promises' tells you something about quack remedies; it does NOT let you sweep a verdict over everything that lacks big promises. A quiet, modest-sounding scam still exists; avoiding one warning sign does not certify the rest. This matters because deceivers learn to drop the obvious red flags and keep the subtle ones. Trust is earned by evidence, not merely by NOT resembling a stereotype.",
+      "explanationAr": "غلط — الجزء التاني «إساءة استغراق الحدّ الأكبر». «كل وصفات الدجل بتعمل وعود كبيرة» بيقول لك حاجة عن وصفات الدجل؛ ما بيخلّيكش تعمّم حُكم على كل اللي مفيهوش وعود كبيرة. النصب الهادي المتواضع لسه موجود؛ تجنّب علامة تحذير واحدة ما بيشهدش بسلامة الباقي. ده مهم لأن المخادعين بيتعلّموا يسيبوا العلامات الواضحة ويمسكوا الخفيّة. الثقة بتُكتسب بالدليل، مش بمجرد إنها مش شبه القالب النمطي.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://sciencebasedmedicine.org/reference/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A relative says: \"All real scientists publish in journals. He never published — so everything he says must be false.\" Even if you doubt his claims, why is THIS particular inference an illicit major?",
+      "claimAr": "قريب بيقول: «كل العلماء الحقيقيين بينشروا في مجلات. هو عمره ما نشر — يبقى كل اللي بيقوله لازم يكون كذب». حتى لو بتشكّك في كلامه، ليه الاستنتاج ده بالذات «إساءة استغراق الحدّ الأكبر»؟",
+      "options": [
+        "It's perfectly valid — no journal means everything is false",
+        "Illicit major: the rule constrains 'real scientists', not every individual statement a non-publisher makes; a non-publisher can still say something true"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what is the correct, narrower thing to say about an unverified claim — versus the over-reaching 'everything he says is false'?",
+        "promptAr": "بكلماتك: إيه الحاجة الصح الأضيق اللي تقولها عن ادعاء غير مثبَت — بدل «كل كلامه كذب» اللي بيتجاوز؟"
+      },
+      "explanation": "Lack of publication is a genuine red flag about evidence quality — but the inference 'therefore everything he says is false' is the mirror trap. 'All real scientists publish' distributes the predicate over scientists; it does not license a total verdict over every individual statement a non-publisher makes (a non-publisher can still say 'water is wet'). The honest move is narrower and stronger: 'no published evidence means his medical claims are unsupported, so we should not act on them' — not 'every word is a lie.' Precise reasoning is more persuasive AND fairer.",
+      "explanationAr": "غياب النشر علامة خطر حقيقية على جودة الدليل — لكن استنتاج «إذن كل كلامه كذب» هو الفخّ المعكوس. «كل العلماء الحقيقيين بينشروا» بتستغرق الصفة على العلماء؛ ما بتسمحش بحُكم شامل على كل عبارة بيقولها واحد مش بينشر (ممكن يقول «المية بتبلّل»). الحركة الأمينة أضيق وأقوى: «مفيش دليل منشور يبقى ادعاءاته الطبية بلا سند، فما نتصرّفش بناءً عليها» — مش «كل كلمة كذبة». الاستدلال الدقيق أكثر إقناعاً وأكثر إنصافاً.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-2"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "\"All the foods on his allowed list are blessed and pure; so anyone who eats off-list is harming their body.\"",
+      "claimAr": "«كل الأكل في قايمته المسموحة مبارَك وطاهر؛ يبقى أي حد بياكل بَرّا القايمة بيضرّ جسمه».",
+      "prompt": "What would have to be true if this conclusion were FALSE? What evidence would we need to see to know that 'off-list' foods are not automatically harmful?",
+      "promptAr": "لو الاستنتاج ده غلط، إيه اللي لازم يكون صح؟ وإيه الدليل اللي محتاجين نشوفه علشان نعرف إن الأكل «بَرّا القايمة» مش مؤذٍ تلقائياً؟",
+      "modelPoints": [
+        "If false, we'd expect to find that off-list foods like chicken, eggs, and dairy have strong independent evidence of nutritional benefit — and that is exactly what major dietary science shows.",
+        "We'd expect that the people who eat off-list foods (the overwhelming majority of the population) do not systematically suffer the harms claimed — and they don't.",
+        "We'd need the rule 'allowed foods are good' to NOT logically extend to 'off-list foods are bad' — and as the illicit major shows, it doesn't.",
+        "We'd expect that any harm from off-list foods would need its own separate evidence, not inherited from the premise. No such evidence was ever presented."
+      ],
+      "modelPointsAr": [
+        "لو غلط، هنتوقع إن أطعمة بَرّا القايمة زي الفراخ والبيض والألبان عليها دليل مستقل قوي بالفائدة الغذائية — وده بالظبط اللي بيوضّحه علم التغذية الكبير.",
+        "هنتوقع إن الناس اللي بتاكل بَرّا القايمة (الأغلبية الساحقة من السكّان) مش بتعاني بشكل منهجي من الأضرار المدّعاة — وهم مش بيعانوا فعلاً.",
+        "لازم نتوقع إن القاعدة «الأكل المسموح كويس» ما تتمدّدش منطقياً لـ«الأكل بَرّا القايمة وحش» — وزي ما «إساءة استغراق الحدّ الأكبر» بتوضّح، هي ما بتتمدّدش.",
+        "هنتوقع إن أي ضرر من الأكل بَرّا القايمة يحتاج دليل منفصل خاص بيه، مش موروث من المُقدّمة. وده الدليل اللي ما اتقدّمش أبداً."
+      ],
+      "explanation": "Considering the opposite forces us to ask what we'd find if the conclusion were wrong — and the answer is: strong independent nutritional evidence for the 'off-list' foods (like chicken and dairy), and a healthy world population that eats them. The conclusion 'off-list harms you' receives no support from the premise 'allowed foods are good'; it needs its own evidence, which was never supplied.",
+      "explanationAr": "التفكير في العكس بيجبرنا نسأل ماذا سنجد لو الاستنتاج غلط — والإجابة: دليل غذائي مستقل قوي على أطعمة «بَرّا القايمة» (زي الفراخ والألبان)، وسكّان العالم الأصحّاء اللي بياكلوها. الاستنتاج «بَرّا القايمة بيضرّك» ما بيلاقيش دعماً من المُقدّمة «الأكل المسموح كويس»؛ هو محتاج دليله الخاص، اللي ما قُدِّمش أبداً.",
+      "sources": [
+        "https://www.hsph.harvard.edu/nutritionsource/protein/",
+        "EAL-case-001:redflag-6"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "illicit major — sweeping a verdict onto everything outside a rule",
+      "techniqueAr": "إساءة استغراق الحدّ الأكبر — تعميم حُكم على كل اللي بَرّا قاعدة",
+      "task": "Feel this from the inside. Write a short post about a harmless topic — say, 'morning routines' — where you start with a true rule about one group ('people who exercise in the morning tend to be energetic') and then sweep a confident negative verdict onto everyone who doesn't follow that rule. Make the reader feel that not following the rule is risky.",
+      "taskAr": "احسّ بالحركة من جوّه. اكتب بوست قصير عن موضوع غير ضار — قُل «روتين الصبح» — حيث تبدأ بقاعدة صحيحة عن مجموعة («الناس اللي بتتمرّن الصبح غالباً نشيطة») وبعدين تعمّم حُكم سلبي واثق على كل اللي مش بيتّبع القاعدة. خلّي القارئ يحسّ إن عدم اتّباع القاعدة خطر.",
+      "tells": [
+        "The premise is about Group A ('morning exercisers are energetic') but the conclusion sweeps Group B ('non-morning-exercisers are dull/at risk') — a group the premise never described.",
+        "The reader is made to feel a verdict applies to them without any evidence specific to their situation.",
+        "The word 'so' or 'therefore' does the heavy lifting — jumping from 'A is true of group X' to 'not-A is true of everyone else.'",
+        "No evidence is given for the negative claim about non-members; it's inherited from the positive claim, which doesn't carry it.",
+        "The post creates an in-group ('people who follow the rule') and an implied at-risk out-group ('everyone else') — a classic division that makes the rule feel more important than it is."
+      ],
+      "tellsAr": [
+        "المُقدّمة عن المجموعة أ («اللي بتتمرّن الصبح نشيطة») لكن النتيجة بتعمّم على المجموعة ب («اللي مش بتتمرّن الصبح خاملة / في خطر») — مجموعة المُقدّمة عمرها ما وصفتها.",
+        "القارئ بيحسّ إن حُكم بينطبق عليه من غير أي دليل خاص بوضعه.",
+        "كلمة «يبقى» أو «إذن» بتشيل الثقل — بتقفز من «أ صح على مجموعة س» لـ«مش أ صح على كل الباقيين».",
+        "مفيش دليل على الادعاء السلبي عن غير الأعضاء؛ هو موروث من الادعاء الإيجابي، اللي ما بيحمله.",
+        "البوست بيخلق داخل-المجموعة («الناس اللي بتتّبع القاعدة») وخارج-المجموعة ضمنياً في خطر («الكل التاني») — تقسيم كلاسيكي بيخلّي القاعدة تبان أهم مما هي."
+      ],
+      "explanation": "Building the illicit major in a harmless context makes the logical sleight of hand visible: the move from 'some A → good outcome' to 'not-A → bad outcome' is always an add-on that the original rule never supported. Now that you've felt how to generate it, you'll spot the same move whenever a health, diet, or lifestyle rule is used to condemn everyone outside it.",
+      "explanationAr": "إنك تبني «إساءة استغراق الحدّ الأكبر» في سياق غير ضار بيخلّي الخدعة المنطقية واضحة: الانتقال من «بعض أ → نتيجة كويسة» لـ«مش-أ → نتيجة وحشة» دايماً إضافة القاعدة الأصلية عمرها ما دعمتها. دلوقتي وإنت حسّيت بطريقة توليدها، هتكشف نفس الحركة كل ما قاعدة صحة أو حمية أو نمط حياة تُستخدم لإدانة كل اللي بَرّاها.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.jmir.org/2023/1/e49255"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    }
+  ]
+}

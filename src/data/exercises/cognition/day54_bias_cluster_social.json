@@ -1,0 +1,132 @@
+{
+  "id": "day54_bias_cluster_social",
+  "phase": 1,
+  "week": 8,
+  "day": 54,
+  "title": "The Social and Persistence Cluster: Four Biases That Spread and Survive",
+  "titleAr": "مجموعة الانتشار والبقاء: أربع انحيازات بتنتشر وبتتمسك",
+  "description": "Some biases explain why false beliefs go viral and stay alive even after being refuted. Today: Proportionality Bias, Anchoring Bias, the Bandwagon Effect, and Belief Perseverance.",
+  "descriptionAr": "بعض الانحيازات بتفسّر ليه المعتقدات الغلط بتنتشر وبتفضل حيّة حتى بعد التفنيد. النهاردة: انحياز التناسب، انحياز التثبيت، أثر العربة، وإصرار المعتقد.",
+  "type": "bias",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://journals.sagepub.com/doi/10.1177/0963721417718261",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A follower says: 'My IBS completely disappeared after 10 years — that's too big a change to be a placebo or coincidence. The diet MUST be doing something.' Which bias is this?",
+      "claimAr": "تابع بيقول: «قولوني اتشفى بعد 10 سنين — ده تغيير أكبر من إنه يكون وهمي أو صدفة. النظام لازم يكون عامل حاجة». أنهي انحياز ده؟",
+      "options": [
+        "Dunning-Kruger Effect",
+        "Proportionality Bias: assuming big effects need big causes. But placebo effects, natural disease remission, and regression to the mean can all produce large improvements — they don't require a 'big' treatment",
+        "Availability Heuristic",
+        "Confirmation Bias"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Proportionality Bias is the intuition that large effects need proportionally large causes — so a dramatic improvement 'must' have a real treatment behind it. But large placebo effects are well-documented (the more dramatic the ritual, the stronger the effect), and chronic conditions like IBS naturally have periods of remission. The proportionality of the effect tells you nothing reliable about the cause.",
+      "explanationAr": "انحياز التناسب هو الحدس إن الآثار الكبيرة تحتاج أسباب كبيرة بنفس القدر — فتحسّن درامي «لازم» يكون عنده علاج حقيقي وراه. لكن التأثيرات الوهمية الكبيرة موثّقة جيّداً (كلما كانت الطقوس أكثر دراماتيكية، كلما كان التأثير أقوى)، والأمراض المزمنة زي القولون عندها طبيعياً فترات هدأة. حجم التأثير ما بيقولكش حاجة موثوقة عن السبب.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3442589/",
+        "EAL-case-001:proportionality"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A health video has 3.7 million views and thousands of grateful comments. Before judging the claim inside it: how confident should those numbers make you that the information is correct?",
+      "claimAr": "فيديو صحي عنده 3.7 مليون مشاهدة وآلاف التعليقات الممتنّة. قبل ما تحكم على الادعاء اللي جواه: قد إيه الأرقام دي المفروض تخلّيك واثق إن المعلومة صح؟",
+      "options": [
+        "Very confident — that many people can't be wrong",
+        "Not at all — views and likes measure shareability and emotion, not accuracy (Bandwagon Effect)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the Bandwagon Effect. Popularity measures emotional resonance and shareability, not accuracy. The viral Taybat TV interview reached 3.7 million views with no medical counter-panel. Calibration training: notice how much those big numbers nudged your confidence, then separate that feeling from the actual evidence. Fear and hope spread faster than nuance — a long queue makes a restaurant feel good before you've tasted anything.",
+      "explanationAr": "ده أثر العربة. الشيوع بيقيس الرنين العاطفي وقابلية المشاركة، مش الدقة. مقابلة «الطيبات» التلفزيونية اللي انتشرت وصلت 3.7 مليون مشاهدة بدون لجنة طبية مقابلة. تدريب المعايرة: لاحظ الأرقام الكبيرة دي زوّدت ثقتك قد إيه، وبعدين افصل الإحساس ده عن الدليل الفعلي. الخوف والأمل بينتشروا أسرع من الفروق الدقيقة — طابور طويل بيخلّي المطعم يبان كويّس قبل ما تتذوّق حاجة.",
+      "sources": [
+        "EAL-case-001:bandwagon",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "After the system was officially banned and deaths were attributed to it, many followers said: 'The ban PROVES they fear the truth — and the founder's death proves he was a martyr.' It feels airtight.",
+      "claimAr": "بعد ما النظام اتحظر رسمياً ووفيات اتنسبت ليه، أتباع كتير قالوا: «الحظر بيثبت إنهم خايفين من الحقيقة — ووفاة المؤسّس بتثبت إنه شهيد». بيحسّ محكم.",
+      "prompt": "Consider the opposite: is there ANY outcome that this belief would accept as evidence it is WRONG? If banning = true and allowing = true, what does that tell you?",
+      "promptAr": "فكّر في العكس: فيه أي نتيجة المعتقد ده كان هيقبلها كدليل إنه «غلط»؟ لو الحظر = صح والسماح = صح، ده بيقولك إيه؟",
+      "modelPoints": [
+        "If both 'banned' and 'allowed' confirm the belief, then NOTHING could ever disprove it — that is the definition of an unfalsifiable claim, not a strong one.",
+        "A ban after documented harm is exactly what a responsible regulator would do whether or not the diet 'worked' — so the ban is not evidence either way about the cure.",
+        "The founder died of a confirmed cardiac event at 47, after a diet excluding cardio-protective foods; 'martyr' reframes a tragic outcome into proof, which no evidence could reverse.",
+        "Belief Perseverance turns every disconfirmation into fresh confirmation — noticing that loop is the way out."
+      ],
+      "modelPointsAr": [
+        "لو «الحظر» و«السماح» الاتنين بيأكّدوا المعتقد، يبقى مفيش حاجة ممكن تكذّبه أبداً — وده تعريف الادعاء غير القابل للتفنيد، مش الادعاء القوي.",
+        "الحظر بعد ضرر موثّق هو بالظبط اللي أي جهة تنظيمية مسؤولة هتعمله سواء النظام «نفع» أو لأ — فالحظر مش دليل في أي اتجاه عن العلاج.",
+        "المؤسّس مات بحدث قلبي مؤكّد في الـ47، بعد حِمية بتستبعد أطعمة واقية للقلب؛ «شهيد» بتعيد تأطير نتيجة مأساوية لدليل، ومفيش دليل يقدر يعكسه.",
+        "إصرار المعتقد بيحوّل كل تفنيد لتأكيد جديد — ملاحظة الحلقة دي هي طريق الخروج."
+      ],
+      "explanation": "Considering the opposite — actively asking 'what would this belief ever count as evidence against itself?' — exposes Belief Perseverance and the unfalsifiable structure beneath it. The Egyptian Foreign Ministry confirmed a natural cardiac death with no criminal element; reframing that as 'cover-up' makes the claim immune to any data. A claim that nothing could disprove is not protected — it has simply left the realm of evidence.",
+      "explanationAr": "التفكير في العكس — إنك تسأل بنشاط «المعتقد ده هيعتبر إيه دليلاً ضد نفسه؟» — بيكشف إصرار المعتقد والبنية غير القابلة للتفنيد تحته. الخارجية المصرية أكّدت وفاة قلبية طبيعية بلا شبهة جنائية؛ إعادة تأطيرها كـ«تغطية» بتخلّي الادعاء محصّناً ضد أي بيانات. ادعاء مفيش حاجة تقدر تكذّبه مش محمي — هو بس خرج من مجال الدليل.",
+      "sources": [
+        "EAL-case-001:mfa-eg-2026-04",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "retrieve",
+      "retrievalOf": 54,
+      "claim": "The system's name uses the sacred Quranic word «الطيبات», which most Egyptians first heard in worship. How does meeting that word FIRST in a sacred setting shape every later food judgment?",
+      "claimAr": "اسم النظام بيستخدم كلمة «الطيبات» القرآنية المقدّسة، اللي أغلب المصريين سمعوها أول مرة في العبادة. إزاي مقابلة الكلمة «أول» مرة في سياق مقدّس بتشكّل كل حُكم غذائي لاحق؟",
+      "options": [
+        "It has no effect — people separate religious and nutrition contexts automatically",
+        "Anchoring Bias: the first powerful association (sacred, pure, blessed) becomes the reference frame that colours every later judgment",
+        "Bandwagon Effect only",
+        "It creates Proportionality Bias"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Anchoring Bias means the first piece of information encountered acts as a reference point that over-influences all later judgments. Hearing «طيبات» first in a Quran recitation sets an anchor of 'sacred, pure, approved by God' — which then colours every encounter with the diet's food categories. A 'was 2000 EGP' tag makes 1200 feel cheap regardless of real value. The anchor shapes the feeling before reason can engage.",
+      "explanationAr": "انحياز التثبيت معناه إن أول معلومة تقابَل بتعمل نقطة مرجعية بتؤثّر بإفراط على كل الأحكام اللاحقة. سماع «طيبات» أول مرة في تلاوة قرآنية بيرسّي مرساة «مقدّس، نقي، معتمد من الله» — اللي بتلوّن بعدين كل لقاء مع تصنيفات طعام النظام. لافتة «كان 2000 جنيه» بتخلّي 1200 تحسّسك إنها رخيصة بغضّ النظر عن القيمة الفعلية. المرساة بتشكّل الإحساس قبل ما العقل يتدخّل.",
+      "sources": [
+        "EAL-case-001:anchoring",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "manufacturing a bandwagon",
+      "techniqueAr": "تصنيع أثر العربة",
+      "task": "Feel the trick from the inside so you can spot it later. Write a short, punchy post promoting a totally harmless claim like 'everyone should drink more water' — but instead of any evidence, lean entirely on social proof: huge numbers, 'millions already switched', 'don't be the last to know'. Make popularity feel like proof.",
+      "taskAr": "حسّ بالحركة من جوّه علشان تكشفها بعدين. اكتب بوست قصير ومؤثّر بيروّج لادعاء غير ضار خالص زي «كله المفروض يشرب مية أكتر» — لكن بدل أي دليل، اعتمد بالكامل على الدليل الاجتماعي: أرقام ضخمة، «الملايين بدّلوا فعلاً»، «ماتبقاش آخر واحد يعرف». خلّي الشيوع يحسّ إنه دليل.",
+      "tells": [
+        "Big numbers stand in for evidence ('millions can't be wrong') — popularity is not accuracy.",
+        "Fear of missing out / being 'the last to know' pressures you to join before thinking.",
+        "Zero mechanism, zero source — only the size of the crowd.",
+        "Emotion (belonging, urgency) is doing the persuading, not data.",
+        "It would spread identically whether the claim were true or false."
+      ],
+      "tellsAr": [
+        "أرقام كبيرة بتحلّ محلّ الدليل («الملايين ما ينفعش يكونوا غلط») — الشيوع مش دقة.",
+        "الخوف من إنك تفوّت / تبقى «آخر واحد يعرف» بيضغط عليك تنضمّ قبل ما تفكّر.",
+        "صفر آلية، صفر مصدر — بس حجم الزحام.",
+        "العاطفة (الانتماء، الاستعجال) هي اللي بتقنع، مش البيانات.",
+        "كان هينتشر بنفس الشكل سواء الادعاء صح أو غلط."
+      ],
+      "explanation": "Building the manipulation in a weakened, harmless dose is 'active inoculation' — research (signal-detection meta-analysis, N=37,025) shows it sharpens your ability to DISCRIMINATE manipulative from honest content without just making you cynical. Now you've manufactured a bandwagon from the inside, you'll recognise the 'millions already agree' move faster in the wild — including when it wears sacred or popular clothing.",
+      "explanationAr": "إنك تبني التلاعب بجرعة مخفّفة غير ضارة ده «التلقيح النشط» — الأبحاث (تحليل بَعدي بنظرية كشف الإشارة، ن=37,025) بتبيّن إنه بيشحذ قدرتك على التمييز بين المحتوى المتلاعب والصادق من غير ما يخلّيك بس متشكّك. دلوقتي بعد ما صنّعت أثر عربة من جوّه، هتكشف حركة «الملايين موافقين فعلاً» أسرع في الواقع — حتى لمّا تلبس ثوباً مقدّساً أو رائجاً.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/pops.70015"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    }
+  ]
+}

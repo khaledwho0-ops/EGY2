@@ -1,0 +1,131 @@
+{
+  "id": "day102_prophet_diet_hadith",
+  "phase": 3,
+  "week": 15,
+  "day": 102,
+  "title": "The Prophet's Diet Claim — What the Hadith Actually Say",
+  "titleAr": "ادعاء طعام النبي — ماذا تقول الأحاديث فعلاً",
+  "description": "The claim that chicken and milk were absent from the Prophet's diet is refuted by authenticated hadith in the Six Books. Today you verify a religious claim against its actual sources — and practice the sourcing question.",
+  "descriptionAr": "ادعاء غياب الفراخ واللبن عن طعام النبي ﷺ يردّه حديث صحيح في الكتب الستة. النهاردة بتتحقّق من ادعاء ديني بمصادره الحقيقية — وبتتدرّب على سؤال المصدر.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://sunnah.com/abudawud",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "The viral Taybat diet claimed that chicken and milk were absent from the Prophet's ﷺ diet, implying that eating them is un-Islamic. What is the status of this claim?",
+      "claimAr": "نظام الطيبات الفيروسي ادّعى إن الفراخ واللبن كانوا غايبين عن طعام النبي ﷺ، ملمّحاً بأن أكلهم غير إسلامي. إيه وضع الادعاء ده؟",
+      "options": [
+        "Confirmed by the Six Books of hadith",
+        "Fabricated — authenticated hadith in the Six Books (Sunan Abī Dāwūd, Sunan Ibn Mājah) document both chicken and milk in the Prophet's ﷺ life",
+        "A disputed question with equal evidence on both sides",
+        "Confirmed by the Quran"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The claim is factually false. Authenticated hadith in the Six Books document chicken and milk in the Prophet's ﷺ life. Sunan Abī Dāwūd and Sunan Ibn Mājah record the Prophet ﷺ eating a broth containing chicken (dajāj). Milk is documented even more frequently. Making a claim about what the Prophet ﷺ ate without checking the hadith corpus is not Islamic guidance — it is fabrication.",
+      "explanationAr": "الادعاء كاذب واقعياً. الأحاديث الصحيحة في الكتب الستة توثّق الفراخ واللبن في حياة النبي ﷺ. سنن أبي داود وسنن ابن ماجه يُسجّلان أكل النبي ﷺ مرقاً يحتوي دجاجاً. واللبن موثَّق بصورة أكثر حتى. الادعاء بما أكله النبي ﷺ دون مراجعة كتب الحديث ليس توجيهاً إسلامياً — بل اختلاق.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://sunnah.com/ibnmajah",
+        "EAL-case-001:alain-2026-04-28"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A speaker states with full conviction: 'The Prophet ﷺ never ate chicken — this is a well-known fact.' You have not checked the hadith yourself. How confident are you that the speaker is correct?",
+      "claimAr": "متحدث بيقول بثقة كاملة: «النبي ﷺ ما أكلش دجاجاً قط — دي حقيقة معروفة». إنت ما فحصتش الحديث بنفسك. قد إيه متأكد إن المتحدث صح؟",
+      "options": [
+        "Very confident — confident delivery implies expertise",
+        "Not confident — the claim requires a specific hadith citation; confident delivery is not the same as a verified source"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Calibration check: confident delivery creates a feeling of certainty that has nothing to do with whether a source exists. The Islamic scholarly tradition requires specific chains (isnad) and grades — 'it is well known' without a hadith reference is not a source. After you check (Sunan Abī Dāwūd, Sunan Ibn Mājah), the claim collapses. Notice the gap between how sure you felt initially and what the sources show.",
+      "explanationAr": "فحص المعايرة: الإلقاء الواثق بيخلق إحساس بيقين مالوش علاقة بوجود مصدر. الموروث العلمي الإسلامي بيطلب أسانيد ودرجات محدّدة — «دي حقيقة معروفة» بدون مرجع حديث مش مصدر. بعد ما تفحص (سنن أبي داود، سنن ابن ماجه)، الادعاء بينهار. لاحظ الفجوة بين قد إيه كنت متأكد في الأول وإيه اللي بيُظهره المصادر.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://islamqa.info/en/answers/5135"
+      ],
+      "cognitivebiasAtPlay": "Dunning-Kruger Effect"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "True or false: if a person cannot produce an authenticated hadith supporting a claim about the Prophet's ﷺ diet, the honest default is to say 'I don't know' rather than present the claim as fact.",
+      "claimAr": "صح ولا غلط: لو شخص مش قادر يقدّم حديثاً صحيحاً يدعم ادعاءً عن طعام النبي ﷺ، الإعداد الصادق هو قول «لا أعلم» بدل تقديم الادعاء كحقيقة.",
+      "correctAnswer": true,
+      "myth_en": "Confident presentation is enough — checking sources is optional.",
+      "myth_ar": "التقديم الواثق يكفي — التحقّق من المصادر اختياري.",
+      "selfExplain": {
+        "prompt": "In your own words: why does 'I don't know' protect both you and the listener better than a confidently stated but unverified claim about the Prophet ﷺ?",
+        "promptAr": "بكلماتك: ليه «لا أعلم» بيحمي إنت والسامع أحسن من ادعاء واثق غير متحقَّق منه عن النبي ﷺ؟"
+      },
+      "explanation": "True — and this is both intellectual humility and Islamic practice. Islamic scholarship has always held that saying 'I do not know (لا أدري)' is a mark of learning, not weakness. Presenting an undocumented claim about the Prophet's ﷺ habits as fact risks spreading fabrication even without malicious intent. Self-explanation deepens this: once you articulate why the honest 'I don't know' is stronger, you are far less likely to accept a confident claim without a source.",
+      "explanationAr": "صح — وهذا تواضع معرفي وممارسة إسلامية في آنٍ واحد. العلم الإسلامي دائماً اعتبر قول «لا أدري» علامة تعلّم لا ضعفاً. تقديم ادعاء غير موثَّق عن عادات النبي ﷺ كحقيقة يخاطر بنشر الاختلاق حتى بلا نية خبيثة. الشرح الذاتي بيعمّق ده: أول ما تصوغ ليه «لا أعلم» الصادقة أقوى، هتقبل ادعاءً واثقاً بلا مصدر بأقل احتمال.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://islamqa.info/en/answers/5135"
+      ],
+      "cognitivebiasAtPlay": "Intellectual Humility"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A follower says: 'Even if hadith mention chicken, the Prophet ﷺ only ate it because it was available in his time — today is different, so avoiding it is still the Islamic choice.'",
+      "claimAr": "تابع بيقول: «حتى لو ذكرت الأحاديث الدجاج، النبي ﷺ أكله بس لأنه كان موجود في زمانه — دلوقتي مختلف، فتجنّبه لسّه الاختيار الإسلامي».",
+      "prompt": "What would have to be true for this argument to hold? What is really happening here — and what ordinary explanation fits the same facts better?",
+      "promptAr": "إيه اللي لازم يكون صح علشان الحجة دي تصمد؟ إيه اللي بيحصل فعلاً هنا — وإيه التفسير العادي اللي بيركّب على نفس الوقائع أحسن؟",
+      "modelPoints": [
+        "For the argument to hold, the original claim would have to have been 'the Prophet ate chicken only due to circumstance' — but the original claim was 'he never ate it at all.' The qualification was added only after the original claim was refuted.",
+        "This is moving the goalposts: when authenticated hadith demolish the 'absence' claim, a new unfalsifiable exemption is invented to save the conclusion.",
+        "If contextual circumstance could excuse any documented prophetic practice, the same argument could be used to dismiss any hadith — a position no Islamic scholar holds.",
+        "The ordinary explanation: the presenter's claim about the Prophet's diet was factually wrong, and the new argument is damage control, not Islamic jurisprudence."
+      ],
+      "modelPointsAr": [
+        "علشان الحجة تصمد، الادعاء الأصلي كان لازم يكون «النبي أكل الدجاج بسبب الظروف بس» — لكن الادعاء الأصلي كان «ما أكلوش خالص». التأهيل أُضيف فقط بعد ما اتفنَّد الادعاء الأصلي.",
+        "دي حركة تحريك المرمى: لمّا الأحاديث الصحيحة تهدم ادعاء «الغياب»، يُخترَع إعفاء جديد غير قابل للتفنيد لإنقاذ الخلاصة.",
+        "لو الظرف السياقي ممكن يعذر أي ممارسة نبوية موثَّقة، نفس الحجة ممكن تُستخدَم لرفض أي حديث — موقف لا يتبنّاه أي عالم إسلامي.",
+        "التفسير العادي: ادعاء المقدِّم عن طعام النبي كان خاطئاً واقعياً، والحجة الجديدة احتواء للأضرار لا فقه إسلامي."
+      ],
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://sunnah.com/ibnmajah"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "fabricating prophetic precedent",
+      "techniqueAr": "اختلاق سابقة نبوية",
+      "task": "Feel the trick from the inside. Write two sentences claiming a harmless practice was done — or avoided — by a great historical figure, with zero evidence, to make the practice feel obligatory. Use a completely harmless topic like 'walking barefoot in the morning is what wise leaders have always done.'",
+      "taskAr": "حسّ بالحيلة من جوّه. اكتب جملتين تدّعي إن ممارسة غير ضارة كانت — أو كانت متجنَّبة — من قِبَل شخصية تاريخية عظيمة بصفر دليل، علشان تخلّي الممارسة تبان واجبة. استخدم موضوع غير ضار خالص زي «المشي حافياً في الصبح ده ما فعله الحكماء الكبار دايماً».",
+      "tells": [
+        "No hadith reference, no isnad, no grade — just a confident assertion.",
+        "The historical figure's name adds emotional weight that substitutes for evidence.",
+        "The claim is unfalsifiable: 'absence from the record' is reframed as 'humble practice that wasn't written down.'",
+        "Once stated, questioning it feels like disrespecting the figure — not like asking for a source.",
+        "The move turns a personal preference into a perceived religious or historical obligation."
+      ],
+      "tellsAr": [
+        "لا مرجع حديث ولا سند ولا درجة — مجرد تأكيد واثق.",
+        "اسم الشخصية التاريخية يضيف ثقلاً عاطفياً يحلّ محلّ الدليل.",
+        "الادعاء غير قابل للتفنيد: «الغياب من السجل» يُعاد تأطيره كـ«ممارسة متواضعة لم تُكتَب».",
+        "أول ما يُقال، التشكيك فيه يبان كإهانة للشخصية — مش كطلب مصدر.",
+        "الحركة تحوّل تفضيلاً شخصياً لالتزام ديني أو تاريخي متصوَّر."
+      ],
+      "explanation": "Building this manipulation in a harmless domain makes the technique visible from the inside. The same structure — confident assertion, prestigious name, unfalsifiable absence, discomfort-if-you-ask — is exactly how the prophet-diet fabrication worked. Now you know the tell-signs and can spot them before the emotional weight lands.",
+      "explanationAr": "بناء التلاعب ده في مجال غير ضار بيخلّي الأسلوب واضحاً من الجوّه. نفس البنية — تأكيد واثق، اسم مرموق، غياب غير قابل للتفنيد، ضيق لو سألت — هي بالضبط الطريقة اللي اشتغلت بيها حيلة اختلاق طعام النبي. دلوقتي عارف علامات الكشف وتقدر تكشفها قبل ما الثقل العاطفي يأثّر.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://islamqa.info/en/answers/5135",
+        "EAL-case-001:alain-2026-04-28"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "day71_selection_bias",
+  "phase": 2,
+  "week": 11,
+  "day": 71,
+  "title": "Selection Bias — Who Gets Into the Study?",
+  "titleAr": "انحياز الاختيار — مين اللي بيدخل الدراسة؟",
+  "description": "A study is only as honest as the people in it. When who you pick to study is not random, the result may describe only a lucky slice — not reality.",
+  "descriptionAr": "الدراسة بتبقى بقدر أمانة الناس اللي فيها. لمّا مين اللي بتختاره مش عشوائي، النتيجة ممكن تصف شريحة محظوظة بس — مش الواقع.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A supplement company runs a clinical trial and recruits volunteers from its own loyal-customer newsletter. The study shows excellent results. What is the main problem?",
+      "claimAr": "شركة مكمّلات غذائية بتعمل تجربة سريرية وبتجنّد متطوعين من نشرة عملائها المخلصين. الدراسة بتطلّع نتائج ممتازة. إيه المشكلة الأساسية؟",
+      "options": [
+        "The sample size is probably too large",
+        "Selection bias — volunteers who already trust the product are not representative of all patients",
+        "There is no problem; any volunteers are fine",
+        "The company should have used a placebo"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Recruiting your own loyal customers stacks the sample with people who already believe in the product, are more motivated to comply, and are less likely to report side effects. This is textbook selection bias: the people who got into the study are systematically different from the general patient population, so the results cannot be generalized.",
+      "explanationAr": "تجنيد عملائك المخلصين بيحشو العيّنة بناس أصلاً مؤمنين بالمنتج وأكثر التزاماً وأقل ميلاً للإبلاغ عن أعراض جانبية. ده انحياز الاختيار الكلاسيكي: الناس اللي دخلت الدراسة مختلفة بشكل منهجي عن مرضى السكان العام، فالنتائج ما تنعمّمش.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A cohort study follows factory workers who volunteered to be tested for a chemical exposure. Workers who felt fine refused to join. Three years later the study reports only 30% developed symptoms. Is 30% likely to be an accurate estimate for all workers?",
+      "claimAr": "دراسة أتراب بتتابع عمّال مصنع اشتركوا طوعاً لفحص تعرّضهم لمادة كيميائية. العمّال اللي حسّوا بخير رفضوا يشتركوا. بعد ثلاث سنين الدراسة بتقول 30% طوّروا أعراضاً. هل 30% على الأرجح تقدير دقيق لكل العمّال؟",
+      "options": [
+        "Yes — any voluntary study is accurate",
+        "No — healthy-worker selection bias means the true rate in all workers is probably higher than 30%"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the 'healthy-worker effect': people who feel well are less likely to volunteer for health research, so the sample skews toward the healthier end of the workforce. The true disease rate in the full workforce is almost certainly higher than what the study found. Selection bias tends to make harmful exposures look safer than they really are. Calibration check: how confident were you before seeing the answer? If you were very certain this was accurate, that certainty was misplaced — a classic overconfidence trap.",
+      "explanationAr": "ده «أثر العامل الصحي»: الناس اللي بتحسّ بخير أقل ميلاً للمشاركة في البحث الصحي، فالعيّنة بتنحاز ناحية الأصحّاء. معدل المرض الحقيقي في القوى العاملة الكاملة على الأرجح أعلى من اللي الدراسة لاقته. انحياز الاختيار غالباً بيخلّي التعرّض الضار يبان أأمن مما هو عليه. فحص المعايرة: كنت متأكد قد إيه قبل الإجابة؟ لو كنت واثق جداً إن النتيجة دقيقة، اليقين ده كان في غير محلّه — فخ الثقة الزائدة الكلاسيكي.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The viral «نظام الطيبات» diet collected its evidence entirely from followers who were already convinced and actively using the system. The Medical Syndicate asked for three documented cases — and received none.",
+      "claimAr": "نظام «الطيبات» اللي انتشر جمع أدلته بالكامل من أتباع كانوا أصلاً مقتنعين وبيستخدموا النظام. نقابة الأطباء طلبت ثلاث حالات موثّقة — ولم تتلقّ شيئاً.",
+      "options": [
+        "No problem — followers are the best experts on their own experience",
+        "Extreme selection bias: only motivated, already-convinced people reported in; skeptics, dropouts, and harmed patients were excluded"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does collecting evidence only from believers make the evidence worthless, even if the believers sincerely improved?",
+        "promptAr": "بكلماتك: ليه جمع الأدلة من المؤمنين بس بيخلّيها عديمة القيمة، حتى لو المؤمنون تحسّنوا فعلاً؟"
+      },
+      "explanation": "When your only evidence-suppliers are people who already believe and stayed with the system, you have extreme selection bias: the group most likely to show improvement (compliant, motivated, placebo-prone) is the only one counted, while dropouts, harmed patients, and skeptics are absent. Even genuine improvement among believers cannot tell you whether the system caused it — natural recovery, placebo, lifestyle changes, and regression to the mean all produce real improvement without any active ingredient.",
+      "explanationAr": "لمّا مورّدو أدلتك الوحيدين هم ناس أصلاً مؤمنين وفضلوا مع النظام، عندك انحياز اختيار حاد: المجموعة الأكثر احتمالاً للتحسّن (ملتزمة، محفّزة، قابلة للتأثير الوهمي) هي الوحيدة المعدودة، بينما المتسرّبون والمرضى المتضرّرون والمشككون غائبون. حتى تحسّن حقيقي بين المؤمنين ما يقدرش يُخبرك هل النظام سبّبه — التعافي الطبيعي والوهم وتغيير نمط الحياة والعودة للمتوسط كلها بتنتج تحسّناً حقيقياً بدون مادة فعّالة.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A wellness influencer says: 'My 500 followers who finished my 30-day programme all reported feeling better. That proves my method works.'",
+      "claimAr": "مؤثّر صحي بيقول: «الـ500 متابع اللي أكملوا برنامجي لـ30 يوم كلهم بلّغوا إنهم أحسن. ده بيثبت إن طريقتي بتشتغل».",
+      "prompt": "Before accepting this claim: what evidence would you need to see for it to be disproved? What selection effects could produce the same 500 success reports without the method working at all?",
+      "promptAr": "قبل ما تقبل الادعاء ده: إيه الدليل اللي محتاج تشوفه علشان ينفيه؟ وإيه تأثيرات الاختيار اللي ممكن تنتج نفس الـ500 تقرير نجاح من غير ما الطريقة تشتغل أصلاً؟",
+      "modelPoints": [
+        "People who did not complete the programme — the majority of starters — are absent from the count. If 2,000 started and 1,500 dropped out, 500 completers is a 25% completion rate, heavily self-selected for high motivation.",
+        "People who completed but felt no improvement likely did not bother reporting back. Negative results are silent.",
+        "Those harmed or worsened may have left the community and would never appear in the testimonials.",
+        "30 days of any structured routine (more sleep, community support, reduced junk food from paying attention to your diet) produces real improvement that has nothing to do with the specific method.",
+        "If it were false we'd expect exactly this pattern: loud successes from the small committed fraction, silence from everyone else."
+      ],
+      "modelPointsAr": [
+        "الناس اللي ما أكملوش البرنامج — غالبية البادئين — غائبون من الحساب. لو 2000 بدأوا و1500 انسحبوا، الـ500 مكتمل معدل إكمال 25%، انتُقي بشدة لصالح الأكثر حافزاً.",
+        "الناس اللي أكملوا لكن ما حسّوش بتحسّن على الأرجح ما رجعوش يُبلّغوا. النتائج السلبية صامتة.",
+        "المتضرّرون أو المتدهوّرون ممكن يكونوا تركوا المجتمع وما يظهروش في الشهادات أبداً.",
+        "30 يوم من أي روتين منظّم (نوم أكثر، دعم مجتمعي، تقليل الأكل السريع من الاهتمام بتغذيتك) بينتج تحسّناً حقيقياً ما لوش علاقة بالطريقة المحددة.",
+        "لو كان غلط، هنتوقع بالظبط النمط ده: نجاحات صاخبة من الجزء الصغير الملتزم، وصمت من الجميع."
+      ],
+      "explanation": "Asking 'what would disprove this?' immediately reveals the missing denominator problem and the survivorship effect. A claim built only on self-reported completers who are already believers is constructed to be unfalsifiable by design — not because the method works, but because the opposite evidence was never counted.",
+      "explanationAr": "إنك تسأل «إيه اللي يكذّب ده؟» بيكشف فوراً مشكلة المقام المفقود وأثر الناجين. ادعاء مبني بس على مكتملين أفادوا بنفسهم وهم أصلاً مؤمنون — منشأ علشان لا يُفنَّد بالتصميم — مش لأن الطريقة بتشتغل، لكن لأن الدليل العكسي ما اتعدّش أبداً.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 63,
+      "claim": "A study of a new herb supplement shows improvement in 80% of participants — all of whom were volunteers from the herb seller's online store. The study has no control group. Using what you learned about study design and evidence levels (day 63), where does this result sit on the evidence pyramid, and why?",
+      "claimAr": "دراسة عن مكمّل عشبي جديد بتُري تحسّناً في 80% من المشاركين — وكلهم متطوعون من متجر البائع الإلكتروني. الدراسة بدون مجموعة ضابطة. باستخدام ما تعلّمته عن تصميم الدراسات ومستويات الأدلة (يوم 63)، فين تقع النتيجة دي في هرم الأدلة، وليه؟",
+      "options": [
+        "Near the top — 80% improvement is compelling evidence",
+        "Near the bottom — a self-selected sample with no control group is weaker than a case series and cannot establish causation",
+        "In the middle — because the percentage is high",
+        "At the top — because the seller ran the study himself"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Spaced retrieval of day 63: even a large-looking improvement percentage cannot rescue a study from its design flaws. A self-selected sample (selection bias) plus no control group (cannot distinguish treatment effect from natural recovery, placebo, or regression to the mean) places this result below even a basic case series. Without random assignment and a control condition, 80% means almost nothing about causation.",
+      "explanationAr": "استرجاع مُتباعِد ليوم 63: حتى نسبة تحسّن تبدو كبيرة ما تقدرش تنقذ دراسة من عيوب تصميمها. عيّنة منتقاة ذاتياً (انحياز اختيار) زائد لا مجموعة ضابطة (ما ينفعش تميّز أثر العلاج عن التعافي الطبيعي أو الوهم أو العودة للمتوسط) — بيحط النتيجة دي تحت حتى سلسلة حالات أساسية. بدون تعيين عشوائي وشرط ضابط، الـ80% ما تعنيش تقريباً حاجة عن السببية.",
+      "sources": [
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    }
+  ]
+}

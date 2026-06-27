@@ -1,0 +1,125 @@
+{
+  "id": "day137_maqasid_and_preservation",
+  "phase": 3,
+  "week": 20,
+  "day": 137,
+  "title": "Maqasid and the Preservation of Life — Islam's Own Rebuttal",
+  "titleAr": "المقاصد وحفظ النفس — الردّ الذاتي من داخل الإسلام",
+  "description": "Islamic legal theory already contains the tool to evaluate health claims: the Maqasid al-Sharīʿa demand preservation of life. Today you wield it correctly.",
+  "descriptionAr": "الفقه الإسلامي يحتوي مسبقاً على الأداة لتقييم الادعاءات الصحية: مقاصد الشريعة تشترط حفظ النفس. النهاردة بتستخدمها بشكل صح.",
+  "type": "religion-literacy",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A person with Type 1 diabetes stops taking insulin because a health influencer said it is «خبائث» — a chemical poison contrary to the Prophetic diet. Three days later he is in a diabetic ketoacidosis crisis in the ICU. From the perspective of Maqasid al-Sharīʿa — specifically hifz al-nafs (preservation of life) — which statement is most accurate?",
+      "claimAr": "شخص مصاب بالسكري نوع 1 بيوقف الأنسولين لأن مؤثر صحي قال إنه «خبائث» — سُم كيميائي يخالف السنة النبوية. بعد 3 أيام هو في أزمة حماض كيتوني في العناية المركزة. من منظور مقاصد الشريعة — تحديداً حفظ النفس — أنهي جملة أصح؟",
+      "options": [
+        "The influencer followed Maqasid correctly by prioritising natural food over chemicals",
+        "Stopping a life-sustaining medication directly contradicts hifz al-nafs — preserving life is a higher Islamic obligation than avoiding a food category",
+        "Maqasid do not apply to medical decisions — only to ritual worship",
+        "Both positions are equally valid Islamic interpretations"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hifz al-nafs (preservation of life/soul) is the first and highest of the five Maqasid. Insulin for Type 1 diabetes is not optional — stopping it causes a life-threatening biochemical crisis, as documented in ICU admissions in both Egypt and Saudi Arabia. Using a food philosophy to argue for stopping a life-preserving medication directly contradicts the primary Maqasid objective. The Islamic tradition does not require a person to choose illness over treatment.",
+      "explanationAr": "حفظ النفس هو الأول والأعلى من المقاصد الخمس. الأنسولين لمريض السكري نوع 1 ليس اختيارياً — إيقافه يُسبّب أزمة كيميائية حيوية خطيرة على الحياة، كما وثّقت دخولاً للعناية في مصر والسعودية. استخدام فلسفة غذائية للحجّة على إيقاف دواء يحفظ الحياة يتعارض مباشرةً مع الهدف الأول للمقاصد. التقليد الإسلامي لا يُلزم الشخص باختيار المرض على العلاج.",
+      "sources": [
+        "EAL-case-001:moh-sa-2026-06-08",
+        "EAL-case-001:okaz-2026-05-10",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "consider_opposite",
+      "claim": "A trusted person in your community says: 'Doctors gave my uncle medicine for 10 years and he never got better. A month on the Taybat system and he's a new person. Isn't that proof that the natural path is better than drugs?'",
+      "claimAr": "شخص موثوق في مجتمعك بيقول: «الأطباء ادّوا عمّي دواء 10 سنين وما تحسّنش. شهر على نظام الطيبات وهو زي الفل. مش ده دليل إن الطريق الطبيعي أفضل من الدواء؟»",
+      "prompt": "This story is emotionally powerful. Before accepting the conclusion, what questions would you need answered? What alternative explanations exist?",
+      "promptAr": "الحكاية دي قوية عاطفياً. قبل قبول الخلاصة، أنهي أسئلة محتاج إجابة عليها؟ وأنهي تفسيرات بديلة موجودة؟",
+      "modelPoints": [
+        "What exactly was the uncle's diagnosis? 'Never got better' — by what measure? Some chronic conditions fluctuate naturally; what looked like improvement may be natural remission or regression to the mean.",
+        "Did he stop his prescribed medication when switching? If he stopped a drug with withdrawal-rebound effects, a brief 'feeling better' can follow the relief of side-effects before the disease worsens.",
+        "Was there any verified before/after blood test, scan, or specialist assessment? 'He's a new person' is subjective — what does the data show?",
+        "Survivorship: how many other people tried the same system and did NOT improve? Their silence is invisible but real.",
+        "Ten years of one medication is not 'medicine failed' — was there a treatment-resistant case, non-adherence, an undiagnosed secondary condition? A single anecdote cannot answer this."
+      ],
+      "modelPointsAr": [
+        "ما هو بالضبط تشخيص العمّ؟ «ما تحسّنش» — بأي مقياس؟ بعض الحالات المزمنة تتذبذب طبيعياً؛ ما بدا تحسّناً قد يكون هدأة طبيعية أو رجوعاً للمتوسط.",
+        "هل أوقف دوائه الموصوف عند التحوّل؟ لو أوقف دواءً له آثار ارتداد، شعور مؤقت بـ«تحسّن» قد يتبع الراحة من الآثار الجانبية قبل تفاقم المرض.",
+        "هل هناك تحاليل دم موثّقة قبل/بعد، أو تصوير، أو تقييم متخصص؟ «هو زي الفل» حكم ذاتي — ماذا تظهر البيانات؟",
+        "انحياز الناجين: كم شخصاً آخر جرّب النظام ذاته ولم يتحسّن؟ صمتهم غير مرئي لكنه حقيقي.",
+        "عشر سنوات على دواء واحد ليست «الطب فشل» — هل كانت حالة مقاومة للعلاج، أو عدم التزام، أو حالة ثانوية غير مشخَّصة؟ حكاية واحدة لا تستطيع الإجابة على هذا."
+      ],
+      "sources": [
+        "EAL-case-001:redflag-3",
+        "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD000980.pub4/full"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A cancer patient is told by a wellness system promoter: 'Chemotherapy is «خبائث» — it poisons the body. Our food system is «طيبات» and will allow your body to heal itself. The Prophet ﷺ never used poison to cure.' The patient is deciding whether to pause chemotherapy.",
+      "claimAr": "مريض سرطان يُقال له من مروّج نظام عافية: «العلاج الكيميائي «خبائث» — بيسمّم الجسم. نظامنا الغذائي «طيبات» وهيسمح لجسمك بشفاء نفسه. النبي ﷺ ما استخدمش السمّ للعلاج». المريض بيقرر هل يوقف العلاج الكيميائي.",
+      "options": [
+        "The promoter is right — chemotherapy is a toxin and natural healing is safer",
+        "This is a life-threatening manipulation: it uses religious framing to push a medically dangerous decision"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: identify EVERY manipulation layer in this message. How many distinct techniques are running at once — and how does the patient's fear make each one more effective?",
+        "promptAr": "بكلماتك: حدّد كل طبقة تلاعب في الرسالة دي. كام تقنية مختلفة شغّالة في نفس الوقت — وكيف خوف المريض بيجعل كل واحدة أكثر فعالية؟"
+      },
+      "explanation": "Layers: (1) Vocabulary exploit: «خبائث/طيبات» makes a medical category judgment a religious one. (2) Appeal to nature: chemotherapy is 'poison' while food is 'natural' — ignoring that cancer itself, if untreated, kills. (3) False dilemma: either chemical treatment OR natural healing — excluding evidence-based integrative approaches. (4) Fabricated hadith implication: 'the Prophet used no poison' — this is not a sourced ruling on oncology. (5) Fear amplification: the patient's fear of side-effects is legitimate; the promoter weaponises it to bypass rational appraisal. The Maqasid demand hifz al-nafs — and oncology evidence shows that pausing chemotherapy at a critical point can be irreversible.",
+      "explanationAr": "الطبقات: (١) حيلة المفردة: «خبائث/طيبات» تجعل حكماً على فئة طبية حكماً دينياً. (٢) مغالطة الطبيعة: العلاج الكيميائي «سمّ» بينما الطعام «طبيعي» — متجاهلاً أن السرطان نفسه، إذا لم يُعالَج، يقتل. (٣) المعضلة الكاذبة: إما علاج كيميائي أو شفاء طبيعي — مستبعداً المناهج التكاملية القائمة على الأدلة. (٤) إيحاء بحديث ملفَّق: «النبي ما استخدمش السمّ» — هذا ليس حكماً مصدره حديث صحيح على الأورام. (٥) تضخيم الخوف: خوف المريض من الآثار الجانبية مشروع؛ المروّج يسلّحه لتجاوز التقييم العقلي. المقاصد تتطلّب حفظ النفس — والأدلة الأورامية تُظهر أن إيقاف العلاج الكيميائي في لحظة حرجة قد يكون لا رجعة منه.",
+      "sources": [
+        "EAL-case-001:masrawy-2026-04-30",
+        "https://www.cancer.org/cancer/managing-cancer/treatment-types/chemotherapy/what-is-chemotherapy.html",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A health claim combines: a Quranic word in its name + a personal testimony from a cancer survivor + the argument that 'big pharma profits from your sickness.' Before you see any clinical data — how confident are you that this claim would hold up under systematic review?",
+      "claimAr": "ادعاء صحي بيجمع: كلمة قرآنية في اسمه + شهادة شخصية من ناجٍ من السرطان + حُجّة أن «شركات الدواء بتكسب من مرضك». قبل ما تشوف أي بيانات إكلينيكية — قد إيه أنت متأكد إن الادعاء ده هيصمد تحت مراجعة منهجية؟",
+      "options": [
+        "Highly confident — the combination of religious, personal, and institutional critique is very persuasive",
+        "Not confident — each element is a recognised persuasion technique, not evidence; the combination amplifies emotional pull, not truth"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Calibration check: the three elements deployed here — sacred vocabulary, survivorship testimony, and conspiracy framing — are each documented manipulation techniques. Their combination is unusually persuasive, which is exactly when accurate calibration matters most. 'This feels convincing' should trigger extra scrutiny, not acceptance. None of these three elements is clinical evidence. The persuasiveness of a claim is inversely related to its evidential strength when these specific techniques are present.",
+      "explanationAr": "فحص المعايرة: العناصر الثلاثة المُستخدَمة هنا — المفردة المقدّسة، وشهادة الناجين، وإطار المؤامرة — هي تقنيات تلاعب موثَّقة كل منها. اجتماعها مقنع بشكل غير عادي، وهذا بالضبط لما المعايرة الدقيقة تهمّ أكثر. «ده بيحسّ مقنع» يجب أن يُشغّل تدقيقاً إضافياً، لا قبولاً. لا أيٌّ من العناصر الثلاثة دليلٌ إكلينيكي. إقناعية الادعاء تعكس قوته الدليلية عند وجود هذه التقنيات بالتحديد.",
+      "sources": [
+        "EAL-case-001:redflag-5",
+        "https://www.jmir.org/2023/1/e49255"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 5,
+      "mechanic": "transfer",
+      "transferDomain": "financial advice",
+      "claim": "A financial advisor names his product 'Al-Barakah Fund' (invoking the Islamic concept of divine blessing in wealth) and says: 'Our portfolio follows Islamic finance ethics — questioning its returns is questioning baraka itself.' A customer asks: 'But what are the actual returns and risks?' The advisor says: 'Those who focus only on numbers miss the spiritual dimension.'",
+      "claimAr": "مستشار مالي بيسمّي منتجه «صندوق البركة» (مستدعياً مفهوم البركة الإلهية في الثروة) ويقول: «محفظتنا بتتّبع أخلاقيات التمويل الإسلامي — التشكيك في عائداتها هو تشكيك في البركة نفسها». عميل بيسأل: «لكن ما هي العائدات والمخاطر الفعلية؟» المستشار يقول: «اللي بيركّز بس على الأرقام بيفوته البُعد الروحي».",
+      "options": [
+        "The advisor has a point — spiritual dimensions of finance are real and cannot be captured by numbers alone",
+        "This is the same vocabulary exploit applied to finance: sacred framing is being used to deflect a legitimate request for evidence (returns and risks)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The vocabulary exploit transfers perfectly across domains. Here, 'Al-Barakah' + 'questioning returns = questioning baraka' replicates the health-claim move exactly: (1) sacred word attached to a product, (2) asking for evidence is reframed as a spiritual failing. Legitimate Islamic finance products CAN provide actual documented returns and risk disclosures — those are compatible with Islamic ethics. The 'spiritual dimension' argument is used here to block evidence, not to enrich it. The same critical question applies: where is the evidence, regardless of what the product is named?",
+      "explanationAr": "حيلة المفردة بتنقل بشكل مثالي عبر المجالات. هنا، «البركة» + «التشكيك في العائدات = التشكيك في البركة» بتكرّر حركة الادعاء الصحي بالظبط: (١) كلمة مقدّسة مُلصَقة بمنتج، (٢) طلب الدليل يُعاد تأطيره كإخفاق روحي. منتجات التمويل الإسلامي المشروعة تستطيع تقديم عائدات موثَّقة وإفصاح عن المخاطر — تلك متوافقة مع الأخلاق الإسلامية. حُجّة «البُعد الروحي» تُستخدَم هنا لحجب الدليل، لا لإثرائه. نفس السؤال النقدي ينطبق: فين الدليل، بصرف النظر عن اسم المنتج؟",
+      "sources": [
+        "EAL-case-001:redflag-6",
+        "https://doi.org/10.1177/0956797611424748"
+      ],
+      "cognitivebiasAtPlay": "Identity-Protective Cognition"
+    }
+  ]
+}

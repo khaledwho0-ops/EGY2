@@ -1,0 +1,118 @@
+{
+  "id": "day144_science_failures",
+  "phase": 4,
+  "week": 21,
+  "day": 144,
+  "title": "Layer 4 — The Science Failures: Where the 'Evidence' Actually Lived",
+  "titleAr": "الطبقة الرابعة — إخفاقات العلم: فين «الدليل» عاش فعلاً",
+  "description": "Today you place the system on the evidence pyramid. Its entire proof base was testimonials — the very bottom — yet it claimed certainty reserved for the top. We apply the study-design tools to see exactly what was missing.",
+  "descriptionAr": "النهاردة بتحطّ النظام على هرم الأدلة. كل قاعدة إثباته كانت شهادات — أسفل الهرم — ومع ذلك ادّعى يقيناً محجوزاً للقمّة. بنطبّق أدوات تصميم الدراسات نشوف بالظبط إيه اللي كان ناقص.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "The Medical Syndicate asked the originator for three documented cases with before/after lab results — and received none. The entire 'proof' was follower testimonials and videos. On the evidence hierarchy (1 = weakest anecdote, 8 = systematic review), where did the system's evidence actually sit?",
+      "claimAr": "نقابة الأطباء طلبت من صاحب النظام ثلاث حالات موثّقة بتحاليل قبل/بعد — وما استلمتش ولا واحدة. كل «الإثبات» كان شهادات أتباع وفيديوهات. على هرم الأدلة (1 = أضعف حكاية، 8 = مراجعة منهجية)، فين عاش دليل النظام فعلاً؟",
+      "options": [
+        "Near the top (level 7–8): randomized trials and reviews",
+        "At the very bottom (levels 1–2): anecdotes and testimonials, which cannot separate a treatment from placebo or natural recovery",
+        "In the middle (level 5): observational studies",
+        "It had no claim to evidence at all, so the hierarchy doesn't apply"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Testimonials and 'it worked for someone' sit at the floor of the evidence hierarchy — they cannot distinguish the diet from placebo, natural disease fluctuation, or coincidence. The danger is the mismatch: the system spoke with the certainty of the top of the pyramid while standing on the bottom rung. Asking 'where on the hierarchy does this evidence live?' is the single fastest scientific check you can run on any health claim.",
+      "explanationAr": "الشهادات و«نفعت مع حد» في أرضية هرم الأدلة — ما تقدرش تفرّق الحمية عن الوهمي، أو تقلّب المرض الطبيعي، أو الصدفة. والخطر هو عدم التطابق: النظام اتكلّم بيقين قمّة الهرم وهو واقف على أدنى درجة. وسؤال «الدليل ده عايش فين على الهرم؟» أسرع فحص علمي تقدر تعمله لأي ادعاء صحي.",
+      "sources": [
+        "EAL-case-001:redflag-3",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "Many followers said 'I cut out chicken and within weeks I felt better, so chicken was harming me.' Several things changed at once: less processed food, more attention to health, the placebo of a new plan, and natural ups-and-downs of their condition.",
+      "claimAr": "كتير من الأتباع قالوا «بطّلت فراخ وفي أسابيع حسّيت أحسن، يبقى الفراخ كانت بتأذيني». حاجات كتير اتغيّرت في نفس الوقت: أكل مصنّع أقل، اهتمام أكبر بالصحة، وهمي الخطة الجديدة، والتقلّب الطبيعي للحالة.",
+      "options": [
+        "The improvement proves chicken was the cause",
+        "The improvement cannot be pinned on chicken, because there was no control and many variables changed together"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does 'I changed X and felt better' fail as proof when several things changed at the same time — and what would a fair test look like instead?",
+        "promptAr": "بكلماتك: ليه «غيّرت X وحسّيت أحسن» بيفشل كدليل لمّا حاجات كتير اتغيّرت في نفس الوقت — وإيه شكل الاختبار المنصف بدل كده؟"
+      },
+      "explanation": "Correlation is not causation, and confounders are the reason. When multiple variables move together, you cannot attribute the effect to one of them. A fair test isolates the variable: a controlled comparison where two similar groups differ only in the one food, ideally blinded so expectation can't colour the result. 'I felt better after' describes a timeline, not a cause — and saying it in your own words is how the distinction becomes a reflex.",
+      "explanationAr": "الترابط مش سببية، والعوامل المربكة هي السبب. لمّا متغيرات كتير بتتحرّك مع بعض، ما تقدرش تنسب الأثر لواحد منهم. الاختبار المنصف بيعزل المتغير: مقارنة مُحكَمة بين مجموعتين متشابهتين بيختلفوا بس في الأكلة الواحدة، ويا حبّذا بتعمية علشان التوقّع ما يلوّنش النتيجة. «حسّيت أحسن بعدها» بيوصف خط زمني مش سبب — وإنك تقوله بكلماتك هو إزاي التفرقة بتبقى رد فعل تلقائي.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/2-quantifying-disease-populations",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6368644/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 3,
+      "mechanic": "recognize",
+      "claim": "A defender says: 'Thousands of people online say they improved — that's a huge sample, basically a study.' Why is a pile of online testimonials NOT equivalent to a cohort study, no matter how many there are?",
+      "claimAr": "مدافع بيقول: «آلاف الناس أونلاين بيقولوا اتحسّنوا — دي عيّنة ضخمة، يعني تقريباً دراسة». ليه كومة شهادات أونلاين مش زي دراسة أتراب، مهما كان عددها؟",
+      "options": [
+        "It is equivalent — enough stories add up to proof",
+        "Numbers don't fix the design: no control group, no one tracking those who got worse or died, and only the satisfied tend to post (survivorship bias)",
+        "Online samples are always larger than real studies",
+        "It would count if they all used the same doctor"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sample size cannot rescue a broken design. A cohort study follows a defined group forward, counts everyone (including those who worsen or drop out), and compares against a control. Online testimonials do none of this: the people harmed — the ICU patients and the dead — could not post, so you only ever see the survivors. Ten thousand selected success stories are still selected. Volume feels like evidence (bandwagon effect) but structure is what makes evidence.",
+      "explanationAr": "حجم العيّنة ما يقدرش ينقذ تصميماً مكسوراً. دراسة الأتراب بتتابع مجموعة محدّدة للأمام، بتعدّ الكل (بما فيهم اللي وخموا أو خرجوا)، وبتقارن بضابط. الشهادات الأونلاين ما بتعملش أي من ده: المتضررون — مرضى العناية المركزة والمتوفون — ما قدروش ينشروا، فإنت بتشوف الناجين بس. عشرة آلاف قصة نجاح منتقاة تفضل منتقاة. الكمّ بيحسّ كأنه دليل (أثر العربة) لكن البنية هي اللي بتعمل الدليل.",
+      "sources": [
+        "EAL-case-001:bias-survivorship",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "Set your confidence before reading on. When asked for evidence, the originator answered: 'The truth of what I present will be proven in the future.' Is 'it will be proven later' a legitimate scientific defence of a claim being acted on TODAY?",
+      "claimAr": "حدّد ثقتك قبل ما تكمّل. لمّا اتطلب منه الدليل، ردّ صاحب النظام: «صحة ما أقدّمه ستثبت مستقبلاً». هل «هيثبت بعدين» دفاع علمي مشروع لادعاء الناس بتتصرّف على أساسه النهاردة؟",
+      "options": [
+        "Yes — science often confirms things later, so it's fair",
+        "No — a claim guiding life-or-death decisions now needs evidence now; 'proven in the future' is an unfalsifiable cheque that never clears"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Red flag #2. Science does revise, but that is no licence to act on an unproven claim today while pointing at an imaginary tomorrow. When people are stopping insulin and cancer therapy now, the evidence must exist now. 'It'll be proven later' is unfalsifiable by design — it can never be checked, only deferred. Notice your confidence: this defence sounds humble and reasonable, which is exactly why it slips past so many careful people.",
+      "explanationAr": "علامة الخطر رقم 2. العلم فعلاً بيراجع نفسه، لكن ده مش رخصة إنك تتصرّف على ادعاء غير مُثبَت النهاردة وإنت بتشاور على بكرة وهمية. لمّا الناس بتوقف الأنسولين وعلاج السرطان دلوقتي، الدليل لازم يكون موجود دلوقتي. «هيثبت بعدين» غير قابل للتفنيد بالتصميم — ما ينفعش يتفحص، بس يتأجّل. لاحظ ثقتك: الدفاع ده بيبان متواضع ومعقول، وده بالظبط ليه بيعدّي على ناس كتير حريصة.",
+      "sources": [
+        "EAL-case-001:redflag-2",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Need for Cognitive Closure"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 142,
+      "claim": "Back to the 'detox' design from Layer 2, now as a science check. A supporter says the diet 'cleanses toxins that doctors ignore.' Which single demand most directly tests whether this is a scientific claim at all?",
+      "claimAr": "رجوع لتصميم «الديتوكس» من الطبقة الثانية، دلوقتي كفحص علمي. مؤيّد بيقول الحمية «بتنضّف سموم الأطباء بيتجاهلوها». أنهي طلب واحد بيختبر مباشرةً إذا كان ده ادعاء علمي أصلاً؟",
+      "options": [
+        "Ask how many famous people follow it",
+        "Ask: name the specific toxin, the pathway that removes it, and the lab assay that shows the level dropping",
+        "Ask whether it is mentioned in old texts",
+        "Ask how the supporter personally felt on it"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Re-tested from Layer 2: a real biomedical claim can be named and measured. Demanding the toxin, the clearance pathway, and a before/after assay is the test that separates biochemistry from marketing. The liver and kidneys already perform clearance; no food does it 'better' in the way detox language implies. If none of the three can be specified, you are looking at a feeling dressed as a mechanism — and that belongs at the bottom of the evidence pyramid, not guiding anyone's treatment.",
+      "explanationAr": "بنعيد اختباره من الطبقة الثانية: الادعاء الطبي الحقيقي يمكن تسميته وقياسه. طلب السُمّ، ومسار إزالته، وتحليل قبل/بعد هو الاختبار اللي بيفصل الكيمياء الحيوية عن الدعاية. الكبد والكلى أصلاً بيعملوا التصفية؛ مفيش طعام بيعملها «أحسن» بالمعنى اللي لغة الديتوكس بتلمّح له. لو ولا واحد من التلاتة اتحدّد، إنت قدام إحساس متلبّس كأنه آلية — وده مكانه أسفل هرم الأدلة، مش بيوجّه علاج حد.",
+      "sources": [
+        "EAL-case-001:redflag-10",
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    }
+  ]
+}

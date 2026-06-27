@@ -1,0 +1,29 @@
+{
+  "id": "day24_deepreal_intro",
+  "phase": 0,
+  "week": 4,
+  "day": 24,
+  "title": "DeepReal & OSINT Introduction",
+  "titleAr": "مقدمة ديب ريل و OSINT",
+  "description": "First exposure to deepfake detection and OSINT tools.",
+  "descriptionAr": "أول تعرض لأدوات كشف التزييف واستخبارات المصادر المفتوحة.",
+  "type": "deepreal",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "A viral video shows an Egyptian politician saying something controversial. How to verify?",
+      "claimAr": "فيديو منتشر لسياسي مصري يقول شيئاً مثيراً. كيف تتحقق؟",
+      "truthValue": "verify",
+      "category": "media",
+      "difficulty": 3,
+      "explanation": "OSINT steps: 1) Reverse video search (InVID), 2) Check lip sync, 3) Look for unnatural blinking, 4) Check metadata, 5) Search official channels.",
+      "explanationAr": "خطوات التحقق: بحث عكسي، تزامن الشفاه، الرمش، البيانات الوصفية، القنوات الرسمية.",
+      "sources": [
+        "https://www.invid-project.eu/"
+      ],
+      "cognitivebiasAtPlay": "Deepfake Detection"
+    }
+  ]
+}

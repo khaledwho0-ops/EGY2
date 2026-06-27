@@ -1,0 +1,119 @@
+{
+  "id": "day43_equivocation",
+  "phase": 1,
+  "week": 7,
+  "day": 43,
+  "title": "Equivocation — When a Word Secretly Changes Its Meaning",
+  "titleAr": "المغالطة اللفظية — لمّا الكلمة بتغيّر معناها في السرّ",
+  "description": "One of the slipperiest tricks in argument: using the same word in two different senses as if it meant the same thing both times.",
+  "descriptionAr": "من أذكى الحيل في الجدل: استخدام نفس الكلمة بمعنيين مختلفين كأنها واحدة طول الوقت.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 13,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A health presenter says: 'The word «الطيبات» appears in the Quran — so my diet of «طيبات» is Quranic.' What is the trick hidden in this sentence?",
+      "claimAr": "مقدّم صحي بيقول: «كلمة «الطيبات» موجودة في القرآن — يبقى نظامي الغذائي من «الطيبات» قرآني». إيه الحيلة المختبئة في الجملة دي؟",
+      "options": [
+        "There is no trick — he is right",
+        "Equivocation: «الطيبات» in the Quran means 'lawful good things'; in his diet it means a specific restricted food list — the word changed meaning between sentence 1 and sentence 2",
+        "He is quoting the Quran accurately",
+        "It is a valid argument from authority"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the equivocation fallacy. The Quranic word «الطيبات» means 'wholesome, lawful things' in a general spiritual sense. The system borrows the word and applies it to a specific, medically unfounded restricted food list. Same word, two meanings — and the sacred weight of the first meaning is smuggled into the second. Once you spot the switch, the argument collapses.",
+      "explanationAr": "دي مغالطة المشترك اللفظي. كلمة «الطيبات» في القرآن معناها «الحلال الطيّب» بمعنى روحي عام. النظام بيستعير الكلمة ويطبّقها على قائمة طعام مقيّدة بلا أساس طبي. نفس الكلمة، معنيان — والثقل المقدّس للمعنى الأول يُهرَّب داخل الثاني. لمّا تلاحظ الانزلاق ده، الحجّة بتنهار.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:moh-eg-2026-05"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A seller argues: 'Doctors say exercise is natural — and my herbal supplement is natural — so doctors should recommend it.' The word 'natural' is being used equivocally.",
+      "claimAr": "بائع بيحتجّ: «الأطباء بيقولوا الرياضة طبيعية — ومكمّلي العشبي طبيعي — يبقى الأطباء المفروض يوصوا بيه». كلمة «طبيعي» بتُستخدَم بطريقة مشتركة لفظية.",
+      "options": [
+        "False — the argument is valid",
+        "True — 'natural' means different things in each use"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what does 'natural' mean in 'exercise is natural' — and what does it mean in 'my herbal supplement is natural'? Why does that difference break the argument?",
+        "promptAr": "بكلماتك: «طبيعي» بتعني إيه في «الرياضة طبيعية» — وبتعني إيه في «مكمّلي العشبي طبيعي»؟ وليه الفرق ده بيكسر الحجّة؟"
+      },
+      "explanation": "Equivocation strikes again. 'Natural' in 'exercise is natural' refers to physiological processes. 'Natural' in 'my herbal supplement is natural' refers to plant origin. The argument only works if we pretend both uses mean the same thing — they don't. Hemlock, arsenic, and many toxins are also 'natural from plants.'",
+      "explanationAr": "المغالطة اللفظية ضربت تاني. «طبيعي» في «الرياضة طبيعية» بتعني عمليات فسيولوجية. «طبيعي» في «مكمّلي العشبي طبيعي» بتعني أصله من نباتات. الحجّة بتشتغل بس لو افترضنا إن الاستخدامين بيقولوا نفس الكلام — وهما مش كده. الشوكران والزرنيخ ومواد سامّة كتير «طبيعية من نباتات» هي كمان.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "An argument can contain equivocation even when every individual sentence it uses is technically true.",
+      "claimAr": "حجّة ممكن تحتوي مغالطة لفظية حتى لو كل جملة فيها صح من الناحية التقنية.",
+      "correctAnswer": true,
+      "myth_en": "If each sentence is true, the whole argument must be valid.",
+      "myth_ar": "لو كل جملة صح، لازم الحجّة كلها صح.",
+      "explanation": "True. The equivocation fallacy does not need any false sentence. Both 'the Quran uses «الطيبات»' AND 'my food list is «طيبات»' can be technically stated, yet the argument is still invalid because the word means different things in each. The error lives in the slide between meanings, not in any individual claim. Calibrate: how confident were you before answering?",
+      "explanationAr": "صح. مغالطة المشترك اللفظي مش محتاجة أي جملة كاذبة. «القرآن بيستخدم كلمة الطيبات» و«قائمة أكلي طيبات» ممكن كل واحدة صح من الناحية التقنية، ومع ذلك الحجّة باطلة لأن الكلمة بتعني حاجتين مختلفتين. الغلط عايش في الانزلاق بين المعنيين، مش في أي ادعاء منفرد.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "\"Science says fat is essential for the body — so a high-fat diet must be healthy.\" This seems to follow logically from what science says.",
+      "claimAr": "«العلم بيقول الدهون ضرورية للجسم — يبقى الحمية عالية الدهون لازم تكون صحية». ده يبدو إنه بيتبع منطقياً من اللي بيقوله العلم.",
+      "prompt": "What would have to be true for this reasoning to FAIL? What is the word doing that hides the logical gap?",
+      "promptAr": "إيه اللي لازم يكون صح علشان الاستدلال ده يفشل؟ وإيه اللي بتعمله الكلمة اللي بتخبّي الفجوة المنطقية؟",
+      "modelPoints": [
+        "The word 'essential' does two different jobs: in 'essential fatty acids' it means specific types the body cannot synthesize, needed in specific amounts — not that more is better.",
+        "Jumping from 'some fat is necessary' to 'high-fat is healthy' hides a quantity claim the word never made.",
+        "If the reasoning were valid, 'iron is essential → eating iron filings is healthy' would also follow — which is absurd.",
+        "The logical gap is masked by the single word 'essential,' which makes the jump feel obvious when it is actually unsupported.",
+        "Spotting equivocation: ask 'is the word meaning exactly the same thing in both uses?' — if not, the argument breaks at that joint."
+      ],
+      "modelPointsAr": [
+        "كلمة «ضرورية» بتعمل شغلتين مختلفتين: في «الأحماض الدهنية الضرورية» بتعني أنواع بعينها الجسم ما يقدرش يصنّعها، محتاجها بكميات محددة — مش إن أكتر = أفضل.",
+        "القفز من «شوية دهون ضرورية» لـ«الحمية عالية الدهون صحية» بيخبّي ادعاء كميات الكلمة ما عملتهوش أبداً.",
+        "لو الاستدلال صح، «الحديد ضروري ← أكل برادة الحديد صحي» هيتبع كمان — وده سخيف.",
+        "الفجوة المنطقية مخبيّة ورا كلمة «ضرورية» الواحدة، اللي بتخلّي القفزة تحسّ بديهية وهي في الحقيقة غير مدعومة.",
+        "لاكتشاف المشترك اللفظي: اسأل «هل الكلمة بتعني نفس الشيء بالظبط في الاستخدامين؟» — لو لأ، الحجّة بتنكسر عند المفصل ده."
+      ],
+      "sources": [
+        "https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/fats-and-cholesterol/",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"The Quran commands us to eat what is «طيّب» — this diet is called «الطيبات» — therefore following this diet is a Quranic command.\"",
+      "claimAr": "فكّك الحُجّة دي: «القرآن بيأمرنا نأكل اللي هو «طيّب» — الحمية دي اسمها «الطيبات» — يبقى اتّباع الحمية دي أمر قرآني».",
+      "parts": [
+        { "text": "Following this diet is a Quranic command.", "textAr": "اتّباع الحمية دي أمر قرآني.", "role": "conclusion" },
+        { "text": "The Quran commands eating what is «طيّب».", "textAr": "القرآن بيأمرنا نأكل اللي هو «طيّب».", "role": "premise" },
+        { "text": "This diet is called «الطيبات».", "textAr": "الحمية دي اسمها «الطيبات».", "role": "premise" },
+        { "text": "(Unstated) The diet's name «الطيبات» means it fulfils the Quranic sense of «طيّب».", "textAr": "(غير مذكور) اسم الحمية «الطيبات» معناه إنها بتحقّق المعنى القرآني لـ«طيّب».", "role": "assumption" }
+      ],
+      "explanation": "The hidden ASSUMPTION is the equivocation joint: the argument treats the Quranic word «طيّب» (spiritually wholesome/lawful) and the marketing label «الطيبات» (the diet's brand name) as if they share meaning. They don't — a name confers no properties. Exposing the hidden assumption collapses the argument: the diet would need independent evidence of being «طيّب» in the Quranic sense, which its name cannot supply.",
+      "explanationAr": "الافتراض الخفي هو مفصل المشترك اللفظي: الحجّة بتعامل كلمة «طيّب» القرآنية (الحلال الطيّب روحياً) والعلامة التجارية التسويقية «الطيبات» (اسم ماركة الحمية) كأنهم يتشاركوا المعنى. ما بيتشاركوش — الاسم ما بيمنحش خصائص. كشف الافتراض الخفي بيهدم الحجّة: الحمية محتاجة دليل مستقل إنها «طيّب» بالمعنى القرآني، وده اسمها ما يقدرش يوفّره.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:moh-eg-2026-05"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    }
+  ]
+}

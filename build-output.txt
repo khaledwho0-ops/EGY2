@@ -1,0 +1,254 @@
+﻿   Γû▓ Next.js 15.0.3
+   - Environments: .env.local, .env
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+node.exe : (node:8740) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:8740) Exp...nge at any time:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18176) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+ ΓÜá Using edge runtime on a page currently disables static generation for that page
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+   Generating static pages (0/190) ...
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+(node:17268) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+[MegaRotator] Γ£à Loaded 15 API key slots across providers
+   Generating static pages (47/190) 
+   Generating static pages (94/190) 
+   Generating static pages (142/190) 
+ Γ£ô Generating static pages (190/190)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size     First Load JS
+Γöî Γùï /                                       77.6 kB         205 kB
+Γö£ Γùï /_not-found                             353 B           101 kB
+Γö£ Γùï /about                                  28.1 kB         175 kB
+Γö£ Γùï /ai-agents                              9.64 kB         151 kB
+Γö£ Γùï /ai-editor                              9.68 kB         119 kB
+Γö£ Γùï /angry-debunkers                        23.8 kB         171 kB
+Γö£ ╞Æ /api/agents/investigate                 353 B           101 kB
+Γö£ ╞Æ /api/ai/archive                         353 B           101 kB
+Γö£ ╞Æ /api/ai/chat                            353 B           101 kB
+Γö£ ╞Æ /api/ai/debunker                        353 B           101 kB
+Γö£ ╞Æ /api/ai/embed                           353 B           101 kB
+Γö£ ╞Æ /api/assessment                         353 B           101 kB
+Γö£ ╞Æ /api/assessment/export                  353 B           101 kB
+Γö£ ╞Æ /api/bias-detect                        353 B           101 kB
+Γö£ ╞Æ /api/blackbox                           353 B           101 kB
+Γö£ ╞Æ /api/chat                               353 B           101 kB
+Γö£ ╞Æ /api/crisis                             353 B           101 kB
+Γö£ ╞Æ /api/debate-sim                         353 B           101 kB
+Γö£ ╞Æ /api/defense/angry-debunkers            353 B           101 kB
+Γö£ ╞Æ /api/defense/deepreal/analyze           353 B           101 kB
+Γö£ ╞Æ /api/defense/extract-pdf                353 B           101 kB
+Γö£ ╞Æ /api/defense/hadith-check               353 B           101 kB
+Γö£ ╞Æ /api/defense/mental-health/analyze      353 B           101 kB
+Γö£ ╞Æ /api/defense/osint-investigator         353 B           101 kB
+Γö£ ╞Æ /api/defense/religion-hub/analyze       353 B           101 kB
+Γö£ ╞Æ /api/defense/swarm                      353 B           101 kB
+Γö£ ╞Æ /api/defense/toxicity/analyze           353 B           101 kB
+Γö£ ╞Æ /api/fallacy-detect                     353 B           101 kB
+Γö£ ╞Æ /api/forensic/audio                     353 B           101 kB
+Γö£ ╞Æ /api/forensic/c2pa                      353 B           101 kB
+Γö£ ╞Æ /api/forensic/health                    353 B           101 kB
+Γö£ ╞Æ /api/forensic/image                     353 B           101 kB
+Γö£ ╞Æ /api/forensic/metadata                  353 B           101 kB
+Γö£ ╞Æ /api/forensic/video                     353 B           101 kB
+Γö£ ╞Æ /api/god-system                         353 B           101 kB
+Γö£ ╞Æ /api/hunter/medical                     353 B           101 kB
+Γö£ ╞Æ /api/hunter/trends                      353 B           101 kB
+Γö£ ╞Æ /api/islamic/authority                  353 B           101 kB
+Γö£ ╞Æ /api/islamic/fatwa-context              353 B           101 kB
+Γö£ ╞Æ /api/islamic/finance                    353 B           101 kB
+Γö£ ╞Æ /api/islamic/hadith                     353 B           101 kB
+Γö£ ╞Æ /api/islamic/prayer                     353 B           101 kB
+Γö£ ╞Æ /api/islamic/quran                      353 B           101 kB
+Γö£ ╞Æ /api/islamic/sectarian                  353 B           101 kB
+Γö£ ╞Æ /api/islamic/semantic                   353 B           101 kB
+Γö£ ╞Æ /api/islamic/tafsir                     353 B           101 kB
+Γö£ ╞Æ /api/kill-list                          353 B           101 kB
+Γö£ ╞Æ /api/live-deception/generate            353 B           101 kB
+Γö£ ╞Æ /api/medical/dailymed                   353 B           101 kB
+Γö£ ╞Æ /api/medical/openfda                    353 B           101 kB
+Γö£ ╞Æ /api/medical/rxnorm                     353 B           101 kB
+Γö£ ╞Æ /api/medical/who                        353 B           101 kB
+Γö£ ╞Æ /api/mist                               353 B           101 kB
+Γö£ ╞Æ /api/nlp/arabic                         353 B           101 kB
+Γö£ ╞Æ /api/nlp/sentiment                      353 B           101 kB
+Γö£ ╞Æ /api/nvidia/chat                        353 B           101 kB
+Γö£ ╞Æ /api/nvidia/complete                    353 B           101 kB
+Γö£ ╞Æ /api/nvidia/content-safety              353 B           101 kB
+Γö£ ╞Æ /api/nvidia/live-editor                 353 B           101 kB
+Γö£ ╞Æ /api/nvidia/models                      353 B           101 kB
+Γö£ ╞Æ /api/science/briefing                   353 B           101 kB
+Γö£ ╞Æ /api/science/evidence                   353 B           101 kB
+Γö£ ╞Æ /api/science/game                       353 B           101 kB
+Γö£ ╞Æ /api/science/journey                    353 B           101 kB
+Γö£ ╞Æ /api/science/module/[module]            353 B           101 kB
+Γö£ ╞Æ /api/science/operations                 353 B           101 kB
+Γö£ ╞Æ /api/science/protocol                   353 B           101 kB
+Γö£ ╞Æ /api/science/refresh                    353 B           101 kB
+Γö£ ╞Æ /api/science/report                     353 B           101 kB
+Γö£ ╞Æ /api/science/workflow                   353 B           101 kB
+Γö£ ╞Æ /api/search/archive                     353 B           101 kB
+Γö£ ╞Æ /api/search/claimbuster                 353 B           101 kB
+Γö£ ╞Æ /api/search/evidence                    353 B           101 kB
+Γö£ ╞Æ /api/search/factcheck                   353 B           101 kB
+Γö£ ╞Æ /api/search/mediawiki                   353 B           101 kB
+Γö£ ╞Æ /api/search/ncbi                        353 B           101 kB
+Γö£ ╞Æ /api/search/openalex                    353 B           101 kB
+Γö£ ╞Æ /api/search/reverse-image               353 B           101 kB
+Γö£ ╞Æ /api/search/semantic-scholar            353 B           101 kB
+Γö£ ╞Æ /api/search/veracity                    353 B           101 kB
+Γö£ ╞Æ /api/sovo/analyze                       353 B           101 kB
+Γö£ ╞Æ /api/srs                                353 B           101 kB
+Γö£ ╞Æ /api/whatsapp-analyzer                  353 B           101 kB
+Γö£ Γùï /arabic-shield                          10.7 kB         111 kB
+Γö£ Γùï /assessment                             16.6 kB         156 kB
+Γö£ Γùï /audit                                  353 B           101 kB
+Γö£ Γùï /bad-news                               6.52 kB         148 kB
+Γö£ Γùï /baseline                               11.2 kB         129 kB
+Γö£ Γùï /bias-detector                          3.35 kB         104 kB
+Γö£ Γùï /bias-fingerprint                       8.92 kB         119 kB
+Γö£ Γùï /blackbox                               2.01 kB         103 kB
+Γö£ Γùï /certificate                            5.18 kB         106 kB
+Γö£ Γùï /chatbot                                29.2 kB         130 kB
+Γö£ Γùï /cognitive-lab                          7.95 kB         118 kB
+Γö£ Γùï /comb-tracker                           6.47 kB         116 kB
+Γö£ Γùï /connect                                4.57 kB         114 kB
+Γö£ Γùï /corrections                            353 B           101 kB
+Γö£ Γùï /critical-thinking                      6.13 kB         116 kB
+Γö£ ╞Æ /curriculum/phase0                      353 B           101 kB
+Γö£ Γùï /dashboard                              128 kB          409 kB
+Γö£ Γùï /debate-sim                             5.37 kB         115 kB
+Γö£ Γùï /deepreal                               1.49 kB         137 kB
+Γö£ Γùï /deepreal-forensics                     1.64 kB         102 kB
+Γö£ Γùï /deepreal-upload                        5.2 kB          147 kB
+Γö£ Γùï /defense-main-plan                      1.65 kB         121 kB
+Γö£ Γùï /defense-pages-map                      18.6 kB         137 kB
+Γö£ Γùï /defense-qa                             8.49 kB         109 kB
+Γö£ Γùï /defense-test                           9.17 kB         151 kB
+Γö£ Γùï /demo                                   3.5 kB          186 kB
+Γö£ Γùï /drug-checker                           6.38 kB         116 kB
+Γö£ Γùï /effect-dashboard                       2.49 kB         103 kB
+Γö£ Γùï /engines-guide                          2.44 kB         112 kB
+Γö£ Γùï /epistemology                           12.5 kB         122 kB
+Γö£ Γùï /evidence                               6.88 kB         117 kB
+Γö£ Γùï /explore                                553 B           157 kB
+Γö£ Γùï /fallacy-engine                         3.41 kB         104 kB
+Γö£ Γùï /family-kit                             6.47 kB         107 kB
+Γö£ Γùï /features                               17.8 kB         172 kB
+Γö£ Γùï /fight-back                             12.4 kB         113 kB
+Γö£ Γùï /forensic-c2pa                          3.35 kB         104 kB
+Γö£ Γùï /forensic-image                         3.43 kB         104 kB
+Γö£ Γùï /global-alliance                        12.5 kB         154 kB
+Γö£ Γùï /god-system                             3.42 kB         104 kB
+Γö£ Γùï /guide                                  8.99 kB         136 kB
+Γö£ Γùï /health-data                            5.93 kB         116 kB
+Γö£ Γùï /impact                                 4.38 kB         114 kB
+Γö£ Γùï /inoculation-passport                   7.91 kB         118 kB
+Γö£ Γùï /journal                                353 B           101 kB
+Γö£ Γùï /kill-list                              6.04 kB         148 kB
+Γö£ Γùï /knowledge-graph                        26.4 kB         184 kB
+Γö£ Γùï /language-select                        3.62 kB         104 kB
+Γö£ ╞Æ /layers/[id]/fight                      15.2 kB         185 kB
+Γö£ Γùï /live-deception                         9.09 kB         220 kB
+Γö£ Γùï /manipulation-cards                     8.51 kB         118 kB
+Γö£ Γùï /master-roadmap                         17.9 kB         119 kB
+Γö£ Γùï /media-library                          6.35 kB         148 kB
+Γö£ Γùï /medical-life                           4.93 kB         115 kB
+Γö£ Γùï /mens-shield                            7.05 kB         117 kB
+Γö£ Γùï /mental-health                          1.49 kB         137 kB
+Γö£ Γùï /mental-health/depression               2.73 kB         103 kB
+Γö£ Γùï /methodology                            9.48 kB         151 kB
+Γö£ Γùï /misinfo-atlas                          395 kB          546 kB
+Γö£ Γùï /nvidia-hub                             6.21 kB         148 kB
+Γö£ Γùï /onboarding                             5.62 kB         133 kB
+Γö£ Γùï /open-source                            6.75 kB         116 kB
+Γö£ Γùï /osint-investigator                     32.7 kB         184 kB
+Γö£ Γùï /others-search                          7.85 kB         150 kB
+Γö£ Γùï /paper-auditor                          8.28 kB         118 kB
+Γö£ Γùï /peer-challenge                         7.63 kB         108 kB
+Γö£ Γùï /philosophy                             6.45 kB         116 kB
+Γö£ Γùï /platform-guide                         9.77 kB         119 kB
+Γö£ Γùï /presentation                           3.38 kB         104 kB
+Γö£ Γùï /pricing-presentation                   4.18 kB         105 kB
+Γö£ Γùï /project-vision                         864 B           111 kB
+Γö£ Γùï /prompt-lab                             6.81 kB         149 kB
+Γö£ Γùï /publishing-plan                        6.65 kB         116 kB
+Γö£ Γùï /reaction-test                          8.48 kB         118 kB
+Γö£ Γùï /religion-hub                           1.49 kB         137 kB
+Γö£ ╞Æ /religion-hub/exercise/[day]            107 kB          430 kB
+Γö£ Γùï /religion-hub/maqasid                   897 B           102 kB
+Γö£ Γùï /religion-hub/quran                     6.55 kB         148 kB
+Γö£ Γùï /religion-hub/tools                     8.38 kB         118 kB
+Γö£ Γùï /religion-hub/tools/authority-verifier  5.7 kB          115 kB
+Γö£ Γùï /religion-hub/tools/fatwa-context       5.58 kB         115 kB
+Γö£ Γùï /religion-hub/tools/hadith-check        7.88 kB         118 kB
+Γö£ Γùï /religion-hub/tools/halal-finance       7.62 kB         149 kB
+Γö£ Γùï /religion-hub/tools/mawarith            5.07 kB         147 kB
+Γö£ Γùï /religion-hub/tools/quran-context       9.15 kB         119 kB
+Γö£ Γùï /religion-hub/tools/sectarian-detector  6.38 kB         116 kB
+Γö£ Γùï /religion-hub/tools/zakat-calculator    6.98 kB         149 kB
+Γö£ Γùï /religion-hub/whatsapp                  1.28 kB         102 kB
+Γö£ Γùï /report                                 3.54 kB         113 kB
+Γö£ ╞Æ /report/[token]                         4.1 kB          119 kB
+Γö£ Γùï /reverse                                31.6 kB         197 kB
+Γö£ Γùï /rumor-heatmap                          5.26 kB         156 kB
+Γö£ Γùï /science                                5.9 kB          128 kB
+Γö£ Γùï /self-test-protocol                     864 B           111 kB
+Γö£ Γùï /six-layers                             61.6 kB         267 kB
+Γö£ Γùï /skills                                 353 B           101 kB
+Γö£ Γùï /sources                                20.4 kB         143 kB
+Γö£ Γùï /sovo                                   2.35 kB         103 kB
+Γö£ Γùï /stat-power                             6.21 kB         116 kB
+Γö£ Γùï /supervisor                             1.42 kB         102 kB
+Γö£ Γùï /swarm-debate                           4.34 kB         105 kB
+Γö£ Γùï /threat-briefing                        8.95 kB         119 kB
+Γö£ Γùï /threat-map                             4 kB            155 kB
+Γö£ Γùï /tools-download                         3.97 kB         114 kB
+Γö£ Γùï /trailer                                10.6 kB         120 kB
+Γö£ Γùï /transformation                         6.86 kB         117 kB
+Γö£ Γùï /transparency                           353 B           101 kB
+Γö£ Γùï /trend-hunter                           7.81 kB         150 kB
+Γö£ Γùï /ux-science                             8.62 kB         109 kB
+Γö£ Γùï /welcome                                353 B           101 kB
+Γö£ Γùï /whatsapp-analyzer                      5.51 kB         147 kB
+Γö£ Γùï /why-us                                 2.84 kB         113 kB
+Γöö Γùï /womens-shield                          7.02 kB         117 kB
++ First Load JS shared by all               101 kB
+  Γö£ chunks/1517-553b7eed5c1adf5e.js         45.8 kB
+  Γö£ chunks/4bd1b696-9cdb944579664a27.js     52.5 kB
+  Γöö other shared chunks (total)             2.27 kB
+
+
+╞Æ Middleware                                61.1 kB
+
+Γùï  (Static)   prerendered as static content
+╞Æ  (Dynamic)  server-rendered on demand
+
+

@@ -1,0 +1,127 @@
+{
+  "id": "day151_mapping_the_full_case",
+  "phase": 4,
+  "week": 22,
+  "day": 151,
+  "title": "Mapping the Full Case — All 14 Layers at Once",
+  "titleAr": "رسم خريطة الحالة الكاملة — 14 طبقة دفعة واحدة",
+  "description": "The viral Taybat diet system is our capstone case because it is simultaneously a logic failure, a science failure, a religious-vocabulary exploit, and a social-psychology trap. Today you navigate all layers together.",
+  "descriptionAr": "نظام الطيبات هو حالتنا الختامية لأنه في آنٍ واحد فشل منطقي وفشل علمي واستغلال للمفردات الدينية وفخ سيكولوجي اجتماعي. النهارده بتتنقّل في كل الطبقات مع بعض.",
+  "type": "integration",
+  "difficulty": 5,
+  "estimatedMinutes": 18,
+  "source": "https://www.sciencebasedmedicine.org/evidence-based-medicine-criteria-for-evaluating-evidence/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A friend says: 'The Taybat system is just a diet — at worst it doesn't work. Why are people making it a big deal?' Which single fact best answers the scale of the harm?",
+      "claimAr": "صاحبك بيقول: «نظام الطيبات مجرد حمية — في الأسوأ ما ينفعش. ليه الناس بتكبّر الموضوع؟» أنهي حقيقة واحدة بتردّ على حجم الضرر أحسن؟",
+      "options": [
+        "It wasn't very popular",
+        "By early May 2026, 230+ victims were documented — deaths, disability, ICU admissions — after followers stopped insulin, corticosteroids, and cancer treatment on the system's implied guidance",
+        "Some people had stomach aches",
+        "The food was expensive"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The viral Taybat system crossed from dietary advice into clinical danger when Red Flag #8 operated: followers stopped insulin for type-1 diabetes, corticosteroids for lupus, and chemotherapy. No diet is a validated replacement for tested pharmacology in those conditions. The 230+ figure is a media aggregate lower bound — the Medical Syndicate confirmed the expulsion and clinic closure after its own investigation.",
+      "explanationAr": "نظام الطيبات الذي انتشر عبر الحدود من نصيحة غذائية لخطر سريري لمّا عملت علامة الخطر 8: الأتباع وقّفوا الأنسولين لسكري النوع الأول والكورتيزون للذئبة والكيموثيرابي. لا حمية هي بديل مُثبَّت للعلاج الدوائي المُختبَر في هذه الحالات. رقم 230+ هو حدٌّ أدنى مُجمَّع من الإعلام — نقابة الأطباء أكّدت الشطب وإغلاق العيادة بعد تحقيقها الخاص.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "EAL-case-001:moh-eg-2026-05",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "Set your confidence, then pick: which case-layer matching is FULLY correct?",
+      "claimAr": "حدّد يقينك، وبعدين اختار: أنهي مطابقة طبقات-حالة صحيحة بالكامل؟",
+      "options": [
+        "The 'cures everything' claim → weak logic (not a red flag); the testimonials-as-proof → strong science",
+        "The 'cures everything' claim → Red Flag #1 (biologically impossible); testimonials only → bottom of evidence ladder; stopping medications → Red Flag #8 (most dangerous signal); Quranic vocabulary → Red Flag #6 (moral framing) + religious-shield exploit",
+        "Stopping medication → just a personal choice with no clinical significance",
+        "The religious vocabulary → a valid source of nutritional authority"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This multi-layer identification is the integrative skill — and a good place to check whether your certainty matched your accuracy. Each feature maps to a distinct layer: (1) 'cures everything' is biologically impossible — Red Flag #1; (2) testimonials-only is the bottom two rungs of the evidence pyramid; (3) telling people to stop tested medications is the single most dangerous signal — Red Flag #8; (4) importing Quranic vocabulary to make food rules feel sacred is a double exploit — Red Flag #6 plus the Religious Shield layer. If you were highly confident on a wrong option, that gap is the lesson; if confident and right, your map is solid.",
+      "explanationAr": "التعرّف متعدد الطبقات ده هو المهارة التكاملية — ومكان كويس تراجع فيه هل يقينك طابق دقتك. كل خاصية بتنتمي لطبقة مختلفة: (1) «يشفي كل حاجة» مستحيل بيولوجياً — علامة الخطر 1؛ (2) شهادات فقط أسفل درجتين في هرم الأدلة؛ (3) قول الناس يوقّفوا الأدوية المُختبَرة أخطر إشارة — علامة الخطر 8؛ (4) استيراد مفردات قرآنية لخليّ قواعد الطعام تحسّ بالقدسية استغلال مزدوج — علامة الخطر 6 وطبقة الدرع الديني. لو كنت واثق جداً في اختيار غلط، الفجوة دي هي الدرس؛ ولو واثق وصح، خريطتك متينة.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009",
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "It feels intuitive that the Egyptian Medical Syndicate's investigation was driven by commercial rivalry — doctors protecting their income from the Taybat system's competition.",
+      "claimAr": "بيبان بديهي إن تحقيق نقابة الأطباء المصرية كان مدفوعاً بالتنافس التجاري — أطباء بيحموا دخلهم من منافسة نظام الطيبات.",
+      "prompt": "Consider the opposite: what would we expect to SEE if the Syndicate had no commercial motive? What facts would the 'protecting profits' story have to explain away?",
+      "promptAr": "فكّر في العكس: إيه اللي كنّا هنتوقع نشوفه لو النقابة مالهاش دافع تجاري؟ وإيه الوقائع اللي قصة «حماية الأرباح» لازم تتهرّب من تفسيرها؟",
+      "modelPoints": [
+        "The investigation used university specialists with no financial stake in the outcome — not competitors of the clinic.",
+        "They asked for the most minimal possible documentation: just three cases with before/after labs. None was submitted.",
+        "Saudi health warnings followed ICU admissions IN Saudi Arabia — completely independent of any Egyptian commercial motive.",
+        "The 'they fear competition' story is unfalsifiable: any criticism, from anyone, gets re-read as self-interest, so no evidence could ever satisfy it — which is the conspiracy tell (case pair #2)."
+      ],
+      "modelPointsAr": [
+        "التحقيق استخدم أساتذة جامعات بلا مصلحة مالية في النتيجة — مش منافسين للعيادة.",
+        "طلبوا أقل توثيق ممكن: ثلاث حالات بتحاليل قبل/بعد بس. لم يُقدَّم شيء.",
+        "تحذيرات الصحة السعودية جت بعد دخول عناية مركزة في السعودية — مستقلة تماماً عن أي دافع تجاري مصري.",
+        "قصة «خايفين من المنافسة» غير قابلة للتفنيد: أي نقد من أي حد بيتقرا كمصلحة ذاتية، فما في دليل يرضيها أبداً — وده تَلّ المؤامرة (زوج الحالة 2)."
+      ],
+      "explanation": "Considering the opposite turns a comfortable suspicion into a test it fails. The 'protecting profits' framing is conspiracy-pair #2 from the case: it pre-discredits all critique so no evidence can reach the believer. The independent facts — disinterested specialists, a near-zero documentation bar that went unmet, and separate Saudi ICU warnings — fit the honest-investigation reading far better than the commercial-rivalry one.",
+      "explanationAr": "التفكير في العكس بيحوّل شكّ مريّح لاختبار بيسقط فيه. تأطير «حماية الأرباح» هو زوج المؤامرة رقم 2 في الحالة: بيُسقِط مسبقاً كل نقد علشان ما يوصلش دليل للمؤمن. الوقائع المستقلة — أساتذة بلا مصلحة، وحدّ توثيق شبه معدوم ما اتلبّاش، وتحذيرات عناية مركزة سعودية منفصلة — بتركّب على قراءة التحقيق الأمين أحسن بكتير من قراءة التنافس التجاري.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "EAL-case-001:moh-sa-2026-06-08"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument from some followers after the originator's death: \"He was only 47, he died suddenly, and pharma had every reason to silence him — so his death proves he was a martyr they killed.\"",
+      "claimAr": "فكّك الحُجّة دي من بعض الأتباع بعد وفاة صاحب النظام: «هو كان 47 بس، مات فجأة، وشركات الدوا عندها كل سبب تسكّته — فموته بيثبت إنه شهيد قتلوه».",
+      "parts": [
+        { "text": "His death proves he was a martyr they killed.", "textAr": "موته بيثبت إنه شهيد قتلوه.", "role": "conclusion" },
+        { "text": "He died suddenly at only 47.", "textAr": "مات فجأة وهو 47 بس.", "role": "premise" },
+        { "text": "(Unstated) If powerful people benefit from a death, they must have caused it.", "textAr": "(غير مذكور) لو ناس أقوياء بيستفيدوا من موت، يبقى هم اللي سبّبوه.", "role": "assumption" },
+        { "text": "Pharma had every reason to silence him.", "textAr": "شركات الدوا عندها كل سبب تسكّته.", "role": "irrelevant" }
+      ],
+      "explanation": "Mapping exposes a self-sealing conspiracy. The hidden ASSUMPTION — 'whoever benefits must be the cause' — is a known fallacy; benefit is not evidence of action. 'Pharma had reason' is IRRELEVANT motive-speculation, not proof. And the structure is unfalsifiable (Red Flag #4): the Egyptian Foreign Ministry confirmed a natural cardiac death with no criminal element, yet that very confirmation gets re-read as 'cover-up.' When success, banning, AND death all 'prove' the theory, no outcome could refute it — so the conclusion doesn't follow.",
+      "explanationAr": "التفكيك بيكشف مؤامرة ذاتية الإحكام. الافتراض الخفي — «اللي بيستفيد لازم يكون هو السبب» — مغالطة معروفة؛ الاستفادة مش دليل على الفعل. و«شركات الدوا عندها سبب» تكهّن بالدافع غير ذي صلة، مش إثبات. والبنية غير قابلة للتفنيد (علامة الخطر 4): الخارجية المصرية أكّدت وفاة طبيعية قلبية بلا شبهة جنائية، ومع ذلك التأكيد نفسه بيتقرا «تغطية». لمّا النجاح والحظر والوفاة كلهم «يثبتوا» النظرية، ما في نتيجة ممكن تفنّدها — فالخلاصة ما بتلزمش.",
+      "sources": [
+        "EAL-case-001:mfa-eg-2026-04",
+        "https://plato.stanford.edu/entries/pseudo-science/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "self_explain",
+      "claim": "A student summarises the case: 'The system spread because Egyptians are gullible.' Is this analysis accurate?",
+      "claimAr": "طالب بيلخّص الحالة: «النظام انتشر لأن المصريين ساذجون». هل هذا التحليل دقيق؟",
+      "options": [
+        "Accurate — gullibility explains it all",
+        "Inaccurate and harmful — it was a specific ecosystem of structural factors, not a population's stupidity"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why is 'they were gullible' both factually wrong AND practically dangerous as an explanation — and what does it stop us from fixing?",
+        "promptAr": "بكلماتك: ليه «هم كانوا ساذجين» تفسير غلط واقعياً وخطير عملياً في نفس الوقت — وإيه اللي بيمنعنا نصلّحه؟"
+      },
+      "explanation": "Attributing spread to 'gullibility' is both empirically wrong and practically harmful. It is wrong because documented structural factors — high medication cost, real institutional-trust grievances, media entertainment mistaken for journalism, and cultural trust in the 'sheikh-healer' archetype — operate independent of individual intelligence. It is harmful because it shuts down every real intervention: if the cause is stupidity, no curriculum can fix it. The correct analysis names the systemic levers that can actually be changed. Putting that in your own words is what turns it into a tool you can use.",
+      "explanationAr": "إسناد الانتشار للسذاجة خاطئ تجريبياً وضارّ عملياً. خاطئ لأن العوامل البنيوية الموثّقة — تكلفة الدواء العالية، ومظالم ثقة مؤسسية حقيقية، وتسلية إعلامية محسوبة صحافة، وثقة ثقافية في نمط «الشيخ-المُعالِج» — بتشتغل بمعزل عن الذكاء الفردي. وضارّ لأنه بيوقف كل تدخّل حقيقي: لو السبب الغباء، ما في منهج يعالجه. التحليل الصحيح بيسمّي الروافع المنظومية اللي ممكن فعلاً تتغيّر. وإنك تحطّ ده بكلماتك هو اللي بيحوّله لأداة تقدر تستخدمها.",
+      "sources": [
+        "EAL-case-001:moh-eg-2026-05",
+        "https://www.who.int/news-room/fact-sheets/detail/health-literacy"
+      ],
+      "cognitivebiasAtPlay": "Fundamental Attribution Error"
+    }
+  ]
+}

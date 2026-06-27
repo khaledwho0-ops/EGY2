@@ -1,0 +1,124 @@
+{
+  "id": "day63_evidence_pyramid_intro",
+  "phase": 2,
+  "week": 11,
+  "day": 63,
+  "title": "Not All Evidence Is Equal",
+  "titleAr": "مش كل دليل زي التاني",
+  "description": "The first idea of science literacy: a personal story and a 10,000-person trial are not the same kind of proof. Learn the ladder.",
+  "descriptionAr": "أول فكرة في الثقافة العلمية: حكاية شخص واحد مش زي تجربة على 10 آلاف. اتعلّم السلّم.",
+  "type": "science",
+  "difficulty": 2,
+  "estimatedMinutes": 15,
+  "source": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A neighbour says: \"My cousin drank this herb and his diabetes went away — I saw it myself.\" Where does this sit on the evidence ladder?",
+      "claimAr": "جار بيقول: «ابن عمي شرب العشب ده وسكّره راح — أنا شفت بعينيّ». الكلام ده فين على سلّم الأدلة؟",
+      "options": [
+        "The strongest kind of proof — he saw it",
+        "A randomized trial",
+        "The weakest rung: a single testimonial / anecdote",
+        "A systematic review"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A single eyewitness story is the bottom of the ladder. It cannot separate the herb from coincidence, the placebo effect, or the disease's natural ups and downs. It is a starting question, never a conclusion — and that's true no matter how sincere the person is.",
+      "explanationAr": "حكاية شاهد واحد هي أسفل السلّم. ما تقدرش تفصل العشب عن الصدفة أو التأثير الوهمي أو تقلّب المرض الطبيعي. دي بداية سؤال، مش نتيجة — مهما كان الشخص صادق.",
+      "sources": [
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "Order these from WEAKEST to STRONGEST as medical proof: (A) a single case report, (B) a systematic review of many trials, (C) a randomized controlled trial.",
+      "claimAr": "رتّب من الأضعف للأقوى كدليل طبي: (أ) تقرير حالة واحدة، (ب) مراجعة منهجية لتجارب كتير، (ج) تجربة عشوائية محكَمة.",
+      "options": [
+        "B → C → A",
+        "A → C → B",
+        "C → A → B",
+        "A → B → C"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: pick the weakest rung and explain what specific problem makes it weak — what can it NOT rule out that a higher rung can?",
+        "promptAr": "بكلماتك: خُد أضعف درجة واشرح المشكلة التحديدة اللي بتخلّيها ضعيفة — إيه اللي ما تقدرش تستبعده، إنما درجة أعلى تقدر؟"
+      },
+      "explanation": "Weakest to strongest: a single case report (one patient, a hypothesis only) → a randomized controlled trial (randomizing + blinding remove most bias and placebo) → a systematic review that statistically combines many strong trials and is critiqued by peers worldwide. The case report's specific weakness: with one patient and no comparison group, you cannot separate the treatment from coincidence, placebo, or natural recovery. Climbing the ladder is exactly how confidence is earned.",
+      "explanationAr": "من الأضعف للأقوى: تقرير حالة واحدة (مريض واحد، مجرد فرضية) ← تجربة عشوائية محكَمة (العشوائية والتعمية بيشيلوا معظم الانحياز والوهمي) ← مراجعة منهجية بتجمّع إحصائياً تجارب قوية كتير وبيراجعها خبراء العالم. الضعف المحدد لتقرير الحالة: بمريض واحد ومجموعة مقارنة، ما تقدرش تفصل العلاج عن الصدفة أو الوهمي أو الشفاء الطبيعي. صعود السلّم هو بالظبط إزاي بتُكتسب الثقة.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "The viral «نظام الطيبات» diet built its whole case on follower testimonials — and later on the testimonials of people already committed to it. On the evidence ladder, that is solid proof.",
+      "claimAr": "نظام «الطيبات» اللي انتشر بنى حُجّته كلها على شهادات الأتباع — وبعدين على شهادات ناس أصلاً مقتنعين بيه. على سلّم الأدلة، ده دليل قوي.",
+      "correctAnswer": false,
+      "myth_en": "Thousands of testimonials add up to strong proof.",
+      "myth_ar": "آلاف الشهادات بتتجمّع وتبقى دليل قوي.",
+      "explanation": "False. A thousand testimonials are still a thousand bottom-rung anecdotes — they don't become a trial by stacking up, because none of them has a control group, blinding, or a way to count the people the diet harmed. The people who improved posted; the people who ended up in intensive care could not. The Medical Syndicate's review, by contrast, sat near the top of the ladder. Calibrate: if you hesitated, ask yourself — did the large number feel like it should matter? That's the anecdotal reasoning bias at work.",
+      "explanationAr": "غلط. ألف شهادة تفضل ألف حكاية من أسفل السلّم — ما بتبقاش تجربة لمجرد إنها كتُرت، لأن ولا واحدة فيها مجموعة ضابطة ولا تعمية ولا طريقة نعدّ بيها اللي النظام أذاهم. اللي تحسّن نشر؛ واللي دخل العناية المركزة ما قدرش. بالعكس، مراجعة نقابة الأطباء كانت قريبة من قمة السلّم. معايرة: لو ترددت، اسأل نفسك — هل العدد الكبير حسّيت إنه المفروض يفرق؟ ده انحياز التفكير الاستدلالي الاستئنافي.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A YouTube seller says: \"Forget chicken and milk, they're toxic.\" You see thousands of followers agreeing in the comments. The consensus feels strong.",
+      "claimAr": "بائع على يوتيوب بيقول: «سيبك من الفراخ واللبن، دول سُم». بتشوف آلاف الأتباع موافقين في التعليقات. الإجماع حاسس إنه قوي.",
+      "prompt": "What would the evidence have to show for this claim to be TRUE? What does strong nutrition science actually say about these foods?",
+      "promptAr": "إيه اللي الأدلة لازم تبيّنه علشان الادعاء ده يبقى صح؟ وإيه اللي علم التغذية القوي بيقوله فعلاً عن الأكلات دي؟",
+      "modelPoints": [
+        "For the claim to be true, multiple independent high-quality RCTs and systematic reviews would need to show net harm from moderate chicken and dairy consumption across diverse populations.",
+        "Strong evidence says the opposite: chicken is a high-quality complete protein recommended in major dietary guidelines; moderate dairy supports bone health with neutral-to-positive heart outcomes.",
+        "Comments and follower counts measure social proof, not evidence — they sit even below anecdotes on the ladder because the speaker is pre-selected believers.",
+        "The 'toxic' label is a binary 'pure vs poison' framing — a persuasion move, not nutrition science."
+      ],
+      "modelPointsAr": [
+        "علشان الادعاء يبقى صح، كان محتاج تجارب عشوائية محكَمة عالية الجودة ومراجعات منهجية مستقلة تبيّن أذى صافي من الاستهلاك المعتدل للدواجن والألبان عبر سكان متنوعين.",
+        "الأدلة القوية بتقول العكس: الفراخ بروتين كامل عالي الجودة موصى بيه في الإرشادات الغذائية الكبرى؛ اللبن باعتدال بيدعم صحة العظام بنتائج محايدة لإيجابية للقلب.",
+        "التعليقات وعدد الأتباع بيقيسوا الإثبات الاجتماعي، مش الدليل — هم أدنى حتى من الحكايات على السلّم لأن المتكلّم مُختار مسبقاً من المؤمنين.",
+        "وصف «السُّم» إطار ثنائي «طاهر ضد سام» — حركة إقناع، مش علم تغذية."
+      ],
+      "explanation": "Considering the opposite reveals how far the claim is from the evidence: the actual science sits on the opposite side of the ladder. Social proof (comments, followers) is not a rung on the evidence ladder at all — it is influence without information.",
+      "explanationAr": "التفكير في العكس بيكشف قد إيه الادعاء بعيد عن الدليل: العلم الفعلي بيقعد على الجانب المقابل من السلّم. الإثبات الاجتماعي (التعليقات، الأتباع) مش درجة على سلّم الأدلة أصلاً — هو تأثير من غير معلومة.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://www.hsph.harvard.edu/nutritionsource/protein/"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 62,
+      "claim": "Why is climbing the ladder worth the effort, even when a strong study gives a 'boring' answer (like 'this supplement did NOT help') — and how does this connect to what you learned on Day 62 about replication?",
+      "claimAr": "ليه صعود السلّم يستاهل التعب، حتى لما الدراسة القوية تطلّع إجابة «مملة» (زي إن المكمّل ده ما نفعش) — وإزاي ده بيتصل بما اتعلّمته في يوم 62 عن التكرار؟",
+      "options": [
+        "It isn't worth it; stories are more convincing",
+        "A null result from a sound, replicated method is trustworthy — we can rely on a 'no' as much as a 'yes', and multiple replications of 'no' are even stronger",
+        "Strong studies are always positive",
+        "Only the result matters, not how it was reached"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A careful method makes even a disappointing 'no' trustworthy — that's the whole point. When multiple independent teams replicate the null result (Day 62), that 'no' becomes as solid as any 'yes'. A seller who only ever reports successes, with no independent replication, has skipped both the ladder and the test of replication simultaneously.",
+      "explanationAr": "المنهج الدقيق بيخلّي حتى «اللأ» المخيّبة جديرة بالثقة — وده هو الهدف كله. لمّا فرق مستقلة متعددة تكرّر النتيجة الصفرية (يوم 62)، «اللأ» دي بتبقى صلبة زي أي «آه». البائع اللي بيحكي النجاحات بس، من غير تكرار مستقل، بيكون تخطّى السلّم واختبار التكرار في نفس الوقت.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "day135_sorting_the_shield",
+  "phase": 3,
+  "week": 20,
+  "day": 135,
+  "title": "Sorting the Shield — Legitimate Faith vs. Weaponised Health Claim",
+  "titleAr": "فرز الدرع — الإيمان الحقيقي أم ادعاء صحي مُسلَّح",
+  "description": "Some uses of religious language in health contexts are genuine and harmless; others borrow Quranic vocabulary to make a medical claim untestable. Today you build the sorting skill.",
+  "descriptionAr": "بعض استخدامات اللغة الدينية في السياق الصحي حقيقية وغير ضارة؛ وبعضها يستعير مفردات قرآنية ليجعل ادعاءً طبياً غير قابل للاختبار. النهاردة بتبني مهارة الفرز.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://quran.com/5/87",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A person says: 'I start my meals with Bismillah and I believe that eating with gratitude blesses the food.' A second person says: 'These foods are «خبائث» — they damage the soul and corrupt the body; no medical test can detect their harm because it is spiritual.' Which statement is using religious framing to block scientific evaluation?",
+      "claimAr": "شخص بيقول: «بابدأ أكلي بالبسملة وبؤمن إن الأكل بالشكر بيبارك الطعام». شخص تاني بيقول: «الأكل ده «خبائث» — بيأذي الروح ويفسد الجسم، ولا تحليل طبي يقدر يكشف ضرره لأنه روحاني». أنهي جملة بتستخدم التأطير الديني لتحصين ادعاء طبي من الاختبار العلمي؟",
+      "options": [
+        "The first — starting meals with Bismillah is a health claim",
+        "The second — declaring harm 'spiritual and undetectable' makes it unfalsifiable",
+        "Both equally — any religious reference in food is a red flag",
+        "Neither — spiritual language is always separate from medical claims"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The first statement is a personal spiritual practice with no medical efficacy claim attached. The second imports the Quranic word «خبائث» into nutrition AND insulates the claim from testing ('no medical test can detect it'). That combination — Quranic vocabulary + declared untestability — is the vocabulary exploit. The Quran's use of «طيبات» and «خبائث» addresses moral/spiritual categories, not a clinical nutrition protocol.",
+      "explanationAr": "الجملة الأولى ممارسة روحية شخصية بدون ادعاء طبي. الثانية بتستورد كلمة «خبائث» القرآنية للتغذية وبتحصّن الادعاء من الاختبار («لا تحليل يقدر يكشف»). دي مجتمعة — مفردة قرآنية + عدم قابلية للاختبار — هي الحيلة اللغوية. القرآن استخدم «الطيبات» و«الخبائث» في سياق أخلاقي/روحي، مش بروتوكول تغذية إكلينيكي.",
+      "sources": ["EAL-case-001:redflag-6", "https://quran.com/5/87"],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "Al-Mā'idah 5:87 says: 'O you who believe, do not prohibit the good things which Allah has made lawful to you.' A diet system declares chicken, milk, and eggs to be «خبائث» and forbidden. Why does this verse directly refute that ruling — from inside the tradition?",
+      "claimAr": "المائدة ٥:٨٧ تقول: «يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحَرِّمُوا طَيِّبَاتِ مَا أَحَلَّ اللَّهُ لَكُمْ». نظام غذائي بيعلن أن الفراخ واللبن والبيض «خبائث» ومحرّمة. ليه الآية دي بترد على الحكم ده من داخل التقليد الديني نفسه؟",
+      "options": [
+        "It doesn't — the verse is about spiritual purity, not diet",
+        "It refutes it directly: declaring lawful foods forbidden is exactly what the verse prohibits"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: explain the contradiction between declaring chicken/milk forbidden and what 5:87 actually says. Why is this a problem FROM a religious standpoint, not just a scientific one?",
+        "promptAr": "بكلماتك: اشرح التناقض بين تحريم الفراخ/اللبن وما تقوله الآية ٥:٨٧ فعلاً. ليه دي مشكلة من المنظور الديني، مش بس العلمي؟"
+      },
+      "explanation": "5:87 explicitly forbids Muslims from declaring lawful things forbidden. Chicken, milk, and eggs have been eaten throughout Islamic history and are present in authenticated hadith. A personal opinion repackaged as a religious food prohibition is doing precisely what 5:87 warns against — and it is the Quran itself, not secular science, that first rejects the move. This is why the framing 'defending Islam FROM misuse' is correct: the tradition contains its own refutation.",
+      "explanationAr": "٥:٨٧ بتنهى صراحةً عن تحريم الحلال. الفراخ واللبن والبيض أُكِلت طوال التاريخ الإسلامي وموثَّقة في أحاديث صحيحة. رأي شخصي متغلَّف كتحريم ديني للطعام بيعمل بالظبط ما تنهى عنه ٥:٨٧ — والقرآن نفسه، مش العلم العلماني، هو أول من يرفض الحركة دي. علشان كده التأطير «الدفاع عن الإسلام من سوء الاستخدام» صح: التقليد نفسه بيحتوي على الرد.",
+      "sources": ["https://quran.com/5/87", "EAL-case-001:redflag-6"],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A claim about chicken being harmful is supported only by the seller's personal interpretation of a Quranic word. Before looking at evidence — how confident are you that this interpretation would hold up against classical Quranic scholarship AND clinical nutrition evidence simultaneously?",
+      "claimAr": "ادعاء بضرر الفراخ مستند فقط على تفسير شخصي من البائع لكلمة قرآنية. قبل ما تشوف الدليل — قد إيه أنت متأكد إن التفسير ده هيصمد أمام العلم القرآني الكلاسيكي والتغذية الإكلينيكية في نفس الوقت؟",
+      "options": [
+        "Very confident — Quranic words carry inherent authority about food",
+        "Not confident — one person's reading of a single word cannot override established scholarship in two independent fields"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Calibration check: if you felt confident this claim would hold, notice that it requires overriding centuries of classical tafsir scholarship AND the clinical consensus on poultry as a complete protein (WHO/FAO). One person's reinterpretation of «خبائث» — a word whose classical exegesis does not map onto chicken — cannot carry that weight. Feeling of certainty ≠ evidence.",
+      "explanationAr": "فحص المعايرة: لو حسّيت إن الادعاء سيصمد، لاحظ إنه يحتاج تجاوز قرون من علم التفسير الكلاسيكي والإجماع الإكلينيكي على الدواجن كبروتين كامل (WHO/FAO). إعادة تفسير شخصية لـ«الخبائث» — كلمة تفسيرها الكلاسيكي ما بيشمل الفراخ — ما تقدرش تحمل الوزن ده. الإحساس باليقين ≠ دليل.",
+      "sources": [
+        "https://www.fao.org/3/i3437e/i3437e.pdf",
+        "EAL-case-001:redflag-6"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "Someone argues: 'The Maqasid al-Sharīʿa (the higher objectives of Islamic law) include the preservation of life and health — so any diet that truly improves health is aligned with Islamic values, regardless of who promotes it.'",
+      "claimAr": "حد بيقول: «مقاصد الشريعة بتشمل حفظ النفس والصحة — فأي نظام غذائي بيحسّن الصحة فعلاً يتوافق مع القيم الإسلامية، بصرف النظر عن مين بيروّج له».",
+      "prompt": "This sounds appealing. What would you need to check BEFORE accepting it? What could make this reasoning dangerous in practice?",
+      "promptAr": "ده بيبدو منطقي. إيه اللي هتحتاج تتأكد منه قبل ما تقبله؟ وإيه اللي ممكن يخلّي المنطق ده خطر في التطبيق؟",
+      "modelPoints": [
+        "The key word is 'truly improves health' — that requires clinical evidence, not a claim. The Maqasid argument only lands if the health benefit is demonstrated by reliable evidence, not asserted.",
+        "Anyone can CLAIM their product 'improves health' and then import Maqasid as a shield. The logic can justify any snake oil: the burden is proving the health benefit first.",
+        "The Maqasid include preservation of life — meaning a diet that causes ICU admissions directly contradicts this objective, and that is exactly what the evidence showed in the Taybat case.",
+        "Correct use of Maqasid: a physician saying 'insulin preserves life (hifz al-nafs) so stopping it violates Maqasid' is applying the principle correctly — to defend evidence-based medicine, not override it."
+      ],
+      "modelPointsAr": [
+        "الكلمة المفتاحية هي «بيحسّن الصحة فعلاً» — ده يحتاج دليل إكلينيكي، مش ادعاء. حُجّة المقاصد ما تنفعش إلا لو تم إثبات الفائدة الصحية بدليل موثوق، مش مجرد ادعاء.",
+        "أي حد ممكن يدّعي إن منتجه «يحسّن الصحة» وبعدين يستورد المقاصد كدرع. المنطق ده يُبرّر أي دجل: العبء إثبات الفائدة الصحية أولاً.",
+        "المقاصد بتشمل حفظ النفس — يعني نظام يسبب دخولاً للعناية المركزة بيعارض هذا الهدف مباشرةً، وده بالظبط ما أثبتته الأدلة في قضية الطيبات.",
+        "الاستخدام الصحيح للمقاصد: طبيب يقول «الأنسولين يحفظ النفس فإيقافه يخالف المقاصد» بيطبّق المبدأ بشكل صحيح — للدفاع عن الطب المبني على الدليل، مش لتجاوزه."
+      ],
+      "sources": [
+        "EAL-case-001:moh-eg-2026-05",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 99,
+      "claim": "From week 15 of your training: a seller describes chicken as «خبائث» and milk as 'the food of baby cows, not humans.' Three months later, when a follower's blood sugar crashes after stopping insulin, the seller says 'You must not have followed the system correctly.' Which TWO red flags from the 12-flag framework are most active here?",
+      "claimAr": "من الأسبوع الخامس عشر من تدريبك: بائع يصف الفراخ بـ«الخبائث» واللبن بـ«طعام العجول مش البشر». بعد 3 شهور، لما بتّ متابع يتوقف عن الأنسولين ومستواه يهبط، البائع يقول «أنت مش اتبعتش النظام صح». أنهي اتنين من الـ12 علامة تحذيرية الأكتر نشاطاً هنا؟",
+      "options": [
+        "Red Flag 6 (moral/religious words for food) + Red Flag 4 (unfalsifiable — 'you did it wrong')",
+        "Red Flag 2 (no indexed publications) + Red Flag 12 (undisclosed financial interest)",
+        "Red Flag 1 (cures everything) + Red Flag 7 (authority outside specialty)",
+        "Red Flag 9 (binary pure vs poison) + Red Flag 3 (testimonials as proof)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Red Flag 6: «خبائث» imports sacred vocabulary into nutrition to block rational evaluation. Red Flag 4: when failure is blamed on the patient's compliance rather than the system, the claim becomes unfalsifiable — it can never be disproved. These two work together to create a belief that is immune to both religious and scientific challenge. (Red Flags 9, 1, 7 are also present but less central to the religious-shield mechanism.)",
+      "explanationAr": "العلامة 6: «الخبائث» بتستورد مفردات مقدّسة إلى التغذية لتعطيل التقييم العقلي. العلامة 4: لما يُلقَى الفشل على التزام المريض لا على النظام، الادعاء بيصبح غير قابل للتفنيد — ما ينفعش يتكذَّب. الاتنين بيشتغلوا مع بعض ليخلقوا معتقداً محصَّناً ضد التحدي الديني والعلمي معاً.",
+      "sources": ["EAL-case-001:redflag-6", "EAL-case-001:redflag-4"],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 6,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'The Prophet ﷺ ate dates and olive oil — foods clearly blessed by the Quran. Our system follows the Prophetic diet exactly. Therefore our recommended foods heal the body, and disagreeing with the food list is disagreeing with the Prophet ﷺ.'",
+      "claimAr": "فكّك الحُجّة دي: «النبي ﷺ أكل التمر وزيت الزيتون — أطعمة مباركة بالقرآن. نظامنا بيتّبع السنة النبوية بالظبط. فالأطعمة اللي بننصح بيها بتشفي الجسم، والاعتراض على قائمة الطعام هو اعتراض على النبي ﷺ».",
+      "parts": [
+        {
+          "text": "Therefore our recommended foods heal the body.",
+          "textAr": "الأطعمة اللي بننصح بيها بتشفي الجسم.",
+          "role": "conclusion"
+        },
+        {
+          "text": "The Prophet ﷺ ate dates and olive oil — foods mentioned favourably in scripture.",
+          "textAr": "النبي ﷺ أكل التمر وزيت الزيتون — أطعمة مذكورة إيجاباً في النصوص.",
+          "role": "premise"
+        },
+        {
+          "text": "(Unstated) Whatever the Prophet ﷺ ate therefore cures modern diseases in the same way a clinical therapy does.",
+          "textAr": "(غير مذكور) ما أكله النبي ﷺ يعالج أمراض العصر بنفس طريقة علاج إكلينيكي.",
+          "role": "assumption"
+        },
+        {
+          "text": "Disagreeing with the food list is disagreeing with the Prophet ﷺ.",
+          "textAr": "الاعتراض على قائمة الطعام هو اعتراض على النبي ﷺ.",
+          "role": "irrelevant"
+        }
+      ],
+      "explanation": "The hidden assumption is the structural fraud: it slides from 'the Prophet ate X' (a historical/spiritual statement) to 'X cures disease' (a medical efficacy claim requiring clinical trial evidence). These are two completely different types of claim. The last sentence — 'disagreeing is disagreeing with the Prophet' — is irrelevant to the medical question and is designed to shut down the asker, not address the evidence gap.",
+      "explanationAr": "الافتراض الخفي هو الاحتيال البنيوي: بيتزحلق من «النبي أكل X» (بيان تاريخي/روحي) إلى «X يعالج المرض» (ادعاء فعالية طبية يحتاج دليل تجربة سريرية). دول نوعان مختلفان تماماً من الادعاءات. الجملة الأخيرة — «الاعتراض هو اعتراض على النبي» — غير ذات صلة بالسؤال الطبي وهي مصمَّمة لإسكات السائل، مش لمعالجة الفجوة في الدليل.",
+      "sources": [
+        "EAL-case-001:redflag-6",
+        "https://quran.com/16/116",
+        "https://sunnah.com/abudawud"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Authority"
+    }
+  ]
+}

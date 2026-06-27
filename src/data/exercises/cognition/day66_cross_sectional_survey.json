@@ -1,0 +1,103 @@
+{
+  "id": "day66_cross_sectional_survey",
+  "phase": 2,
+  "week": 10,
+  "day": 66,
+  "title": "The Survey Snapshot — Cross-Sectional Studies",
+  "titleAr": "لقطة الاستبيان — الدراسات المقطعية",
+  "description": "A questionnaire to all the factory workers on one day. It maps how common the problem is — but a snapshot can't tell you what came first, and people don't always answer truthfully.",
+  "descriptionAr": "استبيان لكل عمّال المصنع في يوم واحد. بيرسم خريطة لانتشار المشكلة — لكن اللقطة ما بتقولّكش مين جه الأول، والناس مش دايماً بتجاوب بصدق.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Dr. Ismail hands every factory worker a questionnaire on the same day: 'Do you have the rash? What do you eat? What chemicals do you handle?' What kind of study is this, and what is it good for?",
+      "claimAr": "د. إسماعيل وزّع على كل عامل في المصنع استبيان في نفس اليوم: «عندك الطفح؟ بتاكل إيه؟ بتتعامل مع كيماويات إيه؟». ده نوع دراسة إيه، وبينفع لإيه؟",
+      "options": [
+        "A randomized trial — to prove cause",
+        "A cross-sectional survey: a snapshot at one moment that's good for measuring how COMMON something is (prevalence)",
+        "A case report on one worker",
+        "A meta-analysis of many studies"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A cross-sectional survey takes a snapshot of a whole group at one point in time. It's genuinely useful for one job: estimating how common something is — what fraction of workers have the rash right now. That's valuable for planning. But it's still an observational study near the lower-middle of the ladder, and it has a built-in limit: a snapshot can't tell you what happened first.",
+      "explanationAr": "الدراسة المقطعية بتاخد لقطة لمجموعة كاملة في لحظة واحدة. مفيدة فعلاً لشغلانة واحدة: تقدير قد إيه حاجة منتشرة — نسبة العمّال اللي عندهم الطفح دلوقتي. ده قيّم للتخطيط. لكنها لسه دراسة رصدية في الجزء الأسفل-الأوسط من السلّم، وعندها حدّ مدمج: اللقطة ما تقدرش تقولّك إيه اللي حصل الأول.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies"],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "The survey finds that workers with the rash also drink less milk. Before seeing the analysis: how confident are you that this alone proves 'milk protects against the rash'?",
+      "claimAr": "الاستبيان لقى إن العمّال اللي عندهم الطفح بيشربوا لبن أقل. قبل ما تشوف التحليل: قد إيه واثق إن ده لوحده بيثبت إن «اللبن بيحمي من الطفح»؟",
+      "options": [
+        "Very confident — the survey clearly shows milk helps",
+        "Not confident — a snapshot correlation cannot show which came first or rule out a third factor"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Because a cross-sectional study photographs everything at once, it literally cannot tell you the order of events. Did less milk cause the rash, or did the rash make people lose appetite and drink less milk? Or does some third factor — like working in a particular section of the factory — cause both? A snapshot links things together but can never show which one moved first. 'They appear together' is a question, not an answer. Calibration check: if you felt confident before, notice that the convincing-sounding link was doing the work, not an actual causal chain.",
+      "explanationAr": "لأن الدراسة المقطعية بتصوّر كل حاجة في نفس الوقت، فهي حرفياً ما تقدرش تقولّك ترتيب الأحداث. هل اللبن الأقل سبّب الطفح، ولا الطفح خلّى الناس تفقد الشهية وتشرب لبن أقل؟ ولا في عامل تالت — زي الشغل في قسم معيّن من المصنع — بيسبّب الاتنين؟ اللقطة بتربط الحاجات ببعض لكن عمرها ما بتوري مين اتحرّك الأول. «بيظهروا مع بعض» سؤال، مش إجابة. فحص المعايرة: لو حسيت بثقة قبل، لاحظ إن الربط اللي بيبان مقنع كان اللي بيشتغل، مش سلسلة سببية حقيقية.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies"],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Some workers quietly report MORE symptoms than they really have, hoping for sick leave or sympathy; others hide symptoms out of shame. What does this do to a survey's numbers?",
+      "claimAr": "بعض العمّال بيبلّغوا في صمت عن أعراض أكتر من اللي عندهم فعلاً، طمعاً في إجازة مرضية أو تعاطف؛ وآخرين بيخبّوا أعراضهم من الكسوف. ده بيعمل إيه في أرقام الاستبيان؟",
+      "options": [
+        "Nothing — questionnaires are always accurate",
+        "It introduces reporting/response bias: the answers are shaped by people's incentives and feelings, not just the truth, so the snapshot can be distorted"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does human motivation distort survey answers — and why does this NOT mean the people answering are bad or dishonest?",
+        "promptAr": "بكلماتك: ليه الدوافع البشرية بتشوّه إجابات الاستبيان — وليه ده مش معناه إن الناس اللي بتجاوب وحشين أو كذّابين؟"
+      },
+      "explanation": "A survey is only as honest as its answers. People over-report when there's something to gain (sick leave, compensation, sympathy) and under-report what embarrasses them. None of this means people are bad — it's ordinary human pressure. Hope, fear, and shame shape memory and self-report before the answer even reaches the researcher. Good studies anticipate this and try to design around it (e.g. using anonymous questionnaires, cross-checking with medical records). A careless reader just takes the percentages at face value — and misses the filter entirely.",
+      "explanationAr": "الاستبيان أمين بقدر إجاباته. الناس بتبالغ في التبليغ لمّا يكون في مكسب (إجازة، تعويض، تعاطف)، وبتقلّل التبليغ عن اللي بيكسفها. مفيش حاجة من ده معناها إن الناس وحشين — ده ضغط إنساني عادي. الأمل والخوف والكسوف بيشكّلوا الذاكرة والتقرير الذاتي قبل ما الإجابة توصل للباحث أصلاً. الدراسات الكويسة بتتوقّع ده وبتحاول تصمّم حواليه (زي استخدام استبيانات مجهولة الهوية، والتحقّق المتقاطع مع السجلّات الطبية). القارئ المستعجل بياخد النِّسَب على ظاهرها — ويفوّته الفلتر تماماً.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies"],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "An online poll on the «نظام الطيبات» fan page asks: 'Did the diet make you feel better?' 90% say yes. This looks like overwhelming evidence the diet works.",
+      "claimAr": "استطلاع أونلاين على صفحة مُعجبي «نظام الطيبات» بيسأل: «الحمية خلّتك تحسّ أحسن؟» 90% قالوا أيوة. ده بيبان دليل ساحق إن الحمية بتنفع.",
+      "prompt": "What would have to be true if this 90% result is misleading? What are all the ways the sampling itself could produce this number without the diet actually working?",
+      "promptAr": "لو نتيجة الـ90% دي مضلِّلة، إيه اللي لازم يكون صح؟ إيه كل الطرق اللي العيّنة نفسها ممكن تنتج بيها الرقم ده من غير ما الحمية فعلاً تنفع؟",
+      "modelPoints": [
+        "Only loyal fans still on the page answer: people who were harmed, disappointed, or just moved on are absent from the sample — that's survivorship bias before a single question is asked.",
+        "Fans answering a fan-page poll are already motivated to confirm the diet works — their responses are filtered through belief, not just experience.",
+        "90% of a biased sample tells you about that sample, not about the diet. If 10,000 people tried it and only 300 are still fans, 90% of 300 is 270 people — a tiny fraction of the whole.",
+        "Natural remission: many people feel better over any 4–12 week period regardless of what they change, so even a completely inert diet would collect positive testimonials."
+      ],
+      "modelPointsAr": [
+        "بس المعجبين المخلصين اللي لسه على الصفحة بيجاوبوا: الناس اللي اتأذّت، أو خيّبت أملها، أو بسيطاً مضت غايبة من العيّنة — ده انحياز البقاء قبل ما سؤال واحد يتسأل.",
+        "المعجبون اللي بيجاوبوا استطلاع صفحة معجبين متحمّسين أصلاً يأكّدوا إن الحمية بتنفع — إجاباتهم متفلتَرة من خلال المعتقد، مش بس التجربة.",
+        "90% من عيّنة منحازة بيقولّك عن العيّنة دي، مش عن الحمية. لو 10,000 شخص جرّبوها وبس 300 لسه معجبين، 90% من الـ300 هم 270 شخص — نسبة ضئيلة من الكل.",
+        "المغفرة الطبيعية: كتير من الناس بيحسّوا أحسن على أي فترة 4-12 أسبوع بغضّ النظر عن إيه اللي غيّروه، فحتى حمية خاملة تماماً كانت هتجمّع شهادات إيجابية."
+      ],
+      "sources": ["EAL-case-001:ems-2026-03", "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies"],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "True or false: a cross-sectional survey can reliably prove that one thing CAUSED another.",
+      "claimAr": "صح ولا غلط: الدراسة المقطعية تقدر تثبت بثقة إن حاجة سبّبت حاجة تانية.",
+      "correctAnswer": false,
+      "myth_en": "If a survey links A and B, A causes B.",
+      "myth_ar": "لو استبيان ربط بين أ و ب، يبقى أ سبّبت ب.",
+      "explanation": "False. A snapshot can show that two things appear together, which is a useful clue — but it can never establish cause, because it can't see the order of events or rule out a hidden third factor. To move toward cause you have to climb the ladder: follow people over time, or best of all, run a controlled experiment. Treating a survey link as proof of cause is one of the most common ways honest-looking numbers mislead people.",
+      "explanationAr": "غلط. اللقطة ممكن توري إن حاجتين بيظهروا مع بعض، وده دليل مفيد — لكن عمرها ما بتثبت السبب، لأنها ما بتشوفش ترتيب الأحداث ولا بتستبعد عامل تالت خفيّ. علشان تتحرّك ناحية السبب لازم تطلع السلّم: تتابع الناس عبر الزمن، أو أحسن حاجة، تعمل تجربة مضبوطة. معاملة رابط الاستبيان كإثبات للسبب من أكتر الطرق الشائعة اللي بيها أرقام شكلها أمين بتضلّل الناس.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies"],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    }
+  ]
+}

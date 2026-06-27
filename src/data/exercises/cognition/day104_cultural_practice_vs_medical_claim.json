@@ -1,0 +1,123 @@
+{
+  "id": "day104_cultural_practice_vs_medical_claim",
+  "phase": 3,
+  "week": 15,
+  "day": 104,
+  "title": "Cultural Practice vs Medical Efficacy Claim",
+  "titleAr": "الممارسة الثقافية مقابل ادعاء الفعالية الطبية",
+  "description": "Eating dates at iftar is a cultural-religious practice. Claiming dates cure cancer is a medical efficacy claim. The same evidence bar applies — the second needs the same proof as any drug.",
+  "descriptionAr": "أكل التمر عند الإفطار ممارسة ثقافية دينية. ادعاء إن التمر بيشفي السرطان ادعاء فعالية طبية. نفس معيار الدليل بينطبق — التاني محتاج نفس الإثبات زي أي دواء.",
+  "type": "religion-literacy",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Match the category: (A) A Muslim avoids pork as a religious obligation; (B) A seller claims avoiding pork 'cures inflammation.' What is the key difference?",
+      "claimAr": "طابق الفئة: (أ) مسلم بيتجنّب لحم الخنزير كالتزام ديني؛ (ب) بائع بيدّعي إن تجنّب لحم الخنزير «بيشفي الالتهاب». إيه الفرق الأساسي؟",
+      "options": [
+        "No difference — both are religious statements",
+        "(A) is a religious obligation that requires no medical evidence; (B) is a medical efficacy claim that requires the same scientific evidence bar as any drug — religion does not exempt it from proof",
+        "(B) is obviously true because pork is already forbidden",
+        "Both require religious authority"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the core distinction. A religious practice is in the domain of religious obligation — a Muslim follows it because of belief, not because of a clinical trial. A medical efficacy claim ('avoiding pork cures X') has entered the domain of biology — it must be testable, tested, and confirmed or refuted, exactly like any drug. Framing (A) as religious does not make (B) religious. The slide from (A) to (B) is the exploit.",
+      "explanationAr": "هذا هو التمييز الجوهري. ممارسة دينية في مجال الالتزام الديني — مسلم يتبعها لأجل الإيمان، لا بسبب تجربة سريرية. ادعاء فعالية طبية («تجنّب لحم الخنزير يشفي X») دخل مجال البيولوجيا — يجب أن يكون قابلاً للاختبار، مُختبَراً، ومؤكَّداً أو مفنَّداً، بالضبط كأي دواء. تأطير (أ) كديني لا يجعل (ب) دينياً. الانزلاق من (أ) إلى (ب) هو الاستغلال.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if a food item is mentioned positively in an authenticated hadith (e.g. honey, black seed), that is sufficient medical evidence that it cures a specific disease.",
+      "claimAr": "صح ولا غلط: لو أكل مذكور إيجابياً في حديث صحيح (مثل العسل، الحبة السوداء)، ده كافٍ كدليل طبي إنه بيشفي مرضاً بعينه.",
+      "correctAnswer": false,
+      "myth_en": "A hadith mentioning a food makes it a proven medical treatment.",
+      "myth_ar": "حديث يذكر أكلاً بيجعله علاجاً طبياً مثبَتاً.",
+      "explanation": "False. A hadith is a religious text, not a clinical trial. Honey being mentioned as having healing properties is a religious and cultural observation; it is not a controlled study on dosage, mechanism, or specific disease. When a seller takes that hadith and claims honey is a proven cure for cancer or diabetes, they have made a medical efficacy claim that requires the full scientific evidence bar — regardless of the hadith's authenticity. Two different epistemological domains. Calibration check: how sure were you before seeing the answer?",
+      "explanationAr": "غلط. الحديث نص ديني لا تجربة سريرية. ذكر العسل كونه ذا خصائص شافية ملاحظة دينية وثقافية؛ وليس دراسة محكومة على الجرعة أو الآلية أو المرض المحدّد. لمّا بائع يأخذ ذلك الحديث ويدّعي أن العسل علاج مُثبَت للسرطان أو السكري، يكون قد قدّم ادعاء فعالية طبية يستلزم معيار الدليل العلمي الكامل. نطاقان إبستيمولوجيان مختلفان. فحص المعايرة: كنت متأكد قد إيه قبل ما تشوف الإجابة؟",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3614697/",
+        "https://sunnah.com/abudawud"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Scenario: A community has been drinking fenugreek tea every morning for generations because elders say it is sunnah and good for the stomach. A seller now claims it cures stomach cancer and says stopping is against Islam. What has changed?",
+      "claimAr": "سيناريو: مجتمع بيشرب شاي الحلبة كل صباح لأجيال لأن الكبار بيقولوا إنها سنّة ومفيدة للمعدة. بائع دلوقتي بيدّعي إنها بتشفي سرطان المعدة وبيقول الوقف منافٍ للإسلام. إيه اللي اتغيّر؟",
+      "options": [
+        "Nothing — it is all the same type of claim",
+        "The cultural-religious practice has been replaced by a specific medical efficacy claim with a religious prohibition attached — the evidence bar just changed entirely",
+        "The seller is wrong only about the Islam part",
+        "The seller is right because fenugreek is natural"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what are the two unauthorized additions the seller made, and why does each require something the original practice never needed?",
+        "promptAr": "بكلماتك: إيه الإضافتان غير المأذون بهما اللي عملهم البائع، وليه كل واحدة بتحتاج حاجة الممارسة الأصلية ما احتاجتهاش قط؟"
+      },
+      "explanation": "The seller made two unauthorized additions: (1) a specific efficacy claim (cures cancer) — the original practice made no such claim and has no clinical evidence supporting it; and (2) a religious prohibition on stopping — there is no fatwa that makes stopping fenugreek tea a religious violation. Both additions are unauthorized. Self-explaining both separates them cleanly and helps you spot the same two-move pattern in any future claim.",
+      "explanationAr": "البائع أضاف إضافتين غير مأذون بهما: (1) ادعاء فعالية محدّد (يشفي السرطان) — الممارسة الأصلية ما ادّعتش ده وما عندهاش دليل سريري يدعمه؛ و(2) تحريم ديني للإيقاف — لا يوجد فتوى تجعل إيقاف شاي الحلبة مخالفة دينية. كلا الإضافتين غير مأذون بهما. الشرح الذاتي لكليهما بيفصلهم بوضوح ويساعدك تكشف نفس النمط ذو الحركتين في أي ادعاء مستقبلي.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3614697/",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A friend says: 'Eating thoughtfully according to your faith is enough reason to follow a religiously-framed diet — you don't need clinical evidence for something rooted in your tradition.'",
+      "claimAr": "صاحبك بيقول: «الأكل بتأمّل وفق إيمانك سبب كافٍ لتتّبع حمية مؤطَّرة دينياً — مش محتاج دليل سريري لحاجة متجذّرة في موروثك».",
+      "prompt": "What would have to be true for this argument to hold, and what important case does it fail to address?",
+      "promptAr": "إيه اللي لازم يكون صح علشان الحجة دي تصمد، وأيّ حالة مهمة بتفشل في معالجتها؟",
+      "modelPoints": [
+        "The argument holds only for practices that make no medical efficacy claims — if a diet only says 'this aligns with our tradition,' clinical evidence may be irrelevant.",
+        "It fails entirely when a specific medical claim is attached: 'stops cancer', 'reverses diabetes', 'eliminates lupus.' At that moment, the claim is no longer only tradition — it is biology, and biology requires evidence regardless of framing.",
+        "Stopping insulin for Type-1 diabetes is not a matter of tradition — it is a pharmacological intervention that will cause diabetic ketoacidosis. No 'rooted in tradition' framing changes the biochemistry.",
+        "The compassionate framing hides a high-stakes switch: going from 'eat with faith' (safe, respectable) to 'stop your medication' (potentially lethal) without ever signalling that the type of claim changed."
+      ],
+      "modelPointsAr": [
+        "الحجة تصمد فقط للممارسات التي لا تدّعي فعالية طبية — لو الحمية بس بتقول «ده ينسجم مع موروثنا»، الدليل السريري قد يكون غير ذي صلة.",
+        "تفشل تماماً حين يُلحَق بها ادعاء طبي محدّد: «يوقف السرطان»، «يعكس السكري»، «يزيل الذئبة». في تلك اللحظة الادعاء لم يعد فقط موروثاً — إنه بيولوجيا، والبيولوجيا بتحتاج دليلاً بصرف النظر عن التأطير.",
+        "إيقاف الأنسولين لمريض سكري نوع 1 مش مسألة موروث — هو تدخّل دوائي سيتسبّب في الحماض الكيتوني السكري. لا تأطير «متجذّر في الموروث» يغيّر الكيمياء الحيوية.",
+        "التأطير الرحيم بيخفي تحوّلاً عالي المخاطر: الانتقال من «أكل بإيمان» (آمن ومحترَم) إلى «أوقف دواءك» (قد يكون مميتاً) دون الإشارة يوماً إلى أن نوع الادعاء تغيّر."
+      ],
+      "sources": [
+        "https://www.nhs.uk/conditions/type-1-diabetes/living-with-type-1-diabetes/diet/",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "You want to explain the cultural-practice/medical-claim distinction to a family member in one sentence. Which framing is most accurate and least likely to start an argument?",
+      "claimAr": "عايز تشرح الفرق بين الممارسة الثقافية وادعاء الفعالية الطبية لفرد من عيلتك في جملة واحدة. أنهي صياغة أدق وأقل احتمالاً لافتتاح شجار؟",
+      "options": [
+        "Your religion is being used to sell you something untested",
+        "Eating with faith and culture is beautiful — the only question is whether a specific claim that something cures a disease also has a clinical study, because that is a separate kind of question",
+        "Everything religious about food is wrong",
+        "You should ignore all traditional food practices"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Option A sounds like an attack and triggers defensiveness. The accurate framing separates the two cleanly: cultural and faith-based food practices are valid and not under question; medical efficacy claims are a separate category requiring a separate kind of evidence. Both can coexist. This framing invites reflection rather than defense — which is how real conversations shift.",
+      "explanationAr": "الخيار أ يبدو كهجوم ويُثير الدفاعية. الصياغة الدقيقة تفصل الاثنين بوضوح: الممارسات الغذائية الثقافية والإيمانية صالحة وليست موضع تساؤل؛ وادعاءات الفعالية الطبية فئة منفصلة تتطلّب نوعاً منفصلاً من الدليل. يمكن للاثنين أن يتعايشا. هذه الصياغة تدعو للتأمّل لا للدفاع — وهكذا تتحوّل المحادثات الحقيقية.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

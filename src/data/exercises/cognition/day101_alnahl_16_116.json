@@ -1,0 +1,115 @@
+{
+  "id": "day101_alnahl_16_116",
+  "phase": 3,
+  "week": 15,
+  "day": 101,
+  "title": "Al-Naḥl 16:116 — Inventing Halal & Haram",
+  "titleAr": "النحل ١٦:١١٦ — اختراع الحلال والحرام",
+  "description": "The second Quranic answer: attributing halal/haram food rulings to God without authority is described in the Quran as 'inventing lies about Allah.' Today you learn what this verse says, why it matters, and how to use it as a shield.",
+  "descriptionAr": "الإجابة القرآنية الثانية: نسب أحكام حلال/حرام على الطعام لله بغير سلطة وصفه القرآن بـ«افتراء الكذب على الله». النهاردة بتتعلّم الآية دي وليه مهمة وإزاي تستخدمها درعاً.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://quran.com/16/116",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Al-Naḥl 16:116 states: «وَلَا تَقُولُوا لِمَا تَصِفُ أَلْسِنَتُكُمُ الْكَذِبَ هَٰذَا حَلَالٌ وَهَٰذَا حَرَامٌ لِتَفْتَرُوا عَلَى اللَّهِ الْكَذِبَ». In plain terms, what does this verse forbid?",
+      "claimAr": "النحل ١٦:١١٦ تقول: «وَلَا تَقُولُوا لِمَا تَصِفُ أَلْسِنَتُكُمُ الْكَذِبَ هَٰذَا حَلَالٌ وَهَٰذَا حَرَامٌ لِتَفْتَرُوا عَلَى اللَّهِ الْكَذِبَ». بكلام بسيط، الآية دي بتنهى عن إيه؟",
+      "options": [
+        "Eating without permission",
+        "Saying 'this is lawful and this is unlawful' about food based on personal judgment and then attributing that ruling to Allah",
+        "Sharing food before blessing it",
+        "Making food for profit"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The verse forbids a specific act: using your own tongue to declare something halal or haram — without divine authority — and then presenting that ruling as if it comes from God. This is what the verse calls 'inventing lies about Allah (افتراء على الله).' A board-certified anaesthesiologist issuing halal/haram food rulings without scholarly consensus is a precise fit for this warning.",
+      "explanationAr": "الآية تنهى عن فعل بعينه: استخدام لسانك لتُعلن شيئاً حلالاً أو حراماً — بغير سلطة إلهية — وبعدين تقدّم الحكم ده ضمنياً أو صراحةً كأنه من الله. ده ما تسمّيه الآية «افتراء على الله». طبيب تخدير معتمد يُصدر أحكام حلال/حرام على الطعام بغير إجماع علمي شرعي مثالٌ دقيق لهذا التحذير.",
+      "sources": [
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A person labels certain foods «خبائث» using Quranic language and says rejecting the label is un-Islamic. You feel the religious framing makes this hard to question. Is that discomfort a sign the claim is actually Islamically valid?",
+      "claimAr": "شخص بيسمّي أطعمة معينة «خبائث» بلغة قرآنية وبيقول إن رفض التسمية غير إسلامي. بتحسّ إن التأطير الديني بيصعّب التساؤل. هل الضيق ده علامة إن الادعاء صح إسلامياً فعلاً؟",
+      "options": [
+        "Yes — if it feels religiously weighty, it must be valid",
+        "No — discomfort signals identity pressure, not evidence; the Quran (16:116) is itself the strongest answer from within the tradition"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Calibration check: the feeling 'this is too sacred to question' is exactly the psychological state that exploitation of religious vocabulary is designed to produce. Your discomfort is real but not a truth signal — it is an identity-pressure signal. The Quran itself (16:116) forbids unauthorized halal/haram rulings; invoking that verse is not irreverence, it is Islamic literacy. Notice how certain you felt before reading the explanation.",
+      "explanationAr": "فحص المعايرة: إحساس «ده أقدس من إني أسأل عنه» هو بالضبط الحالة النفسية التي يُصمَّم استغلال المفردات الدينية لإنتاجها. ضيقك حقيقي لكنه مش إشارة حقيقة — هو إشارة ضغط هوية. القرآن نفسه (١٦:١١٦) ينهى عن أحكام الحلال/الحرام غير المأذون بها؛ الاستشهاد بالآية دي مش إساءة بل ثقافة دينية. لاحظ كنت متأكد قد إيه قبل ما تقرأ الشرح.",
+      "sources": [
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "True or false: a Muslim who quotes Al-Naḥl 16:116 to question whether someone has authority to issue halal/haram food rulings is acting against Islamic teaching.",
+      "claimAr": "صح ولا غلط: مسلم بيستشهد بالنحل 16:116 عشان يشكّك في إذا كان لأحد سلطة إصدار أحكام حلال/حرام على الطعام بيتصرّف ضد التعليم الإسلامي.",
+      "correctAnswer": false,
+      "myth_en": "Using the Quran to question unauthorized rulings is un-Islamic.",
+      "myth_ar": "استخدام القرآن للتشكيك في الأحكام غير المأذون بها ضدّ الإسلام.",
+      "selfExplain": {
+        "prompt": "In your own words: why is quoting a Quranic verse to challenge an unauthorized ruling itself an act of Islamic literacy, not disrespect?",
+        "promptAr": "بكلماتك: ليه الاستشهاد بآية قرآنية للتشكيك في حكم غير مأذون به هو نفسه فعل ثقافة دينية لا إساءة؟"
+      },
+      "explanation": "False — the opposite is true. 16:116 is itself the Quranic instruction to be alert to unauthorized ruling-making. Using the text to hold a claim accountable to the text is not anti-Islamic; it is a direct application of Quranic guidance. Naming your own reasoning (as you just did) deepens the lesson because self-explanation forces real comprehension, not surface recognition.",
+      "explanationAr": "غلط — العكس هو الصحيح. النحل 16:116 هي نفسها التعليم القرآني الذي يحثّ على اليقظة لهذا النوع من إصدار الأحكام غير المأذون به. استخدام النص لمحاسبة ادعاء بالنص ليس ضدّ الإسلام؛ بل هو تطبيق مباشر للتوجيه القرآني. وإنك تسمّي تفكيرك (زي ما عملت دلوقتي) بيعمّق الدرس لأن الشرح الذاتي بيجبر فهماً حقيقياً لا تعرّفاً سطحياً.",
+      "sources": [
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "The supporter's argument: '16:116 doesn't apply here — the presenter is a doctor, not a religious scholar, so no Quranic ruling is being violated.'",
+      "claimAr": "حجة المؤيّد: «النحل 16:116 ما بتنطبقش هنا — المقدِّم دكتور مش عالم دين، فمفيش حكم قرآني بيتخرق».",
+      "prompt": "What would have to be true for this argument to be valid? What does the verse actually target — a person's professional title, or the act of issuing halal/haram rulings?",
+      "promptAr": "إيه اللي لازم يكون صح علشان الحجة دي تبقى سليمة؟ الآية بتستهدف اللقب المهني للشخص ولا فعل إصدار أحكام الحلال/الحرام؟",
+      "modelPoints": [
+        "16:116 addresses 'your tongues' (ألسنتكم) — it applies to any person who makes the claim, not only religious scholars.",
+        "If the verse were limited to scholars, anyone with a non-religious credential could issue unauthorized halal/haram rulings without Quranic consequence — an absurd outcome the verse's plain text does not support.",
+        "The act being forbidden is issuing 'this is lawful / this is unlawful' rulings and attributing them to Allah — a doctor doing this without scholarly authority performs that act precisely.",
+        "The argument is a special-pleading move: it invents an exemption for the presenter that is not in the text."
+      ],
+      "modelPointsAr": [
+        "١٦:١١٦ تخاطب «ألسنتكم» — تنطبق على أي شخص يُدلي بالادعاء لا على العلماء الدينيين فقط.",
+        "لو الآية كانت مقتصرة على العلماء، أي شخص بشهادة غير دينية كان ممكن يُصدر أحكام حلال/حرام غير مأذون بها بلا عواقب قرآنية — نتيجة سخيفة لا يدعمها النص الصريح للآية.",
+        "الفعل المنهي عنه هو إصدار أحكام «هذا حلال / هذا حرام» ونسبتها لله — دكتور يفعل ده بلا سلطة علمية شرعية يؤدّي الفعل ده بالضبط.",
+        "الحجة حركة مغالطة التخصيص: بتخترع إعفاءً للمقدِّم غير موجود في النص."
+      ],
+      "sources": [
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Special Pleading"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'He declared chicken «خبائث». That word is in the Quran. Therefore questioning the chicken ban means questioning the Quran. Real Muslims follow it without argument.'",
+      "claimAr": "فكّك الحُجّة دي: «هو أعلن الفراخ «خبائث». الكلمة دي في القرآن. يبقى التشكيك في حظر الفراخ معناه التشكيك في القرآن. المسلمون الحقيقيون بيتّبعوا ده من غير جدل».",
+      "parts": [
+        { "text": "Real Muslims must follow the chicken ban without questioning it.", "textAr": "المسلمون الحقيقيون لازم يتّبعوا حظر الفراخ من غير تساؤل.", "role": "conclusion" },
+        { "text": "He declared chicken «خبائث» and that word appears in the Quran.", "textAr": "هو أعلن الفراخ «خبائث» والكلمة دي موجودة في القرآن.", "role": "premise" },
+        { "text": "(Unstated) Borrowing a Quranic word makes a private food claim equal to Quranic authority.", "textAr": "(غير مذكور) استعارة لفظ قرآني بيجعل ادعاء غذائي خاص مساوياً لسلطة القرآن.", "role": "assumption" },
+        { "text": "People who question it are not real Muslims.", "textAr": "اللي بيشكّكوا فيه مش مسلمون حقيقيون.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption is the load-bearing trick: borrowing the word «خبائث» does not transfer Quranic authority to a private food list. The Quran uses the term generally for morally impure things — it does not name chicken as one of them. The 'not real Muslims' line is irrelevant: it attacks people instead of the argument and pre-discredits anyone who questions. Once you see the structure, the conclusion collapses.",
+      "explanationAr": "الافتراض الخفي هو الحيلة الحاملة: استعارة كلمة «خبائث» لا تنقل سلطة القرآن لقائمة طعام خاصة. القرآن يستخدم المصطلح عموماً للأشياء الخبيثة معنوياً — لا يسمّي الفراخ واحدة منها. جملة «مش مسلمون حقيقيون» غير ذات صلة: تهاجم الناس لا الحجة وتُسقِط المشكّكين مقدّماً. أول ما تشوف البنية، الخلاصة تنهار.",
+      "sources": [
+        "https://quran.com/16/116",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    }
+  ]
+}

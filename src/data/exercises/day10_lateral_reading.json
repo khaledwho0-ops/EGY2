@@ -1,0 +1,44 @@
+{
+  "id": "day10_lateral_reading",
+  "phase": 0,
+  "week": 2,
+  "day": 10,
+  "title": "Lateral Reading & SIFT Method",
+  "titleAr": "القراءة الجانبية ومنهج SIFT",
+  "description": "Practice the SIFT method on Egyptian news.",
+  "descriptionAr": "تدرب على منهج SIFT على أخبار مصرية.",
+  "type": "sift_practice",
+  "difficulty": 2,
+  "estimatedMinutes": 15,
+  "instrument": "SIFT (Caulfield 2019)",
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "A Youm7 article claims Egypt inflation dropped to 5% in Dec 2024.",
+      "claimAr": "مقال اليوم السابع يدعي أن التضخم في مصر انخفض إلى 5%",
+      "truthValue": "verify",
+      "category": "economics",
+      "difficulty": 3,
+      "explanation": "SIFT: STOP, INVESTIGATE the source (Youm7 is major), FIND better coverage (check CAPMAS.gov.eg), TRACE to original data.",
+      "explanationAr": "SIFT: توقف، حقق في المصدر، ابحث عن تغطية أفضل من الجهاز المركزي، تتبع البيانات الأصلية.",
+      "sources": [
+        "https://www.capmas.gov.eg"
+      ],
+      "cognitivebiasAtPlay": "Source Verification"
+    },
+    {
+      "id": 2,
+      "claim": "WhatsApp says the pound will hit 100 EGP/USD next week citing inside sources.",
+      "claimAr": "واتساب يقول الجنيه سيصل 100 للدولار الأسبوع القادم من مصادر مطلعة",
+      "truthValue": "false",
+      "category": "economics",
+      "difficulty": 2,
+      "explanation": "Anonymous inside sources in WhatsApp are not credible. Check CBE (cbe.org.eg) for official rates.",
+      "explanationAr": "مصادر مجهولة في واتساب ليست موثوقة. تحقق من البنك المركزي.",
+      "sources": [
+        "https://www.cbe.org.eg"
+      ],
+      "cognitivebiasAtPlay": "Anonymous Source Fallacy"
+    }
+  ]
+}

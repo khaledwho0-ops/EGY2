@@ -1,0 +1,163 @@
+{
+  "id": "day15_reaction_test_baseline",
+  "phase": 0,
+  "week": 3,
+  "day": 15,
+  "title": "Reaction Time Baseline",
+  "titleAr": "اختبار سرعة الاستجابة العاطفية",
+  "description": "10 viral Egyptian claims flash on screen for 2 seconds each. Click TRUE or FALSE before the timer expires. This measures your emotional-impulsivity baseline — how fast you react without thinking. There are no 'trick' questions: every claim has a documented truth value. Your speed and accuracy together compute your EAL Impulsivity Index (EI).",
+  "descriptionAr": "عشر ادعاءات مصرية منتشرة تظهر على الشاشة لمدة ثانيتين لكل منها. انقر صح أو خطأ قبل انتهاء الوقت. يقيس هذا التمرين مؤشر الاندفاعية العاطفية لديك — كم تسرع في الحكم دون تفكير. لكل ادعاء قيمة حقيقية موثقة.",
+  "type": "reaction",
+  "difficulty": 2,
+  "estimatedMinutes": 5,
+  "mechanics": {
+    "display_time_ms": 2000,
+    "feedback_after_each": true,
+    "scoring": {
+      "correct_fast": 10,
+      "correct_slow": 7,
+      "wrong_fast": -5,
+      "wrong_slow": -2,
+      "no_response": 0
+    },
+    "impulsivity_index_formula": "wrong_fast_count / total_attempts",
+    "note": "A high EI score (>0.4) indicates high emotional impulsivity. This is the baseline; retested on Day 28."
+  },
+  "claims": [
+    {
+      "id": 1,
+      "claim_en": "Drinking hot water with lemon in the morning kills cancer cells.",
+      "claim_ar": "شرب الماء الدافئ مع الليمون في الصباح يقتل خلايا السرطان.",
+      "display_time_ms": 2000,
+      "truth_value": false,
+      "emotional_trigger": "fear",
+      "category": "health",
+      "explanation_en": "No peer-reviewed clinical trial supports this claim. Lemon juice is mildly acidic (pH ~2.2) but stomach acid (pH ~1.5) is already more acidic. Citric acid has no demonstrated anti-tumor effect in vivo at dietary concentrations.",
+      "explanation_ar": "لا توجد تجربة سريرية محكّمة تدعم هذا الادعاء. عصير الليمون حمضي خفيف، لكن حمض المعدة أكثر حمضية. لم يثبت علمياً أن حمض الستريك يقتل خلايا السرطان بالتركيزات الغذائية.",
+      "source_url": "https://www.cancer.org/cancer/managing-cancer/treatment-types/complementary-and-integrative-medicine/dietary-supplements/lemon.html",
+      "viral_origin": "WhatsApp Egypt, circulated 2023-2024"
+    },
+    {
+      "id": 2,
+      "claim_en": "Egypt's official unemployment rate in 2023 was above 25%.",
+      "claim_ar": "بلغت نسبة البطالة الرسمية في مصر عام 2023 أكثر من 25٪.",
+      "display_time_ms": 2000,
+      "truth_value": false,
+      "emotional_trigger": "anger",
+      "category": "politics",
+      "explanation_en": "CAPMAS reported Egypt's unemployment rate at 7.1% in Q3 2023. The figure of 25%+ was circulated on social media without a cited source and conflates informal employment exclusions.",
+      "explanation_ar": "أفاد الجهاز المركزي للتعبئة العامة والإحصاء بأن معدل البطالة في مصر بلغ 7.1٪ في الربع الثالث من 2023. رقم 25٪ تداول على وسائل التواصل الاجتماعي دون مصدر موثق.",
+      "source_url": "https://www.capmas.gov.eg/Pages/StaticPages.aspx?page_id=5034",
+      "viral_origin": "Facebook Egypt, 2023"
+    },
+    {
+      "id": 3,
+      "claim_en": "The Egyptian army discovered a natural cure for AIDS and Hepatitis C in 2014.",
+      "claim_ar": "اكتشف الجيش المصري علاجاً طبيعياً للإيدز والتهاب الكبد الوبائي سي عام 2014.",
+      "display_time_ms": 2000,
+      "truth_value": false,
+      "emotional_trigger": "pride",
+      "category": "health",
+      "explanation_en": "The Egyptian Armed Forces Medical Authority announced 'C-Fast' in 2014. Subsequent independent peer review found no valid clinical evidence. The World Health Organization and international virologists found no supporting data. The device was never internationally validated.",
+      "explanation_ar": "أعلنت الجهاز الطبي للقوات المسلحة عن جهاز 'C-Fast' عام 2014. وجد المراجعون المستقلون لاحقاً أنه لا توجد أدلة سريرية صالحة. لم تعترف منظمة الصحة العالمية بالجهاز.",
+      "source_url": "https://www.who.int/bulletin/volumes/93/7/15-020715/en/",
+      "viral_origin": "State television & social media, Egypt 2014 — still recirculated 2023-2024"
+    },
+    {
+      "id": 4,
+      "claim_en": "COVID-19 vaccines were manufactured in less than a year, so they cannot be safe.",
+      "claim_ar": "لقاحات كوفيد-19 صُنِعت في أقل من عام، لذا لا يمكن أن تكون آمنة.",
+      "display_time_ms": 2000,
+      "truth_value": false,
+      "emotional_trigger": "fear",
+      "category": "health",
+      "explanation_en": "Speed of development does not equal reduced safety. mRNA platform research spanned 20+ years before COVID-19. Emergency Use Authorization required the same safety endpoints as standard approvals, with larger Phase 3 trials (30,000–44,000 participants) than most traditional vaccines.",
+      "explanation_ar": "سرعة التطوير لا تعني انخفاض السلامة. يمتد البحث في منصة mRNA لأكثر من 20 عاماً. تطلبت تراخيص الاستخدام الطارئ نفس معايير السلامة مع تجارب المرحلة الثالثة على 30,000 إلى 44,000 مشارك.",
+      "source_url": "https://www.nejm.org/doi/full/10.1056/nejmoa2034577",
+      "viral_origin": "WhatsApp voice messages, Egypt 2021 — recirculated 2023"
+    },
+    {
+      "id": 5,
+      "claim_en": "A 2023 study proved that using mobile phones for more than 1 hour a day causes brain tumors.",
+      "claim_ar": "أثبتت دراسة 2023 أن استخدام الهاتف المحمول أكثر من ساعة يومياً يسبب أوراماً في الدماغ.",
+      "display_time_ms": 2000,
+      "truth_value": false,
+      "emotional_trigger": "fear",
+      "category": "science",
+      "explanation_en": "The WHO IARC 2011 classified RF-EMF as 'possibly carcinogenic' (Group 2B — the same category as pickled vegetables). The 2022 IARC updated review found that the evidence for a causal link between mobile phone use and brain tumors remains inadequate. No 2023 study established causation.",
+      "explanation_ar": "صنّف IARC التابع لمنظمة الصحة العالمية عام 2011 الحقول الكهرومغناطيسية للترددات الراديوية بوصفها 'محتملة السرطنة' (المجموعة 2B — نفس فئة الخضروات المخللة). مراجعة IARC المحدثة 2022 لم تجد دليلاً كافياً على علاقة سببية.",
+      "source_url": "https://www.iarc.who.int/wp-content/uploads/2018/07/pr208_E.pdf",
+      "viral_origin": "Facebook Egypt, 2023-2024"
+    },
+    {
+      "id": 6,
+      "claim_en": "Egypt's Suez Canal revenues dropped to zero after the 2021 Ever Given incident.",
+      "claim_ar": "انخفضت إيرادات قناة السويس المصرية إلى الصفر بعد حادثة السفينة إيفر جيفن عام 2021.",
+      "display_time_ms": 2000,
+      "truth_value": false,
+      "emotional_trigger": "anger",
+      "category": "politics",
+      "explanation_en": "The Ever Given blocked the canal for 6 days (March 23–29, 2021). Egypt lost an estimated $12–15 million per day during blockage. However, 2021 full-year revenues were $5.84 billion — up from $5.72 billion in 2020, as traffic rebounded quickly after the ship was freed.",
+      "explanation_ar": "أغلقت السفينة إيفر جيفن القناة لمدة 6 أيام (23-29 مارس 2021). خسرت مصر نحو 12-15 مليون دولار يومياً خلال الانسداد. لكن إيرادات العام الكامل 2021 بلغت 5.84 مليار دولار — أعلى من 5.72 مليار في 2020.",
+      "source_url": "https://www.suezcanal.gov.eg/English/About/SuezCanalStatistics/Pages/TrafficStatistics.aspx",
+      "viral_origin": "Social media Egypt, 2021 — recirculated 2023"
+    },
+    {
+      "id": 7,
+      "claim_en": "Zakat collected in Egypt is sufficient to end all poverty in the country if properly distributed.",
+      "claim_ar": "الزكاة المحصّلة في مصر كافية للقضاء على الفقر كلياً إذا وُزِّعت بشكل صحيح.",
+      "display_time_ms": 2000,
+      "truth_value": false,
+      "emotional_trigger": "pride",
+      "category": "religion",
+      "explanation_en": "While zakat is theoretically 2.5% of wealth above the nisab, actual collectible zakat in Egypt falls far short of the poverty gap. Egypt's poverty gap (World Bank 2019-2022 data: ~29.7% below $3.65/day PPP) would require transfer amounts far exceeding realistic zakat collection estimates, which are not centrally tracked.",
+      "explanation_ar": "بينما الزكاة من الناحية النظرية 2.5٪ من الأموال فوق النصاب، فإن الزكاة القابلة للتحصيل فعلياً في مصر تقل بكثير عن فجوة الفقر. بيانات البنك الدولي 2019-2022: نحو 29.7٪ يعيشون تحت خط 3.65 دولار يومياً (تعادل القوة الشرائية).",
+      "source_url": "https://data.worldbank.org/indicator/SI.POV.DDAY?locations=EG",
+      "viral_origin": "Egyptian Islamic social media, 2023"
+    },
+    {
+      "id": 8,
+      "claim_en": "Cumin (kamoun) was scientifically proven to cure type-2 diabetes completely.",
+      "claim_ar": "أثبت العلم أن الكمون يشفي مرض السكري من النوع الثاني شفاءً تاماً.",
+      "display_time_ms": 2000,
+      "truth_value": false,
+      "emotional_trigger": "fear",
+      "category": "health",
+      "explanation_en": "Some RCTs (e.g., Hadi et al., 2015, International Journal of Preventive Medicine) showed cumin supplementation modestly improved glycemic markers in T2D patients. However, 'modest improvement in markers' ≠ 'cure.' No peer-reviewed study supports complete remission of T2D via cumin alone.",
+      "explanation_ar": "أظهرت بعض التجارب العشوائية المحكومة (مثل هادي وآخرون، 2015، المجلة الدولية للطب الوقائي) أن مكملات الكمون تحسّن بشكل متواضع مؤشرات السكر في الدم. لكن 'تحسن متواضع في المؤشرات' لا يساوي 'علاجاً كاملاً'. لا توجد دراسة محكّمة تدعم شفاء السكري كلياً بالكمون.",
+      "source_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4586555/",
+      "viral_origin": "WhatsApp health groups, Egypt 2023-2024"
+    },
+    {
+      "id": 9,
+      "claim_en": "A 2023 Egyptian parliament member said that watching TikTok causes infertility in young men.",
+      "claim_ar": "قال عضو في البرلمان المصري عام 2023 إن مشاهدة تيك توك تسبب العقم عند الشباب.",
+      "display_time_ms": 2000,
+      "truth_value": false,
+      "emotional_trigger": "disgust",
+      "category": "politics",
+      "explanation_en": "No credible scientific study links TikTok viewing to infertility. Sedentary screen time in excess may correlate with other lifestyle factors affecting fertility indirectly, but the claim as stated is biologically unfounded. The statement represents opinion presented as scientific fact.",
+      "explanation_ar": "لا توجد دراسة علمية موثوقة تربط مشاهدة تيك توك بالعقم. قد يرتبط الجلوس المفرط أمام الشاشات ببعض عوامل نمط الحياة المؤثرة على الخصوبة بشكل غير مباشر، لكن الادعاء كما صيغ لا أساس بيولوجي له.",
+      "source_url": "https://www.who.int/news-room/fact-sheets/detail/infertility",
+      "viral_origin": "Egyptian media coverage of parliamentary statements, 2023"
+    },
+    {
+      "id": 10,
+      "claim_en": "Onion placed in a room absorbs viruses and protects people from influenza.",
+      "claim_ar": "البصل الموضوع في الغرفة يمتص الفيروسات ويحمي الناس من الإنفلونزا.",
+      "display_time_ms": 2000,
+      "truth_value": false,
+      "emotional_trigger": "fear",
+      "category": "health",
+      "explanation_en": "Influenza is an airborne virus transmitted via respiratory droplets and aerosols. Onions cannot 'absorb' viruses; they have no known antiviral mechanism at room-air concentrations. The claim originates from a 19th-century folk theory pre-dating germ theory. Allicin in garlic/onions has mild in-vitro antimicrobial properties at high concentrations, not at ambient air exposure.",
+      "explanation_ar": "الإنفلونزا فيروس منقول عبر الهواء بواسطة قطرات التنفس والهباء الجوي. لا يمكن للبصل 'امتصاص' الفيروسات؛ فلا توجد له آلية مضادة للفيروسات في تركيزات الهواء العادية. يعود الادعاء إلى نظرية شعبية من القرن التاسع عشر سابقة لنظرية الجراثيم.",
+      "source_url": "https://www.cdc.gov/flu/prevent/prevention.htm",
+      "viral_origin": "WhatsApp Egypt, widely shared October-November 2023 flu season"
+    }
+  ],
+  "meta": {
+    "scientific_basis": "Dual-process theory (Kahneman, D. (2011). Thinking, Fast and Slow. Farrar, Straus and Giroux.); Impulsivity measurement based on Stop-Signal Reaction Time paradigm (Logan, G.D., 1994).",
+    "calibration_note": "Results saved as EI_baseline for comparison with Day 28 re-test.",
+    "tags": ["impulsivity", "reaction-time", "viral-claims", "egypt", "phase-0"]
+  }
+}

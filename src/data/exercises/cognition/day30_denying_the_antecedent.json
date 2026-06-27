@@ -1,0 +1,129 @@
+{
+  "id": "day30_denying_the_antecedent",
+  "phase": 1,
+  "week": 5,
+  "day": 30,
+  "title": "Denying the Antecedent",
+  "titleAr": "نفي المُقدَّم",
+  "description": "\"If you eat junk you get sick. I didn't eat junk — so I won't get sick.\" Today: why ruling out one cause does not rule out the result.",
+  "descriptionAr": "«لو أكلت أكل وحش هتمرض. أنا ماكلتش وحش — يبقى مش هامرض». النهاردة: ليه استبعاد سبب واحد ما بيستبعدش النتيجة.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A follower says: \"If a food is processed, it harms you. My food is all natural and unprocessed — so it cannot harm me, and I can eat as much as I want.\" Where is the error?",
+      "claimAr": "تابع بيقول: «لو الأكل مُصنّع، بيضرّك. أكلي كله طبيعي وغير مُصنّع — يبقى مستحيل يضرّني، وأقدر آكل قد ما أنا عايز». الغلط فين؟",
+      "options": [
+        "No error — natural food is always safe in any amount",
+        "Denying the antecedent: 'not processed' does not guarantee 'not harmful' — natural foods can still harm through quantity, allergy, contamination, or interactions",
+        "Processed food is actually healthy",
+        "He should eat only processed food"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The form is: 'If A then B. Not A, therefore not B.' Invalid — because B (harm) has many roads, not just A (processing). Natural, unprocessed foods still cause harm through over-eating, allergies, spoilage, or clashing with medication. Foxglove and hemlock are perfectly 'natural' and can kill. Ruling out one cause of harm never rules out harm itself. This is the mirror image of yesterday's fallacy: same broken arrow, pointed the other way.",
+      "explanationAr": "الشكل: «لو أ يبقى ب. مش أ، إذن مش ب». غير صحيح — لأن ب (الضرر) ليه طرق كتير، مش بس أ (التصنيع). الأكل الطبيعي غير المُصنّع برضه بيضرّ من كتر الأكل، أو الحساسية، أو الفساد، أو تعارضه مع الدوا. الديجيتال والشوكران «طبيعيين» تماماً وممكن يقتلوا. استبعاد سبب واحد للضرر عمره ما بيستبعد الضرر نفسه. ده الصورة المعكوسة لمغالطة إمبارح: نفس السهم المكسور، بس مقلوب للناحية التانية.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: \"If you smoke, you raise your cancer risk. My grandfather never smoked, so his lung cancer proves the doctors were wrong about smoking.\" — this reasoning is sound.",
+      "claimAr": "صح ولا غلط: «لو بتدخّن، بترفع خطر السرطان. جدي عمره ما دخّن، يبقى سرطان رئته يثبت إن الأطباء غلطانين في موضوع التدخين». — الاستدلال ده سليم.",
+      "correctAnswer": false,
+      "explanation": "False — this denies the antecedent. 'Smoking raises risk' was never 'only smoking causes cancer.' Lung cancer also comes from radon, asbestos, air pollution, genetics, and bad luck, so a non-smoker can still get it without contradicting anything. Smoking does not have to be the ONLY cause to be a real cause. Noticing this protects you from a common trick: pointing at one exception to dismiss a well-established risk.",
+      "explanationAr": "غلط — ده «نفي المُقدَّم». «التدخين بيرفع الخطر» ماكانش معناه «التدخين هو السبب الوحيد للسرطان». سرطان الرئة بييجي كمان من الرادون والأسبستوس وتلوّث الهوا والجينات وسوء الحظ، فممكن غير مدخّن يصاب بيه من غير ما ده يناقض حاجة. التدخين مش لازم يكون السبب الوحيد علشان يكون سبب حقيقي. ملاحظة دي بتحميك من حيلة شائعة: الإشارة لاستثناء واحد علشان نرمي خطر مثبت كله.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.cancer.gov/about-cancer/causes-prevention/risk/tobacco"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A relative reasons: \"If the diet were dangerous, the people doing it would all be dying. Most of them are fine — so the diet is safe.\" What logical move makes this fail?",
+      "claimAr": "قريب بيقول: «لو الحمية خطيرة، كان كل اللي عاملينها هيموتوا. أغلبهم كويسين — يبقى الحمية آمنة». أيّ حركة منطقية بتخلّيها تفشل؟",
+      "options": [
+        "Nothing — if most people are fine it must be safe",
+        "Denying the antecedent plus survivorship: danger never required everyone to die, and the harmed ones are the least visible"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why can't 'most people are fine' tell us a treatment is safe?",
+        "promptAr": "بكلماتك: ليه «أغلبهم كويسين» ما تقدرش تقول لنا إن علاج آمن؟"
+      },
+      "explanation": "The hidden form: 'If dangerous (A), then everyone dies (B). Not everyone dies (not B), so not dangerous (not A).' But danger never required everyone to die — a treatment that harms even a fraction of users is dangerous. And the harmed are exactly the people you can't see: those who stopped insulin or cancer therapy and ended up in intensive care or worse don't post updates. 'Most are fine' is the survivor's view; the question is who is missing from the picture.",
+      "explanationAr": "الشكل المخفي: «لو خطيرة (أ)، يبقى الكل بيموت (ب). مش الكل بيموت (مش ب)، يبقى مش خطيرة (مش أ)». لكن الخطورة عمرها ما اشترطت إن الكل يموت — العلاج اللي بيأذي حتى نسبة من اللي بيستخدموه خطير. واللي اتأذّوا هم بالظبط اللي ما تقدرش تشوفهم: اللي بطّلوا أنسولين أو علاج سرطان وراحوا العناية المركزة أو أسوأ ما بينشروش أخبار. «أغلبهم كويسين» دي رؤية الناجي؛ والسؤال مين الغايب من الصورة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:okaz-2026-05-10"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "\"I follow the allowed list strictly — no processed food, no chicken, no dairy. So I'm protected from the harms the system warns about.\"",
+      "claimAr": "«أنا بالتزم بالقايمة المسموحة بالكامل — مفيش معالَج، مفيش فراخ، مفيش ألبان. يبقى أنا محمي من الأضرار اللي النظام بيحذّر منها».",
+      "prompt": "What would DISPROVE the idea that following the allowed list protects you? What harms could still reach you even on the allowed list?",
+      "promptAr": "إيه اللي يكذّب فكرة إن الالتزام بالقايمة المسموحة بيحميك؟ وإيه الأضرار اللي ممكن توصلك حتى وإنت على القايمة؟",
+      "modelPoints": [
+        "Cutting out whole food groups (all animal protein) can create protein, B12, iron, and omega-3 deficiencies over weeks — no 'forbidden' food needed to cause real harm.",
+        "The allowed list may exclude foods with actual strong evidence for health (like lean poultry, dairy), while permitting large amounts of others whose safety depends entirely on quantity.",
+        "If you have a chronic illness requiring medication, following any diet does not replace the medication's effect; harm comes from stopping treatment, not from eating the wrong plant.",
+        "The system was investigated precisely because followers who were fully compliant suffered serious harm — compliance was not the protection claimed."
+      ],
+      "modelPointsAr": [
+        "حذف مجموعات غذائية كاملة (كل البروتين الحيواني) ممكن يسبّب نقص بروتين وB12 وحديد وأوميجا3 خلال أسابيع — من غير ما تاكل «محظور» واحد.",
+        "القايمة المسموحة ممكن تستبعد أكل عليه دليل قوي فعلاً (زي الدواجن الخالية من الدهون والألبان)، بينما بتسمح بكميات كبيرة من حاجات تانية سلامتها بتتوقف بالكامل على الكمية.",
+        "لو عندك مرض مزمن بيحتاج دوا، الالتزام بأي حمية ما بيعوّضش تأثير الدوا؛ الضرر بييجي من إيقاف العلاج، مش من إنك أكلت نبات غلط.",
+        "النظام اتفتّح في تحقيق بالظبط لأن أتباعاً ملتزمين تماماً أصيبوا بضرر جسيم — الالتزام ما كانش الحماية المدّعاة."
+      ],
+      "explanation": "Considering the opposite reveals that 'I avoided cause A, so harm B is impossible' breaks immediately — there are at least four independent roads to harm that have nothing to do with the forbidden foods. The system's actual harm record is the clearest evidence: many of the documented victims were fully compliant followers, not rule-breakers.",
+      "explanationAr": "التفكير في العكس بيكشف إن «تجنّبت السبب أ، يبقى الضرر ب مستحيل» بيسقط فوراً — في على الأقل أربع طرق مستقلة للضرر مالهاش علاقة بالأطعمة المحظورة. سجلّ الضرر الفعلي للنظام هو أوضح دليل: كتير من الضحايا الموثّقين كانوا أتباعاً ملتزمين تماماً، مش كاسرين للقواعد.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.hsph.harvard.edu/nutritionsource/protein/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "denying the antecedent as safety guarantee",
+      "techniqueAr": "نفي المُقدَّم كضمان أمان",
+      "task": "You're going to feel the trick from the inside. Write a short promotional post that reassures people they are completely safe because they avoided one specific risk factor — use a harmless topic like 'sleep quality' to practise the structure. Make the reader feel protected.",
+      "taskAr": "هتحسّ بالحركة من جوّه. اكتب بوست ترويجي قصير بيطمّن الناس إنهم آمنين تماماً لأنهم تجنّبوا عامل خطر واحد محدّد — استخدم موضوعاً غير ضار زي «جودة النوم» لتدريب على البنية. خلّي القارئ يحسّ بالحماية.",
+      "tells": [
+        "One avoided cause is sold as a complete safety shield — 'you avoided X, so you're protected from Y' — when Y has dozens of other causes.",
+        "The message skips the question: 'what else could still cause the bad outcome even without X?'",
+        "The feeling of safety is manufactured by naming a threat and then declaring it gone — a classic misdirection.",
+        "There are no numbers, no comparison groups, no mention of who it doesn't work for.",
+        "Compliance is framed as a binary ('you either did this or you didn't') that hides gradations of risk."
+      ],
+      "tellsAr": [
+        "سبب واحد تم تجنّبه بيتسوَّق كدرع أمان كاملة — 'تجنّبت س، يبقى محمي من ص' — بينما ص ليها عشرات الأسباب التانية.",
+        "الرسالة بتتخطّى السؤال: «إيه تاني ممكن يسبّب النتيجة الوحشة حتى من غير س؟»",
+        "إحساس الأمان بيتصنّع بإنك تسمّي تهديد وبعدين تعلّن إنه راح — وده تشتيت كلاسيكي.",
+        "مفيش أرقام، مفيش مجموعات مقارنة، مفيش ذكر لمين مش شغّال معاه.",
+        "الالتزام بيتقدَّم كثنائية («يا عملته يا ما عملتيش») بتخبّي تدرّجات الخطر."
+      ],
+      "explanation": "Building the 'you're safe because you avoided X' trick in a harmless domain — sleep — makes the logical shape visible: ruling out one cause never rules out the result, but the post is designed to make you feel completely protected. Now that you've built it, you'll recognize the pattern whenever a health seller, diet promoter, or conspiracy theory claims total safety from partial compliance.",
+      "explanationAr": "إنك تبني حيلة «إنت آمن لأنك تجنّبت س» في مجال غير ضار — النوم — بتخلّي الشكل المنطقي واضح: استبعاد سبب واحد عمره ما بيستبعد النتيجة، بس البوست متصمّم يخلّيك تحسّ بحماية كاملة. دلوقتي وإنت بنيته، هتكشف النمط دا كل ما بائع صحة أو حمية أو نظرية مؤامرة يدّعي أمانا كاملاً من امتثال جزئي.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.jmir.org/2023/1/e49255"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    }
+  ]
+}

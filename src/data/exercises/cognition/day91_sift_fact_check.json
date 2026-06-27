@@ -1,0 +1,147 @@
+{
+  "id": "day91_sift_fact_check",
+  "phase": 2,
+  "week": 13,
+  "day": 91,
+  "title": "SIFT — Your Four-Step Fact-Check",
+  "titleAr": "SIFT — خطواتك الأربع لتحقق الحقيقة",
+  "description": "Stop. Investigate the source. Find better coverage. Trace the original claim. Four moves that take under two minutes and have saved real lives.",
+  "descriptionAr": "قِف. تحقق من المصدر. دوّر على تغطية أفضل. تتبّع الادعاء الأصلي. أربع حركات بتاخد أقل من دقيقتين وأنقذت أرواح حقيقية.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://www.ala.org/advocacy/sift-four-moves",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "SIFT step 1 is 'Stop.' A dramatic health message arrives on your phone and you feel an urge to forward it to your family immediately. What does 'Stop' mean and why is the urge itself the danger?",
+      "claimAr": "الخطوة 1 في SIFT هي «قِف». رسالة صحية مثيرة وصلت على تليفونك وحسّيت برغبة في إنك تبعتها لعيلتك فوراً. «قِف» معناها إيه وليه الرغبة نفسها هي الخطر؟",
+      "options": [
+        "Stop means delete the message",
+        "Stop means pause before acting: the urge to share immediately is exactly the emotional hook that misinformation is designed to trigger — acting on it skips verification",
+        "Stop means wait a week",
+        "Stop means ask your doctor before reading it"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Misinformation is engineered to produce an impulse: fear, hope, anger, urgency. 'Stop' is the single most important step because it breaks that automatic response. The pause creates space to think: 'Why do I want to share this right now? Is it because I have checked it, or because I feel something strongly?' The viral diet system spread primarily because caring people shared before they checked.",
+      "explanationAr": "المعلومات المضلّلة مُصمَّمة تُنتج دافع: خوف، أمل، غضب، إلحاح. «قِف» هي أهم خطوة واحدة لأنها بتكسر الاستجابة الأوتوماتيكية. الوقفة بتخلق مساحة للتفكير: «ليه عايز أشارك ده دلوقتي؟ هل لأني فحصته، أم لأني بحسّ بحاجة بقوة؟» نظام الحمية الفيروسي انتشر أساساً لأن ناس مهتمة شاركت قبل ما تتحقق.",
+      "sources": [
+        "https://www.ala.org/advocacy/sift-four-moves",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "If a health post claims to be from the Egyptian Ministry of Health, the account name and logo are reliable enough to confirm it is official.",
+      "claimAr": "لو منشور صحي بيدّعي إنه من وزارة الصحة المصرية، اسم الحساب والشعار كافيان لتأكيد إنه رسمي.",
+      "options": ["True — name and logo are sufficient confirmation", "False — impersonation is common; you must check the verified official account or the ministry website"],
+      "correctAnswer": 1,
+      "explanation": "Impersonating official bodies is one of the most common misinformation tactics. The Ministry of Health has an official website (mohp.gov.eg) and verified social media channels. A page named 'Egyptian Health Ministry' with no verification mark is not the Ministry. Checking before reading the content prevents the claim from influencing your evaluation of the source — calibrate your trust in names and logos to 'low until verified.'",
+      "explanationAr": "انتحال صفة الجهات الرسمية هو أحد أكثر أساليب المعلومات المضلّلة شيوعاً. وزارة الصحة عندها موقع رسمي (mohp.gov.eg) وقنوات سوشيال ميديا موثّقة. صفحة اسمها «وزارة الصحة المصرية» من غير علامة توثيق مش الوزارة. التحقق قبل القراءة بيمنع الادعاء من التأثير في تقييمك للمصدر — عايِر ثقتك في الأسماء والشعارات عند «منخفضة لحد ما يتوثّق».",
+      "sources": [
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online",
+        "https://www.ala.org/advocacy/sift-four-moves"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A claim is reported only by one obscure website and contradicts what major health outlets say. Most likely: the major outlets are suppressing the truth.",
+      "claimAr": "ادعاء بيُبلَّغ عنه موقع غامض واحد بس ويتعارض مع ما بتقوله المواقع الصحية الكبرى. الأرجح: المواقع الكبرى بتكبت الحقيقة.",
+      "options": ["True — small independent sites often expose what big outlets hide", "False — when a dramatic health claim appears only on one obscure site, it is almost certainly false or misrepresented"],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does the SIFT 'Find better coverage' step suggest that single-source dramatic claims are probably wrong?",
+        "promptAr": "بكلماتك: ليه خطوة SIFT «دوّر على تغطية أفضل» بتوحي إن الادعاءات الدرامية ذات المصدر الواحد غلط على الأرجح؟"
+      },
+      "explanation": "Real findings from major institutions are reported by multiple independent science and health journalism outlets. If a claim is only on one site — especially with a dramatic headline — the most likely explanations are: the study doesn't exist, the study was misrepresented, or the conclusion is the opposite of what the headline says. The existing evidence on moderate coffee consumption, for example, actually shows neutral to cardioprotective effects — yet 'coffee causes heart disease' headlines have circulated for years.",
+      "explanationAr": "النتائج الحقيقية من المؤسسات الكبرى بيبلّغ عنها مواقع صحافة علمية وصحية مستقلة متعددة. لو ادعاء موجود في موقع واحد بس — خاصة بعنوان درامي — التفسيرات الأرجح: الدراسة مش موجودة، أو اتُشوّهت، أو الخلاصة عكس ما بيقوله العنوان. الأدلة القائمة على استهلاك القهوة المعتدل، مثلاً، بتُظهر فعلاً آثاراً محايدة لواقية للقلب — ومع ذلك عناوين «القهوة بتسبّب مرض القلب» انتشرت لسنوات.",
+      "sources": [
+        "https://www.hsph.harvard.edu/nutritionsource/food-features/coffee/",
+        "https://www.ala.org/advocacy/sift-four-moves"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A post claims a WHO report says 'processed foods cause 80% of all cancer.' You haven't found the original report. The claim feels plausible and matches what you already believe about processed food.",
+      "claimAr": "منشور بيدّعي إن تقرير منظمة الصحة العالمية بيقول «الأكل المعالَج بيسبّب 80% من كل السرطانات». ما لقيتش التقرير الأصلي. الادعاء بيحسّس بالمعقولية وبيتطابق مع اللي بتؤمن بيه أصلاً عن الأكل المعالَج.",
+      "prompt": "Before sharing: what would have to be true if this specific percentage ('80%') were fabricated or misquoted?",
+      "promptAr": "قبل المشاركة: إيه اللي لازم يكون صح لو النسبة المحددة دي («80%») كانت مُلفَّقة أو مُساء اقتباسها؟",
+      "modelPoints": [
+        "If fabricated: we'd expect no WHO page to contain this sentence — and indeed the WHO cancer fact sheet does not say this.",
+        "A misquote from 2014 was amplified until the false version became more common than the true one; tracing the origin exposes this.",
+        "The actual WHO position on processed foods is more nuanced: ultra-processed foods and certain processed meats are linked to elevated risk, but '80% of all cancer' is not the WHO's finding.",
+        "The claim 'matches what I already believe' is a warning, not a confirmation — that is exactly when confirmation bias is most dangerous.",
+        "Tracing takes two minutes on WHO.int and ends years of misinformation."
+      ],
+      "modelPointsAr": [
+        "لو ملفَّق: هنتوقع ما يبقاش فيه صفحة منظمة الصحة تحتوي الجملة دي — وفعلاً صفحة حقائق السرطان في المنظمة مش بتقول كده.",
+        "اقتباس مشوَّه من 2014 اتضخَّم لحد ما النسخة الخاطئة أصبحت أشيع من الصحيحة؛ تتبّع الأصل بيكشف ده.",
+        "موقف منظمة الصحة الفعلي من الأطعمة المعالجة أكثر دقة: الأطعمة فائقة المعالجة وبعض اللحوم المعالجة مرتبطة بخطر أعلى، لكن «80% من كل السرطانات» مش نتيجة المنظمة.",
+        "الادعاء «بيتطابق مع اللي بؤمن بيه» تحذير مش تأكيد — ده بالظبط الوقت اللي انحياز التأكيد فيه أكثر خطورة.",
+        "التتبّع بياخد دقيقتين على WHO.int وبينهي سنوات من المعلومات المضلّلة."
+      ],
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/cancer",
+        "https://www.ala.org/advocacy/sift-four-moves"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "false urgency and source impersonation",
+      "techniqueAr": "الإلحاح الزائف وانتحال هوية المصدر",
+      "task": "Feel this manipulation from the inside. Write a short urgent-sounding post that spreads a harmless claim (e.g. 'drink more water in the morning') — but attribute it to a fake official source like 'WHO just released a report saying...' and add 'Share before this gets removed!'",
+      "taskAr": "حسّ بالتلاعب ده من جوّه. اكتب بوست قصير بيبان ملحّ بينشر ادعاء غير ضار (زي «اشرب مياه أكتر الصبح») — لكن اعزوه لمصدر رسمي مزيّف زي «منظمة الصحة العالمية نشرت تقرير بيقول...» وضيف «شارك قبل ما يتحذف!»",
+      "tells": [
+        "False urgency ('share before it's removed') bypasses the Stop step — there's never a real reason reputable health info gets 'removed.'",
+        "Source impersonation borrows a real institution's credibility for a fabricated claim.",
+        "No link to the actual report — because it doesn't exist.",
+        "The emotional hook (fear of missing out, fear of suppression) is designed to make you act before you check.",
+        "The SIFT 'Investigate the source' step kills this in 30 seconds: go to who.int and search."
+      ],
+      "tellsAr": [
+        "الإلحاح الزائف («شارك قبل ما يتحذف») بيتجاوز خطوة القِف — ما فيش سبب حقيقي لحذف معلومات صحية موثوقة.",
+        "انتحال هوية المصدر بيستعير مصداقية مؤسسة حقيقية لادعاء ملفَّق.",
+        "ما فيش رابط للتقرير الفعلي — لأنه مش موجود.",
+        "الطُعم العاطفي (الخوف من التفويت، الخوف من القمع) مصمَّم يخلّيك تتصرف قبل ما تتحقق.",
+        "خطوة SIFT «تحقق من المصدر» بتقتل ده في 30 ثانية: روح who.int وابحث."
+      ],
+      "sources": [
+        "https://www.ala.org/advocacy/sift-four-moves",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 6,
+      "mechanic": "recognize",
+      "retrievalOf": 87,
+      "claim": "Your aunt forwards a voice message: 'doctors proved that cumin water cures fatty liver — share urgently!' Using all four SIFT steps in order, what is your response sequence?",
+      "claimAr": "عمّتك بعتلك رسالة صوتية بتقول «أطباء أثبتوا إن ميّة الكمّون بتعالج الكبد الدهني — شارك عاجل!» بإستخدام كل خطوات SIFT الأربعة بالترتيب، إيه تسلسل ردّك؟",
+      "options": [
+        "Share it to be safe and helpful",
+        "Stop (don't forward yet); Investigate (who are 'the doctors' and which journal?); Find coverage (does any legitimate health site confirm this?); Trace (find the original study, if any) — then act based on what you find",
+        "Ignore it",
+        "Ask your pharmacist to confirm before doing SIFT"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Applied SIFT: (1) Stop — notice the 'share urgently' trigger and pause. (2) Investigate — 'doctors' is not a source; is there a named journal, institution, or study? (3) Find coverage — do PubMed, NHS, WHO, or major Arabic health sites mention cumin water as a treatment for fatty liver? (4) Trace — if a study exists, find the original and check sample size, design, and whether it was replicated. On cumin: there is limited small-scale research on metabolic effects, but no major guideline recommends it as a fatty liver treatment. The right answer to your aunt is gratitude + an honest 'I looked and couldn't verify it — let me keep checking.'",
+      "explanationAr": "SIFT مطبّق: (1) قِف — لاحظ زَرّ «شارك عاجل» ووقف. (2) تحقق من المصدر — «أطباء» مش مصدر؛ في مجلة أو مؤسسة أو دراسة مسمّاة؟ (3) دوّر على تغطية أفضل — هل PubMed أو NHS أو منظمة الصحة العالمية أو مواقع صحة عربية كبرى بتذكر ميّة الكمّون كعلاج للكبد الدهني؟ (4) تتبّع الأصل — لو في دراسة، لقيت الأصل وتحقّقت من حجم العيّنة والتصميم وإذا كانت اتكرّرت. عن الكمّون: في بحث صغير محدود عن آثار أيضية، لكن لا إرشادات كبرى توصي بيه كعلاج للكبد الدهني. الجواب الصح لعمّتك هو الشكر + صادق «دوّرت وما قدرتش أتحقق — هفضل أراجع».",
+      "sources": [
+        "https://www.ala.org/advocacy/sift-four-moves",
+        "https://www.nhs.uk/live-well/eat-well/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4003790/"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "id": "stigma_scenarios_day3",
+  "phase": 1,
+  "week": 5,
+  "day": 3,
+  "title": "Stigma Scenarios: When Someone Wants Help",
+  "titleAr": "سيناريوهات الوصمة: عندما يريد شخص ما المساعدة",
+  "description": "Navigate 6 real-life scenarios where Egyptians want mental health support but face cultural and social barriers. Practice identifying stigma and providing helpful responses.",
+  "descriptionAr": "تعامل مع 6 سيناريوهات حياتية واقعية حيث يريد مصريون الحصول على دعم الصحة النفسية لكنهم يواجهون حواجز ثقافية واجتماعية. تدرّب على التعرف على الوصمة وتقديم ردود مساعِدة.",
+  "type": "scenario-response",
+  "difficulty": 2,
+  "estimatedMinutes": 22,
+  "bloomLevel": "apply",
+  "source": "Egyptian Psychiatric Association; WHO MHAP Egypt 2015-2020; Nebny Foundation 2021",
+  "safetyNote": "If you or someone you know needs immediate support, contact: Egypt Mental Health Hotline 08008880700 (free, 24/7). Emergency: 123.",
+  "safetyNoteAr": "إذا كنت أنت أو شخص تعرفه بحاجة إلى دعم فوري، تواصل مع: خط دعم الصحة النفسية في مصر 08008880700 (مجاني، 24/7). الطوارئ: 123.",
+  "com_b_target": "Motivation/Social",
+  "com_b_mechanism": "Scenario practice builds skills to navigate stigmatizing social environments and increases willingness to both seek and offer help",
+  "resources_egypt": [
+    {
+      "name": "Egypt National Mental Health Hotline",
+      "nameAr": "خط المساعدة الوطني للصحة النفسية في مصر",
+      "contact": "08008880700",
+      "type": "hotline",
+      "free": true,
+      "hours": "24/7",
+      "description": "Free, confidential support in Arabic",
+      "descriptionAr": "دعم مجاني وسري باللغة العربية"
+    },
+    {
+      "name": "Behman Hospital for Mental Health",
+      "nameAr": "مستشفى بهمان للصحة النفسية",
+      "contact": "02-25212013",
+      "website": "behman.com.eg",
+      "location": "Helwan, Cairo",
+      "type": "hospital",
+      "description": "Egypt's oldest dedicated psychiatric hospital, founded 1912. Outpatient clinics available.",
+      "descriptionAr": "أقدم مستشفى نفسي متخصص في مصر، تأسس عام 1912. عيادات خارجية متاحة."
+    },
+    {
+      "name": "ENIDH – National Institute for Neuromotor System Disorders",
+      "nameAr": "المعهد القومي للاضطرابات الحركية العصبية",
+      "contact": "02-25258032",
+      "location": "Abbassia, Cairo",
+      "type": "institute",
+      "description": "Government-run psychiatric services. Subsidized costs available.",
+      "descriptionAr": "خدمات نفسية حكومية. تكاليف مدعومة متاحة."
+    },
+    {
+      "name": "Nebny Foundation",
+      "nameAr": "مؤسسة نبني",
+      "website": "nebny.com",
+      "type": "ngo",
+      "description": "Egyptian NGO providing mental health awareness and referral services for youth",
+      "descriptionAr": "منظمة مصرية غير حكومية تقدم خدمات توعية بالصحة النفسية وإحالة للشباب"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "stigma-01",
+      "type": "scenario-response",
+      "scenario": "Mariam (22, university student, Alexandria) has been struggling with persistent sadness, loss of appetite, and inability to study for 3 months. She wants to see a psychiatrist. When she tells her mother, her mother says: 'أنتِ بتجيبي عار على العيلة! الناس هتقول ايه؟ مفيش حد في العيلة راح دكتور نفسي قبل كده!' ('You're bringing shame on the family! What will people say? No one in our family has ever gone to a psychiatrist!')",
+      "scenarioAr": "مريم (22 عامًا، طالبة جامعية، الإسكندرية) تعاني من حزن مستمر وفقدان الشهية وعدم القدرة على الدراسة منذ 3 أشهر. تريد رؤية طبيب نفسي. عندما تخبر والدتها، تقول لها والدتها: 'أنتِ بتجيبي عار على العيلة! الناس هتقول ايه؟ مفيش حد في العيلة راح دكتور نفسي قبل كده!'",
+      "barriers_present": [
+        "Family honor/shame (عيب وعار)",
+        "Social reputation concern (رأي الناس)",
+        "Generational stigma (taboo within family history)",
+        "Gender-specific stigma (expectations for young women)"
+      ],
+      "correct_response": {
+        "response_en": "Mariam's feelings are valid and her symptoms (3+ months of persistent sadness, appetite loss, functional impairment) meet criteria for clinical assessment. The correct response is to acknowledge her mother's concern while gently reframing: mental health treatment is healthcare, not shameful — like going to a cardiologist for a heart problem. Seeking help protects Mariam's future capacity as a daughter, student, and family member. Mariam can also consult privately via the free national hotline (08008880700) without family knowledge if necessary.",
+        "response_ar": "مشاعر مريم صحيحة وأعراضها (أكثر من 3 أشهر من الحزن المستمر وفقدان الشهية والإعاقة الوظيفية) تستوفي معايير التقييم السريري. الاستجابة الصحيحة هي الاعتراف بقلق والدتها مع إعادة الصياغة بلطف: علاج الصحة النفسية رعاية صحية وليس مخزيًا — كالذهاب إلى طبيب قلب لمشكلة في القلب. طلب المساعدة يحمي قدرة مريم المستقبلية كابنة وطالبة وعضو في الأسرة. يمكن لمريم أيضًا التشاور بشكل خاص عبر الخط الوطني المجاني (08008880700) دون علم الأسرة إذا لزم الأمر."
+      },
+      "what_not_to_do": [
+        "Do NOT dismiss Mariam's symptoms as 'normal student stress'",
+        "Do NOT suggest she just 'pray more' without also validating need for professional care",
+        "Do NOT reinforce the shame narrative by agreeing the family's reputation is more important than her health"
+      ],
+      "what_not_to_do_ar": [
+        "لا تُقلل من أعراض مريم بوصفها 'ضغط الطلاب الطبيعي'",
+        "لا تقترح عليها فقط 'الاستزادة من الصلاة' دون التحقق من الحاجة إلى رعاية مهنية",
+        "لا تعزز سردية العار بالموافقة على أن سمعة العائلة أهم من صحتها"
+      ],
+      "key_insight": "Family honor (sharaf) concerns are real and culturally meaningful — don't dismiss them. Instead, reframe: treating illness protects the family's long-term wellbeing. A sick family member who receives care is stronger than one who suffers in silence.",
+      "key_insight_ar": "مخاوف شرف الأسرة حقيقية وذات مغزى ثقافي — لا تتجاهلها. بدلًا من ذلك، أعد الصياغة: علاج المرض يحمي الرفاهية طويلة المدى للأسرة. فرد الأسرة المريض الذي يتلقى الرعاية أقوى من الذي يعاني في صمت."
+    },
+    {
+      "id": "stigma-02",
+      "type": "scenario-response",
+      "scenario": "Khaled (35, engineer, Cairo) has been experiencing panic attacks at work and avoids meetings. He confides in a male colleague. The colleague responds: 'إنت راجل! الراجل ما بيقعش! اتمسك على نفسك يا عم — دي بس أعراض إجهاد، مش محتاج دكتور نفسي!' ('You're a man! Men don't break down! Pull yourself together — these are just stress symptoms, you don't need a psychiatrist!')",
+      "scenarioAr": "خالد (35 عامًا، مهندس، القاهرة) يعاني من نوبات هلع في العمل ويتجنب الاجتماعات. يثق بزميل من الذكور. يرد الزميل: 'إنت راجل! الراجل ما بيقعش! اتمسك على نفسك يا عم — دي بس أعراض إجهاد، مش محتاج دكتور نفسي!'",
+      "barriers_present": [
+        "Masculine stoicism norms (الرجل لا يبكي / لا ينكسر)",
+        "Minimization of symptoms ('just stress')",
+        "Peer pressure against help-seeking",
+        "Conflation of emotional expression with weakness"
+      ],
+      "correct_response": {
+        "response_en": "Khaled's symptoms (panic attacks causing work avoidance) are clinically significant and warrant professional evaluation. The correct response: validate that seeking help IS a masculine act of self-mastery, not weakness. Frame it as performance optimization — elite athletes, military officers, and executives use psychological support. Panic Disorder is treatable (CBT has 80%+ response rate). Untreated panic attacks often worsen and can lead to agoraphobia. Khaled can see a psychiatrist discretely — many private clinics in Cairo offer evening appointments. The free hotline 08008880700 can provide initial guidance.",
+        "response_ar": "أعراض خالد (نوبات هلع تسبب تجنب العمل) ذات أهمية سريرية وتستوجب تقييمًا مهنيًا. الاستجابة الصحيحة: التحقق من أن طلب المساعدة هو فعل ذكوري للسيطرة على النفس وليس ضعفًا. صِغه على أنه تحسين الأداء — يستخدم الرياضيون المحترفون والضباط العسكريون والمديرون التنفيذيون الدعم النفسي. اضطراب الهلع قابل للعلاج (يبلغ معدل استجابة CBT 80%+). نوبات الهلع غير المعالجة غالبًا ما تتفاقم ويمكن أن تؤدي إلى رهاب الأماكن المفتوحة."
+      },
+      "what_not_to_do": [
+        "Do NOT reinforce 'men don't cry/break' narratives",
+        "Do NOT suggest the panic attacks will resolve with 'more willpower'",
+        "Do NOT compare his situation to others ('plenty of men have more stress and are fine')"
+      ],
+      "what_not_to_do_ar": [
+        "لا تعزز روايات 'الرجال لا يبكون / لا ينكسرون'",
+        "لا تقترح أن نوبات الهلع ستحل مع 'مزيد من الإرادة'",
+        "لا تقارن وضعه بالآخرين ('كثير من الرجال لديهم ضغوط أكثر وهم بخير')"
+      ],
+      "key_insight": "In Egyptian and Arab cultures, masculine identity is often central to self-worth. Help-seeking can be reframed as strength (shuja'a / شجاعة), mastery (dabt al-nafs / ضبط النفس), and responsibility toward family.",
+      "key_insight_ar": "في الثقافات المصرية والعربية، كثيرًا ما يكون الهوية الذكورية محورية لتقدير الذات. يمكن إعادة صياغة طلب المساعدة على أنه قوة (شجاعة) وإتقان (ضبط النفس) ومسؤولية تجاه الأسرة."
+    },
+    {
+      "id": "stigma-03",
+      "type": "scenario-response",
+      "scenario": "Fatima (19, high school graduate, Assiut, Upper Egypt) experiences severe obsessive-compulsive symptoms — she washes her hands 50+ times daily believing she is ritually impure (najis). Her family has taken her to several Islamic healers (ruqya practitioners) for the past year with no improvement. Her brother suggests seeing a psychiatrist. The father says: 'دي مسّها جن، مش مرض، والطبيب النفسي مش هيفيدهاش. ربنا هو العلاج.' ('She is possessed by jinn, not ill, and a psychiatrist won't help her. God is the cure.')",
+      "scenarioAr": "فاطمة (19 عامًا، خريجة ثانوي، أسيوط، صعيد مصر) تعاني من أعراض وسواس قهري شديدة — تغسل يديها أكثر من 50 مرة يوميًا مؤمنةً بأنها نجسة من الناحية الشرعية. أخذتها عائلتها إلى عدد من المعالجين الإسلاميين (ممارسو الرقية) خلال العام الماضي دون تحسن. يقترح أخوها رؤية طبيب نفسي. يقول الأب: 'دي مسّها جن، مش مرض، والطبيب النفسي مش هيفيدهاش. ربنا هو العلاج.'",
+      "barriers_present": [
+        "Religious attribution of illness to jinn possession",
+        "Prior investment in traditional/religious healing (sunk cost)",
+        "Distrust of psychiatric medicine in rural Upper Egypt",
+        "Father as decision-maker (patriarchal family structure)",
+        "Magical/supernatural explanatory model overriding biomedical model"
+      ],
+      "correct_response": {
+        "response_en": "Fatima's symptoms are textbook OCD (Obsessive-Compulsive Disorder) — specifically Scrupulosity OCD, a well-documented subtype involving religious/moral purity fears. This is NOT a sign of jinn possession — Islamic scholars including Al-Azhar scholars have explicitly stated that OCD can mimic fears of ritual impurity and that seeking psychiatric treatment is Islamically obligatory (fard 'ayn) when illness is preventing normal function. Evidence-based treatment: ERP (Exposure and Response Prevention) is the gold standard (85% response rate). The framing for the family: 'Treating the illness IS obeying God — God wants Fatima to be well and functional.' Referrals: ENIDH in Cairo, or Assiut University Hospital Psychiatry Department.",
+        "response_ar": "أعراض فاطمة هي وسواس قهري نموذجي — تحديدًا وسواس التدين (Scrupulosity OCD)، وهو نوع فرعي موثق جيدًا يتضمن مخاوف من الطهارة الدينية/الأخلاقية. هذا ليس علامة على مس الجن — صرّح علماء إسلاميون من بينهم علماء الأزهر صراحةً بأن الوسواس القهري يمكن أن يحاكي مخاوف الطهارة الشرعية وأن طلب العلاج النفسي واجب إسلامي عندما يمنع المرض الأداء الطبيعي. العلاج المبني على الأدلة: ERP (الوقاية من الكشف والاستجابة) هو المعيار الذهبي. الإطار للأسرة: 'علاج المرض هو طاعة الله — الله يريد لفاطمة أن تكون بصحة جيدة وأداء طبيعي.'"
+      },
+      "what_not_to_do": [
+        "Do NOT dismiss the father's religious worldview — engage with it respectfully",
+        "Do NOT suggest that ruqya was 'wrong' — it can coexist with treatment",
+        "Do NOT force the decision — use motivational interviewing and provide information"
+      ],
+      "what_not_to_do_ar": [
+        "لا تتجاهل الرؤية الدينية للأب — تعامل معها باحترام",
+        "لا تقترح أن الرقية كانت 'خاطئة' — يمكنها التعايش مع العلاج",
+        "لا تُجبر على القرار — استخدم المقابلة التحفيزية وقدّم المعلومات"
+      ],
+      "key_insight": "Explanatory models that attribute illness to supernatural causes are common in Upper Egypt. The most effective approach acknowledges both frameworks: 'Whether this is illness or spiritual challenge, Islamic tradition commands us to use all available means of treatment (al-tadawi) alongside prayer.'",
+      "key_insight_ar": "النماذج التفسيرية التي تعزو المرض إلى أسباب خارقة للطبيعة شائعة في صعيد مصر. النهج الأكثر فعالية يعترف بكلا الإطارين: 'سواء كان هذا مرضًا أو اختبارًا روحيًا، يأمرنا التراث الإسلامي باستخدام جميع وسائل العلاج المتاحة (التداوي) إلى جانب الدعاء.'"
+    },
+    {
+      "id": "stigma-04",
+      "type": "scenario-response",
+      "scenario": "Ahmed (28, recent PhD graduate, Cairo) has been experiencing severe social withdrawal, lack of motivation, and what he suspects is depression for 6 months. He tries to book an appointment with a psychiatrist but discovers the earliest available appointment is 3 weeks away and costs 500 EGP per session — more than he can afford regularly. He gives up and tells himself: 'مش هينفع معايا أصلًا' ('It won't work for me anyway').",
+      "scenarioAr": "أحمد (28 عامًا، حاصل على دكتوراه حديثًا، القاهرة) يعاني من انسحاب اجتماعي حاد وقلة الحافز وما يشتبه في أنه اكتئاب منذ 6 أشهر. يحاول حجز موعد مع طبيب نفسي لكنه يكتشف أن أبكر موعد متاح بعد 3 أسابيع ويكلف 500 جنيه مصري للجلسة — أكثر مما يستطيع تحمله بانتظام. يستسلم ويقول لنفسه: 'مش هينفع معايا أصلًا'.",
+      "barriers_present": [
+        "Financial barriers (cost of private psychiatric care)",
+        "Access barriers (long waiting times)",
+        "Cognitive distortion ('won't work for me')",
+        "Hopelessness as a symptom of depression itself",
+        "Geographic concentration of services in Cairo elite areas"
+      ],
+      "correct_response": {
+        "response_en": "Ahmed faces real structural barriers (cost, availability), but these can be navigated. Evidence-based alternatives: (1) ENIDH (National Institute) offers subsidized outpatient psychiatry at significantly reduced cost; (2) Behman Hospital outpatient clinic has sliding-scale fees; (3) Free crisis support: 08008880700; (4) Cairo University's Faculty of Medicine runs a free public psychiatry clinic; (5) MHGAP trained primary care doctors can initiate antidepressant treatment at lower cost; (6) Digital mental health: Shezlong app (Egyptian platform) offers telecounseling in Arabic at reduced rates. The thought 'it won't work for me' is itself a depression symptom — cognitive distortion called 'personalization' and 'hopelessness.' This is the illness speaking, not reality. Treatment response rates for depression are 60-80% with appropriate care.",
+        "response_ar": "يواجه أحمد حواجز هيكلية حقيقية (التكلفة والتوافر)، لكن يمكن التعامل معها. بدائل مبنية على الأدلة: (1) المعهد القومي (ENIDH) يقدم طب نفسي خارجي مدعومًا بتكلفة مخفضة بشكل ملحوظ؛ (2) عيادة مستشفى بهمان الخارجية لديها رسوم متدرجة؛ (3) دعم أزمات مجاني: 08008880700؛ (4) تدير كلية طب جامعة القاهرة عيادة طب نفسي عام مجانية؛ (5) أطباء الرعاية الأولية المدربون على MHGAP يمكنهم بدء علاج مضادات الاكتئاب بتكلفة أقل. فكرة 'لن ينجح معي' هي نفسها عرَض اكتئاب — تشويه معرفي يُسمى 'التخصيص' و'اليأس'. هذا المرض يتكلم وليس الواقع."
+      },
+      "what_not_to_do": [
+        "Do NOT simply tell Ahmed 'just find the money' or dismiss the financial reality",
+        "Do NOT suggest he 'just push through' without resources",
+        "Do NOT agree that 'it won't work' — hopelessness is treatable"
+      ],
+      "what_not_to_do_ar": [
+        "لا تقل لأحمد ببساطة 'ابحث عن المال' أو تتجاهل الواقع المالي",
+        "لا تقترح عليه 'الاستمرار فقط' بدون موارد",
+        "لا توافق على أن 'لن ينجح' — اليأس قابل للعلاج"
+      ],
+      "key_insight": "Structural barriers to mental healthcare in Egypt are real: only 1 psychiatrist per 100,000 population (WHO 2017). Effective help means knowing the low-cost pathways: ENIDH, Behman outpatient, university hospitals, and digital platforms.",
+      "key_insight_ar": "الحواجز الهيكلية أمام الرعاية الصحية النفسية في مصر حقيقية: طبيب نفسي واحد فقط لكل 100,000 مواطن (منظمة الصحة العالمية 2017). المساعدة الفعّالة تعني معرفة المسارات منخفضة التكلفة: ENIDH ومستشفى بهمان الخارجي والمستشفيات الجامعية والمنصات الرقمية."
+    },
+    {
+      "id": "stigma-05",
+      "type": "scenario-response",
+      "scenario": "Nadia (45, teacher, Alexandria) witnessed a violent incident 2 years ago and has since experienced nightmares, flashbacks, hypervigilance, and avoidance of the neighborhood where it happened. Her symptoms match PTSD. Her husband, a well-meaning man, says: 'إنتِ كبرتِ على الموضوع ده. خلاص مضى على الحادثة سنتين! لازم تنسي وتكملي.' ('You're too old for this. The incident was 2 years ago! You need to forget and move on.')",
+      "scenarioAr": "نادية (45 عامًا، معلمة، الإسكندرية) شهدت حادثة عنيفة منذ عامين وتعاني منذ ذلك الحين من كوابيس وذكريات مؤلمة ويقظة مفرطة وتجنب الحي الذي حدثت فيه. أعراضها تطابق اضطراب ما بعد الصدمة (PTSD). يقول زوجها الحسن النية: 'إنتِ كبرتِ على الموضوع ده. خلاص مضى على الحادثة سنتين! لازم تنسي وتكملي.'",
+      "barriers_present": [
+        "Age-based invalidation ('you're too old for this')",
+        "Time-based invalidation ('2 years have passed')",
+        "Misunderstanding of PTSD as voluntary memory control failure",
+        "Well-meaning but harmful 'just move on' advice",
+        "Gender-based dismissal (expectations of female stoicism in middle age)"
+      ],
+      "correct_response": {
+        "response_en": "Nadia's symptoms (2 years of nightmares, flashbacks, hypervigilance, avoidance) meet DSM-5 PTSD criteria. PTSD is NOT a choice or a failure of 'moving on' — it involves measurable neurobiological changes: reduced hippocampal volume, amygdala hyperreactivity, and dysregulation of the HPA axis (Bremner, 2006). The inability to 'just forget' is a symptom of the disorder, not a character flaw. PTSD does NOT resolve on its own for most people without treatment — it can last decades. Evidence-based treatment: EMDR (Eye Movement Desensitization and Reprocessing) and Trauma-Focused CBT are first-line, with 80%+ response rates. In Egypt, Behman Hospital and ENIDH offer trauma-focused therapies. The 08008880700 hotline can provide referrals.",
+        "response_ar": "أعراض نادية (سنتان من الكوابيس والذكريات المؤلمة واليقظة المفرطة والتجنب) تستوفي معايير PTSD في DSM-5. اضطراب ما بعد الصدمة ليس اختيارًا أو فشلًا في 'المضي قدمًا' — ينطوي على تغييرات عصبية بيولوجية قابلة للقياس: تقليل حجم الحُصين وفرط استجابة اللوزة الدماغية وخلل تنظيم محور HPA. عدم القدرة على 'النسيان ببساطة' هو عرَض من الاضطراب وليس عيبًا في الشخصية. لا يُحَل اضطراب ما بعد الصدمة من تلقاء نفسه لمعظم الناس بدون علاج — يمكن أن يستمر لعقود. العلاج المبني على الأدلة: EMDR والعلاج المعرفي السلوكي المتمحور حول الصدمة من الخط الأول."
+      },
+      "what_not_to_do": [
+        "Do NOT validate the 'move on' or 'just forget' narrative",
+        "Do NOT suggest time alone will heal PTSD",
+        "Do NOT attribute PTSD symptoms to age, gender, or weakness"
+      ],
+      "what_not_to_do_ar": [
+        "لا تُصادق على رواية 'اتقدمي' أو 'انسي وكفى'",
+        "لا تقترح أن الوقت وحده سيشفي PTSD",
+        "لا تعزو أعراض PTSD إلى السن أو الجنس أو الضعف"
+      ],
+      "key_insight": "PTSD is a neurobiological disorder, not a failure of willpower or time management. The brain physically changes after severe trauma. These changes require specific, targeted treatment (EMDR, TF-CBT) — not willpower or the passage of time alone.",
+      "key_insight_ar": "PTSD اضطراب عصبي بيولوجي وليس فشلًا في الإرادة أو إدارة الوقت. يتغير الدماغ جسديًا بعد الصدمة الشديدة. هذه التغييرات تتطلب علاجًا محددًا وموجّهًا (EMDR، TF-CBT) — وليس مجرد الإرادة أو مرور الوقت وحده."
+    },
+    {
+      "id": "stigma-06",
+      "type": "scenario-response",
+      "scenario": "Omar (17, Cairo) confides in his older sister that he has been having thoughts of suicide. He says: 'لو قلت لماما أو بابا هيقولوا إني مجنون وهيخبّوني في أوضتي. مش عايزهم يعرفوا.' ('If I tell Mama or Baba they'll say I'm crazy and lock me in my room. I don't want them to know.'). His sister is unsure whether to tell their parents or keep his secret.",
+      "scenarioAr": "عمر (17 عامًا، القاهرة) يثق بأخته الكبرى أنه كان تراوده أفكار انتحارية. يقول: 'لو قلت لماما أو بابا هيقولوا إني مجنون وهيخبّوني في أوضتي. مش عايزهم يعرفوا.' أخته غير متأكدة هل تخبر والديهم أم تحتفظ بسره.",
+      "barriers_present": [
+        "Fear of family reaction (being labeled 'crazy')",
+        "Fear of restriction of freedom",
+        "Confidentiality vs. safety dilemma for the sister",
+        "Adolescent help-seeking barriers",
+        "Stigma preventing disclosure to primary caregivers"
+      ],
+      "correct_response": {
+        "response_en": "This is a safety-critical situation. The sister's correct response: (1) Thank Omar for trusting her — this took courage. (2) Ask directly: 'Do you have a plan to hurt yourself?' This does NOT increase risk (Dazzi et al., 2014). (3) Explain that keeping him safe is more important than any secret — this is NOT a betrayal of trust, it is an act of love. (4) Call Egypt's crisis line together: 08008880700 (free, 24/7, confidential). (5) If there is immediate risk, call emergency services (123) or go to the nearest hospital ER. (6) Work WITH Omar to find the least scary way to involve parents — perhaps with a trusted teacher, school counselor, or the doctor at ENIDH first. Omar's fear of being 'locked up' reflects stigma about psychiatric hospitalization — most treatment is outpatient. Never agree to keep suicidal thoughts completely secret.",
+        "response_ar": "هذا موقف بالغ الأهمية من حيث السلامة. الاستجابة الصحيحة للأخت: (1) اشكر عمر على ثقته — هذا تطلّب شجاعة. (2) اسألي مباشرة: 'هل لديك خطة لإيذاء نفسك؟' هذا لا يزيد الخطر (دازي وآخرون، 2014). (3) اشرحي أن الحفاظ على سلامته أهم من أي سر — هذا ليس خيانة للثقة بل هو فعل حب. (4) اتصلي بخط الأزمات المصري معًا: 08008880700 (مجاني، 24/7، سري). (5) إذا كان هناك خطر فوري، اتصلي بخدمات الطوارئ (123) أو اذهبي إلى أقرب غرفة طوارئ مستشفى. لا توافقي أبدًا على إبقاء الأفكار الانتحارية سرًا كاملًا."
+      },
+      "what_not_to_do": [
+        "Do NOT promise to keep suicidal thoughts a complete secret",
+        "Do NOT dismiss the thoughts as 'teenage drama' or 'attention seeking'",
+        "Do NOT leave Omar alone with the thoughts — stay with him",
+        "Do NOT wait to see if the thoughts pass on their own"
+      ],
+      "what_not_to_do_ar": [
+        "لا تعدي بإبقاء الأفكار الانتحارية سرًا كاملًا",
+        "لا تتجاهلي الأفكار بوصفها 'دراما مراهقة' أو 'طلب انتباه'",
+        "لا تتركي عمر وحده مع أفكاره — ابقي معه",
+        "لا تنتظري لترى إذا كانت الأفكار ستمر من تلقاء نفسها"
+      ],
+      "key_insight": "When someone discloses suicidal thoughts, safety always takes priority over confidentiality. The crisis line 08008880700 is specifically designed to help navigate exactly this situation — including advising how to involve family in a way that protects the young person's dignity.",
+      "key_insight_ar": "عندما يُفصح شخص ما عن أفكار انتحارية، السلامة تأخذ دائمًا الأولوية على السرية. خط الأزمات 08008880700 مصمم خصيصًا للمساعدة في التعامل مع هذا الموقف بالضبط — بما في ذلك تقديم المشورة حول كيفية إشراك الأسرة بطريقة تحمي كرامة الشاب."
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "day138_unfalsifiability_trap",
+  "phase": 3,
+  "week": 20,
+  "day": 138,
+  "title": "The Unfalsifiability Trap — When God Becomes the Alibi",
+  "titleAr": "فخّ عدم القابلية للتفنيد — لما الله يُستخدَم عذراً",
+  "description": "A claim dressed in religion can become impossible to disprove — not because it is true, but because all counter-evidence is pre-classified as a test of faith. Today you learn to name this trap without disrespecting faith.",
+  "descriptionAr": "ادعاء ملبوس بالدين قد يصبح مستحيل التفنيد — مش لأنه صح، لكن لأن كل دليل مضاد مُصنَّف مسبقاً كاختبار للإيمان. النهاردة بتتعلم تُسمّي الفخّ ده من غير إهانة للإيمان.",
+  "type": "religion-literacy",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://plato.stanford.edu/entries/pseudo-science/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A wellness group operates on this logic: if a follower improves → 'proof the system works'; if a follower deteriorates → 'they didn't follow it correctly or lacked faith'; if a doctor criticises → 'the medical establishment fears the truth'; if someone dies → 'they were a martyr and their death will awaken others.' Which scientific concept is this logic violating?",
+      "claimAr": "مجموعة عافية بتشتغل بالمنطق ده: لو متابع تحسّن → «دليل على إن النظام شغّال»؛ لو متابع تدهور → «ما التزمش صح أو ناقص إيمان»؛ لو دكتور انتقد → «المؤسسة الطبية خايفة من الحقيقة»؛ لو حد مات → «كان شهيداً وموته هيصحّي الناس». أنهي مبدأ علمي بيخالفه المنطق ده؟",
+      "options": [
+        "The peer review requirement — the system has not been reviewed by peers",
+        "Falsifiability — a claim that no possible observation can disprove is not a scientific claim; it is an unfalsifiable belief system",
+        "The sample size requirement — the group is too small to reach conclusions",
+        "The randomisation requirement — no control group was used"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Karl Popper's falsifiability principle: a genuine empirical claim must specify what evidence would count against it. This system has pre-classified every conceivable outcome as confirmation — successes confirm the system; deaths confirm the system; criticism confirms a conspiracy. When no observation can in principle disprove a claim, it has exited the domain of science and entered the domain of ideology. Importantly, this is not a critique of faith — authentic religious faith does not require such a hermetically sealed structure.",
+      "explanationAr": "مبدأ بوبر للقابلية للتفنيد: ادعاء تجريبي حقيقي لازم يحدد أي دليل سيُحسَب ضده. النظام ده صنّف مسبقاً كل نتيجة متصوَّرة كتأكيد — النجاحات تؤكد النظام؛ الوفيات تؤكد النظام؛ النقد يؤكد مؤامرة. لما لا يقدر بالمبدأ أي ملاحظة على تفنيد ادعاء، يكون قد خرج من نطاق العلم ودخل نطاق الأيديولوجيا. ولأهمية الدقة، هذا ليس نقداً للإيمان — الإيمان الديني الأصيل لا يتطلب بنية محكمة الإغلاق بهذا الشكل.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "EAL-case-001:popper-1959",
+        "EAL-case-001:redflag-4"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2,
+      "mechanic": "decompose",
+      "claim": "Map this defence: 'Our system cannot be tested by conventional medicine because it operates on a spiritual level that instruments cannot measure. Therefore no study can prove or disprove it. This is not a weakness — it is proof of its divine nature.'",
+      "claimAr": "فكّك الدفاع ده: «نظامنا ما يقدرش يُختبَر بالطب التقليدي لأنه بيشتغل على مستوى روحي الأجهزة ما تقدرش تقيسه. فلا دراسة تستطيع إثباته أو تفنيده. هذا ليس ضعفاً — هو دليل على طبيعته الإلهية».",
+      "parts": [
+        {
+          "text": "This is not a weakness — it is proof of its divine nature.",
+          "textAr": "هذا ليس ضعفاً — هو دليل على طبيعته الإلهية.",
+          "role": "conclusion"
+        },
+        {
+          "text": "The system operates on a spiritual level that instruments cannot measure; therefore no study can prove or disprove it.",
+          "textAr": "النظام يعمل على مستوى روحي الأجهزة ما تقدرش تقيسه؛ فلا دراسة تستطيع إثباته أو تفنيده.",
+          "role": "premise"
+        },
+        {
+          "text": "(Unstated) If a medical claim cannot be tested by any method, this exemption is a virtue rather than a disqualification from medical credibility.",
+          "textAr": "(غير مذكور) إذا كان ادعاء طبي لا يمكن اختباره بأي طريقة، فهذا الإعفاء فضيلة لا استبعاد من المصداقية الطبية.",
+          "role": "assumption"
+        },
+        {
+          "text": "Conventional medicine cannot measure spiritual phenomena.",
+          "textAr": "الطب التقليدي لا يستطيع قياس الظواهر الروحية.",
+          "role": "irrelevant"
+        }
+      ],
+      "explanation": "The hidden assumption reverses the burden of proof: it treats untestability as evidence of divinity. But in medical epistemology, a claim that cannot be tested in principle cannot be acted upon safely — because we cannot distinguish between it helping and it doing nothing (or harming). The last premise — 'conventional medicine cannot measure spiritual phenomena' — is irrelevant because the claims being made ARE physical (blood sugar, tumour size, organ function). Untestability is not divine immunity; it is the absence of a reason to trust the claim.",
+      "explanationAr": "الافتراض الخفي يعكس عبء الإثبات: بيعامل عدم القابلية للاختبار كدليل على الطبيعة الإلهية. لكن في معرفة الطب، ادعاء لا يمكن اختباره من حيث المبدأ لا يمكن التصرف بناءً عليه بأمان — لأننا لا نستطيع التمييز بين مساعدته وعدم فعله شيئاً (أو إيذائه). الفرضية الأخيرة — «الطب لا يقيس الروحيات» — غير ذات صلة لأن الادعاءات المطروحة جسدية (مستوى السكر، حجم الورم، وظيفة الأعضاء). عدم القابلية للاختبار ليس حصانة إلهية؛ هو غياب سبب للثقة بالادعاء.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "EAL-case-001:popper-1959"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "Someone you respect says: 'I have complete certainty in this system because my faith is strong. Doubt would be weakness.' You find this inspiring — certainty feels like strength.",
+      "claimAr": "شخص بتحترمه بيقول: «عندي يقين كامل في النظام ده لأن إيماني قوي. الشكّ ضعف». بتلاقي ده ملهِم — اليقين بيحسّس بالقوة.",
+      "prompt": "Before accepting 'certainty = strength' — what would a genuinely wise, deeply faithful person say about the difference between faith in God and certainty about a commercial diet system? What would disprove the equation 'certainty = strength'?",
+      "promptAr": "قبل قبول «اليقين = قوة» — ماذا سيقول شخص حكيم حقاً وعميق الإيمان عن الفرق بين الإيمان بالله واليقين في نظام غذائي تجاري؟ وإيه اللي يكذّب معادلة «اليقين = قوة»؟",
+      "modelPoints": [
+        "Faith in God (tawakkul) is different from certainty about a specific product's medical claims. The first is a spiritual relationship; the second requires evidence regardless of the believer's sincerity.",
+        "Islamic scholarship has a rich tradition of ijtihad — careful, reasoned inquiry — precisely because human understanding is limited. Certainty about human-made systems is theologically presumptuous, not a virtue.",
+        "The equation 'doubt = weakness' is itself a manipulation: it pre-emptively shames the rational question. A person of strong faith who asks for evidence is not weak — they are applying intellectual care to worldly claims, which is compatible with tawakkul.",
+        "History: people of enormous faith have been exploited by charlatans throughout history. Sincere belief did not protect them. What protects is evaluation of the claim, not the strength of the feeling."
+      ],
+      "modelPointsAr": [
+        "الإيمان بالله (التوكّل) مختلف عن اليقين في ادعاءات طبية لمنتج بعينه. الأول علاقة روحية؛ الثاني يحتاج دليلاً بصرف النظر عن إخلاص المؤمن.",
+        "العلم الإسلامي لديه تقليد ثري من الاجتهاد — التفكير الدقيق المتأنّي — تحديداً لأن الفهم البشري محدود. اليقين في أنظمة بشرية الصنع متعجرف لاهوتياً، لا فضيلة.",
+        "معادلة «الشكّ = ضعف» هي نفسها تلاعب: بتُعيب السؤال العقلي مسبقاً. شخص إيمانه قوي يطلب الدليل ليس ضعيفاً — بيطبّق العناية العقلية على الادعاءات الدنيوية، وهذا متوافق مع التوكّل.",
+        "التاريخ: أناس بإيمان هائل استُغلّوا من الدجّالين عبر التاريخ. الإيمان الصادق ما حماهمش. الحماية في تقييم الادعاء، لا في قوة الشعور."
+      ],
+      "sources": [
+        "EAL-case-001:redflag-11",
+        "https://plato.stanford.edu/entries/pseudo-science/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "self_explain",
+      "claim": "After a follower stops cancer treatment and dies, the community says: 'He is a martyr (shaheed). His death is not a failure of the system — it is proof that the establishment was afraid of his recovery and moved to stop it.' This is the same unfalsifiable structure as question 1, but now it's emotionally much harder to challenge.",
+      "claimAr": "بعد وفاة متابع أوقف علاج السرطان، المجتمع بيقول: «هو شهيد. موته مش فشل للنظام — هو دليل على إن المؤسسة كانت خايفة من شفاؤه وتحرّكت لإيقافه». ده نفس البنية غير القابلة للتفنيد من السؤال 1، لكنه عاطفياً أصعب بكتير في التحدي.",
+      "options": [
+        "It cannot be challenged — the family's grief makes it wrong to question this interpretation",
+        "The emotional weight makes the manipulation MORE dangerous, not immune to evaluation — the structure is still unfalsifiable and the family deserves accurate information, offered compassionately"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does emotional difficulty NOT change whether an argument is logically valid? And why does empathy for the grieving family actually REQUIRE, rather than forbid, honest evaluation of this claim?",
+        "promptAr": "بكلماتك: ليه الصعوبة العاطفية ما بتغيّرش لو الحُجّة منطقياً صحيحة؟ ولماذا التعاطف مع العائلة الحزينة يتطلّب فعلاً — لا يحظر — التقييم الصادق للادعاء ده؟"
+      },
+      "explanation": "The emotional weight of grief is real and deserves full compassion. But 'this is emotionally difficult to challenge' does not mean 'this claim is true.' The martyrdom framing is exactly the unfalsifiable structure identified earlier — it converts death (the strongest possible counter-evidence) into confirmation. Compassionate honesty here means: (1) fully acknowledging the loss and grief, (2) without endorsing a claim that, if believed by others, will put more lives at risk. Protecting future families is itself an act of care for the community.",
+      "explanationAr": "الثقل العاطفي للحزن حقيقي ويستحق تعاطفاً كاملاً. لكن «هذا صعب عاطفياً في التحدي» لا يعني «هذا الادعاء صحيح». تأطير الشهادة هو بالضبط البنية غير القابلة للتفنيد المحددة سابقاً — بيحوّل الموت (أقوى دليل مضاد ممكن) إلى تأكيد. الصدق المتعاطف هنا يعني: (١) الاعتراف الكامل بالخسارة والحزن، (٢) من غير تبنّي ادعاء، لو صُدّق من آخرين، سيعرّض مزيداً من الأرواح للخطر. حماية العائلات المستقبلية هي نفسها فعل رعاية للمجتمع.",
+      "sources": [
+        "EAL-case-001:masrawy-2026-04-30",
+        "EAL-case-001:redflag-4",
+        "https://plato.stanford.edu/entries/pseudo-science/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 106,
+      "claim": "Earlier you learned about the Popper principle as applied to the Taybat case. A new wellness system claims: 'Our herbs balance the four humours described in Islamic medicine. If you feel better, the herbs worked; if not, your body's imbalance was too advanced.' Which earlier concept does this invoke, and what is the ONE question that exposes it?",
+      "claimAr": "تعلّمت قبل كده عن مبدأ بوبر كما طُبِّق على قضية الطيبات. نظام عافية جديد بيدّعي: «أعشابنا بتوازن الأخلاط الأربعة المذكورة في الطب الإسلامي. لو حسّيت بتحسّن، الأعشاب نجحت؛ لو لأ، كان اختلال جسمك متقدّماً جداً». أنهي مفهوم سابق بيستحضره ده، وإيه السؤال الواحد اللي يكشفه؟",
+      "options": [
+        "It invokes the authority bias; the question is: 'What are the seller's qualifications?'",
+        "It invokes the unfalsifiability structure; the question is: 'What specific observation would prove this wrong?'",
+        "It invokes survivorship bias; the question is: 'How many people tried it and did not improve?'",
+        "It invokes the availability heuristic; the question is: 'Have you personally seen this work?'"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The structure — improvement confirms the product, failure confirms the body 'was too advanced' — is a textbook unfalsifiable claim. The one question that exposes every unfalsifiable claim is: 'What specific observation, finding, or outcome would you accept as evidence that this system does NOT work?' If no answer is possible, the claim is not empirical. This is not an attack on traditional medicine concepts — it is the minimum standard for any claim that asks you to act on it medically.",
+      "explanationAr": "البنية — التحسّن يؤكد المنتج، الفشل يؤكد «الجسم كان متقدماً جداً» — ادعاء غير قابل للتفنيد كلاسيكي. السؤال الواحد الذي يكشف كل ادعاء غير قابل للتفنيد هو: «أي ملاحظة أو نتيجة بعينها ستقبلها دليلاً على أن النظام لا يعمل؟» لو لا توجد إجابة، فالادعاء ليس تجريبياً. هذا ليس هجوماً على مفاهيم الطب التقليدي — هو الحد الأدنى لأي ادعاء يطلب منك التصرف طبياً بناءً عليه.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "EAL-case-001:popper-1959"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    }
+  ]
+}

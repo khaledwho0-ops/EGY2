@@ -1,0 +1,123 @@
+{
+  "id": "day48_texas_sharpshooter_galileo_gambit",
+  "phase": 1,
+  "week": 7,
+  "day": 48,
+  "title": "Texas Sharpshooter & The Galileo Gambit",
+  "titleAr": "الرامي التكساسي ومغالطة جاليليو",
+  "description": "Two fallacies that make random noise look like a discovery, and make rejection by scientists look like a badge of honour. Spot the pattern before the pattern spots you.",
+  "descriptionAr": "مغالطتان بتخلّي التشويش العشوائي يبدو اكتشافاً، ورفض العلماء يبدو وسام شرف. اكتشف النمط قبل ما النمط يكتشفك.",
+  "type": "logic",
+  "difficulty": 4,
+  "estimatedMinutes": 15,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A diet promoter says: 'I tracked 200 followers and found that people who ate pomegranate regularly had the best blood results.' He did not pre-specify that he was looking at pomegranate — he tested all 40+ foods they ate and pomegranate happened to come out on top. What fallacy?",
+      "claimAr": "مروّج حمية بيقول: «تابعت 200 متابع ولاقيت إن الناس اللي اكلوا رمان بانتظام عندهم أحسن نتائج دم». ما حدّدش مسبقاً إنه كان بيبحث عن الرمان — اختبر كل الأكل 40+ نوع وصدفةً الرمان طلع في القمة. إيه المغالطة؟",
+      "options": [
+        "A strong finding about pomegranate",
+        "Texas Sharpshooter Fallacy: drawing the target around the bullet hole after shooting — finding a pattern in data after the fact and presenting it as if it was predicted",
+        "Cherry-picking",
+        "Equivocation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Texas Sharpshooter Fallacy: fire randomly at a barn, then paint a target around the cluster of bullet holes and call yourself a sharpshooter. If you test 40 foods without a pre-specified hypothesis, by pure chance alone some will appear better than others. When you present only the winner as if it was predicted, you've drawn the target after shooting. Pre-registration of hypotheses exists precisely to prevent this.",
+      "explanationAr": "مغالطة الرامي التكساسي: تطلق رصاصات عشوائياً على حظيرة، وبعدين ترسم هدفاً حول مجموعة ثقوب الرصاص وتسمّي نفسك رامياً ماهراً. لو اختبرت 40 نوع أكل بدون فرضية محدّدة مسبقاً، بالصدفة المحضة بعضها هيبدو أحسن من الآخر. لمّا تعرض الفائز وحده كأنه كان مُتنبَّأ بيه، رسمت الهدف بعد الطلق. التسجيل المسبق للفرضيات موجود بالتحديد لمنع ده.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if a researcher pre-registers their hypothesis before collecting data, they can no longer commit the Texas Sharpshooter Fallacy in that study.",
+      "claimAr": "صح ولا غلط: لو باحث سجَّل فرضيته مسبقاً قبل جمع البيانات، ما يقدرش يقع في مغالطة الرامي التكساسي في الدراسة دي.",
+      "options": [
+        "False — all data analysis is the same regardless of when the hypothesis was formed",
+        "True — pre-registration locks the target before the shot is fired"
+      ],
+      "correctAnswer": 1,
+      "explanation": "True. Pre-registration locks in the hypothesis before the data is seen, so the analysis cannot be shaped retroactively to match the results. If the pre-registered hypothesis says 'pomegranate will improve HbA1c' and the data shows it doesn't — the researcher must report that null result. Set your confidence before revealing; did you feel certain? That certainty has to be earned by a method, not just a feeling.",
+      "explanationAr": "صح. التسجيل المسبق بيثبّت الفرضية قبل رؤية البيانات، فالتحليل ما يقدرش يُشكَّل بأثر رجعي. لو الفرضية المسجَّلة مسبقاً تقول «الرمان هيحسّن HbA1c» والبيانات تُظهِر إنه ما حسّنش — لازم الباحث يُبلّغ عن النتيجة الصفرية. حدّد ثقتك قبل الكشف؛ هل حسّيت بيقين؟ اليقين ده لازم يُكتسب بمنهج، مش بإحساس بس.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "After the Medical Syndicate expelled the Taybat system's originator, supporters argued: 'Galileo was rejected by the establishment too — and he was right. Being opposed by institutions proves you're on to something.'",
+      "claimAr": "بعد شطب نقابة الأطباء لصاحب نظام «الطيبات»، بيحتجّ أنصاره: «جاليليو اتُّرفض من المؤسسة كمان — وكان صح. المعارضة من المؤسسات بتثبت إنك واصل لشيء».",
+      "options": [
+        "A valid historical analogy",
+        "The Galileo Gambit: being rejected does not make you right — for every Galileo there are thousands who were simply wrong"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what single question would most quickly reveal whether someone is a genuine Galileo or just using the Galileo Gambit?",
+        "promptAr": "بكلماتك: إيه السؤال الواحد اللي هيكشف أسرع ما إذا كان حد جاليليو حقيقي أم بس بيستخدم المغالطة؟"
+      },
+      "explanation": "The Galileo Gambit is a specific form of false analogy. The reasoning: 'Galileo was right and was rejected → I am rejected → therefore I am right.' But for every Galileo, there are thousands rejected by science who were simply mistaken. Galileo also provided specific, testable, falsifiable predictions — a genuine distinguishing feature the gambit ignores. Ask: 'What result would prove you wrong?' A scientist answers specifically; a gambit-user cannot.",
+      "explanationAr": "مغالطة جاليليو شكل خاص من المشابهة الزائفة. المنطق: «جاليليو كان صح واتُّرفض ← أنا اتُّرفضت ← يبقى أنا صح». لكن لكل جاليليو في الآلاف ممن رفضتهم العلوم وكانوا ببساطة مخطئين. جاليليو أيضاً قدّم تنبّؤات محدّدة قابلة للاختبار والتفنيد — سمة مميِّزة حقيقية تتجاهلها المغالطة. اسأل: «أي نتيجة ستثبت إنك غلط؟» العالِم بيجاوب بتحديد؛ مستخدِم المغالطة ما يقدرش.",
+      "sources": [
+        "https://sciencebasedmedicine.org/galileo-was-not-a-crank/",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A seller on social media says: 'I tracked my 200 customers for three months. Those who drank my herbal tea all reported feeling better. That proves it works.'",
+      "claimAr": "بائع على السوشيال ميديا بيقول: «تابعت 200 عميل لمدة تلاتة أشهر. اللي شربوا شايي العشبي كلهم أبلغوا إنهم حسّوا أحسن. ده يثبت إنه بينفع».",
+      "prompt": "Before accepting this, what would have to be true if the tea had NO effect? What alternative explanations fit the same data?",
+      "promptAr": "قبل ما تقبل ده، لو الشاي ما كانلوش أي تأثير، إيه اللي لازم يكون صح؟ وإيه التفسيرات البديلة اللي تنطبق على نفس البيانات؟",
+      "modelPoints": [
+        "If the tea had no effect, we would still expect people who paid for it to feel better — placebo effect and expectation are real and measurable.",
+        "Survivorship bias: the customers who felt worse or indifferent likely stopped buying and didn't respond to follow-up. We only hear from the satisfied ones.",
+        "Natural disease variation: many symptoms improve on their own over three months regardless of any intervention.",
+        "No control group means we cannot separate 'the tea helped' from 'time helped' or 'belief helped.'"
+      ],
+      "modelPointsAr": [
+        "لو الشاي ما كانلوش تأثير، هنفضل نتوقّع إن الناس اللي دفعوا تمنه هيحسّوا أحسن — تأثير الدواء الوهمي والتوقّع حقيقيان وقابلان للقياس.",
+        "انحياز الناجين: العملاء اللي حسّوا بتدهور أو ما حسّوش بفرق على الأرجح وقّفوا الشراء وما ردّوش على المتابعة. بنسمع بس من المرضيين.",
+        "تقلّب المرض الطبيعي: كتير من الأعراض بتتحسّن وحدها خلال تلاتة أشهر بغض النظر عن أي تدخّل.",
+        "غياب مجموعة ضابطة معناه ما نقدرش نفصل بين «الشاي ساعد» و«الوقت ساعد» أو «الاعتقاد ساعد»."
+      ],
+      "explanation": "Considering the opposite here reveals that the same data is completely explained without the tea doing anything. Without a control group and blinding, anecdotal improvement is not evidence of efficacy — it is evidence of human psychology.",
+      "explanationAr": "التفكير في العكس هنا بيكشف إن نفس البيانات بتتفسّر بالكامل بدون ما الشاي يعمل حاجة. بدون مجموعة ضابطة وتعمية، التحسّن التجريبي مش دليل على الفعالية — ده دليل على علم النفس البشري.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology",
+        "EAL-case-001:redflag-3"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'All the great discoveries were laughed at first. Scientists laughed at this healer too. Therefore, what he found is probably a great discovery — and the medical establishment is just protecting its profits.'",
+      "claimAr": "فكّك الحُجّة دي: «كل الاكتشافات العظيمة اتضحك عليها في الأول. العلماء ضحكوا على المعالِج ده كمان. يبقى اللي لقيه على الأرجح اكتشاف عظيم — والمؤسسة الطبية بس بتحمي أرباحها».",
+      "parts": [
+        { "text": "What he found is probably a great discovery.", "textAr": "اللي لقيه على الأرجح اكتشاف عظيم.", "role": "conclusion" },
+        { "text": "All great discoveries were laughed at first.", "textAr": "كل الاكتشافات العظيمة اتضحك عليها في الأول.", "role": "premise" },
+        { "text": "Scientists laughed at this healer too.", "textAr": "العلماء ضحكوا على المعالِج ده كمان.", "role": "premise" },
+        { "text": "(Unstated) Everyone who is laughed at is therefore right.", "textAr": "(غير مذكور) كل مَن يُضحَك عليه إذن صح.", "role": "assumption" },
+        { "text": "The medical establishment is just protecting its profits.", "textAr": "المؤسسة الطبية بس بتحمي أرباحها.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION flips the logic: not everyone who is mocked turns out to be right. The conclusion only follows if the premise is 'being laughed at = being correct' — which is false. The 'establishment profits' line is IRRELEVANT to whether the healer's claim is true; it attacks the critics rather than the evidence. Mapping the argument exposes that the conclusion doesn't follow from the premises.",
+      "explanationAr": "الافتراض الخفي بيقلب المنطق: مش كل مَن يُسخَر منه يثبت في النهاية صوابه. الخلاصة بتلزم بس لو الفرضية هي «الاستهزاء = الصواب» — وده غلط. جملة «أرباح المؤسسة» غير ذات صلة بمدى صحة ادعاء المعالِج؛ بتهاجم النقّاد لا الدليل. تفكيك الحُجّة بيكشف إن الخلاصة ما بتلزمش من الفرضيات.",
+      "sources": [
+        "https://sciencebasedmedicine.org/galileo-was-not-a-crank/",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    }
+  ]
+}

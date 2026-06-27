@@ -1,0 +1,121 @@
+{
+  "id": "day123_unfalsifiability_moves",
+  "phase": 3,
+  "week": 18,
+  "day": 123,
+  "title": "Spotting Unfalsifiability in Religious-Framed Claims",
+  "titleAr": "كيف تكشف عدم القابلية للتفنيد في ادعاءات ذات إطار ديني",
+  "description": "A claim structured so that no outcome can ever disprove it has left the domain of honest inquiry — religious or scientific. Learn to spot the pattern in three moves.",
+  "descriptionAr": "ادعاء متهيّكل بحيث ما فيش نتيجة تقدر تفنّده خرج من دائرة الاستفسار الأمين — سواء ديني أو علمي. تعلّم كيف تكشف النمط في ثلاث حركات.",
+  "type": "religion-literacy",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A system claims: 'Follow this diet exactly and you will be healed by Allah's will. If you are not healed, you didn't follow it exactly.' A user wants to test whether this claim is honest. What is the single most revealing question to ask?",
+      "claimAr": "نظام بيدّعي: «اتبّع الحمية دي بالظبط وهتتشفى بإذن الله. لو ما اتشفيتيش، إنت ما اتبّعتهاش بالظبط». مستخدم عايز يختبر إذا كان الادعاء ده أمين. أكثر سؤال كاشف ممكن يسأله إيه؟",
+      "options": [
+        "How many followers does the system have?",
+        "What specific, observable outcome — that the system cannot explain away — would you accept as proof it doesn't work?",
+        "Who invented the system?",
+        "Has the system been featured on television?"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The falsifiability question: 'What would count as disproof?' If the answer is 'nothing — because any failure means the follower is at fault,' the claim is unfalsifiable. That is not modesty about God's will; it is a logical structure that protects the claim from any test. A genuinely honest healer in any tradition can describe what they would NOT expect to see if their treatment doesn't work. The inability to answer this question is the signature of a thought-proof claim.",
+      "explanationAr": "سؤال التفنيد: «إيه اللي هيكون دليل على إنه ما بيشتغلش؟» لو الإجابة «لا شيء — لأن أي فشل يعني إن التابع غلط»، الادعاء مش قابل للتفنيد. ده مش تواضع أمام مشيئة الله؛ ده تركيب منطقي بيحمي الادعاء من أي اختبار. معالج صادق في أي تراث يقدر يوصف ما هو غير متوقّع لو علاجه ما شتغلش.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2,
+      "mechanic": "decompose",
+      "claim": "Map this triple-lock argument: 'Our system is divinely guided, so it heals everyone who follows it faithfully. Those who didn't heal didn't follow faithfully. Critics are paid agents who can't understand divine truth. And we don't need to prove anything now because the future will vindicate us.'",
+      "claimAr": "فكّك الحجة ذات القفل الثلاثي دي: «نظامنا موجَّه إلهياً، فبيشفي كل من يتّبعه بإخلاص. اللي ما اتشفيوش ما اتّبعوش بإخلاص. المنتقدون عملاء مدفوعون لا يستطيعون فهم الحقيقة الإلهية. وما محتاجينش نُثبت حاجة دلوقتي لأن المستقبل سيُثبت صحتنا».",
+      "parts": [
+        { "text": "Our system is divinely guided and heals everyone who follows it faithfully.", "textAr": "نظامنا موجَّه إلهياً وبيشفي كل من يتّبعه بإخلاص.", "role": "conclusion" },
+        { "text": "Those who didn't heal didn't follow faithfully — failure is always the follower's fault.", "textAr": "اللي ما اتشفيوش ما اتّبعوش بإخلاص — الفشل دايماً ذنب التابع.", "role": "premise" },
+        { "text": "Critics are paid agents who cannot understand divine truth — their evidence is automatically invalid.", "textAr": "المنتقدون عملاء مدفوعون لا يفهمون الحقيقة الإلهية — دليلهم باطل تلقائياً.", "role": "premise" },
+        { "text": "We don't need to prove anything now — the future will vindicate us.", "textAr": "ما محتاجينش نُثبت حاجة دلوقتي — المستقبل سيُثبت صحتنا.", "role": "assumption" }
+      ],
+      "explanation": "These three moves create a hermetically sealed loop. The first premise (failure = follower's fault) blocks any past or present counter-evidence from reaching the claim. The second (critics = corrupt) blocks any expert dissent. The third (future vindication) defers any demand for evidence permanently. When all three are active, the claim cannot be reached from any direction: no past failure, no present critic, and no future deadline can threaten it. This structure is not science and it is not religion — it is a logical trap.",
+      "explanationAr": "الثلاث حركات دي بتعملوا حلقة محكمة الإغلاق. الافتراض الأول (الفشل = ذنب التابع) بيمنع أي دليل معاكس ماضٍ أو حاضر من الوصول للادعاء. التاني (المنتقدون = فاسدون) بيمنع أي معارضة من خبراء. التالت (التبرئة المستقبلية) بيُرجئ أي طلب دليل بشكل دائم. لمّا الثلاثة شغّالين، الادعاء لا يمكن الوصول إليه من أي اتجاه.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "True or false: an unfalsifiable claim can still be considered scientifically valid if enough people believe it sincerely.",
+      "claimAr": "صح ولا غلط: الادعاء غير قابل للتفنيد ممكن يُعتبَر صحيحاً علمياً لو بيصدّقه ناس كتير بصدق.",
+      "options": [
+        "True — mass sincere belief makes an unfalsifiable claim scientifically valid",
+        "False — scientific validity depends on method (testability), not on the number or sincerity of believers"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why is mass sincere belief NOT a substitute for testability — and can you think of a historical example where millions believed something sincerely that turned out to be wrong?",
+        "promptAr": "بكلماتك: ليه التصديق الجماعي الصادق مش بديل للقابلية للاختبار — وهل تقدر تفكّر في مثال تاريخي إيه ملايين صدّقوا بصدق شيئاً اتثبت إنه غلط؟"
+      },
+      "explanation": "False. Scientific validity depends on the method: can the claim be tested, and can it potentially be shown to be wrong? Sincerity and popularity are not part of that criterion. Millions once sincerely believed the earth was flat, or that bloodletting cured fever — sincerity did not make those claims true. This is emphatically not an argument against sincere faith — faith in the religious sense has different goals and different standards. The problem arises specifically when an unfalsifiable idea is presented as a medical or scientific fact.",
+      "explanationAr": "غلط. الصحة العلمية بتعتمد على المنهج: الادعاء ممكن يتاختبر؟ وممكن — من حيث المبدأ — تُثبت إنه غلط؟ الصدق والرواج مش جزء من هذا المعيار. ملايين صدّقوا يوماً بصدق إن الأرض مسطّحة أو إن الحجامة الدموية تشفي الحُمّى — الصدق ما جعل تلك الادعاءات صحيحة. ده بالتأكيد مش حجة ضد الإيمان الصادق. المشكلة بتظهر تحديداً لمّا فكرة غير قابلة للتفنيد بتتقدَّم كحقيقة طبية أو علمية.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A seller says: 'This herb cures all diseases because it contains a divine blessing that science cannot measure.' The seller argues that since science cannot test divine blessing, science has no right to say the herb doesn't work.",
+      "claimAr": "بائع بيقول: «العشب ده بيشفي كل الأمراض لأنه يحتوي على بركة إلهية العلم ما يقدرش يقيسها». البائع بيجادل إنه بما أن العلم ما يقدرش يختبر البركة الإلهية، مفيش له حق يقول إن العشب ما بيشتغلش.",
+      "prompt": "Before accepting this: what would need to be true if the seller is wrong? What specific things can science actually measure here — and what does the claim structure reveal?",
+      "promptAr": "قبل قبوله: إيه اللي لازم يكون صح لو البائع غلط؟ وإيه الحاجات المحدّدة اللي العلم يقدر فعلاً يقيسها هنا — وإيه اللي بنية الادعاء بتكشفه؟",
+      "modelPoints": [
+        "Science cannot test 'divine blessing' as a mechanism — but it CAN test the OUTCOME claim: do people who take this herb recover from diseases faster than people who don't? That is entirely measurable.",
+        "If the herb produces no measurable benefit over placebo in an RCT, science HAS tested the claim — the 'untestable divine mechanism' argument does not exempt the effect from being measured.",
+        "The three-part structure ('cures all diseases' + 'divine blessing' + 'science cannot measure') is a triple lock: enormous claim, untestable mechanism, pre-excluded test tool. All three are needed together precisely because none is sufficient alone.",
+        "A sincere believer in divine healing would still be able to observe outcomes — if God heals through this herb, we should see it in properly controlled data. The immunity claim says we should accept the claim WITHOUT the evidence God's actual healing would produce."
+      ],
+      "modelPointsAr": [
+        "العلم ما يقدرش يختبر «البركة الإلهية» كآلية — لكنه يقدر يختبر ادعاء النتيجة: هل الناس اللي بياخدوا العشب بيتعافوا من الأمراض أسرع من اللي ما بياخدوهوش؟ ده قابل للقياس كلياً.",
+        "لو العشب ما ينتجش فائدة قابلة للقياس فوق الوهمي في تجربة مُحكَمة، العلم قد اختبر الادعاء — حجة «الآلية الإلهية غير القابلة للاختبار» لا تُعفي الأثر من القياس.",
+        "التركيب الثلاثي («يشفي كل الأمراض» + «بركة إلهية» + «العلم ما يقدرش يقيسها») قفل ثلاثي: ادعاء ضخم، وآلية غير قابلة للاختبار، وأداة اختبار متضمَّن إقصاؤها. الثلاثة محتاجة مع بعض بالظبط لأن لا واحدة منهم كافية لوحدها.",
+        "مؤمن صادق بالشفاء الإلهي سيظل قادراً على ملاحظة النتائج — لو الله بيشفي من خلال العشب ده، المفروض نشوفه في بيانات مُحكَمة. ادعاء الحصانة بيقول نقبل الادعاء بدون الدليل اللي الشفاء الإلهي الحقيقي سيُنتجه."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 120,
+      "claim": "A friend says: 'Isn't requiring evidence for religious healing a form of doubting God's power?' You recall from an earlier session (Day 120) that there is an important distinction to draw here.",
+      "claimAr": "صاحب بيقول: «مش طلب الدليل على الشفاء الديني هو نوع من الشكّ في قدرة الله؟» بتتذكّر من وحدة سابقة (اليوم 120) إن في فرق مهم لازم ترسمه.",
+      "options": [
+        "Yes — requiring evidence for religious healing is doubting God",
+        "No — requiring evidence challenges the human SELLER's claim, not God's power; God's power needs no commercial system to operate"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The distinction that matters: asking for evidence challenges the human seller's medical claim — not God's power. God's actual power needs no specific commercial product to operate. What is being tested is whether this specific herb, sold by this specific person, produces the effect claimed in the physical world — that is a human claim requiring human-world evidence. The Prophet ﷺ taught 'tie your camel, then put your trust in Allah' — combining precaution with trust, not replacing one with the other. This is a retrieval of the Day 120 concept applied to a new scenario.",
+      "explanationAr": "الفرق المهم: طلب الدليل بيتحدّى ادعاء البائع الإنساني — مش قدرة الله. قدرة الله الحقيقية ما تحتاجش منتجاً تجارياً محدّداً علشان تشتغل. اللي بيتاختبر هو إذا كانت العشبة دي، المباعة من هذا الشخص، تنتج الأثر المدّعى في العالم المادي. النبي ﷺ علّم «اعقل ناقتك ثم توكّل» — جمع بين الحيطة والتوكّل لا استبدال أحدهما بالآخر. هذا استرجاع لمفهوم اليوم 120 في سيناريو جديد.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://sunnah.com/tirmidhi:2517"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

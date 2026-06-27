@@ -1,0 +1,129 @@
+{
+  "id": "day44_gish_gallop",
+  "phase": 1,
+  "week": 7,
+  "day": 44,
+  "title": "The Gish Gallop — Buried Under Quantity",
+  "titleAr": "جالوب جيش — المدفون تحت الكميّة",
+  "description": "When someone fires ten weak claims faster than you can answer, it feels like they've won — but quantity is not quality. Today you learn to name the move and respond without drowning.",
+  "descriptionAr": "لمّا حد يطلق عشر ادعاءات ضعيفة أسرع مما تقدر ترد، حاسس إنه كسب — بس الكميّة مش الجودة. النهاردة تتعلّم تسمّي الحركة وترد من غير ما تغرق.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "In a live TV debate, a promoter of the viral Taybat diet system says in 90 seconds: 'Chicken has hormones. Milk causes inflammation. The liver can't handle processed food. Scientists are paid by pharma. Sugar feeds cancer. Grains cause autoimmune disease. Eggs raise cholesterol. Modern wheat is different from old wheat. Vegetables have pesticides. Fasting reverses diabetes.' You try to address the first point; he's already on point seven. What tactic is this?",
+      "claimAr": "في نقاش تلفزيوني مباشر، مروّج نظام «الطيبات» بيقول في 90 ثانية: «الفراخ فيها هرمونات. اللبن بيسبّب التهاب. الكبد ما يتحملش الأكل المعالَج. العلماء مدفوع لهم من الدواء. السكر بيغذّي السرطان. الحبوب بتسبّب أمراض المناعة. البيض بيرفع الكوليسترول. القمح الحديث مختلف عن القديم. الخضار فيها مبيدات. الصيام بيعكس السكري». بتحاول ترد على النقطة الأولى؛ هو خلص لنقطة سابعة. إيه التكتيك ده؟",
+      "options": [
+        "A well-prepared presentation",
+        "The Gish Gallop — flooding an opponent with many weak or half-true claims faster than they can be answered, creating a false impression of overwhelming evidence",
+        "A strong logical argument",
+        "Evidence-based debate"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Gish Gallop works by exploiting a time asymmetry: it takes a few seconds to make a claim and several minutes to properly address it. The audience hears ten unanswered points and concludes the debater who raised them must be right. The error is treating quantity of claims as quality of evidence — they are completely separate things.",
+      "explanationAr": "جالوب جيش بيشتغل بواسطة الاستغلال عدم التوازن في الوقت: لازم ثوان قليلة تعمل ادعاء وعدة دقايق تعالجه صح. الجمهور بيسمع عشر نقاط بدون رد ويستنتج إن اللي أثارها لازم يكون صح. الغلط في معاملة كميّة الادعاءات كجودة الأدلة — وهما حاجتان منفصلتان تماماً.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://sciencebasedmedicine.org/debate-creationism/"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "If someone makes ten claims and you can only refute five of them in the time available, the remaining five are proven correct.",
+      "claimAr": "لو حد عمل عشر ادعاءات وقدرت بس تفنّد خمسة منهم في الوقت المتاح، الخمسة الباقية اتثبتوا.",
+      "correctAnswer": false,
+      "myth_en": "An unrebutted claim is a proven claim.",
+      "myth_ar": "الادعاء اللي ما اترُدّ عليه ادعاء مُثبَت.",
+      "explanation": "False. The burden of proof lies with the person making the claim, not the person responding. 'You didn't have time to answer' is not the same as 'the claim is true.' The Gish Gallop exploits this confusion deliberately. The practical defence is to pick the strongest one or two claims, address them thoroughly, and name the tactic: 'There are ten claims here — I'll address the most important, but sheer quantity doesn't make any of them true.' Calibrate: how sure were you before reading this?",
+      "explanationAr": "غلط. عبء الإثبات على اللي بيقدّم الادعاء مش على اللي بيردّ. «ما عندكش وقت ترد» مش نفس «الادعاء صح». جالوب جيش بيستغل الخلط ده بقصد. الدفاع العملي إنك تختار الادعاء أو الاتنين الأقوى، تتناولهم بعمق، وتسمّي التكتيك: «في عشر ادعاءات هنا — هرد على الأهم، لكن مجرد الكميّة ما بتثبتش أي واحد فيهم».",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A friend sends you a WhatsApp message with 15 bullet points 'proving' a diet cures diabetes. You feel overwhelmed and a little impressed by the length. The healthy first move is to isolate ONE claim and test it, not tackle all 15.",
+      "claimAr": "صاحب بعتلك رسالة واتساب فيها 15 نقطة «بتثبت» إن حمية بتشفي السكري. حاسس بالإرهاق وانبهار بسيط من الطول. الحركة الصحية الأولى هي إنك تعزل ادعاء واحد وتختبره، مش تتعامل مع الـ15.",
+      "options": [
+        "False — you should address all 15 or you can't respond",
+        "True — depth on one claim beats breadth across fifteen"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does tackling ONE claim carefully tell you more than skimming all fifteen? What specifically would you look for in that one claim?",
+        "promptAr": "بكلماتك: ليه التعامل مع ادعاء واحد بعناية بيقولك أكتر من تصفّح الخمسطاشر؟ وإيه بالتحديد اللي هتدوّر عليه في الادعاء ده؟"
+      },
+      "explanation": "Length creates an illusion of authority. The healthy move is to isolate one claim and test it properly — not try to process all 15 at once (that's exactly the trap). Ask: 'Can any of these be traced to a peer-reviewed study in a clinical journal?' One strong study on one claim tells you more than 15 bullet-point assertions.",
+      "explanationAr": "الطول بيخلق وهم السلطة. الحركة الصحية إنك تعزل ادعاء واحد وتختبره صح — مش تحاول تعالج الـ15 دفعة واحدة (ده بالظبط الفخّ). اسأل: «أي واحدة من دول ممكن نتتبّعها لدراسة محكَّمة في مجلة طبية؟» دراسة واحدة قوية على ادعاء واحد بتقولك أكتر من 15 ادعاء في نقط.",
+      "sources": [
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "In a debate, the best response to a Gish Gallop is to counter with your own long list of rebuttals — matching their quantity with equal quantity.",
+      "claimAr": "في نقاش، أفضل رد على جالوب جيش هو إنك ترد بقائمة ردود طويلة خاصة بيك — تطابق كميّتهم بكميّة مساوية.",
+      "prompt": "What would have to be true for this counter-flooding strategy to BACKFIRE? What does it normalize?",
+      "promptAr": "إيه اللي لازم يكون صح علشان استراتيجية «الفيضان المضاد» دي تنعكس عليك؟ وإيه اللي بتجعله طبيعي؟",
+      "modelPoints": [
+        "Counter-flooding normalises the method: both sides are now using quantity-as-argument, which rewards the tactic instead of exposing it.",
+        "The audience still cannot evaluate 20 claims in real time — so the debate shifts to who seems more confident, not who is more accurate.",
+        "Naming the tactic breaks the spell more effectively: 'That was ten claims in ninety seconds — let me take the strongest one carefully.'",
+        "Depth on one claim demonstrates that evidence matters and that the other side cannot survive scrutiny, which is far more persuasive than matching their list.",
+        "The goal of a Gish Gallop is to exhaust and confuse — meeting it with flood validates the goal; naming it and focusing redirects the frame entirely."
+      ],
+      "modelPointsAr": [
+        "الفيضان المضاد بيجعّل الأسلوب طبيعي: الطرفان دلوقتي بيستخدموا الكميّة كحجّة، وده بيكافئ التكتيك بدل ما يفضحه.",
+        "الجمهور لسه ما يقدرش يقيّم 20 ادعاء في الوقت الحقيقي — فالنقاش بينتقل لمن يبدو أكتر ثقة، مش مين أكتر دقة.",
+        "تسمية التكتيك بتكسر التعويذة بفعالية أكبر: «دي كانت عشر ادعاءات في تسعين ثانية — خليني آخد الأقوى بعناية».",
+        "العمق في ادعاء واحد بيُثبت إن الأدلة مهمة وإن الجانب التاني ما يقدرش يتحمّل التدقيق، وده أقنع بكتير من مطابقة قائمتهم.",
+        "هدف جالوب جيش هو الإرهاق والإرباك — مقابلته بالفيضان بيُصادق على الهدف؛ تسميته والتركيز بيعيد تأطير المشهد كلياً."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://sciencebasedmedicine.org/debate-creationism/"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "Gish Gallop — flooding with quantity",
+      "techniqueAr": "جالوب جيش — الإغراق بالكميّة",
+      "task": "Write a 90-second spoken script promoting a harmless claim (e.g. 'take a 10-minute walk every day') using the Gish Gallop method: pack in at least seven separate sub-claims, each stated confidently, switching topics fast enough that a listener cannot process one before the next arrives.",
+      "taskAr": "اكتب سكريبت شفهي مدته 90 ثانية بيروّج لادعاء غير ضار (مثلاً «امشي 10 دقايق كل يوم») بأسلوب جالوب جيش: حشّ فيه سبع ادعاءات فرعية على الأقل، كل واحدة مُعلَنة بثقة، وبتغيّر الموضوع بسرعة بحيث المستمع ما يقدرش يعالج واحدة قبل ما التالية توصل.",
+      "tells": [
+        "Rapid topic-switching — each claim appears for 3-5 seconds maximum before the next one lands.",
+        "No evidence cited for any individual claim — the pace makes asking for sources feel rude.",
+        "Confident assertive tone regardless of claim strength.",
+        "The sheer volume creates an impression of a thorough case — but none of the claims were defended.",
+        "An unanswered claim is not a proven claim: burden of proof stays with the person making it."
+      ],
+      "tellsAr": [
+        "تبديل سريع للمواضيع — كل ادعاء يظهر لمدة أقصاها 3-5 ثوان قبل ما التالي يوصل.",
+        "لا دليل مُستشهَد به لأي ادعاء منفرد — السرعة بتخلّي طلب المصادر يحسّس بالوقاحة.",
+        "نبرة واثقة حازمة بصرف النظر عن قوة الادعاء.",
+        "الحجم الكبير بيخلق انطباع بأن الحجّة شاملة — لكن ما اتدافع عن أي ادعاء.",
+        "الادعاء الذي لم يُرَدّ عليه ليس ادعاءً مُثبَتاً: عبء الإثبات يظل على من يُقدّمه."
+      ],
+      "explanation": "Writing the gallop yourself reveals its mechanics from the inside: the speed dependency, the confidence-as-substitute-for-evidence, and the cognitive overload it deliberately creates. After building it, you will hear the same pattern in any rapid-fire list of health or dietary claims — and you will know to slow down and isolate one claim before responding.",
+      "explanationAr": "كتابة الجالوب بنفسك بتكشف ميكانيكته من الداخل: الاعتماد على السرعة، والثقة كبديل للأدلة، والإرهاق الإدراكي اللي بيخلقه بقصد. بعد ما تبنيه، هتسمع نفس النمط في أي قائمة سريعة من الادعاءات الصحية أو الغذائية — وهتعرف إنك تبطّأ وتعزل ادعاء واحد قبل ما ترد.",
+      "sources": [
+        "https://sciencebasedmedicine.org/debate-creationism/",
+        "https://www.jmir.org/2023/1/e49255"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    }
+  ]
+}

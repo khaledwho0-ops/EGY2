@@ -1,0 +1,232 @@
+{
+  "_meta": {
+    "instrument": "Brief-RCOPE",
+    "fullName": "Brief Religious Coping Scale",
+    "citation": "Pargament, K. I., Smith, B. W., Koenig, H. G., & Perez, L. (1998). Patterns of positive and negative religious coping with major life stressors. Journal for the Scientific Study of Religion, 37(4), 710–724. DOI: 10.2307/1388152",
+    "shortScaleReference": "Pargament, K. I., Feuille, M., & Burdzy, D. (2011). The Brief RCOPE: Current psychometric status of a short measure of religious coping. Religions, 2(1), 51–76. DOI: 10.3390/rel2010051",
+    "validationPMID": "PMC4378189",
+    "validationURL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4378189/",
+    "items": 14,
+    "subscales": ["positive_religious_coping", "negative_religious_coping"],
+    "itemsPerSubscale": 7,
+    "responseFormat": "4-point Likert: 1=Not at all, 2=Somewhat, 3=Quite a bit, 4=A great deal",
+    "scoreRange": {
+      "positive": "7–28 (higher = more positive coping)",
+      "negative": "7–28 (higher = more negative coping/spiritual struggle)"
+    },
+    "reliabilityPositive": "Cronbach α = .81–.90 (positive subscale)",
+    "reliabilityNegative": "Cronbach α = .69–.84 (negative subscale)",
+    "validity": "Concurrent validity established against the full 105-item RCOPE (r = .91 positive; r = .87 negative)",
+    "egyptianAdaptation": {
+      "status": "Culturally adapted for Egyptian Muslim context",
+      "adaptationNotes": "Items translated and culturally validated for Arabic-speaking Muslims. 'God' references retained as 'الله' (Allah). Items referencing 'church' adapted to 'mosque/masjid'. Fatwa references added where appropriate.",
+      "arabicValidation": "Abdel-Khalek & Lester (2012) validated Arabic religious coping measures in Egyptian samples: Journal of Muslim Mental Health, 6(2). DOI: 10.3998/jmmh.10381607.0006.201",
+      "crisisLine": "16328 (Egyptian Mental Health Hotline)"
+    },
+    "ealIntegration": {
+      "usedIn": ["mental-health module", "religion-hub", "Phase 3 Islamic literacy"],
+      "components": ["HelpSeekingWizard.tsx", "MaqasidCheck.tsx"],
+      "administeredAt": ["Day 6 (baseline)", "Day 25 (mid-point)", "Day 140 (Phase 3 completion)"],
+      "xapiVerb": "experienced",
+      "supervisorMetric": "religious_coping_trajectory"
+    },
+    "clinicalNote": "This instrument is used for educational and research purposes within EAL. It does NOT constitute a clinical assessment. Users scoring high on negative religious coping (≥21) are automatically routed to the HelpSeekingWizard and shown Egyptian mental health resources.",
+    "mindframeGuidelines": "Per Mindframe (Australia) and adapted for Egyptian context: always pair religious coping content with professional resource referral. Never use coping scales to pathologize religious practice.",
+    "framework": "§5.2 (Mental Health Vertical Integration)"
+  },
+  "config": {
+    "id_template": "brief-rcope-{phase}",
+    "name": "Brief Religious Coping Scale (Brief-RCOPE)",
+    "shortName": "Brief-RCOPE",
+    "description": "The following questions ask about ways you cope with stress, problems, or difficult situations using your faith. There are no right or wrong answers.",
+    "description_ar": "الأسئلة التالية تسأل عن الطرق التي تتعامل بها مع الضغوط والمشكلات والمواقف الصعبة من خلال إيمانك. لا توجد إجابات صحيحة أو خاطئة.",
+    "instruction": "Think about a difficult situation you have faced recently. Rate how much you used each of the following to cope with it.",
+    "instruction_ar": "فكّر في موقف صعب واجهته مؤخراً. قيّم مدى استخدامك لكل مما يلي للتعامل معه.",
+    "shuffle": false,
+    "phases": ["baseline_day6", "midpoint_day25", "phase3_completion_day140", "final_day168"]
+  },
+  "responseScale": {
+    "1": { "en": "Not at all", "ar": "لا على الإطلاق" },
+    "2": { "en": "Somewhat", "ar": "إلى حد ما" },
+    "3": { "en": "Quite a bit", "ar": "كثيراً" },
+    "4": { "en": "A great deal", "ar": "كثيراً جداً" }
+  },
+  "items": [
+    {
+      "id": "rcope-p01",
+      "subscale": "positive",
+      "text_en": "Looked for a stronger connection with God (Allah).",
+      "text_ar": "بحثت عن ارتباط أقوى بالله.",
+      "scoring_direction": "positive",
+      "egyptianContext": "Common Egyptian expression of faith during hardship — seeking closeness to Allah (تقرب إلى الله)"
+    },
+    {
+      "id": "rcope-p02",
+      "subscale": "positive",
+      "text_en": "Sought God's (Allah's) love and care.",
+      "text_ar": "طلبت محبة الله ورحمته.",
+      "scoring_direction": "positive",
+      "egyptianContext": "Aligned with the Islamic concept of Rahmah (رحمة) — God's mercy as a source of comfort"
+    },
+    {
+      "id": "rcope-p03",
+      "subscale": "positive",
+      "text_en": "Sought help from God (Allah) in letting go of my anger.",
+      "text_ar": "طلبت من الله المساعدة للتخلص من غضبي.",
+      "scoring_direction": "positive",
+      "egyptianContext": "Islamic teaching on controlling anger (كظم الغيظ) as a virtue — Hadith: 'Do not get angry' (Bukhari)"
+    },
+    {
+      "id": "rcope-p04",
+      "subscale": "positive",
+      "text_en": "Tried to put my plans into action together with God (Allah).",
+      "text_ar": "حاولت تنفيذ خططي بالتوكل على الله.",
+      "scoring_direction": "positive",
+      "egyptianContext": "Tawakkul (التوكل) — reliance on God while taking action. Islamic principle of effort + trust in God."
+    },
+    {
+      "id": "rcope-p05",
+      "subscale": "positive",
+      "text_en": "Tried to see how God (Allah) might be trying to strengthen me in this situation.",
+      "text_ar": "حاولت أن أرى كيف يمكن أن يكون الله يقوّيني من خلال هذا الموقف.",
+      "scoring_direction": "positive",
+      "egyptianContext": "Concept of Ibtila' (ابتلاء) — trials as divine tests that build character. Common Egyptian religious frame."
+    },
+    {
+      "id": "rcope-p06",
+      "subscale": "positive",
+      "text_en": "Asked for forgiveness of my sins.",
+      "text_ar": "طلبت المغفرة عن ذنوبي.",
+      "scoring_direction": "positive",
+      "egyptianContext": "Istighfar (الاستغفار) — seeking divine forgiveness as a coping strategy. Highly prevalent in Egyptian culture."
+    },
+    {
+      "id": "rcope-p07",
+      "subscale": "positive",
+      "text_en": "Focused on religion to stop worrying about my problems.",
+      "text_ar": "تركزت على الدين لأوقف قلقي حول مشكلاتي.",
+      "scoring_direction": "positive",
+      "egyptianContext": "Dhikr (ذكر الله) and prayer as anxiety management — common coping in Egyptian Muslim households."
+    },
+    {
+      "id": "rcope-n01",
+      "subscale": "negative",
+      "text_en": "Wondered whether God (Allah) had abandoned me.",
+      "text_ar": "تساءلت إذا كان الله قد تخلى عني.",
+      "scoring_direction": "negative",
+      "clinicalAlert": true,
+      "egyptianContext": "Feeling abandoned by God can signal spiritual crisis. In Islamic theology, this is associated with Waswas (وسواس — whispers of Shaytan). High score triggers gentle psychoeducation."
+    },
+    {
+      "id": "rcope-n02",
+      "subscale": "negative",
+      "text_en": "Felt punished by God (Allah) for my lack of devotion.",
+      "text_ar": "شعرت بأن الله يعاقبني بسبب ضعف إيماني.",
+      "scoring_direction": "negative",
+      "clinicalAlert": true,
+      "egyptianContext": "Common in contexts of illness or loss. Can lead to guilt-based avoidance of religious community. Important to address with Islamic scholars' perspective (Dar Al-Ifta resources)."
+    },
+    {
+      "id": "rcope-n03",
+      "subscale": "negative",
+      "text_en": "Wondered what I did for God (Allah) to punish me like this.",
+      "text_ar": "تساءلت ماذا فعلت لكي يعاقبني الله هكذا.",
+      "scoring_direction": "negative",
+      "clinicalAlert": true,
+      "egyptianContext": "Self-blame framing in religious context. Can reinforce depression. EAL links this to myth-autopsy.tsx for the 'depression is punishment' myth."
+    },
+    {
+      "id": "rcope-n04",
+      "subscale": "negative",
+      "text_en": "Questioned God's (Allah's) love for me.",
+      "text_ar": "شككت في محبة الله لي.",
+      "scoring_direction": "negative",
+      "clinicalAlert": true,
+      "egyptianContext": "Theological doubt during crisis. EAL routes high scorers to fatwa-context page for Dar Al-Ifta's perspective on God's love (رحمة الله الواسعة)."
+    },
+    {
+      "id": "rcope-n05",
+      "subscale": "negative",
+      "text_en": "Wondered whether my mosque/religious community had abandoned me.",
+      "text_ar": "تساءلت إذا كان مجتمعي الديني قد تخلى عني.",
+      "scoring_direction": "negative",
+      "egyptianContext": "Adapted from original 'church' to 'mosque/masjid'. Social isolation from religious community is a significant risk factor for Egyptian Muslims."
+    },
+    {
+      "id": "rcope-n06",
+      "subscale": "negative",
+      "text_en": "Decided the devil was making this happen.",
+      "text_ar": "قررت أن الشيطان هو من يتسبب في هذا.",
+      "scoring_direction": "negative",
+      "egyptianContext": "Externalizing blame to Shaytan (الشيطان). While Islamic theology does acknowledge Shaytan's role, excessive attribution can prevent taking personal responsibility or seeking treatment."
+    },
+    {
+      "id": "rcope-n07",
+      "subscale": "negative",
+      "text_en": "Questioned the power of God (Allah) to help me.",
+      "text_ar": "شككت في قدرة الله على مساعدتي.",
+      "scoring_direction": "negative",
+      "clinicalAlert": true,
+      "egyptianContext": "Doubting God's omnipotence (القدرة الإلهية) during severe stress. High score on this item warrants immediate HelpSeekingWizard activation."
+    }
+  ],
+  "scoring": {
+    "positive_subscale": {
+      "items": ["rcope-p01", "rcope-p02", "rcope-p03", "rcope-p04", "rcope-p05", "rcope-p06", "rcope-p07"],
+      "formula": "Sum of 7 items (range 7–28)",
+      "interpretation": {
+        "7–14": "Low positive religious coping — user may not be drawing on faith as a resource",
+        "15–21": "Moderate positive religious coping",
+        "22–28": "High positive religious coping — faith is a central coping resource"
+      }
+    },
+    "negative_subscale": {
+      "items": ["rcope-n01", "rcope-n02", "rcope-n03", "rcope-n04", "rcope-n05", "rcope-n06", "rcope-n07"],
+      "formula": "Sum of 7 items (range 7–28)",
+      "interpretation": {
+        "7–14": "Low negative religious coping — no significant spiritual struggle",
+        "15–20": "Moderate negative religious coping — some spiritual struggle present",
+        "21–28": "High negative religious coping — significant spiritual struggle — CLINICAL ALERT: Route to HelpSeekingWizard + crisis resources"
+      },
+      "clinicalAlert": {
+        "threshold": 21,
+        "action": "Trigger HelpSeekingWizard with Egyptian mental health resources",
+        "resources": [
+          { "name": "Egyptian Mental Health Crisis Line", "phone": "16328", "available": "24/7" },
+          { "name": "Dar Al-Ifta Al-Missriyyah", "url": "https://www.dar-alifta.org", "type": "Islamic guidance" },
+          { "name": "Egyptian Psychiatric Association", "url": "https://epamh.org", "type": "Clinical referral" }
+        ]
+      }
+    },
+    "trajectory": {
+      "description": "EAL tracks Brief-RCOPE trajectory across 4 time points",
+      "positive_goal": "Stable or increasing positive coping",
+      "negative_goal": "Decreasing negative coping (especially items n01–n04)",
+      "xapi_statement": "verb:experienced, object:brief-rcope, result:positive_score+negative_score",
+      "supervisorMetric": "religious_coping_trajectory"
+    }
+  },
+  "ealRouting": {
+    "high_positive_low_negative": {
+      "label": "Secure Believer",
+      "description": "Faith is a genuine resource. EAL reinforces this through Phase 3 Islamic Literacy content.",
+      "route": "/religion-hub"
+    },
+    "high_positive_high_negative": {
+      "label": "Struggling Believer",
+      "description": "Faith is important but causing conflict. Route to fatwa-context and hadith-check for theological clarity.",
+      "route": "/religion-hub/tools/fatwa-context"
+    },
+    "low_positive_low_negative": {
+      "label": "Non-religious Coper",
+      "description": "Religion is not a primary coping resource. EAL respects this — route to secular mental health tools.",
+      "route": "/mental-health"
+    },
+    "low_positive_high_negative": {
+      "label": "Spiritual Crisis",
+      "description": "CRITICAL — faith is causing harm without providing comfort. Immediate HelpSeekingWizard activation.",
+      "route": "/mental-health",
+      "alertLevel": "HIGH"
+    }
+  }
+}

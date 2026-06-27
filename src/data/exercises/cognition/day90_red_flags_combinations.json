@@ -1,0 +1,121 @@
+{
+  "id": "day90_red_flags_combinations",
+  "phase": 2,
+  "week": 13,
+  "day": 90,
+  "title": "When Red Flags Combine — The Danger Multiplier",
+  "titleAr": "لمّا علامات الخطر تتجمّع — مضاعِف الخطر",
+  "description": "One red flag is a caution signal. Five or more, especially when stacked deliberately, means the system is almost certainly harmful. Learn to count the stack.",
+  "descriptionAr": "علامة خطر واحدة هي إشارة تنبّه. خمسة أو أكثر، خاصة لمّا تتراكم بشكل مقصود، معناه النظام مؤذٍ على الأرجح. اتعلّم تعدّ التراكم.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://www.sciencebasedmedicine.org/what-is-science-based-medicine/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Count the red flags in this scenario: A seller (1) promises to cure cancer and IBS with one tea; (2) has no published studies; (3) says 'Big Pharma blocked my research'; (4) calls the tea 'pure' and standard medicine 'poison'; (5) says failure means you didn't believe enough. How many, and what is your verdict?",
+      "claimAr": "عُدّ علامات الخطر في السيناريو ده: بائع (1) بيوعد بشفاء السرطان والقولون بشاي واحد؛ (2) ما عنده دراسات منشورة؛ (3) بيقول «شركات الدوا حجبت بحثي»؛ (4) بيسمّي الشاي «طاهر» والدواء العادي «سُم»؛ (5) بيقول الفشل معناه ما صدّقتش بما يكفي. كم واحدة، وإيه حُكمك؟",
+      "options": [
+        "One or two flags — the product might still work",
+        "Five flags: #1 (cures everything), #2 (no publications), #5 (Big Pharma), #6 (moral language), #4 (unfalsifiable) — five or more means almost certainly harmful",
+        "These are all marketing techniques, not red flags",
+        "Three flags — not enough to be concerned"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Five red flags in a single claim is a very high-risk pattern. Notice they are not random — they work together: the cure-all promise attracts buyers; no evidence means nothing can be checked; the conspiracy frame deflects critics; the moral language builds identity; the unfalsifiable failure clause means no bad outcome can count against the seller. This architecture is not accidental. The viral Taybat diet system triggered all twelve.",
+      "explanationAr": "خمس علامات خطر في ادعاء واحد نمط عالي الخطورة جداً. لاحظ إنها مش عشوائية — بتشتغل مع بعض: وعد الشفاء الشامل بيجذب المشترين؛ لا دليل يعني ما فيش حاجة تتفحّص؛ إطار المؤامرة بيحوّل النقّاد؛ اللغة الأخلاقية بتبني الهوية؛ شرط الفشل غير القابل للتفنيد يعني لا نتيجة سيّئة تتراكم على البائع. البنية دي مش صدفة. نظام «الطيبات» الفيروسي أشعل الاثني عشر كلهم.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.sciencebasedmedicine.org/what-is-science-based-medicine/"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "If a system triggers five or more red flags, the polite thing is to stay silent and not upset the person following it.",
+      "claimAr": "لو نظام أشعل خمس علامات خطر أو أكثر، الحاجة المؤدّبة إنك تسكت وما تزعّلش الشخص اللي بيتّبعه.",
+      "correctAnswer": false,
+      "myth_en": "Kindness means silence when someone believes something harmful.",
+      "myth_ar": "اللطف معناه الصمت لمّا حد يؤمن بحاجة مؤذية.",
+      "explanation": "False. Real kindness is concern for someone's wellbeing, not for their comfort in the moment. A five-flag system has a documented track record of causing harm. The approach is not 'you are wrong' but 'I care about you, so I found some questions worth asking together.' Calibration check: how confident were you? Silence feels safe, but in cases like the Taybat system, that silence had documented consequences.",
+      "explanationAr": "غلط. اللطف الحقيقي هو الاهتمام بسلامة شخص ما، مش براحته في اللحظة. نظام بخمس علامات عنده سجل حافل موثّق بالأذى. الأسلوب مش «إنت غلطان» لكن «أنا بخاف عليك، فلقيت أسئلة تستاهل نسألها سوا.» معايرة ذاتية: كنت متأكد قد إيه؟ الصمت بيحسّس بالأمان، لكن في حالات زي نظام الطيبات، الصمت ده كان له عواقب موثَّقة.",
+      "sources": [
+        "https://www.apa.org/monitor/2019/11/motivated-skepticism",
+        "EAL-case-001:masrawy-2026-04-30"
+      ],
+      "cognitivebiasAtPlay": "Sunk-Cost Fallacy"
+    },
+    {
+      "id": 3,
+      "mechanic": "decompose",
+      "claim": "Decompose this argument: 'Milk and eggs are toxic. Cancer improves on diet alone. Symptoms getting worse is a healing crisis — proof the system is working. So stop your chemotherapy and trust the process.'",
+      "claimAr": "فكّك الحُجّة دي: «اللبن والبيض سُم. السرطان بيتحسّن بالحمية لوحدها. تفاقُم الأعراض أزمة شفاء — دليل إن النظام شغّال. يبقى وقّف الكيمو وثق في العملية.»",
+      "parts": [
+        { "text": "Stop your chemotherapy and trust the process.", "textAr": "وقّف الكيمو وثق في العملية.", "role": "conclusion" },
+        { "text": "Milk and eggs are toxic.", "textAr": "اللبن والبيض سُم.", "role": "premise" },
+        { "text": "Cancer improves on diet alone.", "textAr": "السرطان بيتحسّن بالحمية لوحدها.", "role": "premise" },
+        { "text": "Worsening symptoms are a 'healing crisis' — proof the system works.", "textAr": "تفاقم الأعراض «أزمة شفاء» — دليل إن النظام شغّال.", "role": "assumption" },
+        { "text": "(Unstated) Any outcome — improvement or deterioration — proves the system.", "textAr": "(غير مذكور) أي نتيجة — تحسّن أو تدهور — بتثبت النظام.", "role": "assumption" }
+      ],
+      "explanation": "Three red flags stack: #9 (binary thinking — foods are either 'toxic' or 'pure'), #1/#8 (claiming to improve cancer through diet alone encourages stopping oncology treatment), and #4 — most dangerously — the 'healing crisis' reframe makes deterioration into proof. This is a closed loop: any outcome confirms the system. That is the hallmark of unfalsifiable pseudoscience, and it has caused documented fatalities.",
+      "explanationAr": "ثلاث علامات خطر بتتراكم: رقم 9 (التفكير الثنائي — الأطعمة إما «سامة» أو «طاهرة»)، رقم 1/8 (الادعاء بتحسين السرطان بالحمية وحدها بشجّع على إيقاف علاج الأورام)، ورقم 4 — الأخطر — إعادة صياغة «أزمة الشفاء» بتحوّل التدهور لدليل نجاح. ده حلقة مغلقة: أي نتيجة بتُؤكّد النظام. دي علامة العلم الزائف غير القابل للتفنيد، وأفضى لوفيات موثّقة.",
+      "sources": [
+        "EAL-case-001:redflag-4",
+        "EAL-case-001:redflag-9",
+        "https://www.cancer.gov/about-cancer/treatment/cam/hp/cam-diet-pdq"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "Volume of testimonials is strong evidence that a health system works — '10,000 people can't all be wrong.'",
+      "claimAr": "حجم الشهادات دليل قوي إن نظام صحي شغّال — «10,000 شخص ما ينفعش كلهم يبقوا غلطانين».",
+      "prompt": "What would have to be true for 10,000 testimonials to still be unreliable? What is missing?",
+      "promptAr": "إيه اللي لازم يكون صح عشان 10,000 شهادة تبقى لسه غير موثوقة؟ وإيه الغايب؟",
+      "modelPoints": [
+        "If it were reliable, we'd need a control group: how many people with the same condition recovered WITHOUT the system in the same period?",
+        "Survivorship bias: only people who feel better typically report back; those harmed or unchanged are often silent.",
+        "Placebo effect and natural disease course can produce thousands of genuine 'felt better' experiences without any active ingredient.",
+        "The Medical Syndicate requested three documented cases with lab results and received none — volume without documentation is not evidence.",
+        "10,000 pre-Germ Theory testimonials confirmed bloodletting worked. Volume and sincerity are not the same as verification."
+      ],
+      "modelPointsAr": [
+        "لو كانت موثوقة، كنا محتاجين مجموعة ضابطة: كم شخص بنفس الحالة تعافى بدون النظام في نفس الفترة؟",
+        "انحياز الناجين: الناس اللي بتحسّسوا أحسن عادةً هم اللي بيرجعوا يبلّغوا؛ المتضرّرون أو غير المتغيّرين غالباً بيصمتوا.",
+        "التأثير الوهمي والمسار الطبيعي للمرض ممكن يولّدوا آلاف تجارب «حسّيت أحسن» حقيقية من غير أي مادة فعّالة.",
+        "نقابة الأطباء طلبت ثلاث حالات موثّقة بتحاليل ولم تتلقَّ شيئاً — الحجم بدون توثيق مش دليل.",
+        "10,000 شهادة قبل نظرية الجراثيم أكّدت إن الحجامة بالدم شغّالة. الحجم والصدق مش زي التحقق."
+      ],
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "EAL-case-001:redflag-3",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "self_explain",
+      "claim": "When a person is sincere AND has thousands of real success stories, that combination is enough to outweigh the red-flag count.",
+      "claimAr": "لمّا شخص يكون صادق وعنده آلاف قصص نجاح حقيقية، الاتنين دول مع بعض بيكونوا كافيين يتغلّبوا على عدد علامات الخطر.",
+      "options": ["True — sincerity + volume overrides red flags", "False — sincerity and testimonials cannot replace a control group"],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why can't sincerity and story-volume replace what a control group provides?",
+        "promptAr": "بكلماتك: ليه الصدق وحجم القصص ما يقدروش يحلوا محلّ ما بتقدّمه المجموعة الضابطة؟"
+      },
+      "explanation": "Sincerity and testimonials are real human experiences, and dismissing them rudely closes the conversation. But history is full of sincere people who were genuinely wrong about effective treatments. The control group answers the one question testimonials cannot: 'Would these people have improved anyway, without the system?' Without that comparison, we cannot separate the treatment from placebo, natural recovery, or lifestyle changes happening at the same time.",
+      "explanationAr": "الصدق وشهادات النجاح تجارب إنسانية حقيقية، وردّها بوقاحة بيقفل الحوار. لكن التاريخ مليان بناس صادقين كانوا غلطانين فعلاً في علاجات فعّالة. المجموعة الضابطة بتجاوب على السؤال الواحد اللي الشهادات ما تقدرش: «كان الناس دول هيتحسّنوا على أي حال من غير النظام؟» من غير المقارنة دي، ما نقدرش نفصل العلاج عن الوهمي أو التعافي الطبيعي أو تغييرات نمط الحياة اللي حصلت في نفس الوقت.",
+      "sources": [
+        "https://www.apa.org/monitor/2019/11/motivated-skepticism",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "day27_forward_defense",
+  "phase": 0,
+  "week": 4,
+  "day": 27,
+  "title": "Forward Defense Workshop",
+  "titleAr": "ورشة الدفاع المسبق",
+  "description": "Write counter-scripts for family WhatsApp groups — polite, effective, Egyptian.",
+  "descriptionAr": "اكتب ردوداً مضادة لمجموعات واتساب العائلة — مهذبة وفعالة.",
+  "type": "forward_defense",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "Your aunt shares: Boiling onions in the room kills all germs. Write polite counter-script.",
+      "claimAr": "خالتك تشارك: سلق البصل ووضعه في الغرفة يقتل كل الجراثيم. اكتب رداً مهذباً.",
+      "truthValue": "false",
+      "category": "health",
+      "difficulty": 3,
+      "explanation": "Counter template: 1)Acknowledge 2)Bridge 3)Correct 4)Suggest. Never attack the person.",
+      "explanationAr": "قالب الرد: 1)اعترف 2)اربط 3)صحح 4)اقترح. بدون مهاجمة الشخص.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)"
+      ],
+      "cognitivebiasAtPlay": "Folk Wisdom Bias"
+    }
+  ]
+}

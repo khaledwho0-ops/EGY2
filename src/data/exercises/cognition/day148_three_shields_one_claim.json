@@ -1,0 +1,123 @@
+{
+  "id": "day148_three_shields_one_claim",
+  "phase": 4,
+  "week": 22,
+  "day": 148,
+  "title": "Three Shields, One Claim",
+  "titleAr": "ثلاثة دروع، ادعاء واحد",
+  "description": "Real-world claims rarely attack from one direction. A single forwarded message can mix bad logic, fake science, and a misused verse at once. Today: read which shield each layer needs.",
+  "descriptionAr": "الادعاءات في الواقع نادراً ما بتيجي من اتجاه واحد. رسالة واحدة متبعوتة ممكن تخلط منطق غلط وعلم زائف وآية مستغلّة في نفس الوقت. النهاردة: اقرا كل طبقة محتاجة أنهي درع.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 14,
+  "source": "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A «نظام الطيبات» forward says all in one breath: \"Chicken is خبيث (foul), Big Pharma hides this, and one diet cures diabetes AND cancer.\" How many different defenses does this one message actually need?",
+      "claimAr": "رسالة من «نظام الطيبات» بتقول في نفس النفس: «الفراخ خبيثة، شركات الدوا بتخفي ده، وحمية واحدة بتشفي السكري والسرطان». الرسالة الواحدة دي محتاجة كام دفاع مختلف فعلاً؟",
+      "options": [
+        "One — just say it's wrong",
+        "Three separate layers: a religious-literacy answer (the misused word), a scientific answer (cure-all is impossible), and a logical answer (the conspiracy non-sequitur)",
+        "None — ignore it",
+        "Only a scientific one"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the core integration skill: a multi-modal claim needs multi-modal defense. The misuse of «خبيث» needs religious literacy; 'one diet cures cancer AND diabetes' needs the science (mechanistically unrelated diseases can't share a cure); 'Big Pharma hides it' needs the logic (a flaw in medicine is not evidence for a diet). Answering only one layer leaves the other two standing — which is exactly why a single rebuttal often fails to land.",
+      "explanationAr": "دي مهارة الدمج الأساسية: الادعاء متعدّد الطبقات محتاج دفاع متعدّد الطبقات. إساءة استخدام «خبيث» محتاجة ثقافة دينية؛ «حمية واحدة بتشفي السرطان والسكري» محتاجة العلم (أمراض غير مترابطة آلياً ما تقدرش تتشارك علاج)؛ «شركات الدوا بتخفي» محتاجة المنطق (عيب في الطب مش دليل على حمية). الردّ على طبقة واحدة بس بيسيب التانيتين واقفين — وده بالظبط ليه الردّ الواحد بيفشل غالباً.",
+      "sources": [
+        "EAL-case-001:redflag-1",
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "The message says: \"It only failed because you didn't follow it perfectly.\" Before you answer — which single discipline dismantles this line?",
+      "claimAr": "الرسالة بتقول: «ماشتغلش لأنك مالتزمتش مظبوط». قبل ما تجاوب — أنهي مجال واحد بيفكّك الجملة دي؟",
+      "options": [
+        "A religious verse",
+        "The logic of falsifiability — a claim that blames every failure on the patient can never be proven wrong, so it has left science",
+        "A nutrition fact",
+        "Nothing works on this"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This layer is pure logic, not science or religion. 'You did it wrong' makes the claim unfalsifiable: no possible result counts as failure, so it can never be tested. Set your confidence first, then check it — reaching for a nutrition fact here would miss the move entirely, and feeling sure you'd 'just bring the science' is exactly the overconfidence to watch. The shield is Popper's test: ask 'what result would prove this claim wrong?' If the answer is 'nothing,' it isn't a health claim at all.",
+      "explanationAr": "الطبقة دي منطق صافي، مش علم ولا دين. «إنت غلطت» بتخلّي الادعاء غير قابل للتفنيد: مفيش نتيجة تُحسب فشل، يبقى ما يتختبرش أبداً. حدّد يقينك الأول، وبعدين راجعه — لو جبت معلومة تغذية هنا هتفوّت الحركة خالص، وإحساسك إنك «هتجيب العلم وبس» ده بالظبط الثقة الزايدة اللي تنتبه ليها. الدرع هو اختبار بوبر: اسأل «أنهي نتيجة هتثبت إن الادعاء غلط؟» لو الإجابة «ولا حاجة»، يبقى ده مش ادعاء صحي أصلاً.",
+      "sources": [
+        "EAL-case-001:popper-1959",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "When a claim wraps itself in a religious word like «طيبات», is the smartest move to answer it with science alone and leave the religion out of it?",
+      "claimAr": "لمّا الادعاء يلفّ نفسه في كلمة دينية زي «طيبات»، أذكى حركة إنك تردّ بالعلم لوحده وتسيب الدين بعيد؟",
+      "options": [
+        "Yes — keep religion out, just bring the science",
+        "No — you must meet the religious frame on its own ground first, then the science can be heard"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does a purely scientific reply often bounce off a claim dressed in sacred words — and what does answering the religious layer first actually achieve?",
+        "promptAr": "بكلماتك: ليه الردّ العلمي البحت غالباً بيرتدّ على ادعاء متلبّس مفردات مقدّسة — وإيه اللي بيحقّقه إنك تردّ على الطبقة الدينية الأول؟"
+      },
+      "explanation": "A purely scientific reply often bounces off, because the listener feels you're arguing with the Quran, not the diet. The stronger move is to meet the religious frame on its own ground: the Quran itself says «لا تحرّموا طيّبات ما أحلّ الله لكم» (5:87) — declaring lawful food forbidden is exactly what the verse warns against. You defend the faith from misuse first; then the science can finally be heard. Putting that reasoning in your own words is what makes it stick.",
+      "explanationAr": "الردّ العلمي البحت غالباً بيرتدّ، لأن السامع بيحسّ إنك بتجادل القرآن مش الحمية. الحركة الأقوى إنك تقابل الإطار الديني على أرضه: القرآن نفسه بيقول «لا تحرّموا طيّبات ما أحلّ الله لكم» (5:87) — تحريم طعام حلال هو بالظبط اللي الآية بتحذّر منه. بتدافع عن الدين من سوء الاستخدام الأول؛ وبعدين العلم يقدر يتسمع. وإنك تحطّ التفكير ده بكلماتك هو اللي بيثبّته.",
+      "sources": [
+        "EAL-case-001:alain-2026-04-28"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this stacked forward: \"Chicken is foul (خبيث), and Big Pharma hides the real cure, so this one diet cures cancer and diabetes — and anyone who doubts it just wants you sick.\"",
+      "claimAr": "فكّك الرسالة المتراكمة دي: «الفراخ خبيثة، وشركات الدوا بتخفي العلاج الحقيقي، فالحمية الواحدة دي بتشفي السرطان والسكري — وأي حد يشكّك عايزك تفضل عيّان».",
+      "parts": [
+        { "text": "This one diet cures cancer and diabetes.", "textAr": "الحمية الواحدة دي بتشفي السرطان والسكري.", "role": "conclusion" },
+        { "text": "Big Pharma hides the real cure.", "textAr": "شركات الدوا بتخفي العلاج الحقيقي.", "role": "premise" },
+        { "text": "(Unstated) A flaw in the medical industry means an unrelated diet must work.", "textAr": "(غير مذكور) عيب في صناعة الدواء معناه إن حمية لا صلة لها لازم تشتغل.", "role": "assumption" },
+        { "text": "Anyone who doubts it just wants you sick.", "textAr": "أي حد يشكّك عايزك تفضل عيّان.", "role": "irrelevant" }
+      ],
+      "explanation": "Decomposing the stack exposes its weakest joint: the hidden ASSUMPTION that a problem in medicine somehow proves an unrelated diet works — a non-sequitur. The 'doubters want you sick' line is IRRELEVANT; it attacks people instead of evidence to pre-discredit critics. Once each part is labeled, you see the conclusion ('cures cancer and diabetes') rests on nothing the premises actually support.",
+      "explanationAr": "تفكيك الرسالة بيكشف أضعف مفصل فيها: الافتراض الخفي إن مشكلة في الطب بتثبت بشكلٍ ما إن حمية لا صلة لها بتشتغل — استنتاج فاسد. وجملة «الشكّاكين عايزينك عيّان» غير ذات صلة؛ بتهاجم الناس بدل الدليل عشان تُسقِط النقّاد مقدماً. أول ما تسمّي كل جزء، هتشوف إن الخلاصة («بتشفي السرطان والسكري») مبنية على لا حاجة الفروض بتدعمها فعلاً.",
+      "sources": [
+        "EAL-case-001:redflag-5",
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A relative answers your science with: \"But millions follow this, and they can't all be wrong.\" It feels like a strong point — surely that many people couldn't be mistaken.",
+      "claimAr": "قريب بيردّ على علمك بـ: «بس ملايين بيتّبعوه، ومش معقول كلهم غلط». بتحسّ إنها نقطة قوية — أكيد العدد ده ما يمكنش يكون غلطان.",
+      "prompt": "Before accepting it: what would be TRUE if 'popular' did NOT mean 'proven'? What ordinary things could explain millions of followers without the diet working?",
+      "promptAr": "قبل ما تقبلها: إيه اللي هيكون صح لو «رائج» ما كانش معناه «مُثبَت»؟ وإيه الحاجات العادية اللي ممكن تفسّر ملايين الأتباع من غير ما الحمية تشتغل؟",
+      "modelPoints": [
+        "Millions of views measure curiosity, fear, and outrage — not cures. Popularity has never made a claim true.",
+        "Survivorship bias: the people the system harmed (ICU, disability, death) cannot post, so the room you see is filtered.",
+        "Free, emotionally satisfying content spreads faster than slow, careful evidence — virality tracks shareability, not truth.",
+        "Past mass beliefs that were later shown false were also held by millions; numbers were never the test."
+      ],
+      "modelPointsAr": [
+        "الملايين قاسوا الفضول والخوف والغضب — مش الشفاء. الرواج عمره ما خلّى ادعاء صح.",
+        "انحياز الناجين: اللي النظام أذاهم (عناية مركزة، إعاقة، وفاة) ما يقدروش ينشروا، فالغرفة اللي بتشوفها مُفلتَرة.",
+        "المحتوى المجاني المُرضي عاطفياً بينتشر أسرع من الدليل البطيء الدقيق — الانتشار بيقيس القابلية للمشاركة، مش الحقيقة.",
+        "معتقدات جماهيرية قديمة اتثبت زيفها كان عندها ملايين كمان؛ العدد ما كانش الاختبار أبداً."
+      ],
+      "explanation": "Considering the opposite turns 'they can't all be wrong' into a testable question — and it fails the test. This is the bandwagon move, a logic layer: no study or verse is needed, only the recognition that 'many believe it' separates cleanly from 'it is proven.' Gently holding that distinction is the whole shield here.",
+      "explanationAr": "التفكير في العكس بيحوّل «مش معقول كلهم غلط» لسؤال قابل للاختبار — وبيسقط في الاختبار. دي حركة «العربة»، طبقة منطقية: مش محتاجة دراسة ولا آية، بس إدراك إن «ناس كتير مصدّقة» بينفصل بوضوح عن «إنه مُثبَت». التمسّك اللطيف بالفرق ده هو الدرع كله هنا.",
+      "sources": [
+        "EAL-case-001:bandwagon"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    }
+  ]
+}

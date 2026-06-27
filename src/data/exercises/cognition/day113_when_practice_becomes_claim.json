@@ -1,0 +1,123 @@
+{
+  "id": "day113_when_practice_becomes_claim",
+  "phase": 3,
+  "week": 17,
+  "day": 113,
+  "title": "When a Practice Becomes a Medical Claim",
+  "titleAr": "لمّا الممارسة تبقى ادعاءً طبياً",
+  "description": "A spiritual or cultural practice becomes a medical claim the moment it says 'this cures a disease' — and that claim must face the same evidence bar as any medicine. This is not an attack on faith; it is how we protect people.",
+  "descriptionAr": "الممارسة الروحية أو الثقافية بتبقى ادعاءً طبياً في اللحظة اللي بتقول فيها «ده بيشفي مرض» — والادعاء ده لازم يواجه نفس معيار الدليل اللي أي دواء بيواجهه. ده مش هجوم على الإيمان؛ ده إزاي بنحمي الناس.",
+  "type": "religion-literacy",
+  "difficulty": 2,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/epistemology-medicine/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A family recites a Quranic verse for comfort after an accident. A separate seller says his herbal blend 'cures kidney disease through divine nutrition.' Which of these crosses the line into a medical claim requiring clinical evidence?",
+      "claimAr": "عائلة بتقرأ آية قرآنية للطمأنينة بعد حادثة. بائع منفصل بيقول إن خلطته العشبية «بتشفي الكلى من خلال التغذية الإلهية». أنهي من دول بيعدّي الخطّ لادعاء طبي يحتاج دليل سريري؟",
+      "options": [
+        "The family reciting the verse — religious acts always require scientific proof",
+        "The seller's blend — because it names a specific disease and promises cure through a natural product",
+        "Both equally — any health-related claim needs a trial",
+        "Neither — personal choice should not be questioned"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The line is crossed when someone says: 'This will cure your specific disease.' Seeking comfort, peace, or spiritual connection is not a disease-cure claim and needs no clinical trial. But the moment a product or practice names a diagnosed condition and promises biological cure, it has entered the domain of medicine and must meet the same evidence standard as any drug — regardless of whether the framing is religious, traditional, or modern.",
+      "explanationAr": "الخطّ بيتعدّى لمّا حد بيقول: «ده هيشفي مرضك المحدّد». السعي للطمأنينة أو السلام أو الارتباط الروحي مش ادعاء شفاء مرض وما محتاجش تجربة سريرية. لكن في اللحظة اللي منتج أو ممارسة بتسمّي فيها حالة مشخَّصة وتعد بشفاء بيولوجي، دخلت في نطاق الطب ولازم تفي بنفس معيار الدليل اللي أي دواء بيوفيه — بغض النظر عن كون التأطير ديني أو تقليدي أو حديث.",
+      "sources": [
+        "https://plato.stanford.edu/entries/epistemology-medicine/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a diet system that uses Quranic vocabulary and promises to cure type-1 diabetes without insulin is making a medical claim that must be tested like any other.",
+      "claimAr": "صح ولا غلط: نظام حمية بيستخدم مفردات قرآنية ويعد بشفاء السكري من النوع الأول من غير أنسولين بيعمل ادعاءً طبياً لازم يُختبَر زي أي ادعاء تاني.",
+      "correctAnswer": true,
+      "myth_en": "A claim wrapped in religious language plays by different rules.",
+      "myth_ar": "الادعاء اللي لُفَّ في لغة دينية بيلعب بقواعد مختلفة.",
+      "explanation": "True. The moment a system promises to cure a diagnosed disease — whether it uses scientific language, Arabic vocabulary, or Quranic terms — the claim has entered the domain of medicine. Type-1 diabetes is a life-threatening condition requiring insulin. A claim to replace that with diet, whatever its framing, must be tested with the same rigour as any drug. Calibration check: if you felt very sure the answer was 'false,' notice that confidence — the familiarity of religious framing can make an untested claim feel trustworthy before any evidence is examined.",
+      "explanationAr": "صح. في اللحظة اللي نظام ما بيوعد فيها بشفاء مرض مشخَّص — سواء استخدم لغة علمية أو مفردات عربية أو مصطلحات قرآنية — الادعاء دخل في نطاق الطب. السكري من النوع الأول حالة خطيرة على الحياة وتحتاج أنسولين. اختبار المعايرة: لو حسّيت يقيناً كبيراً إن الإجابة «غلط»، لاحظ اليقين ده — التأطير الديني المألوف ممكن يخلّي ادعاءً غير مُختبَر يبدو موثوقاً قبل أي فحص للدليل.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://plato.stanford.edu/entries/epistemology-medicine/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Someone says: 'Honey is mentioned in the Quran as a healing — so using honey to treat my infected wound is medically proven.' Which step in reasoning is missing?",
+      "claimAr": "حد بيقول: «العسل مذكور في القرآن كشفاء — يبقى استخدامه في علاج جرح متقيّح مثبَت طبياً». أنهي خطوة في التفكير ناقصة؟",
+      "options": [
+        "Nothing is missing — a Quranic reference is sufficient proof",
+        "The distinction between 'a general healing property is mentioned' and 'this specific clinical application is proven effective for this specific condition by trials'",
+        "He should use a different religious text",
+        "The name of the specific honey variety"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does a Quranic mention of healing open a question rather than close it? What would actually close it?",
+        "promptAr": "بكلماتك: ليه ذكر القرآن للشفاء بيفتح سؤالاً ومش بيقفله؟ إيه اللي هيقفله فعلاً؟"
+      },
+      "explanation": "The Quran mentions honey in a context of general healing (Al-Nahl 16:69). That is not the same as a clinical trial establishing efficacy for infected wounds vs standard antibiotic treatment. Some honey preparations do have trial evidence for wound care — but that evidence comes from the trials, not from the verse itself. The verse opened a hypothesis; trials answer it. Naming this gap in your own words (as you just did) is exactly the self-explanation method that deepens the lesson beyond recognition.",
+      "explanationAr": "القرآن ذكر العسل في سياق شفاء عام (النحل ١٦:٦٩). ده مش نفس تجربة سريرية بتُثبت فاعلية العسل في الجروح المتقيّحة مقارنةً بالمضادّ الحيوي القياسي. بعض تحضيرات العسل عندها دليل تجارب في رعاية الجروح — لكن الدليل ده جاي من التجارب مش من الآية نفسها. الآية فتحت فرضية؛ التجارب تجيب عليها. إنك تسمّي الفجوة دي بكلماتك الخاصة (زي ما عملت دلوقتي) هو بالظبط أسلوب الشرح الذاتي اللي بيعمّق الدرس فوق مجرّد التعرّف.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3941901/",
+        "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD005083.pub3/full"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "Demanding evidence for a cure claim that uses religious framing is disrespectful to faith and unnecessary — faith itself is the validation.",
+      "claimAr": "المطالبة بدليل على ادعاء شفاء بيستخدم تأطيراً دينياً غير محترمة للإيمان وغير ضرورية — الإيمان نفسه هو التحقّق.",
+      "prompt": "Before accepting this: what would have to be true if this framing were a problem rather than a protection? What does the Quran itself say about declaring things halal or haram without authority?",
+      "promptAr": "قبل قبول ده: لو التأطير ده كان مشكلة مش حماية، إيه اللي لازم يكون صح؟ إيه اللي القرآن نفسه بيقوله عن تحليل وتحريم الأشياء بدون سلطة؟",
+      "modelPoints": [
+        "If faith alone validated cure claims, then any fraud wrapping itself in religious language would be automatically trusted — which is exactly what exploitation requires.",
+        "Al-Nahl 16:116 explicitly forbids declaring things halal or haram based on personal opinion: demanding evidence protects that verse's teaching, not undermines it.",
+        "Islamic scholarship itself has always distinguished between 'aqidah (belief) and claims about the physical world, which are subject to observation and inquiry.",
+        "The protection of human life (hifz al-nafs) is one of the five objectives of Islamic law — meaning that a claim threatening life must be scrutinised, not shielded."
+      ],
+      "modelPointsAr": [
+        "لو الإيمان وحده كان يُصحِّح ادعاءات الشفاء، أي احتيال يلفّ نفسه بلغة دينية سيُصدَّق تلقائياً — وده بالظبط ما يحتاجه الاستغلال.",
+        "النحل ١٦:١١٦ تنهى صراحةً عن تحليل وتحريم الأشياء بناءً على الرأي الشخصي: المطالبة بالدليل تحمي تعليم الآية دي، مش تقوّضه.",
+        "الفقه الإسلامي نفسه دايماً فرّق بين العقيدة والادعاءات عن العالم المادي، اللي خاضعة للملاحظة والاستفسار.",
+        "حفظ النفس البشرية هو أحد مقاصد الشريعة الخمسة — يعني ادعاء بيهدّد الحياة لازم يتدقّق فيه، مش يُحمى."
+      ],
+      "explanation": "Considering the opposite reveals that demanding evidence for a cure claim is actually a protection of Islamic values, not an attack on them. The Quran itself explicitly forbids personal pronouncements of halal/haram without textual authority. Faith and evidence are not enemies; it is the fraudulent use of religious language that endangers both.",
+      "explanationAr": "التفكير في العكس بيكشف إن المطالبة بالدليل على ادعاء شفاء هي في الواقع حماية للقيم الإسلامية مش هجوم عليها. القرآن نفسه يُحرّم صراحةً الإفتاء الشخصي بالحلال والحرام بدون سلطة نصية. الإيمان والدليل مش أعداء؛ الاستخدام الاحتيالي للغة الدينية هو الذي يخاطر بهما معاً.",
+      "sources": [
+        "https://plato.stanford.edu/entries/epistemology-medicine/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'Doctors can't help my condition. This system uses Quranic words so it must be blessed. Thousands of believers improved on it. Anyone who questions it is attacking Islam.'",
+      "claimAr": "فكّك الحجة دي: «الأطباء ما قدروش يساعدوا حالتي. النظام ده بيستخدم كلمات قرآنية يبقى لازم يكون مباركاً. آلاف المؤمنين اتحسّنوا عليه. أي حد يسأل فيه بيهاجم الإسلام».",
+      "parts": [
+        { "text": "This system must be blessed and effective.", "textAr": "النظام ده لازم يكون مباركاً وفعّالاً.", "role": "conclusion" },
+        { "text": "It uses Quranic words.", "textAr": "بيستخدم كلمات قرآنية.", "role": "premise" },
+        { "text": "Thousands of believers improved.", "textAr": "آلاف المؤمنين اتحسّنوا.", "role": "premise" },
+        { "text": "(Unstated) Using Quranic vocabulary is itself proof of divine efficacy for a cure claim.", "textAr": "(غير مذكور) استخدام المفردات القرآنية هو نفسه دليل على الفاعلية الإلهية لادعاء الشفاء.", "role": "assumption" },
+        { "text": "Anyone who questions it is attacking Islam.", "textAr": "أي حد يسأل فيه بيهاجم الإسلام.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption is the weak joint: that religious vocabulary proves clinical efficacy. It does not — the Quran does not endorse the food list; the originator borrowed its words. The 'thousands improved' premise also hides survivorship bias (those who deteriorated or died are silent). The 'attacking Islam' line is irrelevant — it attacks the questioner's identity rather than addressing the evidence, pre-discrediting critics exactly as Red Flag #11 describes.",
+      "explanationAr": "الافتراض الخفي هو المفصل الضعيف: إن المفردات الدينية تُثبت الفاعلية السريرية. لا تُثبت — القرآن لا يُجيز قائمة الأطعمة؛ صاحب النظام استعار كلماته. حجة «آلاف اتحسّنوا» بتخفي أيضاً انحياز الناجين (من تدهور أو توفّي صامتون). جملة «بيهاجم الإسلام» غير ذات صلة — بتهاجم هوية السائل بدل معالجة الدليل، وتُسقِط النقّاد مسبقاً بالظبط كما تصف علامة الخطر رقم 11.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://plato.stanford.edu/entries/epistemology-medicine/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

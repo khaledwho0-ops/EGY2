@@ -1,0 +1,121 @@
+{
+  "id": "day73_information_bias",
+  "phase": 2,
+  "week": 11,
+  "day": 73,
+  "title": "Information Bias — When Measuring Goes Wrong",
+  "titleAr": "انحياز المعلومات — لمّا القياس بيبوظ",
+  "description": "Even when you have the right people in a study, you can still get the wrong answer if you measure them differently. How the data is collected can corrupt the conclusion.",
+  "descriptionAr": "حتى لو عندك الناس الصح في الدراسة، ممكن تاخد إجابة غلط لو قسْتَهم بشكل مختلف. طريقة جمع البيانات ممكن تفسد الخلاصة.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A doctor interviewing patients knows who is in the treatment group and who is in the control group. Without realizing it, she asks the treatment group more follow-up questions and grades their symptoms as 'improved' more generously. What is this called?",
+      "claimAr": "دكتورة بتعمل مقابلات مع مرضى وعارفة مين في مجموعة العلاج ومين في الضابطة. من غير ما تحسّ، بتسأل مجموعة العلاج أسئلة متابعة أكثر وبتقيّم أعراضهم بـ«تحسّن» بسخاء أكثر. الظاهرة دي اسمها إيه؟",
+      "options": [
+        "Selection bias",
+        "Observer bias (a form of information bias) — the measurer's knowledge of treatment assignment distorts what they observe and record",
+        "Recall bias",
+        "Confounder control"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is observer bias, a major form of information bias. The doctor is not lying — she is unconsciously influenced by knowing who received treatment. That unconscious influence changes how she probes, listens, and scores. This is exactly why 'blinding' the assessor is so important: when the person measuring the outcome doesn't know who got the real treatment, this distortion disappears.",
+      "explanationAr": "ده انحياز المراقِب، شكل رئيسي من أشكال انحياز المعلومات. الدكتورة مش بتكذب — هي متأثرة لا شعورياً بمعرفتها مين اللي أخد العلاج. التأثير اللاشعوري ده بيغيّر طريقة استجوابها واستماعها وتقييمها. ده بالظبط ليه «تعمية» مُقيِّم النتائج مهمة جداً: لمّا الشخص اللي بيقيس النتيجة ما يعرفش مين اللي أخد العلاج الحقيقي، التشويه ده بيختفي.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a double-blind trial, where neither the patient nor the treating doctor knows who received the real treatment, is just a precaution against dishonesty.",
+      "claimAr": "صح ولا غلط: التجربة مزدوجة التعمية، اللي فيها لا المريض ولا الطبيب يعرف مين اللي أخد العلاج الحقيقي، هي مجرد احتياط ضد الخداع المتعمّد.",
+      "correctAnswer": false,
+      "myth_en": "Double-blinding is only about preventing cheating.",
+      "myth_ar": "مزدوجة التعمية بس لمنع الغش.",
+      "explanation": "False. Double-blinding is primarily about eliminating unconscious information bias — not deliberate dishonesty. Even deeply ethical doctors and patients change their behaviour, reporting, and assessment when they know which arm of the trial they are in. The placebo effect is real; so is observer bias. Double-blinding is not a morality test — it is a method for protecting the measurement itself from the human brain's tendency to find what it expects. Calibration check: if you were sure it was true, that intuition reveals how easy it is to confuse 'prevents bad intent' with 'prevents unconscious distortion' — different problems, same solution.",
+      "explanationAr": "غلط. مزدوجة التعمية أساساً لإزالة انحياز المعلومات اللاشعوري — مش الخداع المتعمّد. حتى الأطباء والمرضى الأشد أمانة بيغيّروا سلوكهم وتقاريرهم وتقييمهم لمّا يعرفوا في أي مجموعة هم. التأثير الوهمي حقيقي؛ وكذلك انحياز المراقِب. مزدوجة التعمية مش اختبار أخلاقي — دي طريقة لحماية القياس نفسه من ميل العقل البشري إنه يلاقي ما يتوقعه. فحص المعايرة: لو كنت واثق إنها صح، الحدس ده بيوضّح كيف من السهل الخلط بين «بتمنع النية السيئة» و«بتمنع التشويه اللاشعوري» — مشكلتان مختلفتان، نفس الحل.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A supplement seller films only the patients who report improvement — not the ones who saw no change or got worse. He then shows the video as 'our results.'",
+      "claimAr": "بائع مكمّلات بيصوّر المرضى اللي بيُبلّغوا عن تحسّن بس — مش اللي ما اتغيّرش حالهم أو اتدهّوروا. وبعدين بيعرض الفيديو كـ«نتائجنا».",
+      "options": [
+        "This is fine — showing successes is standard marketing",
+        "This is selective outcome reporting — a serious form of information bias that hides the full picture"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does showing only the improvement cases make the evidence misleading, even if every person filmed genuinely did improve?",
+        "promptAr": "بكلماتك: ليه عرض حالات التحسّن بس بيخلّي الدليل مضلِّلاً، حتى لو كل شخص اتصوّر تحسّن فعلاً؟"
+      },
+      "explanation": "Selective outcome reporting is a serious form of information bias: you measure outcomes across many patients but only report the favorable ones. The 'file-drawer problem' — positive results get showcased, negative ones get buried. Showing testimonials only from those who improved, while the harmed patients are never filmed, creates a completely false picture of effectiveness. Even if every filmed person genuinely improved, the missing data (those who did not improve or were harmed) is the most important data for judging whether the treatment works.",
+      "explanationAr": "الإبلاغ الانتقائي عن النتائج هو شكل خطير من أشكال انحياز المعلومات: بتقيس نتائج على مرضى كتير لكن بتُبلّغ عن الإيجابيين بس. «مشكلة الأدراج» — النتائج الإيجابية بتُعرض، والسلبية بتتدفن. عرض شهادات المتحسّنين فقط بينما المتضرّرون ما اتصوّروش أبداً بيخلق صورة كاملة خاطئة عن الفاعلية. حتى لو كل شخص اتصوّر تحسّن فعلاً، البيانات المفقودة (اللي ما تحسّنوش أو اتضرّروا) هي أهم البيانات للحكم هل العلاج بيشتغل.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "inoculate",
+      "technique": "selective outcome reporting",
+      "techniqueAr": "الإبلاغ الانتقائي عن النتائج",
+      "task": "Feel the technique from the inside (so you can spot it). You run a small community walking challenge: 20 people join, 14 complete it, 6 drop out (3 got tired, 2 had knee pain, 1 found it unhelpful). Write a short social-media post announcing your 'results' using selective outcome reporting — show only the wins, bury the rest. Keep the topic harmless.",
+      "taskAr": "احسّ بالتقنية من الداخل (علشان تكشفها بعدين). بتدير تحدّي مشي صغير في مجتمع: 20 شخص اشتركوا، 14 أكملوا، 6 انسحبوا (3 تعبوا، 2 عندهم ألم ركبة، 1 ما لاقوش فايدة). اكتب بوست سوشيال ميديا قصير بتعلن فيه «نتائجك» باستخدام الإبلاغ الانتقائي — اعرض الانتصارات بس، واطمر الباقي. خلّي الموضوع غير ضار.",
+      "tells": [
+        "Only winners are mentioned — no denominator (14 of 20 completers is hidden; you see '14 success stories').",
+        "Language of certainty: 'proven results', 'it works' — no mention of the failure conditions.",
+        "Dropouts reframed as absent: 'those who committed saw results' — implying the others just didn't commit, not that the challenge hurt them.",
+        "No before/after data from the 6 who dropped — only the 14 success testimonials.",
+        "The reader cannot reverse-engineer the full picture from the post."
+      ],
+      "tellsAr": [
+        "المنتصرون بس يُذكَرون — لا مقسوم عليه (14 من 20 مكتمل مخفية؛ بتشوف «14 قصة نجاح»).",
+        "لغة اليقين: «نتائج مثبَتة»، «بيشتغل» — لا ذكر لحالات الفشل.",
+        "المنسحبون يُعاد تأطيرهم كغائبين: «اللي التزموا شافوا نتائج» — إيحاء إن الباقيين ما التزموش، مش إن التحدّي ضرّهم.",
+        "لا بيانات قبل/بعد من الـ6 المنسحبين — فقط شهادات الـ14 الناجح.",
+        "القارئ ما يقدرش يستنتج الصورة الكاملة من البوست."
+      ],
+      "explanation": "Building selective reporting in a harmless context is active inoculation: you now know exactly what the technique looks, feels, and reads like. The Medical Syndicate's request for three documented before/after cases was important precisely because it demanded the full denominator — not just the seller's curated successes.",
+      "explanationAr": "بناء الإبلاغ الانتقائي في سياق غير ضار ده تلقيح نشط: دلوقتي تعرف بالظبط شكل التقنية وإحساسها وكيف تُقرأ. طلب نقابة الأطباء ثلاث حالات موثّقة قبل/بعد كان مهماً بالضبط لأنه طلب المقام الكامل — مش مجرد النجاحات المنتقاة من البائع.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "A researcher tests a new painkiller. She gives the real pill to group A and a plain sugar pill to group B, and neither group knows which they received. She then asks all patients to rate their pain 0–10. What aspect of information bias has she minimised by blinding the patients?",
+      "claimAr": "باحثة بتختبر مسكّن جديد. بتديه لمجموعة أ وحبّة سكر عادية لمجموعة ب، وما فيش مجموعة تعرف أنهي حبّة أخدت. وبعدين بتسأل كل المرضى يقيّموا ألمهم من 0 لـ10. أنهي جانب من انحياز المعلومات قلّلته بتعمية المرضى؟",
+      "options": [
+        "Selection bias",
+        "The placebo effect and patient-reported outcome bias — patients who know they received 'real' treatment unconsciously report better outcomes",
+        "Recall bias",
+        "Confounder bias"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Blinding patients to their treatment removes the placebo effect (the real, measured improvement that comes just from believing you were treated) and patient-side information bias (the tendency to report what you expect to feel). Pain is especially prone to this because it is entirely self-reported. Single-blinding the patient is not enough — the next step is blinding the assessor too (double-blinding), so that neither the patient's expectations nor the doctor's expectations distort the measurement.",
+      "explanationAr": "تعمية المرضى على علاجهم بيزيل التأثير الوهمي (التحسّن الحقيقي والمقيس اللي بييجي بس من الاعتقاد إنك اتعالجت) وانحياز المعلومات من جانب المريض (الميل إنك تُبلّغ عمّا تتوقع تحسّه). الألم عرضة لده خصوصاً لأنه ذاتي التقرير بالكامل. تعمية المريض وحدها مش كفاية — الخطوة التالية هي تعمية المُقيِّم كمان (مزدوجة التعمية).",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    }
+  ]
+}

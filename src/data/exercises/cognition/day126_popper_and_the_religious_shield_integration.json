@@ -1,0 +1,145 @@
+{
+  "id": "day126_popper_and_the_religious_shield_integration",
+  "phase": 3,
+  "week": 18,
+  "day": 126,
+  "title": "Week 18 Integration: Popper, Religious Shield, and Your Own Reasoning",
+  "titleAr": "تكامل الأسبوع 18: بوبر، الدرع الديني، وتفكيرك أنت",
+  "description": "Week capstone: put the full pattern together. Spot religious-shield moves, test for falsifiability, and practise keeping faith and evidence in their own, complementary domains.",
+  "descriptionAr": "خاتمة الأسبوع: اجمع النمط الكامل. اكتشف حركات الدرع الديني، اختبر قابلية التفنيد، وتدرّب على إبقاء الإيمان والدليل في مجاليهما المتكاملين.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 18,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "interleaved": true,
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Read the following paragraph and count every religious-shield or unfalsifiability move you can identify:\n\n'This blessed system is built on what Allah made pure for us. Critics are funded by pharmaceutical companies who fear the truth. If you followed the system and were not healed, your heart was not fully purified. Science cannot measure divine healing. The ban by authorities only proves how powerful the truth is.'\n\nHow many distinct moves are present?",
+      "claimAr": "اقرأ الفقرة التالية وعُدّ كل حركة درع ديني أو عدم تفنيد تقدر تحدّدها:\n\n«النظام المبارك ده مبني على ما أحلّه الله لنا من الطيبات. المنتقدون ممولون من شركات الدواء الخايفة من الحقيقة. لو اتبّعت النظام ولم تُشفَ، فقلبك لم يكن طاهراً تماماً. العلم لا يستطيع قياس الشفاء الإلهي. وحظر السلطات يُثبت فقط مدى قوة الحقيقة.»\n\nكم حركة مستقلة موجودة؟",
+      "options": [
+        "One — only the religious vocabulary is a shield",
+        "Two — the religious framing and the conspiracy accusation",
+        "Five distinct moves: sacred vocabulary + ad hominem pre-discrediting of critics + blame-the-patient unfalsifiability + science-cannot-measure untestability + ban-proves-truth inversion",
+        "None — the paragraph is factually accurate"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Five moves in five sentences: (1) Sacred vocabulary — importing 'what Allah made pure' into a diet gives it religious authority it has not earned through evidence. (2) Ad hominem pre-discrediting — all critics are pre-labelled 'pharma-funded,' so no critic's evidence needs consideration. (3) Blame-the-patient unfalsifiability — failure always means the follower's heart is impure, never that the system failed. (4) Science-cannot-measure untestability — the mechanism is declared beyond any test, making the claim permanently immune. (5) Ban-proves-truth inversion — every regulatory response, regardless of its content, becomes confirmation. Together these create a hermetically closed belief system.",
+      "explanationAr": "خمس حركات في خمس جمل: (1) مفردات مقدّسة — استيراد «ما أحلّ الله من الطيبات» لحمية يديها سلطة دينية ما كسبتها بالدليل. (2) تسقيط مسبق بالشخصنة — كل المنتقدين مُعلَّمين مسبقاً بـ«ممولون من الدواء»، فلا يحتاج دليل أي منهم اعتباراً. (3) إلقاء اللوم على المريض — الفشل دائماً يعني قلب التابع غير طاهر، مش أن النظام فشل. (4) عدم الاختبارية — الآلية تُعلَن خارج نطاق أي اختبار، مما يجعل الادعاء محصّناً بشكل دائم. (5) انعكاس الحظر يُثبت الحقيقة — كل استجابة تنظيمية، بغضّ النظر عن محتواها، تصبح تأكيداً. الخمسة مع بعض بيخلقوا نظام معتقد محكم الإغلاق.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A healer says: 'I use only what the Prophet ﷺ ate and it cures all diseases.' Two questions need to be separated here. Which separation is correct?",
+      "claimAr": "معالج بيقول: «أنا بستخدم بس اللي أكله النبي ﷺ وبيشفي كل الأمراض». في سؤالان محتاجين ينفصلوا هنا. أنهي الفصل الصحيح؟",
+      "options": [
+        "There is only one question: is this claim Islamic?",
+        "Question 1 (historical/religious): did the Prophet ﷺ actually eat these specific things — documented in authenticated hadith? Question 2 (medical): do these foods, under clinical study, produce the claimed effect?",
+        "There is only one question: does it work for me?",
+        "The only question is whether it is halal"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why can't the historical question and the medical question be answered by the same method? What tool does each require?",
+        "promptAr": "بكلماتك: ليه السؤال التاريخي والسؤال الطبي ما ينفعوش يتجاوبوا بنفس المنهج؟ أنهي أداة يحتاجها كلٌّ منهما؟"
+      },
+      "explanation": "These are genuinely two separate questions requiring two different tools. The historical/religious question — what did the Prophet ﷺ actually consume, and what is the hadith grade? — is answered by hadith scholars with established methodology (isnad evaluation). The medical question — do these foods treat disease? — is answered by clinical trials and systematic reviews. A diet can be historically inaccurate AND medically harmful; or historically accurate AND medically neutral. The two questions can come apart, which is exactly why they must be evaluated independently.",
+      "explanationAr": "دول فعلاً سؤالان مستقلان بيحتاجوا أداتين مختلفتين. السؤال التاريخي/الديني — إيه اللي أكله النبي ﷺ فعلاً وما درجة الحديث؟ — بيجاوب عليه علماء الحديث بمنهجية راسخة (تقييم الإسناد). السؤال الطبي — هل الأطعمة دي بتعالج الأمراض؟ — بتجاوب عليه التجارب الإكلينيكية والمراجعات المنهجية. الحمية ممكن تكون تاريخياً غير دقيقة وطبياً ضارة؛ أو تاريخياً دقيقة وطبياً محايدة. السؤالان ممكن ينفصلوا، وهو بالضبط سبب لازم يُقيَّموا باستقلالية.",
+      "sources": [
+        "https://sunnah.com/introduction",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "Heba follows a viral religious-framed diet for her thyroid condition and has stopped her medication. Her mother is worried. The easiest assumption is: 'Heba has thought this through — who are we to question her faith?'",
+      "claimAr": "هبة بتتّبع حمية دينية الطابع منتشرة لحالة الغدة الدرقية ووقّفت دواءها. أمّها قلقانة. الافتراض الأسهل: «هبة فكّرت في الأمر — ومن نحن لنشكّك في إيمانها؟»",
+      "prompt": "Before accepting that framing: what else might be true? What would you need to know to decide whether silence is actually respectful — or actually risky?",
+      "promptAr": "قبل ما تقبل هذا التأطير: إيه تاني ممكن يكون صح؟ إيه اللي محتاج تعرفه علشان تقرّر هل الصمت محترم فعلاً — ولا خطير فعلاً؟",
+      "modelPoints": [
+        "She may not have full information: does she know that thyroid hormone is not optional — its absence causes progressive organ damage?",
+        "Respecting autonomy assumes informed choice. If the diet system gave her false information (fabricated hadith, invented efficacy), her choice was not fully free.",
+        "Silence in this case is not neutral: it has a clinical consequence. Unchecked hypothyroidism damages the heart and kidneys over months.",
+        "The religious framing ('questioning her faith') is a cognitive move that converts a medical safety question into an identity question — exactly the swap the religious shield is designed to create.",
+        "A caring question ('would you get thyroid labs done just to have a baseline?') is not an attack on her faith; it is genuinely protective."
+      ],
+      "modelPointsAr": [
+        "ربما ما عندهاش المعلومة الكاملة: هي عارفة إن هرمون الغدة الدرقية مش اختياري — غيابه بيسبّب ضرر تدريجي للأعضاء؟",
+        "احترام الاستقلالية مفروض بيفترض اختياراً مُستنيراً. لو النظام الغذائي أعطاها معلومات غلط (حديث ملفَّق، فعالية مخترَعة)، اختيارها ما كانش حراً تماماً.",
+        "الصمت في الحالة دي مش محايد: عنده عاقبة إكلينيكية. قصور الغدة الدرقية غير المُتابَع بيضر بالقلب والكلى في خلال شهور.",
+        "التأطير الديني («التشكيك في إيمانها») هو حركة معرفية بتحوّل سؤال السلامة الطبية لسؤال هوية — بالضبط الاستبدال اللي الدرع الديني مصمَّم لخلقه.",
+        "سؤال بعناية («هتعمّلي تحاليل غدة بس كأساس مرجعي؟») مش هجوم على إيمانها؛ ده حماية حقيقية."
+      ],
+      "sources": [
+        "https://www.apa.org/monitor/2023/01/conspiracy-theories-thinking",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "Complete this sentence: 'The religious-shield move is hardest to challenge not because it has strong evidence, but because ___.'",
+      "claimAr": "أكمل الجملة دي: «حركة الدرع الديني أصعب ما تتحدّاه مش لأنها عندها دليل قوي، لكن لأن ___».",
+      "options": [
+        "the evidence for it is overwhelming",
+        "it converts an evidence question into an identity question, so answering honestly feels like betraying your community and your God",
+        "religious people are harder to convince",
+        "it is legally protected"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the core mechanism. When a medical claim is successfully wrapped in religious identity, challenging it no longer feels like evaluating evidence — it feels like attacking who you are and what you believe. That emotional cost is real, and it explains why the religious-shield move is so effective even among intelligent, sincere people. The defence is not more data — it is recognising the swap: 'I am being asked about a seller's claim, not about my faith. These are two different things. My faith does not depend on whether this diet works.'",
+      "explanationAr": "ده الآلية المحورية. لمّا ادعاء طبي بينجح في إنه يتلفّف في الهوية الدينية، تحدّيه ما بيبقاش زي تقييم دليل — بيبقى زي مهاجمة هويّتك وما بتؤمن بيه. التكلفة العاطفية دي حقيقية، وبتشرح ليه حركة الدرع الديني فعّالة جداً حتى مع الناس الذكية الصادقة. الدفاع مش بيانات أكتر — ده التعرّف على الاستبدال: «أنا بُسأل عن ادعاء بائع، مش عن إيماني. دول حاجتين مختلفتين. إيماني ما بيعتمدش على إذا كانت الحمية دي شغّالة.»",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.apa.org/monitor/2023/01/conspiracy-theories-thinking"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "True or false: a Muslim who insists on clinical evidence before adopting a health claim is showing less trust in Allah than a Muslim who adopts it on faith alone.",
+      "claimAr": "صح ولا غلط: المسلم اللي بيُصرّ على دليل إكلينيكي قبل تبنّي ادعاء صحي بيُظهر ثقة أقل في الله من المسلم اللي بيتبنّاه بالإيمان فقط.",
+      "correctAnswer": false,
+      "myth_en": "Demanding evidence for health claims shows weak faith in God.",
+      "myth_ar": "المطالبة بالدليل على الادعاءات الصحية تُظهر ضعف الإيمان بالله.",
+      "explanation": "False — and this is the most important myth to undo in this entire week. The Prophet ﷺ instructed his companions to 'tie your camel, then put your trust in Allah' — combining precaution with trust, not replacing one with the other. Taking medicine, verifying a health claim, or consulting specialists are all forms of taking precaution — the same action the Prophet endorsed. Trust in Allah does not require abandoning the tools Allah gave us: reason, inquiry, and the accumulated knowledge of medicine. A person who insists on evidence is not showing weak faith; they are following a Prophetic model of combining precaution with trust.",
+      "explanationAr": "غلط — وده أهم أسطورة لازم تُفكَّك في الأسبوع كله. النبي ﷺ أوصى أصحابه «اعقل ناقتك ثم توكّل» — الجمع بين الحيطة والتوكّل، مش استبدال واحدة بالتانية. أخذ الدواء، التحقّق من ادعاء صحي، أو الاستشارة مع متخصّصين — دي كلها أشكال الأخذ بالأسباب، وهو نفس الفعل اللي النبي وصّى بيه. التوكّل على الله ما بيتطلّبش التخلّي عن الأدوات اللي أعطانا إياها الله: العقل، والاستفسار، والمعرفة المتراكمة للطب. الشخص اللي بيُصرّ على الدليل ما بيُظهرش ضعف الإيمان؛ هو بيتّبع نموذجاً نبوياً في الجمع بين الحيطة والتوكّل.",
+      "sources": [
+        "https://sunnah.com/tirmidhi:2517",
+        "https://plato.stanford.edu/entries/religion-science/"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 6,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'Demanding clinical evidence for a divinely-guided diet is arrogance — you are placing human science above God's wisdom. My patients are my research. The ones who failed just didn't follow it properly.'",
+      "claimAr": "فكّك الحُجّة دي: «المطالبة بدليل إكلينيكي لحمية موجَّهة إلهياً هي غرور — بتضع العلم البشري فوق حكمة الله. مرضايا هم بحثي. واللي فشلوا ما اتبّعوهاش صح.»",
+      "parts": [
+        { "text": "This diet does not need clinical evidence because it is divinely guided.", "textAr": "الحمية دي ما محتاجش دليل إكلينيكي لأنها موجَّهة إلهياً.", "role": "conclusion" },
+        { "text": "Demanding evidence places human science above God's wisdom.", "textAr": "المطالبة بالدليل بتضع العلم البشري فوق حكمة الله.", "role": "premise" },
+        { "text": "(Unstated) Demanding evidence for a religious claim is itself a religious transgression.", "textAr": "(غير مذكور) المطالبة بالدليل على ادعاء ديني هي بحد ذاتها تجاوز ديني.", "role": "assumption" },
+        { "text": "My patients are my research.", "textAr": "مرضايا هم بحثي.", "role": "premise" },
+        { "text": "Those who failed did not follow it properly.", "textAr": "واللي فشلوا ما اتبّعوهاش صح.", "role": "assumption" }
+      ],
+      "explanation": "The hidden ASSUMPTION is that questioning a claim framed as divine equals questioning God — but the Quran (16:116) explicitly forbids attributing personal opinion to God's authority, so this assumption contradicts Islamic scripture. 'My patients are my research' is a PREMISE but it is anecdotal at best — there is no control, no blinding, no accounting for placebo or natural recovery. The 'didn't follow properly' move is an unfalsifiability ASSUMPTION: any failure is pre-explained away, so the conclusion can never be tested. Mapping these exposes that the argument has zero testable content.",
+      "explanationAr": "الافتراض الخفي هو إن التشكيك في ادعاء مُؤطَّر كإلهي يساوي التشكيك في الله — لكن القرآن (16:116) يمنع صراحةً نسب الرأي الشخصي لسلطة الله، فهذا الافتراض يتناقض مع النص الإسلامي. «مرضايا هم بحثي» مقدمة لكنها حكائية في أفضل الأحوال — لا ضابط ولا تعمية ولا مراعاة للوهمي أو التعافي الطبيعي. وحركة «ما اتبّعوهاش صح» افتراض عدم تفنيد: كل فشل مُفسَّر مسبقاً، فالخلاصة لا يمكن اختبارها أبداً. تفكيك هذه الأجزاء يكشف إن الحجة بلا محتوى قابل للاختبار من الأساس.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.apa.org/monitor/2023/01/conspiracy-theories-thinking"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

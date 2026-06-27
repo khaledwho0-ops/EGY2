@@ -1,0 +1,120 @@
+{
+  "id": "day76_generalizability",
+  "phase": 2,
+  "week": 11,
+  "day": 76,
+  "title": "Generalizability — Who Does This Study Actually Speak For?",
+  "titleAr": "قابلية التعميم — الدراسة دي بتتكلّم عن مين فعلاً؟",
+  "description": "A result on 50-year-old male American smokers may say nothing about a 30-year-old Egyptian woman who has never smoked. Every study has a population it can speak for — and populations it cannot.",
+  "descriptionAr": "نتيجة على مدخّنين أمريكيين بعمر 50 سنة ممكن ما تقولش حاجة عن مرأة مصرية عمرها 30 ما دخّنتش قط. كل دراسة عندها تعداد سكّاني تتكلّم عنه — وتعدادات لا تستطيع.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.ncbi.nlm.nih.gov/books/NBK559106/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A clinical trial of a new diabetes medication was conducted entirely on middle-aged men in the United States. An Egyptian doctor wants to prescribe it to elderly Egyptian women. What generalizability concern should she raise?",
+      "claimAr": "تجربة سريرية لدواء سكري جديد اتعملت بالكامل على رجال في منتصف العمر في الولايات المتحدة. دكتورة مصرية عايزة تصفه لنساء مصريات كبار. أنهي قلق من قابلية التعميم المفروض ترفعه؟",
+      "options": [
+        "No concern — a drug either works or it doesn't",
+        "Age, sex, genetic background, dietary patterns, comorbidities, and other medications may all differ, so the trial's results may not apply; ideally a trial in the target population is needed",
+        "The concern is only about the dosage",
+        "There is no generalizability problem if the drug is licensed"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Generalizability (also called external validity) asks: to whom do the results apply? When a study's participants differ from your patient on age, sex, genetics, diet, or health system, the results may not transfer. Elderly women may have different pharmacokinetics, different hormone profiles, different comorbidities, and different drug interactions compared to middle-aged American men. Good evidence explicitly describes its study population so clinicians can judge applicability.",
+      "explanationAr": "قابلية التعميم (المعروفة أيضاً بالصحة الخارجية) بتسأل: على مَن تنطبق النتائج؟ لمّا مشاركو الدراسة يختلفوا عن مريضك في السن والجنس والجينات والتغذية أو المنظومة الصحية، النتائج ممكن ما تنتقلش. النساء كبار السن ممكن يكون عندهن خصائص حركية دوائية مختلفة وبروفايل هرموني مختلف وأمراض مصاحبة مختلفة وتفاعلات دوائية مختلفة. الأدلة الجيدة بتصف صراحةً تعداد الدراسة حتى يتمكّن الأطباء من الحكم على قابلية التطبيق.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "consider_opposite",
+      "claim": "The viral «نظام الطيبات» diet claimed its approach was universally applicable to cancer, type-1 diabetes, lupus, hypertension, and IBS — all treatable with one elimination diet.",
+      "claimAr": "نظام «الطيبات» ادّعى إن نهجه قابل للتطبيق عالمياً على السرطان والسكري النوع الأول والذئبة والضغط والقولون — كلها قابلة للعلاج بحمية إقصاء واحدة.",
+      "prompt": "What would have to be biologically true for a single elimination diet to genuinely treat all these conditions? What does knowing the mechanism of each disease tell you about whether that is possible?",
+      "promptAr": "إيه اللي لازم يكون صحيحاً بيولوجياً علشان حمية إقصاء واحدة تعالج فعلاً كل الحالات دي؟ وإيه اللي معرفة آلية كل مرض بتقوله عن إمكانية ذلك؟",
+      "modelPoints": [
+        "Type-1 diabetes is an autoimmune destruction of insulin-producing beta cells — insulin replacement is the only known intervention that prevents death; no diet reverses beta cell destruction.",
+        "Cancer is 200+ biologically distinct diseases with different driver mutations, affected organs, and treatment pathways — 'cancer' is not one target.",
+        "Lupus is a systemic autoimmune condition driven by immune dysregulation, not by dietary intake of chicken or eggs.",
+        "Hypertension has multiple causes (kidney disease, hormonal, lifestyle, genetic) and the 'one diet fixes all' claim cannot account for this heterogeneity.",
+        "If a single elimination diet worked for all of these, we'd expect one or more of: a mechanistic explanation for how removing chicken simultaneously fixes insulin production, tumor suppression, immune dysregulation, and blood vessel tone — no such mechanism is known."
+      ],
+      "modelPointsAr": [
+        "السكري النوع الأول هو تدمير مناعي ذاتي لخلايا بيتا المنتجة للأنسولين — بديل الأنسولين هو التدخّل الوحيد المعروف اللي بيمنع الوفاة؛ ما فيش حمية بتعكس تدمير خلايا بيتا.",
+        "السرطان أكثر من 200 مرض متمايز بيولوجياً بطفرات محرّكة مختلفة وأعضاء متأثّرة وطرق علاج مختلفة — «السرطان» مش هدف واحد.",
+        "الذئبة حالة مناعية ذاتية جهازية مدفوعة بخلل المناعة، مش باستهلاك الغذاء من فراخ أو بيض.",
+        "الضغط له أسباب متعددة (مرض كلوي، هرموني، نمط حياة، جيني) وادعاء «حمية واحدة تصلح للكل» ما يقدرش يفسّر التباين ده.",
+        "لو حمية إقصاء واحدة اشتغلت لكلها، كنّا هنتوقع شرحاً آليّاً لكيفية إصلاح الفراخ المُزال لإنتاج الأنسولين وقمع الأورام وخلل المناعة وتوتّر الأوعية في آنٍ واحد — ما فيش آلية معروفة كده."
+      ],
+      "explanation": "Considering the opposite forces you to ask: 'What mechanism would be required?' 'Cures everything' is Red Flag #1 not because it is bold, but because it claims generalizability across biologically incompatible populations with incompatible disease mechanisms — which is impossible by the known biology of disease.",
+      "explanationAr": "التفكير في العكس بيجبرك تسأل: «أنهي آلية ستكون مطلوبة؟» «يشفي كل شيء» هي علامة الخطر رقم 1 مش لأنها جريئة، لكن لأنها تدّعي قابلية التعميم عبر تعدادات غير متوافقة بيولوجياً بآليات مرض غير متوافقة — وهو مستحيل بيولوجية المرض المعروفة.",
+      "sources": [
+        "EAL-case-001:redflag-1",
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A researcher publishes a valid RCT showing that a specific high-protein diet lowers blood sugar in type-2 diabetic patients in a Cairo hospital. A journalist writes: 'New Egyptian study — high-protein diet cures diabetes.'",
+      "claimAr": "باحث ينشر تجربة عشوائية محكَمة صحيحة بتُري إن حمية عالية البروتين بتخفّض سكر الدم في مرضى السكري النوع الثاني في مستشفى قاهري. صحفي يكتب: «دراسة مصرية جديدة — حمية البروتين تشفي السكري».",
+      "options": [
+        "The journalist is right — the study proved it cures diabetes",
+        "The journalist made multiple generalizability errors: 'lowers blood sugar' is not 'cures'; one hospital population may not represent all Egyptian diabetics; and one RCT needs replication"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: identify the three separate generalizability jumps the journalist made. For each one, explain what the researcher actually found versus what the headline claimed.",
+        "promptAr": "بكلماتك: حدّد القفزات الثلاث المنفصلة لقابلية التعميم اللي الصحفي عملها. لكل واحدة، اشرح إيه اللي الباحث لاقه فعلاً مقابل ما ادّعاه العنوان."
+      },
+      "explanation": "Jump 1: 'lowering blood sugar' (surrogate endpoint) ≠ 'curing diabetes' (clinical outcome — normal blood sugar without medication, reversal of disease). Jump 2: patients at one Cairo hospital may be systematically different from rural diabetics, elderly patients, or those on different medications. Jump 3: one study, even a great RCT, needs independent replication before guiding clinical practice. Good science reporting says: 'One study found that in this population, this diet was associated with lower blood sugar — further research is needed.'",
+      "explanationAr": "القفزة 1: «تخفيض سكر الدم» (نقطة نهاية بديلة) غير «شفاء السكري» (نتيجة سريرية — سكر طبيعي بدون دواء، عكس المرض). القفزة 2: مرضى مستشفى قاهري واحد ممكن يكونوا مختلفين بشكل منهجي عن مرضى السكري الريفيين أو المسنّين أو مَن يأخذون أدوية مختلفة. القفزة 3: دراسة واحدة، حتى لو RCT ممتازة، تحتاج تكراراً مستقلاً قبل توجيه الممارسة السريرية. صحافة علم جيدة تقول: «دراسة واحدة وجدت إن في هذا التعداد هذه الحمية كانت مرتبطة بانخفاض سكر الدم — يلزم مزيد من البحث».",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-and-aetiological-research"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a systematic review that combines 20 studies all conducted on the same narrow demographic group (e.g. North American university students) gives you the same generalizability as one study conducted in a diverse global population.",
+      "claimAr": "صح ولا غلط: مراجعة منهجية بتجمع 20 دراسة كلها اتعملت على نفس الشريحة السكّانية الضيّقة (مثلاً طلاب جامعات أمريكا الشمالية) بتديك نفس قابلية التعميم لدراسة واحدة اتعملت على تعداد متنوّع عالمي.",
+      "correctAnswer": false,
+      "myth_en": "More studies always means wider applicability.",
+      "myth_ar": "دراسات أكثر يعني تطبيق أوسع دايماً.",
+      "explanation": "False. Pooling 20 studies from the same narrow population only increases your statistical precision about that population — it does not widen your generalizability. If all 20 studies used 18-22-year-old students in similar environments, their combined result says nothing more about middle-aged workers in Cairo, elderly patients in Upper Egypt, or children in rural areas. Diversity of the study populations, not just quantity of studies, is what drives generalizability. Calibration: if you were confident this was true, that confidence shows how 'more data' feels like it should mean 'wider truth' — but data from a homogeneous source, however much of it, stays homogeneous.",
+      "explanationAr": "غلط. تجميع 20 دراسة من نفس التعداد السكّاني الضيّق بيزيد فقط دقتك الإحصائية عن ذلك التعداد — لا يوسّع قابلية التعميم. لو الـ20 دراسة استخدمت طلاباً من 18-22 سنة في بيئات متشابهة، نتيجتهم المجمَّعة لا تقول شيئاً إضافياً عن عمّال في منتصف العمر بالقاهرة أو مرضى مسنّين بصعيد مصر أو أطفال في المناطق الريفية. تنوّع تعدادات الدراسة، لا مجرد كمية الدراسات، هو ما يقود قابلية التعميم. المعايرة: لو كنت واثق إنها صح، اليقين ده بيوضّح كيف «بيانات أكثر» بتحسّ إنها لازم تعني «حقيقة أوسع» — لكن بيانات من مصدر متجانس، مهما كثرت، تفضل متجانسة.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'A weight-loss supplement worked for thousands of athletes in international trials. I'm Egyptian, middle-aged, and sedentary — but it will definitely work for me too. Studies are studies.'",
+      "claimAr": "فكّك الحُجّة دي: «مكمّل التخسيس ده اشتغل مع آلاف الرياضيين في تجارب دولية. أنا مصري وفي منتصف العمر وخامل — لكن أكيد هيشتغل معايا كمان. الدراسات هي الدراسات».",
+      "parts": [
+        { "text": "This supplement will definitely work for me.", "textAr": "المكمّل ده أكيد هيشتغل معايا.", "role": "conclusion" },
+        { "text": "It worked for thousands of athletes in international trials.", "textAr": "اشتغل مع آلاف الرياضيين في تجارب دولية.", "role": "premise" },
+        { "text": "(Unstated) Results in one population transfer automatically to any other population.", "textAr": "(غير مذكور) نتائج تعداد واحد بتنتقل أوتوماتيكياً لأي تعداد آخر.", "role": "assumption" },
+        { "text": "Studies are studies — all equally applicable regardless of population.", "textAr": "الدراسات هي الدراسات — كلها قابلة للتطبيق بالتساوي بغض النظر عن التعداد.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption — that results transfer automatically across populations — is the core generalizability error. The premise (it worked for athletes) is real evidence, but only for athletes. The conclusion (it will work for me, a sedentary middle-aged Egyptian) requires the hidden assumption, which the study never tested. The 'studies are studies' dismissal is irrelevant: it waves away the question of external validity without addressing it. Argument mapping exposes the gap between what is proven and what is claimed.",
+      "explanationAr": "الافتراض الخفي — إن النتائج بتنتقل أوتوماتيكياً عبر التعدادات — هو خطأ قابلية التعميم الجوهري. المقدّمة (اشتغلت مع الرياضيين) دليل حقيقي، لكن للرياضيين فقط. الخلاصة (هتشتغل معايا، مصري خامل في منتصف العمر) تتطلّب الافتراض الخفي، اللي الدراسة ما اختبرته أبداً. «الدراسات هي الدراسات» غير ذات صلة: بترفض سؤال الصحة الخارجية من غير ما تعالجه. تفكيك الحُجّة بيكشف الفجوة بين ما ثُبِت وما ادُّعي.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-and-aetiological-research"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

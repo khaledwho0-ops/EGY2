@@ -1,0 +1,98 @@
+{
+  "id": "bonferroni_correction",
+  "phase": 2,
+  "week": 9,
+  "day": 6,
+  "title": "Bonferroni Correction & Multiple Comparisons",
+  "titleAr": "تصحيح بونفيروني والمقارنات المتعددة",
+  "description": "Understand the multiple comparisons problem and how Bonferroni correction controls the family-wise error rate. Learn when to apply it, its limitations, and modern alternatives like Benjamini-Hochberg FDR control.",
+  "descriptionAr": "افهم مشكلة المقارنات المتعددة وكيف يتحكم تصحيح بونفيروني في معدل الخطأ على مستوى العائلة. تعلم متى تطبقه وحدوده والبدائل الحديثة مثل التحكم في معدل الاكتشاف الخاطئ لبنجاميني-هوكبيرغ.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "statisticalConcept": {
+    "name": "Bonferroni Correction & Multiple Comparisons",
+    "nameAr": "تصحيح بونفيروني والمقارنات المتعددة",
+    "definition": "The multiple comparisons problem arises when multiple statistical tests are performed simultaneously: each test has a chance of producing a false positive (Type I error), and the cumulative probability of at least one false positive grows with the number of tests. The Bonferroni correction (Carlo Emilio Bonferroni, 1936) divides the desired α level by the number of comparisons (k): α_adjusted = α/k. This controls the family-wise error rate (FWER) — the probability of making one or more false discoveries across all tests. However, Bonferroni is conservative (reduces statistical power), especially with many correlated tests. Alternatives include the Holm-Bonferroni step-down method (1979), which is uniformly more powerful, and the Benjamini-Hochberg (1995) procedure, which controls the false discovery rate (FDR) instead of FWER.",
+    "definitionAr": "تنشأ مشكلة المقارنات المتعددة عندما يتم إجراء اختبارات إحصائية متعددة في آن واحد: كل اختبار لديه فرصة لإنتاج إيجابية خاطئة، والاحتمال التراكمي لإيجابية خاطئة واحدة على الأقل ينمو مع عدد الاختبارات. يقسم تصحيح بونفيروني (1936) مستوى ألفا المطلوب على عدد المقارنات: ألفا المعدل = ألفا/ك. البدائل تشمل طريقة هولم-بونفيروني التنازلية (1979) وإجراء بنجاميني-هوكبيرغ (1995) الذي يتحكم في معدل الاكتشاف الخاطئ.",
+    "realWorldExample": "In genome-wide association studies (GWAS), researchers test hundreds of thousands to millions of genetic variants simultaneously. A standard GWAS tests ~1 million SNPs, requiring a Bonferroni threshold of 0.05/1,000,000 = 5×10⁻⁸. This genome-wide significance threshold has become the standard in human genetics since its formalization by Risch & Merikangas (1996) and Pe'er et al. (2008). Without this correction, a GWAS would produce approximately 50,000 false positives at α = 0.05.",
+    "realWorldExampleAr": "في دراسات الارتباط على مستوى الجينوم (GWAS)، يختبر الباحثون مئات الآلاف إلى ملايين المتغيرات الجينية في آن واحد. دراسة GWAS قياسية تختبر حوالي مليون متعدد أشكال نيوكليوتيد مفرد، مما يتطلب حد بونفيروني 0.05/1,000,000 = 5×10⁻⁸. بدون هذا التصحيح، ستنتج دراسة GWAS حوالي 50,000 إيجابية خاطئة عند ألفا = 0.05.",
+    "detectionMethod": "When reviewing a study: (1) Count the number of statistical tests performed; (2) Check if any correction for multiple comparisons was applied; (3) If Bonferroni was used, verify the adjusted threshold is α/k; (4) If no correction was used, calculate the family-wise error rate: FWER = 1-(1-α)^k; (5) Check if the authors justified their correction choice; (6) For genomics or high-dimensional data, verify the appropriate genome-wide or FDR threshold."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "calculate",
+      "prompt": "A clinical trial compares a new drug against placebo on 4 primary endpoints: blood pressure, cholesterol, BMI, and fasting glucose. Using Bonferroni correction with α = 0.05, what is the adjusted significance threshold for each test?",
+      "promptAr": "تقارن تجربة سريرية دواءً جديداً مع دواء وهمي على 4 نقاط نهاية أولية: ضغط الدم، الكوليسترول، مؤشر كتلة الجسم، وسكر الصيام. باستخدام تصحيح بونفيروني مع ألفا = 0.05، ما هو حد الدلالة المعدل لكل اختبار؟",
+      "options": [
+        "0.025 (0.05 ÷ 2 = 0.025)",
+        "0.01 (arbitrary stricter threshold)",
+        "0.05 — no adjustment needed",
+        "0.0125 (0.05 ÷ 4 = 0.0125)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Bonferroni correction divides α by the number of tests: 0.05 / 4 = 0.0125. Each of the four tests must achieve p < 0.0125 to be declared significant. This ensures the family-wise error rate (probability of at least one false positive across all four tests) remains at approximately 0.05. If the original α = 0.05 were used for each test, the FWER would be 1 - (0.95)^4 ≈ 0.185 or 18.5%.",
+      "explanationAr": "يقسم تصحيح بونفيروني ألفا على عدد الاختبارات: 0.05 / 4 = 0.0125. يجب أن يحقق كل من الاختبارات الأربعة قيمة احتمالية أقل من 0.0125 ليُعلن ذا دلالة. هذا يضمن بقاء معدل الخطأ على مستوى العائلة عند حوالي 0.05."
+    },
+    {
+      "id": 2,
+      "type": "evaluate",
+      "prompt": "A neuroimaging study tests 100,000 brain voxels for activation differences between two conditions. They report 200 voxels as 'significant' at p < 0.05 without any correction for multiple comparisons. What is wrong with this approach?",
+      "promptAr": "دراسة تصوير عصبي تختبر 100,000 فوكسل دماغي للاختلافات في التنشيط بين حالتين. أبلغوا عن 200 فوكسل على أنها 'ذات دلالة' عند قيمة احتمالية أقل من 0.05 دون أي تصحيح للمقارنات المتعددة. ما الخطأ في هذا النهج؟",
+      "options": [
+        "At α = 0.05 with 100,000 tests, you expect 5,000 false positives by chance alone (100,000 × 0.05 = 5,000). The 200 'significant' voxels are likely ALL false positives. Bonferroni threshold would be 0.05/100,000 = 5×10⁻⁷",
+        "The problem is the sample size, not the multiple comparisons",
+        "Neuroimaging studies don't need corrections",
+        "Nothing — 200 significant results is impressive"
+      ],
+      "correctAnswer": 0,
+      "explanation": "With 100,000 tests at α = 0.05, the expected number of false positives under the null hypothesis is 100,000 × 0.05 = 5,000. Finding only 200 'significant' voxels is actually FEWER than expected by chance, strongly suggesting all are false positives. This is the exact problem that led to the famous 'dead salmon fMRI' study by Bennett et al. (2009), where they demonstrated statistically significant brain activation in a dead Atlantic salmon when no correction was applied. The field now uses FDR correction or cluster-level thresholding.",
+      "explanationAr": "مع 100,000 اختبار عند ألفا = 0.05، العدد المتوقع من الإيجابيات الخاطئة هو 5,000. إيجاد 200 فوكسل 'مهم' فقط هو في الواقع أقل مما هو متوقع بالصدفة. هذه بالضبط المشكلة التي أدت إلى دراسة 'سمك السلمون الميت' الشهيرة لبينيت وآخرين (2009) حيث أظهروا تنشيطاً دماغياً ذا دلالة إحصائية في سمك سلمون أطلسي ميت."
+    },
+    {
+      "id": 3,
+      "type": "identify",
+      "prompt": "What is the key advantage of the Benjamini-Hochberg (1995) FDR procedure over the Bonferroni correction?",
+      "promptAr": "ما الميزة الرئيسية لإجراء بنجاميني-هوكبيرغ (1995) للتحكم في معدل الاكتشاف الخاطئ مقارنة بتصحيح بونفيروني؟",
+      "options": [
+        "It never produces false positives",
+        "It controls the False Discovery Rate (proportion of false positives among rejected hypotheses) rather than the Family-Wise Error Rate, providing substantially more statistical power when many tests are conducted",
+        "It doesn't require knowing the number of tests",
+        "It only works with large sample sizes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Bonferroni controls FWER (probability of ANY false positive), which becomes extremely conservative with many tests. Benjamini-Hochberg controls FDR (the expected PROPORTION of false positives among discoveries). For example, with 1,000 tests, Bonferroni threshold is 0.05/1000 = 0.00005. BH with FDR = 0.05 allows some false positives (up to 5% of discoveries) but retains much more statistical power to detect true effects. BH is now the standard in genomics, proteomics, and other high-dimensional fields.",
+      "explanationAr": "بونفيروني يتحكم في FWER (احتمال أي إيجابية خاطئة)، والذي يصبح محافظاً للغاية مع اختبارات كثيرة. بنجاميني-هوكبيرغ يتحكم في FDR (النسبة المتوقعة من الإيجابيات الخاطئة بين الاكتشافات). هذا يحتفظ بقوة إحصائية أكبر بكثير لاكتشاف التأثيرات الحقيقية."
+    },
+    {
+      "id": 4,
+      "type": "analyze",
+      "prompt": "A researcher tests 3 pairwise comparisons after a one-way ANOVA with 3 groups. They use Bonferroni correction. Their colleague argues they should use Tukey's HSD instead. Who is correct and why?",
+      "promptAr": "يختبر باحث 3 مقارنات زوجية بعد تحليل التباين أحادي الاتجاه مع 3 مجموعات. يستخدم تصحيح بونفيروني. يجادل زميله بأنه يجب استخدام اختبار توكي HSD بدلاً من ذلك. من على حق ولماذا؟",
+      "options": [
+        "The researcher is correct — Bonferroni is always superior",
+        "The colleague is correct — Tukey's HSD is always superior",
+        "Both are valid approaches for controlling FWER in post-hoc pairwise comparisons, but Tukey's HSD is specifically designed for all pairwise comparisons and is more powerful than Bonferroni when all pairs are tested",
+        "Neither correction is needed after ANOVA"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Both methods control FWER, but Tukey's Honest Significant Difference (1953) is specifically designed for testing all pairwise comparisons after ANOVA and uses the Studentized range distribution, making it more powerful than Bonferroni for this specific scenario. Bonferroni is more flexible — it works for any set of comparisons, not just pairwise — but when testing all k(k-1)/2 pairwise comparisons, Tukey's HSD gives narrower confidence intervals. The Holm-Bonferroni (1979) step-down procedure is uniformly more powerful than Bonferroni and should generally be preferred.",
+      "explanationAr": "كلتا الطريقتين تتحكم في FWER، لكن اختبار توكي (1953) مصمم خصيصاً لاختبار جميع المقارنات الزوجية بعد تحليل التباين ويستخدم توزيع المدى الطلابي، مما يجعله أقوى من بونفيروني لهذا السيناريو المحدد."
+    },
+    {
+      "id": 5,
+      "type": "calculate",
+      "prompt": "In a GWAS testing 1,000,000 SNPs, the Bonferroni-corrected significance threshold is 5×10⁻⁸. A variant achieves p = 3×10⁻⁷. What is its status?",
+      "promptAr": "في دراسة GWAS تختبر 1,000,000 متعدد أشكال نيوكليوتيد مفرد، حد الدلالة المصحح ببونفيروني هو 5×10⁻⁸. متغير يحقق قيمة احتمالية = 3×10⁻⁷. ما حالته؟",
+      "options": [
+        "Completely non-significant — should be ignored",
+        "Significant at the uncorrected level so the finding is valid",
+        "Genome-wide significant — p < 5×10⁻⁸",
+        "Not genome-wide significant (3×10⁻⁷ > 5×10⁻⁸) but considered 'suggestive' — it exceeds the genome-wide threshold by 6-fold but is far more significant than the uncorrected 0.05"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The p-value of 3×10⁻⁷ is above the genome-wide significance threshold of 5×10⁻⁸ (since 3×10⁻⁷ = 30×10⁻⁸ > 5×10⁻⁸), so it fails Bonferroni correction. However, in GWAS practice, p-values between 5×10⁻⁸ and 1×10⁻⁵ are often termed 'suggestive' associations — they may represent true signals that need replication in independent cohorts. The conventional genome-wide significance threshold of 5×10⁻⁸ was established by Pe'er et al. (2008) accounting for ~1 million independent common variants in European-ancestry populations.",
+      "explanationAr": "القيمة الاحتمالية 3×10⁻⁷ أعلى من حد الدلالة على مستوى الجينوم 5×10⁻⁸، لذا فهي تفشل في تصحيح بونفيروني. ومع ذلك، في ممارسة GWAS، القيم بين 5×10⁻⁸ و1×10⁻⁵ تُسمى غالباً ارتباطات 'إيحائية' — قد تمثل إشارات حقيقية تحتاج تكراراً."
+    }
+  ]
+}

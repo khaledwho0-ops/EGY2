@@ -1,0 +1,138 @@
+{
+  "id": "day83_correlation_causation",
+  "phase": 2,
+  "week": 12,
+  "day": 83,
+  "title": "Correlation Is Not Causation",
+  "titleAr": "الارتباط مش سببية",
+  "description": "Ambulances arrive at car crashes, but they don't cause them. Two things moving together doesn't mean one causes the other. This one principle protects you from dozens of health myths, diet claims, and health-scare headlines.",
+  "descriptionAr": "سيارات الإسعاف بتوصل لحوادث السيارات، لكنها مش بتسبّبها. حركة حاجتين مع بعض لا يعني إن إحداهما سبّبت التانية. المبدأ ده وحده بيحميك من عشرات أساطير الصحة وادعاءات الحِمية وعناوين مخاوف الصحة.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-analytical-studies",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Data show that cities with more ambulances also have more road deaths. A health blogger concludes: 'Ambulances cause road deaths — we should reduce ambulance numbers.' What is wrong with this reasoning?",
+      "claimAr": "البيانات بتوضح إن المدن اللي فيها إسعافات أكتر عندها وفيات أكتر في الطرق. مدوّن صحة بيستنتج: «الإسعافات بتسبّب وفيات الطرق — لازم نقلّل عدد الإسعافات.» إيه الغلط في الاستدلال ده؟",
+      "options": [
+        "There is nothing wrong — the correlation proves it",
+        "This confuses correlation with causation. Both variables are caused by a third factor: population size and traffic density drive both more crashes and more ambulances",
+        "Ambulances do cause road deaths in some cities",
+        "The blogger needs a bigger dataset to be right"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the classic ambulance example: ambulances and road deaths are correlated because both are caused by the same thing — larger, busier cities. The ambulances respond to crashes; they don't create them. When two things correlate, you must always ask: 'Is there a third variable (confounder) causing both?' Before claiming cause, check: (1) Did A come before B? (2) Is the correlation real and large? (3) Have we eliminated confounders?",
+      "explanationAr": "ده المثال الكلاسيكي للإسعاف: الإسعافات ووفيات الطرق مترابطتان لأن كليهما ناتج عن نفس الحاجة — المدن الأكبر والأكثر ازدحاماً. الإسعافات بتستجيب للحوادث؛ مش بتخلقها. لمّا حاجتان مترابطتان، لازم دايماً تسأل: «في متغيّر ثالث (عامل مربك) بيسبّب كليهما؟» قبل ادعاء السببية، افحص: (1) هل A جت قبل B؟ (2) هل الارتباط حقيقي وكبير؟ (3) هل استبعدنا العوامل المربكة؟",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-analytical-studies"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "Followers of the viral «نظام الطيبات» diet noticed: 'I stopped eating chicken, and within a week my joint pain improved.' This is good evidence that chicken causes joint pain. True or false?",
+      "claimAr": "أتباع نظام «الطيبات» لاحظوا: «بطّلت آكل فراخ، وفي خلال أسبوع آلام مفاصلي تحسّنت.» ده دليل كويس إن الفراخ بيسبّب آلام المفاصل. صح ولا غلط؟",
+      "correctAnswer": false,
+      "myth_en": "A personal before/after is proof of cause.",
+      "myth_ar": "ملاحظة شخصية قبل/بعد = دليل على السببية.",
+      "explanation": "False. Joint pain naturally fluctuates — it worsens and improves in cycles regardless of diet. When someone stops a food and improves, at least five explanations compete: (1) the disease naturally improved that week, (2) placebo effect of taking action, (3) something else changed simultaneously (stress, sleep, medication), (4) the person became more attentive to self-care overall, or (5) diet was genuinely causal. A controlled experiment separating these is the only way to know which explanation is correct. How confident were you before reading this? If very confident — notice that the personal story felt like proof, even though it cannot be.",
+      "explanationAr": "غلط. آلام المفاصل بتتذبذب بشكل طبيعي — بتشتدّ وبتتحسّن في دورات بغضّ النظر عن الحِمية. لمّا حد بيوقّف أكل ويتحسّن، خمسة تفسيرات على الأقل بتتنافس: (1) المرض تحسّن طبيعياً تلك الأسبوع، (2) تأثير الوهمي لاتخاذ إجراء، (3) حاجة تانية اتغيّرت في نفس الوقت (توتر، نوم، دواء)، (4) الشخص بقى أكثر انتباهاً للعناية بنفسه عموماً، أو (5) الحِمية كانت السبب الحقيقي. تجربة مضبوطة تفصل بين دول التفسيرات دي هي الطريقة الوحيدة لمعرفة أيّها صح. كنت متأكد قد إيه قبل ما تقرأ ده؟ لو بيقين عالي — لاحظ إن القصة الشخصية حسّت إنها دليل، بالرغم إنها ما تقدرش تكون.",
+      "sources": [
+        "EAL-case-001:redflag-9",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-analytical-studies"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A study finds that countries with higher chocolate consumption have more Nobel Prize winners per capita. A wellness blog concludes that eating chocolate boosts brain performance.",
+      "claimAr": "دراسة بتلاقي إن الدول اللي استهلاكها من الشوكولاتة أعلى عندها فائزو جائزة نوبل أكتر للفرد. مدوّنة عافية بتستنتج إن أكل الشوكولاتة بيعزّز أداء الدماغ.",
+      "options": [
+        "Yes — the correlation across many countries is strong evidence",
+        "No — wealth is the likely confounder: rich countries consume more chocolate AND invest more in research that produces Nobel laureates"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what is the hidden third variable here, and why does identifying it change everything about this conclusion?",
+        "promptAr": "بكلماتك: إيه المتغيّر الثالث الخفي هنا، وليه تحديده بيغيّر كل حاجة في الاستنتاج ده؟"
+      },
+      "explanation": "National wealth is the confounder: wealthier nations consume more luxury goods (including chocolate) AND fund the research institutions that produce Nobel laureates. The chocolate-Nobel link is spurious — both outcomes are being driven by a third variable. Identifying the confounder dissolves the apparent causal chain entirely. This is the move: always ask 'what else differs between the groups being compared?'",
+      "explanationAr": "الثروة القومية هي العامل المربك: الدول الأغنى بتستهلك سلعاً فاخرة أكتر (منها الشوكولاتة) وبتموّل مؤسسات البحث اللي بتنتج الفائزين بنوبل. الارتباط شوكولاتة-نوبل زائف — كلا النتيجتين ناتجتان عن متغيّر ثالث. تحديد العامل المربك بيذيب السلسلة السببية الظاهرة تماماً. دي الحركة: دايماً اسأل «إيه الحاجات التانية المختلفة بين المجموعات المقارَنة؟»",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-analytical-studies",
+        "https://www.nejm.org/doi/full/10.1056/NEJMon1211064"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A news article says: 'People who skip breakfast are more likely to be overweight — skipping breakfast causes weight gain.' It makes intuitive sense: if you skip breakfast, you're hungrier and eat more later.",
+      "claimAr": "مقال إخباري بيقول: «الناس اللي بيتخطّوا الفطار أكثر عرضة للوزن الزائد — تخطّي الفطار بيسبّب زيادة الوزن.» المنطق واضح: لو اتخطّيت الفطار هتجوع أكتر وتاكل أكتر بعدين.",
+      "prompt": "What would DISPROVE this? What alternative explanations fit the same data without any causal arrow from skipping breakfast to weight gain?",
+      "promptAr": "إيه اللي يكذّب ده؟ وإيه التفسيرات البديلة اللي بتنطبق على نفس البيانات من غير أي سهم سببي من تخطّي الفطار لزيادة الوزن؟",
+      "modelPoints": [
+        "Reverse causation: people who are already overweight may skip breakfast as a calorie-cutting strategy — weight gain came first, not the skipping.",
+        "Confounding: a chaotic or high-stress lifestyle causes both skipping meals AND weight gain independently — the common cause is the lifestyle, not the meal timing.",
+        "Selection bias: studies often recruit overweight people from weight-loss clinics who are more likely to report skipping breakfast.",
+        "If the causal story were true, RCTs forcing people to eat breakfast would show consistent weight loss — but the evidence is mixed."
+      ],
+      "modelPointsAr": [
+        "عكس السببية: الناس ذوو الوزن الزائد ممكن يتخطّوا الفطار كاستراتيجية لتقليل السعرات — زيادة الوزن جات الأول، مش التخطّي.",
+        "العوامل المربكة: أسلوب حياة فوضوي أو متوتر يسبّب كلاً من تخطّي الوجبات وزيادة الوزن باستقلالية — السبب المشترك هو أسلوب الحياة مش توقيت الوجبة.",
+        "انحياز الاختيار: الدراسات غالباً بتجنّد ناس ذوو وزن زائد من عيادات إنقاص الوزن اللي أكثر عرضة للإفادة بتخطّي الفطار.",
+        "لو القصة السببية صح، التجارب العشوائية اللي بتجبر الناس على الفطار كانت هتُظهر فقدان وزن متسق — لكن الأدلة متضاربة."
+      ],
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-analytical-studies",
+        "https://www.hsph.harvard.edu/nutritionsource/healthy-weight/diet-reviews/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "\"Researchers found that people who carry lighters are more likely to develop lung cancer. So lighters cause cancer — ban them and save lives.\"",
+      "claimAr": "«الباحثون لقوا إن الناس اللي بيشيلوا ولاعات أكثر عرضة للإصابة بسرطان الرئة. يبقى الولاعات بتسبّب السرطان — احظرها وانقذ أرواح.»",
+      "parts": [
+        { "text": "Ban lighters and save lives.", "textAr": "احظر الولاعات وانقذ أرواح.", "role": "conclusion" },
+        { "text": "People who carry lighters are more likely to develop lung cancer.", "textAr": "الناس اللي بيشيلوا ولاعات أكثر عرضة لسرطان الرئة.", "role": "premise" },
+        { "text": "(Unstated) Correlation between lighters and cancer means lighters cause cancer.", "textAr": "(غير مذكور) الارتباط بين الولاعات والسرطان يعني الولاعات تسبّب السرطان.", "role": "assumption" },
+        { "text": "Removing lighters removes the cause.", "textAr": "إزالة الولاعات بتزيل السبب.", "role": "assumption" }
+      ],
+      "explanation": "Carrying a lighter is a marker of smoking, not a cause of cancer. The true causal chain is: smoking → lung cancer, and smoking → carrying a lighter. Both the lighter and the cancer are effects of the same cause (smoking). Banning lighters would leave the real cause intact. The argument's hidden assumptions — that correlation equals causation, and that removing the marker removes the cause — are both false. Mapping the argument forces you to name these assumptions explicitly.",
+      "explanationAr": "حمل الولاعة هو مؤشر على التدخين، مش سبباً للسرطان. السلسلة السببية الحقيقية هي: التدخين ← سرطان الرئة، والتدخين ← حمل الولاعة. كلاهما نتائج لنفس السبب (التدخين). حظر الولاعات يترك السبب الحقيقي سليماً. الافتراضات الخفية في الحُجّة — إن الارتباط يساوي السببية، وإن إزالة المؤشر تزيل السبب — كلاهما غلط. رسم الحُجّة بيجبرك تسمّي الافتراضات دي بشكل صريح.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-analytical-studies",
+        "https://www.cancer.gov/about-cancer/causes-prevention/risk/tobacco"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 6,
+      "mechanic": "retrieve",
+      "retrievalOf": 67,
+      "claim": "A cohort study followed 2,000 workers exposed to a chemical for 5 years and found a 64% rate of a lung condition. A cross-sectional survey of the same factory found only 30% reported symptoms. Which figure is more reliable, and why does the difference matter?",
+      "claimAr": "دراسة مجموعة متابَعة 2000 عامل متعرّض لمادة كيميائية لمدة 5 سنوات ولقت معدل 64% لحالة رئوية. مسح مقطعي لنفس المصنع لقى 30% بس بيُبلّغوا عن أعراض. أنهي رقم أكثر موثوقية، وليه الفرق مهم؟",
+      "options": [
+        "The survey — it asked more people directly",
+        "The cohort — it followed the same people forward over time and measured outcomes directly rather than relying on self-report",
+        "Both are equally reliable",
+        "Neither — only an RCT counts"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The cohort study is stronger here for two reasons: (1) it followed people forward, so the exposure came before the outcome — direction of causation is clearer; (2) it measured the lung condition directly, not through self-report. The cross-sectional survey suffers from recall bias (people under-report symptoms) and healthy-worker bias (the sickest people may have already left the job). The gap between 64% and 30% is not a mystery — it is exactly what these biases predict. This is a retrieval of the study-design hierarchy from earlier in the phase.",
+      "explanationAr": "دراسة المجموعة أقوى هنا لسببين: (1) تابعت الناس للأمام، يعني التعرّض جه قبل النتيجة — اتجاه السببية أوضح؛ (2) قاست الحالة الرئوية بشكل مباشر مش عن طريق التبليغ الذاتي. المسح المقطعي عنده انحياز التذكّر (الناس بتقلّل من الأعراض) وانحياز العامل الصحي (الأكثر مرضاً ممكن يكونوا سابوا الشغل بالفعل). الفرق بين 64% و30% مش لغز — هو بالظبط ما بتتنبّأ بيه الانحيازات دي. ده استرجاع لتسلسل تصميم الدراسات من أول المرحلة.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-epidemiology-analytical-studies"
+      ],
+      "cognitivebiasAtPlay": "Recall Bias"
+    }
+  ]
+}

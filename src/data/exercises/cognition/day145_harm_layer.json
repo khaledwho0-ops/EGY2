@@ -1,0 +1,123 @@
+{
+  "id": "day145_harm_layer",
+  "phase": 4,
+  "week": 21,
+  "day": 145,
+  "title": "Layer 5 — The Harm: When the Belief Met the Body",
+  "titleAr": "الطبقة الخامسة — الأذى: لمّا المعتقد قابل الجسد",
+  "description": "This is the most painful layer. People stopped insulin, corticosteroids, and cancer therapy on the system's advice — and some died. We hold this with care: the goal is never to shame the bereaved, but to understand the single most dangerous signal so it cannot happen again.",
+  "descriptionAr": "دي أصعب طبقة. ناس وقفوا الأنسولين والكورتيزون وعلاج السرطان بناءً على نصيحة النظام — وبعضهم مات. بنتعامل مع ده بحرص: الهدف أبداً مش لوم المفجوعين، لكن فهم أخطر إشارة علشان ما تتكرّرش.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "The system told followers with type-1 diabetes to stop insulin, saying the diet would 'regulate' their sugar naturally. A young Egyptian following this advice later died. Of the twelve red flags, which one is universally treated as the most dangerous single signal in any health claim?",
+      "claimAr": "النظام قال للأتباع اللي عندهم سكري نوع أول يوقفوا الأنسولين، بحجة إن الحمية «هتنظّم» السكر طبيعياً. شاب مصري اتبع النصيحة دي ومات بعدين. من علامات الخطر الاتناشر، أنهي واحدة بتتعامَل عالمياً كأخطر إشارة مفردة في أي ادعاء صحي؟",
+      "options": [
+        "Using religious words for food",
+        "Telling you to stop your prescribed, tested medicine (red flag #8)",
+        "Having a financial interest",
+        "Lacking indexed publications"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Red flag #8 — 'stop your medicine' — is the line where a belief becomes lethal. Type-1 diabetes is the autoimmune destruction of the cells that make insulin; without insulin the body cannot use glucose and slides into diabetic ketoacidosis, which kills. No diet can rebuild destroyed cells. This is the moment all the earlier, 'softer' manipulations cash out in a real body. Spotting this one signal is the highest-value skill in the whole curriculum.",
+      "explanationAr": "علامة الخطر رقم 8 — «وقف دواك» — هي الخط اللي عنده المعتقد بيبقى قاتل. سكري النوع الأول تدمير مناعي ذاتي للخلايا اللي بتنتج الأنسولين؛ بدون أنسولين الجسم ما يقدرش يستخدم الجلوكوز وبينزلق للحماض الكيتوني، اللي بيقتل. مفيش حمية بتعيد بناء خلايا مدمّرة. دي اللحظة اللي كل التلاعبات «الأنعم» قبلها بتتصرّف فيها على جسد حقيقي. وكشف الإشارة دي أعلى مهارة قيمة في المنهج كله.",
+      "sources": [
+        "EAL-case-001:redflag-8",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "consider_opposite",
+      "claim": "Inside the community, a comforting belief held firm even as people fell ill: 'If the diet were truly dangerous, we'd see the harm — but everyone around me looks fine and shares good news.'",
+      "claimAr": "جوّه المجتمع، معتقد مريّح فضل ثابت حتى وناس بتمرض: «لو الحمية كانت خطيرة فعلاً، كنا هنشوف الأذى — لكن كل اللي حواليا شكلهم كويس وبيشاركوا أخبار حلوة».",
+      "prompt": "Consider the opposite: what would the world look like if the diet WERE harming people — would the harmed still be visible in your feed? Where would they be instead?",
+      "promptAr": "فكّر في العكس: لو الحمية كانت بتأذي الناس فعلاً، الدنيا كانت هتبان إزاي — هل المتضررون هيفضلوا ظاهرين في الفييد بتاعك؟ هيكونوا فين بدل كده؟",
+      "modelPoints": [
+        "The seriously harmed are not posting — they are in ICUs, hospitals, or have died; their absence from your feed is the harm, not its absence.",
+        "Communities tend to share success and quietly remove or hide failure, so the feed is filtered toward good news by design.",
+        "Saudi and Egyptian authorities issued official warnings only AFTER ICU admissions — meaning real harm was accumulating off-screen the whole time.",
+        "'Everyone I see looks fine' is survivorship bias: you are sampling exactly the people who could still type."
+      ],
+      "modelPointsAr": [
+        "المتضررون بشدّة مش بينشروا — هم في عناية مركزة، أو مستشفيات، أو ماتوا؛ غيابهم من الفييد هو الأذى، مش غيابه.",
+        "المجتمعات بتميل تشارك النجاح وتشيل أو تخفي الفشل بهدوء، فالفييد مفلتر ناحية الأخبار الحلوة بالتصميم.",
+        "السلطات السعودية والمصرية أصدرت تحذيرات رسمية بس بعد دخول مرضى للعناية — يعني الأذى الحقيقي كان بيتراكم بره الشاشة طول الوقت.",
+        "«كل اللي بشوفه كويس» انحياز ناجين: إنت بتعيّن بالظبط الناس اللي لسه قادرة تكتب."
+      ],
+      "explanation": "Considering the opposite turns an invisible danger visible. The feeling that 'we'd see the harm' is exactly backwards: the design of social platforms and tight-knit communities filters out the harmed, so absence of bad news is mistaken for safety. The official warnings — issued only after people reached intensive care — are the proof that harm was real and simply out of frame. This is empathy, not blame: good people were inside a system engineered to hide its own casualties.",
+      "explanationAr": "التفكير في العكس بيخلّي خطر خفي ظاهر. الإحساس إن «كنا هنشوف الأذى» معكوس بالظبط: تصميم منصات السوشيال والمجتمعات المتماسكة بيفلتر المتضررين بره، فغياب الأخبار الوحشة بيتفهم غلط كأمان. والتحذيرات الرسمية — اللي صدرت بس بعد ما الناس وصلت العناية المركزة — هي الدليل إن الأذى كان حقيقي وبس بره الكادر. ده تعاطف مش لوم: ناس طيبة كانت جوّه نظام متصمّم يخفي ضحاياه.",
+      "sources": [
+        "EAL-case-001:bias-survivorship",
+        "EAL-case-001:moh-sa-2026-06-08"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "recognize",
+      "claim": "When a follower deteriorated, the system blamed the patient: 'you must not have followed it correctly.' If a follower with lupus stopped her corticosteroids, relapsed, and was told she 'did it wrong,' what does this response reveal about the claim itself?",
+      "claimAr": "لمّا تابع كان بيتدهور، النظام كان بيلوم المريض: «أكيد ما اتبعتهوش صح». لو مريضة ذئبة وقفت الكورتيزون، انتكست، واتقال لها إنها «غلطت»، الرد ده بيكشف إيه عن الادعاء نفسه؟",
+      "options": [
+        "That she genuinely made a mistake and the diet is sound",
+        "That the claim is unfalsifiable (red flag #4): success counts for the diet, failure counts against the patient, so nothing can ever disprove it",
+        "That lupus is untreatable",
+        "That corticosteroids were the real danger"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Red flag #4. When every success is credited to the system and every failure is blamed on the patient, the claim has been rigged so that no outcome can ever count against it — which means it has left the territory of science entirely. This 'you did it wrong' move also inflicts a second, cruel harm: it loads guilt onto people who are already suffering. Lupus genuinely requires immunosuppressive treatment; stopping it on this advice was documented as fatal.",
+      "explanationAr": "علامة الخطر رقم 4. لمّا كل نجاح بيتحسب للنظام وكل فشل بيتلام على المريض، الادعاء اتفصّل بحيث مفيش نتيجة تقدر تيجي ضدّه أبداً — يعني خرج من أرض العلم خالص. وحركة «إنتي غلطتي» دي بتعمل أذى تاني قاسي: بتحمّل ذنب لناس بتعاني أصلاً. الذئبة فعلاً بتحتاج علاج مثبّط مناعي؛ ووقفه بناءً على النصيحة دي اتوثّق إنه قاتل.",
+      "sources": [
+        "EAL-case-001:redflag-4",
+        "EAL-case-001:masrawy-2026-04-30"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map the reasoning a grieving but still-loyal follower used after a death in the community: \"He died while on the system. But he was already very sick before. The system can't have caused it. And his death shows how cruel his illness was — proof we need the system even more.\"",
+      "claimAr": "فكّك استدلال تابع مفجوع لكن لسه وفيّ بعد وفاة في المجتمع: «هو مات وهو على النظام. لكنه كان أصلاً تعبان جداً قبل كده. النظام مايمكنش يكون سبّبها. ووفاته بتوري إن مرضه كان قاسي قد إيه — دليل إننا محتاجين النظام أكتر».",
+      "parts": [
+        { "text": "The system can't have caused his death.", "textAr": "النظام مايمكنش يكون سبّب وفاته.", "role": "conclusion" },
+        { "text": "He was already very sick before starting it.", "textAr": "كان أصلاً تعبان جداً قبل ما يبدأ.", "role": "premise" },
+        { "text": "(Unstated) If he was already sick, stopping his proven treatment could not have made things worse.", "textAr": "(غير مذكور) لو كان أصلاً تعبان، وقف علاجه المُثبَت ما كانش يقدر يزوّدها.", "role": "assumption" },
+        { "text": "His death proves we need the system even more.", "textAr": "وفاته بتثبت إننا محتاجين النظام أكتر.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION is the false move: that prior illness means stopping tested treatment couldn't have worsened the outcome — when in fact pre-existing illness is exactly when stopping insulin or immunosuppressants is most lethal. The final clause is the unfalsifiable safety valve again (red flag #4), turned to its darkest setting: a death is converted into proof of the very system that may have caused it. We map this gently — it is grief defending itself, and understanding the structure is how we reach people kindly rather than attack them.",
+      "explanationAr": "الافتراض الخفي هو الحركة الكاذبة: إن المرض السابق معناه إن وقف العلاج المُختبَر ما كانش يقدر يوخّم النتيجة — بينما المرض الموجود قبلاً هو بالظبط أخطر وقت لوقف الأنسولين أو مثبّطات المناعة. والجملة الأخيرة هي صمام الأمان غير القابل للتفنيد تاني (علامة الخطر رقم 4)، على أحلك إعداد: وفاة بتتحوّل لدليل على نفس النظام اللي يمكن سبّبها. بنفكّكها بلُطف — دي مفجوعية بتدافع عن نفسها، وفهم البنية هو إزاي نوصل للناس بحنية بدل ما نهاجمهم.",
+      "sources": [
+        "EAL-case-001:redflag-4",
+        "EAL-case-001:okaz-2026-05-10"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 143,
+      "claim": "Pulling Layer 3 and Layer 5 together: a follower says 'stopping my medication and trusting «الطيبات» is the path of faith and health at once.' Using both your religious-literacy and harm tools, what is the kindest accurate response?",
+      "claimAr": "بنجمع الطبقة الثالثة والخامسة: تابع بيقول «وقف دوايا والتوكّل على «الطيبات» هو طريق الإيمان والصحة في نفس الوقت». باستخدام أدوات الثقافة الدينية والأذى مع بعض، إيه أصدق وألطف رد؟",
+      "options": [
+        "'You're being foolish and risking your life' — blunt and shaming",
+        "'Seeking treatment is part of the tradition itself, and trusting God sits alongside using means; the danger isn't your faith, it's the specific instruction to drop tested medicine'",
+        "'Religion and medicine can never mix, so ignore the religious part'",
+        "'Do whatever feels right to you'"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Re-tested from Layer 3 and joined to Layer 5: the strongest reply honours the faith and isolates the harm. The tradition encourages treatment ('for every disease, a cure'), so using medicine is fully compatible with trust in God — the manipulation was the false either/or that pitted them against each other. Naming red flag #8 as the danger, while affirming the person's values, protects both their dignity and their life. Shame entrenches belief; respect opens a door.",
+      "explanationAr": "بنعيد اختباره من الطبقة الثالثة ونوصله بالخامسة: أقوى رد بيكرّم الإيمان ويعزل الأذى. التراث بيشجّع على العلاج («لكل داء دواء»)، فاستخدام الدواء متوافق تماماً مع التوكّل — والتلاعب كان «إمّا/أو» الكاذبة اللي حطّتهم ضد بعض. وتسمية علامة الخطر رقم 8 كالخطر، مع تأكيد قيم الشخص، بيحمي كرامته وحياته. اللوم بيرسّخ المعتقد؛ الاحترام بيفتح باب.",
+      "sources": [
+        "EAL-case-001:redflag-8",
+        "https://sunnah.com/bukhari:5678"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    }
+  ]
+}

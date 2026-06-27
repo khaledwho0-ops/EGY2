@@ -1,0 +1,98 @@
+{
+  "id": "statistical_interaction",
+  "phase": 2,
+  "week": 17,
+  "day": 33,
+  "title": "Statistical Interaction",
+  "titleAr": "التفاعل الإحصائي",
+  "description": "Understand statistical interaction (effect modification/moderation): when the effect of one variable depends on the level of another, and common interpretation errors.",
+  "descriptionAr": "فهم التفاعل الإحصائي (تعديل التأثير/الإشراف): عندما يعتمد تأثير متغير على مستوى متغير آخر، والأخطاء الشائعة في التفسير.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Statistical Interaction (Moderation / Effect Modification)",
+    "nameAr": "التفاعل الإحصائي (الإشراف / تعديل التأثير)",
+    "definition": "A statistical interaction occurs when the effect of one independent variable on the outcome depends on the level of another variable. In a regression model: Y = β₀ + β₁X + β₂Z + β₃(X×Z), the interaction term β₃ captures how the effect of X on Y changes across levels of Z. Interaction is distinct from confounding: confounders distort the main effect, while moderators change it across subgroups. Interaction can be additive (difference in risk differences) or multiplicative (ratio of risk ratios).",
+    "definitionAr": "التفاعل الإحصائي يحدث عندما يعتمد تأثير متغير مستقل على النتيجة على مستوى متغير آخر. التفاعل يختلف عن المتغير المربك.",
+    "realWorldExample": "The effect of exercise on cardiovascular mortality depends on age: moderate exercise reduces mortality more in older adults (HR=0.65) than younger adults (HR=0.90). This is a quantitative interaction. A qualitative interaction would be if exercise helped one group but harmed another.",
+    "detectionMethod": "Include product terms (X×Z) in regression models. Test significance of the interaction coefficient. Use stratified analyses to visualize the pattern. Check for both additive and multiplicative interaction. Plot interaction graphs."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A study examines the effect of a new drug on blood pressure. In patients under 50, the drug reduces BP by 2 mmHg. In patients over 50, the drug reduces BP by 12 mmHg. What type of statistical interaction is present?",
+      "promptAr": "دراسة تفحص تأثير دواء جديد على ضغط الدم. في المرضى تحت 50 سنة، يقلل الدواء الضغط بمقدار 2 ملم زئبق. في المرضى فوق 50 سنة، يقلل الضغط بمقدار 12 ملم زئبق. ما نوع التفاعل الإحصائي الموجود؟",
+      "options": [
+        "Confounding, not interaction",
+        "No interaction — the drug works in both groups",
+        "Quantitative interaction: the drug has the same direction of effect in both groups, but the magnitude differs substantially across age groups",
+        "Qualitative (crossover) interaction: the drug helps one group but harms another"
+      ],
+      "correctAnswer": 2,
+      "explanation": "This is a quantitative interaction: the drug reduces BP in both age groups (same direction) but the effect magnitude differs markedly (2 vs. 12 mmHg). A formal interaction test (drug × age group) would test whether this 10 mmHg difference is statistically significant. Qualitative interactions, where the effect reverses direction across subgroups, are rarer and more clinically concerning.",
+      "explanationAr": "هذا تفاعل كمي: الدواء يقلل الضغط في كلتا المجموعتين (نفس الاتجاه) لكن حجم التأثير يختلف بشكل ملحوظ (2 مقابل 12). التفاعل النوعي أندر وأكثر قلقاً سريرياً."
+    },
+    {
+      "id": 2,
+      "type": "scenario",
+      "prompt": "A regression model predicts salary from gender (0=F, 1=M), experience (years), and their interaction: Salary = 30000 + 5000(Gender) + 2000(Experience) + 500(Gender × Experience). What does the interaction term 500 mean?",
+      "promptAr": "نموذج انحدار يتنبأ بالراتب من الجنس (0=أنثى، 1=ذكر)، الخبرة (سنوات)، وتفاعلهما: الراتب = 30000 + 5000(جنس) + 2000(خبرة) + 500(جنس × خبرة). ماذا يعني حد التفاعل 500؟",
+      "options": [
+        "The interaction is not meaningful",
+        "Men earn $500 more than women",
+        "Each year of experience increases salary by $500",
+        "The salary return to each additional year of experience is $500 higher for men than for women (men gain $2500/year vs. women's $2000/year)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "For women (Gender=0): Salary = 30000 + 2000(Experience) — each year adds $2,000. For men (Gender=1): Salary = 35000 + 2500(Experience) — each year adds $2,500. The interaction coefficient of 500 means the experience-salary slope is $500 steeper for men. The gender pay gap thus widens with experience: at 0 years it's $5,000, at 10 years it's $10,000, at 20 years it's $15,000. This growing gap is the interaction effect.",
+      "explanationAr": "للنساء: كل سنة تضيف 2000$. للرجال: كل سنة تضيف 2500$. معامل التفاعل 500 يعني أن ميل الخبرة-الراتب أعلى بـ 500$ للرجال. فجوة الأجور تتسع مع الخبرة."
+    },
+    {
+      "id": 3,
+      "type": "identify",
+      "prompt": "A researcher finds that Drug A reduces pain scores significantly (p=0.01) and Drug B does not reduce pain scores significantly (p=0.12). They conclude: 'Drug A is more effective than Drug B.' What error have they committed?",
+      "promptAr": "باحث يجد أن الدواء أ يقلل درجات الألم بشكل معنوي (p=0.01) والدواء ب لا يقلل بشكل معنوي (p=0.12). يستنتج: 'الدواء أ أكثر فعالية من الدواء ب.' ما الخطأ؟",
+      "options": [
+        "The comparison requires a formal interaction test (Drug × outcome) or direct comparison between the two effect sizes, not comparing separate p-values to zero",
+        "The researcher should use a lower alpha level",
+        "The sample sizes need to be equal",
+        "No error — the conclusion follows logically"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This is the 'interaction fallacy' — concluding that two effects differ because one is significant and the other is not. Gelman & Stern (2006): 'The difference between significant and not significant is not itself significant.' The proper test is to directly compare the two drug effects, either through an interaction test in a combined model or a direct test of the difference between effect sizes. The individual p-values are irrelevant for comparative claims.",
+      "explanationAr": "هذه 'مغالطة التفاعل' — استنتاج أن تأثيرين يختلفان لأن أحدهما معنوي والآخر لا. الاختبار الصحيح هو مقارنة التأثيرين مباشرة من خلال اختبار التفاعل."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "In epidemiology, interaction can be assessed on two scales. On the additive scale: RD_exposed − RD_unexposed. On the multiplicative scale: RR_exposed / RR_unexposed. A study finds no multiplicative interaction (ratio of RRs = 1.0) but significant additive interaction. How is this possible?",
+      "promptAr": "في الوبائيات، يمكن تقييم التفاعل على مقياسين. على المقياس الجمعي: فرق المخاطر. على المقياس الضربي: نسبة المخاطر النسبية. دراسة تجد لا تفاعل ضربي لكن تفاعل جمعي معنوي. كيف هذا ممكن؟",
+      "options": [
+        "This is impossible — interaction must be consistent across scales",
+        "Additive and multiplicative interaction are different questions. If baseline risk differs between groups, relative risks can be identical while absolute risk differences diverge. Public health decisions often prioritize additive interaction because it identifies where interventions prevent the most cases",
+        "One of the tests must be wrong",
+        "This only happens with confounding"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Consider: Group A baseline risk=5%, treatment RR=0.5, so risk=2.5%, RD=2.5%. Group B baseline risk=20%, treatment RR=0.5, so risk=10%, RD=10%. The RR is identical (multiplicative interaction=0), but the RD is 4× larger in Group B (additive interaction present). Rothman, Greenland & Lash (2008) argue that additive interaction is more relevant for public health because it identifies where interventions yield the greatest absolute benefit.",
+      "explanationAr": "إذا كان الخطر الأساسي يختلف، يمكن أن تكون المخاطر النسبية متطابقة بينما تتباعد فروق المخاطر المطلقة. التفاعل الجمعي أكثر صلة بالصحة العامة."
+    },
+    {
+      "id": 5,
+      "type": "scenario",
+      "prompt": "A clinical trial tests a cancer drug in a 2×2 factorial design: Drug A (yes/no) × Drug B (yes/no). Results show Drug A alone reduces mortality by 15%, Drug B alone by 10%, but both together by only 12%. Is there synergy or antagonism?",
+      "promptAr": "تجربة سريرية تختبر دواء سرطان في تصميم عاملي 2×2: دواء أ (نعم/لا) × دواء ب (نعم/لا). النتائج: الدواء أ وحده يقلل الوفيات بنسبة 15%، الدواء ب وحده بنسبة 10%، لكن كلاهما معاً بنسبة 12% فقط. هل هناك تآزر أو تضاد؟",
+      "options": [
+        "Cannot be determined without individual patient data",
+        "Synergy — the combination works better than either alone",
+        "Antagonism — if effects were additive, the combined effect should be approximately 25% (15%+10%). The observed 12% is less than either added benefit, suggesting negative interaction (sub-additive or antagonistic)",
+        "No interaction — 12% is close enough to 15% and 10%"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Under additivity, the combined effect should approximate 15% + 10% = 25% (minus a small adjustment for the overlap). The observed 12% is substantially below this, indicating sub-additive (antagonistic) interaction. This has major clinical implications: giving both drugs simultaneously may be less effective per drug than sequential use. The formal test is the interaction term in a 2×2 ANOVA or regression with the product term Drug_A × Drug_B.",
+      "explanationAr": "تحت الإضافية، التأثير المشترك يجب أن يقارب 25%. المرصود 12% أقل بكثير، مما يشير إلى تفاعل تحت-جمعي (تضادي). هذا له آثار سريرية كبيرة."
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "day133_maqasid_week_checkpoint",
+  "phase": 3,
+  "week": 19,
+  "day": 133,
+  "title": "Maqasid Week Checkpoint: Spot It in the Wild",
+  "titleAr": "نقطة تفتيش أسبوع المقاصد: اكتشفه في الواقع",
+  "description": "This week you learned the framework Islamic jurisprudence gives for protecting life. Today: six real-world scenarios. Apply everything together.",
+  "descriptionAr": "الأسبوع ده اتعلّمت الإطار اللي الفقه الإسلامي بيديه لحماية الحياة. النهاردة: ستة سيناريوهات من الواقع. طبّق كل حاجة مع بعض.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 18,
+  "source": "https://www.oxfordislamicstudies.com/article/opr/t125/e1482",
+  "interleaved": true,
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A message circulates: 'A sister cured her cancer with pure «طيّب» foods and stopped all chemo. Praise God!' Before forwarding, which three questions should you ask?",
+      "claimAr": "رسالة بتنتشر: «أخت شُفيت من السرطان بالأطعمة الطيّبة ووقّفت كل الكيمياء. الحمد لله!» قبل التحويل، أنهي ثلاثة أسئلة لازم تسألها؟",
+      "options": [
+        "How inspiring is the story? How many shares does it have? Does it match my beliefs?",
+        "(1) Is there a documented diagnosis and post-treatment scan? (2) How do we know it was the food rather than the chemotherapy already administered? (3) What happened to the people who followed this and did not improve?",
+        "Is the sister a public figure? What country is she from? Did she use any brand?",
+        "Did a doctor confirm the cure? Is the food available in my area? Is it expensive?"
+      ],
+      "correctAnswer": 1,
+      "explanation": "These three questions apply three different tools: (1) verification of the claim — documentation, not just testimony; (2) the confounders question — was chemo already doing the work?; (3) survivorship bias — the people who followed and were harmed are silent. Forwarding a story like this without these checks reached the most vulnerable families in the «نظام الطيبات» case and contributed to documented deaths.",
+      "explanationAr": "الأسئلة الثلاثة بتطبّق ثلاث أدوات مختلفة: (1) التحقق من الادعاء — توثيق لا مجرد شهادة؛ (2) سؤال العوامل المُربِكة — هل الكيمياء كانت شغّالة أصلاً؟؛ (3) انحياز الناجين — الناس اللي اتّبعوا وتأذّوا صامتون. تحويل قصة زي دي بدون هذه الفحوصات وصل لأكثر العائلات هشاشة في حالة «نظام الطيبات» وساهم في وفيات موثّقة.",
+      "sources": [
+        "EAL-case-001:moh-eg-2026-05",
+        "https://www.cancer.gov/about-cancer/treatment/types/chemotherapy"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: because the Quran encourages eating «الطيبات», it follows that any diet system using that name has Quranic endorsement.",
+      "claimAr": "صح ولا غلط: بما إن القرآن يشجّع على أكل «الطيبات»، يترتّب على ذلك إن أي نظام حمية يستخدم هذا الاسم عنده تأييد قرآني.",
+      "correctAnswer": false,
+      "myth_en": "A product name from the Quran inherits Quranic authority.",
+      "myth_ar": "اسم منتج من القرآن يرث سلطة قرآنية.",
+      "explanation": "False — this is a logical non-sequitur. The Quran's encouragement of 'tayyib' things is a moral and legal category, not an endorsement of any specific brand or system. A company can name a product anything; the name carries no scientific or religious proof of efficacy. The test for the system's claims is clinical evidence, not the name's etymology. Al-Nahl 16:116 specifically forbids using God's name to authorize personal rulings on what is permitted or forbidden.",
+      "explanationAr": "غلط — هذا استنتاج فاسد منطقياً. تشجيع القرآن على «الطيبات» هو فئة أخلاقية وقانونية، لا تأييد لأي علامة تجارية أو نظام محدّد. شركة تقدر تسمّي منتجاً بأي اسم؛ الاسم لا يحمل إثباتاً علمياً أو دينياً للفاعلية. اختبار ادعاءات النظام هو الدليل السريري لا اشتقاق الاسم. آية النحل 16:116 تنهى تحديداً عن استخدام اسم الله لتفويض أحكام شخصية على الحلال والحرام.",
+      "sources": [
+        "https://quran.com/16/116",
+        "EAL-case-001:redflag-6"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A child with epilepsy is having seizures. A family member says: 'Stop the medication — it's chemicals. Allah will heal through pure food.' Uncontrolled seizures in children cause hypoxic brain injury. Hifz al-nafs — protecting life — is the highest of the five Maqasid.",
+      "claimAr": "طفل مصاب بالصرع عنده نوبات. فرد من الأسرة بيقول: «وقّف الدواء — ده كيماويات. ربنا هيشفي بالطعام الطيّب». النوبات غير المضبوطة عند الأطفال بتسبّب أذى دماغياً نقصياً. حفظ النفس — حماية الحياة — هو أعلى المقاصد الخمسة.",
+      "options": [
+        "Try the pure diet for a few weeks first",
+        "Continue the anticonvulsant medication and consult the neurologist immediately — uncontrolled seizures cause brain injury; hifz al-nafs makes this an obligation, not a choice",
+        "Pray and wait",
+        "Reduce the medication gradually while starting the diet"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does the Islamic principle of hifz al-nafs make continuing this child's anticonvulsant medication an obligation, not just a preference?",
+        "promptAr": "بكلماتك: ليه مبدأ حفظ النفس الإسلامي بيجعل الاستمرار في دواء مضاد الاختلاج للطفل واجباً لا مجرد تفضيل؟"
+      },
+      "explanation": "Uncontrolled seizures in children cause hypoxic brain injury and can be fatal — this is a documented, time-sensitive medical emergency. Hifz al-nafs obligates protecting the child's life and neurological function by every available means. Anti-epileptic drugs are rigorously tested interventions. The 'chemical vs natural' framing is the appeal-to-nature fallacy: water is chemical, venom is natural. This child needs a neurologist, not a diet experiment.",
+      "explanationAr": "النوبات غير المضبوطة لدى الأطفال تُسبّب أذى دماغياً نقصياً وقد تكون قاتلة — هذه حالة طوارئ طبية موثّقة وحساسة للوقت. حفظ النفس يُوجِب حماية حياة الطفل ووظيفته العصبية بكل الوسائل المتاحة. أدوية مضادات الاختلاج تدخّلات مُختبَرة بصرامة. تأطير «كيماوي مقابل طبيعي» هو مغالطة الطبيعة: الماء كيميائي والسُمّ طبيعي. هذا الطفل يحتاج طبيب أعصاب لا تجربة حمية.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/epilepsy",
+        "https://www.ncbi.nlm.nih.gov/books/NBK430960/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'Before modern medicine, Muslims were cured by faith alone. The Islamic Golden Age shows faith beats medicine. So we don't need modern medicine today.'",
+      "claimAr": "فكّك الحُجّة دي: «قبل الطب الحديث، المسلمون اتشفوا بالإيمان لوحده. العصر الذهبي الإسلامي بيُظهِر إن الإيمان يتغلّب على الطب. يبقى مش محتاجين الطب الحديث النهاردة.»",
+      "parts": [
+        { "text": "We don't need modern medicine today.", "textAr": "مش محتاجين الطب الحديث النهاردة.", "role": "conclusion" },
+        { "text": "Before modern medicine, Muslims were cured by faith alone.", "textAr": "قبل الطب الحديث، المسلمون اتشفوا بالإيمان لوحده.", "role": "premise" },
+        { "text": "The Islamic Golden Age shows faith beats medicine.", "textAr": "العصر الذهبي الإسلامي بيُظهِر إن الإيمان يتغلّب على الطب.", "role": "premise" },
+        { "text": "(Unstated) What cured people in the past is sufficient for all diseases today.", "textAr": "(غير مذكور) ما شفى الناس في الماضي كافٍ لكل أمراض اليوم.", "role": "assumption" },
+        { "text": "Ibn Sina, al-Razi, and al-Zahrawi were the greatest doctors of their era.", "textAr": "ابن سينا والرازي والزهراوي كانوا أعظم أطباء عصرهم.", "role": "irrelevant" }
+      ],
+      "explanation": "Both premises are historically false: Muslim scholars of the Golden Age were leading the world IN medicine — they were not curing by faith alone but by systematic observation and empirical methods. Ibn Sina's Canon of Medicine was the medical textbook for 600 years. The unstated ASSUMPTION — that past cures suffice for present diseases — is also false: insulin-dependent diabetes and epilepsy have no pre-modern equivalent treatment with the same survival outcomes. The reference to Ibn Sina et al. is IRRELEVANT because it actually DISPROVES the claim (they used medicine).",
+      "explanationAr": "كلا المقدّمتين خاطئتان تاريخياً: علماء العصر الذهبي كانوا يقودون العالم في الطب — لم يشفوا بالإيمان وحده بل بالملاحظة المنهجية والأساليب التجريبية. القانون في الطب لابن سينا كان كتاباً طبياً معيارياً لـ600 سنة. الافتراض غير المذكور — أن ما شفى الماضي يكفي لأمراض الحاضر — خاطئ أيضاً: السكري المعتمد على الأنسولين والصرع ليس لهما معادل علاجي قبل حديث بنفس معدلات البقاء. الإشارة لابن سينا وغيره غير ذات صلة لأنها بالفعل تدحض الادعاء (استخدموا الطب).",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068720/",
+        "https://plato.stanford.edu/entries/ibn-sina/"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A WhatsApp forward says: 'A scholar confirmed this pure diet cures diabetes because it is mentioned in the Quran.' It's been shared 3,000 times by people you trust.",
+      "claimAr": "فورورد على واتساب بيقول: «عالم أكّد إن الحمية الطيّبة دي بتشفي السكري لأنها مذكورة في القرآن». اتشارك 3000 مرة من ناس بتثق فيهم.",
+      "prompt": "What would you need to see to DISPROVE this forward? What ordinary explanations could account for its wide sharing — without the claim being true?",
+      "promptAr": "إيه اللي محتاج تشوفه عشان تكذّب الفورورد ده؟ وإيه التفسيرات العادية اللي تفسّر انتشاره الواسع — بدون ما يكون الادعاء صحيح؟",
+      "modelPoints": [
+        "To disprove: name the scholar (which scholar, verifiable credentials?); show the Quranic verse that specifies a diabetes cure (no such verse exists); cite the clinical trial evidence.",
+        "Wide sharing reflects social trust and emotional resonance — not truth. The SIFT method (Stop, Investigate source, Find better coverage, Trace origin) applies here.",
+        "The Quran mentions beneficial foods in a moral/legal sense; it does not prescribe treatments for Type 2 diabetes — a metabolic condition requiring insulin regulation.",
+        "Anonymous chains and misquotations are common: tracing the forward almost always reveals the 'scholar' is unnamed or misattributed."
+      ],
+      "modelPointsAr": [
+        "لتكذيبه: سمّي العالم (أي عالم، مؤهّلات قابلة للتحقق؟)؛ أرِ الآية القرآنية التي تحدّد علاجاً للسكري (لا توجد آية كهذه)؛ استشهد بدليل التجربة السريرية.",
+        "الانتشار الواسع يعكس الثقة الاجتماعية والرنين العاطفي — لا الحقيقة. منهج SIFT (قِف، حقّق المصدر، ابحث عن تغطية أفضل، تتبّع الأصل) ينطبق هنا.",
+        "القرآن يذكر الأطعمة النافعة بمعنى أخلاقي/قانوني؛ لا يصف علاجات لسكري النوع الثاني — حالة أيضية تتطلّب تنظيم الأنسولين.",
+        "سلاسل مجهولة واقتباسات مغلوطة شائعة: تتبّع الفورورد يكشف تقريباً دائماً إن «العالم» مجهول أو منسوب بشكل خاطئ."
+      ],
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        "https://cor.inquirygroup.org/about-sift/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 6,
+      "mechanic": "retrieve",
+      "retrievalOf": 99,
+      "claim": "Looking back at this week, which single sentence best summarises the Maqasid position on faith, medicine, and the viral diet case?",
+      "claimAr": "بالنظر لهذا الأسبوع، أي جملة واحدة تلخّص أفضل موقف المقاصد من الإيمان والطب وحالة النظام الغذائي المنتشر؟",
+      "options": [
+        "Medicine and faith are separate — keep them apart",
+        "Protecting life (hifz al-nafs) is the highest Islamic obligation; seeking proven medical care is an act of faith, not its opposite; any system that endangers life under a religious name violates — not fulfils — Islamic law",
+        "All alternative medicine is forbidden in Islam",
+        "The viral diet was mostly harmless and the reaction was exaggerated"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This sentence holds the full week's argument: (1) hifz al-nafs is the apex of the Maqasid framework; (2) seeking proven medicine is an act of faith — the Prophetic model, al-tawakkul with al-asbab, Islamic medical history all confirm this; (3) using religious language to endanger life is not piety — it is a violation of the very scripture it borrows from. The viral diet system's documented harm makes this not theoretical but urgent.",
+      "explanationAr": "هذه الجملة تحمل حجة الأسبوع كاملة: (1) حفظ النفس هو قمة إطار المقاصد؛ (2) السعي للطب المُثبَت عمل إيماني — النموذج النبوي والتوكّل مع الأسباب وتاريخ الطب الإسلامي كلها تؤكّد هذا؛ (3) استخدام اللغة الدينية لتعريض الحياة للخطر ليس تقوى — بل انتهاك للنصوص المقدّسة ذاتها التي تستعير منها. الضرر الموثّق لنظام «الطيبات» يجعل هذا لا نظرياً بل عاجلاً.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482",
+        "https://sunnah.com/abudawud:3855"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

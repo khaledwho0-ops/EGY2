@@ -1,0 +1,98 @@
+{
+  "id": "funnel_plot",
+  "phase": 2,
+  "week": 11,
+  "day": 16,
+  "title": "Funnel Plot Interpretation",
+  "titleAr": "تفسير مخطط القمع",
+  "description": "Learn to read and interpret funnel plots for detecting publication bias and small-study effects in meta-analyses.",
+  "descriptionAr": "تعلم قراءة وتفسير مخططات القمع لاكتشاف تحيز النشر وتأثيرات الدراسات الصغيرة في التحليلات التلوية.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Funnel Plot Asymmetry",
+    "nameAr": "عدم تماثل مخطط القمع",
+    "definition": "A funnel plot is a scatter plot of effect size (x-axis) against a measure of study precision such as standard error or sample size (y-axis, inverted). In the absence of bias, the plot should resemble a symmetric inverted funnel. Asymmetry suggests publication bias, though it can also result from true heterogeneity, poor methodology in smaller studies, or chance (Sterne et al., 2011).",
+    "definitionAr": "مخطط القمع هو رسم بياني للتشتت يوضح حجم التأثير مقابل مقياس دقة الدراسة كالخطأ المعياري. في غياب التحيز، يجب أن يشبه المخطط قمعاً مقلوباً متماثلاً. عدم التماثل يشير إلى تحيز النشر.",
+    "realWorldExample": "Egger et al. (1997) demonstrated funnel plot asymmetry in meta-analyses of clinical trials, leading to overestimation of treatment effects. Their regression-based test (Egger's test) is now standard in Cochrane Reviews.",
+    "detectionMethod": "Visual inspection for asymmetry, Egger's regression test (p<0.10), Begg and Mazumdar rank correlation test, Peters' test for binary outcomes, and the trim-and-fill method for adjusted effect estimates."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A funnel plot of 30 studies shows that small studies (bottom of plot, high SE) are clustered on the right side (showing large positive effects), while large studies (top, low SE) cluster around a modest effect near zero. What does this pattern most likely indicate?",
+      "promptAr": "مخطط قمع لـ 30 دراسة يُظهر أن الدراسات الصغيرة متجمعة على الجانب الأيمن (تأثيرات إيجابية كبيرة)، بينما الدراسات الكبيرة متجمعة حول تأثير متواضع قرب الصفر. ماذا يشير هذا النمط؟",
+      "options": [
+        "The large studies used inferior methodology",
+        "Publication bias: small studies with null/negative results are missing",
+        "The treatment is more effective in small studies due to better implementation",
+        "Random variation — small studies are expected to be more variable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This classic asymmetric pattern — where the bottom-left quadrant is empty — is the hallmark of publication bias. Small studies with null or negative results were likely conducted but never published. Egger et al. (1997) showed this pattern is common in medical meta-analyses and leads to inflated pooled effect estimates.",
+      "explanationAr": "هذا النمط غير المتماثل الكلاسيكي — حيث يكون الربع السفلي الأيسر فارغاً — هو السمة المميزة لتحيز النشر. الدراسات الصغيرة ذات النتائج الفارغة ربما أُجريت لكنها لم تُنشر."
+    },
+    {
+      "id": 2,
+      "type": "identify",
+      "prompt": "Egger's regression test on a meta-analysis yields an intercept of 3.8 with p=0.03. What is the correct interpretation?",
+      "promptAr": "اختبار انحدار إيجر على تحليل تلوي ينتج تقاطعاً قدره 3.8 مع p=0.03. ما التفسير الصحيح؟",
+      "options": [
+        "The heterogeneity between studies is significant",
+        "The effect size is 3.8 standard deviations",
+        "There is statistically significant funnel plot asymmetry, suggesting possible publication bias",
+        "The meta-analysis result is statistically significant"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Egger's test regresses the standardized effect estimate (effect/SE) against precision (1/SE). A significant intercept (conventionally p<0.10) indicates that smaller, less precise studies show systematically different (usually larger) effects — the statistical signature of funnel plot asymmetry. Note: Egger's test has low power with fewer than 10 studies.",
+      "explanationAr": "اختبار إيجر ينحدر تقدير التأثير المعياري مقابل الدقة. تقاطع معنوي يشير إلى أن الدراسات الأصغر تُظهر تأثيرات مختلفة بشكل منهجي — البصمة الإحصائية لعدم تماثل مخطط القمع."
+    },
+    {
+      "id": 3,
+      "type": "scenario",
+      "prompt": "A trim-and-fill analysis imputes 6 'missing' studies on the left side of a funnel plot. The original pooled effect was OR=1.45 (95% CI: 1.12–1.88). After trim-and-fill adjustment, the pooled effect becomes OR=1.18 (95% CI: 0.89–1.57). What is the practical significance?",
+      "promptAr": "تحليل التقليم والملء يضيف 6 دراسات 'مفقودة' على الجانب الأيسر من مخطط القمع. التأثير المجمع الأصلي كان OR=1.45 (فترة ثقة: 1.12-1.88). بعد التعديل يصبح OR=1.18 (فترة ثقة: 0.89-1.57). ما الأهمية العملية؟",
+      "options": [
+        "The trim-and-fill result is unreliable and should be ignored",
+        "The 6 imputed studies should be found and included",
+        "The original finding was robust and remains significant",
+        "After adjusting for estimated publication bias, the treatment effect becomes non-significant, suggesting the original finding may be an artifact"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The trim-and-fill adjustment reduced the OR from 1.45 to 1.18, and the confidence interval now includes 1.0, making the result non-significant. This suggests that publication bias may be inflating the apparent treatment effect. While trim-and-fill has limitations (it assumes the asymmetry is entirely due to publication bias), this sensitivity analysis raises serious concerns about the robustness of the original conclusion.",
+      "explanationAr": "خفض تعديل التقليم والملء نسبة الأرجحية من 1.45 إلى 1.18، وفترة الثقة تشمل الآن 1.0. هذا يشير إلى أن تحيز النشر قد يضخم تأثير العلاج الظاهري."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "A funnel plot appears asymmetric, but the meta-analysis includes studies using different designs (RCTs and observational studies), different populations, and different outcome measures. Besides publication bias, what is another plausible explanation for the asymmetry?",
+      "promptAr": "مخطط قمع يبدو غير متماثل، لكن التحليل التلوي يشمل دراسات بتصاميم مختلفة (تجارب عشوائية ودراسات رصدية) ومجتمعات مختلفة ومقاييس نتائج مختلفة. إلى جانب تحيز النشر، ما التفسير المعقول الآخر؟",
+      "options": [
+        "True heterogeneity: different study characteristics create real variation in effect sizes",
+        "The statistical test has too much power",
+        "The x-axis scale is wrong",
+        "All funnel plots should be asymmetric"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Sterne et al. (2011) in their Cochrane Handbook chapter emphasize that funnel plot asymmetry can arise from: (1) publication bias, (2) true heterogeneity (e.g., smaller studies in sicker populations showing larger effects), (3) methodological differences correlated with study size, (4) artifact, or (5) chance. The term 'small-study effects' is preferred over assuming publication bias as the sole cause.",
+      "explanationAr": "يؤكد ستيرن وآخرون أن عدم تماثل مخطط القمع يمكن أن ينشأ من: تحيز النشر، عدم التجانس الحقيقي، اختلافات منهجية، أو الصدفة. مصطلح 'تأثيرات الدراسات الصغيرة' مفضل."
+    },
+    {
+      "id": 5,
+      "type": "calculate",
+      "prompt": "A meta-analysis of 8 studies has a pooled z-value of 3.5. Using Rosenthal's fail-safe N formula: Nfs = (ΣZ/1.96)² − k, where ΣZ = k × (Z_pooled/√k) × √k = Z_pooled × √k × √k... Using the simpler formulation: Nfs = (k/1.96²)(Z²) − k, with k=8, Z=3.5. Should we be concerned about publication bias based on Rosenthal's 5k+10 tolerance level?",
+      "promptAr": "تحليل تلوي لـ 8 دراسات بقيمة z مجمعة 3.5. باستخدام صيغة N الآمن لروزنثال مع k=8 و Z=3.5. هل يجب أن نقلق بشأن تحيز النشر بناءً على مستوى تحمل روزنثال 5k+10؟",
+      "options": [
+        "Rosenthal's method has been replaced and should not be used",
+        "Yes: fail-safe N is below the 5k+10 = 50 threshold, suggesting vulnerability to publication bias",
+        "No: fail-safe N exceeds the 5k+10 = 50 threshold by a wide margin",
+        "The fail-safe N approach is not applicable with fewer than 10 studies"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Using the approximation Nfs ≈ (8 × 3.5²)/(1.96²) − 8 = (8 × 12.25)/3.84 − 8 = 25.5 − 8 ≈ 18. The Rosenthal tolerance level is 5(8)+10 = 50. Since 18 < 50, the result is vulnerable to publication bias — only 18 null studies would be needed to nullify the finding. With only 8 studies, this meta-analysis should be interpreted cautiously.",
+      "explanationAr": "باستخدام التقريب: Nfs ≈ 18. مستوى تحمل روزنثال هو 5(8)+10 = 50. بما أن 18 < 50، النتيجة عرضة لتحيز النشر — فقط 18 دراسة فارغة ستكفي لإبطال النتيجة."
+    }
+  ]
+}

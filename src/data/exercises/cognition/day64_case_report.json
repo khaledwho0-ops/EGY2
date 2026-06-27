@@ -1,0 +1,149 @@
+{
+  "id": "day64_case_report",
+  "phase": 2,
+  "week": 10,
+  "day": 64,
+  "title": "The Case Report — One Patient, One Question",
+  "titleAr": "تقرير الحالة — مريض واحد، سؤال واحد",
+  "description": "The bottom rung of the ladder: writing up a single patient. Dr. Ismail notices one factory worker with a strange red eye and rash. It opens a question — it never closes one.",
+  "descriptionAr": "أول درجة في السلّم: توثيق مريض واحد. د. إسماعيل لاحظ عامل مصنع واحد بعينه حمرا وطفح غريب. ده بيفتح سؤال — مش بيقفله أبداً.",
+  "type": "science",
+  "difficulty": 2,
+  "estimatedMinutes": 14,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Dr. Ismail, an honest physician, treats one factory worker whose red eye and skin rash cleared after he happened to take vitamin D. Dr. Ismail writes it up. What has he actually produced?",
+      "claimAr": "د. إسماعيل، طبيب أمين، عالج عامل مصنع واحد، عينه الحمرا وطفح جلده اتحسّنوا بعد ما صادف إنه أخد فيتامين د. د. إسماعيل وثّق الحالة. هو فعلاً عمل إيه؟",
+      "options": [
+        "Proof that vitamin D cures the rash",
+        "A case report — a description of one patient that can only raise a hypothesis, never prove cause",
+        "A clinical trial",
+        "Strong evidence the factory is safe"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A case report is the careful write-up of a single patient. It is the bottom of the evidence ladder for a good reason: with one person and no comparison group, you cannot separate the vitamin from coincidence, from the body healing on its own, or from anything else that changed that month. Its honest job is to say 'this is interesting — someone should study it', not 'this works'. Dr. Ismail knows this, which is exactly why he calls it a question, not an answer.",
+      "explanationAr": "تقرير الحالة هو التوثيق الدقيق لمريض واحد. وهو أسفل سلّم الأدلة لسبب وجيه: بشخص واحد ومن غير مجموعة للمقارنة، ما تقدرش تفصل الفيتامين عن الصدفة، أو عن الجسم اللي بيشفي نفسه لوحده، أو عن أي حاجة تانية اتغيّرت الشهر ده. وظيفته الأمينة إنه يقول «ده مثير للاهتمام — حد لازم يدرسه»، مش «ده بينفع». د. إسماعيل عارف كده، وعلشان كده بالظبط بيسمّيه سؤال، مش إجابة.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a case report is worthless and should never be published.",
+      "claimAr": "صح ولا غلط: تقرير الحالة بلا قيمة وما ينفعش يُنشَر أبداً.",
+      "correctAnswer": false,
+      "myth_en": "If it can't prove cause, a single-patient report is useless.",
+      "myth_ar": "طالما ما بيثبتش السبب، يبقى تقرير المريض الواحد ملوش لازمة.",
+      "explanation": "False. The case report has a real and honourable place — it's how doctors first flagged unusual drug side-effects and brand-new diseases. The problem is never the case report itself; it's mistaking it for the top of the ladder. It is meant to start a process of investigation, not to end an argument. Used honestly it is the spark; used dishonestly it is sold as the whole fire. Calibrate: if you were very confident it was 'False' — well done. If you thought 'maybe it IS useless' — the case report's real role (opening questions, not closing them) is the correction.",
+      "explanationAr": "غلط. تقرير الحالة ليه مكان حقيقي ومحترم — بيه الأطباء أول مرة نبّهوا لأعراض جانبية غريبة لأدوية ولأمراض جديدة تماماً. المشكلة مش في تقرير الحالة نفسه؛ المشكلة إنك تحسبه قمة السلّم. هو معمول علشان يبدأ عملية بحث، مش علشان يقفل نقاش. لمّا يُستخدم بأمانة بيبقى الشرارة؛ ولمّا يُستخدم بخداع بيتباع كإنه الحريقة كلها. معايرة: لو كنت واثق إنها «غلط» — ممتاز. لو فكّرت «يمكن فعلاً بلا قيمة» — الدور الحقيقي لتقرير الحالة (يفتح أسئلة، مش يقفلها) هو التصحيح.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A video seller (call him 'Dr. K', a fictional quack) tells the story of one patient whose diabetes 'reversed' on his herbal mix, and presents it as the proof. The viral «نظام الطيبات» diet did the same thing with follower stories. Why is one story not enough — even a true one?",
+      "claimAr": "بائع فيديوهات (نسمّيه «د. ك»، دجّال خيالي) بيحكي قصة مريض واحد سكّره «اترجّع» على خلطته العشبية، وبيقدّمها كالدليل. ونظام «الطيبات» اللي انتشر عمل نفس الحاجة بقصص الأتباع. ليه قصة واحدة مش كفاية — حتى لو حقيقية؟",
+      "options": [
+        "It is enough, if the patient is honest",
+        "Because one story can't rule out coincidence, the placebo effect, the disease's natural ups and downs, or other changes the person made at the same time",
+        "Because herbs never work",
+        "Because the patient was probably lying"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what is the one thing a case report structurally cannot do — no matter how many of them you stack up?",
+        "promptAr": "بكلماتك: إيه الحاجة الواحدة اللي تقرير الحالة هيكلياً ما يقدرش يعملها — مهما كتّرت منهم؟"
+      },
+      "explanation": "Even a 100% sincere story can't tell you WHY the person got better. Maybe the disease naturally calmed down; maybe believing helped (placebo); maybe they also slept more, walked more, or quietly kept taking their real medicine. With one patient and no comparison, all of these are still on the table. The structural thing a case report cannot do — no matter how many you stack — is rule out alternative explanations. That requires a control group.",
+      "explanationAr": "حتى القصة الصادقة 100% ما بتقولّكش ليه الشخص اتحسّن. يمكن المرض هدا طبيعياً؛ يمكن التصديق نفسه ساعد (التأثير الوهمي)؛ يمكن كمان نام أكتر، ومشي أكتر، أو فضل واخد دواه الحقيقي في صمت. بمريض واحد ومن غير مقارنة، كل ده لسه وارد. الحاجة الهيكلية اللي تقرير الحالة ما يقدرش يعملها — مهما كتّرت منه — هي استبعاد التفسيرات البديلة. ده بيحتاج مجموعة ضابطة.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"I personally saw three patients whose condition improved after the herbal diet. None of my patients got worse. So the herbal diet is effective.\"",
+      "claimAr": "فكّك الحُجّة دي: «أنا شخصياً شفت تلاتة مرضى تحسّنت حالتهم بعد الحمية العشبية. ولا حد من مرضاي اتوخّم. يبقى الحمية العشبية فعّالة».",
+      "parts": [
+        { "text": "The herbal diet is effective.", "textAr": "الحمية العشبية فعّالة.", "role": "conclusion" },
+        { "text": "Three patients improved after the diet.", "textAr": "تلاتة مرضى تحسّنوا بعد الحمية.", "role": "premise" },
+        { "text": "None of my patients got worse.", "textAr": "ولا حد من مرضاي اتوخّم.", "role": "premise" },
+        { "text": "(Unstated) Improvement after a treatment proves the treatment caused it.", "textAr": "(غير مذكور) التحسّن بعد العلاج يثبت إن العلاج سبّبه.", "role": "assumption" },
+        { "text": "(Unstated) Patients who left the practice or stopped reporting are not counted.", "textAr": "(غير مذكور) المرضى اللي تركوا أو وقّفوا البلاغ ما بيتعدّوش.", "role": "assumption" }
+      ],
+      "explanation": "Two hidden assumptions collapse the argument: (1) 'after' does not mean 'because' — the classic post hoc fallacy; (2) survivorship bias: only continuing patients with good news are in the count. The doctor never sees those who quietly stopped, changed treatment, or were harmed. Mapping these assumptions reveals why case series, however sincere, cannot establish efficacy.",
+      "explanationAr": "افتراضان خفيان بيهدما الحُجّة: (1) «بعد» لا يعني «بسبب» — المغالطة الكلاسيكية post hoc؛ (2) انحياز النجاة: بس المرضى المستمرّون ذوو الأخبار الجيدة في العدد. الطبيب ما بيشوفش اللي تركوا بهدوء، أو غيّروا العلاج، أو تضرّروا. تعيين الافتراضات بيكشف ليه سلاسل الحالات، مهما كانت صادقة، لا يمكنها إثبات الفعالية.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/",
+        "EAL-case-001:redflag-3"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "Your uncle with type-1 diabetes is shown one online story of a man who 'didn't need insulin anymore' after a special diet. He wants to stop insulin and try it. The story is compelling and feels true.",
+      "claimAr": "عمّك مريض السكري النوع الأول اتعرضت عليه قصة واحدة لراجل «بقاش محتاج أنسولين» بعد حمية خاصة. عايز يوقّف الأنسولين ويجرّبها. القصة مؤثّرة وحاسس إنها حقيقية.",
+      "prompt": "Before acting: what would the story have to show for it to actually justify stopping insulin? What do the strong medical guidelines say about type-1 diabetes and insulin?",
+      "promptAr": "قبل التصرّف: إيه اللي القصة لازم تبيّنه علشان تبرّر فعلاً وقف الأنسولين؟ وإيه اللي الإرشادات الطبية القوية بتقوله عن السكري النوع الأول والأنسولين؟",
+      "modelPoints": [
+        "For the story to justify stopping insulin, it would need to come from a replicated, controlled trial — not a single testimony from an unknown person.",
+        "In type-1 diabetes the pancreas no longer makes insulin at all; insulin is life-sustaining, not optional. This is established by global medical consensus, not one study.",
+        "The online man's story cannot rule out misdiagnosis (he may have had type-2), placebo, or other simultaneous treatments.",
+        "The Taybat system caused documented deaths in exactly this pattern: people stopped essential medications after being moved by stories."
+      ],
+      "modelPointsAr": [
+        "علشان القصة تبرّر وقف الأنسولين، كانت محتاجة تيجي من تجربة مُكرَّرة محكَمة — مش شهادة واحدة من شخص مجهول.",
+        "في السكري النوع الأول، البنكرياس بقى ما بيصنّعش أنسولين خالص؛ الأنسولين مُحافِظ على الحياة، مش اختياري. ده ثابت بإجماع طبي عالمي، مش دراسة واحدة.",
+        "قصة الراجل على النت ما تقدرش تستبعد التشخيص الخاطئ (ممكن عنده نوع 2)، أو الوهمي، أو علاجات أخرى متزامنة.",
+        "نظام «الطيبات» سبّب وفيات موثَّقة بنفس النمط ده بالظبط: ناس وقّفت أدوية أساسية بعد ما قصص أثّرت فيها."
+      ],
+      "explanation": "Considering the opposite reveals that the story's entire weight rests on a single anecdote — the weakest rung — while the opposing evidence (established global medical consensus) sits at the very top of the ladder. When evidence on opposite ends of the ladder collide, the top rung wins. The compassion here is real — but a case-level story can never outweigh a life-saving treatment.",
+      "explanationAr": "التفكير في العكس بيكشف إن كامل وزن القصة بيقع على حكاية واحدة — أضعف درجة — بينما الدليل المعاكس (الإجماع الطبي العالمي الثابت) بيقعد على قمة السلّم. لمّا الأدلة من طرفين متقابلين من السلّم تصطدم، الدرجة العليا بتكسب. التعاطف هنا حقيقي — لكن قصة على مستوى الحالة الواحدة عمرها ما تقدر ترجح على علاج بينقذ الحياة.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        "EAL-case-001:okaz-2026-05-10"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 6,
+      "mechanic": "inoculate",
+      "technique": "selling a case report as proof",
+      "techniqueAr": "بيع تقرير الحالة كدليل",
+      "task": "Feel the technique from the inside. Write a short, persuasive post about a harmless topic (e.g. 'listening to music improves your mood') using ONLY one personal story, and make it sound like settled proof. No study needed — just the story, told confidently.",
+      "taskAr": "احسّ بالتقنية من جوّه. اكتب بوست قصير ومقنع عن موضوع غير ضار (زي «سماع الموسيقى بيحسّن مزاجك») مستخدماً بس قصة شخصية واحدة، وخلّيها تبان كدليل مستقرّ. مش محتاج دراسة — بس القصة، مقالة بثقة.",
+      "tells": [
+        "The single story is framed as proof, not as 'this happened to me' — 'I saw it myself' becomes 'this is how it works.'",
+        "No mention of alternative explanations (coincidence, placebo, other factors that day).",
+        "The confident tone covers the absence of a control group or comparison.",
+        "Readers who share similar experiences are invited to 'confirm' it — creating a false sense of convergence."
+      ],
+      "tellsAr": [
+        "القصة الواحدة بتُقدَّم كدليل، مش كـ«حصل معايا» — «أنا شفت بعينيّ» بيبقى «هكذا تشتغل الحياة».",
+        "لا ذكر لتفسيرات بديلة (صدفة، وهمي، عوامل تانية إنهار ده).",
+        "النبرة الواثقة بتغطّي غياب مجموعة ضابطة أو مقارنة.",
+        "القرّاء اللي عندهم تجارب مشابهة بيتدعوا «يؤكّدوا» — بيخلق إحساس زائف بالتقاطع."
+      ],
+      "explanation": "By writing the convincing-but-evidentially-empty post, you've experienced the technique's 'fuel': the story's emotional vividness replaces the evidence's weight. Now you'll notice this in the wild — the confident single story framed as discovery. The tells are: no control, no alternative explanations, and invitation to 'confirm' using personal experience.",
+      "explanationAr": "بكتابة البوست المقنع لكن الفارغ دليلياً، خضت التقنية من جوّه: حيوية القصة العاطفية بتحلّ محلّ وزن الدليل. دلوقتي هتلاحظ ده في الواقع — القصة الواحدة الواثقة المؤطَّرة كاكتشاف. العلامات: لا ضابط، لا تفسيرات بديلة، ودعوة «للتأكيد» بالتجربة الشخصية.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/",
+        "https://www.jmir.org/2023/1/e49255"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    }
+  ]
+}

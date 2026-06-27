@@ -1,0 +1,132 @@
+{
+  "id": "day132_faith_and_medicine_together",
+  "phase": 3,
+  "week": 19,
+  "day": 132,
+  "title": "Faith and Medicine Work Together",
+  "titleAr": "الإيمان والطب يعملان معاً",
+  "description": "Throughout Islamic history, great scholars were also great physicians. Medicine and faith are not opponents — they are allies in the service of the life God commands us to preserve.",
+  "descriptionAr": "طوال التاريخ الإسلامي، علماء عظماء كانوا أطباء عظماء. الطب والإيمان ليسا خصمين — هما حليفان في خدمة الحياة التي أمرنا الله بحفظها.",
+  "type": "religion-literacy",
+  "difficulty": 2,
+  "estimatedMinutes": 14,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068720/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "True or false: Islamic intellectual history views medicine as incompatible with faith.",
+      "claimAr": "صح ولا غلط: التاريخ الفكري الإسلامي ينظر للطب على أنه متعارض مع الإيمان.",
+      "correctAnswer": false,
+      "myth_en": "Faith and medicine are incompatible in Islamic tradition.",
+      "myth_ar": "الإيمان والطب متعارضان في التقليد الإسلامي.",
+      "explanation": "False — the opposite is true. Ibn Sina (Avicenna), one of the greatest physicians in human history, was a Muslim scholar who saw medicine as the study of God's creation. Al-Razi, Ibn al-Nafis (who described pulmonary circulation), and al-Zahrawi (father of surgery) were all devout Muslims who advanced medicine as an expression of their faith. The Prophet ﷺ himself encouraged treatment. The idea that medicine opposes faith has no grounding in Islamic history or theology.",
+      "explanationAr": "غلط — العكس هو الصحيح. ابن سينا، أحد أعظم الأطباء في التاريخ البشري، كان عالماً مسلماً رأى الطب دراسةً لخلق الله. الرازي وابن النفيس (الذي وصف الدورة الدموية الرئوية) والزهراوي (أبو الجراحة) كانوا جميعاً مسلمين متديّنين طوّروا الطب تعبيراً عن إيمانهم. النبي ﷺ نفسه شجّع على التداوي. فكرة إن الطب يعارض الإيمان لا أساس لها في التاريخ أو اللاهوت الإسلامي.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068720/",
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A patient with a serious illness refuses a hospital because 'real believers don't need medicine — only prayer.' The Islamic concept of al-tawakkul (trust in God) combined with the legal maxim 'al-dararu yuzal' (harm is to be removed) points the other way.",
+      "claimAr": "مريض بمرض خطير يرفض المستشفى لأن «المؤمنين الحقيقيين ما يحتاجوش دواء — الدعاء بس». مفهوم التوكّل الإسلامي مع القاعدة الفقهية «الضرر يُزال» بيشير لاتجاه تاني.",
+      "options": [
+        "None — Islamic law has no maxim for health",
+        "'Al-dararu yuzal' (harm is to be removed) obliges avoidance and removal of harm; al-tawakkul means trusting God's outcome AFTER taking every available means — including medicine",
+        "Prayer always replaces medicine in Islamic law",
+        "This is a personal choice Islamic law does not address"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: how does the Islamic concept of al-tawakkul actually INCLUDE seeking medical care, rather than exclude it?",
+        "promptAr": "بكلماتك: إزّاي مفهوم التوكّل الإسلامي بيشمل فعلاً السعي للرعاية الطبية، بدل ما يستبعدها؟"
+      },
+      "explanation": "'Al-dararu yuzal' (الضرر يُزال — harm is to be removed) is one of the five cardinal Islamic legal maxims. When applied to health, it means: known harm to life must be actively addressed, not accepted passively. Al-tawakkul means: after you have taken every reasonable means (al-asbab), you entrust the outcome to God. The Prophetic example is explicit — he used medicine, honey, and cupping, and commanded his companions to seek treatment. Using prescribed medication while praying is the precise model of tawakkul.",
+      "explanationAr": "«الضرر يُزال» هي واحدة من القواعد الفقهية الإسلامية الكبرى الخمس. مُطبَّقة على الصحة تعني: الضرر المعروف على الحياة يجب معالجته بفاعلية، لا قبوله سلبياً. التوكّل يعني: بعد أن تأخذ كل الأسباب المعقولة، تُفوِّض النتيجة لله. المثال النبوي صريح — استخدم الدواء والعسل والحجامة وأمر أصحابه بالتداوي. استخدام الدواء المقرّر مع الدعاء هو النموذج الدقيق للتوكّل.",
+      "sources": [
+        "https://sunnah.com/tirmidhi:2517",
+        "https://sunnah.com/abudawud:3855",
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "An elderly woman with high blood pressure is told by a diet video: 'Doctors are part of the system that profits from your sickness. True healing is in pure food alone.' Before you read on — how confident are you that you can identify which two red flags appear together here?",
+      "claimAr": "امرأة مسنّة عندها ضغط مرتفع قال لها فيديو حمية: «الأطباء جزء من النظام اللي بيكسب من مرضك. الشفاء الحقيقي في الطعام الطيّب لوحده». قبل ما تكمل — قد إيه إنت واثق إنك تحدّد أنهي علامتا خطر ظاهرتان معاً هنا؟",
+      "options": [
+        "No red flags — this is common health advice",
+        "Red Flag #5 (conspiracy framing: 'Big Pharma hides the cure') + Red Flag #8 ('tells you to stop your medicine') — both appearing together is a severe warning sign",
+        "Red Flag #1 only (claims to cure everything)",
+        "Red Flag #12 only (financial interest)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Red Flag #5 pre-discredits every critic by framing medicine as a profit conspiracy — so no doctor's warning can reach her. Red Flag #8 then moves her away from treatment. Together, they form the most dangerous combination in pseudo-medicine: block the exit (make her distrust doctors) and then lead her out the door (stop her medicine). For an elderly woman with hypertension, uncontrolled blood pressure risks stroke and heart attack.",
+      "explanationAr": "علامة الخطر رقم 5 تُسقِط كل ناقد مسبقاً بتأطير الطب كمؤامرة ربحية — فلا يستطيع أي تحذير طبيب الوصول إليها. علامة الخطر رقم 8 ثم تُبعدها عن العلاج. معاً يشكّلان أخطر تركيبة في الطب الزائف: أغلق المخرج (اجعلها تعدم ثقتها في الأطباء) ثم أخرجها من الباب (أوقف دواءها). لامرأة مسنّة بارتفاع ضغط الدم، الضغط غير المضبوط يُعرِّض للسكتة الدماغية والأزمة القلبية.",
+      "sources": [
+        "EAL-case-001:redflag-5",
+        "https://www.who.int/news-room/fact-sheets/detail/hypertension"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A deeply devout friend started following a dietary system that encourages stopping prescribed corticosteroids for his autoimmune condition. He insists that true faith means trusting food, not 'man-made chemicals.'",
+      "claimAr": "صاحب متديّن عميق بدأ يتّبع نظام حمية بيشجّع على وقف الكورتيزون المقرّر لحالته المناعية الذاتية. وبيصرّ إن الإيمان الحقيقي معناه الثقة في الأكل لا «المواد الكيماوية الصناعية».",
+      "prompt": "What would DISPROVE the idea that stopping prescribed medicine is an act of faith? What does Islamic tradition actually say about taking al-asbab (available means)?",
+      "promptAr": "إيه اللي يكذّب فكرة إن وقف الدواء المقرّر عمل إيماني؟ وإيه اللي التراث الإسلامي بيقوله فعلاً عن أخذ الأسباب؟",
+      "modelPoints": [
+        "Authentic hadith (Sunan Abi Dawud 3855, Sunan al-Tirmidhi 2517) show the Prophet ﷺ commanded seeking treatment and used medicine himself.",
+        "Classical Islamic jurisprudence defines tawakkul as trusting God after taking al-asbab — refusing medicine while available is NOT tawakkul but misunderstanding of the concept.",
+        "Hifz al-nafs (protection of life) is the highest of the five Maqasid al-Shari'a; abandoning life-preserving medicine works against this obligation.",
+        "The Maqasid-based approach to a devout friend: 'I know you care about your faith. Would you be open to asking a scholar and a doctor together before stopping the medicine?'"
+      ],
+      "modelPointsAr": [
+        "حديث صحيح (سنن أبي داود 3855، سنن الترمذي 2517) يُظهِر إن النبي ﷺ أمر بالتداوي واستخدم الدواء بنفسه.",
+        "الفقه الإسلامي الكلاسيكي بيعرّف التوكّل بإنه الثقة بالله بعد أخذ الأسباب — رفض الدواء المتاح مش توكّل بل سوء فهم للمفهوم.",
+        "حفظ النفس أعلى المقاصد الخمس؛ التخلّي عن الدواء الحافظ للحياة يعمل ضد هذا الواجب.",
+        "النهج القائم على المقاصد مع صاحب متديّن: «أنا عارف إنك بتهتم بإيمانك. تقدر تسأل عالِم وطبيب مع بعض قبل ما توقّف الدواء؟»"
+      ],
+      "sources": [
+        "https://sunnah.com/abudawud:3855",
+        "https://sunnah.com/tirmidhi:2517",
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "false faith-medicine opposition",
+      "techniqueAr": "التعارض الزائف بين الإيمان والطب",
+      "task": "Feel this trick from the inside (so you can spot it later). Write a short social-media caption that makes someone feel that taking prescribed medication shows distrust in God — use a harmless, everyday example like vitamins or painkillers. Make it sound pious and loving.",
+      "taskAr": "اشعر بالحيلة دي من جوّه (علشان تكشفها بعدين). اكتب كابشن قصير على السوشيال ميديا بيخلّي حد يحسّ إن أخذ الدواء المقرّر يعني عدم الثقة بالله — استخدم مثال بسيط من اليومي زي الفيتامينات أو المسكّنات. خلّيه يبدو تقيّاً ومحبّاً.",
+      "tells": [
+        "It creates a false binary: either trust God OR take medicine — classical tawakkul teaches both together.",
+        "It weaponises guilt and piety to override clinical judgment — you feel shame for taking medicine.",
+        "It never cites any scholarly or Quranic source for the opposition; it relies on felt piety alone.",
+        "It inverts the Prophetic model: the Prophet ﷺ used medicine AND trusted God.",
+        "It sets up the listener to distrust caregivers — a pre-discrediting move identical to Red Flag #5."
+      ],
+      "tellsAr": [
+        "بيخلق ثنائية زائفة: إمّا تثق بالله أو تاخد الدواء — التوكّل الكلاسيكي بيعلّم الاثنين معاً.",
+        "بيسلّح الشعور بالذنب والتقوى لتجاوز الحكم الإكلينيكي — بتحسّ بالخجل من أخذ الدواء.",
+        "ما بيستشهدش بأي مصدر علمي أو قرآني للتعارض؛ بيعتمد على الشعور التقيّ وحده.",
+        "بيعكس النموذج النبوي: النبي ﷺ استخدم الدواء وتوكّل على الله.",
+        "بيعدّ المستمع لعدم الثقة في مقدّمي الرعاية — حركة تشكيك مسبق متطابقة مع علامة الخطر رقم 5."
+      ],
+      "sources": [
+        "https://sunnah.com/abudawud:3855",
+        "EAL-case-001:redflag-5",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068720/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

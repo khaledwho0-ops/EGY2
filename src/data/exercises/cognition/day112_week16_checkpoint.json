@@ -1,0 +1,165 @@
+{
+  "id": "day112_week16_checkpoint",
+  "phase": 3,
+  "week": 16,
+  "day": 112,
+  "title": "Week 16 Checkpoint — Religious-Shield Literacy",
+  "titleAr": "نقطة تفتيش الأسبوع ١٦ — الثقافة الدينية الواقية",
+  "description": "A full-scenario integration of this week's tools: spotting the vocabulary exploit, asking for a source, separating religious and medical claims, recognising unfalsifiability, and checking credentials.",
+  "descriptionAr": "تكامل سيناريو كامل لأدوات هذا الأسبوع: رصد حيلة المصطلح، طلب المصدر، الفصل بين الادعاءات الدينية والطبية، الاعتراف بعدم قابلية التفنيد، والتحقق من الشهادات.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 18,
+  "source": "https://sunnah.com/abudawud",
+  "interleaved": true,
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A social-media post reads: 'Chicken is filth (خبيثة) — the Prophet ﷺ never ate it. Stop eating it if you want to follow the Sunnah and keep your body pure.' Count the moves in this single sentence.",
+      "claimAr": "منشور على سوشيال ميديا: «الفراخ خبيثة — النبي ﷺ ما أكلهاش أبداً. وقّف تأكلها لو عايز تتّبع السنة وتحافظ على طهارة جسمك.» عُدّ الحركات في الجملة الواحدة دي.",
+      "options": [
+        "One move: a food recommendation",
+        "Three moves: (1) Quranic vocabulary exploit ('خبيثة'), (2) a fabricated hadith claim with no citation, (3) identity framing that makes stopping the food an act of Islamic piety",
+        "Two moves: health advice + religious reference",
+        "No moves — it is a straightforward religious claim"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This single sentence executes three moves simultaneously: (1) using 'خبيثة' — a Quranic moral category — to label a food, so the food carries moral/religious weight; (2) claiming the Prophet ﷺ never ate chicken, which contradicts authenticated hadith in Sunan Abī Dāwūd and Sunan Ibn Mājah; and (3) tying the food choice to Islamic identity ('follow the Sunnah / pure body') so that refusing the claim feels like refusing religion. Recognising all three at once is the goal of this week.",
+      "explanationAr": "هذه الجملة الواحدة تنفّذ ثلاث حركات في آن: (١) استخدام «خبيثة» — فئة أخلاقية قرآنية — لوصف طعام، فيكتسب الطعام ثقلاً أخلاقياً/دينياً؛ (٢) ادعاء أن النبي ﷺ لم يأكل الفراخ أبداً، وهو يتناقض مع الأحاديث المعتمدة في سنن أبي داود وابن ماجه؛ و(٣) ربط اختيار الطعام بالهوية الإسلامية («اتّبع السنة / طهارة الجسم») حتى يبدو رفض الادعاء كرفض الدين. الاعتراف بالثلاثة في آن هو هدف هذا الأسبوع.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://sunnah.com/ibnmajah",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "scenario": "Scenario A: A promoter says 'The Prophet ﷺ ate only dates and water on most days — here is the specific hadith, its collection, chapter number, and its grade as sahih in Sahih al-Bukhari.' Scenario B: A promoter says 'The Prophet ﷺ proved that chicken is harmful — all scholars know this.'",
+      "scenarioAr": "سيناريو أ: مروّج يقول «النبي ﷺ كان يأكل فقط التمر والماء في معظم الأيام — هنا الحديث المحدّد وبيانات مجموعته وفصله ودرجته كصحيح في صحيح البخاري». سيناريو ب: مروّج يقول «النبي ﷺ ثبت أن الفراخ ضارّة — كل العلماء يعلمون هذا».",
+      "question": "Which scenario demonstrates responsible religious citation, and which demonstrates a fabricated claim?",
+      "questionAr": "أيٌّ من السيناريوهين يُظهر استشهاداً دينياً مسؤولاً، وأيٌّ يُظهر ادعاءً ملفّقاً؟",
+      "answer": "A",
+      "key_differentiators": [
+        "Scenario A names: collection (Sahih al-Bukhari), chapter, and hadith grade — the minimum standard for a traceable religious citation",
+        "Scenario B uses 'all scholars know this' — an anonymous appeal to authority with no named scholar, no collection, and no hadith grade",
+        "Scenario B's claim about chicken is also contradicted by authenticated hadith in Sunan Abī Dāwūd and Sunan Ibn Mājah documenting the Prophet ﷺ eating chicken"
+      ],
+      "explanation": "A responsible religious citation specifies at minimum: collection, chapter or hadith number, and ideally a grade. 'All scholars know this' is not a source — it is social pressure. And any claim that the Prophet ﷺ never ate chicken is directly contradicted by authenticated narrations in the Six Books.",
+      "explanationAr": "الاستشهاد الديني المسؤول يحدّد على الأقل: المجموعة والفصل أو الرقم وبشكل مثالي الدرجة. «كل العلماء يعلمون» ليس مصدراً — بل ضغط اجتماعي. وأي ادعاء بأن النبي ﷺ لم يأكل الفراخ أبداً يتناقض مباشرة مع الروايات المعتمدة في الكتب الستة.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://sunnah.com/ibnmajah",
+        "https://sunnah.com/bukhari"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A family member who follows the viral diet system says: 'Even the ban against this system proves it is right — they always persecute the truth.' Which principle from this week does this statement violate?",
+      "claimAr": "فرد من العيلة يتبع النظام الطيبات الفيروسي يقول: «حتى الحظر على النظام ده بيثبت إنه صح — دايماً بيضطهدوا الحقيقة». أي مبدأ من هذا الأسبوع تنتهكه هذه العبارة؟",
+      "options": [
+        "Authority-outside-specialty",
+        "Unfalsifiability: when both acceptance and rejection 'prove' a claim, no evidence can ever reach the person — the claim has left the world of evidence-based evaluation entirely",
+        "The vocabulary exploit",
+        "Survivorship bias"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: if someone says 'success proves me right AND persecution proves me right,' what has happened to their claim's relationship with evidence — and why is this hard to break from the inside?",
+        "promptAr": "بكلماتك: لو حد بيقول «النجاح بيثبت إني صح والاضطهاد بيثبت إني صح»، إيه اللي حصل لعلاقة ادعاءه بالدليل — وليه هذا صعب الكسر من الداخل؟"
+      },
+      "explanation": "This is the unfalsifiability principle: a claim that is confirmed by every possible outcome — acceptance and rejection alike — is not a claim that can be evaluated by evidence. This structure is the hardest to break from the inside, because the person feels that doubting it is itself a sign of weakness or conspiracy. The Egyptian Medical Syndicate's decision was based on a formal multi-month investigation that produced zero documented cases with before/after labs — a documented institutional fact, not persecution.",
+      "explanationAr": "هذا هو مبدأ عدم قابلية التفنيد: الادعاء الذي يُؤكّده كل نتيجة محتملة — القبول والرفض على حدٍّ سواء — ليس ادعاءً يمكن تقييمه بالدليل. هذه البنية هي الأصعب كسرها من الداخل، لأن الشخص يشعر أن الشكّ فيها هو بحدّ ذاته علامة ضعف أو مؤامرة. قرار نقابة الأطباء المصرية مبنيٌّ على تحقيق رسمي مستمرّ لأشهر لم يُنتج أي حالة موثّقة بتحاليل قبل/بعد — حقيقة مؤسسية موثّقة، لا اضطهاد.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'A famous religious doctor says chicken is forbidden — it is against the Quran, the Prophet's ﷺ practice, and modern nutrition science. Therefore you must stop eating it immediately.'",
+      "claimAr": "فكّك الحُجّة دي: «دكتور ديني مشهور بيقول الفراخ محرّمة — وده ضد القرآن وسنّة النبي ﷺ والعلم الغذائي الحديث. لهذا لازم توقف أكلها فوراً.»",
+      "parts": [
+        { "text": "You must stop eating chicken immediately.", "textAr": "لازم توقف أكل الفراخ فوراً.", "role": "conclusion" },
+        { "text": "A famous religious doctor says chicken is forbidden.", "textAr": "دكتور ديني مشهور بيقول الفراخ محرّمة.", "role": "premise" },
+        { "text": "(Unstated) The doctor's combined religious-medical authority validates the claim across all three domains simultaneously.", "textAr": "(غير مذكور) السلطة الدينية-الطبية المشتركة للدكتور تُصحّح الادعاء في المجالات الثلاثة في آن واحد.", "role": "assumption" },
+        { "text": "(Unstated) 'The Quran says so' — which would require a specific verse reference (and Al-Māʾidah 5:87 actually prohibits inventing new food bans).", "textAr": "(غير مذكور) «القرآن يقول ذلك» — وهو يحتاج مرجع آية محدّد (والمائدة ٨٧ تنهى عن ابتكار تحريمات غذائية جديدة).", "role": "assumption" },
+        { "text": "(Unstated) 'The Prophet's ﷺ practice bans chicken' — contradicted by authenticated hadith in Sunan Abī Dāwūd and Sunan Ibn Mājah documenting him eating chicken.", "textAr": "(غير مذكور) «سنة النبي ﷺ تُحرّم الفراخ» — وهي تتناقض مع الأحاديث المعتمدة في سنن أبي داود وابن ماجه الموثّقة لأكله الفراخ.", "role": "assumption" },
+        { "text": "Modern nutrition science condemns chicken.", "textAr": "علم التغذية الحديث يُدين الفراخ.", "role": "premise" }
+      ],
+      "explanation": "Every supporting element fails when examined: the Quranic claim lacks a verse (and 5:87 actually refutes food bans); the Sunnah claim is contradicted by authenticated hadith; the nutrition science claim is contradicted by decades of global research; the doctor's combined credentials are outside the required domains. The conclusion that you must stop eating chicken immediately rests on three false premises and two hidden assumptions — none of which survive scrutiny.",
+      "explanationAr": "كل عنصر داعم يسقط عند الفحص: الادعاء القرآني يفتقر لآية (والمائدة ٨٧ ترفض فعلاً تحريمات الطعام)؛ وادعاء السنة يتناقض مع الأحاديث المعتمدة؛ وادعاء علم التغذية يتناقض مع عقود من البحث العالمي؛ والشهادات المشتركة للدكتور خارج المجالات المطلوبة. الخلاصة القائلة بضرورة إيقاف أكل الفراخ فوراً مبنية على ثلاث مقدّمات خاطئة وافتراضَين خفيَّين — لا واحد منهما يصمد أمام التدقيق.",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://sunnah.com/abudawud",
+        "https://www.hsph.harvard.edu/nutritionsource/protein/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "Defending Islam's integrity from those who weaponise it — by learning to verify hadith, recognise fabricated claims, and separate religious from medical authority — might feel like an attack on faith from the inside.",
+      "claimAr": "الدفاع عن نزاهة الإسلام من الذين يستغلّونه — بتعلّم التحقق من الحديث والاعتراف بالادعاءات المُلفَّقة والفصل بين السلطة الدينية والطبية — قد يبدو من الداخل كهجوم على الإيمان.",
+      "prompt": "What would DISPROVE the idea that asking for hadith citations is an attack on faith? What does Islamic scholarly tradition actually say about verification?",
+      "promptAr": "إيه اللي يكذّب فكرة إن طلب استشهادات حديثية هجوم على الإيمان؟ وإيه اللي يقوله التراث العلمي الإسلامي فعلاً عن التحقق؟",
+      "modelPoints": [
+        "Classical Islamic hadith scholarship was built on the rigorous verification of chains of narration — the science of rijal (evaluating narrators) is one of the most sophisticated verification systems in human intellectual history.",
+        "The Prophet ﷺ warned against attributing to him what he did not say — repeating an unverified claim is the act that violates the scholarly norm, not the questioning.",
+        "Al-Māʾidah 5:87 prohibits inventing new food bans; Al-Naḥl 16:116 prohibits attributing personal opinions to Allah as halal/haram rulings. The Quran itself sides with verification.",
+        "Asking 'which hadith collection and chapter?' is behaviour the Prophet's companions practiced — it is the tradition, not an innovation against it.",
+        "The strongest refutation of a fabricated religious shield comes from within the tradition. Knowing the authenticated hadith (Prophet ﷺ ate chicken and drank milk) is an act of Islamic literacy, not doubt."
+      ],
+      "modelPointsAr": [
+        "علم الحديث الإسلامي الكلاسيكي بُنِي على التحقق الصارم من سلاسل الرواية — علم الرجال (تقييم الرواة) هو أحد أكثر أنظمة التحقق تطوّراً في التاريخ الفكري الإنساني.",
+        "النبي ﷺ حذّر من نسبة ما لم يقله إليه — تكرار الادعاء غير الموثّق هو الفعل الذي يخرق المعيار العلمي، لا التشكيك.",
+        "المائدة ٨٧ تحظر ابتكار تحريمات غذائية جديدة؛ النحل ١١٦ يحظر إسناد الآراء الشخصية لله كأحكام حلال/حرام. القرآن نفسه في صفّ التحقق.",
+        "سؤال «أي مجموعة حديث وفصل؟» هو سلوك مارسه صحابة النبي — هو التقليد، لا ابتكار ضدّه.",
+        "أقوى دحض للدرع الديني المُلفَّق يأتي من داخل الموروث. معرفة الأحاديث المعتمدة (النبي ﷺ أكل الفراخ وشرب اللبن) هو فعل ثقافة إسلامية، لا شكّ."
+      ],
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://sunnah.com/ibnmajah",
+        "https://www.iium.edu.my/deed/hadith/other/hadeethsciences.html",
+        "https://quran.com/5/87",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 6,
+      "mechanic": "inoculate",
+      "technique": "the triple-authority fusion — combining medical credentials, religious citation, and identity framing to make a claim unchallengeable",
+      "techniqueAr": "دمج السلطة الثلاثية — الجمع بين الشهادات الطبية والاستشهاد الديني والتأطير الهوياتي لجعل الادعاء غير قابل للتحدي",
+      "task": "Feel the full technique from the inside. Write a short post promoting a completely harmless habit (like 'drink warm lemon water') that simultaneously: (1) invokes a medical title, (2) adds a religious citation (you may use a real verse about water/cleanliness, cited correctly), and (3) ties the habit to Muslim identity. No fake hadith — use only the frame, not fabricated content.",
+      "taskAr": "حسّ بالتقنية الكاملة من الداخل. اكتب بوست قصير يروّج لعادة غير ضارة تماماً (زي «اشرب ماء ليمون دافئ») بيجمع في نفس الوقت: (١) يستدعي لقباً طبياً، (٢) يُضيف استشهاداً دينياً (ممكن تستخدم آية حقيقية عن الماء/الطهارة، مُستشهَد بها بشكل صحيح)، و(٣) يربط العادة بالهوية المسلمة. لا حديث مُلفَّق — استخدم الإطار فقط، لا محتوى مختلقاً.",
+      "tells": [
+        "Medical title ('Dr.') transfers trust from the real specialty to the unrelated claim — the viewer rarely pauses to ask: 'Is this their actual specialty?'",
+        "Religious citation adds a second, sacred layer of authority — questioning the claim now feels like questioning both medicine and religion.",
+        "Identity framing ('this is what Muslims do') turns a personal choice into a group membership signal — rejecting the claim feels like rejecting the community.",
+        "All three layers together make the claim feel triply verified when none of the three actually validates the central health claim.",
+        "The one question that cuts through all three layers: 'What evidence would convince you this habit is harmful?' If the answer is 'nothing,' you are inside an unfalsifiable belief, not a health recommendation."
+      ],
+      "tellsAr": [
+        "اللقب الطبي («دكتور») ينقل الثقة من التخصص الحقيقي للادعاء غير المترابط — المشاهد نادراً يتوقف ليسأل: «هل هذا تخصصهم الفعلي؟»",
+        "الاستشهاد الديني يُضيف طبقة ثانية مقدّسة من السلطة — التشكيك في الادعاء يبدو الآن كتشكيك في الطب والدين معاً.",
+        "التأطير الهوياتي («هذا ما يفعله المسلمون») يحوّل الاختيار الشخصي لإشارة انتماء للجماعة — رفض الادعاء يبدو كرفض المجتمع.",
+        "الطبقات الثلاث معاً تجعل الادعاء يبدو محقَّقاً ثلاث مرات بينما لا واحدة من الثلاثة تُصحّح فعلاً الادعاء الصحي المركزي.",
+        "السؤال الواحد الذي يقطع الطبقات الثلاثة: «ما الدليل الذي سيقنعك بأن هذه العادة ضارة؟» لو الجواب «لا شيء»، أنت داخل معتقد غير قابل للتفنيد، لا توصية صحية."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

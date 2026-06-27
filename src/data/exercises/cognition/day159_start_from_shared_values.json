@@ -1,0 +1,50 @@
+{
+  "id": "day159_start_from_shared_values",
+  "phase": 4,
+  "week": 23,
+  "day": 159,
+  "title": "Conversations I — Start From Shared Values",
+  "titleAr": "محادثات 1 — ابدأ من القيم المشتركة",
+  "description": "You can't argue someone out of a belief tied to identity. You can stand beside them on something you both want.",
+  "descriptionAr": "ما تقدرش تطلّع حد من معتقد مربوط بهويته بالجدال. بس تقدر تقف جنبه على حاجة عايزينها سوا.",
+  "type": "integration",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://www.nature.com/articles/s41599-025-06143-6",
+  "exercises": [
+    {
+      "id": 1, "mechanic": "recognize",
+      "claim": "Your uncle posts a dangerous 'cure'. What opening lowers his defenses instead of raising them?",
+      "claimAr": "عمّك بيبوست «علاج» خطر. أنهي افتتاحية بتقلّل دفاعاته بدل ما تعلّيها؟",
+      "options": ["'This is nonsense and you know it.'", "'I know we both just want khalu (uncle) to stay healthy — can we look at this together?'", "'Doctors say you're wrong.'", "'Stop embarrassing the family.'"],
+      "correctAnswer": 1,
+      "explanation": "Naming a shared value (we both want him healthy) puts you on the same team before any disagreement. The other three openings attack identity or status, which triggers defense — and a defended mind can't hear evidence.",
+      "explanationAr": "تسمية قيمة مشتركة (إحنا الاتنين عايزينه بصحة) بتحطّك في نفس الفريق قبل أي خلاف. التلات افتتاحيات التانية بتهاجم الهوية أو المكانة، وده بيشعل الدفاع — والعقل المدافِع ما بيسمعش دليل.",
+      "sources": ["https://www.nature.com/articles/s41599-025-06143-6"],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 2, "mechanic": "self_explain",
+      "claim": "Acknowledging a real grievance ('the medication WAS expensive and exhausting') before disagreeing.",
+      "claimAr": "الاعتراف بمظلمة حقيقية («الدوا *كان* غالي ومُتعِب») قبل ما تختلف.",
+      "options": ["Weakens your position", "Strengthens it — it proves you're listening, not attacking"],
+      "correctAnswer": 1,
+      "selfExplain": { "prompt": "Why does validating their real frustration make your later evidence MORE persuasive, not less?", "promptAr": "ليه الاعتراف بإحباطه الحقيقي بيخلّي دليلك اللاحق *أكتر* إقناعاً، مش أقل؟" },
+      "explanation": "The cure exploits a real grievance (cost, side effects, feeling unheard). If you dismiss it, you confirm 'the system doesn't care' — their story wins. If you validate it, you remove the grievance from the manipulator's hands and become someone worth listening to.",
+      "explanationAr": "العلاج بيستغلّ مظلمة حقيقية (التكلفة، الأعراض، إحساس إن محدّش سمعه). لو قلّلت منها، بتأكّد «النظام مش مهتمّ» — قصتهم تكسب. لو اعترفت بيها، بتشيل المظلمة من إيد المتلاعب وتبقى حد يستاهل إنه يُسمَع.",
+      "sources": ["https://www.nature.com/articles/s41599-025-06143-6"],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3, "mechanic": "calibrate", "calibrated": true,
+      "claim": "If you open warmly and they still won't budge today, did you fail?",
+      "claimAr": "لو افتتحت بدفء وفضلوا مش متزحزحين النهاردة، تبقى فشلت؟",
+      "options": ["Yes — they didn't change their mind", "No — keeping the relationship and the door open IS the win for one conversation"],
+      "correctAnswer": 1,
+      "explanation": "Calibrate your expectations: minds rarely change in one talk. Success for a single conversation is staying trusted and leaving the door open, not a confession. If you expected total victory, that overconfidence would push you to attack — and lose them.",
+      "explanationAr": "عايِر توقّعاتك: العقول نادراً بتتغيّر في كلام واحد. النجاح للمحادثة الواحدة إنك تفضل موثوق وتسيب الباب مفتوح، مش اعتراف. لو توقّعت نصر كامل، الثقة الزائدة دي كانت هتدفعك تهاجم — وتخسرهم.",
+      "sources": ["https://www.nature.com/articles/s41599-025-06143-6"],
+      "cognitivebiasAtPlay": "Overconfidence"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "day25_ghsq_retake",
+  "phase": 0,
+  "week": 4,
+  "day": 25,
+  "title": "GHSQ Mid-Point",
+  "titleAr": "إعادة تقييم GHSQ",
+  "description": "Retake GHSQ with therapeutic scaffolding. You are not alone.",
+  "descriptionAr": "أعد تقييم GHSQ مع دعم علاجي. أنت لست وحدك.",
+  "type": "instrument_retake",
+  "difficulty": 1,
+  "estimatedMinutes": 10,
+  "instrument": "GHSQ",
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "If experiencing serious emotional problems, how likely to seek professional help?",
+      "claimAr": "إذا كنت تعاني مشاكل عاطفية خطيرة، ما احتمال طلب المساعدة المهنية؟",
+      "truthValue": "reflection",
+      "category": "mental_health",
+      "difficulty": 1,
+      "explanation": "Egypt Mental Health Crisis Line: 16328 (24/7). Seeking help is strength. Early intervention improves outcomes (Jorm 2017).",
+      "explanationAr": "خط أزمات الصحة النفسية المصري: 16328. طلب المساعدة قوة.",
+      "sources": [
+        "https://doi.org/10.1002/wps.20468"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

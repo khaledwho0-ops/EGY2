@@ -1,0 +1,121 @@
+{
+  "id": "day103_unfalsifiable_by_faith",
+  "phase": 3,
+  "week": 15,
+  "day": 103,
+  "title": "When Faith Armor Makes a Claim Untestable",
+  "titleAr": "لمّا درع الإيمان يجعل الادعاء غير قابل للاختبار",
+  "description": "A medical claim wrapped in religious vocabulary cannot be tested the normal way — evidence must first get past identity. Today you learn to separate what Islam actually says from what gets dressed in its language.",
+  "descriptionAr": "ادعاء طبي مُغلَّف بمفردات دينية ما ينفعش يتختبر بالطريقة العادية — الدليل لازم يعدّي الهوية الأول. النهاردة بتتعلّم تفصل بين ما يقوله الإسلام فعلاً وما يتلبّس لغته.",
+  "type": "religion-literacy",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A researcher presents a well-designed study showing chicken protein is safe and beneficial for most adults. A follower of the Taybat system responds: 'That's just a study — this system is backed by Allah's words.' What has happened to the testability of the diet claim?",
+      "claimAr": "باحث بيقدّم دراسة مصمَّمة جيداً بتُظهِر إن بروتين الدجاج آمن ومفيد لمعظم البالغين. تابع لنظام الطيبات يردّ: «دي مجرد دراسة — النظام ده مدعوم بكلام الله». إيه اللي حصل لقابلية الادعاء الغذائي للاختبار؟",
+      "options": [
+        "The claim is now stronger because it has religious support",
+        "The religious framing has made the dietary claim unfalsifiable — any evidence is reframed as an attack on faith, not a test of a nutritional hypothesis",
+        "Nothing has changed — the debate is still about evidence",
+        "The researcher needs to use different methodology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Karl Popper's insight: a claim that cannot be contradicted by any conceivable evidence is not a scientific claim — it is a faith statement. The moment a food rule is labeled as divine, disconfirming evidence is no longer processed as evidence; it becomes an attack on sacred identity. The problem is not religious belief itself — it is when a testable medical claim is disguised as an untestable religious one.",
+      "explanationAr": "ملاحظة كارل بوبر: الادعاء الذي لا يمكن دحضه بأي دليل محتمل ليس ادعاءً علمياً — بل هو تصريح إيماني. في اللحظة التي تُلصَق فيها قاعدة غذائية كونها إلهية، الدليل الدامغ لا يُعالَج بعدها كدليل؛ بل يصبح هجوماً على الهوية المقدّسة. المشكلة مش في الإيمان الديني نفسه — بل حين يتنكّر ادعاء طبي قابل للاختبار كادعاء ديني غير قابل للاختبار.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: Islamic faith and scientific testability are in conflict — you cannot be a believing Muslim and still require evidence before accepting a medical claim.",
+      "claimAr": "صح ولا غلط: الإيمان الإسلامي والقابلية للاختبار العلمي في صراع — مش تقدر تكون مسلماً مؤمناً وبرضو تطلب دليلاً قبل قبول ادعاء طبي.",
+      "correctAnswer": false,
+      "myth_en": "Asking for evidence is an act of religious doubt.",
+      "myth_ar": "طلب الدليل هو فعل شكّ ديني.",
+      "explanation": "False. Islam has a long tradition of empirical inquiry — Islamic scholars led in medicine, mathematics, and astronomy precisely because they demanded evidence. The Quran itself repeatedly invites reflection on evidence (أفلا يتفكّرون، أفلا ينظرون). The faith/evidence conflict is manufactured by those who need their medical claims to be beyond questioning. Calibration check: how confidently did you feel the claim was true before seeing the answer?",
+      "explanationAr": "غلط. الإسلام له تقليد طويل من البحث التجريبي — العلماء المسلمون كانوا رواداً في الطب والرياضيات والفلك بالضبط لأنهم طالبوا بالدليل. القرآن نفسه يدعو للتأمّل في الأدلة مراراً (أفلا يتفكّرون، أفلا ينظرون). الصراع بين الإيمان والدليل مُصنَّع من قِبَل من يحتاجون أن تكون مطالباتهم الطبية فوق التساؤل. فحص المعايرة: كنت واثق قد إيه إن الادعاء صح قبل ما تشوف الإجابة؟",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068645/"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The Taybat system said: if you follow the plan and don't recover, you didn't follow it correctly. If you do recover, the plan is proven. Which logical structure is this?",
+      "claimAr": "نظام الطيبات قال: لو اتّبعت الخطة وما اتعافتش، إنت ما اتّبعتهاش صح. لو اتعافت، الخطة اتثبتت. أنهي بنية منطقية دي؟",
+      "options": [
+        "A valid scientific hypothesis with controls",
+        "An unfalsifiable structure: success confirms the system, failure is blamed on the patient — no result can ever refute the claim",
+        "A randomized trial design",
+        "Normal medical protocol"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does a structure where failure is always the patient's fault — never the system's — make it impossible to ever learn the truth about whether the system works?",
+        "promptAr": "بكلماتك: ليه بنية يكون فيها الفشل دايماً خطأ المريض — مش النظام — بتجعل من المستحيل معرفة الحقيقة عن إذا كان النظام بيشتغل؟"
+      },
+      "explanation": "This is the unfalsifiable structure (Red Flag #4 from the 12 red flags). When failure is always attributed to the patient and success always attributed to the system, no result can ever count as evidence against the system. The religious framing amplifies this: suggesting patient failure might also be spiritual — not following the divine plan properly — makes the evidence even harder to reach. Self-explanation of this structure is the key to spotting it elsewhere.",
+      "explanationAr": "هذه البنية غير قابلة للتفنيد (علامة الخطر رقم 4 من الـ12 علامة خطر). لمّا الفشل يُنسب دائماً للمريض والنجاح دائماً للنظام، لا نتيجة يمكن أن تُحسَب دليلاً ضد النظام. التأطير الديني يضخّم هذا: الإيحاء بأن فشل المريض قد يكون أيضاً تقصيراً روحياً يجعل الدليل أصعب وصولاً. الشرح الذاتي لهذه البنية هو المفتاح لاكتشافها في أماكن أخرى.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "Someone says: 'Science is also a kind of faith — scientists believe things without proof too. So a religious diet claim and a clinical trial are equally credible.'",
+      "claimAr": "حد بيقول: «العلم كمان نوع من الإيمان — العلماء بيصدّقوا حاجات من غير دليل كمان. فادعاء حمية ديني وتجربة سريرية مصدران متساويان في المصداقية».",
+      "prompt": "What would have to be true for this equivalence to hold? What is the key structural difference between a system with error-correction and one without?",
+      "promptAr": "إيه اللي لازم يكون صح علشان التساوي ده يصمد؟ إيه الفرق البنيوي الأساسي بين نظام فيه تصحيح أخطاء ونظام بدونه؟",
+      "modelPoints": [
+        "For the equivalence to hold, science and religious-diet claims would need the same mechanism for correcting errors. They do not: peer review, replication, and falsifiability criteria exist in science precisely to detect and fix mistakes publicly.",
+        "Scientists have been wrong before — and science corrected those errors in the open record. An unfalsifiable system cannot correct its errors because it has no mechanism even to detect them.",
+        "The 'science is faith' argument sounds balanced but is a false equivalence: the difference is not between 'trusts' and 'trusts' — it is between a self-correcting system and a self-insulating one.",
+        "If the equivalence held, any unfalsifiable claim would be as credible as a double-blind RCT — an outcome no reasonable person accepts."
+      ],
+      "modelPointsAr": [
+        "علشان التساوي يصمد، العلم وادعاءات الحمية الدينية كانوا محتاجين نفس آلية تصحيح الأخطاء. مش موجود: مراجعة الأقران والتكرار ومعايير قابلية التفنيد موجودة في العلم بالضبط عشان تكتشف الأخطاء وتصلّحها علناً.",
+        "العلماء أخطأوا من قبل — والعلم صحّح تلك الأخطاء في السجل المفتوح. النظام غير قابل التفنيد لا يستطيع تصحيح أخطائه لأنه لا يملك آلية لاكتشافها أصلاً.",
+        "حجة «العلم إيمان» تبدو متوازنة لكنها مغالطة تساوٍ كاذب: الفرق مش بين «يثق» و«يثق» — بل بين نظام يُصحِّح نفسه ونظام يُحصّن نفسه.",
+        "لو التساوي كان صحيحاً، أي ادعاء غير قابل للتفنيد كان سيكون بنفس مصداقية تجربة عشوائية مزدوجة التعمية — نتيجة لا يقبلها أي شخص معقول."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "False Equivalence"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'A family member follows the diet faithfully and stopped her diabetes medication. She had a seizure. The system says she must not have followed it correctly. Therefore the system is still valid and she should follow it more strictly.'",
+      "claimAr": "فكّك الحُجّة دي: «فرد من العيلة بيتّبع الحمية بإخلاص وأوقفت دواء السكري. عندها نوبة. النظام بيقول هي ما اتّبعتهاش صح. يبقى النظام لسّه سليم وهي لازم تتّبعه أكثر صرامة».",
+      "parts": [
+        { "text": "The system is still valid and she should follow it more strictly.", "textAr": "النظام لسّه سليم وهي لازم تتّبعه أكثر صرامة.", "role": "conclusion" },
+        { "text": "She had a seizure after stopping her medication while following the diet.", "textAr": "عندها نوبة بعد إيقاف دوائها وهي بتتّبع الحمية.", "role": "premise" },
+        { "text": "(Unstated) When a patient fails while following the system, the failure is always caused by imperfect adherence — never by the system itself.", "textAr": "(غير مذكور) لمّا مريض يفشل وهو بيتّبع النظام، الفشل دايماً ناتج عن التزام ناقص — مش بالنظام نفسه.", "role": "assumption" },
+        { "text": "The system has many followers who have recovered.", "textAr": "النظام عنده أتباع كتير اتعافوا.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption is unfalsifiability built in by design: failure is structurally pre-assigned to the patient, so no patient outcome can ever count as evidence against the system. The 'many followers recovered' line is irrelevant — it ignores survivorship bias and does not answer whether her seizure was caused by stopping medication. Once the assumption is visible, the conclusion no longer follows; the next step is a doctor, not stricter adherence.",
+      "explanationAr": "الافتراض الخفي هو عدم التفنيد مدمَج في التصميم: الفشل مُسنَد هيكلياً مسبقاً للمريض، فلا نتيجة مريض تُحسَب دليلاً ضد النظام. جملة «أتباع كتير اتعافوا» غير ذات صلة — تتجاهل انحياز الناجين ولا تجيب عمّا إذا كانت نوبتها ناتجة عن إيقاف الدواء. أول ما يظهر الافتراض، الخلاصة ما بتلزمش؛ الخطوة التالية طبيب لا التزام أشد.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

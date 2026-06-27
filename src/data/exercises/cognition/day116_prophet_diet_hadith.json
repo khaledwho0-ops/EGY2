@@ -1,0 +1,119 @@
+{
+  "id": "day116_prophet_diet_hadith",
+  "phase": 3,
+  "week": 17,
+  "day": 116,
+  "title": "The Fabricated Prophetic Diet Claim",
+  "titleAr": "ادعاء الحمية النبوية المُلفَّقة",
+  "description": "Claiming the Prophet ﷺ never ate certain foods is a factual claim about history — and it can be checked against authenticated hadith. Today we distinguish sourced Islamic knowledge from personal invention.",
+  "descriptionAr": "ادعاء إن النبي ﷺ ما أكلش أطعمة معيّنة ادعاء تاريخي — وممكن نتحقق منه من الأحاديث الصحيحة. النهاردة بنفرّق بين المعرفة الإسلامية الموثَّقة والاختراع الشخصي.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://sunnah.com/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "True or false: the claim that chicken and milk were absent from the Prophet's ﷺ diet is contradicted by authenticated hadith in the Six Books.",
+      "claimAr": "صح ولا غلط: ادعاء إن الفراخ واللبن كانوا غايبين من طعام النبي ﷺ يتناقض مع حديث صحيح في الكتب الستة.",
+      "correctAnswer": true,
+      "myth_en": "The Prophet ﷺ never ate chicken or dairy.",
+      "myth_ar": "النبي ﷺ ما أكلش فراخ أو ألبان.",
+      "explanation": "True. Chicken appears in Sunan Abī Dāwūd and Sunan Ibn Mājah, which are among the Six Books (Kutub al-Sittah) of authenticated hadith. Milk and dairy feature prominently in numerous authenticated hadith, including in Sahih al-Bukhārī. Claiming 'the Prophet ﷺ never ate X' is a historical claim that can be verified — and in this case the authentication chain refutes it. Fabricating the Prophet's ﷺ practice to sell a diet is both a religious falsification and a documented health risk.",
+      "explanationAr": "صح. الفراخ مذكورة في سنن أبي داود وسنن ابن ماجه، من بين الكتب الستة للأحاديث الصحيحة. اللبن والألبان بارزة في أحاديث صحيحة كثيرة، منها في صحيح البخاري. ادعاء «النبي ﷺ ما أكلش أبداً س» ادعاء تاريخي يمكن التحقق منه — وفي الحالة دي سلسلة التصحيح بتردّه. اختراع ممارسة النبي ﷺ لبيع حمية هو تزوير ديني ومخاطرة صحية موثَّقة.",
+      "sources": [
+        "EAL-case-001:alain-2026-04-28",
+        "https://sunnah.com/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "Someone argues: 'Even if the hadith exists, maybe the Prophet ﷺ only ate chicken once — so a system avoiding chicken is still Islamically sound.' How confident are you that this argument actually holds up logically and from an Islamic jurisprudence standpoint?",
+      "claimAr": "حد بيحاجج: «حتى لو الحديث موجود، يمكن النبي ﷺ أكل فراخ مرة واحدة بس — يبقى نظام بيتجنّب الفراخ لسّه سليم دينياً». قد إيه أنت واثق إن الحجة دي صامدة منطقياً ومن ناحية الفقه الإسلامي؟",
+      "options": [
+        "Very confident — this is a reasonable qualification of the hadith",
+        "Not confident at all — the argument reverses the burden of proof and invents a qualification with no textual basis"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Not confident is the right answer. The burden of proof lies with the one making a prohibition. Islamic jurisprudence holds that the default ruling on food is permissibility (ibāhah) — a prohibition requires specific, graded, scholarly evidence. 'He only ate it once, maybe' invents a qualification for which there is no text, and Al-Nahl 16:116 explicitly forbids declaring halal things haram without textual authority. Calibration check: if you felt the argument sounded reasonable, notice that — the move of adding a small-sounding qualification ('only once') is a goalposts-shifting tactic that sounds modest but carries the same logical problem.",
+      "explanationAr": "«غير واثق» هو الإجابة الصحيحة. عبء الإثبات يقع على من يُصدر التحريم. الفقه الإسلامي يُقرّر أن الأصل في الأطعمة الإباحة — التحريم يحتاج دليلاً نصياً محدداً ومدرّجاً وعلمياً. «يمكن أكل مرة واحدة بس» يخترع تأهيلاً لا نصّ له، والنحل ١٦:١١٦ تنهى صراحةً عن تحريم الحلال بدون سلطة نصية. اختبار المعايرة: لو حسست إن الحجة بدت معقولة، لاحظ ده — حيلة إضافة تأهيل بسيط الصوت («مرة واحدة بس») أسلوب نقل الأعمدة اللي يبدو متواضعاً لكن يحمل نفس المشكلة المنطقية.",
+      "sources": [
+        "https://plato.stanford.edu/entries/epistemology-medicine/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Al-Nahl 16:116 says: 'Do not say of what your tongues assert of falsehood, this is lawful and this is unlawful, inventing lies about Allah.' A diet programme without scholarly authority declares chicken and milk haram for health reasons wrapped in Quranic language.",
+      "claimAr": "النحل ١٦:١١٦: «وَلَا تَقُولُوا لِمَا تَصِفُ أَلْسِنَتُكُمُ الْكَذِبَ هَٰذَا حَلَالٌ وَهَٰذَا حَرَامٌ لِتَفْتَرُوا عَلَى اللَّهِ الْكَذِبَ». برنامج حمية بدون سلطة علمية يُعلن الفراخ واللبن حراماً لأسباب صحية ملفوفة في لغة قرآنية.",
+      "options": [
+        "The verse is about something else entirely — it does not apply to dietary advice",
+        "The verse directly forbids personal food prohibition without textual authority — exactly what a diet system does when it declares halal foods effectively forbidden"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: how does Al-Nahl 16:116 make the Quran itself a refutation of the system that claimed to be built on it?",
+        "promptAr": "بكلماتك: إزاي النحل ١٦:١١٦ بتجعل القرآن نفسه رداً على النظام اللي ادّعى إنه مبني عليه؟"
+      },
+      "explanation": "This verse is one of the strongest internal refutations of the religious-shield exploit. It explicitly condemns declaring things halal or haram based on personal judgment without divine authority. When a diet programme declares chicken, milk, and eggs — all halal foods — effectively forbidden on a health basis wrapped in Quranic language, it commits precisely this prohibited act. The Quran, read carefully, refutes the system that claimed to be built on it. Articulating this yourself (as you just did) is the mechanic that moves the lesson from abstract to owned.",
+      "explanationAr": "الآية دي من أقوى الردود الداخلية على استغلال الدرع الديني. بتُدين صراحةً إعلان الحلال والحرام بناءً على الحكم الشخصي دون سلطة إلهية. لمّا برنامج حمية يُعلن إن الفراخ واللبن والبيض — وكلها أطعمة حلال — محرّمة فعلياً لأسباب صحية مُلفَّفة بلغة قرآنية، يرتكب بالظبط هذا الفعل المنهي عنه. القرآن، لو اتقرى بعناية، بيردّ على النظام اللي ادّعى إنه مبني عليه. صياغتك لده بنفسك (زي ما عملت دلوقتي) هو الآلية اللي بتنقل الدرس من التجريد للامتلاك.",
+      "sources": [
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'The Prophet ﷺ was the greatest human being. He only ate the purest foods. Chicken and processed dairy were not part of his Sunnah — that is established. So a diet avoiding them is the most Islamic thing you can do. To eat otherwise is to go against the Prophet's example.'",
+      "claimAr": "فكّك الحجة دي: «النبي ﷺ كان أعظم إنسان. ما أكلش إلا أطهر الأطعمة. الفراخ والألبان المُعالَجة ما كانتش جزءاً من سنّته — ده ثابت. يبقى حمية بتتجنّبهم هي أكثر حاجة إسلامية ممكنة. إنك تأكل بطريقة تانية معناه مخالفة مثال النبي».",
+      "parts": [
+        { "text": "A diet avoiding chicken and dairy is the most Islamic choice.", "textAr": "حمية تتجنّب الفراخ والألبان هي الاختيار الأكثر إسلامية.", "role": "conclusion" },
+        { "text": "The Prophet ﷺ only ate the purest foods.", "textAr": "النبي ﷺ ما أكلش إلا أطهر الأطعمة.", "role": "premise" },
+        { "text": "Chicken and dairy were not part of his Sunnah — 'established.'", "textAr": "الفراخ والألبان ما كانتش جزء من سنّته — «ده ثابت».", "role": "premise" },
+        { "text": "(Unstated) The speaker has verified this against authenticated hadith chains and has scholarly authority to issue a dietary ruling.", "textAr": "(غير مذكور) المتحدّث تحقّق من ده مقابل سلاسل أحاديث صحيحة ولديه سلطة علمية لإصدار حكم غذائي.", "role": "assumption" },
+        { "text": "To eat chicken or dairy is to go against the Prophet's example.", "textAr": "إنك تأكل فراخ أو ألبان معناه مخالفة مثال النبي.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption collapses the argument: the claim that chicken and dairy 'were not part of his Sunnah — established' is presented as settled fact, but it is directly contradicted by authenticated hadith in the Six Books (Sunan Abī Dāwūd, Sunan Ibn Mājah, Sahih al-Bukhārī). The 'irrelevant' line then weaponises the prophet's authority to shame anyone who questions a factually false premise. The structure: take a false premise, dress it as 'established,' use it to derive an Islamic obligation, and then frame deviation as moral failure.",
+      "explanationAr": "الافتراض الخفي بيُسقط الحجة: الادعاء إن الفراخ والألبان «ما كانتش جزء من سنّته — ده ثابت» مُقدَّم كحقيقة محسومة، لكنه يتناقض مباشرةً مع أحاديث صحيحة في الكتب الستة (سنن أبي داود، سنن ابن ماجه، صحيح البخاري). خطّ «غير ذات صلة» بعدين بيسلّح سلطة النبي لتعيير من يسأل في مقدّمة كاذبة فعلياً. الهيكل: خذ مقدّمة كاذبة، البسها كـ«ثابت»، استخدمها لاستنتاج التزام إسلامي، ثم أطّر الانحراف كفشل أخلاقي.",
+      "sources": [
+        "EAL-case-001:alain-2026-04-28",
+        "https://sunnah.com/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A WhatsApp message says: 'Eating dates only in the morning is the Prophetic Sunnah and cures all digestive diseases.' It has been forwarded by a respected community elder.",
+      "claimAr": "رسالة واتساب بتقول: «أكل التمر بس في الصبح سنة نبوية وبيشفي كل أمراض الجهاز الهضمي». اتبعتتها من شيخ مجتمع محترم.",
+      "prompt": "Before forwarding: what would have to be false about this message for it to be misleading despite coming from a respected source? What two separate checks would expose the gap?",
+      "promptAr": "قبل ما تعيدها: إيه اللي لازم يكون غلط في الرسالة دي علشان تبقى مضلِّلة رغم إنها جاية من مصدر محترم؟ أنهي تحقّقين منفصلين بيكشفوا الفجوة؟",
+      "modelPoints": [
+        "Religious check: does an authenticated hadith with this specific claim and its grade exist? Resources like sunnah.com allow searching authenticated hadith databases — if no specific hadith supports the exact claim, or if the grade is weak, the Prophetic authority is invented.",
+        "Medical check: does strong clinical evidence (PubMed, Cochrane) link dates alone to curing digestive diseases? A cultural habit of eating dates is not the same as a disease cure.",
+        "Respected source ≠ verified claim: the elder may have forwarded in good faith, but authority bias can cause us to skip both checks.",
+        "The message bundles two separate claims (religious + medical) into one — separating them is the first step, because each half must stand on its own evidence."
+      ],
+      "modelPointsAr": [
+        "التحقّق الديني: هل حديث صحيح بهذا الادعاء المحدّد ودرجته موجود؟ موارد زي sunnah.com تسمح بالبحث في قواعد بيانات الأحاديث الصحيحة — لو مفيش حديث محدّد يدعم الادعاء بالظبط، أو كانت الدرجة ضعيفة، فالسلطة النبوية مُخترَعة.",
+        "التحقّق الطبي: هل هناك دليل سريري قوي (PubMed, Cochrane) يربط التمر وحده بشفاء أمراض الجهاز الهضمي؟ العادة الثقافية بأكل التمر مش نفس شفاء المرض.",
+        "مصدر محترم ≠ ادعاء مُحقَّق: الشيخ ربما أعاد الإرسال بحسن نية، لكن انحياز السلطة ممكن يخلّينا نتخطّى التحقّقين.",
+        "الرسالة بتجمع ادعاءين منفصلين (ديني + طبي) في واحد — فصلهم هو الخطوة الأولى، لأن كل نصف لازم يقف على دليله الخاص."
+      ],
+      "explanation": "Two separate checks are needed because the message bundles two separate claim types. The religious claim is verifiable through hadith science; sunnah.com allows you to search authenticated hadith databases. The medical claim is verifiable through clinical evidence. Both checks are necessary; neither can substitute for the other. The respected-source framing exploits authority bias — which makes independent verification more important, not less.",
+      "explanationAr": "التحقّقان المنفصلان ضروريان لأن الرسالة بتجمع نوعين منفصلين من الادعاءات. الادعاء الديني يمكن التحقّق منه من خلال علم الحديث؛ sunnah.com يسمح بالبحث في قواعد بيانات الأحاديث الصحيحة. الادعاء الطبي يمكن التحقّق منه من خلال الدليل السريري. التحقّقان ضروريان؛ لا يمكن لأيٍّ منهما أن يحلّ محلّ الآخر. تأطير المصدر المحترم يستغلّ انحياز السلطة — وده بيجعل التحقّق المستقل أكثر أهمية، مش أقل.",
+      "sources": [
+        "https://sunnah.com/",
+        "https://pubmed.ncbi.nlm.nih.gov/"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    }
+  ]
+}

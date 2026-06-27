@@ -1,0 +1,129 @@
+{
+  "id": "day87_predatory_journals",
+  "phase": 2,
+  "week": 13,
+  "day": 87,
+  "title": "Predatory Journals — The Fake Seal of Approval",
+  "titleAr": "المجلات الجشعة — ختم الموافقة المزيّف",
+  "description": "Some journals look official but will publish anything for money. Learn the signals — because pseudoscience sellers rely on them.",
+  "descriptionAr": "في مجلات بتبدو رسمية لكن بتنشر أي حاجة مقابل فلوس. اتعلّم الإشارات — لأن بائعي العلم الزائف بيعتمدوا عليها.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 13,
+  "source": "https://www.nature.com/articles/d41586-023-03542-4",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A seller says: \"My research was published in the International Journal of Advanced Nutritional Sciences.\" You search for the journal — it has a grand website but you can't find it in PubMed, Scopus, or the Directory of Open Access Journals (DOAJ). What is most likely?",
+      "claimAr": "بائع بيقول: «بحثي اتنشر في المجلة الدولية لعلوم التغذية المتقدمة.» دوّرت على المجلة — عندها موقع فخم لكن ما لقيتهاش في PubMed ولا Scopus ولا دليل المجلات مفتوحة الوصول (DOAJ). الأرجح إيه؟",
+      "options": [
+        "It is a very new journal not yet indexed",
+        "It is likely a predatory journal — legitimate journals appear in at least one major index; absence from all three is a strong warning",
+        "The search engines are wrong",
+        "It is a religious journal with different rules"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Legitimate peer-reviewed journals are indexed in PubMed (health sciences), Scopus, or the DOAJ. A professional-looking website is easy to build. Predatory journals charge authors to publish, perform little or no genuine peer review, and often have names designed to sound like established journals. Being absent from all major indices after any reasonable period of existence is a strong red flag.",
+      "explanationAr": "المجلات المُراجَعة الشرعية بتتفهرس في PubMed (العلوم الصحية) أو Scopus أو DOAJ. موقع يبدو احترافي سهل تبنيه. المجلات الجشعة بتشترط رسوماً للنشر، وبتجري مراجعة أقران قليلة أو معدومة، وغالباً بيها أسماء مصمّمة علشان تشبه مجلات معروفة. غيابها عن كل المؤشرات الكبرى بعد أي فترة معقولة علامة خطر قوية.",
+      "sources": [
+        "https://www.nature.com/articles/d41586-023-03542-4",
+        "https://doaj.org/about/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a predatory journal's articles go through the same expert review as a Nature or Lancet article.",
+      "claimAr": "صح ولا غلط: مقالات المجلة الجشعة بتمرّ بنفس مراجعة الخبراء اللي بتمرّ بيها مقالات Nature أو Lancet.",
+      "correctAnswer": false,
+      "myth_en": "Any journal with 'peer review' in its description actually does it.",
+      "myth_ar": "أي مجلة عليها «مراجعة الأقران» في وصفها بتعملها فعلاً.",
+      "explanation": "False. Predatory journals advertise 'peer review' but in practice often accept a paper within days (genuine review takes weeks to months), accept papers with deliberate errors that any expert would catch, and charge article-processing fees that create a financial incentive to accept rather than reject. Researchers have submitted nonsense papers to predatory journals as experiments — and had them accepted. How confident were you before reading this? If you leaned toward 'true' — that is exactly the association the term 'peer review' exploits.",
+      "explanationAr": "غلط. المجلات الجشعة بتعلن «مراجعة الأقران» لكن في الواقع غالباً بتقبل الورقة في أيام (المراجعة الحقيقية بتاخد أسابيع لأشهر)، وبتقبل أوراق فيها أخطاء مقصودة أي خبير كان هيلاحظها، وبتفرض رسوم معالجة مقالات بتخلق حافز مالي للقبول بدل الرفض. باحثون رفعوا أوراقاً لا معنى لها لمجلات جشعة كتجارب — وأُقبِلت. كنت متأكد قد إيه قبل ما تقرأ؟ لو ملت لـ«صح» — ده بالظبط الارتباط اللي مصطلح «مراجعة الأقران» بيستغله.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309038/",
+        "https://www.nature.com/articles/d41586-017-07556-7"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "You receive a message: \"A nutrition specialist published in 14 international journals — here is proof the viral diet system is safe.\" The count of journals (14) is used as the main evidence of credibility.",
+      "claimAr": "جالك رسالة: «متخصص تغذية نشر في 14 مجلة دولية — هنا الدليل إن نظام الحمية المنتشر آمن.» عدد المجلات (14) بيستخدم كالدليل الرئيسي على المصداقية.",
+      "options": [
+        "14 journals is impressive — that's strong evidence of credibility",
+        "Publishing in 14 predatory journals is less meaningful than one genuinely peer-reviewed paper"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does the NUMBER of journals tell you almost nothing about credibility, and what single question would reveal whether any of the 14 publications actually mean something?",
+        "promptAr": "بكلماتك: ليه عدد المجلات ما بيقولكش تقريباً حاجة عن المصداقية، وأنهي سؤال واحد كان هيكشف إذا كانت أي من الـ14 نشر بتعني حاجة فعلاً؟"
+      },
+      "explanation": "The number of journals is meaningless without knowing their quality. Publishing in 14 predatory journals requires only a fee and a few days — it signals financial willingness to pay for the appearance of credibility, not scientific scrutiny. The single most revealing question: 'Are any of these indexed in PubMed, Scopus, or DOAJ?' One paper in a genuine journal outweighs 14 in predatory ones. This move exploits most readers' inability to distinguish real from fake journals.",
+      "explanationAr": "عدد المجلات بلا معنى من غير معرفة جودتها. النشر في 14 مجلة جشعة يحتاج بس رسوم وأيام — بيشير للاستعداد المالي لدفع مقابل مظهر المصداقية، مش للتدقيق العلمي. السؤال الأكثر كشفاً: «أنهي منهم مفهرسة في PubMed أو Scopus أو DOAJ؟» ورقة واحدة في مجلة حقيقية بتوزن أكتر من 14 في مجلات جشعة. الحركة دي بتستغلّ عدم قدرة معظم القرّاء على التمييز بين المجلات الحقيقية والمزيّفة.",
+      "sources": [
+        "https://www.nature.com/articles/d41586-023-03542-4",
+        "https://www.sciencebasedmedicine.org/predatory-publishing/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A study published in a predatory journal shows a supplement reversed kidney disease in 20 patients, with no control group and no ethics board approval. A supporter argues: 'Even if the journal isn't perfect, 20 real people recovered — that still means something.'",
+      "claimAr": "دراسة اتنشرت في مجلة جشعة بتُظهر إن مكمّل عكس مرض الكلى في 20 مريض، من غير مجموعة ضابطة ومن غير موافقة لجنة أخلاقيات. مؤيد بيحتجّ: «حتى لو المجلة مش مثالية، 20 شخص حقيقي شفيوا — ده لسه بيعني حاجة.»",
+      "prompt": "What would DISPROVE the supporter's logic? What four alternative explanations make '20 people improved' mean very little without a control group?",
+      "promptAr": "إيه اللي يكذّب منطق المؤيد؟ وأنهي أربع تفسيرات بديلة بتخلّي «20 شخص تحسّنوا» تعني القليل جداً من غير مجموعة ضابطة؟",
+      "modelPoints": [
+        "Natural disease course: kidney conditions fluctuate — some patients improve regardless of any intervention.",
+        "Placebo effect: believing you are receiving effective treatment triggers real physiological improvements in many conditions.",
+        "Concurrent changes: these 20 people likely changed other things simultaneously (diet, stress, other medications).",
+        "Survivorship reporting: people who did not improve are less likely to be counted or publicised — the failures are hidden."
+      ],
+      "modelPointsAr": [
+        "المسار الطبيعي للمرض: حالات الكلى بتتذبذب — بعض المرضى بيتحسّنوا بغضّ النظر عن أي تدخّل.",
+        "التأثير الوهمي: الاعتقاد إنك بتتلقّى علاجاً فعّالاً بيُطلق تحسّنات فيزيولوجية حقيقية في حالات كتير.",
+        "التغييرات المتزامنة: الـ20 ده على الأرجح غيّروا حاجات تانية في نفس الوقت (أكل، توتر، أدوية أخرى).",
+        "تقرير الناجين: الناس اللي ما تحسّنوش أقل عرضة للإحصاء أو الإعلان — الإخفاقات مخفيّة."
+      ],
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4309038/",
+        "https://www.bmj.com/content/343/bmj.d7849"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "using a predatory journal publication as authority",
+      "techniqueAr": "استخدام النشر في مجلة جشعة كسلطة علمية",
+      "task": "Feel the trick from inside: design a one-paragraph pitch for a harmless product (say, a vitamin C supplement) that cites a 'published study' in a way that sounds authoritative — without any of the listener's five critical questions getting answered. Aim for maximum scientific-sounding language with minimum checkable substance.",
+      "taskAr": "حسّ بالحركة من جوّه: صمّم فقرة واحدة بتسوّق لمنتج غير ضار (مثلاً، مكمّل فيتامين ج) وبتستشهد بـ«دراسة منشورة» بطريقة تبدو موثوقة — من غير ما يتجاوَب على أي من الخمسة أسئلة النقدية بتاعة المستمع. استهدف أقصى لغة تبدو علمية مع أقل مادة قابلة للفحص.",
+      "tells": [
+        "Naming a journal that sounds real but can't be verified quickly ('International Review of Advanced Nutritional Biochemistry').",
+        "Citing a 'study' without a DOI, author name, year, or sample size.",
+        "Using phrases like 'clinically proven' or 'scientifically validated' without defining what test was done.",
+        "Passive voice hides who did the study: 'it has been shown' rather than 'a 2022 RCT of 500 patients found.'",
+        "The citation is the end of the persuasion — no one is expected to check it."
+      ],
+      "tellsAr": [
+        "تسمية مجلة تبدو حقيقية لكن ما تقدرش تتحقق منها بسرعة («المراجعة الدولية للكيمياء الحيوية التغذوية المتقدمة»).",
+        "الاستشهاد بـ«دراسة» من غير DOI أو اسم مؤلف أو سنة أو حجم عيّنة.",
+        "استخدام عبارات زي «ثابت سريرياً» أو «مُثبَت علمياً» من غير تحديد أنهي اختبار أُجري.",
+        "الصيغة المجهولة بتخفي مَن عمل الدراسة: «ثبت» بدل «تجربة عشوائية 2022 على 500 مريض لقت».",
+        "الاستشهاد هو نهاية الإقناع — مفيش أحد متوقع يفحصه."
+      ],
+      "explanation": "Writing the pitch from inside fixes the structural tells in memory. When you encounter this pattern — authority by citation without checkable substance — you now know the anatomy of the move: a name that sounds real, passive language, no verifiable specifics. The five questions (funded by whom? how many? what design? control group? replicated?) are the antidote to every variant of this technique.",
+      "explanationAr": "كتابة العرض من جوّه بيثبّت الدلالات الهيكلية في الذاكرة. لمّا تقابل النمط ده — سلطة باستشهاد من غير مادة قابلة للفحص — دلوقتي بتعرف تشريح الحركة: اسم يبدو حقيقي، لغة مجهولة، مش تفاصيل قابلة للتحقق. الخمسة أسئلة (ممول من مين؟ قد إيه ناس؟ أنهي تصميم؟ مجموعة ضابطة؟ اتكرّرت؟) هي الترياق لكل نسخة من الحركة دي.",
+      "sources": [
+        "https://www.nature.com/articles/d41586-023-03542-4",
+        "https://www.ncbi.nlm.nih.gov/nlmcatalog/journals"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

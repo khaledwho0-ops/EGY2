@@ -1,0 +1,98 @@
+{
+  "id": "confounding_variables",
+  "phase": 2,
+  "week": 17,
+  "day": 34,
+  "title": "Confounding Variables",
+  "titleAr": "المتغيرات المربكة",
+  "description": "Understand confounding in causal inference, learn to use directed acyclic graphs (DAGs) to identify confounders, and know when and how to adjust for them.",
+  "descriptionAr": "فهم المتغيرات المربكة في الاستدلال السببي، وتعلم استخدام الرسوم البيانية الموجهة غير الدورية (DAGs) لتحديد المربكات.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Confounding and DAGs",
+    "nameAr": "المتغيرات المربكة والرسوم البيانية الموجهة",
+    "definition": "A confounder is a variable that (1) is associated with the exposure, (2) is causally associated with the outcome (independently of the exposure), and (3) is not on the causal pathway between exposure and outcome. In the DAG framework (Pearl, 2009), a confounder creates an open 'backdoor path' between exposure and outcome. Adjustment closes this path. Failing to adjust creates spurious associations; adjusting for non-confounders (mediators, colliders) introduces bias.",
+    "definitionAr": "المتغير المربك هو متغير: (1) مرتبط بالتعرض، (2) مرتبط سببياً بالنتيجة، (3) ليس على المسار السببي. في إطار DAG، المربك يخلق 'مساراً خلفياً' مفتوحاً.",
+    "realWorldExample": "The association between coffee drinking and lung cancer was confounded by smoking: coffee drinkers were more likely to smoke, and smoking causes lung cancer. After adjusting for smoking, the coffee-cancer association disappeared. This was demonstrated in large cohort studies (Freedman et al., 2012, NEJM).",
+    "detectionMethod": "Draw a DAG to identify backdoor paths. Apply the backdoor criterion (Pearl, 2009) to determine the minimal sufficient adjustment set. Use change-in-estimate criterion (>10% change in the exposure-outcome coefficient after adjustment). Apply propensity score methods or instrumental variables when unmeasured confounding is suspected."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "An observational study finds that people who drink moderate alcohol have lower cardiovascular mortality than non-drinkers (the 'J-shaped curve'). A 2023 meta-analysis using Mendelian randomization (using genetic variants as instruments) found no protective effect. What is the most likely explanation for the observational finding?",
+      "promptAr": "دراسة رصدية تجد أن من يشربون الكحول بشكل معتدل لديهم وفيات قلبية أقل من غير الشاربين. تحليل تلوي 2023 باستخدام التوزيع العشوائي المندلي لم يجد تأثيراً وقائياً. ما التفسير الأكثر احتمالاً؟",
+      "options": [
+        "The genetic instruments are invalid",
+        "Alcohol genuinely protects the heart but genes override this",
+        "The meta-analysis was too small",
+        "Confounding: 'sick quitter' bias — non-drinkers include former drinkers who quit due to illness, and moderate drinkers tend to be healthier, wealthier, and have better healthcare access. These confounders create a spurious protective association"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Stockwell et al. (2016) and subsequent Mendelian randomization studies identified 'sick quitter' bias and broader confounding as the explanation. Non-drinkers include former heavy drinkers who quit after developing health problems, making the reference group artificially unhealthy. Additionally, moderate drinkers tend to have higher socioeconomic status, better diets, and more exercise. Mendelian randomization circumvents this confounding by using genetic alcohol metabolism variants as instruments.",
+      "explanationAr": "تحيز 'تارك المرض' والمتغيرات المربكة الأوسع تفسر النتيجة. غير الشاربين يشملون شاربين سابقين توقفوا بسبب المرض. التوزيع العشوائي المندلي يتجاوز هذا الارتباك."
+    },
+    {
+      "id": 2,
+      "type": "scenario",
+      "prompt": "In a DAG: Socioeconomic Status (SES) → Education → Health Outcomes. SES → Health Outcomes (directly). A researcher wants to estimate the total causal effect of Education on Health. Should they adjust for SES?",
+      "promptAr": "في DAG: الوضع الاجتماعي → التعليم → النتائج الصحية. الوضع الاجتماعي → النتائج الصحية (مباشرة). باحث يريد تقدير التأثير السببي الكلي للتعليم على الصحة. هل يجب أن يعدل للوضع الاجتماعي؟",
+      "options": [
+        "Yes — SES causes both Education and Health, so it is a confounder on the backdoor path SES → Education ← ? → Health... Actually, SES → Education and SES → Health, creating a backdoor path through SES. Adjusting for SES is necessary",
+        "No — adjusting for SES would block the direct path",
+        "It depends on the sample size",
+        "Yes — SES is always a confounder"
+      ],
+      "correctAnswer": 0,
+      "explanation": "SES creates a backdoor path: Education ← SES → Health. Without adjusting for SES, the observed association between Education and Health includes both the causal effect of Education AND the confounding through SES. By the backdoor criterion (Pearl, 2009), SES must be adjusted for to obtain an unbiased estimate of Education's causal effect on Health. Note: if SES were a mediator on the Education → SES → Health path, adjusting would be inappropriate.",
+      "explanationAr": "الوضع الاجتماعي يخلق مساراً خلفياً: التعليم ← الوضع الاجتماعي → الصحة. بدون التعديل، الارتباط المرصود يشمل التأثير السببي والارتباك من خلال الوضع الاجتماعي."
+    },
+    {
+      "id": 3,
+      "type": "identify",
+      "prompt": "A researcher studies the effect of a drug on survival. They adjust for post-treatment blood markers that are both affected by the drug and predictive of survival. Using DAG terminology, these blood markers are:",
+      "promptAr": "باحث يدرس تأثير دواء على البقاء. يعدل لمؤشرات دم بعد العلاج التي تتأثر بالدواء وتتنبأ بالبقاء. بمصطلحات DAG، هذه المؤشرات هي:",
+      "options": [
+        "Confounders that should be adjusted for",
+        "Mediators — they are on the causal pathway (Drug → Blood Markers → Survival). Adjusting for them blocks part of the causal effect and introduces bias",
+        "Colliders that should be adjusted for",
+        "Instrumental variables"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Blood markers that are caused by the drug AND cause survival changes are mediators, not confounders. The causal chain is: Drug → Blood Markers → Survival. Adjusting for a mediator blocks the indirect causal pathway and biases the estimate of the total effect. This is a common error in clinical research. Only pre-treatment variables can be confounders; post-treatment variables on the causal pathway are mediators (Baron & Kenny, 1986).",
+      "explanationAr": "مؤشرات الدم التي تتأثر بالدواء وتؤثر على البقاء هي وسطاء وليست مربكات. التعديل لها يحجب المسار السببي غير المباشر ويُدخل تحيزاً."
+    },
+    {
+      "id": 4,
+      "type": "calculate",
+      "prompt": "A crude (unadjusted) odds ratio for smoking and heart disease is OR=4.0. After adjusting for age, diet, and exercise, the adjusted OR becomes 2.5. The change-in-estimate is: (4.0−2.5)/4.0 = 37.5%. What does this indicate?",
+      "promptAr": "نسبة الأرجحية الخام للتدخين وأمراض القلب هي OR=4.0. بعد التعديل للعمر والحمية والتمارين، تصبح OR المعدلة 2.5. التغير في التقدير = 37.5%. ماذا يشير هذا؟",
+      "options": [
+        "The analysis is overfitted",
+        "The confounders are irrelevant because the association remains significant",
+        "Substantial confounding was present: 37.5% of the crude association was due to confounding by age, diet, and exercise. The adjusted OR of 2.5 is a less biased estimate of smoking's effect",
+        "The crude OR is more accurate because it uses more data"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A change-in-estimate >10% conventionally indicates meaningful confounding (Greenland, 1989; Mickey & Greenland, 1989). The 37.5% change shows that age, diet, and exercise were collectively confounding the smoking-heart disease association, inflating the crude estimate. The adjusted OR of 2.5 better approximates smoking's independent effect, though residual confounding from unmeasured variables may remain.",
+      "explanationAr": "تغير في التقدير > 10% يشير تقليدياً إلى ارتباك ذي معنى. التغير 37.5% يُظهر أن العمر والحمية والتمارين كانت مربكة للارتباط بشكل جماعي."
+    },
+    {
+      "id": 5,
+      "type": "identify",
+      "prompt": "Which of the following methods addresses unmeasured confounding in observational studies?",
+      "promptAr": "أي من الطرق التالية تعالج المتغيرات المربكة غير المقاسة في الدراسات الرصدية؟",
+      "options": [
+        "Propensity score matching eliminates all confounding",
+        "Increasing sample size eliminates unmeasured confounding",
+        "Multivariable regression alone can handle unmeasured confounders",
+        "Instrumental variable analysis (e.g., Mendelian randomization), regression discontinuity, difference-in-differences, and sensitivity analyses (E-value, Rosenbaum bounds)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Standard regression and propensity scores can only control for measured confounders. For unmeasured confounding: (1) Instrumental variables use an exogenous variable correlated with treatment but not the outcome except through treatment (Mendelian randomization uses genes). (2) Regression discontinuity exploits threshold-based treatment assignment. (3) Difference-in-differences uses pre-post comparisons to remove time-invariant confounding. (4) The E-value (VanderWeele & Ding, 2017) quantifies how strong unmeasured confounding would need to be to explain away an observed association.",
+      "explanationAr": "الانحدار القياسي لا يتحكم إلا في المربكات المقاسة. لمعالجة المربكات غير المقاسة: المتغيرات الأداتية، انقطاع الانحدار، الفرق في الفروق، وتحليلات الحساسية."
+    }
+  ]
+}

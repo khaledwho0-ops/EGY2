@@ -1,0 +1,115 @@
+{
+  "id": "day60_blinding",
+  "phase": 2,
+  "week": 9,
+  "day": 60,
+  "title": "Blinding — When Knowing Bends the Result",
+  "titleAr": "التعمية — لمّا المعرفة بتلوي النتيجة",
+  "description": "If the patient knows they got the 'real' pill, hope colours the result. If the doctor knows, hope colours the scoring too. Blinding hides who got what — so the truth can speak.",
+  "descriptionAr": "لو المريض عارف إنه أخد الحبة «الحقيقية»، الأمل بيلوّن النتيجة. ولو الدكتور عارف، الأمل بيلوّن التقييم كمان. التعمية بتخفي مين أخد إيه — علشان الحقيقة تتكلّم.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2954519/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "In a trial, patients are told 'you are definitely getting the powerful new drug.' Even before it can act biologically, many report feeling better. What problem does telling them create?",
+      "claimAr": "في تجربة، المرضى اتقالهم «إنتم أكيد بتاخدوا الدوا الجديد القوي». حتى قبل ما يشتغل بيولوجياً، كتير منهم بيبلّغوا بتحسّن. المشكلة اللي بيخلقها إنهم عرفوا إيه؟",
+      "options": [
+        "No problem — honesty is best here",
+        "Expectation (the placebo effect) contaminates the result, so we can't tell the drug's real effect from the patients' hope",
+        "It makes the drug stronger chemically",
+        "It saves time"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When patients know they got the 'real' treatment, their expectation alone can lift their symptoms — that's the placebo effect doing the work, not the drug. So the reported improvement is now a mix of true effect plus hope, and you can't separate them. This is exactly why trials hide which pill is which: not to deceive, but to stop expectation from quietly writing the result.",
+      "explanationAr": "لمّا المرضى يعرفوا إنهم أخدوا العلاج «الحقيقي»، توقّعهم لوحده ممكن يرفع أعراضهم — ده التأثير الوهمي بيشتغل، مش الدوا. يبقى التحسّن المُبلَّغ بقى خليط من تأثير حقيقي زائد أمل، وما تقدرش تفصلهم. علشان كده بالظبط التجارب بتخفي أنهي حبة هي الحقيقية: مش علشان تخدع، لكن علشان تمنع التوقّع إنه يكتب النتيجة بالخفّة.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4046547/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2954519/"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "'Double-blind' means neither the patient NOR the doctor measuring the outcome knows who got the drug and who got the placebo. Why does the DOCTOR also need to be kept in the dark?",
+      "claimAr": "«تعمية مزدوجة» معناها إن لا المريض ولا الدكتور اللي بيقيس النتيجة عارف مين أخد الدوا ومين أخد الوهمي. ليه الدكتور كمان لازم يتساب في الظلام؟",
+      "options": [
+        "Doctors are not trustworthy",
+        "Because a doctor who knows can unconsciously score the 'treated' patients more generously and read hope into their progress — experimenter bias",
+        "To make the study cheaper",
+        "There's no reason; only the patient matters"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why can't even a well-meaning, honest doctor just 'try harder' to be fair instead of being blinded?",
+        "promptAr": "بكلماتك: ليه حتى الدكتور الأمين حسن النية ما يقدرش «يحاول أكتر» إنه يبقى منصف بدل إنه يتعمّى؟"
+      },
+      "explanation": "Even an honest, well-meaning doctor who knows who got the drug can unconsciously tilt the result: rating the 'treated' group's progress a little more generously, asking them warmer questions, or interpreting an ambiguous symptom hopefully. This is experimenter bias, and it happens without anyone intending to cheat. Double-blinding removes it by making sure neither side knows — so the data, not the hope, decides. Unconscious bias cannot be defeated by good intentions alone.",
+      "explanationAr": "حتى الدكتور الأمين حسن النية اللي عارف مين أخد الدوا ممكن من غير قصد يميل بالنتيجة: يقيّم تقدّم المجموعة «المعالَجة» بكرم شوية، يسألهم أسئلة أدفأ، أو يفسّر عرض غامض بتفاؤل. ده انحياز المُجرِّب، وبيحصل من غير ما حد ينوي الغش. التعمية المزدوجة بتشيله بإنها تتأكد إن مفيش طرف عارف — علشان البيانات، مش الأمل، هي اللي تقرّر. الانحياز اللاواعي ما ينهزمش بالنوايا الحسنة لوحدها.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2954519/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a study where the researcher already knew which patients were 'special' to the treatment, and personally judged whether they improved, is just as reliable as a double-blind one.",
+      "claimAr": "صح ولا غلط: دراسة الباحث فيها كان عارف أصلاً أنهي مرضى «مميزين» للعلاج، وحَكَم بنفسه هل اتحسّنوا، بتبقى موثوقة بنفس قدر الدراسة المعمّاة المزدوجة.",
+      "correctAnswer": false,
+      "myth_en": "An honest expert doesn't need blinding to judge fairly.",
+      "myth_ar": "الخبير الأمين مش محتاج تعمية علشان يحكم بإنصاف.",
+      "explanation": "False — and this is the gentlest, most important point about blinding: it's not an insult to anyone's honesty. The whole reason double-blinding exists is that even sincere, expert, ethical people cannot switch off unconscious bias by willpower. Blinding protects the researcher FROM their own mind. Calibrate: how confident were you before seeing the answer? If you were very sure it was 'False' — well done, that's accurate calibration. If you hesitated, that's useful self-knowledge.",
+      "explanationAr": "غلط — ودي ألطف وأهم نقطة في التعمية: هي مش إهانة لأمانة حد. السبب الوحيد لوجود التعمية المزدوجة إن حتى الناس الصادقة الخبيرة الأخلاقية ما تقدرش تطفّي الانحياز اللاواعي بالإرادة. التعمية بتحمي الباحث من عقله هو نفسه. معايرة: كنت متأكد قد إيه قبل ما تشوف الإجابة؟ لو كنت متأكد جداً إنها «غلط» — ممتاز، دي معايرة دقيقة. لو ترددت، دي معرفة ذاتية مفيدة.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2954519/"
+      ],
+      "cognitivebiasAtPlay": "Bias Blind Spot"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"The healer both prescribed the diet AND personally judged who improved, using reports from followers who already believed in him. His results showed 90% improvement.\"",
+      "claimAr": "فكّك الحُجّة دي: «المُعالِج وصف الحمية وحكم بنفسه مين اتحسّن، بناءً على تقارير من أتباع أصلاً مؤمنين بيه. نتايجه وضّحت تحسّن 90%».",
+      "parts": [
+        { "text": "90% of followers showed improvement.", "textAr": "90% من الأتباع تحسّنوا.", "role": "conclusion" },
+        { "text": "The healer personally judged improvement in his own believers.", "textAr": "المُعالِج حكم بنفسه على التحسّن في مؤمنين بيه.", "role": "premise" },
+        { "text": "(Unstated) A healer judging his own results is an objective measurement.", "textAr": "(غير مذكور) المُعالِج اللي بيحكم على نتايجه نفسه بيقدّم قياساً موضوعياً.", "role": "assumption" },
+        { "text": "Followers who did NOT improve likely did not follow the diet correctly.", "textAr": "الأتباع اللي ما اتحسّنوش على الأرجح ما اتبعوا الحمية صح.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION is the fatal flaw: measuring your own results, on believers, with no independent assessor, is the textbook setup for maximum experimenter bias and confirmation bias. The 'didn't follow it correctly' line is IRRELEVANT and also unfalsifiable — it pre-explains away every failure. Once you map the parts, the 90% figure carries no weight.",
+      "explanationAr": "الافتراض الخفي هو العيب القاتل: قياس نتايجك الخاصة، على مؤمنين بيك، من غير مُقيِّم مستقل، هو الإعداد النموذجي لأقصى انحياز مُجرِّب وانحياز تأكيد. جملة «ما اتبعوش صح» غير ذات صلة وكمان غير قابلة للتفنيد — بتفسّر كل فشل مسبقاً. أول ما تفكّك الأجزاء، رقم الـ90% بيبقى بلا وزن.",
+      "sources": [
+        "EAL-case-001:redflag-3",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2954519/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 59,
+      "claim": "A supplement seller says: \"My product has never failed anyone who believed in it and followed the protocol perfectly.\" Connecting today's blinding lesson to yesterday's falsifiability lesson: which two fatal flaws does this statement have at once?",
+      "claimAr": "بائع مكمّلات بيقول: «منتجي ما فشل مع أي حد آمن بيه واتبع البروتوكول بالظبط». بربط درس التعمية النهاردة بدرس القابلية للتفنيد إمبارح: أنهي عيبين قاتلين عند الجملة دي في نفس الوقت؟",
+      "options": [
+        "It is grammatically wrong and too expensive",
+        "It is unfalsifiable (failure is always the user's fault) AND it has no blinded measurement — so even its 'successes' can't be separated from placebo and expectation",
+        "The sample is too small",
+        "The claim is only wrong if the seller is dishonest"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Both fatal flaws are present simultaneously: (1) Unfalsifiable — failure is always blamed on 'didn't follow perfectly,' so no outcome can ever count against it (Day 59). (2) No blinding — 'successes' are self-reported by believers who know what they took, with no independent assessor (Day 60). Together these mean the claim produces zero usable evidence regardless of how many testimonials exist.",
+      "explanationAr": "العيبان القاتلان موجودان في نفس الوقت: (1) غير قابل للتفنيد — الفشل دايماً بيتعلّق على «ما اتبعوش بالظبط»، فما فيش نتيجة تُحسَب ضده (يوم 59). (2) لا تعمية — «النجاحات» ذاتية التقرير من مؤمنين عارفين بإيه أخدوا، من غير مُقيِّم مستقل (يوم 60). المجموعان معاً معناهم إن الادعاء بينتج صفر أدلة صالحة مهما كان فيه من شهادات.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2954519/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    }
+  ]
+}

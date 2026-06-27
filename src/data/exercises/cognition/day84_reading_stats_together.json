@@ -1,0 +1,129 @@
+{
+  "id": "day84_reading_stats_together",
+  "phase": 2,
+  "week": 12,
+  "day": 84,
+  "title": "Reading a Study's Statistics — All Together Now",
+  "titleAr": "قراءة إحصاءات دراسة — كل حاجة مع بعض",
+  "description": "You now have five statistical tools. This integration day shows you how to apply them together on a single claim — the way a careful reader does before believing, sharing, or acting on health information.",
+  "descriptionAr": "دلوقتي عندك خمس أدوات إحصائية. يوم التكامل ده بيوريك ازاي تطبّقهم مع بعض على ادعاء واحد — الطريقة اللي بيعملها القارئ المتأنّي قبل ما يصدّق أو يشارك أو يتصرّف بناءً على معلومات صحية.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A health news headline reads: 'New herb doubles energy levels in clinical trial!' The linked study has: 20 participants, 4 weeks, mean energy score change +12 points (SD = 18, p = 0.048, 95% CI: 0.1–23.9, no control group). Use your statistical tools to evaluate this claim.",
+      "claimAr": "عنوان خبر صحي بيقول: «عشبة جديدة بتضاعف مستويات الطاقة في تجربة سريرية!» الدراسة المُرتبطة فيها: 20 مشارك، 4 أسابيع، متوسط تغيير درجة الطاقة +12 نقطة (الانحراف المعياري = 18، p = 0.048، فترة الثقة 95%: 0.1–23.9، لا مجموعة ضابطة). استخدم أدواتك الإحصائية لتقييم الادعاء ده.",
+      "options": [
+        "Strong evidence — it passed the p < 0.05 threshold",
+        "Weak evidence on multiple grounds: tiny sample (20 people), huge SD relative to mean (result highly variable), CI nearly touching zero (barely significant), no control group (can't separate herb from placebo or natural energy fluctuation)",
+        "Moderate evidence — needs one more study",
+        "Strong evidence — all studies have limitations"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Let's apply all five tools: (1) Mean/SD: an SD of 18 on a mean of 12 means some people improved dramatically while others got worse — very inconsistent. (2) p-value: 0.048 barely crosses the threshold and with 20 people is likely to be a false positive. (3) CI: 0.1–23.9 almost touches zero — the true effect could be negligible. (4) Sample size: 20 people, 4 weeks — massively underpowered. (5) Correlation≠causation: without a control group, energy changes could be placebo, expectation, or seasonal variation. Five red flags on one study.",
+      "explanationAr": "هنطبّق الأدوات الخمسة: (1) المتوسط/الانحراف المعياري: انحراف معياري 18 على متوسط 12 يعني بعض الناس تحسّنوا بشكل كبير وآخرين تراجعوا — غير متسق جداً. (2) قيمة p: 0.048 بالكاد تعدّي العتبة ومع 20 شخص على الأرجح إيجابي كاذب. (3) فترة الثقة: 0.1–23.9 تكاد تلمس الصفر — التأثير الحقيقي ممكن يكون ضئيلاً. (4) حجم العيّنة: 20 شخص، 4 أسابيع — قوة منخفضة بشكل هائل. (5) الارتباط ≠ السببية: من غير مجموعة ضابطة، تغيّرات الطاقة ممكن تكون وهمية أو توقّعية أو تباين موسمي. خمس علامات تحذير على دراسة واحدة.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology",
+        "https://www.bmj.com/content/355/bmj.i5161"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if a study is published in a scientific journal, its statistical conclusions are automatically reliable.",
+      "claimAr": "صح ولا غلط: لو دراسة اتنشرت في مجلة علمية، استنتاجاتها الإحصائية تلقائياً موثوقة.",
+      "correctAnswer": false,
+      "myth_en": "Publication = reliability.",
+      "myth_ar": "النشر = الموثوقية.",
+      "explanation": "False. Publication proves that peers reviewed the method, not that the conclusions are correct. Many published studies have small samples, p-hacked analyses, wide confidence intervals, or confounded designs. Replication crisis research — including papers in top journals — has shown that many published findings fail to replicate. Reading statistics independently is not a criticism of science; it is what science asks you to do. If you felt very confident this was true before — that is authority bias: trusting the process rather than checking the result.",
+      "explanationAr": "غلط. النشر بيثبت إن الأقران راجعوا المنهج، مش إن الاستنتاجات صحيحة. كتير من الدراسات المنشورة عندها عيّنات صغيرة، أو تحليلات p-hacking، أو فترات ثقة واسعة، أو تصاميم مُعقَّدة. بحوث أزمة التكرار — منها أوراق في أعلى المجلات — أثبتت إن كتير من النتائج المنشورة ما بتتكررش. قراءة الإحصاءات بشكل مستقل مش نقداً للعلم؛ ده ما بيطلبه العلم منك. لو حسّيت إنك متأكد جداً من الصح قبل ما تقرأ — ده انحياز سلطة: ثقة في العملية بدل فحص النتيجة.",
+      "sources": [
+        "https://www.nature.com/articles/d41586-019-00857-9",
+        "https://www.bmj.com/content/355/bmj.i5161"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A follower of the viral «نظام الطيبات» presents this argument: 'I personally know 20 people who got better — that is a 100% success rate!'",
+      "claimAr": "تابع نظام «الطيبات» بيقدّم الحُجّة دي: «أنا شخصياً أعرف 20 شخص تحسّنوا — ده معدل نجاح 100%!»",
+      "options": [
+        "Solid evidence — 100% is hard to argue with",
+        "Three simultaneous failures: no base rate, biased self-selected sample, and correlation — not causation"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: explain each of the three statistical failures in this '100% success' claim, and why together they mean the claim proves nothing.",
+        "promptAr": "بكلماتك: وضّح كل واحد من الفشل الإحصائي الثلاثي في ادعاء «100% نجاح» ده، وليه مع بعض يعني الادعاء ما بيثبتش حاجة."
+      },
+      "explanation": "Three overlapping failures: (1) Base rate neglect: what percentage of people with the same conditions improve over the same period without the system? If that's 50%, a personal '100%' from 20 people means very little. (2) Sample size and selection bias: 20 self-selected friends is a tiny, biased sample — survivorship bias likely hid the people who were harmed and stopped following the system. (3) Correlation/causation: he cannot isolate the diet from dozens of simultaneously changing variables (stress, sleep, other food changes). Personal conviction, however sincere, cannot substitute for a controlled study.",
+      "explanationAr": "ثلاثة إخفاقات متداخلة: (1) إهمال المعدل الأساسي: كم في المئة من الناس بنفس الحالات بيتحسّنوا على نفس الفترة من غير النظام؟ لو ده 50%، «100% شخصي» من 20 شخص بيعني القليل جداً. (2) حجم العيّنة وانحياز الاختيار: 20 صديق مُختار ذاتياً هو عيّنة صغيرة ومنحازة — انحياز الناجين على الأرجح أخفى الناس اللي اتأذّوا وبطّلوا النظام. (3) الارتباط/السببية: ما يقدرش يعزل الحِمية عن عشرات المتغيّرات المتغيّرة في نفس الوقت (توتر، نوم، تغييرات أكل أخرى). القناعة الشخصية، مهما كانت صادقة، ما تعوّضش دراسة مضبوطة.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A well-conducted randomized trial finds a drug reduces hospital admission by 30% relative risk reduction (from a 2% baseline). The headline says: 'Drug slashes hospitalisation risk by 30% — a major breakthrough.'",
+      "claimAr": "تجربة عشوائية محكمة بتلاقي إن دواء بيقلّل دخول المستشفى بـ30% تخفيض نسبي (من معدل أساسي 2%). العنوان بيقول: «الدواء بيقطع خطر الدخول للمستشفى 30% — اختراق كبير».",
+      "prompt": "Before calling this a 'major breakthrough': what does the same result look like when described differently? What numbers would tell a more complete story?",
+      "promptAr": "قبل ما تسمّيه «اختراقاً كبيراً»: إيه شكل نفس النتيجة لو وُصِفت بشكل مختلف؟ وأنهي أرقام بتحكي قصة أكمل؟",
+      "modelPoints": [
+        "Absolute risk reduction: from 2% to 1.4% — that is 0.6 percentage points, not 30 percentage points.",
+        "Number Needed to Treat (NNT): 1 / 0.006 ≈ 167 people must take the drug for one person to avoid hospitalisation.",
+        "Neither framing is dishonest, but together they give the full picture: relative risk looks impressive; absolute risk shows the real-world scale.",
+        "A '30% reduction' from a very small baseline is very different from a '30% reduction' from a 50% baseline — the word 'breakthrough' needs the baseline to make sense."
+      ],
+      "modelPointsAr": [
+        "تخفيض الخطر المطلق: من 2% إلى 1.4% — ده 0.6 نقطة مئوية، مش 30 نقطة مئوية.",
+        "عدد المحتاجين للعلاج (NNT): 1 / 0.006 ≈ 167 شخص لازم ياخدوا الدواء علشان شخص واحد يتجنّب الدخول للمستشفى.",
+        "مفيش وصف منهم غير أمين، لكن مع بعض بيديك الصورة الكاملة: الخطر النسبي يبدو مبهر؛ الخطر المطلق يُظهر الحجم في العالم الحقيقي.",
+        "«تخفيض 30%» من معدل أساسي صغير جداً مختلف جداً عن «تخفيض 30%» من معدل أساسي 50% — كلمة «اختراق» محتاجة المعدل الأساسي علشان يكون لها معنى."
+      ],
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "cherry-picking statistical figures",
+      "techniqueAr": "انتقاء الأرقام الإحصائية",
+      "task": "Feel the trick from the inside: write a short, convincing health post for a harmless claim like 'our walking challenge improved sleep.' Choose whichever statistical framing — relative or absolute, mean or best-case — makes your result sound most impressive. Use real numbers you make up for this exercise.",
+      "taskAr": "حسّ بالحركة من جوّه: اكتب بوست صحي قصير ومقنع لادعاء غير ضار زي «تحديي المشي حسّن النوم». اختار الإطار الإحصائي — النسبي أو المطلق، المتوسط أو أفضل حالة — اللي بيخلّي نتيجتك تبدو أكثر إبهاراً. استخدم أرقام حقيقية تخترعها لهذا التمرين.",
+      "tells": [
+        "Reporting only relative numbers ('50% improvement!') while hiding the tiny absolute baseline.",
+        "Choosing the best-performing subgroup to represent the whole ('participants over 40 saw a 70% gain').",
+        "Suppressing the standard deviation — the spread of results is hidden so the average looks clean.",
+        "No control group mentioned — there is no way to know if people would have improved anyway.",
+        "The impressive-sounding number is the hook; the statistical limitations stay invisible."
+      ],
+      "tellsAr": [
+        "الإفادة بالأرقام النسبية فقط («تحسّن 50%!») مع إخفاء المعدل الأساسي الضئيل.",
+        "اختيار أفضل مجموعة فرعية للتمثيل («المشاركون فوق 40 شافوا ربح 70%»).",
+        "إخفاء الانحراف المعياري — توزيع النتائج مخفي علشان المتوسط يبدو نظيف.",
+        "مفيش مجموعة ضابطة مذكورة — ما في طريقة لمعرفة إذا كان الناس هيتحسّنوا على أي حال.",
+        "الرقم اللي بيبدو مبهراً هو الطُعم؛ القيود الإحصائية تفضل غير مرئية."
+      ],
+      "explanation": "Selectively reporting the most flattering statistical framing is a real, documented manipulation in health marketing. Building it yourself — even for a harmless claim — ingrains the pattern so you recognize it faster when it appears in a diet product post, a supplement ad, or a viral health story. The tells are specific: always ask 'relative or absolute?', 'what was the baseline?', 'what was the SD?', 'was there a control group?'",
+      "explanationAr": "الإفادة الانتقائية بالإطار الإحصائي الأملح هو تلاعب حقيقي وموثّق في التسويق الصحي. إنك تبنيه بنفسك — حتى لادعاء غير ضار — بيرسّخ النمط علشان تكشفه أسرع لمّا يظهر في منشور منتج حمية أو إعلان مكمّل أو قصة صحية فيروسية. العلامات محدّدة: دايماً اسأل «نسبي ولا مطلق؟»، «إيه كان المعدل الأساسي؟»، «إيه كان الانحراف المعياري؟»، «كانت في مجموعة ضابطة؟»",
+      "sources": [
+        "https://www.bmj.com/content/355/bmj.i5161",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Framing Effect"
+    }
+  ]
+}

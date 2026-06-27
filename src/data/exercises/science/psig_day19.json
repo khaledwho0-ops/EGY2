@@ -1,0 +1,98 @@
+{
+  "id": "p_value_significance",
+  "phase": 2,
+  "week": 12,
+  "day": 19,
+  "title": "P-value Significance",
+  "titleAr": "دلالة قيمة P",
+  "description": "Understand the correct definition of p-values, the ASA's 2016 statement on statistical significance, and common misinterpretations that plague scientific research.",
+  "descriptionAr": "فهم التعريف الصحيح لقيم P، وبيان الجمعية الإحصائية الأمريكية لعام 2016، والتفسيرات الخاطئة الشائعة.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "P-value and Statistical Significance",
+    "nameAr": "قيمة P والدلالة الإحصائية",
+    "definition": "A p-value is the probability of obtaining a result at least as extreme as the observed result, assuming the null hypothesis is true. It is NOT the probability that the null hypothesis is true, NOT the probability of results being due to chance, and NOT a measure of effect size. The ASA (Wasserstein & Lazar, 2016) issued six principles clarifying p-value interpretation.",
+    "definitionAr": "قيمة P هي احتمال الحصول على نتيجة مساوية أو أكثر تطرفاً من النتيجة المرصودة، بافتراض صحة الفرضية الصفرية. ليست احتمال صحة الفرضية الصفرية.",
+    "realWorldExample": "The ASA's 2016 statement was unprecedented — the first time in the organization's 177-year history it issued a policy statement on a statistical practice. It was prompted by widespread misuse documented by Nuzzo (2014) in Nature: 'Statistical errors.'",
+    "detectionMethod": "Review published claims for inverse probability error (confusing P(D|H₀) with P(H₀|D)), dichotomous thinking (significant vs. non-significant), and failure to report effect sizes alongside p-values."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A researcher states: 'We found p=0.03, which means there is only a 3% probability that our results are due to chance.' According to the ASA 2016 statement, what is wrong with this interpretation?",
+      "promptAr": "باحث يقول: 'وجدنا p=0.03، مما يعني أن هناك احتمال 3% فقط أن نتائجنا بسبب الصدفة.' وفقاً لبيان ASA 2016، ما الخطأ في هذا التفسير؟",
+      "options": [
+        "This commits the 'inverse probability error': p=0.03 is P(data|H₀), not P(H₀|data). It is the probability of the data given the null is true, not the probability the results are due to chance",
+        "The p-value should be lower to make this claim",
+        "The percentage should be 97%, not 3%",
+        "Nothing — this is the correct interpretation of a p-value"
+      ],
+      "correctAnswer": 0,
+      "explanation": "ASA Principle #2: 'P-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.' This confusion between P(D|H₀) and P(H₀|D) is called the inverse probability error or the prosecutor's fallacy. Converting between these requires Bayes' theorem and knowledge of prior probabilities.",
+      "explanationAr": "مبدأ ASA رقم 2: 'قيم P لا تقيس احتمال صحة الفرضية المدروسة، أو احتمال أن البيانات نتجت عن الصدفة وحدها.' هذا الخلط يسمى خطأ الاحتمال العكسي."
+    },
+    {
+      "id": 2,
+      "type": "identify",
+      "prompt": "Which of the following is one of the six principles from the ASA's 2016 statement on p-values (Wasserstein & Lazar, 2016)?",
+      "promptAr": "أي مما يلي هو أحد المبادئ الستة من بيان ASA لعام 2016 حول قيم P؟",
+      "options": [
+        "P-values below 0.05 prove that a finding is true",
+        "Scientific conclusions and policy decisions should not be based only on whether a p-value passes a specific threshold",
+        "P-values are the best measure of evidence against the null hypothesis",
+        "A non-significant p-value proves the null hypothesis is true"
+      ],
+      "correctAnswer": 1,
+      "explanation": "ASA Principle #4 states: 'Proper inference requires full reporting and transparency.' Principle #5: 'A p-value, or statistical significance, does not measure the size of an effect or the importance of a result.' Principle #3: 'Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold.' This directly challenges the mechanical use of p<0.05 as a bright-line criterion.",
+      "explanationAr": "المبدأ رقم 3: 'لا ينبغي أن تعتمد الاستنتاجات العلمية والقرارات فقط على ما إذا كانت قيمة p تتجاوز عتبة محددة.' هذا يتحدى مباشرة الاستخدام الآلي لـ p<0.05."
+    },
+    {
+      "id": 3,
+      "type": "scenario",
+      "prompt": "Study A finds p=0.04 and concludes the treatment works. Study B with identical design finds p=0.06 and concludes the treatment does not work. A journalist writes: 'Studies produce conflicting results about the treatment.' What statistical error does this narrative reflect?",
+      "promptAr": "الدراسة أ تجد p=0.04 وتستنتج أن العلاج فعال. الدراسة ب بتصميم مطابق تجد p=0.06 وتستنتج أن العلاج لا يعمل. صحفي يكتب: 'الدراسات تنتج نتائج متضاربة.' ما الخطأ الإحصائي؟",
+      "options": [
+        "One of the studies must have made a calculation error",
+        "The studies genuinely conflict because one is significant and the other is not",
+        "Dichotomous thinking: treating p=0.04 and p=0.06 as categorically different when they represent nearly identical evidence. The difference between 'significant' and 'not significant' is not itself significant (Gelman & Stern, 2006)",
+        "Study B must have had a smaller sample size"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Gelman & Stern (2006) titled their paper 'The Difference Between \"Significant\" and \"Not Significant\" is not Itself Statistically Significant.' P-values of 0.04 and 0.06 provide nearly identical evidence — the difference is trivial and driven by the arbitrary 0.05 threshold. A direct comparison test would show these results are entirely compatible with each other.",
+      "explanationAr": "جيلمان وستيرن (2006): 'الفرق بين \"معنوي\" و\"غير معنوي\" ليس في حد ذاته معنوياً إحصائياً.' قيمتا p بمقدار 0.04 و 0.06 توفران أدلة متطابقة تقريباً."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "A study tests 20 independent hypotheses, each at α=0.05, and finds 1 significant result (p=0.03). The researcher reports only this one finding. What is the expected number of false positives when testing 20 true null hypotheses at α=0.05?",
+      "promptAr": "دراسة تختبر 20 فرضية مستقلة، كل منها عند α=0.05، وتجد نتيجة معنوية واحدة (p=0.03). الباحث يبلغ فقط عن هذه النتيجة. ما العدد المتوقع للإيجابيات الخاطئة عند اختبار 20 فرضية صفرية حقيقية عند α=0.05؟",
+      "options": [
+        "5 false positives expected",
+        "20 false positives expected",
+        "0 false positives expected",
+        "Exactly 1 false positive expected (20 × 0.05 = 1.0), making this result likely a Type I error"
+      ],
+      "correctAnswer": 3,
+      "explanation": "With 20 independent tests at α=0.05, the expected number of false positives is 20 × 0.05 = 1.0. Finding exactly 1 significant result out of 20 tests is entirely consistent with all null hypotheses being true. This is why the ASA statement emphasizes that p-values cannot be interpreted in isolation and why multiple comparison corrections (Bonferroni, FDR) are essential.",
+      "explanationAr": "مع 20 اختباراً مستقلاً عند α=0.05، العدد المتوقع للإيجابيات الخاطئة هو 20 × 0.05 = 1.0. إيجاد نتيجة معنوية واحدة بالضبط متسق تماماً مع كون جميع الفرضيات الصفرية صحيحة."
+    },
+    {
+      "id": 5,
+      "type": "scenario",
+      "prompt": "In 2019, over 800 statisticians signed an open letter in Nature (Amrhein et al., 2019) calling for a major change in statistical practice. What did they advocate?",
+      "promptAr": "في عام 2019، وقع أكثر من 800 إحصائي على رسالة مفتوحة في مجلة Nature تدعو إلى تغيير جذري في الممارسة الإحصائية. ماذا طالبوا؟",
+      "options": [
+        "Retiring the concept of 'statistical significance' and the dichotomous significant/non-significant classification entirely",
+        "Replacing p-values with Bayes factors exclusively",
+        "Requiring sample sizes of at least 1,000 for all studies",
+        "Lowering the significance threshold from 0.05 to 0.005"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Amrhein, Greenland, & McShane (2019) in Nature called for abandoning the term 'statistically significant' entirely. They argued the dichotomy leads to 'all-or-nothing' thinking, selective reporting, and inflated claims. They advocated for reporting point estimates, confidence/compatibility intervals, and effect sizes without bright-line significance thresholds. This followed the ASA's 2016 statement and Benjamin et al.'s (2018) proposal to redefine significance as p<0.005.",
+      "explanationAr": "أمرهين وآخرون (2019) في Nature دعوا إلى التخلي عن مصطلح 'الدلالة الإحصائية' تماماً، بحجة أن الثنائية تؤدي إلى تفكير 'كل أو لا شيء' وتقارير انتقائية."
+    }
+  ]
+}

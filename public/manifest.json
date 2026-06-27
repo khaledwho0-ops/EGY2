@@ -1,0 +1,16 @@
+{
+  "name": "Egyptian Awareness Library",
+  "short_name": "EAL",
+  "description": "The unified defense platform against manipulation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#ff4d4d",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

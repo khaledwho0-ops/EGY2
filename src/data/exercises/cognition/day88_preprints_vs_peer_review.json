@@ -1,0 +1,131 @@
+{
+  "id": "day88_preprints_vs_peer_review",
+  "phase": 2,
+  "week": 13,
+  "day": 88,
+  "title": "Preprint or Peer-Reviewed? The Difference That Matters",
+  "titleAr": "ما قبل النشر أم مراجَع؟ الفرق اللي بيهمّ",
+  "description": "Not every 'study' shared online has been checked by independent experts. Learn to spot the difference — and why it matters to your health decisions.",
+  "descriptionAr": "مش كل «دراسة» بتتشارك أونلاين اتفحصت من خبراء مستقلّين. اتعلّم تفرّق — وليه ده مهم لقراراتك الصحية.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 12,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7327522/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A friend shares: \"I found the original research — it's on bioRxiv!\" What do you know about this paper before reading a single word?",
+      "claimAr": "صاحبك بيشارك: «لقيت البحث الأصلي — موجود على bioRxiv!» إيه اللي بتعرفه عن الورقة دي قبل ما تقرأ كلمة واحدة؟",
+      "options": [
+        "It has been peer reviewed by at least two independent experts",
+        "It is a preprint: uploaded by the authors before peer review — the findings have not yet been independently verified",
+        "It was published by a predatory journal",
+        "It is more reliable than journal articles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "bioRxiv (life sciences) and medRxiv (health/medicine) are preprint servers: researchers upload their work before or during peer review so that other researchers can see it quickly. That's scientifically useful — but it means the paper has not yet been checked by independent reviewers. Preprints can contain errors, and their conclusions sometimes change after review.",
+      "explanationAr": "bioRxiv (علوم الحياة) وmedRxiv (الصحة/الطب) خوادم ما-قبل-النشر: الباحثون بيرفعوا شغلهم قبل أو أثناء مراجعة الأقران علشان الباحثين التانيين يشوفوه بسرعة. ده مفيد علمياً — لكن معناه إن الورقة لسه ما اتفحصتش من مراجعين مستقلّين. الأوراق السابقة للنشر ممكن تحتوي أخطاء، واستنتاجاتها ممكن تتغيّر بعد المراجعة.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7327522/",
+        "https://www.bmj.com/content/372/bmj.n543"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "During a health crisis, a preprint showing a drug works went viral. Later, after peer review, the paper's conclusions were reversed due to a statistical error. Thousands had already shared it as confirmed fact.",
+      "claimAr": "أثناء أزمة صحية، ورقة ما-قبل-نشر بتُظهر إن دواء شغّال انتشرت بشكل فيروسي. بعدين، بعد مراجعة الأقران، استنتاجات الورقة اتعكست بسبب خطأ إحصائي. آلاف كانوا شاركوها بالفعل كحقيقة مؤكّدة.",
+      "options": [
+        "Peer review slows science down without benefit",
+        "Speed of sharing outran the verification process — a preprint is a 'work in progress,' not a 'confirmed finding'"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does the correction almost never reach the same audience as the original viral preprint — and what habit would prevent this harm before you share?",
+        "promptAr": "بكلماتك: ليه التصحيح بالكاد يوصل لنفس جمهور الورقة الفيروسية الأصلية — وأنهي عادة كانت هتمنع الضرر ده قبل ما تشارك؟"
+      },
+      "explanation": "The correction almost never reaches the same audience because: (1) social media algorithms amplify novelty and emotion — the exciting new finding spreads fast; the dry correction does not; (2) the people who shared the original rarely see or share the correction; (3) the retraction notice is often only on academic databases, not WhatsApp groups. The protective habit: before sharing any health study, take 30 seconds to check whether it is preprint or peer-reviewed, and label it when you share. For personal health decisions, wait for peer-reviewed confirmation.",
+      "explanationAr": "التصحيح بالكاد يوصل لنفس الجمهور لأن: (1) خوارزميات السوشيال ميديا بتضخّم الجدة والعاطفة — الاكتشاف الجديد المثير بينتشر بسرعة؛ التصحيح الجاف لا؛ (2) اللي شاركوا الأصلي بالكاد يشوفوا أو يشاركوا التصحيح؛ (3) إشعار السحب غالباً بيكون على قواعد البيانات الأكاديمية بس، مش مجموعات واتساب. العادة الوقائية: قبل ما تشارك أي دراسة صحية، خُد 30 ثانية تتحقق إذا كانت ورقة ما-قبل-نشر أم مراجَعة، وسمّيها لمّا تشارك. للقرارات الصحية الشخصية، انتظر التأكيد المراجَع.",
+      "sources": [
+        "https://www.bmj.com/content/372/bmj.n543",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7327522/"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a peer-reviewed study is immune to error, fraud, and retraction.",
+      "claimAr": "صح ولا غلط: الدراسة المراجَعة من الأقران محصّنة من الخطأ والتزوير والسحب.",
+      "correctAnswer": false,
+      "myth_en": "Peer-reviewed = error-free and permanent.",
+      "myth_ar": "مراجَع من الأقران = خالٍ من الخطأ ودائم.",
+      "explanation": "False. Peer review significantly improves quality, but it is not a perfect filter. High-profile journals have retracted papers due to fraud (fabricated data), methodological errors caught only after publication, or undisclosed conflicts of interest. The Retraction Watch database tracks thousands of retracted papers including from top journals. Peer review is the best system we have — not a guarantee of truth. How confident were you before reading this? If you leaned 'true' — that is the authority halo: the formal-sounding label 'peer-reviewed' creates a stronger certainty than the process actually warrants.",
+      "explanationAr": "غلط. المراجعة بتحسّن الجودة بشكل كبير لكنها مش مرشّح مثالي. مجلات كبيرة سحبت أوراقاً بسبب تزوير (بيانات مختلقة) أو أخطاء منهجية اكتُشِفت بس بعد النشر أو تضارب مصالح غير مُعلَن. قاعدة بيانات Retraction Watch بتتابع آلاف الأوراق المسحوبة من أكبر المجلات. المراجعة أفضل نظام عندنا — مش ضمان الحقيقة. كنت متأكد قد إيه قبل ما تقرأ؟ لو ملت لـ«صح» — ده هالة السلطة: لقب «مراجَع من الأقران» بيخلق يقيناً أقوى مما تستحقه العملية فعلاً.",
+      "sources": [
+        "https://retractionwatch.com/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3971880/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A supporter of the viral diet system shares: \"Here is a new paper just published proving chicken causes inflammation!\" The link goes to a preprint posted yesterday. You should at least consider it — new evidence is new evidence.",
+      "claimAr": "مؤيد لنظام الحمية الفيروسي بيشارك: «هنا ورقة جديدة نشرت للتو بتثبت إن الفراخ بتسبّب التهاب!» الرابط بيروح لورقة ما-قبل-نشر نشرت امبارح. لازم على الأقل تأخذها في الاعتبار — الأدلة الجديدة هي أدلة جديدة.",
+      "prompt": "What would DISPROVE the idea that this one-day-old preprint is meaningful evidence for a personal health decision about eliminating chicken?",
+      "promptAr": "إيه اللي يكذّب فكرة إن ورقة عمرها يوم دي دليل ذو معنى لقرار صحي شخصي بشأن التوقف عن أكل الفراخ؟",
+      "modelPoints": [
+        "A single unreviewed paper represents one team's analysis — not yet checked by any independent expert.",
+        "The existing body of evidence on poultry and inflammation is large, nuanced, and does not support elimination — one preprint cannot overturn decades of evidence.",
+        "Preprint conclusions frequently change after peer review: acting on them before review risks acting on a statistical error.",
+        "The asymmetry: if the preprint is right, waiting for review costs a few weeks. If the preprint is wrong and you act, you eliminate a complete protein source on false grounds.",
+        "The diet system has a strong motivated interest in new 'evidence' against chicken — confirming what the system already claims is a red flag for confirmation bias."
+      ],
+      "modelPointsAr": [
+        "ورقة واحدة غير مراجَعة بتمثّل تحليل فريق واحد — لسه ما اتفحصتش من أي خبير مستقل.",
+        "مجموعة الأدلة القائمة على الدواجن والالتهاب كبيرة ومتفاوتة ولا تدعم الإلغاء — ورقة واحدة ما تقدرش تقلب عقوداً من الأدلة.",
+        "استنتاجات ما-قبل-النشر بتتغيّر كثيراً بعد المراجعة: التصرّف عليها قبل المراجعة بيخاطر بالتصرّف على خطأ إحصائي.",
+        "عدم التماثل: لو الورقة صح، الانتظار للمراجعة بيكلّف أسابيع بس. لو الورقة غلط وتصرّفت، بتلغي مصدر بروتين كامل على أساس خاطئ.",
+        "نظام الحمية عنده مصلحة قوية في «أدلة» جديدة ضد الفراخ — تأكيد ما يدّعيه النظام بالفعل علامة خطر لانحياز التأكيد."
+      ],
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7327522/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "weaponising a preprint as confirmed science",
+      "techniqueAr": "توظيف ورقة ما-قبل-نشر كعلم مؤكَّد",
+      "task": "Feel the trick from inside: write a persuasive social-media post for a harmless claim — say, 'evening walks prevent memory loss' — that cites a preprint as though it were confirmed, established science. Use language that makes the reader feel the question is settled.",
+      "taskAr": "حسّ بالحركة من جوّه: اكتب منشور سوشيال ميديا مقنع لادعاء غير ضار — مثلاً، «المشي المسائي بيمنع فقدان الذاكرة» — بيستشهد بورقة ما-قبل-نشر كأنها علم مؤكَّد وراسخ. استخدم لغة تخلّي القارئ يحسّ إن المسألة محسومة.",
+      "tells": [
+        "Calling a preprint 'a new study' or 'scientists discover' — language that implies peer-reviewed consensus.",
+        "Omitting the word 'preprint' or the server name (bioRxiv/medRxiv) entirely.",
+        "Using the present tense ('scientists show X causes Y') rather than 'a team reported' (conditional).",
+        "Treating one paper as if it settles a question that requires many replications.",
+        "The post generates urgency: 'share before they hide this' or 'act now based on the latest science.'"
+      ],
+      "tellsAr": [
+        "تسمية ورقة ما-قبل-النشر «دراسة جديدة» أو «العلماء يكتشفون» — لغة بتوحي بتوافق مراجَع.",
+        "حذف كلمة «ما-قبل-النشر» أو اسم الخادم (bioRxiv/medRxiv) تماماً.",
+        "استخدام المضارع («العلماء يُثبِتوا إن X بيسبّب Y») بدل «فريق أفاد» (شرطي).",
+        "معاملة ورقة واحدة كأنها بتحسم سؤال يحتاج تكرارات كتير.",
+        "المنشور بيولّد إلحاح: «شارك قبل ما يخفوا ده» أو «تصرّف دلوقتي بناءً على أحدث علم»."
+      ],
+      "explanation": "Preprints are genuinely useful for scientific speed — the problem is stripping their 'unreviewed' label before sharing. Writing a post that does this deliberately fixes the exact language patterns in your memory. When you see them in the wild — 'scientists discover,' present tense, no mention of 'preprint,' urgency to share — you now recognize the anatomy. The 30-second check (is this bioRxiv/medRxiv, or a peer-reviewed journal?) is the entire defence.",
+      "explanationAr": "الأوراق السابقة للنشر مفيدة حقاً لسرعة العلم — المشكلة إزالة لافتة «غير مراجَعة» قبل المشاركة. كتابة منشور بيعمل ده بتعمّد بيثبّت نمط اللغة بالظبط في ذاكرتك. لمّا تشوفها في الواقع — «العلماء يكتشفون»، المضارع، مفيش ذكر لـ«ما-قبل-النشر»، إلحاح للمشاركة — دلوقتي بتعرف التشريح. الفحص لمدة 30 ثانية (هل ده bioRxiv/medRxiv، أم مجلة مراجَعة؟) هو الدفاع كله.",
+      "sources": [
+        "https://www.bmj.com/content/372/bmj.n543",
+        "https://retractionwatch.com/"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    }
+  ]
+}

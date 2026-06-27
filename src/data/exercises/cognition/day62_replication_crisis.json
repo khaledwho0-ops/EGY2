@@ -1,0 +1,116 @@
+{
+  "id": "day62_replication_crisis",
+  "phase": 2,
+  "week": 9,
+  "day": 62,
+  "title": "One Study Is a Rumour — Replication Is Proof",
+  "titleAr": "دراسة واحدة إشاعة — التكرار هو الدليل",
+  "description": "A single study is a first whisper, not a verdict. A finding earns trust only when independent teams repeat it and get the same answer. Science self-corrects out loud.",
+  "descriptionAr": "الدراسة الواحدة همسة أولى، مش حُكم. النتيجة بتكسب الثقة بس لمّا فرق مستقلة تكرّرها وتطلّع نفس الإجابة. العلم بيصحّح نفسه بصوت عالٍ.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://www.nature.com/articles/533452a",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A news headline shouts: \"New study proves coffee prevents memory loss!\" It's a single small study, just published. What is the calmest correct reaction?",
+      "claimAr": "عنوان خبر بيزعّق: «دراسة جديدة تثبت إن القهوة بتمنع فقدان الذاكرة!». دي دراسة واحدة صغيرة، لسه اتنشرت. إيه أهدى ردّ فعل صحيح؟",
+      "options": [
+        "Start drinking coffee for memory immediately",
+        "Treat it as one early signal — interesting but unconfirmed until other independent teams repeat it and find the same thing",
+        "Declare coffee a proven cure",
+        "Conclude all coffee research is fake"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A single study, especially a small fresh one, is a first whisper — a hypothesis worth following, not a settled fact. The word 'proves' almost never belongs in a headline about one study. The real test of a finding is replication: do independent teams, with their own patients and labs, get the same result? Until then, the honest stance is calm interest, not action — and certainly not the opposite over-reaction of dismissing all science.",
+      "explanationAr": "الدراسة الواحدة، خصوصاً الصغيرة الجديدة، همسة أولى — فرضية تستاهل المتابعة، مش حقيقة مستقرّة. كلمة «تثبت» تقريباً عمرها ما بتنفع في عنوان عن دراسة واحدة. الاختبار الحقيقي للنتيجة هو التكرار: هل فرق مستقلة، بمرضاها ومعاملها، بتطلّع نفس النتيجة؟ لحد كده، الموقف الأمين اهتمام هادئ، مش تصرّف — وأكيد مش ردّ الفعل المعاكس بإنك ترفض كل العلم.",
+      "sources": [
+        "https://www.nature.com/articles/533452a"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "The 'replication crisis' is the discovery that many published findings could not be reproduced when other teams tried. True or false: this means science is broken and can't be trusted.",
+      "claimAr": "«أزمة التكرار» هي اكتشاف إن نتائج منشورة كتير ما قدرتش تتكرّر لمّا فرق تانية حاولت. صح ولا غلط: ده معناه إن العلم خربان وما ينفعش نثق فيه.",
+      "correctAnswer": false,
+      "myth_en": "If some studies don't replicate, all of science is unreliable.",
+      "myth_ar": "لو فيه دراسات ما بتتكرّرش، يبقى كل العلم مش موثوق.",
+      "explanation": "False — and it's almost the opposite. The replication crisis is science doing the one thing pseudoscience never does: openly checking itself, admitting that some past results were flukes or were cherry-picked, and tightening its methods (pre-registration, bigger samples, sharing data). A field that publicly hunts down its own errors is more trustworthy, not less. Calibrate: how confident were you? If you hesitated thinking 'well, maybe some science really is broken' — that's the all-or-nothing thinking trap. True confidence is proportional: trust replicated, convergent findings; hold single studies loosely.",
+      "explanationAr": "غلط — وده تقريباً العكس. أزمة التكرار هي العلم وهو بيعمل الحاجة الوحيدة اللي العلم الزائف عمره ما بيعملها: بيراجع نفسه علناً، بيعترف إن بعض النتائج القديمة كانت صدفة أو انتقاء كرز، وبيشدّد مناهجه. معايرة: كنت متأكد قد إيه؟ لو ترددت وقلت «مش عارف، يمكن العلم خربان فعلاً» — دي فخّ التفكير الكلّي أو لا شيء. الثقة الصحيحة نسبية: ثق في النتائج المُكرَّرة المتقاربة؛ امسك الدراسات الفردية بخفّة.",
+      "sources": [
+        "https://www.nature.com/articles/533452a",
+        "https://www.science.org/doi/10.1126/science.aac4716"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Why is a finding that has been independently replicated many times far more trustworthy than one striking study, even a large one?",
+      "claimAr": "ليه النتيجة اللي اتكرّرت بشكل مستقل مرات كتير بتبقى أجدر بالثقة بكتير من دراسة واحدة لافتة، حتى لو كبيرة؟",
+      "options": [
+        "Because more studies just means more pages",
+        "Because chance flukes, hidden mistakes, and one team's biases rarely survive being repeated by different people in different places",
+        "Because the first study is always a lie",
+        "Because old studies are always better"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: explain to a friend why a single large study is not 'basically the same' as three independent studies that all found the same thing.",
+        "promptAr": "بكلماتك: اشرح لصاحبك ليه دراسة واحدة كبيرة مش «نفس الحاجة تقريباً» زي تلاتة دراسات مستقلة لاقوا نفس النتيجة."
+      },
+      "explanation": "Any single study, however large, carries the fingerprints of one team: their particular sample, their lab quirks, their unnoticed mistakes, the chance that they got a fluke. Independent replication is the filter: a real effect tends to show up again when other people, who'd love to find something new, try to reproduce it — while a fluke or a hidden error usually washes out. This is exactly why a systematic review of many replicated trials sits at the very top of the evidence ladder.",
+      "explanationAr": "أي دراسة واحدة، مهما كبرت، بتحمل بصمات فريق واحد: عيّنتهم المحدّدة، غرائب معملهم، أخطاءهم اللي ما اتلاحظتش، واحتمال إنهم طلعوا صدفة. التكرار المستقل هو الفلتر: التأثير الحقيقي بيميل إنه يظهر تاني لمّا ناس تانية، نفسها تلاقي حاجة جديدة، تحاول تعيد إنتاجه — بينما الصدفة أو الخطأ المخفي عادةً بيتغسل. علشان كده بالظبط المراجعة المنهجية لتجارب متكرّرة كتير بتقعد على قمة سلّم الأدلة.",
+      "sources": [
+        "https://www.science.org/doi/10.1126/science.aac4716",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"The Taybat system was never independently tested. But thousands of followers reported improvement. And the Medical Syndicate asked for cases but received none. So the system must have been suppressed unfairly.\"",
+      "claimAr": "فكّك الحُجّة دي: «نظام الطيبات ما اتختبرش بشكل مستقل. لكن آلاف الأتباع بلّغوا بتحسّن. ونقابة الأطباء طلبت حالات وما تلقّتش ولا واحدة. يبقى النظام لازم اتُقمِع بظلم».",
+      "parts": [
+        { "text": "The system was suppressed unfairly.", "textAr": "النظام اتُقمِع بظلم.", "role": "conclusion" },
+        { "text": "Thousands of followers reported improvement.", "textAr": "آلاف الأتباع بلّغوا بتحسّن.", "role": "premise" },
+        { "text": "The Medical Syndicate asked for verifiable cases and received none.", "textAr": "نقابة الأطباء طلبت حالات قابلة للتحقق وما تلقّتش ولا واحدة.", "role": "irrelevant" },
+        { "text": "(Unstated) Testimonials from believers equal independent replication.", "textAr": "(غير مذكور) شهادات المؤمنين تساوي تكراراً مستقلاً.", "role": "assumption" }
+      ],
+      "explanation": "The hidden ASSUMPTION collapses the argument: testimonials from committed followers are not independent replication. The Syndicate's receipt of zero verifiable cases is actually IRRELEVANT to whether it was 'unfair' — it's the most important piece of evidence that nothing checkable existed. Mapping the parts reveals the conclusion has no legitimate foundation.",
+      "explanationAr": "الافتراض الخفي بيهدم الحُجّة: شهادات الأتباع الملتزمين ليست تكراراً مستقلاً. عدم تلقّي النقابة لأي حالة قابلة للتحقق هو في الحقيقة غير ذات صلة بما إذا كان الأمر «ظالماً» — بل هو أهم دليل على أنه لم يكن هناك شيء قابل للفحص. تفكيك الأجزاء يكشف أن الخلاصة ليس لها أساس مشروع.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.nature.com/articles/533452a"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 59,
+      "claim": "You want a simple rule of thumb for how much weight to give a health claim you encounter. Which rule best captures today's lesson — and also connects back to the falsifiability lesson from Day 59?",
+      "claimAr": "عايز قاعدة بسيطة لقد إيه تدّي وزن لادعاء صحي بتقابله. أنهي قاعدة بتلخّص درس النهاردة — وكمان بتتصل بدرس القابلية للتفنيد من يوم 59؟",
+      "options": [
+        "\"The louder and more confident the source, the truer it is.\"",
+        "\"One study = a hypothesis to watch. Many independent replications + a systematic review = something I can act on. And if nothing could ever disprove it, it's not science at all.\"",
+        "\"If it went viral, it's been proven.\"",
+        "\"Newer is always righter.\""
+      ],
+      "correctAnswer": 1,
+      "explanation": "The keeper rule combines both lessons: a lone study is a hypothesis to watch (replication, Day 62); and if the claim is structured so nothing can disprove it, it has already exited science (falsifiability, Day 59). Together these two filters — 'has it replicated?' and 'can it be disproved?' — give you a powerful pair of questions for almost any health claim you encounter.",
+      "explanationAr": "القاعدة الشاملة بتجمع كلا الدرسين: الدراسة الوحيدة فرضية تراقبها (التكرار، يوم 62)؛ ولو الادعاء مبني بحيث ما فيش حاجة تفنّده، بيكون خرج من العلم خالص (القابلية للتفنيد، يوم 59). المرشّحان دول معاً — «هل اتكرّر؟» و«هل ممكن يتفنّد؟» — بيدّوك زوج سؤال قوي لأي ادعاء صحي تقابله.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+        "https://www.nature.com/articles/533452a"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    }
+  ]
+}

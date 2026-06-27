@@ -1,0 +1,145 @@
+{
+  "id": "day93_detox_without_chemistry",
+  "phase": 2,
+  "week": 14,
+  "day": 93,
+  "title": "\"Detox\" — Where Is the Chemistry?",
+  "titleAr": "«الديتوكس» — فين الكيمياء؟",
+  "description": "Every 'detox' claim must answer three chemistry questions. If it can't, it isn't medicine — it's marketing.",
+  "descriptionAr": "كل ادعاء «ديتوكس» لازم يجاوب على ثلاثة أسئلة كيميائية. لو ما قدرش، مش طب — ده تسويق.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "An ad says: \"Our herbal drink detoxes your body and flushes out accumulated toxins.\" You want to evaluate it fairly. What is the single most important first question?",
+      "claimAr": "إعلان بيقول: «مشروبنا العشبي بيعمل ديتوكس لجسمك ويطرد السموم المتراكمة». عايز تقيّمه بإنصاف. أهم سؤال أول إيه؟",
+      "options": [
+        "How much does it cost?",
+        "Which specific toxin — name it, identify its removal pathway, and cite an assay that measures it before and after",
+        "How many celebrities recommended it?",
+        "Is it labelled 'natural'?"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Red Flag #10 in action: a 'detox' claim that cannot name a specific toxin, a biological removal pathway, and a measuring test has not made a medical statement at all. The liver, kidneys, and skin are the body's actual detoxification organs — they process and excrete metabolic waste continuously without needing any commercial product.",
+      "explanationAr": "علامة الخطر رقم 10 في الفعل: ادعاء «الديتوكس» اللي ما يقدرش يسمّي سُمّاً محدداً ومسار إزالة بيولوجي وتحليل قياس ما قدّمش أي عبارة طبية أصلاً. الكبد والكلى والجلد هما أعضاء التخلّص الحقيقية في الجسم — بتشتغل وبتطرح الفضلات الأيضية باستمرار من غير ما تحتاج أي منتج تجاري.",
+      "sources": [
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3087031/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "The human body genuinely accumulates 'toxins' from modern food that dietary programmes can flush out, in a way the liver and kidneys cannot handle on their own.",
+      "claimAr": "الجسم البشري فعلاً بيراكم «سموماً» من الأكل الحديث يمكن لبرامج غذائية تطردها، بطريقة الكبد والكلى ما يقدروش يتعاملوا معاها لوحدهم.",
+      "options": ["True — modern food overwhelms the body's natural systems", "False — the body's own detox systems are sufficient for a healthy person"],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what does the liver actually do, and why does the word 'detox' not add anything real to that process?",
+        "promptAr": "بكلماتك: الكبد بيعمل إيه فعلاً، وليه كلمة «الديتوكس» ما بتضيفش حاجة حقيقية للعملية دي؟"
+      },
+      "explanation": "False. The liver, kidneys, and other organs perform continuous, sophisticated detoxification without external dietary programmes. Unless someone has a diagnosable condition like heavy-metal poisoning or drug overdose (treated medically, not by diet), the body's own systems are sufficient. 'Detox diet' is a marketing term — no accepted medical definition exists for it.",
+      "explanationAr": "غلط. الكبد والكلى وأعضاء أخرى بتعمل تطهيراً مستمراً ومتطوراً من غير برامج غذائية خارجية. إلا لو عنده حالة قابلة للتشخيص زي التسمم بالمعادن الثقيلة أو جرعة دواء زائدة (وده بيتعالج طبياً مش بالرجيم)، أجهزة الجسم الخاصة كافية. «رجيم الديتوكس» مصطلح تسويقي — ما فيش تعريف طبي مقبول له.",
+      "sources": [
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/",
+        "https://www.sciencebasedmedicine.org/detoxification-and-alternative-medicine/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "The viral Taybat diet system described some foods as leaving 'minimal waste in the body' — implying others leave toxic residue. This is a helpful and scientifically grounded food classification.",
+      "claimAr": "نظام «الطيبات» الفيروسي وصف بعض الأكل بأنه «بيسيب فضلات أقل في الجسم» — موحياً إن غيره بيسيب رواسب سامة. ده تصنيف غذائي مفيد ومبني على أسس علمية.",
+      "prompt": "What would have to be true for this classification to be genuinely scientific? What three things are missing?",
+      "promptAr": "إيه اللي لازم يكون صح عشان التصنيف ده يبقى علمي فعلاً؟ وإيه الثلاثة حاجات الغايبة؟",
+      "modelPoints": [
+        "A named molecule (the 'waste') — without a specific substance, there is nothing to measure.",
+        "A defined biochemical pathway — how exactly is this 'waste' formed, transported, and excreted?",
+        "A before/after measurement test — a test that shows different levels based on which foods you eat.",
+        "The Medical Syndicate review requested minimal documentation and received none — 'it will be proven in the future' is not a scientific position.",
+        "Without these three things the claim is a feeling, not a finding — and feelings are not food classification systems."
+      ],
+      "modelPointsAr": [
+        "جزيء مسمَّى («الفضلات») — من غير مادة محددة، ما فيش حاجة تتقاس.",
+        "مسار كيميائي حيوي محدّد — كيف بالظبط بيتكوّن هذا «الفضلات» وينتقل ويُطرح؟",
+        "اختبار قياس قبل/بعد — تحليل بيوضّح مستويات مختلفة بناءً على الأكل اللي بتاكله.",
+        "مراجعة النقابة الطبية طلبت توثيقاً بسيطاً ولم تتلقَّ شيئاً — «هتثبت مستقبلاً» مش موقف علمي.",
+        "من غير الثلاثة دول الادعاء إحساس مش نتيجة — والإحساسات مش أنظمة تصنيف غذائي."
+      ],
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "EAL-case-001:redflag-10"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Decompose: 'Our activated charcoal product absorbs toxins and purifies your blood. Natural, safe, and scientifically backed. Doctors who dismiss it are protecting pharmaceutical companies.'",
+      "claimAr": "فكّك: «منتجنا من الفحم النباتي المُنشَّط بيمتص السموم وينقّي دمّك. طبيعي وآمن ومدعوم علمياً. الأطباء اللي بيرفضوه بيحموا شركات الأدوية.»",
+      "parts": [
+        { "text": "This product purifies your blood.", "textAr": "المنتج ده ينقّي دمّك.", "role": "conclusion" },
+        { "text": "Activated charcoal absorbs toxins.", "textAr": "الفحم النباتي المُنشَّط بيمتص السموم.", "role": "premise" },
+        { "text": "(Unstated) Oral charcoal reaches the bloodstream.", "textAr": "(غير مذكور) الفحم المبتلوع بيوصل لمجرى الدم.", "role": "assumption" },
+        { "text": "It is 'natural' and therefore safe.", "textAr": "هو «طبيعي» ولذلك آمن.", "role": "assumption" },
+        { "text": "Doctors who dismiss it are protecting pharmaceutical companies.", "textAr": "الأطباء اللي بيرفضوه بيحموا شركات الأدوية.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption — that orally ingested charcoal reaches the bloodstream — fails basic anatomy: charcoal stays in the GI tract and is excreted. The 'natural therefore safe' line is the appeal-to-nature fallacy. The 'doctors protect pharma' claim is irrelevant ad hominem that pre-discredits criticism without engaging with the anatomy. Activated charcoal does bind some compounds in hospital overdose contexts — but as a food product it absorbs randomly, including beneficial nutrients and some medications.",
+      "explanationAr": "الافتراض الخفي — إن الفحم المبتلوع بيوصل لمجرى الدم — بيفشل في التشريح الأساسي: الفحم يفضل في القناة الهضمية وبيُطرح. جملة «طبيعي يبقى آمن» هي مغالطة الطبيعة. وادعاء «الأطباء بيحموا شركات الأدوية» هو هجوم شخصي لا صلة له بيكبت النقد من غير التعامل مع التشريح. الفحم النباتي فعلاً بيمتص بعض المركبات في سياقات الجرعة الزائدة بالمستشفى — لكن كمنتج غذائي بيمتص بشكل عشوائي، بما في ذلك المغذيات المفيدة وبعض الأدوية.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK482121/",
+        "https://www.sciencebasedmedicine.org/activated-charcoal-food-fad/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 5,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A friend argues: \"Natural herbs can only do good — they cannot possibly harm you the way synthetic drugs do.\" This is the appeal-to-nature fallacy.",
+      "claimAr": "صاحب بيقول: «الأعشاب الطبيعية بتعمل خير بس — مستحيل تأذيك زي الأدوية الصناعية». دي مغالطة الطبيعة.",
+      "options": ["True — this is the appeal-to-nature fallacy", "False — natural products really are always safer"],
+      "correctAnswer": 0,
+      "explanation": "True — appeal-to-nature fallacy. Toxicity depends on compound, dose, route, and individual biology — not on whether something came from a plant or a laboratory. Hemlock, aconite, and aflatoxin are natural and lethal. Many synthetic drugs are life-saving. Calibration check: the 'natural = safe' equation is so culturally embedded in Egypt that even people who know the fallacy name can feel its pull — notice if you felt any hesitation before answering.",
+      "explanationAr": "صح — مغالطة الطبيعة. السُمّية بتعتمد على المركب والجرعة والطريقة والبيولوجيا الفردية — مش على إن الحاجة اجت من نبتة أو من مختبر. الشوكران والأكونيت والأفلاتوكسين طبيعيون وقاتلون. أدوية صناعية كتير منقذة للحياة. معايرة ذاتية: معادلة «طبيعي = آمن» متجذّرة ثقافياً في مصر لدرجة إن حتى الناس اللي عارفة اسم المغالطة ممكن يحسّوا بجذبها — لاحظ لو حسّيت بأي تردّد قبل الإجابة.",
+      "sources": [
+        "https://www.nccih.nih.gov/health/using-dietary-supplements-wisely",
+        "https://www.hsph.harvard.edu/nutritionsource/2011/07/28/herbal-supplements-caution-advised/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 6,
+      "mechanic": "inoculate",
+      "technique": "appeal to nature + vague toxin language",
+      "techniqueAr": "مغالطة الطبيعة + لغة السموم المبهمة",
+      "task": "Feel this from the inside. Write a short product post for a harmless 'natural' tea using two techniques combined: (a) imply it is safe because it is 'from nature,' and (b) claim it removes unnamed 'accumulated toxins.' Make it warm and appealing.",
+      "taskAr": "حسّ بالتلاعب ده من جوّه. اكتب بوست منتج قصير لشاي «طبيعي» غير ضار بدمج أسلوبين: (أ) إيحاء إنه آمن لأنه «من الطبيعة»، و(ب) الادعاء إنه بيزيل «سموم متراكمة» غير مسمَّاة. خلّيه دافئ وجذّاب.",
+      "tells": [
+        "The 'natural = safe' claim is the appeal-to-nature fallacy — toxicity depends on chemistry, not origin.",
+        "Unnamed 'toxins' that cannot be measured before and after mean there is nothing testable to verify.",
+        "The warmth and care in the tone are real human feelings — but they are attached to an evidence-free claim.",
+        "Both techniques together create a closed loop: the product is safe because natural, and it works because it removes unnamed things.",
+        "The counter: the three chemistry questions (which toxin? which pathway? which test?) break both moves simultaneously."
+      ],
+      "tellsAr": [
+        "ادعاء «طبيعي = آمن» هو مغالطة الطبيعة — السُمّية بتعتمد على الكيمياء مش الأصل.",
+        "«سموم» غير مسمَّاة ما تتقاسش قبل وبعد يعني ما فيش حاجة قابلة للاختبار للتحقق منها.",
+        "الدفء والاهتمام في النبرة مشاعر إنسانية حقيقية — لكنها مربوطة بادعاء بلا دليل.",
+        "الأسلوبان مع بعض بيخلقوا حلقة مغلقة: المنتج آمن لأنه طبيعي، وشغّال لأنه بيزيل حاجات غير مسمَّاة.",
+        "الردّ: الأسئلة الكيميائية الثلاثة (أنهي سُمّ؟ أنهي مسار؟ أنهي تحليل؟) بتكسر الحركتين في نفس الوقت."
+      ],
+      "sources": [
+        "https://www.nccih.nih.gov/health/using-dietary-supplements-wisely",
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    }
+  ]
+}

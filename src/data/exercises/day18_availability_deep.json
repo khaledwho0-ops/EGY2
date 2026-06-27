@@ -1,0 +1,29 @@
+{
+  "id": "day18_availability_deep",
+  "phase": 0,
+  "week": 3,
+  "day": 18,
+  "title": "Availability Heuristic Deep Dive",
+  "titleAr": "التعمق في تحيز التوافر",
+  "description": "Why vivid events distort risk perception with Egyptian mortality data.",
+  "descriptionAr": "لماذا الأحداث الحية تشوه إدراك المخاطر مع بيانات وفيات مصرية.",
+  "type": "probability",
+  "difficulty": 3,
+  "estimatedMinutes": 12,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "What kills more Egyptians per year: diabetes or terrorism? Rank causes.",
+      "claimAr": "ما يقتل مصريين أكثر: السكري أم الإرهاب؟ رتب الأسباب.",
+      "truthValue": "true",
+      "category": "health",
+      "difficulty": 3,
+      "explanation": "Egypt top deaths (WHO 2023): Heart disease 147K, Stroke 66K, Diabetes 35K, Road injuries 12K. Terrorism not in top 20.",
+      "explanationAr": "أهم أسباب الوفاة في مصر: القلب 147 ألف، السكتة 66 ألف، السكري 35 ألف. الإرهاب ليس في أعلى 20.",
+      "sources": [
+        "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "data_dredging",
+  "phase": 2,
+  "week": 15,
+  "day": 28,
+  "title": "Data Dredging",
+  "titleAr": "التنقيب في البيانات",
+  "description": "Understand how searching for patterns in data without prior hypotheses leads to spurious findings, including the Texas sharpshooter fallacy and its relationship to multiple comparisons.",
+  "descriptionAr": "فهم كيف يؤدي البحث عن أنماط في البيانات بدون فرضيات مسبقة إلى نتائج زائفة، بما في ذلك مغالطة القناص التكساسي.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Data Dredging (Texas Sharpshooter Fallacy)",
+    "nameAr": "التنقيب في البيانات (مغالطة القناص التكساسي)",
+    "definition": "Data dredging (also: data fishing, p-hacking) is the misuse of data analysis to find patterns that can be presented as significant when in fact there is no underlying effect. The Texas sharpshooter fallacy draws the analogy of shooting at a barn wall and then drawing a target around the tightest cluster of bullet holes. In statistics, this means finding a pattern post-hoc and presenting it as if it were predicted a priori.",
+    "definitionAr": "التنقيب في البيانات هو سوء استخدام تحليل البيانات لإيجاد أنماط يمكن تقديمها على أنها معنوية عندما لا يوجد تأثير أساسي. مغالطة القناص التكساسي تشبه إطلاق النار على جدار ثم رسم هدف حول أقرب تجمع للرصاصات.",
+    "realWorldExample": "Tyler Vigen's 'Spurious Correlations' project found that US per capita cheese consumption correlates with deaths by bedsheet entanglement (r=0.947). With enough variables, spurious correlations with high r values are inevitable. The Jelly Bean XKCD comic (#882) illustrates this with testing 20 jelly bean colors for acne association.",
+    "detectionMethod": "Check for pre-registered hypotheses. Look for suspiciously specific subgroup findings. Apply Bonferroni or FDR corrections for multiple comparisons. Require independent replication of exploratory findings."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A researcher tests whether 50 different foods are associated with cancer risk. Two foods show p<0.05. The researcher publishes: 'Foods X and Y are significantly associated with cancer risk.' What fallacy is this?",
+      "promptAr": "باحث يختبر ما إذا كانت 50 نوعاً من الأغذية مرتبطة بخطر السرطان. نوعان يُظهران p<0.05. الباحث ينشر: 'الأغذية X و Y مرتبطة بشكل معنوي بخطر السرطان.' ما هذه المغالطة؟",
+      "options": [
+        "The sample size must be too small",
+        "Texas sharpshooter fallacy: testing 50 hypotheses and reporting only the 2 significant ones without correction. The expected number of false positives is 50 × 0.05 = 2.5",
+        "The researcher correctly identified two risk factors",
+        "This is acceptable exploratory research"
+      ],
+      "correctAnswer": 1,
+      "explanation": "With 50 independent tests at α=0.05, we expect 2.5 false positives by chance alone. Finding exactly 2 significant results is entirely consistent with all null hypotheses being true. Schoenfeld & Ioannidis (2013) demonstrated this in nutritional epidemiology: they randomly selected 50 ingredients from a cookbook and found that 80% had published studies linking them to cancer risk — a textbook illustration of data dredging in a field.",
+      "explanationAr": "مع 50 اختباراً مستقلاً عند α=0.05، نتوقع 2.5 إيجابية خاطئة بالصدفة. إيجاد نتيجتين معنويتين بالضبط متسق تماماً مع كون جميع الفرضيات الصفرية صحيحة."
+    },
+    {
+      "id": 2,
+      "type": "scenario",
+      "prompt": "A study of 1,000 genes finds that 47 are 'significantly' differentially expressed (p<0.05). Without any multiple comparison correction, the researchers report these as biomarkers. Is 47 significant genes more than expected by chance?",
+      "promptAr": "دراسة لـ 1,000 جين تجد أن 47 'معنوية' في التعبير التفاضلي (p<0.05). بدون تصحيح المقارنات المتعددة، يبلغ الباحثون عنها كمؤشرات حيوية. هل 47 جيناً معنوياً أكثر من المتوقع بالصدفة؟",
+      "options": [
+        "47 out of 1,000 is a small proportion and can be ignored",
+        "Yes — 47 is far more than expected by chance",
+        "No — 1,000 × 0.05 = 50 expected false positives, so 47 is fewer than expected by chance alone, suggesting no real differential expression",
+        "The result is borderline and needs more investigation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Under the global null (no genes truly differentially expressed), we expect 1,000 × 0.05 = 50 false positives. Finding 47 is actually fewer than expected under the null hypothesis. This is why genomics routinely requires FDR (Benjamini-Hochberg) correction, typically targeting FDR < 0.05 or even < 0.01. Without correction, virtually all 47 'discoveries' are likely false positives.",
+      "explanationAr": "تحت الفرضية الصفرية الشاملة، نتوقع 1,000 × 0.05 = 50 إيجابية خاطئة. إيجاد 47 هو في الواقع أقل من المتوقع تحت الفرضية الصفرية."
+    },
+    {
+      "id": 3,
+      "type": "identify",
+      "prompt": "Tyler Vigen found a correlation of r=0.993 between US spending on science and suicides by hanging (1999-2009). What makes this a clear example of data dredging despite the high correlation?",
+      "promptAr": "وجد تايلر فيجن ارتباطاً r=0.993 بين إنفاق أمريكا على العلوم والانتحار بالشنق (1999-2009). ما الذي يجعل هذا مثالاً واضحاً على التنقيب في البيانات رغم الارتباط العالي؟",
+      "options": [
+        "The time period is too short",
+        "The sample size is too small",
+        "The correlation is suspiciously perfect",
+        "There is no plausible causal mechanism, the correlation was found by searching thousands of time-series pairs, and both variables share a common trend (upward over time) creating spurious correlation"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Three factors make this spurious: (1) No causal mechanism exists. (2) When you search thousands of variable pairs, high correlations are inevitable by chance (the multiple comparisons problem applied to correlations). (3) Many time series trend upward over time, creating confounding by shared temporal trend. With ~250,000 possible variable pairs in Vigen's database, finding many r>0.90 is statistically guaranteed.",
+      "explanationAr": "ثلاثة عوامل تجعل هذا زائفاً: لا آلية سببية، البحث في آلاف الأزواج يضمن ارتباطات عالية بالصدفة، ومشاركة الاتجاه الزمني التصاعدي."
+    },
+    {
+      "id": 4,
+      "type": "calculate",
+      "prompt": "A researcher has a dataset with 100 variables and computes all pairwise correlations. How many unique correlation tests are performed, and how many would be 'significant' at p<0.05 if all variables are truly independent?",
+      "promptAr": "باحث لديه مجموعة بيانات بـ 100 متغير ويحسب جميع الارتباطات الثنائية. كم اختبار ارتباط فريد يتم إجراؤه، وكم سيكون 'معنوياً' عند p<0.05 إذا كانت جميع المتغيرات مستقلة حقاً؟",
+      "options": [
+        "4,950 tests, approximately 248 significant by chance",
+        "10,000 tests, 500 significant by chance",
+        "4,950 tests, approximately 50 significant by chance",
+        "100 tests, 5 significant by chance"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Unique pairs = C(100,2) = 100×99/2 = 4,950. Expected false positives = 4,950 × 0.05 = 247.5 ≈ 248. Without correction, the researcher would 'discover' approximately 248 significant correlations where none truly exist. This is the essence of data dredging in high-dimensional data. The Bonferroni-corrected threshold would be 0.05/4,950 ≈ 0.00001.",
+      "explanationAr": "الأزواج الفريدة = 100×99/2 = 4,950. الإيجابيات الخاطئة المتوقعة = 4,950 × 0.05 ≈ 248. بدون تصحيح، سيكتشف الباحث حوالي 248 ارتباطاً معنوياً حيث لا يوجد أي منها."
+    },
+    {
+      "id": 5,
+      "type": "scenario",
+      "prompt": "A health study finds no overall association between a supplement and heart disease. However, in a post-hoc subgroup analysis, women aged 45-52 who exercise 3+ times per week show a significant benefit (p=0.02). The researchers highlight this finding prominently. What is the correct response?",
+      "promptAr": "دراسة صحية لا تجد ارتباطاً عاماً بين مكمل غذائي وأمراض القلب. لكن في تحليل فرعي بعد الحقيقة، النساء بعمر 45-52 اللواتي يتمرنّ 3+ مرات أسبوعياً يُظهرن فائدة معنوية (p=0.02). الباحثون يبرزون هذه النتيجة. ما الرد الصحيح؟",
+      "options": [
+        "The subgroup finding is valid because p<0.05",
+        "This is the Texas sharpshooter fallacy: the specific subgroup was not hypothesized a priori, and with dozens of possible subgroup analyses, finding one 'significant' result is expected by chance. It should be labeled as hypothesis-generating, requiring independent confirmation",
+        "Subgroup analyses are always reliable if the main effect is null",
+        "The age-exercise interaction provides a biological basis for the finding"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Post-hoc subgroup analyses with no pre-specified hypothesis are a classic form of data dredging. If the study could have sliced the data by sex (2), age groups (5), exercise levels (3), BMI categories (3), etc., the total subgroups = 2×5×3×3 = 90. Finding one significant at p=0.02 among 90 comparisons is unremarkable. Sun et al. (2010) in the BMJ systematically showed that most post-hoc subgroup findings fail to replicate.",
+      "explanationAr": "تحليلات المجموعات الفرعية بعد الحقيقة بدون فرضية محددة مسبقاً هي شكل كلاسيكي للتنقيب في البيانات. إيجاد نتيجة معنوية واحدة بين عشرات المقارنات أمر غير مميز."
+    }
+  ]
+}

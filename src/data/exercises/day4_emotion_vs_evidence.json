@@ -1,0 +1,75 @@
+{
+  "id": "day4_emotion_vs_evidence",
+  "phase": 0,
+  "week": 1,
+  "day": 4,
+  "title": "Emotion vs Evidence",
+  "titleAr": "العاطفة مقابل الدليل",
+  "description": "Learn to distinguish between emotionally-charged claims and evidence-based reasoning. Identify cognitive biases at play in common misinformation.",
+  "descriptionAr": "تعلم التمييز بين الادعاءات المشحونة عاطفياً والتفكير القائم على الأدلة. حدد التحيزات المعرفية في المعلومات المضللة الشائعة.",
+  "type": "emotional",
+  "difficulty": 2,
+  "estimatedMinutes": 15,
+  "exercises": [
+    {
+      "id": 1,
+      "statement": "A viral Facebook post shows a child in a hospital bed with text: 'This child was injured by the 5G tower near his school. SHARE TO SAVE OUR CHILDREN!'",
+      "statementAr": "منشور فيسبوك فيروسي يظهر طفلاً على سرير مستشفى مع نص: 'هذا الطفل أُصيب بسبب برج الجيل الخامس بجانب مدرسته. شارك لإنقاذ أطفالنا!'",
+      "emotionalTriggers": ["Fear for children's safety", "Parental protective instinct", "Urgency to share", "Visual suffering"],
+      "evidenceQuality": "none",
+      "correctAssessment": "emotional_manipulation",
+      "cognitivebiasAtPlay": "Affect Heuristic",
+      "explanation": "The image of a suffering child triggers an immediate emotional response that bypasses rational evaluation. No causal link between 5G and child illness is established. The child's actual condition is unknown. The 'SHARE TO SAVE' creates artificial urgency."
+    },
+    {
+      "id": 2,
+      "statement": "A WHO report states: 'Based on a meta-analysis of 47 randomized controlled trials (n=31,245), the Pfizer-BioNTech COVID-19 vaccine shows 95% efficacy against symptomatic infection (95% CI: 90.3-97.6%).'",
+      "statementAr": "تقرير من منظمة الصحة العالمية: 'بناءً على تحليل تلوي لـ ٤٧ تجربة عشوائية محكومة (ن=٣١,٢٤٥)، يظهر لقاح فايزر-بيونتك ضد كوفيد-١٩ فعالية ٩٥٪ ضد العدوى العرضية.'",
+      "emotionalTriggers": ["None — presented neutrally"],
+      "evidenceQuality": "high",
+      "correctAssessment": "evidence_based",
+      "cognitivebiasAtPlay": null,
+      "explanation": "This contains specific study details: sample size (31,245), study type (RCTs), meta-analysis, confidence intervals. These are hallmarks of evidence-based claims. The source (WHO) is transparent and verifiable."
+    },
+    {
+      "id": 3,
+      "statement": "A WhatsApp voice message from 'a doctor friend' says: 'I've seen it with my own eyes — the new medicine they're giving people is killing them. Don't let anyone in your family take it!'",
+      "statementAr": "رسالة صوتية واتساب من 'صديق طبيب': 'شفت بعيني — الدوا الجديد اللي بيدوه للناس بيقتلهم. ماتسمحش لحد من عيلتك ياخده!'",
+      "emotionalTriggers": ["Fear of death", "Family protection instinct", "Authority appeal ('doctor')", "Personal testimony ('I've seen')"],
+      "evidenceQuality": "anecdotal",
+      "correctAssessment": "emotional_manipulation",
+      "cognitivebiasAtPlay": "Anecdotal Evidence Bias",
+      "explanation": "This relies on anonymous authority ('a doctor friend'), anecdotal evidence ('I've seen'), and fear triggers ('killing them'). Real adverse drug reactions are tracked through pharmacovigilance systems (e.g., Egypt's CAPA) with statistical data, not WhatsApp voice notes."
+    },
+    {
+      "id": 4,
+      "statement": "A research paper abstract: 'We conducted a double-blind RCT (n=1,200) comparing Nigella sativa supplementation vs placebo in Type 2 diabetics. After 12 weeks, the treatment group showed a statistically significant reduction in HbA1c (p<0.001, d=0.45).'",
+      "statementAr": "ملخص ورقة بحثية: 'أجرينا تجربة عشوائية مزدوجة التعمية (ن=١,٢٠٠) مقارنة بين تكميل الحبة السوداء والدواء الوهمي في مرضى السكري النوع الثاني. بعد ١٢ أسبوعاً، أظهرت مجموعة العلاج انخفاضاً ذا دلالة إحصائية في HbA1c.'",
+      "emotionalTriggers": ["None — neutral scientific language"],
+      "evidenceQuality": "high",
+      "correctAssessment": "evidence_based",
+      "cognitivebiasAtPlay": null,
+      "explanation": "This has the hallmarks of rigorous research: double-blind RCT design, adequate sample size, specific outcome measure (HbA1c), statistical significance, and effect size (d=0.45). Note: this shows black seed has SOME effect on diabetes, not that it 'cures all diseases.'"
+    },
+    {
+      "id": 5,
+      "statement": "A YouTube video titled: 'LEAKED: Egyptian Minister CAUGHT in Corruption Scandal — Your Tax Money Is Being STOLEN!' with dramatic music and flashing red text.",
+      "statementAr": "فيديو يوتيوب بعنوان: 'مسرب: وزير مصري يُضبط في فضيحة فساد — أموال ضرائبك تُسرق!' مع موسيقى درامية ونص أحمر وامض.",
+      "emotionalTriggers": ["Anger at corruption", "Financial anxiety", "Sense of personal victimhood", "False exclusivity ('LEAKED')"],
+      "evidenceQuality": "unknown",
+      "correctAssessment": "emotional_manipulation",
+      "cognitivebiasAtPlay": "Outrage Exploitation",
+      "explanation": "The dramatic presentation (capitals, exclamation marks, flashing text, music) is designed to trigger outrage before you evaluate the evidence. Real corruption reporting (like investigative journalism) presents documents, timelines, and allows response from the accused."
+    },
+    {
+      "id": 6,
+      "statement": "The Central Agency for Public Mobilization and Statistics (CAPMAS) reports that Egypt's inflation rate was 33.9% year-on-year in March 2024, driven primarily by food and beverage prices (up 45.1%).",
+      "statementAr": "يفيد الجهاز المركزي للتعبئة العامة والإحصاء (كابماس) أن معدل التضخم في مصر بلغ ٣٣.٩٪ على أساس سنوي في مارس ٢٠٢٤، مدفوعاً بشكل رئيسي بأسعار الأغذية والمشروبات (ارتفعت ٤٥.١٪).",
+      "emotionalTriggers": ["Financial anxiety", "But presented factually without manipulation"],
+      "evidenceQuality": "high",
+      "correctAssessment": "evidence_based",
+      "cognitivebiasAtPlay": null,
+      "explanation": "This is factual reporting from Egypt's official statistics body. Despite the alarming numbers, the presentation is neutral: specific percentages, time period, source attribution, and category breakdown. Real data can be concerning without being manipulative."
+    }
+  ]
+}

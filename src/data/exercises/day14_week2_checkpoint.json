@@ -1,0 +1,29 @@
+{
+  "id": "day14_week2_checkpoint",
+  "phase": 0,
+  "week": 2,
+  "day": 14,
+  "title": "Week 2 Checkpoint",
+  "titleAr": "نقطة تفتيش الأسبوع 2",
+  "description": "Aggregate scores from Days 8-13 for CIS₂.",
+  "descriptionAr": "اجمع درجاتك من الأيام 8-13 لحساب CIS₂.",
+  "type": "checkpoint",
+  "difficulty": 2,
+  "estimatedMinutes": 10,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "Reflect on biases you discovered this week. Which surprised you most?",
+      "claimAr": "تأمل في التحيزات التي اكتشفتها. أيها فاجأك أكثر؟",
+      "truthValue": "reflection",
+      "category": "meta",
+      "difficulty": 1,
+      "explanation": "Metacognitive exercise. Self-reflection on biases improves future detection (Morewedge et al. 2015 JEP).",
+      "explanationAr": "تمرين ما وراء معرفي. التأمل الذاتي يحسن الكشف المستقبلي.",
+      "sources": [
+        "https://doi.org/10.1037/xge0000049"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "day53_bias_cluster_identity",
+  "phase": 1,
+  "week": 8,
+  "day": 53,
+  "title": "When Belief Becomes Identity: Four Biases That Make Changing Your Mind Feel Like Losing",
+  "titleAr": "لمّا المعتقد يبقى هوية: أربع انحيازات بتخلّي تغيير رأيك يبان خسارة",
+  "description": "Some biases don't just shape what you see — they bind the belief to who you are. Today: Sunk-Cost Fallacy, Black-and-White Thinking, In-group/Out-group Bias, and Illusory Correlation.",
+  "descriptionAr": "بعض الانحيازات مش بس بتشكّل اللي بتشوفه — بتربط المعتقد بمين إنت. النهاردة: مغالطة التكلفة الغارقة، التفكير الثنائي، انحياز الداخل/الخارج، والترابط الوهمي.",
+  "type": "bias",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://journals.sagepub.com/doi/10.1177/0963721417718261",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A man has followed the viral Taybat diet for four months, stopped his diabetes medication, and built an online identity as an advocate. His labs are now worse. Why does admitting the diet failed feel almost impossible?",
+      "claimAr": "راجل اتبع نظام «الطيبات» اللي انتشر أربع شهور، وقف دواء سكّره، وبنى هوية أونلاين كمدافع عن النظام. تحاليله دلوقتي أسوأ. ليه الاعتراف إن النظام فشل بيحسّ إنه مستحيل تقريباً؟",
+      "options": [
+        "He simply doesn't have the lab results yet",
+        "Sunk-Cost Fallacy: after months invested, medication stopped, and identity built, admitting error would mean losing all of that — so the mind keeps going, not because of future value, but because of what has already been spent",
+        "He is in denial about his diabetes",
+        "The diet probably did work; labs fluctuate"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Sunk-Cost Fallacy is staying in a bad situation because of what you've already invested — time, money, identity, relationships — rather than asking honestly whether continuing makes sense going forward. It is not stupidity: the more you've invested, the more painful the math of loss becomes. The reframe that helps is: 'The months I've already spent are gone whatever I decide now. The only real question is: what is the most honest choice from this moment forward?'",
+      "explanationAr": "مغالطة التكلفة الغارقة هي الاستمرار في وضع سيّئ بسبب ما استثمرته فيه بالفعل — وقت، فلوس، هوية، علاقات — بدل ما تسأل بصدق هل الاستمرار منطقي مستقبلاً. مش غباء: كلما زاد الاستثمار، كلما زادت المعادلة ألماً. إعادة الصياغة المفيدة: «الشهور اللي اتصرفت خلصت مهما قرّرت دلوقتي. السؤال الحقيقي الوحيد: إيه أصدق قرار من اللحظة دي للأمام؟»",
+      "sources": [
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf",
+        "EAL-case-001:sunk-cost"
+      ],
+      "cognitivebiasAtPlay": "Sunk-Cost Fallacy"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "The viral diet divided all food into «طيبات» (pure) and «خبائث» (foul) — no spectrum, no dose, no individual biology. Why does that two-box split feel so satisfying and certain, even though nutrition is never absolute?",
+      "claimAr": "النظام اللي انتشر قسّم كل الأكل لـ«طيبات» و«خبائث» — لا تدرّج ولا جرعة ولا بيولوجيا فردية. ليه القسمة دي لصندوقين بتحسّس بالرضا واليقين، رغم إن التغذية عمرها ما بتكون مُطلقة؟",
+      "options": [
+        "Because the world really is divided into pure and toxic foods",
+        "Because Black-and-White Thinking trades away accuracy for the comfort of a simple, certain answer"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": { "prompt": "In your own words: what real information about food gets erased the moment you sort everything into 'pure' vs 'toxic'?", "promptAr": "بكلماتك: إيه المعلومة الحقيقية عن الأكل اللي بتتمحي أول ما تصنّف كل حاجة «طاهر» ضد «سام»؟" },
+      "explanation": "Black-and-White Thinking forces complexity into two poles, which feels satisfying and certain — but it erases dose, context, and individual variation. The same vegetable can be beneficial at one dose and harmful at another; what helps one person's gut may not help another's. Binary systems are psychologically compelling because they are simple; that is also exactly their danger in medicine.",
+      "explanationAr": "التفكير الثنائي بيحشر التعقيد في قطبين، وده بيحسّسك بالرضا واليقين — لكنه بيمحو الجرعة والسياق والتباين الفردي. نفس الخضار ممكن يكون مفيد بجرعة وضار بجرعة تانية؛ اللي ينفع قولون شخص ممكن ما ينفعش قولون تاني. الأنظمة الثنائية مقنعة نفسياً لأنها بسيطة؛ وده بالظبط هو خطرها في الطب.",
+      "sources": [
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261",
+        "EAL-case-001:splitting"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 3,
+      "mechanic": "decompose",
+      "claim": "Map this response: \"The Medical Syndicate criticised the diet. But of course they did — they profit from keeping us sick. So their review proves nothing, and anyone who cites it is just a tool of the system.\"",
+      "claimAr": "فكّك الردّ ده: «نقابة الأطباء انتقدت النظام. طبعاً انتقدته — مصلحتهم إننا نفضل مرضى. يبقى مراجعتهم ما بتثبتش حاجة، وأي حد يستشهد بيها يبقى أداة في إيد النظام».",
+      "parts": [
+        { "text": "The Syndicate's review proves nothing.", "textAr": "مراجعة النقابة ما بتثبتش حاجة.", "role": "conclusion" },
+        { "text": "The Syndicate criticised the diet.", "textAr": "النقابة انتقدت النظام.", "role": "premise" },
+        { "text": "(Unstated) Anyone in the 'out-group' is automatically biased, so their evidence can be ignored.", "textAr": "(غير مذكور) أي حد في «الجماعة الخارجية» منحاز تلقائياً، فدليله يتجاهَل.", "role": "assumption" },
+        { "text": "Anyone who cites it is a tool of the system.", "textAr": "أي حد يستشهد بيها يبقى أداة في إيد النظام.", "role": "irrelevant" }
+      ],
+      "explanation": "Mapping exposes the weak joint: the hidden ASSUMPTION that out-group membership cancels evidence. In-group/Out-group Bias makes 'us' trustworthy and 'them' disqualified regardless of content — but the review was done by university specialists with no stake in the result. The 'tool of the system' line is IRRELEVANT: it attacks people instead of the evidence, pre-discrediting critics. This is the trap that makes a system unfalsifiable.",
+      "explanationAr": "التفكيك بيكشف المفصل الضعيف: الافتراض الخفي إن الانتماء للجماعة الخارجية بيلغي الدليل. انحياز الداخل/الخارج بيخلّي «نحنا» موثوقين و«هم» مسلوبي الأهلية بغضّ النظر عن المحتوى — لكن المراجعة عملها أساتذة جامعات بلا مصلحة في النتيجة. وجملة «أداة في إيد النظام» غير ذات صلة: بتهاجم الناس بدل الدليل، وبتُسقِط النقّاد مقدماً. ده الفخّ اللي بيخلّي النظام غير قابل للتفنيد.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "retrieve",
+      "retrievalOf": 52,
+      "claim": "A follower says: 'I stopped eating chicken, and a week later my 10-year IBS got better — and chicken is artificial factory food anyway, so it makes sense.' Two earlier moves are stacked here. Which pair is it?",
+      "claimAr": "تابع بيقول: «بطّلت آكل فراخ، وبعد أسبوع قولوني اللي عندي من 10 سنين تحسّن — والفراخ أكل مصانع صناعي على أي حال، فده منطقي». فيه حركتين متراكبتين هنا. أنهي اتنين؟",
+      "options": [
+        "Sunk-Cost Fallacy and Anchoring",
+        "Illusory Correlation (timing read as cause) plus the Appeal to Nature you met yesterday ('factory = bad')",
+        "Bandwagon Effect and Authority Bias",
+        "Dunning-Kruger and Belief Perseverance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Illusory Correlation finds a causal link where the timing is just coincidence — IBS naturally waxes and wanes, and stress, sleep, and placebo all shifted that same week. On top, 'chicken is artificial factory food' is the Appeal to Nature from day 52: a food's being processed or 'natural' tells you nothing about whether it caused the change. To know if chicken mattered you'd need blinding, a control period, and repeated challenge/re-challenge. 'I wore my lucky shirt and we won' — coincidence, not cause.",
+      "explanationAr": "الترابط الوهمي بيلاقي رابط سببي حيث التوقيت مجرد صدفة — القولون العصبي بيتقلّب طبيعياً، والضغط والنوم والوهمي كلهم اتغيّروا نفس الأسبوع. وفوق ده، «الفراخ أكل مصانع صناعي» هي مغالطة الطبيعة بتاعة يوم 52: كون الأكل مصنّع أو «طبيعي» ما بيقولكش حاجة عن إذا كان هو سبب التغيير. عشان تعرف لو الفراخ ليها دخل تحتاج تعمية وفترة ضابطة وتحدّي وإعادة تحدّي متكررة. «لبست قميص الحظ فكسبنا» — صدفة لا سبب.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK540489/",
+        "EAL-case-001:illusory-correlation"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "A friend is deeply invested in a diet she has followed for six months — financially, emotionally, and socially. She shows you a new study that contradicts it. What approach is most likely to actually help her think clearly?",
+      "claimAr": "صديقة مستثمرة بعمق في حمية اتبعتها ستة شهور — مالياً وعاطفياً واجتماعياً. بتوريلك دراسة جديدة بتتعارض معها. أنهي نهج الأرجح فعلاً يساعدها تفكّر بوضوح؟",
+      "options": [
+        "Show her all the negative evidence immediately",
+        "Start by asking what she values — her health and honest information — and then invite her curiosity rather than her defence",
+        "Tell her she's being irrational",
+        "Give up: the Sunk-Cost Fallacy makes changing impossible"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When a belief is identity-linked (months invested, community built), direct contradiction triggers the ego-defence — argument-as-war, not argument-as-inquiry. Starting from shared values ('you clearly care about your health') and asking curious questions ('what would you need to see to update your view?') invites thinking rather than fighting. The four biases today — Sunk-Cost, Black-and-White, In-group/Out-group, and Illusory Correlation — all become harder to untangle once the belief is identity-linked. Empathy first.",
+      "explanationAr": "لمّا المعتقد يكون مرتبطاً بالهوية (شهور استثمار، مجتمع مبني)، التناقض المباشر بيشغّل الدفاع عن الذات — نقاش كحرب مش كبحث. البداية من القيم المشتركة («إنتِ واضح إنك بتهتمّي بصحتك») وأسئلة فضولية («محتاجة تشوفي إيه عشان تعدّلي رأيك؟») بيدعو التفكير بدل القتال. الأربع انحيازات النهاردة — التكلفة الغارقة، الثنائي، الداخل/الخارج، والترابط الوهمي — كلهم بيبقوا أصعب في الحلّ لمّا المعتقد مرتبط بالهوية. التعاطف أولاً.",
+      "sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950"
+      ],
+      "cognitivebiasAtPlay": "Sunk-Cost Fallacy"
+    }
+  ]
+}

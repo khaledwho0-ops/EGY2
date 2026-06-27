@@ -1,0 +1,144 @@
+{
+  "id": "day97_pseudoscience_hallmarks",
+  "phase": 2,
+  "week": 14,
+  "day": 97,
+  "title": "Pseudoscience Hallmarks — The Complete Checklist",
+  "titleAr": "علامات شبه-العلم — القائمة الكاملة",
+  "description": "Pseudoscience is not defined by a single flaw — it is a cluster of features. Today you practise recognising the full pattern in real scenarios.",
+  "descriptionAr": "شبه-العلم مش محدّد بعيب واحد — ده مجموعة سمات. النهاردة بتتمرّن على التعرّف على النمط الكامل في سيناريوهات حقيقية.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 18,
+  "source": "https://plato.stanford.edu/entries/pseudo-science/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A new 'energy healing' system claims to: cure 15 diseases, use ancient wisdom not tested by science, work only for believers, charge premium clinic fees, and treat questions as attacks. Count the pseudoscience hallmarks present.",
+      "claimAr": "نظام «شفاء طاقة» جديد بيدّعي: شفاء 15 مرض، استخدام حكمة قديمة ما اختبرها العلم، الشغل بس للمؤمنين بيه، تحصيل أتعاب عيادة مرتفعة، ومعاملة الأسئلة كهجوم. عُدّ علامات شبه-العلم الموجودة.",
+      "options": [
+        "One — it is expensive",
+        "At least five: cures everything, unfalsifiable ('only for believers'), no scientific testing, undisclosed financial interest, and suppression of questions",
+        "None — it may work",
+        "Two — ancient and expensive"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Five overlapping hallmarks: (1) 'cures everything' — biologically impossible; (2) 'only works for believers' — unfalsifiable by design; (3) 'not tested by science' — explicitly non-scientific; (4) premium fees — undisclosed financial interest (Red Flag #12); (5) questions are attacks — suppression of inquiry (Red Flag #11). Three or more of the 12 red flags in a single system is the threshold for serious caution. Five is deeply alarming.",
+      "explanationAr": "خمسة علامات متداخلة: (1) «يشفي كل شيء» — مستحيل بيولوجياً؛ (2) «بيشتغل بس للمؤمنين» — غير قابل للتفنيد بالتصميم؛ (3) «ما اختبره العلم» — غير علمي صراحة؛ (4) أتعاب مرتفعة — مصلحة مالية غير مُعلَنة (علامة الخطر 12)؛ (5) الأسئلة هجمات — قمع الاستفسار (علامة الخطر 11). ثلاثة أو أكثر من الـ12 علامة خطر في نظام واحد هو عتبة الحذر الجدي. خمسة مثير للقلق بشدة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: the best way to distinguish pseudoscience from real science is that real science gives certainty, while pseudoscience admits uncertainty.",
+      "claimAr": "صح ولا غلط: أفضل طريقة تميّز شبه-العلم من العلم الحقيقي إن العلم الحقيقي بيعطي يقيناً، وشبه-العلم بيعترف بعدم اليقين.",
+      "correctAnswer": false,
+      "explanation": "False — and this inversion is one of pseudoscience's most powerful weapons. Real science is characterised by confidence intervals, error bars, replication, peer critique, and revision — it openly quantifies its uncertainty. Pseudoscience often presents absolute certainty ('this cures cancer' with no qualification). The tell is not who expresses more certainty but who has a method for checking and correcting themselves. Pseudoscience avoids testing; science invites it. Calibration note: many people are surprised by this — the common intuition is the opposite of the truth.",
+      "explanationAr": "غلط — وهذا الانقلاب هو أحد أقوى أسلحة شبه-العلم. العلم الحقيقي يتميّز بفترات الثقة وأشرطة الخطأ والتكرار والنقد التناظري والمراجعة — بيُقيّم عدم يقينه علناً. شبه-العلم كثيراً ما يقدّم يقيناً مطلقاً («ده بيشفي السرطان» بلا تحفّظ). الدليل مش مين بيُعبّر عن يقين أكبر لكن عندو منهج للفحص وتصحيح نفسه. شبه-العلم بيتجنّب الاختبار؛ والعلم بيدعوه. ملاحظة معايرة: كتير من الناس بتتفاجأ بده — الحدس الشائع عكس الحقيقة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Dunning-Kruger Effect"
+    },
+    {
+      "id": 3,
+      "mechanic": "decompose",
+      "claim": "A health system has: testimonials only, no indexed publications, a founder who claims authority across all diseases, and a 'conspiracy of silence' explanation for why experts oppose it. The argument is: 'Our approach works — thousands say so, and the opposition proves we threaten the establishment.'",
+      "claimAr": "نظام صحي عنده: شهادات بس، لا منشورات مُفهرسة، مؤسس بيدّعي سلطة على كل الأمراض، وتفسير «مؤامرة الصمت» ليه الخبراء يعارضوه. الحُجّة هي: «منهجنا شغّال — آلاف بيقولوا ده، والمعارضة تثبت إننا بنهدّد المؤسسة.»",
+      "parts": [
+        { "text": "Our approach works.", "textAr": "منهجنا شغّال.", "role": "conclusion" },
+        { "text": "Thousands of followers say it works.", "textAr": "آلاف الأتباع بيقولوا إنه شغّال.", "role": "premise" },
+        { "text": "Expert opposition proves we threaten the establishment.", "textAr": "معارضة الخبراء بتثبت إننا بنهدّد المؤسسة.", "role": "premise" },
+        { "text": "(Unstated) Follower testimony is equivalent to indexed clinical evidence.", "textAr": "(غير مذكور) شهادة الأتباع معادلة للأدلة السريرية المُفهرسة.", "role": "assumption" },
+        { "text": "(Unstated) Opposition from experts means the claim is true, not false.", "textAr": "(غير مذكور) معارضة الخبراء تعني إن الادعاء صحيح لا خاطئ.", "role": "assumption" },
+        { "text": "The founder has genuine credentials in another medical field.", "textAr": "المؤسس عنده شهادات حقيقية في مجال طبي آخر.", "role": "irrelevant" }
+      ],
+      "explanation": "Mapping exposes two hidden inversions: (1) testimonials are treated as if equivalent to peer-reviewed evidence — they are not; (2) expert opposition is recast from a red flag into proof of the claim's threat value (classic unfalsifiability — anything counts as confirmation). The credentials fact is irrelevant: real credentials in field A do not transfer to authority in field B.",
+      "explanationAr": "التفكيك بيكشف انقلابين خفيّين: (1) الشهادات بتُعامَل كمعادل للأدلة المُحكَّمة — وهي مش كده؛ (2) معارضة الخبراء بتتحوّل من علامة تحذير لدليل على قيمة التهديد بتاع الادعاء (عدم قابلية كلاسيكي للتفنيد — أي حاجة بتُعدّ تأكيداً). حقيقة الشهادات غير ذات صلة: شهادات حقيقية في مجال أ ما بتنتقلش لسلطة في مجال ب.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "self_explain",
+      "claim": "You encounter a seller who shows one study, then when challenged with contradicting studies says: \"Those were funded by pharma.\" When you ask for unfunded studies showing the same effect, he says: \"Independent researchers can't get funding for natural remedies.\" Which hallmarks appear?",
+      "claimAr": "لاقيت بائع بيوري دراسة واحدة، وبعدين لمّا تحدّيته بدراسات متناقضة قال: «دول اتموّلوا من شركات الدواء.» لمّا طلبت دراسات غير ممولة بتثبت نفس التأثير، قال: «الباحثون المستقلون ما يقدروش يلاقوا تمويل للعلاجات الطبيعية.» أنهي علامات تظهر؟",
+      "options": [
+        "He is making reasonable academic points",
+        "Cherry-picking (one supporting study), moving goalposts (any contradicting evidence is dismissed by source), and an unfalsifiable fallback (the absence of evidence is itself attributed to a conspiracy)",
+        "Funding bias is a real problem so he is right",
+        "Only one hallmark — cherry-picking"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why is 'pharma funding exists' not a valid reason to ignore all contradicting studies?",
+        "promptAr": "بكلماتك: ليه «تمويل صناعة الدواء موجود» مش سبب كافي لتجاهل كل الدراسات المتناقضة؟"
+      },
+      "explanation": "Three overlapping hallmarks: (1) cherry-picking — using one study while ignoring contradicting ones; (2) moving goalposts — the standard shifts from 'any study' to 'only unfunded studies'; (3) the conspiracy-of-denial fallback — the absence of supporting evidence is itself taken as proof of suppression. Note: funding bias is a real, documented problem in research — but 'pharma funding exists' does not validate an unrelated claim. That would be a non-sequitur.",
+      "explanationAr": "ثلاثة علامات متداخلة: (1) انتقاء انتهازي — استخدام دراسة واحدة مع تجاهل المتناقضة؛ (2) تحريك الأهداف — المعيار بيتحوّل من «أي دراسة» لـ«دراسات غير ممولة بس»؛ (3) احتياط مؤامرة الإنكار — غياب الأدلة الداعمة نفسه بيُؤخذ كدليل على القمع. ملاحظة: انحياز التمويل مشكلة حقيقية موثّقة في البحث — لكن «تمويل صناعة الدواء موجود» ما يُصحّحش ادعاءً غير مرتبط. ده استنتاج فاسد.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://www.bmj.com/content/357/bmj.j2497"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A friend defends a supplement: 'Scientists once said the Earth was flat — maybe mainstream medicine is just as wrong about this.'",
+      "claimAr": "صاحب بيدافع عن مكمّل: «العلماء ذات مرة قالوا الأرض مسطّحة — ممكن الطب الرئيسي يكون غلط بنفس القدر في ده.»",
+      "prompt": "What would DISPROVE the friend's argument? What distinguishes a case where mainstream consensus was wrong (and should be overturned) from a case where the outsider is simply wrong?",
+      "promptAr": "إيه اللي يكذّب حجة الصاحب؟ وإيه اللي بيميّز حالة الإجماع السائد كان غلط (ولازم يتقلب) عن حالة الخارج الخارج بس غلط؟",
+      "modelPoints": [
+        "Historical overturnings of scientific consensus happened because dissidents produced BETTER evidence — more observations, controlled experiments, predictive models that outperformed the old ones. The supplement has none of that.",
+        "For every correct outsider (Galileo, Semmelweis), there are thousands of incorrect outsiders who simply believed they were right. Being opposed doesn't make you a Galileo.",
+        "Flat-earth was overturned by evidence; the supplement's claims have not been tested in the way that would settle the question.",
+        "The question is not 'is mainstream science ever wrong?' (yes) — it's 'what evidence does THIS specific claim offer that competing explanations cannot account for?'"
+      ],
+      "modelPointsAr": [
+        "الانقلابات التاريخية للإجماع العلمي حصلت لأن المعارضين قدّموا أدلة أفضل — ملاحظات أكتر، وتجارب مضبوطة، ونماذج تنبّؤية تفوق القديمة. المكمّل ما عندوش أي ده.",
+        "لكل خارج صح (جاليليو، سيميلفايس)، في آلاف خارجين غلط ببساطة اعتقدوا إنهم صح. إنك تُعارَض ما بيخلّكش جاليليو.",
+        "الأرض المسطّحة اتقلبت بالأدلة؛ وادعاءات المكمّل ما اتاختبرتش بالطريقة اللي تحسم السؤال.",
+        "السؤال مش «هل العلم السائد بيغلط أحياناً؟» (آه) — ده «إيه الدليل اللي الادعاء ده تحديداً بيقدّمه اللي التفسيرات المنافسة ما تقدرش تفسّره؟»"
+      ],
+      "explanation": "The Galileo Gambit exploits real scientific history to create false equivalence. Considering what would disprove the gambit reveals the key asymmetry: being opposed is not evidence of being right. Evidence of being right is evidence of being right.",
+      "explanationAr": "مقامرة جاليليو بتستغل تاريخاً علمياً حقيقياً لتخلق تكافؤاً زائفاً. التفكير في اللي يكذّب المقامرة بيكشف عدم التماثل الجوهري: إنك تُعارَض مش دليل على إنك صح. الدليل على إنك صح هو الدليل على إنك صح.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://sciencebasedmedicine.org/the-galileo-gambit/"
+      ],
+      "cognitivebiasAtPlay": "Dunning-Kruger Effect"
+    },
+    {
+      "id": 6,
+      "mechanic": "retrieve",
+      "retrievalOf": 87,
+      "claim": "A legitimate early-stage therapy explicitly states its evidence is preliminary and invites controlled testing. A pseudoscientific one claims certainty and avoids testing. Which Day-87 concept best explains WHY pseudoscientific systems avoid testing?",
+      "claimAr": "علاج ناشئ شرعي بيُصرّح صراحةً إن أدلته أولية ويدعو للاختبار المضبوط. الشبه-علمي بيدّعي يقيناً ويتجنّب الاختبار. أنهي مفهوم من اليوم 87 يفسّر أفضل ليه الأنظمة الشبه-علمية بتتجنّب الاختبار؟",
+      "options": [
+        "Lack of funding — they simply can't afford it",
+        "Unfalsifiability by design — a system that avoids testing is a system that cannot be disproved, which is the structural goal of pseudoscience",
+        "Modesty — they prefer to wait until they are more certain",
+        "Regulation — governments prevent them from running trials"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Re-testing Day 87's core: Popper's falsifiability criterion explains that a claim which avoids testing is a claim that cannot be wrong — and a claim that cannot be wrong is not making a scientific claim at all. Preliminary evidence honestly labelled is science in progress. The same claim dressed as definitive proof, while avoiding the test that could falsify it, is pseudoscience by structure, not just by content.",
+      "explanationAr": "إعادة اختبار أساس اليوم 87: معيار بوبر للقابلية للتفنيد بيشرح إن الادعاء اللي بيتجنّب الاختبار هو ادعاء ما يقدرش يكون غلط — والادعاء اللي ما يقدرش يكون غلط مش بيدّعي ادعاءً علمياً أصلاً. الأدلة الأولية المُصنَّفة بأمانة علم في طور التقدّم. نفس الادعاء مُلبَّس كدليل حاسم، مع تجنّب الاختبار اللي ممكن يُفنّده، هو شبه-علم بالبنية لا بالمحتوى فقط.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

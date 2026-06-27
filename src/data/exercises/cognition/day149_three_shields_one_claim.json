@@ -1,0 +1,135 @@
+{
+  "id": "day149_three_shields_one_claim",
+  "phase": 4,
+  "week": 22,
+  "day": 149,
+  "title": "Three Shields, One Claim",
+  "titleAr": "ثلاثة دروع، ادعاء واحد",
+  "description": "A single false health claim can be refuted with logic, science, and faith all at once — and each layer strengthens the others. Today you practice all three on a real scenario.",
+  "descriptionAr": "ادعاء صحي زائف واحد ممكن يُردّ بالمنطق والعلم والدين معاً — وكل طبقة بتقوّي الباقيين. النهارده بتتدرّب على الثلاثة في سيناريو حقيقي.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/scientific-method/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Your uncle forwards a message: 'A well-known doctor says the viral Taybat diet system cures diabetes because it eliminates the toxins God put in chicken and milk.' You want to respond with THREE layers. Which combination is correct?",
+      "claimAr": "عمّك بعتلك رسالة: «دكتور مشهور بيقول إن نظام الطيبات بيشفي السكري عشان بيزيل السموم اللي الله حطّها في الفراخ واللبن». عايز تردّ بـثلاث طبقات. أنهي تركيبة صح؟",
+      "options": [
+        "Logic: 'doctors are always right.' Science: 'there are no studies.' Religion: 'food isn't sacred.'",
+        "Logic: the authority is outside his specialty (anaesthesia ≠ endocrinology). Science: no published RCT or controlled data — only testimonials. Religion: Al-Mā'idah 5:87 prohibits declaring lawful foods forbidden.",
+        "Logic: 'lots of people disagree.' Science: 'my doctor said no.' Religion: 'I read a different hadith.'",
+        "Only one layer is needed at a time."
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the full three-layer refutation. Logical layer: authority outside domain (an anaesthesiologist prescribing oncology/endocrinology nutrition has crossed his evidence base — Red Flag #7). Scientific layer: the entire evidence base was follower testimonials — no control group, no blinding, no indexed publication, while the Medical Syndicate's investigation found nothing submittable. Religious layer: Al-Mā'idah 5:87 directly forbids declaring lawful foods (chicken, milk) forbidden. Each layer can stand alone; together they close every exit.",
+      "explanationAr": "دي الردّ الثلاثي الكامل. الطبقة المنطقية: سلطة خارج التخصص (طبيب التخدير اللي بيصف تغذية للأورام والغدد عدّى قاعدة أدلته — علامة الخطر 7). الطبقة العلمية: قاعدة الأدلة كلها شهادات أتباع — لا مجموعة ضابطة ولا تعمية ولا منشور مُفهرس، بينما تحقيق نقابة الأطباء ما لاقاش حاجة قابلة للتقديم. الطبقة الدينية: المائدة 5:87 بتنهى صراحةً عن تحريم أطعمة حلال (فراخ، لبن). كل طبقة تقدر تقف لوحدها؛ مع بعض بيسدّوا كل مخرج.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "Someone says using a Quranic verse (like 5:87) to refute a false religious framing is disrespectful to religion. Is that right?",
+      "claimAr": "حد بيقول إن استخدام آية قرآنية (زي 5:87) لتفنيد إطار ديني زائف فيه قلّة أدب للدين. هل ده صح؟",
+      "options": [
+        "Yes — quoting scripture against a religious claim attacks religion",
+        "No — using the tradition to expose a misuse of the tradition defends it"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: when someone borrows «الطيبات»/«الخبائث» to give a diet false religious authority, why is answering with the Quran itself a defence of the faith rather than an attack on it?",
+        "promptAr": "بكلماتك: لمّا حد بيستعير «الطيبات»/«الخبائث» عشان يدّي حمية سلطة دينية زائفة، ليه الردّ بالقرآن نفسه دفاع عن الدين مش هجوم عليه؟"
+      },
+      "explanation": "It is the opposite of disrespect. When someone borrows Quranic vocabulary to give a dietary system false religious authority, using the Quran itself to show the system contradicts that authority protects the tradition from being weaponised. Al-Naḥl 16:116 specifically warns against declaring things halal or haram without authority — which is exactly what occurred. Saying that reasoning back in your own words is what cements it.",
+      "explanationAr": "ده عكس قلّة الأدب. لمّا حد بيستعير مفردات قرآنية عشان يدّي نظام غذائي سلطة دينية زائفة، استخدام القرآن نفسه لتبيين إن النظام يتعارض مع هذه السلطة بيحمي الموروث من إنه يتحوّل لسلاح. النحل 16:116 بينهى تحديداً عن تحليل وتحريم الأشياء بدون سلطة — وهو بالضبط اللي حصل. وإنك تقول التفكير ده بكلماتك هو اللي بيرسّخه.",
+      "sources": [
+        "https://quran.com/16/116",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "Someone argues: 'The logic refutation, the science refutation, and the religious refutation cannot all apply at once — that's just piling on to win.' It sounds fair, like you should pick your strongest single point.",
+      "claimAr": "حد بيقول: «الردّ المنطقي والعلمي والديني ما ينفعوش كلهم مع بعض — ده تكديس عشان تكسب». بتبان عادلة، كأنك المفروض تختار أقوى نقطة واحدة.",
+      "prompt": "Consider the opposite: what if three independent layers are STRONGER together, not redundant? What would have to be true about how the false claim was built for all three to genuinely apply?",
+      "promptAr": "فكّر في العكس: لو الثلاث طبقات المستقلة أقوى مع بعض مش تكرار؟ إيه اللي لازم يكون صح في طريقة بناء الادعاء الزائف عشان الثلاثة يطبّقوا بصدق؟",
+      "modelPoints": [
+        "Each layer addresses a different attack surface: the logic catches the fallacy (authority outside domain), the science demands controlled evidence, the religion blocks the false appeal to scripture.",
+        "A sophisticated false claim deliberately used all three weaknesses — so a complete defence needs all three answers, not one.",
+        "Multiple INDEPENDENT lines converging on the same conclusion is stronger evidence, not weaker — that's how science itself builds confidence.",
+        "'Piling on' would be three versions of the same point; these are three different points, so the objection mislabels what's happening."
+      ],
+      "modelPointsAr": [
+        "كل طبقة بتعالج سطح هجوم مختلف: المنطق بيمسك المغالطة (سلطة خارج التخصص)، والعلم بيطلب دليل محكوم، والدين بيسدّ الاستشهاد الزائف بالنصوص.",
+        "الادعاء الزائف المتطوّر استغلّ عمداً الثغرات الثلاثة — فالدفاع الكامل محتاج الإجابات الثلاثة، مش واحدة.",
+        "خطوط مستقلة متعددة بتتقاطع على نفس الخلاصة دليل أقوى مش أضعف — كده العلم نفسه بيبني الثقة.",
+        "«التكديس» يكون تلات نسخ من نفس النقطة؛ دول تلات نقط مختلفة، فالاعتراض بيوصف اللي بيحصل غلط."
+      ],
+      "explanation": "The three layers are independent lines of evidence that converge — each closes a different escape route a false claim tries to use. They do not contradict or duplicate each other; together they are stronger, which is precisely why a multi-layered fraud needs a multi-layered reply.",
+      "explanationAr": "الطبقات الثلاثة خطوط أدلة مستقلة بتتقاطع — كل واحدة بتسدّ مخرج هروب مختلف بيحاول الادعاء الزائف يستخدمه. ما بيتعارضوش ولا بيكرّروا بعض؛ مع بعض أقوى، وده بالظبط ليه الاحتيال متعدّد الطبقات محتاج ردّ متعدّد الطبقات.",
+      "sources": [
+        "https://plato.stanford.edu/entries/scientific-method/",
+        "https://www.sciencebasedmedicine.org/evidence-based-medicine-criteria-for-evaluating-evidence/"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 4,
+      "mechanic": "recognize",
+      "claim": "A family member says: 'Stop mixing religion with science — keep them separate.' In the context of a claim that has deliberately weaponised religion, what is the most accurate reply?",
+      "claimAr": "أحد أفراد الأسرة بيقول: «متخلّطش الدين بالعلم — فصّلهم». في سياق ادعاء عمداً استخدم الدين سلاحاً، إيه الردّ الأدق؟",
+      "options": [
+        "He is right — always keep them separate",
+        "When a claim falsely uses religious vocabulary to block scientific evaluation, the religious layer must be addressed — ignoring it leaves the false framing standing",
+        "Religion and science are always enemies",
+        "Only use one or the other, never both"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Separation of domains is a good default — but it cannot apply when the claim has already mixed them. The viral Taybat system intentionally imported Quranic vocabulary to make food rules feel sacred and immune to questioning. Answering only scientifically leaves the false religious shield intact, and people whose identity is faith-first will remain unreached. A three-layer reply meets them where they actually are.",
+      "explanationAr": "الفصل بين المجالين قاعدة جيدة بشكل عام — لكن ما تنفعش لمّا الادعاء نفسه خلطهم. نظام الطيبات الذي انتشر استورد بقصد مفردات قرآنية عشان يخلّي قواعد الطعام تبان مقدّسة ومحصّنة من السؤال. الردّ العلمي بس بيسيب الدرع الديني الزائف قائم، والناس اللي هويتها دينية في المقام الأول هيفضلوا بعيدين. الردّ الثلاثي بيلتقي بيهم حيث هم فعلاً.",
+      "sources": [
+        "EAL-case-001:moh-eg-2026-05",
+        "https://plato.stanford.edu/entries/science-religion/"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "wrapping a claim in a religious word to block questions",
+      "techniqueAr": "تغليف الادعاء بكلمة دينية عشان يقفل السؤال",
+      "task": "Feel the trick from the inside so you can spot it later (then we expose it). Take a totally harmless claim — say 'everyone should drink more water' — and write a short post that borrows a sacred-sounding word to make doubting it feel like doubting the faith. Notice how the religious frame quietly shuts down the 'where's the evidence?' question.",
+      "taskAr": "حِسّ بالحركة من جوّه عشان تكشفها بعدين (وبعدها نفضحها). خُد ادعاء غير ضار خالص — مثلاً «كل الناس المفروض تشرب مية أكتر» — واكتب بوست قصير بيستعير كلمة بتحسّ بالقدسية عشان يخلّي الشكّ فيه كأنه شكّ في الدين. لاحظ إزاي الإطار الديني بيقفل بهدوء سؤال «فين الدليل؟».",
+      "tells": [
+        "A sacred or moral word is glued onto an ordinary claim, so disagreeing feels like disrespecting the faith, not the claim.",
+        "The religious frame quietly replaces the evidence question — no study is offered, only reverence.",
+        "Doubt is reframed as betrayal of identity rather than honest inquiry.",
+        "The real tradition, read carefully, usually does NOT say what the borrowed word implies (cf. 5:87 forbidding the banning of lawful things).",
+        "It is unfalsifiable on purpose: 'how can you argue with something holy?'"
+      ],
+      "tellsAr": [
+        "كلمة مقدّسة أو أخلاقية بتتلزق على ادعاء عادي، فالاعتراض بيحسّ كأنه قلّة أدب للدين مش للادعاء.",
+        "الإطار الديني بيستبدل بهدوء سؤال الدليل — مفيش دراسة، بس تبجيل.",
+        "الشكّ بيتأطّر كخيانة للهوية بدل ما يكون بحث أمين.",
+        "الموروث الحقيقي، لو اتقرا بعناية، غالباً ما بيقولش اللي الكلمة المستعارة بتلمّح ليه (راجع 5:87 اللي بتنهى عن تحريم الحلال).",
+        "غير قابل للتفنيد بقصد: «إزاي تجادل حاجة مقدّسة؟»"
+      ],
+      "explanation": "Building the move in a harmless dose is 'active inoculation' — research shows it sharpens your ability to DISCRIMINATE manipulative framing from honest claims without turning you cynical about faith itself. Now you've felt the sacred-word shield from the inside; you'll recognise it instantly when a real diet, product, or ideology borrows the same costume. And the tradition itself (5:87, 16:116) is your best counter, because it forbids exactly this misuse.",
+      "explanationAr": "إنك تبني الحركة بجرعة غير ضارة ده «التلقيح النشط» — الأبحاث بتبيّن إنه بيشحذ قدرتك على التمييز بين التأطير المتلاعب والادعاء الصادق من غير ما يخلّيك متشكّك في الدين نفسه. دلوقتي حسّيت درع الكلمة المقدّسة من جوّه؛ هتكشفه فوراً لمّا حمية أو منتج أو أيديولوجيا حقيقية تستعير نفس الزِيّ. والموروث نفسه (5:87، 16:116) هو أحسن ردّ عندك، لأنه بينهى بالظبط عن سوء الاستخدام ده.",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    }
+  ]
+}

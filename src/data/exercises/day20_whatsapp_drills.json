@@ -1,0 +1,29 @@
+{
+  "id": "day20_whatsapp_drills",
+  "phase": 0,
+  "week": 3,
+  "day": 20,
+  "title": "WhatsApp Forward Analysis",
+  "titleAr": "تحليل رسائل واتساب",
+  "description": "Practice debunking Egyptian WhatsApp forwards.",
+  "descriptionAr": "تدرب على تفنيد رسائل واتساب مصرية.",
+  "type": "whatsapp_analysis",
+  "difficulty": 2,
+  "estimatedMinutes": 15,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "⚠️ عاجل: وزارة الصحة تحذر لا تشربوا مياه الصنبور 48 ساعة — تلوث خطير — انشر!!",
+      "claimAr": "⚠️ عاجل: وزارة الصحة تحذر لا تشربوا مياه الصنبور 48 ساعة — انشر!",
+      "truthValue": "false",
+      "category": "health",
+      "difficulty": 2,
+      "explanation": "Red flags: urgency markers, emotional manipulation, no official link, no date, no specific location. Real warnings are on moh.gov.eg.",
+      "explanationAr": "علامات تحذيرية: استعجال، تلاعب عاطفي، لا رابط رسمي. التحذيرات الحقيقية على moh.gov.eg.",
+      "sources": [
+        "https://www.moh.gov.eg"
+      ],
+      "cognitivebiasAtPlay": "Urgency Manipulation"
+    }
+  ]
+}

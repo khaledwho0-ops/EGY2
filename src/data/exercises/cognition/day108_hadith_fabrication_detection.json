@@ -1,0 +1,131 @@
+{
+  "id": "day108_hadith_fabrication_detection",
+  "phase": 3,
+  "week": 16,
+  "day": 108,
+  "title": "Spotting a Fabricated Religious Claim",
+  "titleAr": "كشف الادعاء الديني المُلفَّق",
+  "description": "A fabricated hadith or Islamic claim has specific tell-tale signs. Learning these signs protects both your health and your religion.",
+  "descriptionAr": "الحديث المُلفَّق أو الادعاء الإسلامي الزائف له علامات كاشفة محدّدة. تعلّم هذه العلامات يحمي صحّتك ودينك معاً.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://sunnah.com/ibnmajah",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Someone says: 'The Prophet ﷺ forbade milk because it leaves mucus in the body.' They cannot name a hadith collection or a chapter. This claim has been used to promote a commercial diet system. What is your assessment?",
+      "claimAr": "حد بيقول: «النبي ﷺ نهى عن اللبن لأنه يترك مخاطاً في الجسم». لا يستطيع تسمية مجموعة حديث أو فصل. وهذا الادعاء استُخدم لتسويق نظام غذائي تجاري. ما تقييمك؟",
+      "options": [
+        "It is probably true — the Prophet gave comprehensive lifestyle guidance",
+        "An unverifiable religious claim used to sell a product: no citation, no hadith grade, and contradicted by authenticated hadith documenting the Prophet ﷺ drinking milk",
+        "Probably a weak (da'if) hadith that still carries weight",
+        "It cannot be evaluated without a medical test"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A claim with no collection, no chapter, and no grade is not a hadith — it is an assertion. Sunan Abī Dāwūd and Sunan Ibn Mājah contain authenticated narrations of the Prophet ﷺ drinking milk. A commercial claim that contradicts these without evidence is using religion to bypass your rational evaluation — which is exactly what Al-Naḥl 16:116 warns against.",
+      "explanationAr": "ادعاء بلا مجموعة ولا فصل ولا درجة ليس حديثاً — بل هو تأكيد شخصي. سنن أبي داود وابن ماجه تحتويان على روايات معتمدة عن شرب النبي ﷺ اللبن. ادعاء تجاري يتناقض مع هذا بلا دليل يستخدم الدين لتجاوز تقييمك العقلاني — وهو بالضبط ما تنهى عنه النحل ١١٦.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://sunnah.com/ibnmajah",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: in classical Islamic hadith sciences, it is acceptable to repeat a hadith about health or food without knowing its grade (sahih / hasan / da'if / mawdu').",
+      "claimAr": "صح ولا غلط: في علوم الحديث الإسلامي الكلاسيكية، من المقبول تكرار حديث عن الصحة أو الطعام دون معرفة درجته (صحيح / حسن / ضعيف / موضوع).",
+      "correctAnswer": false,
+      "myth_en": "Any hadith about health can be passed on without checking its grade.",
+      "myth_ar": "أي حديث عن الصحة يمكن تمريره دون التحقق من درجته.",
+      "explanation": "False. Classical hadith scholarship developed a rigorous grading system precisely because fabricated hadith existed. A hadith graded 'mawdu'' (fabricated) or 'da'if jiddan' (very weak) cannot be used as evidence for a legal or medical ruling. The Prophet ﷺ warned against attributing to him what he did not say. Repeating an ungraded health claim attributed to the Prophet is an act with serious implications in Islamic scholarship.",
+      "explanationAr": "غلط. علم الحديث الكلاسيكي طوّر نظام تصنيف صارماً تحديداً لأن الأحاديث المُلفَّقة وُجدت. الحديث المصنَّف «موضوع» (مُلفَّق) أو «ضعيف جداً» لا يُستخدم دليلاً على حكم شرعي أو طبي. النبي ﷺ حذّر من نسبة ما لم يقله إليه. تكرار ادعاء صحي غير مُصنَّف منسوب للنبي له تبعات خطيرة في علم الحديث.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://www.iium.edu.my/deed/hadith/other/hadeethsciences.html"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A follower of the viral diet system says: 'Even if the hadith can't be found right now, the results speak for themselves — I felt better.' Is this a valid way to establish a religious claim?",
+      "claimAr": "تابع لنظام الطيبات الفيروسي بيقول: «حتى لو الحديث ما لقيناهوش دلوقتي، النتايج بتكلّم — أنا حسّيت أحسن». هل هذا طريق صحيح لإثبات ادعاء ديني؟",
+      "options": [
+        "Yes — personal experience is the best validation",
+        "No — personal wellbeing is a medical claim that needs evidence, and the religious premise needs an authenticated hadith; neither validates the other",
+        "Yes, because sincerity compensates for lack of sources",
+        "Partially — wellbeing proves the food rules are correct"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why can 'I felt better' not prove a religious hadith claim, and why can a missing hadith not be filled in by personal results?",
+        "promptAr": "بكلماتك: ليه «حسّيت أحسن» ما تقدرش تثبت ادعاء حديثي ديني، وليه الحديث الغايب ما ينفعش يتعوّض بنتايج شخصية؟"
+      },
+      "explanation": "These are two separate claims that cannot validate each other. 'I felt better' is a personal anecdote — at the bottom of the evidence hierarchy — and cannot prove that a diet cures disease. 'The Prophet forbade this food' is a religious claim that needs an authenticated hadith with a chain. Mixing them confuses two completely different standards of proof and leaves both claims unverified.",
+      "explanationAr": "هذان ادعاءان منفصلان لا يُثبت أحدهما الآخر. «حسّيت أحسن» حكاية شخصية — في أسفل هرم الأدلة — ولا تُثبت أن حمية تشفي مرضاً. «النبي نهى عن هذا الطعام» ادعاء ديني يحتاج حديثاً معتمداً بسنده. خلطهما يُلخّط معيارَي إثبات مختلفَين تماماً ويترك كلا الادعاءين غير مُثبَت.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A diet pamphlet repeatedly cites 'the Sunnah' but gives no hadith numbers or scholar names, and bans chicken and milk. Followers feel it must be Islamic — why would someone invoke the Prophet's name falsely?",
+      "claimAr": "منشور حمية يستشهد مراراً بـ«السنة» لكن بدون أرقام أحاديث أو أسماء علماء، ويُحرّم الفراخ واللبن. الأتباع يشعرون إنه لازم يكون إسلامي — ليه حد ينسب للنبي اسم كذباً؟",
+      "prompt": "What would disprove the idea that this pamphlet is following the Sunnah? What are alternative explanations for why someone would invoke Islamic authority without providing citations?",
+      "promptAr": "إيه اللي يكذّب فكرة إن المنشور ده بيتّبع السنة؟ وإيه التفسيرات البديلة ليه حد بيستدعي السلطة الإسلامية بدون استشهادات؟",
+      "modelPoints": [
+        "The clearest disproof: authenticated hadith in Sunan Abī Dāwūd and Sunan Ibn Mājah document the Prophet ﷺ eating chicken and drinking milk — directly contradicting both bans.",
+        "Invoking 'the Sunnah' without citations creates religious authority without earning it — a low-cost way to transfer trust from Islam to a commercial product.",
+        "Commercial incentive is a simpler explanation than piety: religious framing increases compliance and makes questioning feel spiritually risky.",
+        "If the claim were genuinely in the Sunnah, providing the hadith number costs nothing — the absence of a citation is the most informative data point."
+      ],
+      "modelPointsAr": [
+        "أوضح تفنيد: الأحاديث المعتمدة في سنن أبي داود وابن ماجه توثّق أكل النبي ﷺ الفراخ وشرب اللبن — مما يتناقض مباشرة مع التحريمَين.",
+        "استدعاء «السنة» بلا استشهادات يخلق سلطة دينية بدون استحقاقها — طريقة رخيصة لنقل الثقة من الإسلام لمنتج تجاري.",
+        "الدافع التجاري تفسير أبسط من التقوى: التأطير الديني يزيد الامتثال ويجعل التشكيك يبدو خطراً روحياً.",
+        "لو الادعاء موجود فعلاً في السنة، تقديم رقم الحديث لا يكلّف شيئاً — غياب الاستشهاد هو أكثر نقطة بيانات معلوماتية."
+      ],
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://sunnah.com/ibnmajah",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "fabricated religious authority",
+      "techniqueAr": "السلطة الدينية المُلفَّقة",
+      "task": "Feel the technique from the inside. Write a short social-media post that invokes 'the Sunnah' or 'scholars confirm' to promote a completely harmless claim — like 'drink more water' or 'take a daily walk' — WITHOUT providing any citation. Make it feel authentic and authoritative.",
+      "taskAr": "حسّ بالتقنية من جوّه. اكتب بوست سوشيال ميديا قصير يستدعي «السنة» أو «العلماء مؤكّدين» لتسويق ادعاء غير ضار تماماً — زي «اشرب مية أكتر» أو «اتمش يومياً» — من غير تقديم أي استشهاد. خلّيه يبدو أصيلاً وموثوقاً.",
+      "tells": [
+        "Religious authority invoked by name ('the Sunnah', 'scholars') with zero traceable citation — the authority is borrowed, not earned.",
+        "No hadith collection named, no chapter, no grade — just the aura of religious weight.",
+        "The claim feels more compelling because of the religious frame, not because of the evidence.",
+        "A reader who accepts it has transferred trust from Islam to the specific commercial or personal claim — without any Islamic source actually supporting it.",
+        "Anyone who asks for a citation can be deflected with 'it is well-known among the learned' — which is also not a source."
+      ],
+      "tellsAr": [
+        "سلطة دينية تُستدعى بالاسم («السنة»، «العلماء») بصفر استشهاد قابل للتتبع — السلطة مُستعارة، لا مُكتسَبة.",
+        "لا مجموعة حديث مسمّاة، لا فصل، لا درجة — فقط هالة الثقل الديني.",
+        "الادعاء يبدو أكثر إقناعاً بسبب الإطار الديني، لا بسبب الدليل.",
+        "القارئ الذي يقبله نقل الثقة من الإسلام للادعاء التجاري أو الشخصي المحدّد — بدون أن يدعمه أي مصدر إسلامي فعلاً.",
+        "أي شخص يطلب استشهاداً يمكن صرفه بـ«معروف عند العلماء» — وهو أيضاً ليس مصدراً."
+      ],
+      "sources": [
+        "https://www.iium.edu.my/deed/hadith/other/hadeethsciences.html",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

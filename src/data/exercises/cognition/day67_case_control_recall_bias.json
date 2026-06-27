@@ -1,0 +1,107 @@
+{
+  "id": "day67_case_control_recall_bias",
+  "phase": 2,
+  "week": 10,
+  "day": 67,
+  "title": "Looking Back — Case-Control & Recall Bias",
+  "titleAr": "البصّ للورا — دراسة الحالات-والشواهد وانحياز التذكّر",
+  "description": "Take the sick and the healthy, then look backward for what they were exposed to. Fast and cheap — but memory is not a video recorder, especially when compensation is on the line.",
+  "descriptionAr": "خُد المرضى والأصحّاء، وبعدين بُصّ للورا تدوّر على إيه اللي اتعرّضوا له. سريعة ورخيصة — لكن الذاكرة مش كاميرا، خصوصاً لمّا يكون في تعويض على المحكّ.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Dr. Ismail splits the workers into two groups — those WITH the rash (cases) and those WITHOUT it (controls) — then asks both groups what they were exposed to in the past. What design is this?",
+      "claimAr": "د. إسماعيل قسّم العمّال لمجموعتين — اللي عندهم الطفح (حالات) واللي مش عندهم (شواهد) — وبعدين سأل المجموعتين اتعرّضوا لإيه في الماضي. ده تصميم إيه؟",
+      "options": [
+        "A randomized controlled trial",
+        "A case-control study: start from the outcome (sick vs healthy) and look BACKWARD for exposures",
+        "A cross-sectional snapshot",
+        "A simple case report"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A case-control study starts at the end — with people who already have the disease and people who don't — and works backward to compare their past exposures. Its big advantage is speed and cost: you don't have to wait years, and it's excellent for rare diseases. That's why it's a real step up the ladder. But the direction it runs — backward, through memory — is also where its main weakness lives.",
+      "explanationAr": "دراسة الحالات-والشواهد بتبدأ من الآخر — بناس عندهم المرض فعلاً وناس ما عندهومش — وبتشتغل للورا علشان تقارن تعرّضاتهم الماضية. ميزتها الكبيرة السرعة والتكلفة: مش هتستنى سنين، وممتازة للأمراض النادرة. علشان كده هي خطوة حقيقية لفوق في السلّم. لكن الاتجاه اللي بتجري فيه — للورا، من خلال الذاكرة — هو كمان مكان ضعفها الأساسي.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies"],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "The sick workers, searching their memories for a cause, vividly recall a chemical spill years ago; the healthy workers, with no reason to dwell on it, barely remember it. What is this distortion called?",
+      "claimAr": "العمّال المرضى، وهمّا بيفتّشوا في ذاكرتهم عن سبب، بيتذكّروا بوضوح تسرّب كيماوي من سنين؛ والعمّال الأصحّاء، من غير سبب يخلّيهم يفكّروا فيه، بالكاد بيفتكروه. التشويه ده اسمه إيه؟",
+      "options": [
+        "Selection bias",
+        "Recall bias: people who are ill search harder for a past cause and 'remember' exposures more than healthy people do",
+        "Placebo effect",
+        "Confounding"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does being sick make you 'remember' differently — and why does this NOT mean sick people are dishonest?",
+        "promptAr": "بكلماتك: ليه إنك تكون عيّان بيخلّيك «تفتكر» بشكل مختلف — وليه ده مش معناه إن المرضى كذّابين؟"
+      },
+      "explanation": "This is recall bias, the signature weakness of case-control studies. When you're sick, your mind goes hunting for a reason, so you remember (and sometimes over-remember) anything that might explain it. Healthy people, with no such drive, forget the same events. So the two groups don't differ because of real exposure — they differ because of how hard each group searched its memory. Memory is a storyteller, not a tape recorder. This is ordinary human psychology, not dishonesty — which is exactly why good researchers verify with objective records rather than relying on memory alone.",
+      "explanationAr": "ده «انحياز التذكّر»، الضعف المميّز لدراسات الحالات-والشواهد. لمّا تكون عيّان، عقلك بيروح يدوّر على سبب، فبتفتكر (وأحياناً بتبالغ في تذكّر) أي حاجة ممكن تفسّره. الأصحّاء، من غير الدافع ده، بينسوا نفس الأحداث. فالمجموعتين مش بيختلفوا بسبب تعرّض حقيقي — بيختلفوا بسبب قد إيه كل مجموعة فتّشت في ذاكرتها. الذاكرة حكّاءة، مش مسجّل. ده علم النفس الإنساني العادي، مش كذب — وده بالظبط هو السبب اللي بيخلّي الباحثين الكويسين يتحقّقوا بسجلّات موضوعية بدل ما يعتمدوا على الذاكرة لوحدها.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies"],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: recall bias gets WORSE when the people being asked expect money or compensation if a particular cause is blamed. Before checking: how confident are you in your answer?",
+      "claimAr": "صح ولا غلط: انحياز التذكّر بيبقى أسوأ لمّا الناس اللي بنسألهم بيتوقّعوا فلوس أو تعويض لو سبب معيّن اتلامته. قبل ما تتأكد: قد إيه واثق في إجابتك؟",
+      "correctAnswer": true,
+      "myth_en": "People remember the past accurately regardless of what they stand to gain.",
+      "myth_ar": "الناس بتفتكر الماضي بدقّة بغضّ النظر عن اللي ممكن تكسبه.",
+      "explanation": "True. Incentives bend memory. When recalling a certain exposure could mean compensation, sick leave, or vindication, people unconsciously remember it more strongly and more often — not because they're dishonest, but because hope and need shape what feels true. This is why a case-control study run where everyone expects a payout is on very shaky ground, and why good researchers try to verify exposures with records instead of memory alone. Calibration note: if you hesitated, that's worth examining — most people's intuition is that 'I'd remember accurately even if it helped me', which is exactly the overconfidence that makes this bias so damaging.",
+      "explanationAr": "صح. الحوافز بتلوي الذاكرة. لمّا تذكّر تعرّض معيّن ممكن يعني تعويض، أو إجازة مرضية، أو إثبات صحّة موقف، الناس بتفتكره بقوة أكبر وتكرار أكتر من غير ما تحس — مش لأنهم كذّابين، لكن لأن الأمل والاحتياج بيشكّلوا اللي بيحسّ صح. علشان كده دراسة حالات-وشواهد في مكان الكل فيه متوقّع تعويض بتبقى على أرض هشّة جداً. ملاحظة معايرة: لو ترددت، ده يستاهل تأمّل — حدس أغلب الناس هو «أنا كنت هفتكر بدقّة حتى لو بيفيدني»، وده بالظبط الثقة الزائدة اللي بتخلّي الانحياز ده خطير.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies"],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "After hearing «نظام الطيبات» claims, followers were asked to 'remember' how they felt before and after quitting chicken and milk. Most 'recalled' feeling much worse before — which felt like strong evidence the diet worked.",
+      "claimAr": "بعد ما سمعوا ادعاءات «نظام الطيبات»، اتطلب من الأتباع إنهم «يفتكروا» حسّوا إزاي قبل وبعد ما بطّلوا فراخ ولبن. أغلبهم «افتكر» إنه كان أسوأ بكتير قبل — وده حسّه دليل قوي إن الحمية نفعت.",
+      "prompt": "What would disprove the idea that this retrospective recall proves the diet worked? What alternative explanations exist for why followers 'remembered' feeling worse before?",
+      "promptAr": "إيه اللي يكذّب فكرة إن التذكّر بأثر رجعي ده بيثبت إن الحمية نفعت؟ إيه التفسيرات البديلة الموجودة لإيه يكون الأتباع «افتكروا» إنهم كانوا أسوأ قبل؟",
+      "modelPoints": [
+        "If the recall is untrustworthy: we'd expect exactly what we see — memory of 'before' quietly rewritten to be darker *after* someone already believes the diet saved them. Belief reshapes recall retrospectively.",
+        "People who stayed on the diet long enough to be surveyed are already self-selected successes; the people who quit early because it wasn't working or made them worse are absent from the 'remember' pool.",
+        "The question itself ('how did you feel BEFORE?') invites reconstruction, not retrieval — we don't store 'baseline wellness scores', we rebuild them from current beliefs.",
+        "A real measurement would write down symptoms *at the time*, before anyone joined the diet, so that memory cannot edit the baseline after the outcome is known."
+      ],
+      "modelPointsAr": [
+        "لو التذكّر غير موثوق: هنتوقع بالظبط ما بنشوفه — ذاكرة «قبل» بتتعاد كتابتها في صمت علشان تبقى أحلك *بعد* ما حد يصدّق أصلاً إن الحمية أنقذته. التصديق بيعيد تشكيل التذكّر بأثر رجعي.",
+        "الناس اللي فضلوا على الحمية وقت كافي علشان يتسألوا هم أصلاً نجاحات منتقاة ذاتياً؛ الناس اللي قفلوا بدري لأنها ما كانتش بتنفع أو وضّعتهم غائبين من مجموعة «افتكروا».",
+        "السؤال نفسه («إزاي كنت حاسس قبل؟») بيدعو للبناء، مش الاسترجاع — ما بنخزّنش «درجات عافية أساسية»، إحنا بنعيد بناءها من المعتقدات الحالية.",
+        "القياس الحقيقي كان هيكتب الأعراض *في وقتها*، قبل ما حد ينضم للحمية، علشان الذاكرة ما تقدرش تعدّل الأساس بعد ما النتيجة تتعرَف."
+      ],
+      "sources": ["EAL-case-001:ems-2026-03", "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies"],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'I used to eat chicken and feel terrible. I stopped, and now I feel great. Ten of my friends had the same experience. So chicken must be the cause — and anyone who says otherwise hasn't tried it themselves.'",
+      "claimAr": "فكّك الحُجّة دي: «كنت باكل فراخ وبحسّ بتعب. بطّلت، ودلوقتي بحسّ تمام. عشرة من أصحابي عندهم نفس التجربة. يبقى الفراخ لازم تكون السبب — وأي حد بيقول غير كده مجرّبش بنفسه.»",
+      "parts": [
+        { "text": "Chicken must be causing the bad feelings.", "textAr": "الفراخ لازم بتسبّب الإحساس الوحش.", "role": "conclusion" },
+        { "text": "I felt terrible while eating chicken, then felt better when I stopped.", "textAr": "كنت حاسس بتعب وأنا باكل فراخ، وبعدين حسّيت أحسن لمّا بطّلت.", "role": "premise" },
+        { "text": "Ten friends report the same pattern.", "textAr": "عشرة أصحاب بيبلّغوا عن نفس النمط.", "role": "premise" },
+        { "text": "(Unstated) Sequential events prove the first caused the second.", "textAr": "(غير مذكور) الأحداث المتتالية بتثبت إن الأول سبّب التاني.", "role": "assumption" },
+        { "text": "Anyone who disagrees hasn't tried it themselves.", "textAr": "أي حد بيختلف مجرّبش بنفسه.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION — that what happens after something proves that thing caused it — is the post hoc fallacy ('after this, therefore because of this'). The ten friends are a case series with recall bias: they remember 'better after stopping' but not the friends who stopped and felt the same. The 'haven't tried it' line is IRRELEVANT — it redirects to personal experience instead of evidence structure. Spotting these roles lets you address the actual weak joint (the assumption), not get distracted by the irrelevant add-on.",
+      "explanationAr": "الافتراض الخفي — إن اللي بيحصل بعد حاجة بيثبت إنها سبّبته — هو مغالطة بعد هذا («بعد ده، إذن بسببه»). الأصحاب العشرة سلسلة حالات بانحياز تذكّر: بيفتكروا «أحسن بعد ما قفلنا» لكن مش الأصحاب اللي قفلوا وحسّوا بنفس الشيء. جملة «مجرّبش بنفسه» غير ذات صلة — بتحوّل الكلام لتجربة شخصية بدل بنية الدليل. إنك تكشف الأدوار دي بيخلّيك تتعامل مع المفصل الضعيف الحقيقي (الافتراض)، مش تتصرف من الإضافة غير ذات الصلة.",
+      "sources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-and-cross-sectional-studies", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5686928/"],
+      "cognitivebiasAtPlay": "Post Hoc Fallacy"
+    }
+  ]
+}

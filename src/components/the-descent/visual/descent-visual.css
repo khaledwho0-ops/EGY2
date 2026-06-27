@@ -1,0 +1,245 @@
+/* ═══════════════════════════════════════════════════════════════
+ * descent-visual.css — SCOPED visual layer for «THE DESCENT» v2.
+ *
+ * Additive only. Every selector is namespaced .td-* and lives under the
+ * /the-descent tree (imported by visual/index.ts). It never edits
+ * unrelated globals. Animates transform / opacity / filter ONLY.
+ *
+ * Page-level accent vars (--td-accent-a / --td-accent-b / ...) are
+ * published by DescentExperience via zoneCssVars(); primitives below
+ * fall back to the DESCENT palette when a var is absent.
+ * ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --td-accent-a: #e2342f;
+  --td-accent-b: #e6b400;
+  --td-accent-a-rgb: 226, 52, 47;
+  --td-accent-b-rgb: 230, 180, 0;
+  --td-canvas: #08080a;
+  /* DescentExperience tweens this for the grain overlay. */
+  --td-grain-opacity: 0.05;
+}
+
+/* ──────────────────────── KEYFRAMES ──────────────────────── */
+@keyframes marquee-x {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    /* track is duplicated → -50% is one seamless loop */
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-x-rev {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes orb-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, -3%, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.9;
+    filter: blur(1px);
+  }
+}
+
+@keyframes td-grain-shift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1%, 1%, 0);
+  }
+}
+
+/* ──────────────────────── MARQUEE ──────────────────────── */
+.td-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.td-marquee__track {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-x var(--td-marquee-dur, 28s) linear infinite;
+}
+.td-marquee__track--rev {
+  animation-name: marquee-x-rev;
+}
+.td-marquee:hover .td-marquee__track {
+  animation-play-state: paused;
+}
+/* hazard barber-pole stripe behind the descent lie-tape */
+.td-hazard {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(var(--td-accent-a-rgb), 0.16) 0,
+    rgba(var(--td-accent-a-rgb), 0.16) 14px,
+    transparent 14px,
+    transparent 28px
+  );
+}
+
+/* ──────────────────────── ORBS ──────────────────────── */
+.td-orb {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  will-change: transform;
+  animation: orb-drift var(--td-orb-dur, 16s) ease-in-out infinite;
+  filter: blur(2px);
+}
+
+/* ──────────────────────── GLASS ──────────────────────── */
+.td-glass {
+  position: relative;
+  border-radius: 18px;
+  background: rgba(10, 10, 12, 0.42);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+/* hairline gradient border via mask trick */
+.td-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--td-accent-a-rgb), 0.55),
+    rgba(var(--td-accent-b-rgb), 0.12) 60%,
+    rgba(255, 255, 255, 0.04)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+/* inner top highlight */
+.td-glass::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 40%;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent);
+  pointer-events: none;
+}
+.td-glass > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ──────────────────────── DISPLAY TYPE ──────────────────────── */
+.td-display-stroke {
+  -webkit-text-stroke: 1.5px rgba(var(--td-accent-a-rgb), 0.55);
+  color: transparent;
+}
+.td-display-fill {
+  color: #f5f2ec;
+}
+.td-display-grad {
+  background: linear-gradient(120deg, var(--td-accent-a), var(--td-accent-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ──────────────────────── GRAIN / SCANLINE ──────────────────────── */
+.td-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: var(--td-grain-opacity, 0.05);
+  will-change: transform;
+  animation: td-grain-shift 8s steps(6) infinite alternate;
+}
+.td-scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.5) 0px,
+    rgba(255, 255, 255, 0.5) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* ──────────────────────── HIGHLIGHT BOX corner ticks ──────────────────────── */
+.td-hbox {
+  position: relative;
+  display: inline-flex;
+  border: 1px solid rgba(var(--td-accent-a-rgb), 0.55);
+  background: rgba(var(--td-accent-a-rgb), 0.06);
+}
+.td-hbox::before,
+.td-hbox::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-color: var(--td-accent-a);
+  border-style: solid;
+}
+.td-hbox::before {
+  top: -2px;
+  left: -2px;
+  border-width: 1.5px 0 0 1.5px;
+}
+.td-hbox::after {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 1.5px 1.5px 0;
+}
+
+/* ──────────────────────── REDUCED MOTION ────────────────────────
+ * Kill every looping animation; primitives also ship JS fallbacks but
+ * this is the belt-and-braces CSS guard. */
+@media (prefers-reduced-motion: reduce) {
+  .td-marquee__track,
+  .td-orb,
+  .td-grain,
+  .td-glow-pulse {
+    animation: none !important;
+  }
+}
+
+/* <768px: marquee holds still as an angled strip (mobile fallback). */
+@media (max-width: 767px) {
+  .td-marquee__track {
+    animation: none !important;
+  }
+}

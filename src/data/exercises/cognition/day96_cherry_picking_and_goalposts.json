@@ -1,0 +1,123 @@
+{
+  "id": "day96_cherry_picking_and_goalposts",
+  "phase": 2,
+  "week": 14,
+  "day": 96,
+  "title": "Cherry-Picking and Moving Goalposts",
+  "titleAr": "الانتقاء الانتهازي وتحريك الأهداف",
+  "description": "Two of the most common moves in pseudoscience: showing only the evidence that fits, and shifting the standard whenever a challenge is met.",
+  "descriptionAr": "اتنين من أكتر حركات شبه-العلم شيوعاً: إظهار الأدلة المناسبة بس، وتحريك المعيار كل ما تتحدّى.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/pseudo-science/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A supplement seller cites 5 studies showing their product reduced inflammation. You later find 20 other studies that showed no effect or harm. The seller is unaware of these. What is the name of this pattern?",
+      "claimAr": "بائع مكمّل غذائي بيستشهد بـ5 دراسات بتبيّن إن منتجه قلّل الالتهاب. بعدين لاقيت 20 دراسة تانية ما أثبتتش تأثيراً أو أثبتت ضرراً. البائع مش عارف بيهم. إيه اسم النمط ده؟",
+      "options": [
+        "Normal reporting",
+        "Cherry-picking — selecting only the subset of evidence that confirms the claim while ignoring contradictory evidence",
+        "Good marketing",
+        "A systematic review"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Cherry-picking (also called selective reporting or confirmation bias in evidence use) is choosing evidence that supports a claim while ignoring the rest of the dataset. It produces a distorted picture even when each selected study is real. The antidote is systematic review and meta-analysis — which pools all available studies, not just the convenient ones. Publication bias (positive results get published more) is a related structural problem even in honest science.",
+      "explanationAr": "الانتقاء الانتهازي (ويُسمّى أيضاً التقرير الانتقائي أو انحياز التأكيد في استخدام الأدلة) هو اختيار الأدلة الداعمة للادعاء مع تجاهل بقية مجموعة البيانات. بيعطي صورة مشوّهة حتى لمّا كل دراسة مختارة تكون حقيقية. الترياق هو المراجعة المنهجية والتحليل البَعدي — اللي بيجمّع كل الدراسات المتاحة مش بس المناسبة. انحياز النشر (النتائج الإيجابية بتتنشر أكتر) مشكلة هيكلية مرتبطة حتى في العلم الأمين.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+        "https://www.bmj.com/content/357/bmj.j2497"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "Scenario A: A critic says to a wellness system promoter: \"Where are the clinical trials?\" The promoter says: \"Trials are too slow — patients can't wait.\" Next month: \"We don't need trials — traditional wisdom is enough.\" Three months later: \"We have a small study — that proves it!\" What move is this?",
+      "claimAr": "سيناريو: ناقد بيقول لمروّج نظام رفاهية: «فين التجارب السريرية؟» المروّج بيقول: «التجارب بطيئة جداً — المرضى ما يقدروش ينتظروا.» الشهر الجاي: «ما محتاجناش تجارب — الحكمة التقليدية كافية.» بعد ثلاثة شهور: «عندنا دراسة صغيرة — ده يثبته!» إيه الحركة دي؟",
+      "options": [
+        "Consistent scientific reasoning",
+        "Moving goalposts — the standard of proof required keeps shifting to avoid any evidence counting against the claim",
+        "Reasonable adaptation to new information",
+        "A good-faith debate"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what does moving goalposts reveal about what the promoter is actually trying to protect — the truth or the claim?",
+        "promptAr": "بكلماتك: إيه اللي تحريك الأهداف بيكشفه عن اللي المروّج بيحاول يحميه فعلاً — الحقيقة ولا الادعاء؟"
+      },
+      "explanation": "Moving goalposts is a pseudoscience hallmark: the acceptable standard of proof changes every time it risks being met — or reveals that the claim falls short. When trials are demanded: trials are wrong. When traditional evidence is cited: only trials count. When a small study appears: that small study is suddenly definitive. The common thread is that the real goal is not to find the truth but to protect the claim from any possible falsification.",
+      "explanationAr": "تحريك الأهداف علامة شبه-العلم: معيار الدليل المقبول بيتغيّر كل مرة يخاطر يتحقق — أو يكشف إن الادعاء قاصر عنه. لمّا يُطلب تجارب: التجارب غلطة. لمّا يُستشهد بدليل تقليدي: فقط التجارب بتعدّ. لمّا تظهر دراسة صغيرة: فجأة الدراسة الصغيرة دي حاسمة. الخيط المشترك إن الهدف الحقيقي مش إيجاد الحقيقة لكن حماية الادعاء من أي تفنيد ممكن.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://sciencebasedmedicine.org/moving-goalposts/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if a systematic review finds that 25 of 30 studies showed no benefit from a supplement, but 5 showed benefit, a seller is being honest to say 'studies show it works.'",
+      "claimAr": "صح ولا غلط: لو مراجعة منهجية لاقت إن 25 من 30 دراسة ما أثبتتش فائدة من مكمّل غذائي، لكن 5 أثبتت فائدة، يبقى البائع أمين لمّا يقول «الدراسات تثبت إنه بيشتغل».",
+      "correctAnswer": false,
+      "explanation": "False — this is cherry-picking dressed as legitimate citation. The overall evidence direction (25/30 showing no benefit) is far more informative than the 5 positive studies. Those 5 may reflect chance findings, small sample size, publication bias, or methodological flaws. A systematic review exists precisely to aggregate the full picture. Using 'some studies' to imply 'the weight of evidence' is a misleading rhetorical move, not honest science communication. Calibration note: if you were unsure, that's healthy — this distinction requires practice to feel automatic.",
+      "explanationAr": "غلط — ده انتقاء انتهازي متنكّر في هيئة استشهاد شرعي. اتجاه الأدلة الإجمالي (25/30 ما أثبتتش فائدة) أكثر إفادةً بكتير من الـ5 دراسات الإيجابية. الـ5 دول ممكن تعكس نتائج صدفة أو حجم عيّنة صغير أو انحياز نشر أو عيوب منهجية. المراجعة المنهجية موجودة بالضبط عشان تجمّع الصورة الكاملة. استخدام «بعض الدراسات» بمعنى «ثقل الأدلة» حركة بلاغية مضلّلة مش تواصل علمي أمين. ملاحظة معايرة: لو كنت مش متأكد، ده صحي — الفرق ده بيحتاج تمرين يبقى تلقائي.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+        "https://www.bmj.com/content/357/bmj.j2497"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "The viral Taybat diet system built its case on follower testimonials. When the Medical Syndicate asked for just three documented cases with lab results, the system's supporters said: 'The Syndicate is corrupt — their standard doesn't apply here. And besides, our thousands of testimonials already prove everything.'",
+      "claimAr": "نظام «الطيبات» اللي انتشر بنى حُجّته على شهادات الأتباع. لمّا طلبت نقابة الأطباء ثلاثة حالات موثّقة بتحاليل، قال المؤيّدون: «النقابة فاسدة — معيارهم ما ينطبقش هنا. وبالإضافة لكده، آلاف شهاداتنا بتثبت كل حاجة أصلاً.»",
+      "parts": [
+        { "text": "The Syndicate's documentation request does not apply to us.", "textAr": "طلب التوثيق بتاع النقابة مش بينطبق علينا.", "role": "conclusion" },
+        { "text": "Our thousands of testimonials prove everything.", "textAr": "آلاف شهاداتنا بتثبت كل حاجة.", "role": "premise" },
+        { "text": "The Medical Syndicate is corrupt.", "textAr": "نقابة الأطباء فاسدة.", "role": "premise" },
+        { "text": "(Unstated) Testimonials are equivalent to documented clinical evidence.", "textAr": "(غير مذكور) الشهادات معادلة للأدلة السريرية الموثّقة.", "role": "assumption" },
+        { "text": "No standard from a corrupt body should ever be applied to us.", "textAr": "أي معيار من جهة فاسدة ما ينبغيش أصلاً يتطبّق علينا.", "role": "assumption" },
+        { "text": "The Syndicate employs many good-faith physicians.", "textAr": "النقابة بتوظّف أطباء كتير بحسن نية.", "role": "irrelevant" }
+      ],
+      "explanation": "Mapping the argument exposes two hidden assumptions: (1) testimonials equal evidence — they don't (no control, no blinding, no denominator); (2) corruption of an institution nullifies its evidentiary standards — it doesn't. The irrelevant fact about good-faith physicians has no bearing on the logic. Once these assumptions are visible, the conclusion (we are exempt) does not follow.",
+      "explanationAr": "تفكيك الحُجّة بيكشف افتراضين خفيّين: (1) الشهادات = دليل — وهي مش كده (لا ضابط، لا تعمية، لا مقام)؛ (2) فساد مؤسسة بيُبطل معاييرها الإثباتية — وهو مش كده. الحقيقة غير ذات الصلة عن الأطباء بحسن النية ليس لها أثر على المنطق. لمّا تبقى الافتراضات مرئية، الخلاصة (نحن مُعفَون) ما بتلزمش.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "EAL-case-001:conspiracy-4"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A graph shows a health trend (rising screens) and a social problem (rising youth anxiety) moved together over 10 years. A reporter concludes: 'This proves screens cause anxiety.'",
+      "claimAr": "رسم بياني فيه ترند صحي (زيادة الشاشات) ومشكلة اجتماعية (زيادة قلق الشباب) تحرّكوا مع بعض على 10 سنين. صحفي بيستنتج: «ده يثبت إن الشاشات بتسبّب القلق.»",
+      "prompt": "What would DISPROVE the screens-cause-anxiety interpretation? What else could explain the same correlation?",
+      "promptAr": "إيه اللي يكذّب تفسير «الشاشات بتسبّب القلق»؟ وإيه تفسير تاني ممكن يشرح نفس الارتباط؟",
+      "modelPoints": [
+        "If screens caused anxiety, then populations with equal screen time but lower economic stress should show the same anxiety rise — and they often don't.",
+        "Both screens AND anxiety could be caused by a third factor: COVID-era isolation, economic precarity, or social comparison mechanisms that happen to use screens as a medium.",
+        "Reverse causation: anxious young people might seek screens as a coping mechanism, not the other way.",
+        "Natural experiment: if a country's internet access is suddenly cut, does anxiety immediately fall? Evidence does not consistently support this."
+      ],
+      "modelPointsAr": [
+        "لو الشاشات سبّبت القلق، المجتمعات بنفس وقت الشاشة ولكن بضغط اقتصادي أقل كانت هتبيّن نفس ارتفاع القلق — وغالباً مش بيحصل.",
+        "الشاشات والقلق معاً ممكن يكونوا نتيجة عامل ثالث: عزلة عصر كوفيد، أو هشاشة اقتصادية، أو آليات المقارنة الاجتماعية اللي تصادفياً بتستخدم الشاشات كوسيلة.",
+        "السببية المعكوسة: الشباب القلقين ممكن يلجأوا للشاشات كآلية تكيّف، مش العكس.",
+        "التجربة الطبيعية: لو قُطع الإنترنت في بلد فجأة، هل القلق بينخفض على الفور؟ الأدلة ما بتدعمش ده باستمرار."
+      ],
+      "explanation": "Correlation does not equal causation. Considering opposite explanations is the strongest protection against jumping from 'these two things moved together' to 'one caused the other.' Each alternative explanation demands its own evidence — the correlation alone settles nothing.",
+      "explanationAr": "الارتباط لا يعني السببية. التفكير في التفسيرات العكسية هو أقوى حماية ضد القفز من «الاتنين تحرّكوا مع بعض» لـ«واحد سبّب التاني». كل تفسير بديل بيحتاج دليله الخاص — الارتباط وحده ما بيحسمش حاجة.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology",
+        "https://www.nature.com/articles/s41562-019-0543-6"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    }
+  ]
+}

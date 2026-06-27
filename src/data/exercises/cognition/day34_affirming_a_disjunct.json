@@ -1,0 +1,132 @@
+{
+  "id": "day34_affirming_a_disjunct",
+  "phase": 1,
+  "week": 5,
+  "day": 34,
+  "title": "Affirming a Disjunct",
+  "titleAr": "إثبات أحد البديلين",
+  "description": "\"Either the diet helped or the medicine did. The diet helped — so the medicine did nothing.\" Today: why 'A or B' usually allows BOTH, and the trap of forcing an either/or.",
+  "descriptionAr": "«يا الحمية نفعت يا الدوا. الحمية نفعت — يبقى الدوا ما عملش حاجة». النهاردة: ليه «يا أ يا ب» غالباً بتسمح بالاتنين، وفخّ إنك تفرض «يا ده يا ده».",
+  "type": "logic",
+  "difficulty": 4,
+  "estimatedMinutes": 15,
+  "source": "https://plato.stanford.edu/entries/fallacies/disjunctive-syllogism/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A follower reasons: \"Either the «نظام الطيبات» diet improved my mother OR her insulin did. The diet clearly improved her — so the insulin was useless and she can stop it.\" Where's the trap?",
+      "claimAr": "تابع بيقول: «يا حمية الطيبات اللي حسّنت أمي يا الأنسولين. الحمية واضح إنها حسّنتها — يبقى الأنسولين كان ملوش لازمة وتقدر توقفه». الفخّ فين؟",
+      "options": [
+        "No trap — if one helped, the other did nothing",
+        "Affirming a disjunct: 'A or B' normally allows both to be true, so the diet helping does not prove the insulin did nothing; stopping insulin on that false either/or can be deadly",
+        "Insulin and diet can never both work",
+        "The diet must have been the only factor"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An inclusive 'or' allows both options to be true at once. From 'the diet OR the insulin helped' plus 'the diet helped,' you cannot conclude 'the insulin did nothing' — improvements in chronic disease are usually multi-factor (medication + better eating + less stress, all together). Forcing a false either/or here is doubly dangerous: it's used to justify stopping insulin, the single most dangerous signal in the whole case. Both can be helping; only one of them keeps a type-1 diabetic alive.",
+      "explanationAr": "«أو» الشاملة بتسمح للبديلين يكونوا صح في نفس الوقت. من «الحمية أو الأنسولين نفعت» مع «الحمية نفعت»، ما تقدرش تستنتج «الأنسولين ما عملش حاجة» — التحسّن في الأمراض المزمنة عادةً متعدّد العوامل (دوا + أكل أحسن + توتر أقل، كلهم مع بعض). فرض «يا ده يا ده» الكاذبة هنا خطر مضاعف: بتُستخدم لتبرير إيقاف الأنسولين، أخطر إشارة في الحالة كلها. الاتنين ممكن يكونوا بينفعوا؛ بس واحد بس فيهم بيخلّي مريض النوع الأول عايش.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/disjunctive-syllogism/",
+        "EAL-case-001:redflag-8"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: \"Either you trust modern medicine OR you trust natural living. I choose natural living — so I must reject modern medicine entirely.\" This either/or is a real, forced choice.",
+      "claimAr": "صح ولا غلط: «يا تثق في الطب الحديث يا تثق في الحياة الطبيعية. أنا اخترت الطبيعي — يبقى لازم أرفض الطب الحديث كله». الخيار ده حقيقي ومفروض.",
+      "correctAnswer": false,
+      "explanation": "False — this is a false dilemma feeding an affirmed disjunct. 'Medicine OR natural living' is not a real either/or: you can take prescribed insulin AND eat fresh vegetables, walk daily, sleep well, and pray. Choosing one good thing (healthy eating) does not require rejecting another good thing (effective medicine). Deceivers love a forced binary because it converts a sensible 'both' into a dangerous 'instead.' The healthiest people in the world do both at once.",
+      "explanationAr": "غلط — ده «معضلة زائفة» بتغذّي «إثبات أحد البديلين». «الطب أو الحياة الطبيعية» مش «يا ده يا ده» حقيقية: تقدر تاخد الأنسولين الموصوف وتاكل خضار طازة وتمشي كل يوم وتنام كويس وتصلّي. اختيار حاجة كويسة (الأكل الصحي) ما بيتطلّبش رفض حاجة كويسة تانية (الدوا الفعّال). المخادعون بيحبوا الثنائية المفروضة لأنها بتحوّل «الاتنين» المعقولة لـ«بدل» الخطيرة. أصحّ الناس في العالم بيعملوا الاتنين مع بعض.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A neighbour argues: \"Either the doctors are right or the people's testimonials are right. The testimonials are real — so the doctors must be wrong.\" Why doesn't this conclusion follow?",
+      "claimAr": "جار بيقول: «يا الأطباء صح يا شهادات الناس صح. الشهادات حقيقية — يبقى الأطباء غلط». ليه ده ما بيلزمش؟",
+      "options": [
+        "It follows perfectly — testimonials beat doctors",
+        "Affirming a disjunct with a false dilemma: both can be partly true — testimonials can be sincere AND the doctors right, because a sincere story still can't separate cause from placebo"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why are 'sincere testimonials' and 'doctors are right' NOT actually opposites that can't both be true?",
+        "promptAr": "بكلماتك: ليه «الشهادات الصادقة» و«الأطباء صح» مش فعلاً متضادّين ما يقدروش يكونوا صح مع بعض؟"
+      },
+      "explanation": "The two options aren't mutually exclusive. People can be telling the truth that they feel better (the testimonial is sincere) AND the doctors can be right that the diet didn't cause it — because a heartfelt story cannot, by itself, separate the treatment from placebo, regression to the mean, or a second change made at the same time. Affirming one disjunct ('the testimonials are real') doesn't knock out the other. The real contest isn't sincerity vs. expertise; it's whether anyone gathered controlled evidence — and the Syndicate found none.",
+      "explanationAr": "البديلين مش متنافيين. الناس ممكن تكون بتقول الحقيقة إنها حسّت بتحسّن (الشهادة صادقة) والأطباء ممكن يكونوا صح إن الحمية مش اللي سبّبته — لأن القصة الصادقة لوحدها ما تقدرش تفصل العلاج عن الوهمي أو الارتداد للمتوسط أو تغيير تاني حصل في نفس الوقت. إثبات بديل واحد («الشهادات حقيقية») ما بيلغيش التاني. المنافسة الحقيقية مش صدق ضد خبرة؛ هي هل حد جمّع دليل مضبوط — والنقابة ما لقتش حاجة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/disjunctive-syllogism/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "Your brother says: \"It's the diet OR the chemotherapy that's shrinking the tumour. I feel the diet is working — so I'll drop the chemo.\"",
+      "claimAr": "أخوك بيقول: «يا الحمية يا الكيماوي اللي بيصغّر الورم. أنا حاسس إن الحمية شغّالة — يبقى هاوقف الكيماوي».",
+      "prompt": "What would DISPROVE the idea that the two options here are truly exclusive? What evidence would show that both the diet and chemotherapy could be contributing — and that stopping chemo is the wrong conclusion?",
+      "promptAr": "إيه اللي يكذّب فكرة إن البديلين هنا متنافيين فعلاً؟ وإيه الدليل اللي هيوضّح إن كلاً من الحمية والكيماوي ممكن يكونوا بيساهموا — وإن إيقاف الكيماوي هو الاستنتاج الغلط؟",
+      "modelPoints": [
+        "Tumour shrinkage, when documented, is attributed by oncologists to the cytotoxic effect of chemotherapy on cancer cells — not to dietary changes, which have no established mechanism to shrink established tumours.",
+        "Good nutrition during chemotherapy is genuinely beneficial for maintaining strength and tolerating side effects — so BOTH matter, for different reasons. That is 'and', not 'or.'",
+        "Stopping chemotherapy mid-course allows resistant tumour cells to proliferate; oncology evidence shows treatment interruption often produces worse outcomes than completing the course.",
+        "The feeling that the diet is working is not a tumour measurement. Only imaging (CT, MRI, PET scan) measures tumour response; feeling better can come from improved nutrition, reduced nausea, or placebo.",
+        "If the diet were responsible, we'd expect documented tumour regression in controlled trials of this diet versus no treatment — no such evidence exists."
+      ],
+      "modelPointsAr": [
+        "تصغير الورم، عند توثيقه، يُنسبه أطباء الأورام للتأثير السمّي الخلوي للكيماوي على خلايا السرطان — لا للتغييرات الغذائية، اللي ما عندهاش آلية ثابتة لتصغير أورام موجودة.",
+        "التغذية الجيدة خلال الكيماوي مفيدة فعلاً للحفاظ على القوة وتحمّل الآثار الجانبية — فالاتنين مهمّين، لأسباب مختلفة. ده «و»، مش «يا ده يا ده».",
+        "إيقاف الكيماوي في المنتصف بيسمح لخلايا الورم المقاومة بالتكاثر؛ أدلة أورام بتوضّح إن انقطاع العلاج غالباً بينتج نتائج أسوأ من إكمال الدورة.",
+        "إحساسه إن الحمية شغّالة ليست قياساً للورم. التصوير فقط (CT وMRI وPET) بيقيس استجابة الورم؛ إحساس التحسّن ممكن يأتي من تحسّن التغذية أو انخفاض الغثيان أو الوهمي.",
+        "لو الحمية كانت مسؤولة، هنتوقع تراجع موثّق للورم في تجارب مضبوطة لهذه الحمية مقارنةً بلا علاج — مش موجود دليل زي ده."
+      ],
+      "explanation": "Considering the opposite reveals that diet and chemotherapy operate on completely different mechanisms — diet supports the body during treatment, while chemo attacks the tumour. They are not an either/or; they are complementary. The 'or' here was manufactured to justify a conclusion (stop chemo) that the evidence doesn't support and that oncologists identify as medically dangerous.",
+      "explanationAr": "التفكير في العكس بيكشف إن الحمية والكيماوي بيشتغلوا على آليات مختلفة تماماً — الحمية بتدعم الجسم خلال العلاج، بينما الكيماوي بيهاجم الورم. هم مش «يا ده يا ده»؛ هم تكاملان. «أو» هنا تمّ تصنيعها لتبرير استنتاج (أوقف الكيماوي) الدليل ما بيدعمه وأطباء الأورام بيحدّدوه كخطر طبي.",
+      "sources": [
+        "https://www.cancer.gov/about-cancer/treatment/cam",
+        "EAL-case-001:masrawy-2026-04-30"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "false dilemma — forcing an exclusive either/or where both can be true",
+      "techniqueAr": "المعضلة الزائفة — فرض «يا ده يا ده» حصرية حيث يمكن الاثنان أن يكونا صحيحين",
+      "task": "Feel the trick from the inside. Write a short persuasive post about a harmless topic — say, 'getting fit' — that forces the reader into a false binary ('either you commit fully to our programme OR you stay unfit forever') so they feel that any middle ground or mixed approach is not an option. Make the either/or feel urgent and real.",
+      "taskAr": "احسّ بالحركة من جوّه. اكتب بوست إقناعي قصير عن موضوع غير ضار — قُل «اللياقة البدنية» — يجبر القارئ على ثنائية زائفة («يا تلتزم كاملاً ببرنامجنا يا تفضل غير لائق للأبد») علشان يحسّ إن أي أرضية وسط أو نهج مختلط مش خيار. اخلّي «يا ده يا ده» تبان عاجلة وحقيقية.",
+      "tells": [
+        "The post presents exactly two options and frames them as exhaustive — as if no other approach exists.",
+        "One option is appealing and the other is frightening — the framing steers, not reasons.",
+        "Any middle ground ('I'll do a bit of both') is dismissed or made to feel like failure or weakness.",
+        "The urgency ('now or never', 'commit or quit') creates emotional pressure to pick the seller's preferred option before thinking.",
+        "The either/or is false because in reality many people succeed with mixed, gradual, or partial approaches — the post hides this to block the 'both' option."
+      ],
+      "tellsAr": [
+        "البوست بيقدّم بالظبط خيارين ويصوّرهم على أنهم شاملون — كأنه مفيش نهج تاني موجود.",
+        "خيار جذّاب والتاني مخيف — الإطار بيوجّه، مش بيفكّر.",
+        "أي أرضية وسط («هعمل شوية من الاتنين») بتتُرفض أو بتبان فشل أو ضعف.",
+        "الإلحاح («دلوقتي أو أبداً»، «التزم أو استقل») بيخلق ضغطاً عاطفياً علشان تختار الخيار المفضّل للبائع قبل ما تفكّر.",
+        "«يا ده يا ده» زائفة لأن في الحقيقة ناس كتير بتنجح بنُهُج مختلطة أو تدريجية أو جزئية — البوست بيخبّي ده علشان يمنع خيار «الاتنين»."
+      ],
+      "explanation": "Building the false dilemma in a safe context — fitness — makes the manipulation pattern clear: the 'or' is manufactured to block the natural 'both/and' answer that most real situations allow. Now that you've felt how to generate the pressure, you'll recognise when a health choice, diet decision, or medical recommendation is being sold as an exclusive either/or when it doesn't have to be.",
+      "explanationAr": "إنك تبني المعضلة الزائفة في سياق آمن — اللياقة — بيوضّح نمط التلاعب: «أو» متصنّعة لمنع إجابة «الاتنين» الطبيعية اللي أغلب المواقف الحقيقية بتسمح بها. دلوقتي وإنت حسّيت بطريقة توليد الضغط، هتكشف كل ما خيار صحي أو قرار حمية أو توصية طبية تُسوَّق كـ«يا ده يا ده» حصرية وهي مش لازم تكون كده.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.jmir.org/2023/1/e49255",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/pops.70015"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "week": 15,
+    "days": [99, 100, 101, 102, 103, 104, 105],
+    "description": "Week 15: Islamic Literacy - Theological / Aqida Fallacies (Part 1)",
+    "dailyPattern": {
+      "islamicFallaciesPerDay": 4,
+      "components": ["MaqasidCheck.tsx", "WhatsAppForwardCheck.tsx", "/religion-hub/tools/hadith-check", "TafsirComponents.tsx"],
+      "deepRealChunk": "cases/chunk8.json",
+      "fridayInspection": ["threat-map"]
+    }
+  },
+  {
+    "week": 16,
+    "days": [106, 107, 108, 109, 110, 111, 112],
+    "description": "Week 16: Islamic Literacy - Theological / Aqida Fallacies (Part 2)",
+    "dailyPattern": {
+      "islamicFallaciesPerDay": 4,
+      "components": ["MaqasidCheck.tsx", "WhatsAppForwardCheck.tsx", "/religion-hub/tools/hadith-check", "TafsirComponents.tsx"],
+      "deepRealChunk": "cases/chunk9.json",
+      "fridayInspection": ["threat-map"]
+    }
+  },
+  {
+    "week": 17,
+    "days": [113, 114, 115, 116, 117, 118, 119],
+    "description": "Week 17: Islamic Literacy - Hadith Verification & Sectarian Detection",
+    "dailyPattern": {
+      "islamicFallaciesPerDay": 4,
+      "components": ["/religion-hub/tools/sectarian-detector", "WhatsAppForwardCheck.tsx", "/religion-hub/tools/hadith-check"],
+      "deepRealChunk": "cases/chunk10.json",
+      "fridayInspection": ["threat-map"]
+    }
+  },
+  {
+    "week": 18,
+    "days": [120, 121, 122, 123, 124, 125, 126],
+    "description": "Week 18: Islamic Literacy - Jurisprudence & Fatwa Context",
+    "dailyPattern": {
+      "islamicFallaciesPerDay": 4,
+      "components": ["/religion-hub/tools/fatwa-context", "MaqasidCheck.tsx", "WhatsAppForwardCheck.tsx"],
+      "deepRealChunk": "layer1_osint_chunk.json",
+      "fridayInspection": ["threat-map"]
+    }
+  },
+  {
+    "week": 19,
+    "days": [127, 128, 129, 130, 131, 132, 133],
+    "description": "Week 19: Islamic Literacy - Financial & Inheritance Literacy",
+    "dailyPattern": {
+      "islamicFallaciesPerDay": 4,
+      "components": ["/religion-hub/tools/halal-finance", "/religion-hub/tools/mawarith", "MaqasidCheck.tsx"],
+      "deepRealChunk": "layer1_osint_chunk.json",
+      "fridayInspection": ["threat-map"]
+    }
+  },
+  {
+    "week": 20,
+    "days": [134, 135, 136, 137, 138, 139, 140],
+    "description": "Week 20: Islamic Literacy - Integration & Application",
+    "dailyPattern": {
+      "islamicFallaciesPerDay": 4,
+      "components": ["live-swarm-debate.tsx", "cognitive-command-deck.tsx", "WhatsAppForwardCheck.tsx"],
+      "deepRealChunk": "layer1_osint_chunk.json",
+      "fridayInspection": ["threat-map", "rumor-heatmap"]
+    }
+  }
+]

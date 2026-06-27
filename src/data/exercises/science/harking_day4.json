@@ -1,0 +1,98 @@
+{
+  "id": "harking",
+  "phase": 2,
+  "week": 9,
+  "day": 4,
+  "title": "HARKing — Hypothesizing After Results are Known",
+  "titleAr": "هاركينج — صياغة الفرضيات بعد معرفة النتائج",
+  "description": "Learn to identify HARKing — the questionable research practice of presenting post-hoc hypotheses as if they were a priori predictions. Understand how HARKing distorts the scientific record and how pre-registration prevents it.",
+  "descriptionAr": "تعلم كيفية تحديد هاركينج — ممارسة البحث المشكوك فيها المتمثلة في تقديم فرضيات لاحقة كما لو كانت تنبؤات مسبقة. افهم كيف يشوّه هاركينج السجل العلمي وكيف يمنعه التسجيل المسبق.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "statisticalConcept": {
+    "name": "HARKing (Hypothesizing After Results are Known)",
+    "nameAr": "هاركينج (صياغة الفرضيات بعد معرفة النتائج)",
+    "definition": "HARKing, coined by Norbert Kerr (1998), is the practice of presenting a post-hoc hypothesis — one formulated after seeing the data — as if it had been an a priori prediction made before data collection. This violates the hypothetico-deductive method because the 'prediction' is guaranteed to match the data. HARKing inflates the apparent confirmatory power of a study, turning exploratory findings into seemingly confirmatory ones. Kerr identified several variants: pure HARKing (fabricating the hypothesis entirely), suppressing HARKing (dropping non-supported hypotheses), and constructing HARKing (building a theoretical rationale post-hoc to explain unexpected findings).",
+    "definitionAr": "هاركينج، مصطلح صاغه نوربرت كير (1998)، هو ممارسة تقديم فرضية لاحقة — صيغت بعد رؤية البيانات — كما لو كانت تنبؤاً مسبقاً تم قبل جمع البيانات. ينتهك هذا المنهج الفرضي-الاستنباطي لأن 'التنبؤ' مضمون أن يتطابق مع البيانات. يضخم هاركينج القوة التأكيدية الظاهرية للدراسة. حدد كير عدة أنواع: هاركينج نقي (اختلاق الفرضية بالكامل)، وهاركينج القمع (إسقاط الفرضيات غير المدعومة)، وهاركينج البناء (بناء مبرر نظري بأثر رجعي لتفسير نتائج غير متوقعة).",
+    "realWorldExample": "Daryl Bem's 2011 paper 'Feeling the Future' in the Journal of Personality and Social Psychology claimed to demonstrate precognition (psychic ability to predict future events). Critics including Wagenmakers et al. (2011) noted that the paper appeared to present exploratory analyses as confirmatory tests. Bem tested 9 experiments; when some hypotheses failed, the narrative was restructured around the ones that succeeded. This case became a catalyst for the pre-registration movement in psychology, leading to the creation of Registered Reports format and the Open Science Framework (OSF) by the Center for Open Science.",
+    "realWorldExampleAr": "ورقة داريل بيم 2011 'الشعور بالمستقبل' في مجلة الشخصية وعلم النفس الاجتماعي ادعت إثبات الاستبصار. لاحظ النقاد بما في ذلك واجينماكرز وآخرون (2011) أن الورقة بدت تقدم تحليلات استكشافية كاختبارات تأكيدية. اختبر بيم 9 تجارب؛ وعندما فشلت بعض الفرضيات، أُعيد هيكلة السرد حول الناجحة منها. أصبحت هذه القضية حافزاً لحركة التسجيل المسبق في علم النفس.",
+    "detectionMethod": "Compare the published paper's hypotheses against any pre-registration (OSF, ClinicalTrials.gov, AsPredicted). Check if the introduction's theoretical framework seems reverse-engineered to perfectly predict the results. Look for: (1) perfect alignment between predictions and results with no null findings; (2) absence of pre-registration; (3) post-hoc theoretical narratives; (4) 'we predicted that...' language without prior documentation; (5) discrepancies between conference presentations and final publications."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A psychology paper states: 'As predicted, participants in the high-stress condition showed improved memory for emotional words (p = 0.03) but not neutral words (p = 0.34).' However, the pre-registration on OSF stated the hypothesis as: 'High stress will impair memory for all word types.' What is this an example of?",
+      "promptAr": "تنص ورقة بحثية في علم النفس: 'كما تنبأنا، أظهر المشاركون في حالة الإجهاد العالي تحسناً في ذاكرة الكلمات العاطفية (ق.ا = 0.03) لكن ليس الكلمات المحايدة (ق.ا = 0.34).' ومع ذلك، نصت الفرضية المسجلة مسبقاً على: 'الإجهاد العالي سيضعف الذاكرة لجميع أنواع الكلمات.' ما هذا المثال؟",
+      "options": [
+        "A valid theoretical refinement based on new evidence",
+        "HARKing — the published hypothesis contradicts the pre-registered hypothesis and has been rewritten to match the obtained results",
+        "A replication failure",
+        "Normal scientific practice"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The pre-registration predicted stress would impair memory for ALL word types, but the results showed improvement for emotional words only. The published paper then presents this selective finding 'as predicted,' which is classic suppressing HARKing — the original failed hypothesis was dropped and replaced with one that matches the data. Transparent reporting would acknowledge the original hypothesis failed and frame the emotional-word finding as exploratory.",
+      "explanationAr": "التسجيل المسبق تنبأ بأن الإجهاد سيضعف الذاكرة لجميع أنواع الكلمات، لكن النتائج أظهرت تحسناً للكلمات العاطفية فقط. الورقة المنشورة تقدم هذا الاكتشاف الانتقائي 'كما تنبأنا'، وهو هاركينج القمع الكلاسيكي — تم إسقاط الفرضية الأصلية الفاشلة واستبدالها بفرضية تتطابق مع البيانات."
+    },
+    {
+      "id": 2,
+      "type": "evaluate",
+      "prompt": "Which of the following study designs is MOST resistant to HARKing?",
+      "promptAr": "أي من تصميمات الدراسة التالية هو الأكثر مقاومة لهاركينج؟",
+      "options": [
+        "A study with multiple co-authors from different institutions",
+        "A study published in a high-impact journal",
+        "A Registered Report, where the introduction and methods are peer-reviewed and accepted before data collection begins",
+        "A study with a large sample size (n > 10,000)"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Registered Reports (introduced by Chris Chambers at Cortex in 2013) require authors to submit their hypotheses, methods, and analysis plan for peer review BEFORE data collection. The journal commits to publishing the results regardless of outcome. This makes HARKing structurally impossible because the hypotheses are locked in before results are known. By 2023, over 300 journals had adopted Registered Reports. Large samples, multiple authors, and journal prestige do not prevent HARKing.",
+      "explanationAr": "التقارير المسجلة (التي قدمها كريس تشامبرز في مجلة كورتكس 2013) تتطلب من المؤلفين تقديم فرضياتهم ومنهجياتهم وخطة تحليلهم للمراجعة من النظراء قبل جمع البيانات. تلتزم المجلة بنشر النتائج بغض النظر عن النتيجة. هذا يجعل هاركينج مستحيلاً هيكلياً لأن الفرضيات مقفلة قبل معرفة النتائج."
+    },
+    {
+      "id": 3,
+      "type": "analyze",
+      "prompt": "A researcher conducts a study measuring 5 personality traits and their relationship to social media use. Only extraversion shows a significant correlation (r = 0.15, p = 0.04). The paper's introduction presents a detailed theoretical argument for why extraversion specifically should predict social media use, with no mention of the other 4 traits. What type of HARKing does this most likely represent?",
+      "promptAr": "يجري باحث دراسة تقيس 5 سمات شخصية وعلاقتها باستخدام وسائل التواصل الاجتماعي. الانبساط فقط يظهر ارتباطاً مهماً (ر = 0.15، ق.ا = 0.04). مقدمة الورقة تقدم حجة نظرية مفصلة لماذا الانبساط تحديداً يجب أن يتنبأ باستخدام وسائل التواصل الاجتماعي، دون ذكر السمات الأربع الأخرى. ما نوع هاركينج الذي يمثله هذا على الأرجح؟",
+      "options": [
+        "This is not HARKing — only reporting significant results is acceptable",
+        "Constructive HARKing — building a post-hoc rationale",
+        "Pure HARKing — fabricating the entire hypothesis",
+        "Suppressing HARKing — hiding the 4 non-significant traits and constructing a narrative around the one significant result"
+      ],
+      "correctAnswer": 3,
+      "explanation": "This combines suppressing HARKing (dropping the 4 non-significant trait analyses from the paper entirely) with constructive HARKing (building a post-hoc theoretical framework specifically for extraversion). The researcher likely tested all 5 traits, found only extraversion significant, then wrote the introduction to present this as the sole, theoretically motivated prediction. Per Kerr (1998), this misrepresents exploratory findings as confirmatory and inflates confidence in the specificity of the finding.",
+      "explanationAr": "يجمع هذا بين هاركينج القمع (إسقاط تحليلات السمات الأربع غير المهمة من الورقة بالكامل) وهاركينج البناء (بناء إطار نظري بأثر رجعي خصيصاً للانبساط). من المرجح أن الباحث اختبر جميع السمات الخمس، ووجد الانبساط فقط مهماً، ثم كتب المقدمة لتقديم هذا كتنبؤ وحيد ذو دافع نظري."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "Norbert Kerr (1998) identified several forms of HARKing. Which of the following is NOT one of them?",
+      "promptAr": "حدد نوربرت كير (1998) عدة أشكال من هاركينج. أي مما يلي ليس واحداً منها؟",
+      "options": [
+        "Predictive HARKing — using machine learning to generate hypotheses",
+        "Pure HARKing — presenting a completely post-hoc hypothesis as a priori",
+        "Suppressing HARKing — omitting original hypotheses that were not supported",
+        "Constructing HARKing — building post-hoc theoretical rationale"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'Predictive HARKing' is not a category described by Kerr. His original 1998 taxonomy includes: (1) Pure HARKing — completely fabricating the hypothesis after results; (2) Suppressing HARKing — dropping unsupported predictions from the report; (3) Constructing HARKing — creating an elaborate theoretical rationale post-hoc to explain surprising findings. All three share the common feature of disguising exploratory findings as confirmatory ones.",
+      "explanationAr": "'هاركينج التنبؤي' ليس فئة وصفها كير. تصنيفه الأصلي 1998 يشمل: (1) هاركينج نقي — اختلاق الفرضية بالكامل بعد النتائج؛ (2) هاركينج القمع — إسقاط التنبؤات غير المدعومة؛ (3) هاركينج البناء — إنشاء مبرر نظري متقن بأثر رجعي لتفسير نتائج مفاجئة."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "A study on a new antidepressant was pre-registered with the primary outcome as the Hamilton Depression Rating Scale (HDRS) total score. The published paper reports the HDRS total score was not significant (p = 0.12), but presents the HDRS sleep subscale as the primary outcome with p = 0.02, arguing that 'sleep improvement is the most clinically relevant dimension of depression.' Is this HARKing?",
+      "promptAr": "دراسة على مضاد اكتئاب جديد تم تسجيلها مسبقاً بالنتيجة الأولية كدرجة مقياس هاميلتون لتقييم الاكتئاب الإجمالية. الورقة المنشورة تبلغ أن الدرجة الإجمالية لم تكن مهمة (ق.ا = 0.12)، لكنها تقدم مقياس النوم الفرعي كنتيجة أولية بقيمة ق.ا = 0.02، بحجة أن 'تحسن النوم هو البعد الأكثر صلة سريرياً في الاكتئاب.' هل هذا هاركينج؟",
+      "options": [
+        "No — the researchers have a valid clinical justification for the change",
+        "Yes — this is outcome switching combined with HARKing: the pre-registered primary outcome failed, and a secondary/subscale outcome was promoted to primary status with a post-hoc theoretical justification",
+        "This is just a minor reporting difference",
+        "This is acceptable if the journal allows it"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This combines outcome switching (changing the primary endpoint after seeing results) with constructive HARKing (building a post-hoc clinical rationale). The COMPare project at the University of Oxford (Goldacre et al., 2019) systematically tracked outcome switching in clinical trials registered on ClinicalTrials.gov and found that 58% of trials had at least one primary outcome discrepancy between registration and publication. Pre-registered primary outcomes that fail should be reported as such, with any subscale analyses clearly labeled as exploratory.",
+      "explanationAr": "يجمع هذا بين تبديل النتائج (تغيير نقطة النهاية الأولية بعد رؤية النتائج) وهاركينج البناء (بناء مبرر سريري بأثر رجعي). تتبع مشروع COMPare في جامعة أكسفورد (غولداكر وآخرون، 2019) تبديل النتائج بشكل منهجي في التجارب السريرية ووجد أن 58% من التجارب لديها تناقض واحد على الأقل في النتيجة الأولية بين التسجيل والنشر."
+    }
+  ]
+}

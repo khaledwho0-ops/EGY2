@@ -1,0 +1,30 @@
+{
+  "id": "day28_passport_level1",
+  "phase": 0,
+  "week": 4,
+  "day": 28,
+  "title": "Passport Level 1 Unlock",
+  "titleAr": "فتح جواز التحصين المستوى 1",
+  "description": "28-day calibration complete. Unlock Inoculation Passport Level 1.",
+  "descriptionAr": "اكتمل معايرتك. افتح جواز التحصين المستوى 1.",
+  "type": "ceremony",
+  "difficulty": 1,
+  "estimatedMinutes": 10,
+  "instrument": "Inoculation Passport v1",
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "Phase 0 complete. Review your journey and CIS evolution.",
+      "claimAr": "المرحلة 0 اكتملت. راجع رحلتك وتطور المناعة المعرفية.",
+      "truthValue": "reflection",
+      "category": "meta",
+      "difficulty": 1,
+      "explanation": "In 28 days: availability heuristic, confirmation bias, anchoring, Dunning-Kruger, survivorship bias, base rate neglect, in-group bias, correlation/causation, emotional appeals, false authority, WhatsApp patterns. Phase 1 begins: 100 logical fallacies. CIS₀ computed.",
+      "explanationAr": "في 28 يوماً تعرضت لأهم التحيزات. المرحلة 1 تبدأ: 100 مغالطة منطقية. تم حساب CIS₀.",
+      "sources": [
+        "https://www.nature.com/articles/s41599-019-0279-9"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

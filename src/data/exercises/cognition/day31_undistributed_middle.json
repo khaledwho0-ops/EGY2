@@ -1,0 +1,121 @@
+{
+  "id": "day31_undistributed_middle",
+  "phase": 1,
+  "week": 5,
+  "day": 31,
+  "title": "The Undistributed Middle",
+  "titleAr": "الحدّ الأوسط غير المُستغرَق",
+  "description": "\"Doctors wear white coats. He wears a white coat. So he's a doctor.\" Today: why sharing one feature does not make two things the same.",
+  "descriptionAr": "«الأطباء بيلبسوا بالطو أبيض. هو لابس بالطو أبيض. يبقى هو دكتور». النهاردة: ليه مشاركة صفة واحدة ما بتخليش الحاجتين نفس الحاجة.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "An ad reasons: \"Real medicines come from plants. This herbal mix comes from plants. So this herbal mix is a real medicine.\" Where does it break?",
+      "claimAr": "إعلان بيقول: «الأدوية الحقيقية بتيجي من النباتات. الخلطة العشبية دي بتيجي من النباتات. يبقى الخلطة دي دوا حقيقي». بيقع منين؟",
+      "options": [
+        "It's correct — both come from plants",
+        "Undistributed middle: 'comes from plants' is shared by both medicines AND useless or toxic mixtures, so the shared trait can't prove they belong to the same category",
+        "Plants are never used in medicine",
+        "The mix must be stronger than medicine"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The shape is: 'All M are P (real medicines come from plants). S is M (this comes from plants). Therefore S is P.' The middle term 'comes from plants' is shared by far more than just real medicines — poisons, teas, and inert mixtures come from plants too. Sharing one feature with medicines does not place something inside the category 'medicine.' Real plant-derived drugs (aspirin from willow, metformin's galega origin) earned that title through testing, not through botany.",
+      "explanationAr": "الشكل: «كل M هي P (الأدوية الحقيقية بتيجي من النبات). S هي M (دي بتيجي من النبات). إذن S هي P». الحدّ الأوسط «بتيجي من النبات» مشترك بين أكتر بكتير من مجرد الأدوية الحقيقية — السموم والشاي والخلطات الخاملة بتيجي من النبات كمان. مشاركة صفة واحدة مع الأدوية ما بتحطّش الحاجة جوّه فئة «دوا». الأدوية الحقيقية المشتقّة من النبات (الأسبرين من الصفصاف) كسبت اللقب ده بالاختبار، مش بالنبات.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.who.int/news-room/fact-sheets/detail/traditional-complementary-and-integrative-medicine"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A follower argues: \"Trusted physicians have medical degrees. The «نظام الطيبات» founder had a medical degree. So he's a trustworthy guide on nutrition and cancer.\" Is this valid reasoning?",
+      "claimAr": "تابع بيقول: «الأطباء الموثوقين عندهم شهادات طب. صاحب نظام الطيبات كان عنده شهادة طب. يبقى هو مرشد موثوق في التغذية والسرطان». هل هذا استدلال صحيح؟",
+      "options": [
+        "Yes — a medical degree covers all medical topics",
+        "No — undistributed middle plus authority-outside-specialty: his degree was in anaesthesia, not nutrition or oncology"
+      ],
+      "correctAnswer": 1,
+      "explanation": "'Trustworthy doctors have degrees; he has a degree; therefore he's trustworthy here' shares the middle term 'has a degree,' which covers both expert specialists and credentialed people stepping far outside their training. His credentials were genuine — but in anaesthesia, intensive care, and pain management, not clinical nutrition, endocrinology, or oncology, which are the fields his system actually touched. Expertise is domain-specific. A real degree in one room does not transfer trust to a completely different room.",
+      "explanationAr": "«الأطباء الموثوقين عندهم شهادات؛ هو عنده شهادة؛ إذن هو موثوق هنا» بيتشارك الحدّ الأوسط «عنده شهادة»، اللي بيشمل المتخصّصين الخبراء والناس اللي بتتكلّم بعيد عن تخصّصها. شهادته كانت حقيقية — بس في التخدير والعناية المركزة وعلاج الألم، مش التغذية الإكلينيكية ولا الغدد ولا الأورام، وهي المجالات اللي نظامه مسّها فعلاً. الخبرة خاصة بالمجال. شهادة حقيقية في أوضة واحدة ما بتنقلش الثقة لأوضة مختلفة تماماً.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-7"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "True or false: \"Geniuses are often dismissed by the mainstream. This man is dismissed by the mainstream. Therefore this man is a genius.\" This is valid reasoning — sharing 'dismissed' with geniuses proves he belongs in their category.",
+      "claimAr": "صح ولا غلط: «العباقرة غالباً بيتجاهلهم التيار السائد. الراجل ده بيتجاهله التيار السائد. إذن الراجل ده عبقري». هذا استدلال صحيح — مشاركة «التجاهل» مع العباقرة بتثبت إنه ينتمي لفئتهم.",
+      "correctAnswer": false,
+      "selfExplain": {
+        "prompt": "In your own words: why does sharing one trait ('being dismissed') not prove you belong in the same category as the people who share it?",
+        "promptAr": "بكلماتك: ليه مشاركة صفة واحدة («التعرّض للتجاهل») ما بتثبتش إنك بتنتمي لنفس فئة اللي بيتشاركوها؟"
+      },
+      "explanation": "False — this is the 'Galileo gambit,' which is an undistributed middle. 'Being dismissed' is the middle term, and it's shared by a few misunderstood geniuses AND by a vast number of people who were simply wrong. Sharing the trait 'dismissed' with Galileo says nothing about whether you're right — only evidence can show that, and that's exactly what was missing here. Self-explaining this makes the key insight stick: a shared trait only proves category membership when that trait is unique to the category — 'dismissed' isn't.",
+      "explanationAr": "غلط — دي «حيلة جاليليو»، وهي «حدّ أوسط غير مُستغرَق». «التعرّض للتجاهل» هو الحدّ الأوسط، وهو مشترك بين قلّة من العباقرة غير المفهومين وبين عدد ضخم من الناس اللي كانوا غلط ببساطة. مشاركة صفة «التجاهل» مع جاليليو ما بتقولش حاجة عن إنك صح — الدليل بس هو اللي بيوريّ ده، وهو بالظبط اللي كان ناقص هنا. إنك تشرح ده بنفسك بيثبّت الفكرة الأساسية: الصفة المشتركة بتثبت الانتماء للفئة بس لو الصفة دي حصرية على الفئة — و«التجاهل» مش كده.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://skepticalinquirer.org/2016/11/the-galileo-gambit-and-other-conspiracy-theory-tropes/"
+      ],
+      "cognitivebiasAtPlay": "Cognitive Narcissism (ego-defense)"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "\"My system uses herbs and natural ingredients. Real traditional medicine also uses herbs. So my system IS traditional medicine — with all the trust that implies.\"",
+      "claimAr": "«نظامي بيستخدم أعشاب ومكوّنات طبيعية. الطب التقليدي الحقيقي بيستخدم أعشاب كمان. يبقى نظامي هو الطب التقليدي — مع كل الثقة اللي ده بيحمله».",
+      "prompt": "What would DISPROVE that using herbs qualifies a system as traditional medicine? What is shared between legitimate herbal medicine and this claim that can't carry the proof?",
+      "promptAr": "إيه اللي يكذّب إن استخدام الأعشاب بيؤهّل نظاماً ليكون طباً تقليدياً؟ وإيه المشترك بين الطب العشبي الشرعي والادعاء ده اللي ما يقدرش يحمل الإثبات؟",
+      "modelPoints": [
+        "Poisons, hallucinogens, and inert teas all use herbs — the ingredient alone tells you nothing about efficacy or safety.",
+        "Traditional medicine systems (like Unani, Ayurveda, Chinese medicine) have centuries of documented clinical observation and, increasingly, controlled trials. 'Uses herbs' doesn't import that evidence.",
+        "The WHO defines traditional medicine by the system of practice and evidence base, not by ingredient type. A claim must be tested to earn a 'traditional medicine' label.",
+        "If 'uses herbs = traditional medicine', then every home kitchen making chamomile tea is a medical facility. The category would be meaningless.",
+        "Legitimate traditional systems do not claim to replace insulin, prevent cancer, or cure disease without any documented cases — the system here did."
+      ],
+      "modelPointsAr": [
+        "السموم والمهلوسات والشاي الخامل كلهم بيستخدموا أعشاب — المكوّن لوحده ما بيقولش حاجة عن الفعالية أو الأمان.",
+        "أنظمة الطب التقليدي (زي اليوناني والأيورفيدا والصيني) عندها قرون من الملاحظة الإكلينيكية الموثّقة والتجارب المضبوطة بشكل متزايد. «بيستخدم أعشاب» ما بيجيبش الدليل ده.",
+        "منظمة الصحة العالمية بتعرّف الطب التقليدي بنظام الممارسة وقاعدة الأدلة، مش بنوع المكوّن. ادعاء لازم يتختبر علشان يكسب لقب «طب تقليدي».",
+        "لو «بيستخدم أعشاب = طب تقليدي»، يبقى كل مطبخ بيعمل شاي بابونج هو منشأة طبية. الفئة هتبقى بلا معنى.",
+        "الأنظمة التقليدية الشرعية ما بتدّعيش إنها بتعوّض الأنسولين أو بتمنع السرطان أو بتشفي مرض من غير حالات موثّقة — والنظام هنا ادّعى ده."
+      ],
+      "explanation": "Considering the opposite shows that 'uses herbs' is a middle term so wide that it connects medicines, poisons, and teas equally — it can't carry the proof. The category 'traditional medicine' is earned by documented practice and evidence, not by ingredient. Once you name the shared trait out loud and ask 'who else has this trait?', the gap is immediately visible.",
+      "explanationAr": "التفكير في العكس بيوضّح إن «بيستخدم أعشاب» حدّ أوسط واسع لدرجة إنه بيربط الأدوية والسموم والشاي بالتساوي — ما يقدرش يحمل الإثبات. فئة «الطب التقليدي» بتُكتسب بممارسة موثّقة ودليل، مش بمكوّن. أول ما تسمّي الصفة المشتركة بصوت عالي وتسأل «مين كمان عنده الصفة دي؟»، الفجوة بتبقى واضحة فوراً.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.who.int/news-room/fact-sheets/detail/traditional-complementary-and-integrative-medicine"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"Real patient-centered care is attacked by hospitals. This system is attacked by hospitals. Therefore this system is real patient-centered care — and anyone who trusts hospitals over this is choosing the system over the patient.\"",
+      "claimAr": "فكّك الحُجّة دي: «الرعاية الحقيقية المتمحورة حول المريض بتتهاجم من المستشفيات. النظام ده بيتهاجم من المستشفيات. يبقى النظام ده رعاية حقيقية للمريض — وأي حد يثق في المستشفيات على ده بيختار النظام على المريض».",
+      "parts": [
+        { "text": "This system is real patient-centered care.", "textAr": "النظام ده رعاية حقيقية متمحورة حول المريض.", "role": "conclusion" },
+        { "text": "This system is attacked by hospitals.", "textAr": "النظام ده بيتهاجم من المستشفيات.", "role": "premise" },
+        { "text": "(Unstated) Anything attacked by hospitals is patient-centered care.", "textAr": "(غير مذكور) أي حاجة بتتهاجم من المستشفيات هي رعاية للمريض.", "role": "assumption" },
+        { "text": "Anyone who trusts hospitals over this is choosing the system over the patient.", "textAr": "أي حد يثق في المستشفيات على ده بيختار النظام على المريض.", "role": "irrelevant" }
+      ],
+      "explanation": "Mapping the argument exposes the critical hidden assumption: that 'attacked by hospitals' is a middle term unique to patient-centered care. It isn't — hospitals also attack fraud, quackery, and dangerous practices, often correctly. The last line is irrelevant: it frames anyone questioning the system as an enemy of patients, making it impossible to challenge the evidence without appearing callous. Seeing the parts dismantles the emotional pressure the argument is designed to create.",
+      "explanationAr": "تفكيك الحُجّة بيكشف الافتراض المخفي الحاسم: إن «التعرّض لهجوم المستشفيات» حدّ أوسط حصري على الرعاية المتمحورة حول المريض. مش كده — المستشفيات كمان بتهاجم الاحتيال والدجل والممارسات الخطيرة، وغالباً بشكل صحيح. السطر الأخير غير ذات صلة: بيصوّر أي حد بيتساءل عن النظام كعدوّ للمرضى، بيخلّي من المستحيل تحدّي الدليل من غير ما تبان قاسياً. رؤية الأجزاء بتفكّك الضغط العاطفي اللي الحُجّة مصمّمة تخلقه.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    }
+  ]
+}

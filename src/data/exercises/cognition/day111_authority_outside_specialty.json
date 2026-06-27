@@ -1,0 +1,123 @@
+{
+  "id": "day111_authority_outside_specialty",
+  "phase": 3,
+  "week": 16,
+  "day": 111,
+  "title": "Credentials Are Domain-Specific",
+  "titleAr": "الشهادات خاصة بالمجال",
+  "description": "A doctor, scholar, or expert in one field does not automatically carry authority in another. Recognising where credentials end is essential protection — especially when religious authority is added to medical claims.",
+  "descriptionAr": "الدكتور أو العالم أو الخبير في مجال لا يحمل تلقائياً سلطة في مجال آخر. الاعتراف بحدود الشهادات حماية أساسية — خاصة حين تُضاف السلطة الدينية للادعاءات الطبية.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://www.hsph.harvard.edu/nutritionsource/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A board-certified anaesthesiologist designs a diet protocol for managing type-2 diabetes and cancer. His anaesthesia credentials are genuine. Is he the right authority for these claims?",
+      "claimAr": "طبيب تخدير معتمد يصمّم بروتوكول حمية لعلاج السكري من النوع الثاني والسرطان. شهادته في التخدير حقيقية. هل هو السلطة الصحيحة لهذه الادعاءات؟",
+      "options": [
+        "Yes — a medical degree covers all of medicine",
+        "No — anaesthesia and intensive care are a distinct specialty with no clinical training in oncology nutrition, endocrinology, or dietary management of chronic disease",
+        "Yes — he has more experience than most",
+        "It depends on whether he reads enough books"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Medical specialisation is deep and narrow. An anaesthesiologist's training covers perioperative care, pain management, and intensive care — not clinical nutrition, endocrinology, or oncology. Prescribing dietary cancer or diabetes protocols without the relevant training is practicing outside his evidence base. His real credentials made the authority bias more powerful — not the claim more valid.",
+      "explanationAr": "التخصّص الطبي عميق وضيّق. تدريب طبيب التخدير يغطّي رعاية ما حول الجراحة وإدارة الألم والعناية المركزة — لا التغذية السريرية ولا الغدد ولا علم الأورام. وصف بروتوكولات غذائية للسرطان أو السكري دون التدريب ذي الصلة هو ممارسة خارج قاعدة أدلته. شهاداته الحقيقية جعلت انحياز السلطة أقوى — لا الادعاء أكثر صحة.",
+      "sources": [
+        "https://www.hsph.harvard.edu/nutritionsource/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A well-known Islamic scholar endorses the Taybat diet system and says: 'I have investigated it — it is consistent with the Quran and Sunnah.' Does his religious authority validate the medical efficacy claims?",
+      "claimAr": "عالم إسلامي مشهور يُزكّي نظام الطيبات ويقول: «فحصته — هو متسق مع القرآن والسنة». هل سلطته الدينية تصحّح ادعاءات الفاعلية الطبية؟",
+      "options": [
+        "Yes — a respected Islamic scholar's endorsement is sufficient",
+        "No — religious scholarship validates the Islamic dimensions of a claim; it does not substitute for clinical trials, a systematic review, or specialist nutrition expertise in assessing medical efficacy",
+        "Yes — because the Quran contains guidance on all matters",
+        "It depends on whether the scholar is also a doctor"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what exactly CAN a religious scholar's endorsement tell you about a diet system — and what exactly can it NOT tell you? Give a specific example of each.",
+        "promptAr": "بكلماتك: إيه بالضبط اللي تزكية العالم الديني تقدر تقوله عن نظام غذائي — وإيه اللي لا تقدر تقوله؟ ادّي مثال محدد لكل واحدة."
+      },
+      "explanation": "Religious authority and medical authority are different domains. A scholar's endorsement can confirm that a practice does not contradict Islamic rulings — it cannot confirm that a diet cures cancer or replaces insulin. These are clinical claims that require randomised controlled trials or systematic reviews. Using a scholar's religious authority to validate a medical efficacy claim is an authority-outside-specialty move applied twice over.",
+      "explanationAr": "السلطة الدينية والسلطة الطبية مجالان مختلفان. تزكية العالم يمكنها تأكيد أن ممارسة لا تتعارض مع الأحكام الإسلامية — لا يمكنها تأكيد أن حمية تشفي السرطان أو تحلّ محلّ الأنسولين. هذه ادعاءات سريرية تحتاج تجارب عشوائية مُحكَمة أو مراجعات منهجية. استخدام السلطة الدينية لعالم للتصحيح الطبي هو حركة السلطة خارج التخصص مُطبَّقة مرتين.",
+      "sources": [
+        "https://www.hsph.harvard.edu/nutritionsource/",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: in Islamic scholarship itself, issuing rulings on medical treatment — especially medication decisions — requires expertise in medicine, not just Islamic jurisprudence (fiqh).",
+      "claimAr": "صح ولا غلط: في العلم الإسلامي نفسه، إصدار أحكام على العلاج الطبي — خاصة قرارات الدواء — يتطلّب خبرة في الطب، ليس مجرد فقه.",
+      "correctAnswer": true,
+      "myth_en": "A faqih (Islamic jurist) can issue rulings on medical treatment without medical expertise.",
+      "myth_ar": "الفقيه يستطيع إصدار أحكام على العلاج الطبي بدون خبرة طبية.",
+      "explanation": "True. Classical Islamic jurisprudence (fiqh) explicitly recognises that medical decisions require medical expertise. The principle 'la darar wa la dirar' (no harm shall be inflicted) requires knowing what is harmful, which is a medical determination. Major contemporary Islamic medical ethics bodies — including Al-Azhar's medical fatwa committees — require medical consultation for rulings on treatment. A fiqh ruling on food permissibility is not a fiqh ruling on medical efficacy.",
+      "explanationAr": "صح. الفقه الإسلامي الكلاسيكي يعترف صراحةً بأن القرارات الطبية تحتاج خبرة طبية. مبدأ «لا ضرر ولا ضرار» يتطلّب معرفة ما هو ضارّ، وهو تحديد طبي. هيئات أخلاقيات الطب الإسلامية المعاصرة الكبرى — بما فيها لجان الفتوى الطبية في الأزهر — تشترط الاستشارة الطبية للأحكام على العلاج. الحكم الفقهي على حلّية طعام ليس حكماً فقهياً على فاعليته الطبية.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://quran.com/2/195"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A promoter combines two types of authority: 'I am a doctor (anaesthesia) AND I present Quranic evidence.' Followers feel doubly certain — surely two forms of authority together must be more reliable than one?",
+      "claimAr": "مروّج يجمع نوعين من السلطة: «أنا دكتور (تخدير) وأيضاً أقدّم دليلاً قرآنياً». الأتباع يشعرون بيقين مضاعف — أليس نوعان من السلطة معاً أكثر موثوقية من نوع واحد؟",
+      "prompt": "What would it mean for this to actually be LESS reliable than a single specialist's opinion? What does stacking credentials that don't overlap do to your ability to verify the claim?",
+      "promptAr": "إيه اللي يعنيه إن هذا يكون فعلاً أقل موثوقية من رأي متخصّص واحد؟ وماذا يفعل تكديس شهادات غير متداخلة لقدرتك على التحقق من الادعاء؟",
+      "modelPoints": [
+        "Stacking two credentials from unrelated domains creates the illusion of convergent validation — but anaesthesia credentials and Quranic citation cover completely different questions, neither of which is oncology nutrition or diabetes management.",
+        "The follower feels 'he knows science AND Allah is with him' — making independent verification seem both disrespectful and unnecessary. That doubled feeling of certainty is the amplified authority bias.",
+        "Each credential type protects the other from scrutiny: questioning the medicine feels like questioning religion; questioning the religion feels like questioning a doctor. The result is a claim shielded from two directions simultaneously.",
+        "A single registered clinical dietitian or endocrinologist, verified in the right specialty, would give you more reliable medical guidance than a doctor-plus-religious-authority package outside both relevant domains."
+      ],
+      "modelPointsAr": [
+        "تكديس شهادتين من مجالين غير مترابطين يخلق وهم التحقق المتقاطع — لكن شهادات التخدير والاستشهاد القرآني يغطّيان أسئلة مختلفة تماماً، لا واحدة منهما تغطّي تغذية الأورام أو إدارة السكري.",
+        "التابع يشعر «إنه عارف العلم وكمان الله معاه» — مما يجعل التحقق المستقل يبدو غير محترم وغير ضروري. إحساس اليقين المضاعف هذا هو انحياز السلطة المُضخَّم.",
+        "كل نوع من الشهادات يحمي الآخر من التدقيق: التشكيك في الطب يبدو كتشكيك في الدين؛ والتشكيك في الدين يبدو كتشكيك في طبيب. النتيجة ادعاء محمي من اتجاهين في آن واحد.",
+        "أخصائي تغذية سريري واحد مسجَّل أو متخصّص غدد في التخصص الصحيح سيعطيك توجيهاً طبياً أكثر موثوقية من حزمة طبيب-زائد-سلطة-دينية خارج كلا المجالَين ذوَي الصلة."
+      ],
+      "sources": [
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'He has a medical degree, so his dietary protocols are medically sound. He cites the Quran, so his dietary protocols are religiously valid. Therefore his system is both medically and religiously correct — and rejecting it means rejecting medicine and religion.'",
+      "claimAr": "فكّك الحُجّة دي: «عنده شهادة طبية، يبقى بروتوكولاته الغذائية سليمة طبياً. بيستشهد بالقرآن، يبقى بروتوكولاته صحيحة دينياً. لهذا نظامه صحيح طبياً ودينياً — ورفضه معناه رفض الطب والدين.»",
+      "parts": [
+        { "text": "His system is both medically and religiously correct.", "textAr": "نظامه صحيح طبياً ودينياً.", "role": "conclusion" },
+        { "text": "He has a medical degree.", "textAr": "عنده شهادة طبية.", "role": "premise" },
+        { "text": "He cites the Quran.", "textAr": "بيستشهد بالقرآن.", "role": "premise" },
+        { "text": "(Unstated) A medical degree in any specialty validates dietary protocols for chronic disease.", "textAr": "(غير مذكور) الشهادة الطبية في أي تخصص تُصحّح بروتوكولات الحمية للأمراض المزمنة.", "role": "assumption" },
+        { "text": "(Unstated) Citing the Quran for religious framing validates medical efficacy claims.", "textAr": "(غير مذكور) الاستشهاد بالقرآن للتأطير الديني يُصحّح ادعاءات الفاعلية الطبية.", "role": "assumption" },
+        { "text": "Rejecting his system means rejecting medicine and religion.", "textAr": "رفض نظامه معناه رفض الطب والدين.", "role": "irrelevant" }
+      ],
+      "explanation": "Two hidden assumptions collapse the argument. First: a medical degree in anaesthesia does not cover clinical nutrition, oncology, or endocrinology — domain-specific training is required. Second: religious citation validates the Islamic dimensions of a practice, not its clinical outcomes. The 'rejecting him = rejecting medicine and religion' line is irrelevant — it is a false dichotomy designed to make criticism feel like apostasy, not a logical inference from the premises.",
+      "explanationAr": "افتراضان خفيان يُنهيان الحُجّة. أولاً: الشهادة الطبية في التخدير لا تغطّي التغذية السريرية أو الأورام أو الغدد — التدريب الخاص بالمجال مطلوب. ثانياً: الاستشهاد الديني يُصحّح الأبعاد الإسلامية للممارسة، لا نتائجها السريرية. جملة «رفضه = رفض الطب والدين» غير ذات صلة — هي ثنائية زائفة مصمّمة لجعل النقد يبدو ردّة، لا استنتاجاً منطقياً من المقدّمات.",
+      "sources": [
+        "https://www.hsph.harvard.edu/nutritionsource/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

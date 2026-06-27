@@ -1,0 +1,133 @@
+{
+  "id": "day117_unfalsifiable_by_faith",
+  "phase": 3,
+  "week": 17,
+  "day": 117,
+  "title": "Made Unfalsifiable by Faith",
+  "titleAr": "جُعِل غير قابل للتفنيد بالإيمان",
+  "description": "When 'it only fails if you didn't believe enough' is the answer to every failure, the claim has left science — and become dangerous. Today we recognise this move and learn why it is not a defence of religion.",
+  "descriptionAr": "لمّا «بتنجح بس لو آمنت بيها كفاية» تبقى إجابة لكل فشل، يبقى الادعاء ساب العلم — وبقى خطير. النهاردة بنتعرّف على الحركة دي وبنتعلّم ليه مش دفاعاً عن الدين.",
+  "type": "religion-literacy",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A diet system promises to cure diabetes. A follower stops insulin and deteriorates. The system's promoter says: 'He didn't follow the protocol exactly.' Which red flag does this trigger, and why is it the most dangerous?",
+      "claimAr": "نظام حمية بيعد بشفاء السكري. تابع بيوقّف أنسولينه ويتدهور. المروّج بيقول: «هو ما اتبعش البروتوكول بالظبط». أنهي علامة خطر دي بتُطلق، وليه هي الأخطر؟",
+      "options": [
+        "Red Flag #3 — testimonials as proof",
+        "Red Flag #4 — unfalsifiability: when failure is always the patient's fault, no outcome can ever test the claim",
+        "Red Flag #7 — authority outside specialty",
+        "Red Flag #12 — undisclosed financial interest"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Red Flag #4 is triggered. Unfalsifiability means: no possible outcome can prove the claim wrong. If success proves the system works and failure proves the patient was deficient, the claim is immune to any test — which is the hallmark of pseudoscience, not medicine. This is the most dangerous flag because it guarantees people will keep being harmed: every failure will be re-attributed to the person, never to the system. The viral Taybat diet used this move precisely — deterioration was always blamed on 'imperfect adherence.'",
+      "explanationAr": "علامة الخطر رقم 4 بتُطلَق. عدم القابلية للتفنيد يعني: لا نتيجة محتملة ممكنة تُثبت خطأ الادعاء. لو النجاح بيُثبت شغل النظام والفشل بيُثبت قصور المريض، الادعاء محصّن من أي اختبار — وده علامة العلم الزائف لا الطب. دي أخطر علامة لأنها بتضمن استمرار تضرّر الناس: كل فشل هيُعاد نسبه للشخص، لا للنظام أبداً. نظام «الطيبات» الفيروسي استخدم الحركة دي بالظبط — التدهور كان دايماً يُلام على «عدم الالتزام الكامل».",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: 'you must have complete faith for it to work' is a scientifically valid explanation for why a cure sometimes fails.",
+      "claimAr": "صح ولا غلط: «لازم يكون عندك إيمان كامل عشان تنجح» تفسير علمي صحيح لليه علاج ممكن يفشل أحياناً.",
+      "correctAnswer": false,
+      "myth_en": "Requiring faith is a valid explanation for treatment failure.",
+      "myth_ar": "اشتراط الإيمان تفسير صحيح لفشل العلاج.",
+      "explanation": "False. Science requires that an explanation can, in principle, be disproven. 'Insufficient faith' cannot be measured, standardised, or falsified — which means it can explain any failure without ever updating the claim. In genuine medicine, a patient who fails a treatment is evidence that the treatment may need adjustment or replacement — not that the patient's psychological state was deficient. Calibration check: if you hesitated, notice that the claim uses the word 'faith' — which carries genuine religious meaning — as a rhetorical shield. The word is doing emotional work, not evidential work.",
+      "explanationAr": "غلط. العلم يشترط أن تفسيراً ما ممكن بحيث يُفنَّد. «الإيمان غير الكافي» لا يمكن قياسه أو تقييسه أو تفنيده — يعني ممكن يُفسِّر أي فشل دون تحديث الادعاء أي وقت. في الطب الحقيقي، مريض يفشل مع علاج هو دليل إن العلاج قد يحتاج تعديلاً أو استبدالاً — مش إن الحالة النفسية للمريض كانت قاصرة. اختبار المعايرة: لو ترددت، لاحظ إن الادعاء بيستخدم كلمة «إيمان» — اللي تحمل معنى ديني حقيقي — كدرع بلاغية. الكلمة بتعمل شغلاً عاطفياً مش شغلاً دليلياً.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://sciencebasedmedicine.org/the-role-of-placebo-effects-in-cam/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The placebo effect is real and well-documented. A patient on a diet system feels genuinely better. The promoter says: 'See — it works because you believed.' But the patient's type-1 diabetes is progressing untreated.",
+      "claimAr": "التأثير الوهمي حقيقي وموثَّق جيّداً. مريض على نظام حمية بيحسّ أحسن فعلاً. المروّج بيقول: «شايف — نجح لأنك صدّقت». لكن سكري المريض من النوع الأول بيتقدّم بدون علاج.",
+      "options": [
+        "The patient's improvement shows the system works — feeling better is the goal",
+        "The placebo effect produces genuine subjective relief but does not cure underlying diseases; feeling better is not the same as being better"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what is the gap between 'I feel better' and 'the disease is treated' — and why does this gap matter most for serious conditions like diabetes or cancer?",
+        "promptAr": "بكلماتك: إيه الفجوة بين «أنا أحسن» و«المرض اتعالج» — وليه الفجوة دي أكثر أهمية في الحالات الخطيرة زي السكري أو السرطان؟"
+      },
+      "explanation": "The placebo effect produces genuine subjective improvement — reduced pain perception, less fatigue, better mood. But it does not reverse tumour growth, normalise insulin production, or repair kidney tissue. The danger is that a person feels better (placebo) while their underlying disease progresses untreated. This gap — between feeling better and being better — is why 'I feel great' is not clinical evidence of cure, and why placebo-controlled trials exist: to separate subjective experience from objective biological change. Naming this distinction yourself deepens the lesson beyond passively reading it.",
+      "explanationAr": "التأثير الوهمي بيُنتج تحسّناً ذاتياً حقيقياً — تقليل إدراك الألم، أقل إرهاق، مزاج أحسن. لكن ما بيعكسش نموّ الورم، ولا بيطبّع إنتاج الأنسولين، ولا بيصلح نسيج الكلية. الخطر إن الشخص بيحسّ أحسن (وهمي) بينما مرضه الكامن بيتقدّم دون علاج. الفجوة دي — بين الحسّ بالتحسّن والتحسّن الفعلي — هي ليه «أنا تمام» مش دليل سريري على الشفاء، وليه التجارب المضبوطة بالعلاج الوهمي موجودة: لفصل التجربة الذاتية عن التغيير البيولوجي الموضوعي. إنك تسمّي التمييز ده بنفسك بيعمّق الدرس فوق قراءته بشكل سلبي.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3086808/",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 4,
+      "mechanic": "inoculate",
+      "technique": "faith-shield unfalsifiability — using 'insufficient belief' to pre-explain every failure",
+      "techniqueAr": "درع الإيمان اللاتفنيدية — استخدام «الإيمان غير الكافي» لتفسير كل فشل مسبقاً",
+      "task": "Feel the trick from the inside. Write a short promotional post for a harmless product — say, a branded reusable water bottle — using the faith-shield technique: promise a benefit (e.g. 'you'll drink more water and feel energised'), then build in the pre-excuse: 'it only works if you truly commit to the habit.' Make it sound genuine and encouraging, not manipulative.",
+      "taskAr": "احسّ بالحيلة من جوّه. اكتب بوست ترويجي قصير لمنتج غير ضار — مثلاً زجاجة مياه معادة الاستخدام — باستخدام أسلوب درع الإيمان: وعِد بفائدة (مثلاً «هتشرب مياه أكتر وتحسّ بنشاط»)، وبعدين ابنِ العذر المسبق: «بتشتغل بس لو التزمت بالعادة فعلاً». خلّيه يبان حقيقياً ومشجّعاً، مش متلاعباً.",
+      "tells": [
+        "The benefit is promised, but the pre-excuse ('only if you truly commit') means any failure is your fault, never the product's.",
+        "The technique works the same for a water bottle as for an unproven medical system — the structure is identical.",
+        "The 'genuine commitment' framing sounds encouraging but is unfalsifiable: how much commitment is 'enough'? Who measures it?",
+        "Every failure becomes motivation to try harder, not evidence that the product doesn't deliver.",
+        "In the viral Taybat case, 'imperfect adherence' was the answer to every deterioration — the identical structure at lethal scale."
+      ],
+      "tellsAr": [
+        "الفائدة موعودة، لكن العذر المسبق («بس لو التزمت») معناه إن كل فشل خطأك، مش خطأ المنتج أبداً.",
+        "الأسلوب بيشتغل بنفس الطريقة مع زجاجة مياه كما مع نظام طبي غير مُثبَت — الهيكل متطابق.",
+        "تأطير «الالتزام الحقيقي» بيبدو مشجّعاً لكنه غير قابل للتفنيد: كم من الالتزام «كافٍ»؟ مَن يقيسه؟",
+        "كل فشل بيصبح تحفيزاً لمحاولة أصعب، مش دليلاً إن المنتج ما بيوفّرش ما وعد به.",
+        "في حالة «الطيبات» الفيروسية، «عدم الالتزام الكامل» كان إجابة كل حالة تدهور — نفس الهيكل بالظبط على نطاق مميت."
+      ],
+      "explanation": "You just built a faith-shield in a harmless context. The structure is: promise benefit → pre-place the blame on the user's commitment → now any failure is the user's fault, not the product's. At the harmless scale (water bottle), this is just mild bad marketing. At the medical scale (stop your insulin and follow the diet), this structure kills people — because it permanently insulates the claim from evidence while permanently placing responsibility on the victim.",
+      "explanationAr": "لقد بنيت للتوّ درعاً للإيمان في سياق غير ضار. الهيكل هو: وعِد بفائدة → ضع اللوم على التزام المستخدم مسبقاً → دلوقتي كل فشل خطأ المستخدم مش المنتج. على النطاق الغير ضار (زجاجة مياه)، ده مجرّد تسويق سيّئ خفيف. على النطاق الطبي (وقّف أنسولينك واتبع الحمية)، الهيكل ده بيقتل الناس — لأنه يعزل الادعاء من الدليل بشكل دائم بينما يضع المسؤولية بشكل دائم على الضحية.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "Requiring evidence for a faith-framed cure claim is the same as disbelieving in miracles or divine healing.",
+      "claimAr": "المطالبة بدليل على ادعاء شفاء ذي إطار إيماني هو نفسه عدم الإيمان بالمعجزات أو الشفاء الإلهي.",
+      "prompt": "Before accepting this: what would have to be true about how miracles work if this equation were correct? And what is the actual difference between a miracle claim and a dietary-mechanism claim?",
+      "promptAr": "قبل قبول ده: لو المعادلة دي صح، إيه اللي لازم يكون صح عن إزاي المعجزات بتشتغل؟ وإيه الفرق الحقيقي بين ادعاء معجزة وادعاء آلية غذائية؟",
+      "modelPoints": [
+        "A miracle, by theological definition, is an extraordinary suspension of natural law — for which no natural explanation is sought and no clinical trial is possible or required.",
+        "A diet plan claims to work through natural, biological mechanisms (food chemistry, cellular response) — it makes specific predictions about the body that can be tested.",
+        "These are categorically different kinds of claims: one exits the domain of science by definition; the other enters it by definition.",
+        "Conflating them is a rhetorical move: it places a commercial health claim in the same untouchable category as the miraculous — which is precisely how unfalsifiability gets constructed.",
+        "Asking for evidence of a dietary mechanism claim is not denying the miraculous; it is applying the appropriate standard to the appropriate category."
+      ],
+      "modelPointsAr": [
+        "المعجزة، بتعريفها اللاهوتي، هي تعليق استثنائي للقانون الطبيعي — لا يُبحث لها عن تفسير طبيعي ولا تجربة سريرية ممكنة أو مطلوبة.",
+        "نظام حمية بيدّعي إنه بيشتغل من خلال آليات طبيعية بيولوجية (كيمياء الطعام، الاستجابة الخلوية) — بيعمل تنبّؤات محدّدة عن الجسم ممكن اختبارها.",
+        "دول نوعان مختلفان جوهرياً من الادعاءات: واحد يخرج من نطاق العلم بتعريفه؛ والتاني يدخله بتعريفه.",
+        "الخلط بينهم حركة بلاغية: بتضع ادعاءً صحياً تجارياً في نفس الفئة غير المسّاسة بالمعجزة — وده بالظبط إزاي تُبنى اللاتفنيدية.",
+        "المطالبة بدليل على ادعاء آلية غذائية مش إنكار للمعجزة؛ ده تطبيق المعيار المناسب على الفئة المناسبة."
+      ],
+      "explanation": "The distinction is categorical, not hostile: miracle claims and mechanism claims are entirely different categories of assertion. A diet that 'works through natural food chemistry' is making a mechanistic claim that is subject to testing. Merging it with the miraculous is the exploit — it borrows the immunity of the miraculous to protect a commercial health claim from scrutiny. Considering the opposite reveals that faith and evidence are not competing standards; they operate on different categories.",
+      "explanationAr": "التمييز فئوي مش عدائي: ادعاءات المعجزة وادعاءات الآلية فئتان مختلفتان تماماً من التأكيدات. حمية «بتشتغل من خلال كيمياء الطعام الطبيعية» تعمل ادعاءً آلياً خاضعاً للاختبار. دمجه مع المعجزة هو الاستغلال — بيستعير حصانة المعجزة لحماية ادعاء صحي تجاري من التدقيق. التفكير في العكس بيكشف إن الإيمان والدليل ليسا معيارين متنافسين؛ بيعملان على فئات مختلفة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/epistemology-medicine/",
+        "https://sciencebasedmedicine.org/the-role-of-placebo-effects-in-cam/"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    }
+  ]
+}

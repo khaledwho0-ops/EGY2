@@ -1,0 +1,147 @@
+{
+  "id": "day2_trust_battery_sprint1",
+  "phase": 0,
+  "week": 1,
+  "day": 2,
+  "title": "Trust Battery Sprint #1",
+  "titleAr": "سباق بطارية الثقة #١",
+  "description": "Calibrate your trust instincts. Evaluate 12 claims from different sources — news agencies, social media, WhatsApp forwards — and rate their trustworthiness.",
+  "descriptionAr": "عاير غرائز الثقة لديك. قيّم ١٢ ادعاءً من مصادر مختلفة — وكالات أنباء، وسائل تواصل اجتماعي، رسائل واتساب — وصنّف مصداقيتها.",
+  "type": "trust",
+  "difficulty": 2,
+  "estimatedMinutes": 20,
+  "exercises": [
+    {
+      "id": 1,
+      "source": "Al Ahram (Official State Newspaper)",
+      "sourceAr": "الأهرام (جريدة رسمية)",
+      "claim": "Egypt's GDP growth reached 5.6% in Q3 2024.",
+      "claimAr": "نمو الناتج المحلي الإجمالي لمصر بلغ ٥.٦٪ في الربع الثالث ٢٠٢٤.",
+      "reliabilityScore": 65,
+      "redFlags": ["State-owned media may present government-favorable statistics", "Verify with independent sources like World Bank or IMF"],
+      "redFlagsAr": ["الإعلام الحكومي قد يقدم إحصائيات مواتية للحكومة", "تحقق من مصادر مستقلة كالبنك الدولي أو صندوق النقد الدولي"],
+      "correctAssessment": "partially_reliable"
+    },
+    {
+      "id": 2,
+      "source": "WhatsApp Forward (Unknown Origin)",
+      "sourceAr": "رسالة واتساب مُعاد توجيهها (مصدر مجهول)",
+      "claim": "If you forward this message to 10 people, Vodafone will give you 50 EGP free credit.",
+      "claimAr": "لو بعتت الرسالة دي لـ ١٠ أشخاص، فودافون هتديك ٥٠ جنيه رصيد مجاناً.",
+      "reliabilityScore": 0,
+      "redFlags": ["Classic chain message scam", "No official Vodafone source", "Urgent sharing pressure", "Too good to be true"],
+      "redFlagsAr": ["رسالة تسلسلية احتيالية كلاسيكية", "لا مصدر رسمي من فودافون", "ضغط للمشاركة العاجلة", "أفضل من أن يكون حقيقياً"],
+      "correctAssessment": "unreliable"
+    },
+    {
+      "id": 3,
+      "source": "BBC Arabic",
+      "sourceAr": "بي بي سي عربي",
+      "claim": "The Suez Canal revenue dropped by 40% in early 2024 due to Houthi attacks on Red Sea shipping.",
+      "claimAr": "إيرادات قناة السويس انخفضت بنسبة ٤٠٪ في أوائل ٢٠٢٤ بسبب هجمات الحوثيين على الملاحة في البحر الأحمر.",
+      "reliabilityScore": 85,
+      "redFlags": ["International credible source", "Verify exact percentage with SCA official reports"],
+      "redFlagsAr": ["مصدر دولي موثوق", "تحقق من النسبة المحددة من تقارير هيئة قناة السويس الرسمية"],
+      "correctAssessment": "reliable"
+    },
+    {
+      "id": 4,
+      "source": "Facebook Post (Viral, 50K shares)",
+      "sourceAr": "منشور فيسبوك (فيروسي، ٥٠ ألف مشاركة)",
+      "claim": "A new law will require all Egyptians to pay a monthly internet tax of 200 EGP.",
+      "claimAr": "قانون جديد هيلزم كل المصريين بدفع ضريبة إنترنت شهرية ٢٠٠ جنيه.",
+      "reliabilityScore": 10,
+      "redFlags": ["No official gazette citation", "Viral spread without verification", "Round number (200 EGP) is a red flag", "No named official source"],
+      "redFlagsAr": ["لا استشهاد بالجريدة الرسمية", "انتشار فيروسي بدون تحقق", "رقم مدور (٢٠٠ جنيه) علامة تحذيرية"],
+      "correctAssessment": "unreliable"
+    },
+    {
+      "id": 5,
+      "source": "Reuters",
+      "sourceAr": "رويترز",
+      "claim": "Egypt devalued the Egyptian pound in March 2024, allowing it to float freely.",
+      "claimAr": "مصر خفضت قيمة الجنيه المصري في مارس ٢٠٢٤، سامحةً له بالتعويم الحر.",
+      "reliabilityScore": 90,
+      "redFlags": ["Highly credible international wire service", "Cross-reference with CBE official announcements"],
+      "redFlagsAr": ["وكالة أنباء دولية عالية المصداقية", "قارن مع إعلانات البنك المركزي المصري الرسمية"],
+      "correctAssessment": "reliable"
+    },
+    {
+      "id": 6,
+      "source": "TikTok Video (Anonymous Creator)",
+      "sourceAr": "فيديو تيك توك (صانع محتوى مجهول)",
+      "claim": "Mixing Coca-Cola with aspirin creates a powerful energy drug.",
+      "claimAr": "خلط الكوكاكولا مع الأسبرين بيعمل منشط قوي.",
+      "reliabilityScore": 0,
+      "redFlags": ["Dangerous medical misinformation", "No medical credentials shown", "Anonymous source", "Could cause gastric bleeding"],
+      "redFlagsAr": ["معلومات طبية خاطئة خطيرة", "لا مؤهلات طبية معروضة", "مصدر مجهول", "قد يسبب نزيف معدي"],
+      "correctAssessment": "unreliable"
+    },
+    {
+      "id": 7,
+      "source": "Egyptian Ministry of Health Official Twitter",
+      "sourceAr": "حساب وزارة الصحة المصرية الرسمي على تويتر",
+      "claim": "Egypt has vaccinated over 100 million people against COVID-19.",
+      "claimAr": "مصر طعّمت أكثر من ١٠٠ مليون شخص ضد كوفيد-١٩.",
+      "reliabilityScore": 70,
+      "redFlags": ["Official government source but may present favorable framing", "Verify with WHO EMRO data", "Check if this counts doses vs fully vaccinated"],
+      "redFlagsAr": ["مصدر حكومي رسمي لكن قد يقدم تأطيراً إيجابياً", "تحقق من بيانات مكتب الصحة العالمية الإقليمي"],
+      "correctAssessment": "partially_reliable"
+    },
+    {
+      "id": 8,
+      "source": "YouTube Documentary (Channel: 'Hidden Egypt')",
+      "sourceAr": "فيلم وثائقي يوتيوب (قناة: 'مصر الخفية')",
+      "claim": "The Sphinx is 12,000 years old, predating ancient Egyptian civilization.",
+      "claimAr": "أبو الهول عمره ١٢,٠٠٠ سنة، أقدم من الحضارة المصرية القديمة.",
+      "reliabilityScore": 15,
+      "redFlags": ["Fringe theory not supported by mainstream Egyptology", "Cherry-picks geological evidence", "Ignores archaeological context", "Sensationalized title"],
+      "redFlagsAr": ["نظرية هامشية غير مدعومة من علم المصريات السائد", "انتقاء أدلة جيولوجية", "تجاهل السياق الأثري"],
+      "correctAssessment": "unreliable"
+    },
+    {
+      "id": 9,
+      "source": "Nature Journal (Peer-Reviewed)",
+      "sourceAr": "مجلة نيتشر (محكّمة)",
+      "claim": "A hidden corridor was discovered inside the Great Pyramid of Giza using cosmic-ray muon tomography.",
+      "claimAr": "تم اكتشاف ممر مخفي داخل الهرم الأكبر في الجيزة باستخدام تصوير الميونات الكونية.",
+      "reliabilityScore": 95,
+      "redFlags": ["Top-tier peer-reviewed journal", "Reproducible methodology described", "ScanPyramids project collaboration with Egyptian authorities"],
+      "redFlagsAr": ["مجلة محكّمة من الدرجة الأولى", "منهجية قابلة للتكرار موصوفة", "مشروع ScanPyramids بالتعاون مع السلطات المصرية"],
+      "correctAssessment": "reliable"
+    },
+    {
+      "id": 10,
+      "source": "WhatsApp Group (Family Group)",
+      "sourceAr": "مجموعة واتساب (مجموعة العائلة)",
+      "claim": "Eating 7 dates every morning protects you from all poisons and evil eye.",
+      "claimAr": "أكل ٧ تمرات كل صباح يحميك من كل السموم والحسد.",
+      "reliabilityScore": 30,
+      "redFlags": ["Mixes authentic hadith with exaggerated claims", "The hadith in Sahih Muslim refers to Ajwa dates from Madinah specifically", "Modern extrapolation beyond original text", "No peer-reviewed poison protection evidence"],
+      "redFlagsAr": ["يخلط حديث أصيل مع ادعاءات مبالغ فيها", "الحديث في صحيح مسلم يشير لتمر العجوة من المدينة تحديداً", "استقراء حديث يتجاوز النص الأصلي"],
+      "correctAssessment": "misleading"
+    },
+    {
+      "id": 11,
+      "source": "Masrawy News Website",
+      "sourceAr": "موقع مصراوي",
+      "claim": "Cairo Metro Line 4 construction is expected to be completed by 2028.",
+      "claimAr": "من المتوقع الانتهاء من إنشاء الخط الرابع لمترو القاهرة بحلول ٢٠٢٨.",
+      "reliabilityScore": 60,
+      "redFlags": ["Local news aggregator — generally reliable but may use government press releases uncritically", "Verify timeline with Ministry of Transport"],
+      "redFlagsAr": ["موقع إخباري محلي — موثوق عموماً لكن قد يستخدم البيانات الحكومية بدون نقد", "تحقق من الجدول الزمني مع وزارة النقل"],
+      "correctAssessment": "partially_reliable"
+    },
+    {
+      "id": 12,
+      "source": "Telegram Channel ('Egyptian Truth Reveals')",
+      "sourceAr": "قناة تليجرام ('كشف الحقيقة المصرية')",
+      "claim": "The Egyptian government is secretly selling the Nile water to Israel.",
+      "claimAr": "الحكومة المصرية بتبيع مياه النيل لإسرائيل سراً.",
+      "reliabilityScore": 5,
+      "redFlags": ["Anonymous Telegram channel", "Conspiracy framing ('secretly')", "No documentary evidence", "Exploits nationalist sentiment and water anxiety", "Contradicts established water treaties"],
+      "redFlagsAr": ["قناة تليجرام مجهولة", "تأطير مؤامراتي ('سراً')", "لا دليل وثائقي", "يستغل المشاعر الوطنية والقلق المائي"],
+      "correctAssessment": "unreliable"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "day129_religious_framing_vs_evidence",
+  "phase": 3,
+  "week": 19,
+  "day": 129,
+  "title": "When Religious Language Replaces Medical Evidence",
+  "titleAr": "لمّا اللغة الدينية تحلّ محلّ الدليل الطبي",
+  "description": "Dressing a medical claim in sacred words does not make it true — and Islamic scholarship has a name for this trick. Today: how to tell the difference between genuine religious guidance and a medical claim wearing religious clothes.",
+  "descriptionAr": "إلباس ادعاء طبي كلمات مقدّسة ما بيخلّيهوش صحيحاً — وعلم الإسلام عنده اسم لهذه الحيلة. النهاردة: إزاي تفرّق بين توجيه ديني حقيقي وادعاء طبي لابس ملابس دينية.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/religion-science/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "The viral diet system split foods into «طيبات» (pure) and «خبائث» (foul) — using Quranic vocabulary. Does using these words make the food classifications a valid Islamic ruling?",
+      "claimAr": "النظام الغذائي المنتشر قسّم الطعام لـ«طيبات» و«خبائث» — مستخدماً مفردات قرآنية. استخدام هذه الكلمات بيجعل التصنيفات الغذائية حكماً إسلامياً صحيحاً؟",
+      "options": [
+        "Yes — Quranic words give a claim religious validity automatically",
+        "No — a medical claim requires medical evidence regardless of the words used; importing Quranic vocabulary into a dietary system does not turn it into Sharia",
+        "Yes — if the words are in the Quran they must be accurate for nutrition",
+        "It depends on how many verses are quoted"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Using Quranic vocabulary in a non-Quranic context is precisely what Al-Nahl 16:116 warns against: 'Do not say of what your tongues assert of falsehood, this is lawful and this is unlawful, inventing lies about Allah.' A food classification based on a personal dietary theory, not on Sharia scholarship or nutrition science, carries neither religious nor scientific validity — however many sacred words are attached to it.",
+      "explanationAr": "استخدام مفردات قرآنية في سياق غير قرآني هو بالضبط ما تحذّر منه آية النحل 16:116: «وَلَا تَقُولُوا لِمَا تَصِفُ أَلْسِنَتُكُمُ الْكَذِبَ هَٰذَا حَلَالٌ وَهَٰذَا حَرَامٌ لِتَفْتَرُوا عَلَى اللَّهِ الْكَذِبَ». تصنيف غذائي مبني على نظرية حمية شخصية — لا على علم الشريعة ولا على علم التغذية — لا يحمل صحة دينية ولا علمية، مهما كثرت الكلمات المقدّسة المرتبطة به.",
+      "sources": [
+        "https://quran.com/16/116",
+        "EAL-case-001:redflag-6"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A seller says: 'Chicken is خبيث (foul) — the Prophet ﷺ never ate it.' What does the actual hadith record say?",
+      "claimAr": "بائع بيقول: «الفراخ خبيثة — النبي ﷺ ما أكلهاش أبداً». سجلّ الحديث الحقيقي بيقول إيه؟",
+      "options": [
+        "Correct — no authentic hadith records the Prophet eating chicken",
+        "False — authentic hadith in Sunan Abī Dāwūd and Sunan Ibn Mājah document the Prophet ﷺ eating chicken; the claim is a fabrication",
+        "The hadith record is unclear on this",
+        "Only one weak report mentions it"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The claim is historically false. Authenticated hadith in the Six Books — including Sunan Abī Dāwūd (kitāb al-at'ima) and Sunan Ibn Mājah — document the Prophet ﷺ eating chicken. The claim that he never did is a fabrication that was used to lend the diet false prophetic authority. One test for any 'Prophet never ate X' claim: which book, which chain, which grade?",
+      "explanationAr": "الادعاء خاطئ تاريخياً. حديث مصحّح في الكتب الستة — بما فيها سنن أبي داود (كتاب الأطعمة) وسنن ابن ماجه — يوثّق أكل النبي ﷺ للدجاج. ادعاء إنه ما أكله أبداً هو تلفيق استُخدم لمنح الحمية سلطة نبوية زائفة. اختبار لأي ادعاء «النبي ما أكل كذا أبداً»: أي كتاب؟ أي سند؟ أي درجة؟",
+      "sources": [
+        "https://sunnah.com/abudawud/27",
+        "EAL-case-001:alain-2026-04-28"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The Quran says: 'O you who believe, do not prohibit the good things which Allah has made lawful to you.' (Al-Mā'idah 5:87). Applied to the viral diet system, this verse:",
+      "claimAr": "القرآن يقول: «يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحَرِّمُوا طَيِّبَاتِ مَا أَحَلَّ اللَّهُ لَكُمْ» (المائدة 5:87). مطبّقاً على النظام الغذائي المنتشر، هذه الآية:",
+      "options": [
+        "Supports the diet system",
+        "Directly refutes it — the system declared chicken, milk, and eggs forbidden (haraam), which is exactly what this verse prohibits: adding prohibitions to lawful foods without divine authority",
+        "Has nothing to do with food",
+        "Only applies to alcohol and pork"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what is the irony in a system that uses Quranic names for its brand, but whose actual instructions violate Quranic verses like 5:87?",
+        "promptAr": "بكلماتك: إيه هو التناقض في نظام بيستخدم أسماء قرآنية لعلامته التجارية، لكن تعليماته الفعلية بتنتهك آيات قرآنية زي 5:87؟"
+      },
+      "explanation": "This verse is one of two that directly refute the system from within Islamic scripture. Chicken, milk, and eggs are lawful (halal) foods with no Quranic or sahih hadith prohibition. Declaring them 'toxic' or forbidden — based on a personal dietary theory — adds a prohibition to lawful food, which is precisely what this verse forbids. The Quran's own words defend lawful foods from this kind of weaponisation.",
+      "explanationAr": "هذه الآية هي واحدة من اثنتين تفنّد النظام مباشرةً من داخل النصوص الإسلامية. الفراخ واللبن والبيض أطعمة حلال لا يوجد نهي قرآني أو حديثي صحيح عنها. إعلانها «سامة» أو محرّمة — استناداً لنظرية حمية شخصية — يُضيف تحريماً لطعام حلال، وهو بالضبط ما تنهى عنه هذه الآية. كلمات القرآن نفسها تدافع عن الأطعمة الحلال من هذا النوع من التوظيف.",
+      "sources": [
+        "https://quran.com/5/87",
+        "EAL-case-001:redflag-6"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'This diet is blessed because it avoids the خبائث the Quran warns against. My patients are proof it works. If it did not cure you, you did not follow it sincerely. Doctors who oppose it serve the pharmaceutical industry.'",
+      "claimAr": "فكّك الحُجّة دي: «الحمية دي مباركة لأنها بتتجنّب الخبائث اللي القرآن ينهى عنها. مرضايا دليل إنها شغّالة. لو ما شفتكش، إنت ما اتبّعتهاش بصدق. والأطباء اللي بيعارضوها بيخدموا صناعة الدواء.»",
+      "parts": [
+        { "text": "This diet works and is Islamically sanctioned.", "textAr": "الحمية دي شغّالة ومعتمَدة إسلامياً.", "role": "conclusion" },
+        { "text": "It avoids the خبائث the Quran warns against.", "textAr": "بتتجنّب الخبائث اللي القرآن ينهى عنها.", "role": "premise" },
+        { "text": "(Unstated) Using a Quranic category name in a diet equals following the Quran.", "textAr": "(غير مذكور) استخدام اسم فئة قرآنية في حمية يساوي اتباع القرآن.", "role": "assumption" },
+        { "text": "My patients are proof it works.", "textAr": "مرضايا دليل إنها شغّالة.", "role": "premise" },
+        { "text": "If it did not cure you, you did not follow it sincerely.", "textAr": "لو ما شفتكش، إنت ما اتبّعتهاش بصدق.", "role": "assumption" },
+        { "text": "Doctors who oppose it serve the pharmaceutical industry.", "textAr": "الأطباء اللي بيعارضوها بيخدموا صناعة الدواء.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION is that using a Quranic category name equals Quranic sanction — but verse 16:116 explicitly forbids this move. 'My patients' testimonials are a PREMISE but anecdotal (no control, no blinding) — Red Flag #3 from the case. The 'didn't follow sincerely' move is an unfalsifiability ASSUMPTION: it pre-explains every failure, making the conclusion untestable. The 'pharma' attack is IRRELEVANT — it targets critics' supposed motives, not the evidence. Mapping these parts shows a conclusion with no honest support.",
+      "explanationAr": "الافتراض الخفي هو إن استخدام اسم فئة قرآنية يساوي اعتماد قرآني — لكن الآية 16:116 تمنع صراحةً هذه الحركة. شهادات «مرضايا» مقدمة لكنها حكائية (لا ضابط ولا تعمية) — علامة الخطر رقم 3 من الحالة. حركة «ما اتبّعتهاش بصدق» افتراض عدم تفنيد: يُفسِّر كل فشل مسبقاً، مما يجعل الخلاصة غير قابلة للاختبار. هجوم «الدواء» غير ذات صلة — بيستهدف دوافع المنتقدين المزعومة لا الدليل. تفكيك هذه الأجزاء يُظهر خلاصة بدون دعم أمين.",
+      "sources": [
+        "https://quran.com/16/116",
+        "EAL-case-001:redflag-6",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A follower says: 'I can't question the diet system because the name «الطيبات» is from the Quran — disagreeing with it feels like disagreeing with God.' This seems like sincere religious caution.",
+      "claimAr": "تابع بيقول: «ما قدرش أعترض على نظام الحمية لأن اسم «الطيبات» من القرآن — الاعتراض عليه بيحسّسني إني بعترض على ربنا». ده بيبدو كحذر ديني صادق.",
+      "prompt": "What would disprove that this feeling reflects genuine religious reasoning — rather than the vocabulary exploit working exactly as designed?",
+      "promptAr": "إيه اللي يكذّب إن الإحساس ده بيعكس تفكير ديني حقيقي — بدلاً من إن استغلال المفردات شغّال بالظبط زي ما اتصمَّم؟",
+      "modelPoints": [
+        "If the system were genuinely Quranic, the Quran's own verses (5:87, 16:116) would not directly refute its core instructions — but they do.",
+        "If the brand name automatically conferred Quranic authority, every product using the word «الطيبات» would be divinely sanctioned — which is clearly false.",
+        "The feeling of 'disagreeing with the name = disagreeing with God' is precisely the psychological mechanism the vocabulary exploit is designed to create — feeling it does not make it theologically valid.",
+        "A sincere Muslim who questions the diet is not questioning the Quran; they are questioning a seller's interpretation of a Quranic word — a routine act of discernment Islam actually encourages."
+      ],
+      "modelPointsAr": [
+        "لو النظام كان قرآنياً حقيقياً، آيات القرآن نفسها (5:87، 16:116) ما كانتش لتفنّد تعليماته الأساسية — لكنها بتفعل.",
+        "لو الاسم التجاري يُعطي تلقائياً سلطة قرآنية، كل منتج يستخدم كلمة «الطيبات» سيكون معتمَداً إلهياً — وهو واضح الخطأ.",
+        "إحساس «الاعتراض على الاسم = الاعتراض على الله» هو بالضبط الآلية النفسية التي صُمِّم استغلال المفردات لخلقها — الإحساس به لا يجعله صحيحاً لاهوتياً.",
+        "المسلم الصادق الذي يتساءل عن الحمية لا يتساءل عن القرآن؛ بل يتساءل عن تفسير بائع لكلمة قرآنية — وهو فعل تمييز اعتيادي الإسلام يشجّع عليه فعلاً."
+      ],
+      "sources": [
+        "EAL-case-001:redflag-6",
+        "https://plato.stanford.edu/entries/popper/",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    }
+  ]
+}

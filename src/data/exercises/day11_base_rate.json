@@ -1,0 +1,30 @@
+{
+  "id": "day11_base_rate",
+  "phase": 0,
+  "week": 2,
+  "day": 11,
+  "title": "Base Rate Neglect",
+  "titleAr": "إهمال المعدل الأساسي",
+  "description": "Why your brain ignores base rates with Egyptian health stats.",
+  "descriptionAr": "لماذا يتجاهل عقلك المعدلات الأساسية مع إحصاءات صحية مصرية.",
+  "type": "probability",
+  "difficulty": 3,
+  "estimatedMinutes": 12,
+  "instrument": "Kahneman 2011",
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "A rapid COVID test is 95% accurate. Prevalence is 1/500. You test positive. What is actual probability?",
+      "claimAr": "اختبار كوفيد السريع دقته 95%. الانتشار 1/500. نتيجتك إيجابية. ما الاحتمال الفعلي؟",
+      "truthValue": "misleading",
+      "category": "health",
+      "difficulty": 4,
+      "explanation": "Bayes theorem: P(COVID|+) = (0.95×0.002)/(0.95×0.002+0.05×0.998) ≈ 3.7%. Most guess 95% — base rate neglect.",
+      "explanationAr": "نظرية بايز: الاحتمال الفعلي حوالي 3.7% فقط. معظم الناس يخمنون 95% — إهمال المعدل الأساسي.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7280029/"
+      ],
+      "cognitivebiasAtPlay": "Base Rate Neglect"
+    }
+  ]
+}

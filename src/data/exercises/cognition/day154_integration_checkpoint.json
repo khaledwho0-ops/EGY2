@@ -1,0 +1,141 @@
+{
+  "id": "day154_integration_checkpoint",
+  "phase": 4,
+  "week": 22,
+  "day": 154,
+  "title": "Integration Checkpoint — The Whole Toolkit",
+  "titleAr": "نقطة تفتيش الدمج — العُدّة كاملة",
+  "description": "Week 22 checkpoint. One mixed set that pulls every thread together: diagnose the layer, pick the shield, hold the relationship, protect your own mind, and remember the human under the claim.",
+  "descriptionAr": "نقطة تفتيش الأسبوع 22. مجموعة مختلطة بتجمع كل الخيوط: شخّص الطبقة، اختار الدرع، امسك العلاقة، احمِ عقلك، وافتكر الإنسان اللي تحت الادعاء.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 18,
+  "interleaved": true,
+  "source": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Quick diagnosis. \"The system can't be wrong — look how many people swear by it online.\" Name the layer and the shield in one breath.",
+      "claimAr": "تشخيص سريع. «النظام مش ممكن يكون غلط — بصّ كام واحد بيقسم عليه أونلاين». سمّي الطبقة والدرع في نفس واحد.",
+      "options": [
+        "Religion layer; answer with a verse",
+        "Logic layer; the bandwagon fallacy — popularity isn't proof, and the harmed can't post",
+        "Science layer; run a clinical trial",
+        "No layer; it's a fair point"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Layer: logic. Shield: naming the bandwagon fallacy. 'Many people swear by it' measures popularity, not truth — and it's doubly misleading here because of survivorship: the people the system harmed (in the ICU, disabled, or dead) literally cannot post their testimony. The visible chorus is selected for survival. You don't need a study or a verse, just the calm separation of 'popular' from 'proven.'",
+      "explanationAr": "الطبقة: منطق. الدرع: تسمية مغالطة العربة. «ناس كتير بتقسم عليه» بتقيس الرواج، مش الحقيقة — وهنا مضلّلة مرتين بسبب الناجين: اللي النظام أذاهم (في العناية، إعاقة، أو متوفّين) حرفياً ما يقدروش ينشروا شهادتهم. الجوقة الظاهرة منتقاة بالنجاة. مش محتاج دراسة ولا آية، بس الفصل الهادي بين «رائج» و«مُثبَت».",
+      "sources": [
+        "EAL-case-001:bandwagon",
+        "EAL-case-001:survivorship"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "decompose",
+      "claim": "Map this real-life argument: \"Stop the chemo, it's poison — natural food is what really heals, and the doctors who push chemo just profit from cancer patients.\"",
+      "claimAr": "فكّك الحُجّة الواقعية دي: «وقف الكيماوي، ده سُم — الأكل الطبيعي هو اللي بيشفي فعلاً، والدكاترة اللي بيدفعوا للكيماوي بيكسبوا من مرضى السرطان بس».",
+      "parts": [
+        { "text": "Natural food is what really heals (so stop the chemo).", "textAr": "الأكل الطبيعي هو اللي بيشفي فعلاً (يبقى وقف الكيماوي).", "role": "conclusion" },
+        { "text": "Chemo is 'poison'.", "textAr": "الكيماوي «سُم».", "role": "premise" },
+        { "text": "(Unstated) Anything natural is safe, anything 'chemical' is harmful.", "textAr": "(غير مذكور) أي حاجة طبيعية آمنة، وأي حاجة «كيميائية» ضارّة.", "role": "assumption" },
+        { "text": "Doctors who push chemo just profit from cancer patients.", "textAr": "الدكاترة اللي بيدفعوا للكيماوي بيكسبوا من مرضى السرطان بس.", "role": "irrelevant" }
+      ],
+      "explanation": "Mapping exposes the weak joint: the hidden ASSUMPTION that natural = safe and chemical = harmful (the appeal-to-nature fallacy — yet hemlock is natural and lethal). The 'doctors just profit' line is IRRELEVANT — it attacks people instead of the evidence, pre-discrediting anyone who objects. And this is Red Flag #8 (stop your tested medicine), the single most dangerous move of all. Of every claim this week, this is the one you never leave unanswered, because abandoning cancer treatment for food costs lives. Warmth still matters, but so do clarity and urgency: keep the person in real care.",
+      "explanationAr": "التفكيك بيكشف المفصل الضعيف: الافتراض الخفي إن الطبيعي = آمن والكيميائي = ضارّ (مغالطة الطبيعة — رغم إن الشوكران طبيعي وقاتل). وجملة «الدكاترة بيكسبوا بس» غير ذات صلة — بتهاجم الناس بدل الدليل وبتُسقِط أي معترض مقدماً. ودي علامة الخطر رقم 8 (وقف دواك المُختبَر)، أخطر حركة على الإطلاق. من كل ادعاءات الأسبوع، دي اللي عمرك ما تسيبها من غير ردّ، لأن ترك علاج السرطان للأكل بيكلّف أرواح. الدفا مهم، بس الوضوح والإلحاح كمان: خلّي الشخص في رعاية حقيقية.",
+      "sources": [
+        "EAL-case-001:redflag-8",
+        "https://www.cancer.gov/about-cancer/treatment/types"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: the goal of all this training is to win arguments against people who believe pseudoscience.",
+      "claimAr": "صح ولا غلط: هدف التدريب ده كله إنك تكسب جدالات ضد اللي بيصدّقوا العلم الزائف.",
+      "correctAnswer": false,
+      "myth_en": "The point is to win the argument.",
+      "myth_ar": "الهدف إنك تكسب الجدال.",
+      "explanation": "False — and notice how sure you felt before answering. This misunderstanding undoes everything. Winning an argument usually loses the person: humiliation entrenches the belief and breaks the relationship that was your only real channel to them. The goal is to protect people (often the most vulnerable — elderly, very sick, low health-literacy) and to keep your own mind honest. Sometimes that means planting one calm question and walking away, not extracting a public surrender. You measure success by safety and trust, not by who had the last word.",
+      "explanationAr": "غلط — ولاحظ كنت متأكد قد إيه قبل ما تجاوب. سوء الفهم ده بيهدّ كل حاجة. كسب الجدال غالباً بيخسّر الشخص: الإذلال بيرسّخ المعتقد ويكسر العلاقة اللي كانت قناتك الوحيدة ليه. الهدف حماية الناس (غالباً الأكثر هشاشة — كبار السن، المرضى جداً، قليلي الثقافة الصحية) وإنك تخلّي عقلك أمين. أحياناً ده معناه تزرع سؤال هادي واحد وتمشي، مش تنتزع استسلام علني. بتقيس النجاح بالأمان والثقة، مش بمين قال آخر كلمة.",
+      "sources": [
+        "EAL-case-001:structural-3",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5993177/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "recognize",
+      "retrievalOf": 98,
+      "claim": "A friend forwards a polished «الطيبات» reel and asks: \"Before I share this with my sick mother — how do I check it myself in two minutes?\" Reaching back to the fact-check toolkit, what do you teach her?",
+      "claimAr": "صاحبتك بتبعت ريل «الطيبات» متقن وبتسأل: «قبل ما أبعته لأمي المريضة — أتأكّد منه بنفسي إزاي في دقيقتين؟». بالرجوع لعُدّة التحقّق، بتعلّميها إيه؟",
+      "options": [
+        "Trust it if it looks professional",
+        "SIFT: Stop before sharing; Investigate the source (who is this, in what specialty?); Find better coverage (what do WHO/health bodies say?); Trace the claim to its origin — and count the red flags",
+        "Share it; her mother can decide",
+        "Only share things with many views"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Teach her SIFT plus the red-flag count — the whole science-literacy toolkit compressed for real life. Stop (don't share on impulse, especially to a sick parent); Investigate the source (a real doctor, but in which specialty?); Find better coverage (what do WHO and medical bodies actually say about the disease?); Trace claims to their origin (is there a study, or just a reel?). Two minutes of SIFT before forwarding is exactly the habit that could have protected the most vulnerable people the system reached.",
+      "explanationAr": "علّميها SIFT مع عدّ علامات الخطر — عُدّة الثقافة العلمية كلها مضغوطة للحياة الواقعية. قِف (ما تشاركيش باندفاع، خصوصاً لأم مريضة)؛ افحصي المصدر (دكتور حقيقي، بس في أنهي تخصص؟)؛ دوّري على تغطية أحسن (منظمة الصحة والجهات الطبية بيقولوا إيه عن المرض؟)؛ تتبّعي الادعاء لأصله (في دراسة، ولا مجرد ريل؟). دقيقتين SIFT قبل الإرسال هي بالظبط العادة اللي كانت ممكن تحمي أكثر الناس هشاشة اللي وصلهم النظام.",
+      "sources": [
+        "https://www.bbc.co.uk/bitesize/articles/zk3rb82",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "stacking shields to make a claim untouchable",
+      "techniqueAr": "تكديس الدروع علشان الادعاء ما يتلمسش",
+      "task": "Feel the trick from the inside so you can spot it instantly later. Take a HARMLESS claim — 'everyone should sleep with the window open' — and defend it the way the system did: add a popularity shield ('thousands swear by it'), a nature shield ('it's the natural way'), and a critic-blocking shield ('only people paid by the AC industry disagree'). Write 3–4 lines stacking all three.",
+      "taskAr": "حسّ بالحركة من جوّه علشان تكشفها فوراً بعدين. خُد ادعاء غير ضار — «كل الناس المفروض تنام والشباك مفتوح» — ودافع عنه زي ما النظام عمل: ضيف درع رواج («الآلاف بيقسموا عليه»)، ودرع طبيعة («دي الطريقة الطبيعية»)، ودرع تعطيل النقّاد («بس اللي بتدفعلهم شركات التكييف بيختلفوا»). اكتب 3–4 سطور بتكدّس التلاتة.",
+      "tells": [
+        "Popularity ('thousands swear by it') is offered as proof — but many people believing something measures spread, not truth.",
+        "'It's natural' is treated as 'it's safe' — the appeal-to-nature fallacy; natural things can harm too.",
+        "Critics are pre-discredited as paid/compromised — so no objection can ever land. That's the unfalsifiable critic-block.",
+        "Stacked together, the three shields make the claim feel untouchable while never offering a single piece of real evidence."
+      ],
+      "tellsAr": [
+        "الرواج («الآلاف بيقسموا عليه») بيتقدّم كدليل — لكن إن ناس كتير بتصدّق حاجة بيقيس الانتشار مش الحقيقة.",
+        "«دي طبيعية» بتتعامل كـ«دي آمنة» — مغالطة الطبيعة؛ الحاجات الطبيعية ممكن تأذي كمان.",
+        "النقّاد بيتسقطوا مقدماً كمدفوعين/متواطئين — فمفيش اعتراض يقدر يوصل. ده تعطيل النقّاد غير القابل للتفنيد.",
+        "متكدّسين سوا، الدروع التلاتة بتخلّي الادعاء يحسّ ما يتلمسش وهو مش بيقدّم ولا قطعة دليل حقيقية."
+      ],
+      "explanation": "Building the manipulation in a weakened, harmless dose is 'active inoculation' — research (signal-detection meta-analysis, N=37,025) shows it sharpens your ability to DISCRIMINATE manipulative from honest content without just making you cynical. You just assembled the exact shield-stack the system used — bandwagon + appeal-to-nature + critic-block — on a topic where nobody gets hurt. Now you'll recognize the same architecture instantly when the stakes are someone's insulin.",
+      "explanationAr": "إنك تبني التلاعب بجرعة مخفّفة غير ضارة ده «التلقيح النشط» — الأبحاث (تحليل بَعدي بنظرية كشف الإشارة، ن=37,025) بتبيّن إنه بيشحذ قدرتك على التمييز بين المحتوى المتلاعب والصادق من غير ما يخلّيك متشكّك في كل حاجة. لسه ركّبت بالظبط تكديس الدروع اللي النظام استخدمه — العربة + الطبيعة + تعطيل النقّاد — على موضوع محدش بيتأذى فيه. دلوقتي هتكشف نفس البنية فوراً لمّا الموضوع يبقى أنسولين حد.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "EAL-case-001:redflag-5"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    },
+    {
+      "id": 6,
+      "mechanic": "recognize",
+      "claim": "Final integration. Look back at the whole week. What is the single sentence that ties logic, science, religion, and social pressure together?",
+      "claimAr": "الدمج الأخير. بُصّ للأسبوع كله. إيه الجملة الواحدة اللي بتربط المنطق والعلم والدين والضغط الاجتماعي مع بعض؟",
+      "options": [
+        "\"Always have the most evidence.\"",
+        "\"The fight against superstition is not a battle of information — it is psychological and moral self-training: matching the right shield to each layer, while protecting both the relationship and your own honesty with reality.\"",
+        "\"Never talk to people who disagree with you.\"",
+        "\"Religion and science can't mix.\""
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the thesis of the entire curriculum, now lived through a real conversation. The skill was never just knowing more facts — it was the inner discipline to stay calm under social pressure, diagnose which layer each move belongs to, reach for the matching shield (logic, science, or religious literacy), and keep both the relationship and your own grip on reality intact. Information is the easy part; the hard, daily training is moral and psychological. That is what you've been building toward — and what graduates this phase.",
+      "explanationAr": "دي أطروحة المنهج كله، دلوقتي معيشة من خلال محادثة حقيقية. المهارة عمرها ما كانت مجرّد معرفة حقائق أكتر — كانت الانضباط الداخلي إنك تفضل هادي تحت الضغط الاجتماعي، تشخّص كل حركة بتنتمي لأنهي طبقة، تمدّ إيدك للدرع المطابق (منطق، علم، أو ثقافة دينية)، وتحافظ على العلاقة وعلى مسكتك للواقع سليمين. المعلومة هي الجزء السهل؛ والتدريب الصعب اليومي أخلاقي ونفسي. ده اللي كنت بتتبنى ناحيته — واللي بتتخرّج بيه من المرحلة دي.",
+      "sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5993177/"
+      ],
+      "cognitivebiasAtPlay": "Intellectual Humility (the defense)"
+    }
+  ]
+}

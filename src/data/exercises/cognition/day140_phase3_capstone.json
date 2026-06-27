@@ -1,0 +1,168 @@
+{
+  "id": "day140_phase3_capstone",
+  "phase": 3,
+  "week": 20,
+  "day": 140,
+  "title": "Phase 3 Capstone — The Full Religious-Shield Test",
+  "titleAr": "تتويج المرحلة الثالثة — اختبار الدرع الديني الكامل",
+  "description": "You have all the tools now: the vocabulary exploit, the two refuting verses (5:87 and 16:116), Maqasid-hifz al-nafs, the unfalsifiability test, and the faith-vs-weaponised sorting skill. This capstone weaves them into one integrated stress test.",
+  "descriptionAr": "لديك الآن كل الأدوات: حيلة المفردة، والآيتان الرادّتان (٥:٨٧ و١٦:١١٦)، ومقاصد-حفظ النفس، واختبار عدم القابلية للتفنيد، ومهارة فرز الإيمان عن التسليح. هذا التتويج ينسجهم في اختبار ضغط متكامل واحد.",
+  "type": "integration",
+  "difficulty": 5,
+  "estimatedMinutes": 20,
+  "source": "https://quran.com/5/87",
+  "interleaved": false,
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A health system's promotional video begins with Quranic recitation, names its food categories «طيبات» and «خبائث», claims to cure diabetes and lupus, says 'conventional medicine profits from your disease,' requests that followers share the video as 'spreading the word of Allah,' and adds that anyone who dies following the system 'died with full faith.' Which ONE of the 12 red flags is NOT active in this video?",
+      "claimAr": "فيديو ترويجي لنظام صحي بيبدأ بتلاوة قرآنية، بيُسمّي فئاته الغذائية «طيبات» و«خبائث»، يدّعي شفاء السكري والذئبة، يقول «الطب التقليدي بيكسب من مرضك»، يطلب من الأتباع مشاركة الفيديو كـ«نشر كلمة الله»، ويُضيف إن من يموت متّبعاً النظام «مات على إيمان كامل». أنهي واحدة من الـ12 علامة تحذيرية مش شغّالة في الفيديو ده؟",
+      "options": [
+        "Red Flag 6 (moral/religious words for food)",
+        "Red Flag 1 (cures everything)",
+        "Red Flag 5 (big pharma conspiracy)",
+        "Red Flag 2 (no indexed publications) — wait, is this actually ABSENT, or is it simply not mentioned in the description?"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Red Flags 6, 1, 5, 4 (unfalsifiable — death = martyrdom), 11 (questions = betrayal — sharing as religious duty), and 8 (implied stop your medicine) are all clearly active. Red Flag 2 (no indexed publications) is likely also present but is not mentioned in this scenario's description — which makes option D the most honest answer: the question of whether it is 'absent' requires asking, not assuming. The exercise point: ALL the other red flags were triggered without mentioning a price, a product, or a single specific treatment protocol — the entire sell was done through religious and emotional packaging alone.",
+      "explanationAr": "العلامات التحذيرية 6 و1 و5 و4 (غير قابل للتفنيد — الموت = شهادة) و11 (السؤال = خيانة — المشاركة كواجب ديني) و8 (إيقاف الدواء ضمنياً) كلها شغّالة بوضوح. العلامة 2 (لا منشورات مُفهرسة) على الأرجح موجودة أيضاً لكن غير مذكورة في وصف السيناريو — مما يجعل الخيار د الإجابة الأصدق: مسألة ما إذا كانت «غائبة» تتطلب سؤالاً، لا افتراضاً. نقطة التمرين: كل العلامات التحذيرية الأخرى انطلقت بدون ذكر سعر، أو منتج، أو بروتوكول علاج محدد — كل البيع تمّ من خلال التغليف الديني والعاطفي وحده.",
+      "sources": [
+        "EAL-case-001:redflag-6",
+        "EAL-case-001:redflag-4",
+        "EAL-case-001:redflag-5"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2,
+      "mechanic": "decompose",
+      "claim": "Map this complete argument from a phase-3 case promotional lecture: 'Allah created this earth with everything we need to heal. «الطيبات» — the good foods He declared — are our medicine. «الخبائث» — what He declared foul — are the poisons in the hospital. The proof is in the Quran. The Syndicate's ban proves they fear the truth. Those who follow this path and die are martyrs. Those who doubt are letting the establishment win.'",
+      "claimAr": "فكّك الحُجّة الكاملة من محاضرة ترويجية لقضية المرحلة الثالثة: «الله خلق الأرض بكل ما نحتاجه للشفاء. «الطيبات» — الأطعمة الجيدة التي أعلنها — هي دواؤنا. «الخبائث» — ما أعلنه خبيثاً — هي سموم المستشفى. الدليل في القرآن. حظر النقابة يثبت خوفهم من الحقيقة. من يتّبع هذا الطريق ويموت شهيد. من يشكّ يسمح للمؤسسة بالانتصار».",
+      "parts": [
+        {
+          "text": "Our foods («الطيبات») are medicine; hospital treatments («الخبائث») are poison.",
+          "textAr": "أطعمتنا («الطيبات») دواء؛ وعلاجات المستشفى («الخبائث») سمّ.",
+          "role": "conclusion"
+        },
+        {
+          "text": "Allah created everything needed to heal; Quranic vocabulary labels good vs foul; the Syndicate banned us.",
+          "textAr": "الله خلق كل ما يلزم للشفاء؛ مفردات القرآن تُصنّف الطيب والخبيث؛ النقابة حظرتنا.",
+          "role": "premise"
+        },
+        {
+          "text": "(Unstated) The Quranic categories «طيبات/خبائث» map directly onto a specific food protocol, and a regulatory ban is evidence of suppressing truth rather than protecting public safety.",
+          "textAr": "(غير مذكور) فئات «الطيبات/الخبائث» القرآنية تُطابق مباشرةً بروتوكولاً غذائياً بعينه، والحظر التنظيمي دليل على قمع الحقيقة لا على حماية الصحة العامة.",
+          "role": "assumption"
+        },
+        {
+          "text": "Those who doubt are letting the establishment win.",
+          "textAr": "من يشكّ يسمح للمؤسسة بالانتصار.",
+          "role": "irrelevant"
+        }
+      ],
+      "explanation": "The hidden assumption is a double fraud: first, it claims that Quranic vocabulary about general purity maps onto a specific nutrition protocol (5:87 and 16:116 directly refute issuing such rulings without religious authority). Second, it pre-classifies the regulatory ban — which followed documented deaths and a failed evidence request — as proof of a conspiracy rather than as a legitimate public-safety response. The 'doubters help the enemy' line is irrelevant: it attacks the people asking for evidence rather than providing the evidence. This argument has zero empirical content — it is entirely constructed from identity threats, unfalsifiable frames, and vocabulary exploitation.",
+      "explanationAr": "الافتراض الخفي احتيال مزدوج: أولاً، بيدّعي إن المفردة القرآنية عن النقاء العام تُطابق بروتوكول تغذية بعينه (٥:٨٧ و١٦:١١٦ ترفضان مباشرةً إصدار أحكام كهذه بدون سلطة دينية). ثانياً، بيصنّف مسبقاً الحظر التنظيمي — الذي جاء بعد وفيات موثَّقة وطلب دليل فاشل — كدليل على مؤامرة لا كاستجابة مشروعة لحماية الصحة العامة. جملة «الشاكّون يساعدون العدو» غير ذات صلة: بتهاجم من يطلب الدليل لا تقدّم الدليل. هذه الحُجّة لا محتوى تجريبي فيها إطلاقاً — مبنية كلياً من تهديدات الهوية وأطر غير قابلة للتفنيد واستغلال المفردة.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "EAL-case-001:mfa-eg-2026-04",
+        "https://quran.com/5/87",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "A friend says: 'I don't see why we need to analyse this so carefully. The people who followed this system had sincere faith and pure intentions — that matters more than all this critical thinking.'",
+      "claimAr": "صديق بيقول: «مش شايف ليه لازم نحلّل بعناية بالشكل ده. الناس اللي اتّبعوا النظام ده كان عندهم إيمان صادق ونيّة طاهرة — ده أهم من كل التفكير النقدي ده».",
+      "prompt": "What is missing from this view? What would happen to a society that adopted 'sincere intention = sufficient protection against harm'?",
+      "promptAr": "إيه المفقود في الرأي ده؟ إيه اللي سيحصل لمجتمع يتبنّى «النية الصادقة = حماية كافية من الأذى»؟",
+      "modelPoints": [
+        "Sincerity and correctness are different dimensions. A sincere pilot who does not know how to land a plane is still a danger. Sincerity is a moral virtue; it is not a substitute for accurate information.",
+        "The people who were harmed — who stopped insulin, who paused chemotherapy — were also sincere. Their sincerity did not protect them from the physical consequences of stopping evidence-based treatment.",
+        "If 'sincere intention = protection,' then no fraud, no manipulation, and no false medical claim could ever be criticised as long as the promoter believes in it. This eliminates the entire category of well-intentioned harm.",
+        "Critical thinking is itself a form of care: it protects the person from being exploited, and it protects the community from a second wave of the same harm.",
+        "Islam itself emphasises ilm (knowledge) alongside niyyah (intention): 'seek knowledge from the cradle to the grave.' Sincerity without knowledge is praised, but knowledge is not replaced by sincerity in matters with real-world consequences."
+      ],
+      "modelPointsAr": [
+        "الصدق والصحة بُعدان مختلفان. طيّار صادق لا يعرف كيف يهبط الطائرة مازال خطراً. الصدق فضيلة أخلاقية؛ لكنه لا يعوّض المعلومات الدقيقة.",
+        "المتضرّرون — من أوقفوا الأنسولين، من أوقفوا العلاج الكيميائي — كانوا صادقين أيضاً. صدقهم ما حماهمش من العواقب الجسدية لإيقاف العلاج القائم على الأدلة.",
+        "لو «النية الصادقة = حماية»، فلا احتيال ولا تلاعب ولا ادعاء طبي كاذب يمكن أبداً انتقاده طالما المروّج مؤمن به. هذا يلغي فئة كاملة هي الأذى حسن النية.",
+        "التفكير النقدي هو نفسه شكل من أشكال الرعاية: يحمي الشخص من الاستغلال، ويحمي المجتمع من موجة ثانية من نفس الأذى.",
+        "الإسلام نفسه يُؤكّد العلم إلى جانب النية: «اطلبوا العلم من المهد إلى اللحد». الصدق بلا علم مُثنى عليه، لكن العلم لا يُعوَّض بالصدق في الأمور ذات العواقب الدنيوية الحقيقية."
+      ],
+      "sources": [
+        "EAL-case-001:masrawy-2026-04-30",
+        "EAL-case-001:okaz-2026-05-10",
+        "https://quran.com/58/11"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "self_explain",
+      "claim": "You are talking to a grieving family member whose relative died after following the system. She says: 'He died a martyr. I can't bear it if you tell me his death was a mistake.' You want to be compassionate. You also know the unfalsifiability trap.",
+      "claimAr": "بتكلّم فرد عائلة حزين قريبه مات بعد اتّباع النظام. بتقول: «مات شهيداً. مش تحتمل لو تقولّي موته كان غلطة». عاوز تكون متعاطفاً. وكمان عارف فخّ عدم القابلية للتفنيد.",
+      "options": [
+        "Agree with the martyr framing to spare her pain — her grief matters more than the epistemics",
+        "Fully acknowledge her grief and love for him; refuse to endorse a claim that, if believed by others, will produce more deaths — these two things can coexist in the same conversation"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: how do you hold compassion for her grief AND honesty about the unfalsifiable claim at the same time? What would you actually say in the first 2–3 sentences?",
+        "promptAr": "بكلماتك: كيف تحتفظ بالتعاطف مع حزنها والصدق بشأن الادعاء غير القابل للتفنيد في نفس الوقت؟ إيه اللي ستقوله فعلاً في أول 2-3 جمل؟"
+      },
+      "explanation": "Compassion and honesty are not opposites in this situation. The first move is always to fully acknowledge the pain — 'I can hear how much you loved him, and how devastating this loss is.' Only after that foundation is laid does the correction become possible — not as 'you're wrong,' but as 'I worry about other families facing the same choice.' The martyr framing does not help her grieve; it helps the system recruit new followers on the back of her loss. Protecting her from exploitation of her grief is also an act of care.",
+      "explanationAr": "التعاطف والصدق ليسا نقيضَين في هذا الموقف. الخطوة الأولى دائماً الاعتراف الكامل بالألم — «أسمع قد إيه بتحبّه، وقد إيه الخسارة دي مدمِّرة». بعد إرساء هذا الأساس فقط يصبح التصحيح ممكناً — مش كـ«إنتِ غلطانة»، لكن كـ«بخاف على عائلات تانية تواجه نفس الاختيار». تأطير الشهادة ما بيساعدهاش على الحداد؛ بيساعد النظام على تجنيد أتباع جدد على ظهر خسارتها. حمايتها من استغلال حزنها هي أيضاً عمل رعاية.",
+      "sources": [
+        "EAL-case-001:masrawy-2026-04-30",
+        "EAL-case-001:mfa-eg-2026-04"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Emotion"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 120,
+      "claim": "A Phase 3 review: match each defence with the tool that refutes it. Defence 1: 'Our foods are «الطيبات» — Quranic truth.' Defence 2: 'No test can disprove our system — it works on a spiritual level.' Defence 3: 'Stopping insulin is surrendering to Allah's will.' Defence 4: 'Anyone who declares our food forbidden is inventing a new prohibition.'",
+      "claimAr": "مراجعة المرحلة الثالثة: طابق كل دفاع مع الأداة التي تردّه. الدفاع 1: «أطعمتنا «الطيبات» — حق قرآني». الدفاع 2: «لا اختبار يستطيع تفنيد نظامنا — يعمل على مستوى روحي». الدفاع 3: «إيقاف الأنسولين تسليم لإرادة الله». الدفاع 4: «أي شخص يُحرّم طعامنا يخترع تحريماً جديداً».",
+      "options": [
+        "D1→ 5:87 (prohibiting lawful things); D2→ Popper falsifiability; D3→ Maqasid hifz al-nafs; D4→ 16:116 (inventing halal/haram without authority)",
+        "D1→ 16:116; D2→ Maqasid; D3→ 5:87; D4→ Popper",
+        "D1→ Popper; D2→ 5:87; D3→ 16:116; D4→ Maqasid",
+        "All four defences are refuted by 5:87 alone"
+      ],
+      "correctAnswer": 0,
+      "explanation": "D1: Calling foods «الطيبات» and implying they are divinely validated — 5:87 prohibits exactly this move (declaring lawful things forbidden under religious authority one does not hold). D2: 'No test can disprove it' — Popper's falsifiability: a claim that cannot in principle be disproved is not empirical. D3: Stopping life-sustaining insulin as 'surrender to Allah' — Maqasid demand hifz al-nafs; the hadith tradition says 'seek treatment'; stopping insulin for T1 diabetes is life-threatening. D4: Calling critic-issued food prohibitions wrong — 16:116 prohibits declaring things halal/haram without proper religious authority; if the critic is ALSO doing this without authority, 16:116 applies to them too — but the primary target was those who declared the foods forbidden without scholarly grounding.",
+      "explanationAr": "د1: تسمية الأطعمة «الطيبات» والإيحاء بأنها مُصادَق عليها إلهياً — ٥:٨٧ تحظر بالظبط هذه الحركة (إعلان الحلال حراماً بسلطة دينية لا تملكها). د2: «لا اختبار يفنّده» — مبدأ بوبر للقابلية للتفنيد: ادعاء لا يمكن بالمبدأ دحضه ليس تجريبياً. د3: إيقاف الأنسولين المحافظ على الحياة كـ«تسليم لله» — المقاصد تتطلّب حفظ النفس؛ تقليد الحديث يقول «تداووا»؛ إيقاف الأنسولين لمريض نوع 1 يُهدّد الحياة. د4: الادعاء بأن المنتقدين يُصدرون تحريمات غذائية بغير حق — ١٦:١١٦ تحظر إعلان الحلال/الحرام بغير سلطة دينية مناسبة؛ لو المنتقِد أيضاً يفعل هذا بغير سلطة، ١٦:١١٦ تنطبق عليه هو أيضاً — لكن الهدف الأساسي كان من أعلن الأطعمة محظورة بغير سند شرعي.",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://quran.com/16/116",
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "EAL-case-001:moh-sa-2026-06-08",
+        "https://sunnah.com/abudawud"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 6,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "After completing Phase 3 (42 days of religious-literacy training), how confident are you that you could — in a real conversation — identify a vocabulary exploit AND offer a compassionate, faith-respecting response that neither dismisses the person's beliefs nor accepts an unverified medical claim?",
+      "claimAr": "بعد إتمام المرحلة الثالثة (42 يوم تدريب على الثقافة الدينية)، قد إيه أنت متأكد أنك تستطيع — في محادثة حقيقية — تحديد حيلة المفردة وتقديم رد متعاطف يحترم الإيمان لا يرفض معتقدات الشخص ولا يقبل ادعاءً طبياً غير مُتحقَّق منه؟",
+      "options": [
+        "Fully confident — I have mastered the vocabulary exploit, the two verses, Maqasid, and unfalsifiability",
+        "Fairly confident in recognising the moves, but real conversations are harder — I would benefit from Phase 4 practice with live dialogue scenarios"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This calibration question is designed to land with accurate humility: recognising manipulation in a structured exercise is meaningfully different from responding well in a real conversation with someone you care about. Phase 4 (days 141–168) is specifically designed for live-dialogue practice — motivational interviewing style, compassionate challenge, and capstone stress tests. The goal of Phase 3 was to arm you with the concepts; the goal of Phase 4 is to build the conversational skill. Accurate self-assessment here — not overconfidence, not underconfidence — is the mark of Phase 3 completion.",
+      "explanationAr": "سؤال المعايرة ده مصمَّم ليهبط بتواضع دقيق: التعرّف على التلاعب في تمرين منظَّم مختلف جوهرياً عن الاستجابة الجيدة في محادثة حقيقية مع شخص تهتم به. المرحلة الرابعة (أيام ١٤١–١٦٨) مصمَّمة تحديداً لممارسة الحوار الحي — بأسلوب المقابلة التحفيزية، والتحدي المتعاطف، واختبارات الضغط التتويجية. هدف المرحلة الثالثة كان تسليحك بالمفاهيم؛ هدف المرحلة الرابعة بناء المهارة الحوارية. التقييم الذاتي الدقيق هنا — لا ثقة مبالغ فيها ولا ثقة منقوصة — هو علامة إتمام المرحلة الثالثة.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "EAL-case-001:redflag-6"
+      ],
+      "cognitivebiasAtPlay": "Dunning-Kruger Effect"
+    }
+  ]
+}

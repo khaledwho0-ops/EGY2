@@ -1,0 +1,122 @@
+{
+  "id": "day115_same_evidence_bar",
+  "phase": 3,
+  "week": 17,
+  "day": 115,
+  "title": "The Same Evidence Bar",
+  "titleAr": "نفس معيار الدليل",
+  "description": "Chemistry doesn't care what a cure is called. When any practice — traditional, religious, or modern — claims to cure a disease, the body's biology answers only to rigorous evidence. Today we learn why the bar is universal.",
+  "descriptionAr": "الكيمياء مش مهمّاها العلاج اتسمّى إيه. لمّا أي ممارسة — تقليدية أو دينية أو حديثة — بتدّعي شفاء مرض، بيولوجيا الجسم بتستجيب للدليل الصارم بس. النهاردة بنتعلّم ليه المعيار عالمي.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A pharmaceutical company claims a new pill cures cancer. A traditional healer claims his herbal blend cures cancer. Should the evidence required for both be the same?",
+      "claimAr": "شركة دوائية بتدّعي إن حبّة جديدة بتشفي السرطان. معالج تقليدي بيدّعي إن خلطته العشبية بتشفي السرطان. الدليل المطلوب للاتنين المفروض يكون واحد؟",
+      "options": [
+        "No — tradition earns automatic trust; corporations need more scrutiny",
+        "Yes — the cancer cell does not care about the source; only evidence of safety and efficacy matters",
+        "No — religious or traditional origins are self-validating",
+        "Yes, but only if the healer has no medical degree"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The biology is neutral. A cancer tumour does not respond differently because the treatment comes from a 'natural' or 'traditional' source. The standard of evidence — controlled trials, safety data, documented efficacy — must apply equally to both. This is not a bias against tradition; it is a protection for the patient, who cannot benefit from a false cure while delaying proven treatment. The WHO's Traditional Medicine strategy applies exactly this principle.",
+      "explanationAr": "البيولوجيا محايدة. ورم السرطان ما بيستجيبش بشكل مختلف لأن العلاج جاي من مصدر «طبيعي» أو «تقليدي». معيار الدليل — تجارب مضبوطة وبيانات أمان وفاعلية موثَّقة — لازم ينطبق على الاتنين بالتساوي. ده مش تحيّز ضد التقاليد؛ ده حماية للمريض اللي مينفعش يستفيد من علاج زائف بينما يُؤخَّر علاج مُثبَت. استراتيجية الطب التقليدي للمنظمة العالمية للصحة بتطبّق هذا المبدأ بالظبط.",
+      "sources": [
+        "https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine",
+        "https://www.cancer.gov/about-cancer/treatment/cam"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: some traditional herbal remedies have been tested in rigorous trials and found effective — meaning that traditional origin is compatible with evidence, not opposed to it.",
+      "claimAr": "صح ولا غلط: بعض العلاجات العشبية التقليدية اتُختبِرت في تجارب صارمة ولُقِيت فعّالة — يعني الأصل التقليدي متوافق مع الدليل مش ضدّه.",
+      "correctAnswer": true,
+      "myth_en": "Traditional and evidence-based medicine are fundamentally opposed.",
+      "myth_ar": "الطب التقليدي وطب الدليل أساساً ضدّ بعض.",
+      "explanation": "True. Artemisinin, the basis for the most effective malaria treatment, was derived from traditional Chinese herbal medicine and validated by rigorous trials (Nobel Prize 2015). Aspirin originated from willow bark used in traditional medicine for millennia. Traditional origin is not the problem; the problem is skipping the trial. Calibration check: if you felt unsure whether to say 'true,' notice that — some learners assume any connection to tradition disqualifies evidence. The direction of bias matters: evidence elevates good traditional knowledge; it does not erase it.",
+      "explanationAr": "صح. الأرتيميسينين، أساس أكثر علاجات الملاريا فاعلية، مشتقّ من طب الأعشاب الصيني التقليدي وتمّت إجازته بتجارب صارمة (جائزة نوبل 2015). الأسبرين أصله من لحاء الصفصاف المستخدم في الطب التقليدي منذ آلاف السنين. الأصل التقليدي مش المشكلة؛ المشكلة تخطّي التجربة. اختبار المعايرة: لو حسست بعدم يقين في قول «صح»، لاحظ ده — بعض المتعلّمين بيفترضوا إن أي صلة بالتقليد تُسقط الدليل. اتجاه الانحياز مهم: الدليل بيرفع المعرفة التقليدية الجيّدة؛ مش بيمحوها.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4525086/",
+        "https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A health system is supported by thousands of testimonials — followers who say it healed their conditions. Three structural problems make this insufficient for a disease-cure claim, regardless of the testimonial count.",
+      "claimAr": "نظام صحي مدعوم بآلاف الشهادات — أتباع بيقولوا إنه شفى حالاتهم. ثلاث مشاكل هيكلية بتجعل ده غير كافٍ لادعاء شفاء مرض، بغض النظر عن عدد الشهادات.",
+      "options": [
+        "The testimonials are probably all lies and should be ignored",
+        "Testimonials cannot separate treatment effect from placebo, natural recovery, or survivorship bias"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words, explain why 'ten thousand people say it worked' is still not enough to prove a cure — name at least two of the three problems.",
+        "promptAr": "بكلماتك، اشرح ليه «عشرة آلاف شخص بيقولوا إنها نفعت» لسّه مش كافي لإثبات الشفاء — اذكر على الأقل اتنين من المشاكل الثلاثة."
+      },
+      "explanation": "Three problems make testimonials structurally insufficient: (1) The placebo effect — people genuinely feel better even from an inactive treatment, especially for subjective symptoms. (2) Natural disease variation — many conditions improve spontaneously; treatment may coincide with natural recovery. (3) Survivorship bias — the improved posted testimonials; those who deteriorated or died could not. The Medical Syndicate's investigation of the viral Taybat diet found zero documented cases with lab evidence — despite thousands of followers. Naming these yourself (as you just did) is the mechanic that builds transferable skepticism.",
+      "explanationAr": "ثلاث مشاكل بتجعل الشهادات هيكلياً غير كافية: (١) التأثير الوهمي — الناس بتتحسّن فعلاً حتى من علاج غير نشط، خاصة للأعراض الذاتية. (٢) التباين الطبيعي للمرض — حالات كتير بتتحسّن من تلقاء نفسها؛ العلاج ممكن يتزامن مع التعافي الطبيعي. (٣) انحياز الناجين — اللي تحسّن نشر شهادات؛ من تدهور أو توفّي ما قدرش. تحقيق نقابة الأطباء في نظام «الطيبات» الفيروسي لقى صفراً من الحالات الموثّقة بأدلة مخبرية — رغم آلاف الأتباع. إنك تسمّي دول بنفسك (زي ما عملت دلوقتي) هو الآلية اللي بتبني التشكيك القابل للنقل.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'My grandmother used this herb for 40 years — she never got seriously ill. So the herb protects from disease. Thousands of people in our village used it. That's proof enough. Anyone demanding a clinical trial just wants to discredit our heritage.'",
+      "claimAr": "فكّك الحجة دي: «جدّتي استخدمت العشبة دي 40 سنة — ما اتعيّيتش جد. يبقى العشبة بتحمي من المرض. آلاف الناس في بلدنا استخدمتها. ده دليل كافي. أي حد بيطلب تجربة سريرية بس عايز يشوّه تراثنا».",
+      "parts": [
+        { "text": "The herb protects from disease.", "textAr": "العشبة بتحمي من المرض.", "role": "conclusion" },
+        { "text": "Grandmother used it 40 years and stayed healthy.", "textAr": "الجدّة استخدمتها 40 سنة وفضلت بصحة.", "role": "premise" },
+        { "text": "Thousands in the village used it.", "textAr": "آلاف الناس في البلد استخدمتها.", "role": "premise" },
+        { "text": "(Unstated) Personal longevity during herb use proves the herb caused the health outcome.", "textAr": "(غير مذكور) طول العمر الشخصي أثناء استخدام العشبة يُثبت إن العشبة تسبّبت في نتيجة الصحة.", "role": "assumption" },
+        { "text": "Anyone demanding a clinical trial wants to discredit our heritage.", "textAr": "أي حد بيطلب تجربة سريرية عايز يشوّه تراثنا.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption is the critical flaw: that co-occurrence (using the herb and being healthy) proves causation. Grandmother's good health could be explained by genetics, diet, lifestyle, or natural resistance — we cannot separate the herb from everything else without a controlled trial. The 'heritage' line is irrelevant — it attacks the questioner's motive rather than answering the evidence question. Importantly, long tradition is useful evidence of safety, not efficacy — two different questions.",
+      "explanationAr": "الافتراض الخفي هو العيب الحاسم: إن التزامن (استخدام العشبة والصحة الجيّدة) يُثبت السببية. صحّة الجدّة ممكن يُفسِّرها الجينات أو الغذاء أو نمط الحياة أو المقاومة الطبيعية — لا نستطيع فصل العشبة عن كل شيء تاني بدون تجربة مضبوطة. جملة «التراث» غير ذات صلة — بتهاجم دوافع السائل بدل الإجابة على سؤال الدليل. والمهم، التقليد الطويل دليل مفيد على السلامة، مش الفاعلية — سؤالان مختلفان.",
+      "sources": [
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4525086/"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "Traditional or religiously-framed remedies deserve a lighter evidence standard than pharmaceutical drugs — they come from a place of genuine care and centuries of use, not profit motives.",
+      "claimAr": "العلاجات التقليدية أو ذات الإطار الديني تستحق معياراً دليل أخفّ من الأدوية الصيدلانية — جاية من مكان اهتمام حقيقي وقرون من الاستخدام، مش دوافع ربح.",
+      "prompt": "Before accepting this: what would have to be true about the human body if the evidence bar were genuinely lower for traditional remedies? Who bears the risk of that lower bar?",
+      "promptAr": "قبل قبول ده: إيه اللي لازم يكون صح عن جسم الإنسان لو معيار الدليل كان فعلاً أخفّ للعلاجات التقليدية؟ مين اللي بيتحمّل مخاطر المعيار الأخفّ ده؟",
+      "modelPoints": [
+        "The body's biology responds to chemistry, not to intent or tradition — a toxic dose is equally dangerous whether given by a caring grandmother or a pharmaceutical company.",
+        "Centuries of use is evidence of safety (we'd know acute harm), but safety and efficacy are different questions — 'no one died from it' is not 'it cures the disease.'",
+        "A lower bar creates an exploitable gap: anyone can frame a product as 'traditional' or 'religious' to avoid scrutiny, which is precisely what happened in the viral Taybat case.",
+        "The patient — often the most vulnerable person — bears the risk of a delayed or replaced effective treatment while the seller bears no accountability."
+      ],
+      "modelPointsAr": [
+        "بيولوجيا الجسم بتستجيب للكيمياء مش للنية أو التقليد — الجرعة السامة خطيرة بالتساوي سواء أعطتها جدّة مهتمة أو شركة دوائية.",
+        "قرون الاستخدام دليل على السلامة (كنّا هنعرف الضرر الحاد)، لكن السلامة والفاعلية سؤالان مختلفان — «ما حدش مات منها» مش «بتشفي المرض».",
+        "المعيار الأخفّ بيخلق فجوة قابلة للاستغلال: أي حد يقدر يأطّر منتجه كـ«تقليدي» أو «ديني» لتجنّب التدقيق، وده بالظبط ما حصل في حالة «الطيبات» الفيروسية.",
+        "المريض — غالباً الأكثر هشاشة — هو من يتحمّل مخاطر تأخير أو استبدال علاج فعّال بينما البائع لا يتحمّل أي مساءلة."
+      ],
+      "explanation": "The biology is universal: a tumour, a malfunctioning kidney, or an insulin-dependent cell does not grant exemptions based on the cultural framing of the treatment. The equal evidence bar is not disrespect for tradition — it is the only structure that protects the patient from bearing the full risk of an untested claim while the seller bears none.",
+      "explanationAr": "البيولوجيا عالمية: ورم أو كلية معطوبة أو خلية محتاجة أنسولين لا تمنح إعفاءات بناءً على التأطير الثقافي للعلاج. معيار الدليل المتساوي مش إهانة للتقليد — ده الهيكل الوحيد اللي بيحمي المريض من تحمّل كل مخاطر ادعاء غير مُختبَر بينما البائع لا يتحمّل شيئاً.",
+      "sources": [
+        "https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    }
+  ]
+}

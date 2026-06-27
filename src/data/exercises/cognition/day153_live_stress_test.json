@@ -1,0 +1,124 @@
+{
+  "id": "day153_live_stress_test",
+  "phase": 4,
+  "week": 22,
+  "day": 153,
+  "title": "Live Stress Test — One Conversation, All Layers",
+  "titleAr": "اختبار ضغط حيّ — محادثة واحدة، كل الطبقات",
+  "description": "A single unfolding WhatsApp exchange that fires every layer in turn — logic, science, religion, conspiracy, social pressure. Navigate it move by move, holding the relationship and the truth together.",
+  "descriptionAr": "محادثة واتساب واحدة بتتكشّف وبتطلق كل طبقة بالدور — منطق، علم، دين، مؤامرة، ضغط اجتماعي. اعبرها حركة بحركة، ماسك العلاقة والحقيقة مع بعض.",
+  "type": "integration",
+  "difficulty": 5,
+  "estimatedMinutes": 18,
+  "source": "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "OPENING. Your mother writes in the family group: \"I watched the «الطيبات» doctor — he's a real medical doctor and he explains everything from the Quran. I trust him more than these clinic doctors who just want money.\" Your very first reply should aim to do what?",
+      "claimAr": "البداية. أمّك بتكتب في جروب العيلة: «اتفرّجت على دكتور «الطيبات» — هو دكتور حقيقي وبيشرح كل حاجة من القرآن. أنا واثقة فيه أكتر من دكاترة العيادات اللي عايزين فلوس بس». أول ردّ ليك المفروض يهدف لإيه؟",
+      "options": [
+        "Immediately list everything wrong with him",
+        "Affirm the shared value and the relationship first ('I know you only want us healthy, and I love you for it'), so the conversation stays open before any correction",
+        "Tell her she's been fooled",
+        "Stay silent"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The opening move sets the whole tone. Your mother has just revealed her real motive — she wants the family healthy and she distrusts profit-driven care, both understandable. Leading with that shared value ('I know you only want what's best for us') keeps her from feeling attacked, so the door stays open. If your first message is a list of his flaws, she'll defend him to defend herself, and the rest of the conversation is lost before it starts.",
+      "explanationAr": "حركة البداية بتحدّد النبرة كلها. أمّك لسه كاشفة دافعها الحقيقي — عايزة العيلة بصحة وما بتثقش في رعاية بتلهث ورا الربح، والاتنين مفهومين. البداية بالقيمة المشتركة («أنا عارف إنك عايزة الأحسن لينا») بتمنعها تحسّ بالهجوم، فالباب يفضل مفتوح. لو أول رسالة ليك قايمة بعيوبه، هتدافع عنه علشان تدافع عن نفسها، والباقي يضيع قبل ما يبدأ.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5993177/",
+        "EAL-case-001:structural-3"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "ESCALATION. She replies: \"He quotes «كلوا من طيّبات ما رزقناكم» — so the diet IS in the Quran. Are you arguing with the Quran now?\" The correct defence is to meet the verse accurately from inside the tradition — not to push religion out of the conversation.",
+      "claimAr": "تصعيد. بتردّ: «هو بيقول «كلوا من طيّبات ما رزقناكم» — يبقى الحمية في القرآن. إنت بتجادل القرآن دلوقتي؟». الدفاع الصح إنك تقابل الآية بدقّة من جوّه التراث — مش إنك تطلّع الدين برّه المحادثة.",
+      "options": [
+        "Push religion out of it",
+        "Meet the verse accurately from inside the tradition"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does answering FROM inside the faith (citing 5:87, 'do not forbid the good things Allah made lawful') defend her religion better than saying 'leave the Quran out of food'?",
+        "promptAr": "بكلماتك: ليه إنك تردّ من جوّه الدين (بآية 5:87، «لا تحرّموا طيّبات ما أحلّ الله لكم») بيدافع عن دينها أحسن من إنك تقول «سيبي القرآن بعيد عن الأكل»؟"
+      },
+      "explanation": "She's set the trap that defines this whole case: disagree with the food list and you're disagreeing with the Quran. You escape it not by pushing religion away (which sounds like disrespect and confirms her fear) but by meeting it accurately from inside the tradition. The same scripture that mentions «الطيبات» also forbids declaring lawful food unlawful (5:87). The chicken and milk he calls خبائث are halal — forbidding them is what the verse warns against, not what it commands. You are not arguing with the Quran; you are defending it from being misquoted to forbid what God permitted. That reframing IS the religious shield.",
+      "explanationAr": "هي نصبت الفخّ اللي بيعرّف الحالة كلها: اختلف مع قائمة الأكل تبقى مختلف مع القرآن. بتهرب منه مش بإبعاد الدين (اللي بيبان قلّة احترام وبيأكّد خوفها) لكن بمقابلته بدقّة من جوّه التراث. نفس النص اللي بيذكر «الطيبات» بينهى عن تحريم الحلال (5:87). الفراخ واللبن اللي بيسمّيهم خبائث حلال — تحريمهم هو اللي الآية بتحذّر منه، مش اللي بتأمر بيه. إنت مش بتجادل القرآن — بتدافع عنه من إنه يتحرّف علشان يحرّم اللي الله حلّله. إعادة التأطير دي هي الدرع الديني.",
+      "sources": [
+        "EAL-case-001:alain-2026-04-28"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "PIVOT TO DANGER. An aunt jumps in: \"My sister stopped her pressure pills two weeks ago on this system and feels amazing — proof it works!\" Does 'she stopped her pressure pills and feels amazing' count as evidence the system is SAFE for her?",
+      "claimAr": "تحوّل للخطر. خالة بتدخل: «أختي وقفت حبوب الضغط من أسبوعين على النظام ده وحاسّة إنها تمام — دليل إنه شغّال!». هل «وقفت الحبوب وحاسّة إنها تمام» يُعدّ دليل إن النظام آمن ليها؟",
+      "options": [
+        "Yes — feeling amazing proves it's safe",
+        "No — high blood pressure is silent; feeling fine is exactly what you'd see whether the pills were needed or not"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Set your confidence first, then check it. Hypertension is symptomless, so 'feels amazing' is exactly what you'd expect whether the pills were needed or not — feeling fine is not evidence of safety. People feel fine for months while pressure quietly damages the heart and kidneys. If you felt very sure her good feeling proved safety, that gap between felt-certainty and the actual logic is the calibration lesson. The kind response validates the relief ('I'm so glad she feels well'), supplies the missing science (silent damage), and offers a safe step (check the numbers with a doctor) — never calling the sister foolish.",
+      "explanationAr": "حدّد ثقتك الأول، وبعدين راجعها. الضغط بلا أعراض، فـ«حاسّة إنها تمام» بالظبط اللي تتوقّعه سواء الحبوب كانت لازمة ولا لأ — الإحساس بالراحة مش دليل أمان. الناس بتحسّ كويسة شهور والضغط بيدمّر القلب والكلى بهدوء. لو كنت متأكد جداً إن إحساسها الكويس بيثبت الأمان، الفجوة دي بين اليقين-الإحساس والمنطق الفعلي هي درس المعايرة. الردّ الطيّب بيصدّق على الارتياح («مبسوط جداً إنها كويسة»)، وبيدّي العلم الناقص (الضرر الصامت)، وبيقدّم خطوة آمنة (تشوف أرقامها مع دكتور) — من غير ما يقول على الأخت غبية.",
+      "sources": [
+        "EAL-case-001:redflag-8",
+        "https://www.who.int/news-room/fact-sheets/detail/hypertension"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "THE CONSPIRACY WALL. Your mother sends: \"You only say this because the doctors and the companies brainwashed you. Wake up.\" It feels airtight: every objection you raise just looks like more proof you've been captured.",
+      "claimAr": "جدار المؤامرة. أمّك بتبعت: «إنت بتقول كده لأن الدكاترة والشركات غسلوا مخّك. صحّى». بيحسّ محكم: أي اعتراض تقوله بيبان كأنه دليل زيادة إنك اتأسرت.",
+      "prompt": "Before you feel cornered: what would this claim look like if it were FALSE? Can you state what evidence it would even accept — and what that tells you about it?",
+      "promptAr": "قبل ما تحسّ إنك في الزاوية: الادعاء ده هيبان إزاي لو كان غلط؟ تقدر تقول هو أصلاً هيقبل أنهي دليل — وده بيقول لك إيه عنه؟",
+      "modelPoints": [
+        "If it were false, you'd see exactly this: a claim built so that any disagreement = proof of the conspiracy. That closed loop is the tell, not the truth.",
+        "Ask what evidence it would accept. If the honest answer is 'nothing — every objection just proves you're compromised,' then it cannot be tested, and an untestable claim explains nothing.",
+        "Real corruption does exist and can be shown with documents, audits, named cases. This claim offers none of that — only the loop.",
+        "The insult ('wake up') is aimed at YOU, not at the evidence. Taking it personally and firing back turns a conversation into a war — which is exactly what keeps the wall standing."
+      ],
+      "modelPointsAr": [
+        "لو غلط، هتشوف بالظبط ده: ادعاء مبني علشان أي اختلاف = دليل على المؤامرة. الحلقة المغلقة دي هي العلامة، مش الحقيقة.",
+        "اسأل هو هيقبل أنهي دليل. لو الإجابة الأمينة «ولا حاجة — أي اعتراض بيثبت إنك متواطئ»، يبقى ما ينفعش يتختبر، والادعاء اللي ما ينفعش يتختبر مش بيفسّر حاجة.",
+        "الفساد الحقيقي موجود وبيتثبت بوثائق ومراجعات وحالات بأسماء. الادعاء ده مفيهوش حاجة من ده — بس الحلقة.",
+        "الإهانة («صحّى») موجّهة ليك إنت، مش للدليل. أخدها على نفسك والردّ بالمثل بيحوّل المحادثة لحرب — وده بالظبط اللي بيخلّي الجدار واقف."
+      ],
+      "explanation": "Considering the opposite — actively asking 'what would disprove this, and what would it even accept?' — exposes the conspiracy wall as a closed, unfalsifiable loop rather than a tested claim. You hold steady by naming the structure without contempt: 'I hear you feel I've been misled — but notice this idea treats anyone who disagrees as automatically compromised, and a claim nothing could disprove isn't something we can check together.' Warmth plus a calm structural observation keeps you both human.",
+      "explanationAr": "التفكير في العكس — إنك تسأل بنشاط «إيه اللي يكذّب ده، وهو أصلاً هيقبل إيه؟» — بيكشف جدار المؤامرة كحلقة مغلقة غير قابلة للتفنيد مش ادعاء مُختبَر. بتثبت بتسمية البنية من غير احتقار: «أنا سامع إنك حاسّة إني اتضلّلت — بس لاحظي إن الفكرة دي بتعتبر أي حد يختلف متواطئ تلقائياً، والادعاء اللي مفيش حاجة تكذّبه مش حاجة نقدر نتأكّد منها سوا». الدفا مع ملاحظة بنيوية هادية بيخلّيكم بشر.",
+      "sources": [
+        "EAL-case-001:conspiracy-4",
+        "https://www.apa.org/monitor/2017/05/conspiracy-theories"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "retrievalOf": 51,
+      "claim": "THE CLOSE. The heat fades. Your mother goes quiet, then writes privately: \"I just don't want to lose anyone again like we lost your father.\" Reaching back to the need-for-closure lesson: what is this admission really telling you about why the diet gripped her?",
+      "claimAr": "الختام. الحرارة بتهدا. أمّك بتسكت، وبعدين بتكتب خاص: «أنا بس مش عايزة أخسر حد تاني زي ما خسرنا أبوك». بالرجوع لدرس الحاجة للإغلاق: الاعتراف ده بيقول لك إيه فعلاً عن ليه الحمية مسكتها؟",
+      "options": [
+        "She's finally admitting she lost the argument",
+        "She just revealed the real need under the whole belief — fear and grief; the diet promised certainty and control over death, which is why no fact could move her while that fear was untouched",
+        "Now is the time to list all your evidence and win",
+        "Change the subject quickly"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is why every layer mattered — to arrive here, at the real need hiding beneath the diet, the verses, and the conspiracy: fear of loss and unhealed grief. Just like the need-for-closure lesson taught, a frightened mind prefers a confident, controlling story to the unbearable openness of 'anyone can be lost and I can't stop it.' The diet promised control over death, which is why no fact could move her while that fear was untouched. The integrated close abandons the scoreboard entirely: validate the grief ('I miss him too, and I'm scared of losing anyone as well'), affirm her goal is also yours (keeping the family safe), and offer a path that actually serves it — real, supervised care. You didn't win an argument; you reached your mother.",
+      "explanationAr": "ده ليه كل طبقة كانت مهمة — علشان توصل هنا، للاحتياج الحقيقي المخبّي تحت الحمية والآيات والمؤامرة: الخوف من الفقد وحزن لسه ما اتعالجش. زي ما درس الحاجة للإغلاق علّم، العقل الخايف بيفضّل قصة واثقة ومسيطرة على الانفتاح اللي ما بيتحملش بتاع «أي حد ممكن يتفقد وأنا ما أقدرش أمنع». الحمية وعدت بسيطرة على الموت، علشان كده مفيش حقيقة قدرت تحرّكها والخوف ده ما اتلمسش. الختام المتكامل بيسيب لوحة النتيجة خالص: صدّق على الحزن («أنا وحشني هو كمان، وخايف أخسر حد زيّك»)، وأكّد إن هدفها هو هدفك (حماية العيلة)، وقدّم طريق بيخدمه فعلاً — رعاية حقيقية تحت إشراف. ما كسبتش جدال؛ وصلت لأمّك.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5993177/",
+        "EAL-case-001:moh-eg-2026-05"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

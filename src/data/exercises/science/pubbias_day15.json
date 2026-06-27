@@ -1,0 +1,98 @@
+{
+  "id": "publication_bias",
+  "phase": 2,
+  "week": 11,
+  "day": 15,
+  "title": "Publication Bias",
+  "titleAr": "تحيز النشر",
+  "description": "Learn how the selective publication of statistically significant results distorts the scientific literature and inflates effect size estimates.",
+  "descriptionAr": "تعلم كيف يؤدي النشر الانتقائي للنتائج ذات الدلالة الإحصائية إلى تشويه الأدبيات العلمية وتضخيم تقديرات حجم التأثير.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Publication Bias (File Drawer Problem)",
+    "nameAr": "تحيز النشر (مشكلة درج الملفات)",
+    "definition": "The tendency for studies with statistically significant or positive results to be more likely to be published, submitted, and accepted than studies with null or negative findings. Coined by Rosenthal (1979) as the 'file drawer problem,' estimating that for every published significant study, an unknown number of null studies remain unpublished.",
+    "definitionAr": "ميل الدراسات ذات النتائج ذات الدلالة الإحصائية أو الإيجابية لأن تكون أكثر احتمالاً للنشر والتقديم والقبول مقارنة بالدراسات ذات النتائج الفارغة أو السلبية.",
+    "realWorldExample": "Turner et al. (2008) in NEJM found that 94% of published antidepressant trials showed positive results, but FDA review of all submitted trials (published + unpublished) showed only 51% were positive. Effect sizes dropped by approximately 32% when unpublished data were included.",
+    "detectionMethod": "Funnel plot asymmetry (Egger's test), trim-and-fill method, Rosenthal's fail-safe N, p-curve analysis (Simonsohn et al., 2014), selection models."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A meta-analysis of 47 published studies on a cognitive enhancement supplement finds a significant pooled effect (d=0.42). However, a search of clinical trial registries reveals 31 additional completed but unpublished studies. What is the most likely consequence of including the unpublished studies?",
+      "promptAr": "تحليل تلوي لـ 47 دراسة منشورة عن مكمل لتعزيز الإدراك يجد تأثيراً تجميعياً معنوياً (d=0.42). لكن البحث في سجلات التجارب السريرية يكشف عن 31 دراسة مكتملة إضافية غير منشورة. ما النتيجة الأكثر احتمالاً لإدراج الدراسات غير المنشورة؟",
+      "options": [
+        "The pooled effect size will decrease substantially, possibly becoming non-significant",
+        "The pooled effect size will increase due to more data",
+        "The pooled effect size will remain the same",
+        "The unpublished studies should be excluded because they were not peer-reviewed"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Unpublished studies disproportionately contain null or negative results. Including them typically reduces pooled effect sizes. This pattern has been documented across fields: Dwan et al. (2013) found that including unpublished trials in Cochrane reviews reduced effect estimates by a median of 10-30%.",
+      "explanationAr": "الدراسات غير المنشورة تحتوي بشكل غير متناسب على نتائج فارغة أو سلبية. إدراجها يقلل عادةً من أحجام التأثير المجمعة."
+    },
+    {
+      "id": 2,
+      "type": "calculate",
+      "prompt": "Rosenthal's fail-safe N estimates how many unpublished null studies would be needed to reduce a meta-analytic result to non-significance. A meta-analysis of 20 studies yields Z=4.2. Using the simplified formula: Nfs = (ΣZ)²/Z_critical² − k, where ΣZ = k × Z_mean, k=20, Z_mean=4.2/√20 ≈ 0.94, and Z_critical = 1.96. Approximately how many null studies would make the result non-significant?",
+      "promptAr": "يقدر عدد N الآمن لروزنثال عدد الدراسات الفارغة غير المنشورة اللازمة لجعل نتيجة التحليل التلوي غير معنوية. تحليل تلوي لـ 20 دراسة ينتج Z=4.2. باستخدام الصيغة المبسطة، كم عدد الدراسات الفارغة التقريبي اللازم؟",
+      "options": [
+        "About 10 null studies",
+        "About 72 null studies",
+        "About 150 null studies",
+        "About 500 null studies"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Using the simplified Rosenthal formula: Nfs = (k/Z_critical² × Z_obtained²) − k. With k=20 and Z=4.2: Nfs ≈ (20 × 4.2²)/(1.96²) − 20 ≈ (20 × 17.64)/3.84 − 20 ≈ 91.9 − 20 ≈ 72. This means 72 unpublished null studies would be needed. While this seems like a large number, Rosenthal's threshold of 5k+10 (=110 here) provides a more conservative benchmark.",
+      "explanationAr": "باستخدام صيغة روزنثال المبسطة مع k=20 و Z=4.2، نحتاج حوالي 72 دراسة فارغة غير منشورة لجعل النتيجة غير معنوية."
+    },
+    {
+      "id": 3,
+      "type": "scenario",
+      "prompt": "A pharmaceutical company conducts 5 identical trials of a new drug. Only 1 trial reaches p<0.05 and gets published in a top journal. The other 4 trials (all p>0.05) are never submitted for publication. A clinician reads only the published trial and prescribes the drug. What percentage of the total evidence supports the drug's efficacy?",
+      "promptAr": "شركة أدوية تجري 5 تجارب متطابقة لدواء جديد. تجربة واحدة فقط تصل إلى p<0.05 وتُنشر في مجلة رائدة. التجارب الأربع الأخرى (جميعها p>0.05) لا تُقدم للنشر أبداً. طبيب يقرأ التجربة المنشورة فقط ويصف الدواء. ما النسبة المئوية من إجمالي الأدلة التي تدعم فعالية الدواء؟",
+      "options": [
+        "80% — the majority of evidence is irrelevant",
+        "100% — the published study was peer-reviewed",
+        "20% — only 1 of 5 trials showed significance, consistent with Type I error rate",
+        "50% — we need more data to decide"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Only 1 out of 5 (20%) trials found significance. With α=0.05, getting 1 significant result out of 5 independent tests of a truly ineffective drug has a probability of approximately 23% (1 − 0.95⁵ ≈ 0.226). This is entirely consistent with a null drug generating a false positive. This scenario mirrors the Tamiflu case, where Cochrane reviewers (Jefferson et al., 2014) discovered that 60% of trial data had been suppressed.",
+      "explanationAr": "تجربة واحدة فقط من 5 (20%) وجدت دلالة إحصائية. مع α=0.05، الحصول على نتيجة معنوية واحدة من 5 اختبارات مستقلة لدواء غير فعال احتماله حوالي 23%، وهو متسق تماماً مع خطأ من النوع الأول."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "A p-curve analysis (Simonsohn et al., 2014) of 200 published studies in a field reveals that the distribution of significant p-values is left-skewed (most values clustered just below 0.05 rather than uniformly distributed or right-skewed). What does this indicate?",
+      "promptAr": "تحليل منحنى-p لـ 200 دراسة منشورة في مجال ما يكشف أن توزيع قيم p المعنوية منحرف لليسار (معظم القيم متجمعة تحت 0.05 مباشرة). ماذا يشير هذا؟",
+      "options": [
+        "The field has very small but real effects",
+        "The statistical tests used were too conservative",
+        "The studies have strong evidential value",
+        "The distribution is consistent with p-hacking or selective reporting, suggesting the literature lacks evidential value"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A right-skewed p-curve (more very small p-values like 0.001 than p-values near 0.04) indicates genuine effects. A left-skewed or flat p-curve (many p-values bunched just below 0.05) is diagnostic of p-hacking, selective reporting, or publication bias. Simonsohn et al. (2014) demonstrated this as a tool to detect fields where published results may be artifacts of selective practices.",
+      "explanationAr": "منحنى p المنحرف لليمين يشير إلى تأثيرات حقيقية. المنحرف لليسار أو المسطح يشير إلى تلاعب بقيم p أو تحيز نشر. سيمونسون وآخرون أظهروا هذا كأداة لاكتشاف المجالات المشكوك فيها."
+    },
+    {
+      "id": 5,
+      "type": "scenario",
+      "prompt": "In 2004, GlaxoSmithKline was sued for suppressing data from pediatric trials of paroxetine (Paxil) showing increased suicidality risk. This led to the creation of which major transparency initiative?",
+      "promptAr": "في عام 2004، تمت مقاضاة شركة غلاكسو سميث كلاين لإخفاء بيانات تجارب الأطفال للباروكستين (باكسيل) التي أظهرت زيادة خطر الانتحار. أدى ذلك إلى إنشاء أي مبادرة شفافية رئيسية؟",
+      "options": [
+        "ClinicalTrials.gov mandatory registration (ICMJE policy, 2005; FDAAA 2007)",
+        "The Cochrane Collaboration",
+        "The PRISMA guidelines",
+        "The CONSORT statement"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The paroxetine scandal was a catalyst for the ICMJE's 2005 policy requiring prospective registration of clinical trials as a condition for publication, and the FDA Amendments Act of 2007 (FDAAA) mandating registration and results reporting on ClinicalTrials.gov. This was a landmark response to the file drawer problem in clinical medicine.",
+      "explanationAr": "كانت فضيحة الباروكستين محفزاً لسياسة ICMJE عام 2005 التي تتطلب التسجيل المسبق للتجارب السريرية كشرط للنشر، وقانون تعديلات FDA لعام 2007 الذي يفرض التسجيل والإبلاغ عن النتائج."
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+/* ═══════════════════════════════════════════════════════════════
+ * standard.css — Scene 16 · «standard» · THE ONE LAW  (gold gate)
+ *
+ * A glowing gold gate. A claim WITH a source-passport passes (stamped
+ * «موثّق ✓» green); a bare claim is stamped «غير مُتحقَّق ✕» red.
+ * Class prefix: .std-  (unique per scene). Native scroll, useReveal()
+ * drives the staged reveal. Reduced-motion + 320px fallbacks below.
+ * ═══════════════════════════════════════════════════════════════ */
+
+.std-scene {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(5rem, 12vh, 9rem) clamp(1.25rem, 4vw, 3rem);
+  --std-gold: #f0c030;
+  --std-gold-rgb: 240, 192, 48;
+  --std-pass: #3fcb6b;
+  --std-pass-rgb: 63, 203, 107;
+  --std-fail: #ff4d4d;
+  --std-fail-rgb: 255, 77, 77;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 42%, rgba(var(--std-gold-rgb), 0.10) 0%, transparent 70%),
+    #07060a;
+}
+
+/* faint vertical "gate posts" wash behind the gate */
+.std-backwash {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(var(--std-gold-rgb), 0.05) 49%, rgba(var(--std-gold-rgb), 0.05) 51%, transparent 100%);
+  opacity: 0.6;
+}
+
+.std-inner {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── kicker / headline ── */
+.std-kicker {
+  font-family: var(--font-mono, ui-monospace), monospace;
+  font-size: 0.8125rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--std-gold);
+  text-shadow: 0 0 16px rgba(var(--std-gold-rgb), 0.5);
+}
+.std-kicker--ar {
+  margin-top: 0.35rem;
+  font-family: var(--font-heading-ar), sans-serif;
+  font-size: 1rem;
+  letter-spacing: normal;
+  color: rgba(var(--std-gold-rgb), 0.85);
+}
+.std-h2 {
+  margin: 1.1rem auto 0;
+  max-width: 22ch;
+  font-family: 'Clash Display', var(--font-heading-en), sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 4vw, 2.6rem);
+  line-height: 1.12;
+  color: #f6f3ea;
+}
+.std-h2--ar {
+  margin-top: 0.6rem;
+  font-family: var(--font-heading-ar), sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.3rem, 3.4vw, 2.2rem);
+  line-height: 1.4;
+  color: var(--std-gold);
+  text-shadow: 0 0 22px rgba(var(--std-gold-rgb), 0.35);
+}
+.std-sub {
+  margin: 0.9rem auto 0;
+  max-width: 60ch;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.58);
+}
+.std-sub--ar {
+  margin-top: 0.3rem;
+  font-family: var(--font-heading-ar), sans-serif;
+  color: rgba(255, 255, 255, 0.46);
+}
+
+/* ── THE GATE ── two claim cards flanking a glowing arch ── */
+.std-gate {
+  position: relative;
+  margin: clamp(2.5rem, 6vh, 4rem) auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 880px;
+}
+@media (min-width: 720px) {
+  .std-gate {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* the central glowing arch (only on ≥720px) */
+.std-arch {
+  display: none;
+}
+@media (min-width: 720px) {
+  .std-arch {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -6%;
+    bottom: -6%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(var(--std-gold-rgb), 0.65) 20%,
+      rgba(var(--std-gold-rgb), 0.65) 80%,
+      transparent
+    );
+    box-shadow: 0 0 28px rgba(var(--std-gold-rgb), 0.5);
+  }
+}
+
+/* a claim card */
+.std-claim {
+  position: relative;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.035);
+  padding: 1.5rem 1.35rem 1.35rem;
+  text-align: left;
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+.std-claim__tag {
+  font-family: var(--font-mono, ui-monospace), monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.std-claim__quote {
+  margin-top: 0.6rem;
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  color: #ece9e1;
+}
+.std-claim__quote--ar {
+  margin-top: 0.4rem;
+  font-family: var(--font-heading-ar), sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: rgba(236, 233, 225, 0.82);
+}
+
+/* the passport row (the source attached to the passing claim) */
+.std-passport {
+  margin-top: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(var(--std-pass-rgb), 0.32);
+  background: rgba(var(--std-pass-rgb), 0.06);
+  padding: 0.75rem 0.85rem;
+}
+.std-passport__label {
+  font-family: var(--font-mono, ui-monospace), monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(var(--std-pass-rgb), 0.9);
+}
+
+/* the bare claim's empty slot — visibly missing its passport */
+.std-empty {
+  margin-top: 1rem;
+  border-radius: 12px;
+  border: 1px dashed rgba(var(--std-fail-rgb), 0.4);
+  background: rgba(var(--std-fail-rgb), 0.05);
+  padding: 0.85rem;
+  font-family: var(--font-mono, ui-monospace), monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  color: rgba(var(--std-fail-rgb), 0.85);
+  text-align: center;
+}
+
+/* ── THE STAMP — the verdict, slammed on ── */
+.std-stamp {
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transform: rotate(-3deg) scale(1.4);
+  opacity: 0;
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.4s ease;
+}
+.std-claim.is-in .std-stamp {
+  transform: rotate(-3deg) scale(1);
+  opacity: 1;
+  transition-delay: 0.45s;
+}
+.std-stamp--pass {
+  color: var(--std-pass);
+  border: 2px solid rgba(var(--std-pass-rgb), 0.7);
+  background: rgba(var(--std-pass-rgb), 0.1);
+  box-shadow: 0 0 30px rgba(var(--std-pass-rgb), 0.4), inset 0 0 18px rgba(var(--std-pass-rgb), 0.15);
+}
+.std-stamp--fail {
+  color: var(--std-fail);
+  border: 2px solid rgba(var(--std-fail-rgb), 0.7);
+  background: rgba(var(--std-fail-rgb), 0.1);
+  box-shadow: 0 0 30px rgba(var(--std-fail-rgb), 0.4), inset 0 0 18px rgba(var(--std-fail-rgb), 0.15);
+}
+.std-stamp__ar {
+  font-family: var(--font-heading-ar), sans-serif;
+  font-weight: 800;
+}
+
+/* lit edge per verdict */
+.std-claim--pass {
+  border-color: rgba(var(--std-pass-rgb), 0.3);
+}
+.std-claim--fail {
+  border-color: rgba(var(--std-fail-rgb), 0.3);
+}
+
+/* the closing law line */
+.std-law {
+  margin: clamp(2.5rem, 6vh, 3.5rem) auto 0;
+  max-width: 50ch;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.62);
+}
+.std-law strong {
+  color: var(--std-gold);
+  font-weight: 700;
+}
+
+/* ════════ reduced-motion + small-screen fallbacks ════════ */
+@media (prefers-reduced-motion: reduce) {
+  .std-stamp,
+  .std-claim.is-in .std-stamp {
+    transition: none;
+    transform: rotate(-3deg) scale(1);
+    opacity: 1;
+  }
+}
+@media (max-width: 360px) {
+  .std-claim {
+    padding: 1.15rem 1rem 1.1rem;
+  }
+  .std-stamp {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.85rem;
+  }
+}

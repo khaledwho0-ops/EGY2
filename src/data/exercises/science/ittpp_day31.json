@@ -1,0 +1,98 @@
+{
+  "id": "itt_per_protocol",
+  "phase": 2,
+  "week": 16,
+  "day": 31,
+  "title": "ITT vs Per-Protocol Analysis",
+  "titleAr": "تحليل نية العلاج مقابل تحليل حسب البروتوكول",
+  "description": "Understand the difference between intention-to-treat and per-protocol analysis, when each is appropriate, and how the CONSORT statement guides reporting.",
+  "descriptionAr": "فهم الفرق بين تحليل نية العلاج وتحليل حسب البروتوكول، ومتى يكون كل منهما مناسباً، وكيف يوجه بيان CONSORT التقارير.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Intention-to-Treat vs Per-Protocol Analysis",
+    "nameAr": "تحليل نية العلاج مقابل تحليل حسب البروتوكول",
+    "definition": "Intention-to-treat (ITT) analyzes all participants in their originally assigned groups regardless of adherence or crossover. Per-protocol (PP) analyzes only participants who completed the study as planned. ITT preserves randomization and controls for confounding, but may underestimate treatment efficacy. PP can overestimate efficacy because non-adherers (who often have worse outcomes) are excluded. CONSORT (2010) recommends ITT as the primary analysis.",
+    "definitionAr": "تحليل نية العلاج (ITT) يحلل جميع المشاركين في مجموعاتهم الأصلية بغض النظر عن الالتزام. تحليل حسب البروتوكول (PP) يحلل فقط من أكملوا الدراسة كما هو مخطط. CONSORT يوصي بـ ITT كتحليل أساسي.",
+    "realWorldExample": "In the Women's Health Initiative HRT trial, ITT analysis showed a modest increase in cardiovascular risk. PP analysis showed a larger effect, but this was confounded by the 'healthy adherer' effect — women who took their pills consistently were healthier in many ways unrelated to HRT.",
+    "detectionMethod": "Check CONSORT flow diagrams for post-randomization exclusions. Compare ITT and PP results. Large discrepancies suggest adherence-related confounding. Use CACE (Complier Average Causal Effect) for unbiased efficacy estimation."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "In a drug trial, 500 patients are randomized to drug (250) or placebo (250). In the drug group, 40 patients stop taking the medication due to side effects but remain in the study. An ITT analysis includes all 500. A PP analysis excludes the 40 non-adherers. Which analysis preserves the benefits of randomization?",
+      "promptAr": "في تجربة دواء، 500 مريض يُوزعون عشوائياً: 250 للدواء و 250 للعلاج الوهمي. 40 مريضاً من مجموعة الدواء يتوقفون عن تناوله بسبب الآثار الجانبية. تحليل ITT يشمل الجميع. تحليل PP يستبعد الـ 40. أي تحليل يحافظ على فوائد التوزيع العشوائي؟",
+      "options": [
+        "ITT, because excluding non-adherers breaks randomization — the 40 who stopped may differ systematically from those who continued, introducing selection bias",
+        "Both preserve randomization equally",
+        "Neither preserves randomization in this case",
+        "Per-protocol, because it analyzes only those who actually took the drug"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Randomization ensures that known and unknown confounders are balanced between groups at baseline. Excluding non-adherers post-randomization breaks this balance. Patients who stop medication due to side effects are likely sicker, older, or have more comorbidities. Their exclusion creates a 'healthy adherer' bias in the PP analysis, potentially making the drug look more effective than it truly is. The CONSORT 2010 statement requires ITT as the primary analysis.",
+      "explanationAr": "التوزيع العشوائي يضمن توازن المتغيرات المربكة. استبعاد غير الملتزمين بعد التوزيع يكسر هذا التوازن. المرضى الذين يتوقفون عن الدواء قد يكونون أكثر مرضاً."
+    },
+    {
+      "id": 2,
+      "type": "scenario",
+      "prompt": "A non-inferiority trial compares a new antibiotic to the standard. ITT analysis shows the new drug is non-inferior (difference = −1.2%, 95% CI: −3.5% to 1.1%, non-inferiority margin = −5%). However, 15% of patients in the new drug group switched to the standard drug during the trial. Why is PP analysis particularly important in non-inferiority trials?",
+      "promptAr": "تجربة عدم دونية تقارن مضاداً حيوياً جديداً بالقياسي. تحليل ITT يُظهر عدم دونية الدواء الجديد. لكن 15% من مجموعة الدواء الجديد تحولوا للدواء القياسي أثناء التجربة. لماذا تحليل PP مهم بشكل خاص في تجارب عدم الدونية؟",
+      "options": [
+        "PP is never important in non-inferiority trials",
+        "In non-inferiority trials, ITT is anti-conservative — crossovers and non-adherence bias toward finding no difference, which favors the new treatment. PP analysis provides a more honest test of true efficacy",
+        "PP and ITT always give the same result in non-inferiority trials",
+        "The crossover rate is too low to matter"
+      ],
+      "correctAnswer": 1,
+      "explanation": "In superiority trials, ITT is conservative (biases toward the null). But in non-inferiority trials, the null is that treatments are different, so ITT's bias toward no difference actually favors the new treatment. Crossovers from new to standard drug dilute the difference between arms, making non-inferiority easier to demonstrate. ICH E9 and FDA guidance recommend that BOTH ITT and PP analyses support non-inferiority for a convincing conclusion.",
+      "explanationAr": "في تجارب التفوق، ITT متحفظ. لكن في تجارب عدم الدونية، التحيز نحو عدم الفرق يفضل العلاج الجديد. التحولات تخفف الفرق بين الأذرع. لذلك يجب أن يدعم كل من ITT و PP عدم الدونية."
+    },
+    {
+      "id": 3,
+      "type": "identify",
+      "prompt": "A CONSORT flow diagram shows: 600 randomized → 300 per arm. In the treatment arm: 45 lost to follow-up, 20 discontinued intervention, 15 had protocol violations. The PP analysis includes only 220/300 (73%). The ITT analysis includes 285/300 (95%, with last-observation-carried-forward for 15 lost). Which concern is most critical?",
+      "promptAr": "مخطط CONSORT يُظهر: 600 موزعون عشوائياً → 300 لكل ذراع. في ذراع العلاج: 45 فُقدوا للمتابعة، 20 توقفوا عن التدخل، 15 انتهكوا البروتوكول. تحليل PP يشمل 220/300 (73%). تحليل ITT يشمل 285/300 (95%). ما القلق الأكثر أهمية؟",
+      "options": [
+        "The PP analysis excludes 27% of participants, likely introducing substantial selection bias",
+        "The ITT analysis uses LOCF which is itself problematic",
+        "Both A and B are concerns: PP suffers from selection bias, and ITT using LOCF is a flawed imputation method that can bias in either direction",
+        "Neither is concerning because CONSORT was followed"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Both concerns are valid. PP excluding 27% is highly susceptible to selection bias (the excluded 80 patients likely differ systematically from the included 220). However, the ITT approach using LOCF is also problematic — LOCF assumes outcomes remain stable after dropout, which is rarely true. The NRC (2010) panel recommended against LOCF in favor of principled missing data methods (multiple imputation, mixed models). The best practice is ITT with proper missing data handling.",
+      "explanationAr": "كلا القلقين صحيح. PP يستبعد 27% مما يُدخل تحيز اختيار كبير. ITT يستخدم LOCF وهو طريقة معيبة. أفضل ممارسة هي ITT مع معالجة مناسبة للبيانات المفقودة."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "The Complier Average Causal Effect (CACE) analysis attempts to estimate the treatment effect for those who would comply with treatment in both arms. What assumption does CACE require that standard ITT and PP do not?",
+      "promptAr": "تحليل متوسط التأثير السببي للملتزمين (CACE) يحاول تقدير تأثير العلاج لمن سيلتزمون بالعلاج في كلا الذراعين. ما الافتراض الذي يتطلبه CACE ولا يتطلبه ITT و PP القياسيان؟",
+      "options": [
+        "That all participants are compliant",
+        "That the outcome is normally distributed",
+        "That the sample size is at least 1,000",
+        "The exclusion restriction: randomization affects the outcome ONLY through its effect on treatment received (no direct effect of assignment)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "CACE (Angrist, Imbens & Rubin, 1996) uses randomization as an instrumental variable. It requires the exclusion restriction: assignment to treatment affects outcomes only through actual treatment received, not through other channels (e.g., being assigned to the drug arm doesn't cause anxiety that affects the outcome independently). CACE also assumes monotonicity (no 'defiers' who do the opposite of their assignment). It provides an unbiased estimate of the treatment effect among compliers.",
+      "explanationAr": "CACE يستخدم التوزيع العشوائي كمتغير أداتي. يتطلب قيد الاستبعاد: التعيين للعلاج يؤثر على النتائج فقط من خلال العلاج الفعلي المتلقى."
+    },
+    {
+      "id": 5,
+      "type": "scenario",
+      "prompt": "A trial of a lifestyle intervention (diet + exercise) for diabetes prevention shows: ITT analysis: 25% risk reduction (p=0.02). PP analysis: 58% risk reduction (p<0.001). The large difference suggests substantial non-adherence. How should these results be presented to policymakers?",
+      "promptAr": "تجربة تدخل نمط حياة (حمية + تمارين) للوقاية من السكري تُظهر: تحليل ITT: 25% تخفيض خطر. تحليل PP: 58% تخفيض خطر. الفرق الكبير يشير إلى عدم التزام كبير. كيف يجب تقديم النتائج لصانعي السياسات؟",
+      "options": [
+        "Report the 25% ITT result as the expected real-world effectiveness (what happens when you offer the intervention) and the 58% PP result as the potential efficacy (what happens when people actually follow the intervention), noting that real-world adherence will determine actual impact",
+        "Report only the 25% ITT result and ignore PP",
+        "Average the two: report 41.5% risk reduction",
+        "Report only the 58% PP result as the true treatment effect"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This distinction between efficacy (can it work under ideal conditions? — PP) and effectiveness (does it work in practice? — ITT) is crucial for policy. The ITT 25% reflects what happens when the program is offered to a real population with real adherence rates. The PP 58% shows what happens when people actually follow the regimen. Policymakers need both: the ITT for budgeting and planning, the PP for motivating individual patients. This mirrors the Diabetes Prevention Program (Knowler et al., 2002, NEJM).",
+      "explanationAr": "التمييز بين الفعالية (هل يمكن أن يعمل في ظروف مثالية؟) والتأثير الفعلي (هل يعمل في الممارسة؟) حاسم للسياسات. صانعو السياسات يحتاجون كليهما."
+    }
+  ]
+}

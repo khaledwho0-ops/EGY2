@@ -1,0 +1,123 @@
+{
+  "id": "day35_fallacy_of_the_inverse",
+  "phase": 1,
+  "week": 5,
+  "day": 35,
+  "title": "The Fallacy of the Inverse — and a Week-5 Checkpoint",
+  "titleAr": "مغالطة العكس — ومراجعة الأسبوع الخامس",
+  "description": "\"If you follow the system, you heal. You're NOT following it — so you can't heal.\" The inverse trap, plus a quick checkpoint on this week's six formal fallacies.",
+  "descriptionAr": "«لو اتبعت النظام، هتشفى. إنت مش متبعه — يبقى مستحيل تشفى». فخّ العكس، مع مراجعة سريعة لمغالطات الأسبوع الستة.",
+  "type": "logic",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A promoter tells a patient: \"If you follow my full system, your body heals. You broke the rules and ate off-list — so your body simply cannot heal now.\" Where's the fallacy?",
+      "claimAr": "مُروّج بيقول لمريض: «لو اتبعت نظامي كامل، جسمك بيشفى. إنت خالفت القواعد وأكلت بَرّا القايمة — يبقى جسمك مستحيل يشفى دلوقتي». المغالطة فين؟",
+      "options": [
+        "No fallacy — breaking the rules blocks healing",
+        "Fallacy of the inverse: 'if follow, then heal' does not mean 'if not follow, then not heal' — bodies heal through many paths (medicine, time, the immune system) regardless of his rules",
+        "Only his system can heal anyone",
+        "The patient deserves the blame"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The form is: 'If A then B; not A, therefore not B' — the inverse, which is invalid. 'Following the system heals you' does not imply 'not following it means no healing,' because healing has countless other routes: prescribed treatment, the immune system, rest, time. Notice the second job this move does — it makes every failure the patient's fault ('you didn't follow it right'), which is the unfalsifiability red flag.",
+      "explanationAr": "الشكل: «لو أ يبقى ب؛ مش أ، إذن مش ب» — العكس، وهو غير صحيح. «اتباع النظام بيشفيك» ما بيلزمش منه «عدم اتباعه يعني مفيش شفاء»، لأن الشفاء ليه طرق تانية كتير: علاج موصوف، جهاز مناعة، راحة، وقت. ولاحظ الشغلانة التانية للحركة دي — بتخلّي كل فشل غلطة المريض، وهي علامة عدم القابلية للتفنيد.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-4"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: \"If a remedy is genuine, it has supporters. This remedy has no supporters left after the ban — so it can't be genuine\" is the inverse of a valid rule and therefore reliable.",
+      "claimAr": "صح ولا غلط: «لو الوصفة حقيقية، يبقى ليها مؤيدين. الوصفة دي مفيش ليها مؤيدين بعد الحظر — يبقى مستحيل تكون حقيقية» هي عكس قاعدة صحيحة وبالتالي موثوقة.",
+      "options": ["True — the inverse of a true conditional is always true", "False — the inverse of a true 'if-then' is NOT automatically true"],
+      "correctAnswer": 1,
+      "explanation": "False — the inverse of a true conditional is NOT automatically true. A real result can lose supporters for reasons unrelated to its truth, and a false one can keep millions. Calibration check: if you felt certain this was true before answering, that feeling of certainty came from the same trap the fallacy uses — it sounds tidy and logical, but the shape is broken.",
+      "explanationAr": "غلط — عكس الشرطية الصحيحة مش صح تلقائياً. الحاجة الحقيقية ممكن تفقد مؤيدين لأسباب ملهاش علاقة بصحتها، والكاذبة ممكن تحتفظ بملايين. معايرة: لو حسّيت بيقين قبل الإجابة، ده الإحساس نفسه اللي المغالطة بتستغلّه — بتبان مرتّبة ومنطقية لكن الشكل مكسور.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:scmr-2026-05-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "CHECKPOINT. Read the move, then name the fallacy. \"The diet must be real — look how many millions are doing it; and besides, if it didn't work people wouldn't be sharing success stories.\" Which is the BEST single label for 'people improved, so it must be the diet'?",
+      "claimAr": "مراجعة. اقرا الحركة، وبعدين سمّي المغالطة. «الحمية لازم تكون حقيقية — بُص الملايين عاملينها؛ وكمان لو ما كانتش بتنفع الناس ما كانتش هتشارك قصص نجاح». أنهي أحسن مسمّى واحد لـ«الناس اتحسّنت، يبقى لازم الحمية»؟",
+      "options": [
+        "Denying the antecedent",
+        "Affirming the consequent — improvement (the consequent) is taken as proof of the diet (the antecedent), ignoring placebo, medicine, and natural recovery",
+        "Undistributed middle",
+        "Illicit minor"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does 'people improved' NOT prove 'the diet did it'? What else could explain the same improvement?",
+        "promptAr": "بكلماتك: ليه «الناس اتحسّنت» لا تثبت «الحمية اللي عملت ده»؟ وإيه تفسيرات تانية ممكنة لنفس التحسّن؟"
+      },
+      "explanation": "'They improved, therefore the diet did it' is affirming the consequent: the result is read backwards onto one preferred cause. The improvement has many possible explanations — placebo, natural course of the illness, concurrent treatment, regression to the mean. The key insight: a result can be real while its cause remains completely unknown. That's exactly why controlled trials exist.",
+      "explanationAr": "«اتحسّنوا، إذن الحمية اللي عملت ده» هي «إثبات التالي»: النتيجة بتتقري بالمقلوب على سبب واحد مفضّل. التحسّن ليه تفسيرات كتيرة ممكنة — وهم، المسار الطبيعي للمرض، علاج متزامن، رجوع للمتوسط. الفكرة الأساسية: النتيجة ممكن تكون حقيقية بينما سببها لسه مجهول كلياً. ده بالظبط ليه التجارب المضبوطة موجودة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A grieving family says after a loss: \"If he'd truly followed the system, he'd have lived. He died — so he must have secretly broken it.\" This reasoning feels complete and even compassionate toward the system.",
+      "claimAr": "عيلة حزينة بتقول بعد وفاة: «لو كان فعلاً اتبع النظام، كان عاش. هو مات — يبقى لازم خالفه في السرّ». التفكير ده بيحسّ كامل وحتى رحيم تجاه النظام.",
+      "prompt": "What would have to be true if this reasoning were WRONG? What ordinary explanations fit the same facts without blaming the patient?",
+      "promptAr": "لو التفكير ده غلط، إيه اللي لازم يكون صح؟ وإيه التفسيرات العادية اللي بتركّب على نفس الوقائع من غير ما تلوّم المريض؟",
+      "modelPoints": [
+        "If the reasoning were wrong, we'd expect exactly what happens in real medicine: some people die despite perfect adherence because the disease was too advanced, or the treatment was never effective for that disease.",
+        "The logic is unfalsifiable: any death = 'he broke the rules secretly.' A claim that pre-explains every possible bad outcome can never be tested or corrected.",
+        "Blaming a dead person's compliance is not compassion — it is a shield for the system. A real medicine accepts that some patients die even when they do everything right.",
+        "The family's grief is completely valid — the problem is that this story misdirects that grief away from asking whether the system itself was safe."
+      ],
+      "modelPointsAr": [
+        "لو التفكير غلط، هنتوقع بالظبط اللي بيحصل في الطب الحقيقي: بعض الناس بيموتوا رغم الالتزام الكامل لأن المرض كان متقدّم جداً، أو العلاج ما كانش فعّالاً للمرض ده أصلاً.",
+        "المنطق غير قابل للتفنيد: أي وفاة = «خالف في السرّ». ادعاء بيفسّر كل نتيجة وحشة مقدّماً ما ينفعش يتختبر أو يتصحّح.",
+        "إلقاء اللوم على التزام الميت مش رحمة — هو درع للنظام. الدواء الحقيقي بيقبل إن بعض المرضى بيموتوا حتى لو عملوا كل حاجة صح.",
+        "حزن العيلة مشروع كلياً — المشكلة إن القصة دي بتصرف الحزن ده بعيد عن السؤال: هل النظام كان آمن أصلاً؟"
+      ],
+      "explanation": "Considering the opposite breaks the loop. The inverse fallacy dressed in grief is especially powerful — it locks families into protecting the system that may have harmed their loved one, by making them feel that questioning it disrespects the person who followed it. With deep gentleness: the death was never their loved one's failure to comply.",
+      "explanationAr": "التفكير في العكس بيكسر الحلقة. مغالطة العكس متنكّرة في الحزن بتكون قوية بشكل خاص — بتقفل العيلة في حماية النظام اللي ممكن يكون ضرّ بحبيبهم، بإنها بتخلّيهم يحسّوا إن التشكيك فيه بيمسّ كرامة الميت. بحنية عميقة: الوفاة عمرها ما كانت فشل حبيبهم في الالتزام.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-4"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"Trustworthy healers have many testimonials. He has many testimonials. So he's a trustworthy healer — and having learned six formal fallacies this week, you now have the tools to detect frauds.\"",
+      "claimAr": "فكّك الحُجّة دي: «المعالجون الموثوقون عندهم شهادات كتير. هو عنده شهادات كتير. يبقى هو معالج موثوق — وبعد ما اتعلّمت ست مغالطات شكلية الأسبوع ده، عندك الأدوات دلوقتي إنك تكتشف المحتالين».",
+      "parts": [
+        { "text": "He is a trustworthy healer.", "textAr": "هو معالج موثوق.", "role": "conclusion" },
+        { "text": "Trustworthy healers have many testimonials.", "textAr": "المعالجون الموثوقون عندهم شهادات كتير.", "role": "premise" },
+        { "text": "He has many testimonials.", "textAr": "هو عنده شهادات كتير.", "role": "premise" },
+        { "text": "(Unstated) Having many testimonials is unique to trustworthy healers.", "textAr": "(غير مذكور) كتر الشهادات صفة حصرية عند المعالجين الموثوقين.", "role": "assumption" },
+        { "text": "Having learned six fallacies this week, you can now detect frauds.", "textAr": "بعد ما اتعلّمت ست مغالطات الأسبوع ده، تقدر دلوقتي تكتشف المحتالين.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION is the broken joint: 'many testimonials' is shared by honest healers AND by skilled frauds — it cannot place someone in the 'trustworthy' box. This is the undistributed middle (day 31). The final sentence about 'detecting frauds' is irrelevant to the logical chain — it flatters you and distracts from the flaw. Spotting fallacies helps you ask better questions; it doesn't give you a fraud-detection superpower.",
+      "explanationAr": "الافتراض الخفي هو المفصل المكسور: «كتر الشهادات» بتخصّ المعالجين الأمناء والمحتالين الماهرين على السوا — فما تقدرش تحطّ حد في خانة «الموثوق». ده «الحدّ الأوسط غير المُستغرَق» (يوم 31). الجملة الأخيرة عن «اكتشاف المحتالين» مش وجيهة للسلسلة المنطقية — بتمدحك وبتشتّتك عن العيب. اكتشاف المغالطات بيساعدك تسأل أسئلة أحسن؛ مش بيدّيك قوة خارقة لكشف المحتالين.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-3"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

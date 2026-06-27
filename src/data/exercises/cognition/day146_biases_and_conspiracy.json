@@ -1,0 +1,128 @@
+{
+  "id": "day146_biases_and_conspiracy",
+  "phase": 4,
+  "week": 21,
+  "day": 146,
+  "title": "Layer 6 — Biases and Conspiracy: How the Community Defended the Disaster",
+  "titleAr": "الطبقة السادسة — الانحيازات والمؤامرة: إزاي المجتمع دافع عن الكارثة",
+  "description": "Official action arrived — expulsion, license revoked, a public ban — and the community held tighter. Today you apply the biases and the conspiracy structure at once, and practise the one move that breaks the loop: making it from the inside, then spotting the tells.",
+  "descriptionAr": "الإجراء الرسمي وصل — شطب، إلغاء ترخيص، حظر علني — والمجتمع تمسّك أكتر. النهاردة بتطبّق الانحيازات وتركيب المؤامرة مع بعض، وتتمرّن على الحركة الواحدة اللي بتكسر الحلقة: إنك تعملها من جوّه، وبعدين تكشف العلامات.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 18,
+  "source": "https://www.apa.org/topics/personality/motivated-reasoning",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "After the Supreme Council for Media Regulation banned the system's content, followers said: 'Banning it proves they're afraid of the truth.' Why is this reasoning the textbook signature of a conspiracy belief rather than honest skepticism?",
+      "claimAr": "بعد ما المجلس الأعلى لتنظيم الإعلام حظر محتوى النظام، الأتباع قالوا: «حظره يثبت إنهم خايفين من الحقيقة». ليه الاستدلال ده هو التوقيع النموذجي لمعتقد المؤامرة مش الشكّ الأمين؟",
+      "options": [
+        "Because bans are always evidence of a cover-up",
+        "Because it's unfalsifiable: acceptance would 'prove' it true and a ban also 'proves' it true — no possible outcome can count against the belief",
+        "Because the Council has no authority",
+        "Because skeptics never question authority"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The give-away is the unfalsifiable structure: if the system were promoted, that's 'proof it works'; if it's banned, that's 'proof they're scared.' When every possible outcome is read as confirmation, the belief can never be tested — which is the hallmark of conspiracy thinking, not skepticism. A real skeptic asks 'what would change my mind?' A conspiracy belief is built so that nothing can.",
+      "explanationAr": "العلامة هي البنية غير القابلة للتفنيد: لو النظام اترَوَّج، يبقى «دليل إنه شغّال»؛ ولو اتحظر، يبقى «دليل إنهم خايفين». لمّا كل نتيجة ممكنة بتتقري كتأكيد، المعتقد ما يقدرش يتختبر أبداً — وده توقيع تفكير المؤامرة، مش الشكّ. الشكّاك الحقيقي بيسأل «إيه اللي يغيّر رأيي؟» ومعتقد المؤامرة متبني علشان مفيش حاجة تقدر تغيّره.",
+      "sources": [
+        "EAL-case-001:conspiracy-ban-proves-fear",
+        "EAL-case-001:scmr-2026-05-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "When the originator died of a cardiac event at 47 — confirmed by the Foreign Ministry as natural, no criminal element — many followers concluded 'the industry poisoned him to silence the truth.'",
+      "claimAr": "لمّا صاحب النظام مات بحدث قلبي في الـ47 — أكّدت الخارجية إنها طبيعية بلا شبهة جنائية — كتير من الأتباع استنتجوا «الصناعة سمّمته علشان تسكّت الحقيقة».",
+      "options": [
+        "The death proves a cover-up, because the timing is suspicious",
+        "The death is being forced into the conspiracy frame; a natural cardiac death after a diet that excluded heart-protective foods is the simpler, evidenced explanation"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does the mind reach for 'he was assassinated' instead of 'a 47-year-old had a heart attack' — and what need is that story meeting?",
+        "promptAr": "بكلماتك: ليه العقل بيمدّ إيده لـ«هو اتقتل» بدل «راجل في الـ47 جاتله أزمة قلبية» — وإيه الحاجة اللي القصة دي بتلبّيها؟"
+      },
+      "explanation": "Proportionality bias makes a big event feel like it 'must' have a big hidden cause, and the conspiracy frame offers comfort: an ordered world, a villain to blame, and a way to keep the belief alive past a fact that should have shaken it. The plainer, evidenced account — a cardiac death at 47 after a diet stripped of cardio-protective foods — is harder to sit with precisely because it implicates the system. Naming the need the story meets (order, meaning, protection of identity) is how you separate it from the evidence.",
+      "explanationAr": "انحياز التناسب بيخلّي الحدث الكبير يحسّ إنه «لازم» وراه سبب كبير خفي، وإطار المؤامرة بيقدّم راحة: عالم منظّم، وشرير نلومه، وطريقة نبقّي بيها المعتقد عايش بعد حقيقة كان المفروض تهزّه. والرواية الأبسط الموثّقة — وفاة قلبية في الـ47 بعد حمية مجرّدة من أطعمة واقية للقلب — أصعب نتقبّلها بالظبط لأنها بتورّط النظام. وتسمية الحاجة اللي القصة بتلبّيها (النظام، المعنى، حماية الهوية) هي إزاي تفصلها عن الدليل.",
+      "sources": [
+        "EAL-case-001:conspiracy-poisoned",
+        "EAL-case-001:mfa-eg-2026-04"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "recognize",
+      "claim": "A defender says: 'Big Pharma profits from disease, so they hide cheap cures — which is why this diet is suppressed.' The pharmaceutical industry does have real, documented problems. Does that make the diet claim true?",
+      "claimAr": "مدافع بيقول: «شركات الدواء بتكسب من المرض، فبتخفي العلاجات الرخيصة — علشان كده الحمية دي مكبوتة». صناعة الدواء فعلاً عندها مشاكل حقيقية موثّقة. هل ده بيخلّي ادعاء الحمية صح؟",
+      "options": [
+        "Yes — if pharma is corrupt, the alternative must work",
+        "No — 'medicine has flaws, therefore this unrelated diet works' is a non-sequitur; real industry problems don't transfer truth to an unrelated claim",
+        "Yes — corruption proves the cover-up",
+        "No — the pharmaceutical industry has no problems at all"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the conspiracy framing that pre-discredits all critique (red flag #5), and its engine is a non-sequitur: even if every criticism of the industry were true, it would not make a separate, untested diet effective. The two are simply unrelated claims. Notice the honesty in the answer — we do not pretend the industry is flawless. We just refuse to let a real grievance smuggle in an unrelated, unproven conclusion.",
+      "explanationAr": "ده إطار المؤامرة اللي بيُسقِط كل نقد مقدماً (علامة الخطر رقم 5)، ومحرّكه استنتاج فاسد: حتى لو كل نقد للصناعة كان صح، ما كانش هيخلّي حمية منفصلة غير مختبَرة فعّالة. الاتنين ببساطة ادعاءان غير مرتبطين. لاحظ الأمانة في الإجابة — إحنا مش بنتظاهر إن الصناعة بلا عيوب. إحنا بس بنرفض إن مظلمة حقيقية تهرّب استنتاجاً غير مرتبط وغير مُثبَت.",
+      "sources": [
+        "EAL-case-001:redflag-5",
+        "EAL-case-001:conspiracy-pharma-hides"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 4,
+      "mechanic": "inoculate",
+      "technique": "the unfalsifiable conspiracy shield",
+      "techniqueAr": "درع المؤامرة غير القابل للتفنيد",
+      "task": "Feel the trick from the inside so you can spot it later. Take a totally harmless claim — say, 'this brand of tea boosts focus' — and defend it with a conspiracy shield: build it so that praise proves it works, criticism proves a cover-up, and anyone who doubts is 'paid by the coffee lobby.' Keep it short and make every outcome confirm you.",
+      "taskAr": "احسّ بالحركة من جوّه علشان تكشفها بعدين. خُد ادعاء غير ضار خالص — مثلاً «الشاي بتاع الماركة دي بيزوّد التركيز» — ودافع عنه بدرع مؤامرة: ابنيه بحيث المدح يثبت إنه شغّال، والنقد يثبت تغطية، وأي حد يشكّك يبقى «مدفوع من لوبي القهوة». خلّيه قصير وخلّي كل نتيجة تأكّدك.",
+      "tells": [
+        "Every possible outcome is read as confirmation — praise AND criticism both 'prove' you right.",
+        "Critics are pre-discredited by motive ('paid by the lobby') instead of being answered on evidence.",
+        "There is no test you'll accept that could ever show you're wrong.",
+        "A real grievance (some lobbies do exist) is used to smuggle in an unrelated claim.",
+        "Doubt is reframed as betrayal or naivety, not as a fair question."
+      ],
+      "tellsAr": [
+        "كل نتيجة ممكنة بتتقري كتأكيد — المدح والنقد الاتنين «بيثبتوا» إنك صح.",
+        "النقّاد بيتسقطوا مسبقاً بالدافع («مدفوعين من اللوبي») بدل ما يتردّ عليهم بالدليل.",
+        "مفيش اختبار هتقبله ممكن يوري إنك غلط أبداً.",
+        "مظلمة حقيقية (في لوبيات فعلاً) بتُستخدم لتهريب ادعاء غير مرتبط.",
+        "الشكّ بيتأطّر كخيانة أو سذاجة، مش كسؤال منصف."
+      ],
+      "explanation": "Building the conspiracy shield in a harmless dose is active inoculation — research (signal-detection meta-analysis, N=37,025) shows that making the move yourself sharpens your ability to DISCRIMINATE manipulation from honest argument, without turning you into a blanket cynic. Now that you've assembled the 'every outcome confirms me' machine over tea, you'll feel it instantly when it's assembled over a diet, a death, or a ban.",
+      "explanationAr": "إنك تبني درع المؤامرة بجرعة غير ضارة ده تلقيح نشط — الأبحاث (تحليل بَعدي بنظرية كشف الإشارة، ن=37,025) بتبيّن إن إنك تعمل الحركة بنفسك بيشحذ قدرتك على التمييز بين التلاعب والحُجّة الأمينة، من غير ما يحوّلك لمتشكّك في كل حاجة. ودلوقتي بعد ما ركّبت ماكينة «كل نتيجة بتأكّدني» على الشاي، هتحسّها فوراً لمّا تتركّب على حمية، أو وفاة، أو حظر.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/pops.70015"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 141,
+      "claim": "Back to Layer 1's defensive move: when the Syndicate's specialists found no evidence, followers said 'they're just jealous of his success.' Which bias is this, and why does it make the community immune to any correction?",
+      "claimAr": "رجوع لحركة الطبقة الأولى الدفاعية: لمّا متخصصو النقابة ما لاقوش دليل، الأتباع قالوا «هم بس غيرانين من نجاحه». أنهي انحياز ده، وليه بيخلّي المجتمع محصّن ضد أي تصحيح؟",
+      "options": [
+        "Fair institutional critique",
+        "In-group/Out-group bias — reclassifying any reviewer as a jealous 'enemy' so their evidence can be dismissed unread",
+        "Anchoring bias",
+        "The availability heuristic"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Re-tested from Layer 1: the In-group/Out-group move instantly relabels anyone who challenges the belief as 'them,' so their evidence is discredited by their identity before it is even examined. The Syndicate review was conducted by university specialists with no financial stake — but once 'jealous enemy' is applied, no counter-evidence can ever land. This is the wall that protects the whole structure, and seeing it is the first step to talking with someone behind it rather than at them.",
+      "explanationAr": "بنعيد اختباره من الطبقة الأولى: حركة الداخل/الخارج بتعيد تصنيف أي حد بيتحدّى المعتقد كـ«هم» فوراً، فدليله بيتسقّط بهويته قبل ما يتفحص أصلاً. مراجعة النقابة عملها أساتذة جامعات بلا مصلحة مالية — لكن أول ما يتلصق «عدوّ غيران»، مفيش دليل مضاد يقدر يوصل. ده الحيط اللي بيحمي البنية كلها، وإنك تشوفه أول خطوة إنك تتكلّم مع حد وراه بدل ما تتكلّم عليه.",
+      "sources": [
+        "EAL-case-001:bias-ingroup",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    }
+  ]
+}

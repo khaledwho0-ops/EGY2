@@ -1,0 +1,98 @@
+{
+  "id": "mar_assumption",
+  "phase": 2,
+  "week": 16,
+  "day": 30,
+  "title": "Missing At Random Assumption",
+  "titleAr": "افتراض الفقدان العشوائي",
+  "description": "Deep dive into the MAR assumption — how to test it, when it's plausible, and how violations affect analysis validity.",
+  "descriptionAr": "دراسة معمقة لافتراض MAR — كيفية اختباره، متى يكون معقولاً، وكيف تؤثر الانتهاكات على صحة التحليل.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Missing At Random (MAR) Assumption Testing",
+    "nameAr": "اختبار افتراض الفقدان العشوائي",
+    "definition": "MAR assumes P(R|Y_obs, Y_mis) = P(R|Y_obs), where R is the missingness indicator. Crucially, MAR is untestable from the observed data alone because it makes claims about the relationship between missingness and unobserved values. However, auxiliary analyses can assess plausibility: comparing observed characteristics of complete vs. incomplete cases, and using sensitivity analyses to examine robustness to MAR violations.",
+    "definitionAr": "MAR يفترض أن احتمال الفقدان يعتمد فقط على البيانات المرصودة وليس على القيم المفقودة نفسها. هذا الافتراض غير قابل للاختبار من البيانات المرصودة وحدها.",
+    "realWorldExample": "In the STAR*D depression trial, patients with more severe side effects were more likely to drop out. If side effect severity was measured (observed), dropout conditional on side effects could be MAR. If key predictors of dropout were unmeasured, the assumption would be violated (MNAR).",
+    "detectionMethod": "Little's MCAR test, logistic regression of missingness indicators on observed variables, pattern-mixture models, selection models (Heckman, 1979), sensitivity analysis via delta adjustment (tipping point analysis)."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A researcher claims to have 'proven' that missing data in their study are MAR by showing that missingness is predicted by observed covariates. Why is this claim too strong?",
+      "promptAr": "باحث يدعي أنه 'أثبت' أن البيانات المفقودة في دراسته هي MAR من خلال إظهار أن الفقدان يُتنبأ به من المتغيرات المشتركة المرصودة. لماذا هذا الادعاء مبالغ فيه؟",
+      "options": [
+        "The covariates used were inappropriate",
+        "Only MNAR can be tested",
+        "MAR can always be proven from observed data",
+        "MAR is fundamentally untestable from observed data alone — we can only rule out MCAR and assess MAR plausibility. The relationship between missingness and unobserved values cannot be verified empirically"
+      ],
+      "correctAnswer": 3,
+      "explanation": "MAR makes a claim about the relationship between missingness and unobserved (missing) values — by definition, we cannot observe this relationship. We can reject MCAR (using Little's test or by finding predictors of missingness), but finding predictors only establishes that data are not MCAR. Whether missingness also depends on the unobserved values (making it MNAR) remains unknowable from the data. This is why sensitivity analysis under MNAR assumptions is essential.",
+      "explanationAr": "MAR يقدم ادعاءً حول العلاقة بين الفقدان والقيم غير المرصودة — بحكم التعريف، لا يمكننا ملاحظة هذه العلاقة. يمكننا رفض MCAR لكن لا يمكننا إثبات MAR."
+    },
+    {
+      "id": 2,
+      "type": "scenario",
+      "prompt": "In a weight loss trial, 30% of participants drop out before the 12-month follow-up. Dropouts have significantly higher baseline BMI (mean 38.2 vs. 32.1, p<0.001) and lower baseline motivation scores. The researcher plans to use multiple imputation assuming MAR. What additional analysis should be performed?",
+      "promptAr": "في تجربة فقدان الوزن، 30% من المشاركين ينسحبون قبل المتابعة لمدة 12 شهراً. المنسحبون لديهم مؤشر كتلة جسم أعلى بشكل معنوي (38.2 مقابل 32.1) ودرجات تحفيز أقل. الباحث يخطط لاستخدام التعويض المتعدد بافتراض MAR. ما التحليل الإضافي المطلوب؟",
+      "options": [
+        "Sensitivity analysis using tipping point analysis or pattern-mixture models to assess how results change if dropouts had worse outcomes than MAR predicts (delta adjustment)",
+        "Simply exclude the dropouts (complete case analysis)",
+        "Impute using mean substitution for computational simplicity",
+        "No additional analysis needed — MAR is established by the BMI and motivation differences"
+      ],
+      "correctAnswer": 0,
+      "explanation": "While MAR is plausible (dropout predicted by observed baseline variables), it's likely that dropouts also had worse outcomes (MNAR component). Tipping point analysis systematically shifts the imputed values for dropouts by increasingly negative amounts (delta) and identifies the delta at which conclusions change. If conclusions are robust to substantial delta values, the finding is credible regardless of the MAR assumption. This approach is recommended by the NRC panel on missing data in clinical trials (2010).",
+      "explanationAr": "تحليل نقطة التحول يُزيح القيم المعوضة للمنسحبين بشكل منهجي ويحدد النقطة التي تتغير عندها الاستنتاجات. هذا مُوصى به من لجنة NRC حول البيانات المفقودة."
+    },
+    {
+      "id": 3,
+      "type": "identify",
+      "prompt": "Little's MCAR test yields χ²(45) = 82.3, p=0.001. What is the correct interpretation?",
+      "promptAr": "اختبار ليتل لـ MCAR ينتج χ²(45) = 82.3، p=0.001. ما التفسير الصحيح؟",
+      "options": [
+        "The data are confirmed to be MAR",
+        "The MCAR assumption is rejected: missingness is related to observed data values. The data could be MAR or MNAR — further investigation is needed",
+        "The data are MNAR",
+        "The missing data can be safely ignored"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Little's MCAR test (1988) is a multivariate chi-square test that compares means of observed values across different missing data patterns. A significant result (p=0.001) rejects MCAR — missingness is not completely random. However, this test cannot distinguish between MAR and MNAR. The data could be MAR (missingness depends on observed variables only) or MNAR (also depends on unobserved values). Additional analysis is needed to assess which mechanism is more plausible.",
+      "explanationAr": "اختبار ليتل يرفض MCAR: الفقدان مرتبط بقيم البيانات المرصودة. لكن هذا الاختبار لا يستطيع التمييز بين MAR و MNAR."
+    },
+    {
+      "id": 4,
+      "type": "scenario",
+      "prompt": "A researcher uses logistic regression to predict missingness on income (1=missing, 0=observed) from age, education, gender, and employment status. Results show education (OR=2.1, p=0.003) and employment status (OR=3.4, p<0.001) significantly predict missingness. What should these predictors be used for?",
+      "promptAr": "باحث يستخدم الانحدار اللوجستي للتنبؤ بفقدان الدخل من العمر والتعليم والجنس وحالة التوظيف. النتائج تُظهر أن التعليم وحالة التوظيف يتنبآن بالفقدان بشكل معنوي. كيف يجب استخدام هذه المتنبئات؟",
+      "options": [
+        "These results are irrelevant to imputation",
+        "To remove cases with these characteristics from the analysis",
+        "These variables should be included as auxiliary variables in the multiple imputation model to make the MAR assumption more plausible",
+        "To confirm that the data are MCAR"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Variables that predict missingness should be included in the imputation model. Collins et al. (2001) showed that including auxiliary variables (correlates of missingness and/or the outcome) in the imputation model makes the MAR assumption more plausible and improves imputation accuracy. By including education and employment status, the imputation model can account for the non-random nature of missingness, producing less biased estimates.",
+      "explanationAr": "المتغيرات التي تتنبأ بالفقدان يجب تضمينها في نموذج التعويض. كولينز وآخرون أظهروا أن تضمين المتغيرات المساعدة يجعل افتراض MAR أكثر معقولية."
+    },
+    {
+      "id": 5,
+      "type": "identify",
+      "prompt": "In a pattern-mixture model for sensitivity analysis, the researcher defines different statistical models for each missing data pattern (e.g., completers, early dropouts, late dropouts). What is the primary advantage of this approach over a standard MAR analysis?",
+      "promptAr": "في نموذج خليط الأنماط لتحليل الحساسية، يُعرّف الباحث نماذج إحصائية مختلفة لكل نمط بيانات مفقودة. ما الميزة الرئيسية لهذا النهج مقارنة بتحليل MAR القياسي؟",
+      "options": [
+        "It always produces more significant results",
+        "It eliminates the need for sensitivity analysis",
+        "It is computationally simpler",
+        "It allows explicit modeling of how outcomes for missing cases might differ from observed cases, enabling structured MNAR sensitivity analyses"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Pattern-mixture models (Little, 1993) stratify the analysis by missing data pattern and allow different distributional assumptions for each pattern. For example, the model can specify that dropouts' outcomes are δ units worse than predicted by observed data (MAR violation). By varying δ, researchers can assess how sensitive conclusions are to departures from MAR. This approach is recommended by regulatory agencies (ICH E9-R1, EMA) for clinical trial analyses.",
+      "explanationAr": "نماذج خليط الأنماط تُطبق أنماط فقدان مختلفة وتسمح بافتراضات توزيعية مختلفة لكل نمط، مما يمكّن من تحليلات حساسية MNAR المهيكلة."
+    }
+  ]
+}

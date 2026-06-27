@@ -1,0 +1,121 @@
+{
+  "id": "grief_vs_depression_day4",
+  "phase": 1,
+  "week": 5,
+  "day": 4,
+  "title": "Grief vs. Depression: Understanding the Difference",
+  "titleAr": "الحزن مقابل الاكتئاب: فهم الفرق",
+  "description": "Learn to distinguish normal grief responses (Kübler-Ross stages) from clinical depression using PHQ-9 criteria, with culturally relevant Egyptian and Islamic mourning contexts",
+  "descriptionAr": "تعلّم التمييز بين استجابات الحزن الطبيعية (مراحل كوبلر-روس) والاكتئاب السريري باستخدام معايير PHQ-9، مع سياقات الحداد المصرية والإسلامية ذات الصلة الثقافية",
+  "type": "differentiation",
+  "difficulty": 3,
+  "estimatedMinutes": 25,
+  "bloomLevel": "analyze",
+  "source": "DSM-5 (APA 2013); Kübler-Ross (1969); Wakefield & First (2012); PHQ-9 (Kroenke et al., 2001)",
+  "safetyNote": "Grief and depression can coexist. If you or someone you know is struggling after a loss, professional support is available. Egypt hotline: 08008880700.",
+  "safetyNoteAr": "يمكن أن يتعايش الحزن والاكتئاب. إذا كنت أنت أو شخص تعرفه يعاني بعد خسارة، يتوفر دعم مهني. خط المساعدة المصري: 08008880700.",
+  "com_b_target": "Capability/Psychological",
+  "com_b_mechanism": "Differentiation skills help identify when grief transitions to depression requiring clinical intervention",
+  "theoretical_framework": {
+    "kubler_ross_stages": {
+      "source": "Kübler-Ross, E. (1969). On Death and Dying. Scribner.",
+      "note": "The 5-stage model (Denial, Anger, Bargaining, Depression, Acceptance) is descriptive, NOT prescriptive — people do not move through stages linearly. The 'depression' stage in the model is normal grief-related sadness, distinct from Major Depressive Disorder.",
+      "stages": [
+        {"stage": "Denial", "stageAr": "الإنكار", "description": "Numbness, disbelief, 'this can't be happening'"},
+        {"stage": "Anger", "stageAr": "الغضب", "description": "Frustration, blaming self or others, 'why did this happen?'"},
+        {"stage": "Bargaining", "stageAr": "المساومة", "description": "'What if...' thinking, guilt about past actions"},
+        {"stage": "Depression (grief)", "stageAr": "الحزن", "description": "Deep sadness, crying, social withdrawal — THIS IS NORMAL"},
+        {"stage": "Acceptance", "stageAr": "التقبّل", "description": "Finding a way to live with the loss — NOT 'getting over it'"}
+      ],
+      "cultural_note": "Egyptian mourning traditions (azza / عزاء): 3-day formal mourning period, 40-day gathering (arbaieen / الأربعين), annual commemoration. These structured rituals provide legitimate social frameworks for grief expression."
+    },
+    "phq9_criteria": {
+      "source": "Kroenke, K., Spitzer, R.L., & Williams, J.B. (2001). The PHQ-9: Validity of a Brief Depression Severity Measure. Journal of General Internal Medicine, 16(9), 606-613.",
+      "description": "PHQ-9 assesses 9 DSM depressive symptoms over 2 weeks (0-27 scale). For Major Depressive Disorder: 5+ symptoms nearly every day for 2+ weeks, causing significant impairment.",
+      "symptoms": [
+        "Little interest or pleasure in doing things (anhedonia)",
+        "Feeling down, depressed, or hopeless",
+        "Trouble falling or staying asleep, or sleeping too much",
+        "Feeling tired or having little energy",
+        "Poor appetite or overeating",
+        "Feeling bad about yourself — or that you are a failure",
+        "Trouble concentrating on things",
+        "Moving or speaking so slowly that other people notice (or being so fidgety/restless)",
+        "Thoughts that you would be better off dead, or of hurting yourself"
+      ]
+    },
+    "wakefield_first_controversy": {
+      "source": "Wakefield, J.C. & First, M.B. (2012). Placing symptoms in context: The role of contextual criteria in reducing false positives in Diagnostic and Statistical Manual of Mental Disorders diagnoses. Comprehensive Psychiatry, 53(2), 130-139.",
+      "summary": "Wakefield & First critiqued DSM-5's removal of the 'bereavement exclusion' (DSM-IV excluded MDD diagnosis if symptoms occurred within 2 months of bereavement). They argued this risks pathologizing normal grief. The DSM-5 response: grief and MDD can coexist, and the severity/duration/functional impairment criteria distinguish them. This remains an active scholarly debate.",
+      "clinical_implication": "Context matters: The same symptoms (sadness, sleep disruption, poor appetite) can be normal grief OR clinical depression depending on: severity, duration, functional impact, presence of psychomotor retardation, worthlessness/guilt beyond the loss, anhedonia for all activities (not just loss-related), and suicidal ideation."
+    }
+  },
+  "exercises": [
+    {
+      "id": "gvd-01",
+      "type": "differentiation-scenario",
+      "scenario": "Heba (38, Cairo) lost her father 5 weeks ago. She cries frequently when she sees his photos, is eating less than usual, has difficulty sleeping, and finds it hard to concentrate at work. She still enjoys her children's company and speaks positively about her father's life. On weekends she participates in family gatherings (azza tradition). She says: 'I miss Baba so much. I know I'll always miss him, but I'm getting through each day.'",
+      "scenarioAr": "هبة (38 عامًا، القاهرة) فقدت والدها منذ 5 أسابيع. تبكي كثيرًا عندما ترى صوره، وتأكل أقل من المعتاد، وتجد صعوبة في النوم، وتجد صعوبة في التركيز في العمل. لا تزال تستمتع بصحبة أطفالها وتتحدث بإيجابية عن حياة والدها. في عطل نهاية الأسبوع تشارك في تجمعات العائلة (تقليد العزاء). تقول: 'أفتقد بابا كثيرًا. أعلم أنني سأفتقده دائمًا، لكنني أتجاوز كل يوم.'",
+      "question": "Is Heba experiencing normal grief or clinical depression requiring treatment?",
+      "questionAr": "هل تعاني هبة من حزن طبيعي أم اكتئاب سريري يحتاج إلى علاج؟",
+      "answer": "normal_grief",
+      "explanation_en": "Normal grief. Key indicators: (1) Duration is 5 weeks — grief after bereavement is expected; (2) Symptoms are fluctuating (not 'nearly every day'); (3) She retains the ability to experience positive emotions — she enjoys her children (preserved capacity for pleasure = no full anhedonia); (4) She maintains social engagement (azza participation); (5) No signs of worthlessness, psychomotor retardation, or suicidal ideation; (6) Her narrative is oriented toward love and meaning, not hopelessness. Kübler-Ross: she is in a healthy grief process. PHQ-9: does not meet MDD threshold. This is normal, healthy mourning — culturally reinforced by Egyptian mourning traditions. Support needed: compassionate presence, not clinical intervention.",
+      "explanation_ar": "حزن طبيعي. المؤشرات الرئيسية: (1) المدة 5 أسابيع — الحزن بعد الفقد متوقع؛ (2) الأعراض متذبذبة (وليس 'كل يوم تقريبًا')؛ (3) تحتفظ بالقدرة على تجربة المشاعر الإيجابية — تستمتع بأطفالها (قدرة محفوظة على المتعة = لا انعدام متعة كامل)؛ (4) تحافظ على المشاركة الاجتماعية (المشاركة في العزاء)؛ (5) لا توجد علامات على الشعور بانعدام القيمة أو البطء النفسي الحركي أو الأفكار الانتحارية؛ (6) روايتها موجهة نحو الحب والمعنى وليس اليأس. هذا حزن صحي طبيعي معزز ثقافيًا بتقاليد الحداد المصرية.",
+      "key_differentiators": ["Fluctuating vs. constant symptoms", "Preserved positive affect", "Social engagement maintained", "Meaning-oriented narrative"]
+    },
+    {
+      "id": "gvd-02",
+      "type": "differentiation-scenario",
+      "scenario": "Samira (52, Alexandria) lost her husband 4 months ago. Since then: she has not left her apartment in 6 weeks, has stopped eating (lost 8 kg), cannot sleep without medication, says 'I am worthless without him — I was nothing before him and I am nothing now', refuses to see her grandchildren ('What's the point?'), and her daughter reports that Samira told her she 'doesn't want to be here anymore.' The symptoms are constant, every day.",
+      "scenarioAr": "سميرة (52 عامًا، الإسكندرية) فقدت زوجها منذ 4 أشهر. منذ ذلك الحين: لم تغادر شقتها منذ 6 أسابيع، وتوقفت عن الأكل (فقدت 8 كجم)، ولا تستطيع النوم بدون دواء، وتقول 'أنا لا قيمة لي بدونه — لم أكن شيئًا قبله ولست شيئًا الآن'، وترفض رؤية أحفادها ('ما الفائدة؟')، وأبلغت ابنتها أن سميرة أخبرتها أنها 'لا تريد أن تكون هنا بعد الآن.' الأعراض مستمرة كل يوم.",
+      "question": "Is Samira experiencing normal grief or clinical depression requiring immediate professional attention?",
+      "questionAr": "هل تعاني سميرة من حزن طبيعي أم اكتئاب سريري يحتاج إلى اهتمام مهني فوري؟",
+      "answer": "clinical_depression",
+      "urgency": "high",
+      "explanation_en": "Clinical depression requiring IMMEDIATE professional attention. Samira meets DSM-5 criteria for Major Depressive Episode: (1) 4 months duration — well beyond acute bereavement; (2) Complete social withdrawal for 6 weeks (severe functional impairment); (3) Significant weight loss (8 kg — clinically significant); (4) Sleep disorder requiring medication; (5) Worthlessness beyond the loss ('I was nothing before him' = global, not loss-specific); (6) Full anhedonia (refuses grandchildren, no pleasure in anything); (7) Passive suicidal ideation ('doesn't want to be here anymore') — RED FLAG requiring immediate action. Wakefield & First (2012) distinction: this is NOT normal grief — the worthlessness is not about the deceased, the anhedonia is global, and passive suicidal ideation is a DSM-5 criterion that marks clinical severity. Action needed: Contact 08008880700 immediately. Consider emergency evaluation.",
+      "explanation_ar": "اكتئاب سريري يحتاج إلى اهتمام مهني فوري. تستوفي سميرة معايير DSM-5 للنوبة الاكتئابية الشديدة: (1) مدة 4 أشهر — تتجاوز بكثير فترة الحداد الحاد؛ (2) انسحاب اجتماعي كامل لمدة 6 أسابيع (إعاقة وظيفية شديدة)؛ (3) فقدان وزن ملحوظ (8 كجم — مهم سريريًا)؛ (4) اضطراب نوم يستلزم دواءً؛ (5) الشعور بانعدام القيمة ما وراء الفقد ('لم أكن شيئًا قبله' = شامل وليس محددًا بالفقد)؛ (6) انعدام متعة كامل (ترفض الأحفاد)؛ (7) أفكار انتحارية سلبية ('لا تريد أن تكون هنا بعد الآن') — علامة تحذير حمراء تستدعي إجراءً فوريًا.",
+      "key_differentiators": ["Duration (4 months)", "Worthlessness beyond the loss", "Global anhedonia", "Passive suicidal ideation", "Complete social withdrawal"],
+      "required_action": "Immediate professional evaluation. Call 08008880700 or take to Behman Hospital Emergency, ENIDH, or nearest hospital ER."
+    },
+    {
+      "id": "gvd-03",
+      "type": "differentiation-scenario",
+      "scenario": "Youssef (24, Tanta) lost his close friend in a car accident 3 months ago. He experiences intense sadness, especially at places they used to go together. He has nightmares about the accident (vivid, recurring). He avoids driving. He feels guilty: 'If I had insisted we take a different route...' He can still work, eat, and socialize (though less). His grief intensifies on the anniversary of their friendship and religious occasions.",
+      "scenarioAr": "يوسف (24 عامًا، طنطا) فقد صديقه المقرب في حادث سيارة منذ 3 أشهر. يشعر بحزن شديد، خاصةً في الأماكن التي اعتادا ارتيادها معًا. لديه كوابيس عن الحادث (حية ومتكررة). يتجنب القيادة. يشعر بالذنب: 'لو كنت أصررت على أخذ طريق مختلف...' لا يزال قادرًا على العمل والأكل والتواصل الاجتماعي (وإن كان أقل). يتكثف حزنه في ذكرى صداقتهم والمناسبات الدينية.",
+      "question": "What is the most clinically accurate assessment of Youssef's presentation?",
+      "questionAr": "ما هو التقييم السريري الأدق لحالة يوسف؟",
+      "answer": "complicated_grief_with_ptsd_features",
+      "explanation_en": "Complex presentation: Complicated Grief (Prolonged Grief Disorder in DSM-5-TR) with PTSD features. This is neither straightforward normal grief nor classic MDD. Key clinical observations: (1) 3 months of intense grief with functional preservation suggests Prolonged Grief Disorder (PGD) spectrum — criteria: intense yearning, difficulty accepting the loss, bitterness, difficulty engaging in positive activities; (2) Vivid recurring nightmares about the accident + avoidance (driving) suggest trauma-related features (PTSD criterion B: re-experiencing; criterion C: avoidance); (3) Survivor's guilt ('if I had...') is a PTSD feature, not typical grief; (4) Grief intensifying on specific triggers is normal and does not indicate depression. This case illustrates the Wakefield & First (2012) argument: context matters enormously in distinguishing bereavement complications. Professional evaluation is warranted. Treatment: Trauma-Informed Grief Therapy or CBT-G (CBT for Grief).",
+      "explanation_ar": "عرض سريري معقد: حزن مُعقَّد (اضطراب الحزن المطوَّل في DSM-5-TR) مع سمات PTSD. هذا ليس حزنًا طبيعيًا مباشرًا ولا اكتئابًا كلاسيكيًا. الملاحظات السريرية الرئيسية: (1) 3 أشهر من الحزن الشديد مع الحفاظ على الوظيفية تشير إلى طيف اضطراب الحزن المطوَّل (PGD)؛ (2) الكوابيس الحية المتكررة عن الحادث + التجنب (القيادة) تشير إلى سمات صدمية (PTSD)؛ (3) ذنب الناجي ('لو كنت...') سمة PTSD وليس حزنًا نموذجيًا. يُبرز هذا الحالة حجة واكفيلد وفيرست (2012): السياق مهم للغاية في التمييز بين مضاعفات الحداد.",
+      "key_differentiators": ["Recurring nightmares about the traumatic event", "Avoidance of trauma reminders", "Survivor's guilt", "Preserved overall functioning — rules out MDD", "Grief + trauma features = complex grief requiring specialized treatment"]
+    },
+    {
+      "id": "gvd-04",
+      "type": "differentiation-scenario",
+      "scenario": "Layla (30, Cairo) lost her baby at 7 months of pregnancy 2 weeks ago. She is devastated, cries constantly, feels her body 'failed' her, is not eating well, and cannot imagine feeling normal again. She says: 'No one understands — they say 'you'll have another baby.' But this was MY baby, with a name and a nursery ready.' She is attending the Islamic rites (du'a, Quran recitation). Her husband is supportive.",
+      "scenarioAr": "ليلى (30 عامًا، القاهرة) فقدت طفلها في الشهر السابع من الحمل منذ أسبوعين. هي مدمرة، تبكي باستمرار، تشعر أن جسدها 'خذلها'، لا تأكل جيدًا، ولا تستطيع أن تتخيل الشعور بالطبيعية مجددًا. تقول: 'لا أحد يفهم — يقولون حتلاقي واحد تاني. لكن هذا كان طفلي، باسم وغرفة أطفال جاهزة.' تحضر الشعائر الإسلامية (الدعاء وتلاوة القرآن). زوجها داعم.",
+      "question": "How should Layla's grief be understood clinically, and what support is most appropriate?",
+      "questionAr": "كيف ينبغي فهم حزن ليلى سريريًا، وما هو الدعم الأنسب؟",
+      "answer": "normal_acute_grief_with_monitoring",
+      "explanation_en": "Normal acute grief from perinatal loss — 2 weeks is extremely recent. Key clinical notes: (1) Perinatal loss (stillbirth) is a profound grief — the loss of a named, anticipated child is equivalent in severity to any major bereavement; (2) The statement 'can't imagine feeling normal again' is expected acute grief, not a clinical indicator at 2 weeks; (3) Her sense that 'no one understands' reflects the underacknowledged nature of perinatal grief in Egyptian culture (where miscarriage/stillbirth is often minimized with 'you'll have another'); (4) Physical symptoms (not eating, crying) are appropriate acute grief responses; (5) She IS engaging in meaning-making (Islamic rites, named baby, decorated nursery); (6) Social support is present (husband). IMPORTANT: Perinatal loss carries elevated risk for Prolonged Grief Disorder AND postpartum depression (due to hormonal factors). Monitor at 3 months for PHQ-9 score ≥10. Support: Cairo's 'Hayat' support group for pregnancy loss.",
+      "explanation_ar": "حزن حاد طبيعي من فقدان ما حول الولادة — أسبوعان فترة قريبة جدًا. ملاحظات سريرية رئيسية: (1) فقدان ما حول الولادة (مولود ميت) هو حزن عميق — فقدان طفل مسمى ومنتظر مكافئ في الشدة لأي خسارة كبرى؛ (2) تصريح 'لا أستطيع أن أتخيل الشعور بالطبيعية مجددًا' حزن حاد متوقع وليس مؤشرًا سريريًا بعد أسبوعين؛ (3) شعورها بأن 'لا أحد يفهم' يعكس الطبيعة المهمَّشة لحزن ما حول الولادة في الثقافة المصرية. مهم: يحمل فقدان ما حول الولادة خطرًا مرتفعًا لاضطراب الحزن المطوَّل واكتئاب ما بعد الولادة. المراقبة بعد 3 أشهر مطلوبة.",
+      "key_differentiators": ["2 weeks = acute grief (not yet clinical threshold)", "Preserved meaning-making", "Present social support", "Culture-specific minimization ('you'll have another') is harmful but grief is normal", "Monitor at 3 months for depression screening"],
+      "cultural_note": "In Egyptian culture, stillbirth grief is often minimized. Clinically, stillbirth grief is equivalent in severity to other major bereavements and deserves the same validation and professional attention."
+    },
+    {
+      "id": "gvd-05",
+      "type": "differentiation-scenario",
+      "scenario": "Ibrahim (68, retired, Giza) has been grieving his wife's death for 18 months. In the last 6 months, his family notices he no longer leaves the house, has stopped praying (which was very important to him), refuses food ('What's the point of eating?'), and told his son last week: 'Rabbena yiftahha aleya' (ربنا يفتحها عليا) — a common Egyptian euphemism for wishing for death. He says: 'She was my whole life. I don't want a life without her.'",
+      "scenarioAr": "إبراهيم (68 عامًا، متقاعد، الجيزة) يحزن على وفاة زوجته منذ 18 شهرًا. في الأشهر الستة الماضية، لاحظت عائلته أنه لم يعد يغادر المنزل، وتوقف عن الصلاة (التي كانت مهمة جدًا له)، ويرفض الطعام ('ما الفائدة من الأكل؟')، وأخبر ابنه الأسبوع الماضي: 'ربنا يفتحها عليا' — وهو تعبير مصري شائع للتعبير عن الرغبة في الموت. يقول: 'كانت حياتي كلها. لا أريد حياة بدونها.'",
+      "question": "What is the clinical and cultural assessment of Ibrahim's presentation?",
+      "questionAr": "ما هو التقييم السريري والثقافي لحالة إبراهيم؟",
+      "answer": "clinical_depression_with_passive_suicidal_ideation",
+      "urgency": "high",
+      "explanation_en": "Clinical Depression with passive suicidal ideation. This requires urgent professional attention. Analysis: (1) 18 months grief duration significantly exceeds typical bereavement trajectory — most people show functional improvement by 6-12 months even without treatment; (2) STOPPING RELIGIOUS PRACTICE is a culturally significant red flag — for a devout Egyptian Muslim man, abandoning salah represents a profound loss of life-meaning and protective factor; (3) Food refusal ('what's the point') = anhedonia extending to basic survival; (4) CRITICAL: 'Rabbena yiftahha aleya' (ربنا يفتحها عليا) IS passive suicidal ideation — commonly used in Egyptian culture to express the wish to die, distinct from active planning but clinically significant; (5) Complete social withdrawal (18 months); (6) Age (68) + male + bereavement + social isolation = elevated suicide risk profile. DSM-5: meets MDD criteria. PHQ-9: items 1, 2, 3, 4, 5, 7, 9 likely positive. ACTION: Immediate family intervention + emergency evaluation. 08008880700 or ENIDH.",
+      "explanation_ar": "اكتئاب سريري مع أفكار انتحارية سلبية. يتطلب هذا اهتمامًا مهنيًا عاجلًا. التحليل: (1) مدة حزن 18 شهرًا تتجاوز بشكل كبير مسار الحداد النموذجي؛ (2) التوقف عن الصلاة علامة حمراء ذات أهمية ثقافية — بالنسبة لرجل مصري مسلم متدين، ترك الصلاة يمثل خسارة عميقة لمعنى الحياة وعامل وقاية؛ (3) رفض الطعام ('ما الفائدة') = انعدام متعة يمتد إلى البقاء الأساسي؛ (4) حرج: 'ربنا يفتحها عليا' هي أفكار انتحارية سلبية — شائعة الاستخدام في الثقافة المصرية للتعبير عن الرغبة في الموت، تختلف عن التخطيط النشط لكنها ذات أهمية سريرية. الإجراء: تدخل عائلي فوري + تقييم طارئ.",
+      "key_differentiators": ["18 months = exceeds normal grief timeline", "Abandonment of previously central religious practice", "Passive suicidal ideation (Egyptian cultural expression)", "Food refusal beyond normal grief", "Male + elderly + bereaved + isolated = elevated risk"],
+      "cultural_note": "The Egyptian expression 'Rabbena yiftahha aleya' (ربنا يفتحها عليا — 'May God open [the door of heaven] for me') is a culturally specific way of expressing the wish to die. It is passive suicidal ideation and must be taken seriously. Clinicians in Egypt are trained to recognize such cultural idioms of distress.",
+      "required_action": "Immediate family intervention. Contact 08008880700. Consider urgent psychiatric evaluation at ENIDH or Behman Hospital."
+    }
+  ]
+}

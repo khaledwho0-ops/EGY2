@@ -1,0 +1,145 @@
+{
+  "id": "day85_twelve_red_flags",
+  "phase": 2,
+  "week": 13,
+  "day": 85,
+  "title": "The 12 Red Flags — Spot It Before Anyone Has to Be Harmed",
+  "titleAr": "الـ12 علامة خطر — اكتشفها قبل ما حد يتأذّى",
+  "description": "Twelve signals that a health claim is dangerous. Three or more = caution. Five or more = almost certainly harmful. The Taybat case is our anchor.",
+  "descriptionAr": "اتناشر إشارة إن ادعاء صحي خطر. ثلاثة أو أكثر = خُد بالك. خمسة أو أكثر = مؤذٍ على الأرجح. حالة «الطيبات» هي مرجعنا.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A system promises to cure cancer, type-1 and type-2 diabetes, lupus, IBS, and hypertension — all with one diet. Which red flag is this, and why is it decisive?",
+      "claimAr": "نظام بيوعد بشفاء السرطان والسكري بنوعيه والذئبة والقولون والضغط — كله بحمية واحدة. أنهي علامة خطر دي، وليه حاسمة؟",
+      "options": [
+        "No real flag — maybe it works",
+        "'It cures everything' — biologically impossible; cancer alone is 200+ distinct diseases",
+        "Just good marketing",
+        "A sign of strong evidence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Red Flag #1: a single cure for mechanistically unrelated diseases is biologically impossible. Cancer alone is 200+ diseases with different drivers. A system that claims to cure all of them has left biology for magical thinking — no matter how confident the presenter sounds.",
+      "explanationAr": "علامة الخطر رقم 1: علاج واحد لأمراض غير مترابطة آلياً مستحيل بيولوجياً. السرطان وحده +200 مرض بأسباب مختلفة. النظام اللي بيدّعي شفاءهم كلهم ساب البيولوجيا للتفكير السحري — مهما بدا المقدّم واثق.",
+      "sources": [
+        "EAL-case-001:redflag-1",
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "When asked by the Medical Syndicate for just three documented cases with before/after lab results, the originator answered: \"The truth of what I present will be proven in the future.\"",
+      "claimAr": "لمّا طلبت نقابة الأطباء ثلاث حالات موثّقة بتحاليل قبل/بعد بس، كان الردّ: «صحة ما أقدّمه ستثبت مستقبلاً».",
+      "options": [
+        "Reasonable scientific caution",
+        "Red Flag #2 / #4: no evidence now + an unfalsifiable promise — a cheque that never clears"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does 'it will be proven later' fail as a scientific response — and what is the minimum someone would need to produce to make the request reasonable?",
+        "promptAr": "بكلماتك: ليه «هتثبت بعدين» بتفشل كرد علمي — وإيه الحد الأدنى اللي كان لازم حد يقدّمه علشان الطلب يبقى معقول؟"
+      },
+      "explanation": "'It'll be proven later' is not a scientific position — it's a blank cheque. Three documented cases is the most minimal request imaginable; producing none while promising future proof is Red Flag #2 (no evidence) feeding Red Flag #4 (unfalsifiability). A genuine scientific response would produce even one documented case or name one published study. Notice the empathy point: the followers weren't foolish — this move is genuinely persuasive when you already want the cure to be real.",
+      "explanationAr": "«هتثبت بعدين» مش موقف علمي — ده شيك على بياض. ثلاث حالات موثّقة أقل طلب ممكن؛ وعدم تقديم أي حاجة مع وعد بدليل مستقبلي هو علامة الخطر 2 (لا دليل) بتغذّي علامة الخطر 4 (عدم القابلية للتفنيد). الرد العلمي الحقيقي كان هيقدّم حتى حالة واحدة موثّقة أو يسمّي دراسة منشورة واحدة. ولاحظ نقطة التعاطف: الأتباع ماكانوش أغبياء — الحركة دي مقنعة فعلاً لمّا تكون أصلاً عايز العلاج يكون حقيقي.",
+      "sources": [
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: because the pharmaceutical industry really does have documented ethics problems, the 'Big Pharma is hiding the cure' framing is a good reason to trust an alternative diet.",
+      "claimAr": "صح ولا غلط: بما إن صناعة الدواء عندها فعلاً مشاكل أخلاقية موثّقة، فإطار «شركات الدوا بتخفي العلاج» سبب كويس إننا نثق في حمية بديلة.",
+      "correctAnswer": false,
+      "myth_en": "Pharma has problems, so the alternative must be right.",
+      "myth_ar": "صناعة الدوا فيها مشاكل، يبقى البديل لازم يكون صح.",
+      "explanation": "False — this is Red Flag #5, and it's a clever exploit. Real pharmaceutical-industry problems exist, but 'established medicine has flaws → therefore this diet works' is a non-sequitur: the flaw of one thing is not evidence for another. The conspiracy frame's real job is to pre-discredit every critic so no evidence can ever reach you. How confident were you before reading this? If you leaned 'true' — notice the appeal of the argument: it feels like justified skepticism, but it is misdirected.",
+      "explanationAr": "غلط — دي علامة الخطر رقم 5، وهي استغلال ذكي. مشاكل صناعة الدواء حقيقية، لكن «الطب فيه عيوب ← يبقى الحمية دي شغّالة» استنتاج فاسد: عيب حاجة مش دليل على حاجة تانية. الوظيفة الحقيقية لإطار المؤامرة إنه يُسقِط كل ناقد مقدماً علشان ما يوصلش لك أي دليل أبداً. كنت متأكد قد إيه قبل ما تقرأ؟ لو ملت لـ«صح» — لاحظ جاذبية الحُجّة: بتحسّ إنها تشكيك مبرّر، لكنها في الاتجاه الغلط.",
+      "sources": [
+        "EAL-case-001:conspiracy-1"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "\"Inside the community, asking 'but where is the evidence?' is treated as betrayal or enemy behaviour — because anyone who truly cares about health would trust the people who recovered, not cold science.\"",
+      "claimAr": "«جوّه المجتمع، سؤال 'بس فين الدليل؟' بيتعامَل معاه كخيانة أو سلوك عدوّ — لأن أي حد بيهتمّ فعلاً بالصحة كان هيثق في الناس اللي شفيوا، مش العلم البارد.»",
+      "parts": [
+        { "text": "Asking for evidence inside the community is treated as betrayal.", "textAr": "طلب الدليل جوّه المجتمع بيتعامَل معاه كخيانة.", "role": "premise" },
+        { "text": "Anyone who truly cares about health would trust recovered people, not cold science.", "textAr": "أي حد بيهتمّ فعلاً بالصحة كان هيثق في الناس اللي شفيوا، مش العلم البارد.", "role": "assumption" },
+        { "text": "Therefore, questioning the system is a sign you don't care about health.", "textAr": "يبقى، التشكيك في النظام علامة إنك ما بتهتمش بالصحة.", "role": "conclusion" },
+        { "text": "People who recovered through the system all confirm it works.", "textAr": "الناس اللي شفيوا عن طريق النظام كلهم بيأكّدوا إنه شغّال.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption — that caring about health means trusting testimonials over evidence — is doing all the work. Once named, it collapses: caring about health is exactly why we need rigorous evidence. The conclusion ('questioning = not caring') is a manipulative reframe that punishes asking questions. The last part (recovered people confirming it works) is irrelevant to whether the argument structure is valid. This is Red Flag #11: suppression of questions, now laid bare.",
+      "explanationAr": "الافتراض الخفي — إن الاهتمام بالصحة معناه الثقة في الشهادات فوق الأدلة — هو اللي بيشيل كل الشغل. أول ما تسمّيه، ينهار: الاهتمام بالصحة هو بالظبط ليه نحتاج أدلة صارمة. الخلاصة («التشكيك = عدم الاهتمام») إعادة إطار تلاعبية بتعاقب على طرح الأسئلة. الجزء الأخير (الناس اللي شفيوا بيأكّدوه) غير ذي صلة بمدى صحة بنية الحُجّة. دي علامة الخطر رقم 11: قمع الأسئلة، مكشوفة الآن.",
+      "sources": [
+        "EAL-case-001:redflag-11"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A seller markets a 'detox' that 'cleanses toxins and leaves minimal waste.' It feels plausible — we know some foods are healthier, so a 'cleanse' fits that intuition.",
+      "claimAr": "بائع بيسوّق «ديتوكس» «بينضّف السموم ويسيب فضلات أقل». بيحسّ معقول — احنا عارفين إن في أكل أصحّ، يبقى «التنظيف» بيتناسب مع الحدس ده.",
+      "prompt": "Before accepting this: what specific questions would DISPROVE a 'detox' claim? What would the claim have to produce to be taken seriously?",
+      "promptAr": "قبل ما تقبل ده: أنهي أسئلة محدّدة ستُكذِّب ادعاء «الديتوكس»؟ وإيه اللي الادعاء لازم يقدّمه علشان يُؤخذ بجدية؟",
+      "modelPoints": [
+        "Name the specific toxin: what molecule, by its chemical name, is being removed?",
+        "Name the removal pathway: through which organ or process — and is there a published study showing this food activates that pathway?",
+        "Name the assay: what test measures the toxin level before and after, and what are the numbers?",
+        "Without those three answers, 'detox' is a marketing word, not a biomedical claim. The liver and kidneys are the body's actual filtration system — they don't need a product's help."
+      ],
+      "modelPointsAr": [
+        "سمّي السُمّ المحدّد: أنهي جزيء، باسمه الكيميائي، بيتشالة؟",
+        "سمّي مسار الإزالة: من خلال أنهي عضو أو عملية — وفي دراسة منشورة تُظهر إن الأكل ده بيفعّل المسار ده؟",
+        "سمّي التحليل: أنهي فحص بيقيس مستوى السُمّ قبل وبعد، وإيه الأرقام؟",
+        "من غير الإجابات الثلاثة دي، «الديتوكس» كلمة تسويقية مش ادعاء طبي. الكبد والكلى هما جهاز التصفية الحقيقي في الجسم — ما يحتاجوش مساعدة منتج."
+      ],
+      "sources": [
+        "EAL-case-001:redflag-10",
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 6,
+      "mechanic": "inoculate",
+      "technique": "pre-emptive critic discrediting",
+      "techniqueAr": "إسقاط الناقد مقدماً",
+      "task": "Feel the trick from inside: write a short post promoting a harmless product (say, a new brand of herbal tea). Build in ONE sentence that, if anyone criticises the tea, makes them look like a shill for Big Tea Corporations — before any criticism even arrives.",
+      "taskAr": "حسّ بالحركة من جوّه: اكتب بوست قصير بيروّج لمنتج غير ضار (مثلاً، ماركة جديدة من الشاي العشبي). ابني فيه جملة واحدة تخلّي أي حد ينتقد الشاي يبان إنه عميل لشركات الشاي الكبرى — قبل ما أي نقد يوصل أصلاً.",
+      "tells": [
+        "The technique pre-labels critics with a motive before they even speak — so their arguments can be dismissed without engaging them.",
+        "It exploits real grievances (big corporations do have problems) to redirect scrutiny away from the claim.",
+        "Nothing the critic says can reach the audience: they are pre-framed as the enemy.",
+        "The technique makes the system unfalsifiable: every challenge becomes proof of a conspiracy against it.",
+        "It feels like protecting the community; it actually removes the community's ability to think critically."
+      ],
+      "tellsAr": [
+        "الحركة بتصنّف الناقدين بدافع مسبق قبل ما يتكلّموا — علشان حُجَجهم تُرفض من غير التفاعل معاها.",
+        "بتستغلّ شكاوى حقيقية (الشركات الكبيرة فيها مشاكل فعلاً) لتحويل التدقيق بعيداً عن الادعاء.",
+        "مفيش حاجة يقولها الناقد تقدر توصل للجمهور: هو متأطَّر مسبقاً كعدوّ.",
+        "الحركة بتخلّي النظام غير قابل للتفنيد: كل تحدي يبقى دليل على مؤامرة ضده.",
+        "بتحسّ إنها حماية للمجتمع؛ هي في الحقيقة بتسلب المجتمع قدرته على التفكير النقدي."
+      ],
+      "explanation": "Pre-emptive critic discrediting is one of the most effective unfalsifiability moves. It is Red Flag #5 applied as a weapon. Building it yourself — even for a silly tea example — fixes the structural pattern in memory. When you encounter it next time, the recognition is immediate: 'they're pre-discrediting critics so nothing can challenge the claim.' That recognition is the inoculation.",
+      "explanationAr": "إسقاط الناقد مقدماً هو أحد أكثر حركات جعل الادعاء غير قابل للتفنيد فعالية. هو علامة الخطر رقم 5 مطبَّقة كسلاح. إنك تبنيه بنفسك — حتى لمثال شاي سخيف — بيثبّت النمط الهيكلي في الذاكرة. لمّا تقابله المرة الجاية، الإدراك فوري: «بيُسقِطوا الناقدين مقدماً علشان ما يعترضش على الادعاء حاجة.» الإدراك ده هو التطعيم.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "EAL-case-001:conspiracy-1"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    }
+  ]
+}

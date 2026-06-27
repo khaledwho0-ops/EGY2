@@ -1,0 +1,98 @@
+{
+  "id": "confidence_intervals",
+  "phase": 2,
+  "week": 12,
+  "day": 18,
+  "title": "Confidence Intervals",
+  "titleAr": "فترات الثقة",
+  "description": "Master the correct frequentist interpretation of confidence intervals and identify common misconceptions that even researchers make.",
+  "descriptionAr": "إتقان التفسير التكراري الصحيح لفترات الثقة وتحديد المفاهيم الخاطئة الشائعة التي يقع فيها حتى الباحثون.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Confidence Interval Interpretation",
+    "nameAr": "تفسير فترة الثقة",
+    "definition": "A 95% confidence interval means that if we repeated the study infinitely many times, 95% of the calculated intervals would contain the true population parameter. It does NOT mean there is a 95% probability that the true value lies within this specific interval (that is a Bayesian credible interval). Hoekstra et al. (2014) found that 97% of researchers endorsed at least one misconception about CIs.",
+    "definitionAr": "فترة الثقة 95% تعني أنه لو كررنا الدراسة مرات لا نهائية، 95% من الفترات المحسوبة ستحتوي على المعلمة الحقيقية. لا تعني أن هناك احتمال 95% أن القيمة الحقيقية تقع ضمن هذه الفترة المحددة.",
+    "realWorldExample": "Hoekstra et al. (2014) surveyed 442 researchers and found 97% endorsed at least one of six common CI misconceptions. Even statistics instructors frequently misinterpret CIs as probability statements about parameters.",
+    "detectionMethod": "Check whether interpretations refer to the long-run procedure (correct) or to the specific interval's probability of containing the parameter (incorrect). Distinguish frequentist CIs from Bayesian credible intervals."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A study reports a mean difference of 5.2 points with a 95% CI of [2.1, 8.3]. Which interpretation is CORRECT?",
+      "promptAr": "دراسة تبلغ عن فرق متوسط 5.2 نقطة مع فترة ثقة 95% [2.1، 8.3]. أي تفسير صحيح؟",
+      "options": [
+        "If we repeated this study many times, 95% of the resulting CIs would contain the true population mean difference",
+        "There is a 95% probability that the true mean difference is between 2.1 and 8.3",
+        "95% of the sample data falls between 2.1 and 8.3",
+        "We are 95% confident the next study will find a result between 2.1 and 8.3"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The correct frequentist interpretation refers to the long-run performance of the procedure, not the probability of this specific interval containing the parameter. The true parameter is a fixed (unknown) value — it either is or is not in this interval. Option B is the most common misconception, which actually describes a Bayesian credible interval with a flat prior.",
+      "explanationAr": "التفسير التكراري الصحيح يشير إلى أداء الإجراء على المدى الطويل، وليس احتمال احتواء هذه الفترة المحددة على المعلمة. المعلمة الحقيقية قيمة ثابتة — إما موجودة أو غير موجودة في هذه الفترة."
+    },
+    {
+      "id": 2,
+      "type": "identify",
+      "prompt": "Two studies examine the same drug. Study A: mean effect = 3.0, 95% CI [0.5, 5.5]. Study B: mean effect = 3.0, 95% CI [−1.0, 7.0]. Both have the same point estimate. What explains the difference in CI width?",
+      "promptAr": "دراستان تفحصان نفس الدواء. الدراسة أ: تأثير متوسط = 3.0، فترة ثقة [0.5، 5.5]. الدراسة ب: تأثير متوسط = 3.0، فترة ثقة [−1.0، 7.0]. كلتاهما بنفس التقدير النقطي. ما الذي يفسر الفرق في عرض فترة الثقة؟",
+      "options": [
+        "Study B likely had a smaller sample size, greater variability, or both — producing less precision",
+        "Study A's drug was more effective",
+        "Study B's result is wrong because the CI includes zero",
+        "Study B used a different statistical test"
+      ],
+      "correctAnswer": 0,
+      "explanation": "CI width = 2 × z × SE, where SE = SD/√n. A wider CI indicates less precision, which results from smaller sample sizes, greater variability, or both. Study A's CI width is 5.0 while Study B's is 8.0. Notably, Study A's CI excludes zero (significant at α=0.05) while Study B's includes zero (non-significant), despite identical point estimates — demonstrating how precision affects significance.",
+      "explanationAr": "عرض فترة الثقة يعتمد على الخطأ المعياري = الانحراف المعياري/√ن. فترة أعرض تشير إلى دقة أقل بسبب عينة أصغر أو تباين أكبر."
+    },
+    {
+      "id": 3,
+      "type": "scenario",
+      "prompt": "A researcher says: 'Our 95% CI for the treatment effect is [2, 8], so there is a 95% chance the true effect is between 2 and 8, and a 0% chance it is outside this range.' How many misconceptions does this statement contain?",
+      "promptAr": "باحث يقول: 'فترة ثقتنا 95% لتأثير العلاج هي [2، 8]، لذا هناك احتمال 95% أن التأثير الحقيقي بين 2 و 8، واحتمال 0% أنه خارج هذا النطاق.' كم مفهوم خاطئ في هذه العبارة؟",
+      "options": [
+        "One misconception",
+        "Two misconceptions",
+        "Three misconceptions",
+        "The statement is entirely correct"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Two misconceptions: (1) Assigning a 95% probability to this specific interval containing the true value (the Bayesian interpretation fallacy). In frequentist statistics, the true parameter is fixed — the probability is either 0 or 1. (2) Claiming 0% chance the true value is outside the CI. Even with a correctly constructed 95% CI, 5% of such intervals will NOT contain the true value. The true value could be outside this particular interval.",
+      "explanationAr": "مفهومان خاطئان: (1) تعيين احتمال 95% لهذه الفترة المحددة. (2) الادعاء بأن احتمال 0% أن القيمة الحقيقية خارج الفترة — 5% من هذه الفترات لن تحتوي على القيمة الحقيقية."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "A clinical trial reports: 'Treatment reduces hospital stay by 2.3 days (95% CI: 1.8 to 2.8 days, p<0.001).' Another trial reports: 'Treatment reduces hospital stay by 2.3 days (95% CI: −0.5 to 5.1 days, p=0.11).' What do the CIs reveal that the point estimates alone do not?",
+      "promptAr": "تجربة سريرية: 'العلاج يقلل الإقامة بمقدار 2.3 يوم (فترة ثقة: 1.8-2.8، p<0.001).' تجربة أخرى: 'العلاج يقلل الإقامة بمقدار 2.3 يوم (فترة ثقة: −0.5 إلى 5.1، p=0.11).' ماذا تكشف فترات الثقة؟",
+      "options": [
+        "The p-values are more informative than the CIs",
+        "Both trials show the treatment works equally well",
+        "The CIs reveal dramatically different precision: Trial 1 provides a narrow, informative estimate while Trial 2 is compatible with both harm and substantial benefit",
+        "Trial 2 proves the treatment is ineffective"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Both trials have identical point estimates (2.3 days) but the CIs tell very different stories. Trial 1's narrow CI [1.8, 2.8] provides strong evidence for a clinically meaningful reduction. Trial 2's wide CI [−0.5, 5.1] is consistent with the treatment causing slight harm (−0.5 days) or providing large benefit (5.1 days) — it is uninformative. This illustrates why CIs are more informative than p-values alone (as advocated by the APA Task Force, Wilkinson, 1999).",
+      "explanationAr": "كلتا التجربتين بنفس التقدير النقطي لكن فترات الثقة تحكي قصصاً مختلفة جداً. فترة التجربة الأولى الضيقة توفر دليلاً قوياً، بينما فترة الثانية الواسعة متسقة مع الضرر والفائدة معاً."
+    },
+    {
+      "id": 5,
+      "type": "identify",
+      "prompt": "A researcher reports non-overlapping 95% CIs between two groups: Group A [10, 14] and Group B [15, 19]. Another researcher reports overlapping CIs: Group C [10, 16] and Group D [14, 20]. What can we conclude about statistical significance of the group differences?",
+      "promptAr": "باحث يبلغ عن فترات ثقة 95% غير متداخلة: المجموعة أ [10، 14] والمجموعة ب [15، 19]. باحث آخر يبلغ عن فترات متداخلة: المجموعة ج [10، 16] والمجموعة د [14، 20]. ماذا يمكننا استنتاجه؟",
+      "options": [
+        "Non-overlapping CIs: non-significant. Overlapping CIs: significant",
+        "Both cases indicate significant differences",
+        "CI overlap tells us nothing about significance",
+        "Non-overlapping CIs: significant difference. Overlapping CIs: NOT necessarily non-significant"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Non-overlapping CIs for individual means guarantee a significant difference (the rule is conservative). However, overlapping CIs do NOT necessarily mean the difference is non-significant. Goldstein & Healy (1995) showed that CIs for individual means can overlap by up to 29% and the difference can still be significant at α=0.05. The proper test requires computing a CI for the difference between means, not comparing individual CIs.",
+      "explanationAr": "فترات الثقة غير المتداخلة تضمن فرقاً معنوياً. لكن الفترات المتداخلة لا تعني بالضرورة أن الفرق غير معنوي. أظهر غولدشتاين وهيلي أن الفترات يمكن أن تتداخل بنسبة تصل إلى 29% ويظل الفرق معنوياً."
+    }
+  ]
+}

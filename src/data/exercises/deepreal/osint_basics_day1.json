@@ -1,0 +1,290 @@
+{
+  "id": "osint_basics_day1",
+  "phase": 1,
+  "week": 6,
+  "day": 1,
+  "title": "OSINT Basics: Open Source Intelligence for Verification",
+  "titleAr": "أساسيات OSINT: الاستخبارات مفتوحة المصدر للتحقق",
+  "description": "Learn 5 fundamental OSINT techniques for verifying digital content: reverse image search, EXIF metadata, geolocation verification, archive research, and WHOIS domain lookup",
+  "descriptionAr": "تعلّم 5 تقنيات OSINT أساسية للتحقق من المحتوى الرقمي: البحث العكسي عن الصور وبيانات EXIF التعريفية والتحقق من الموقع الجغرافي وبحث الأرشيف وبحث تسجيل نطاق WHOIS",
+  "type": "investigation",
+  "difficulty": 3,
+  "estimatedMinutes": 25,
+  "bloomLevel": "apply",
+  "source": "Bellingcat OSINT Manual (2021); First Draft News Verification Guide; Tow Center for Digital Journalism",
+  "com_b_target": "Capability/Psychological",
+  "com_b_mechanism": "Building concrete OSINT skills increases self-efficacy for content verification and reduces reliance on surface-level trust cues",
+  "exercises": [
+    {
+      "id": 1,
+      "type": "investigation-scenario",
+      "title": "Reverse Image Search",
+      "titleAr": "البحث العكسي عن الصور",
+      "scenario": "A viral post on Facebook claims: 'This photo shows Egyptian protesters in Tahrir Square yesterday.' The image shows a large crowd at night with flares. The post has been shared 85,000 times in 6 hours. Your colleague says you should share it to raise awareness. What do you do first?",
+      "scenarioAr": "منشور فيروسي على فيسبوك يدّعي: 'تُظهر هذه الصورة محتجين مصريين في ميدان التحرير أمس.' تُظهر الصورة حشدًا كبيرًا ليلًا مع مشاعل. تمت مشاركة المنشور 85,000 مرة خلال 6 ساعات. يقول زميلك إنك يجب أن تشاركه لرفع الوعي. ماذا تفعل أولًا؟",
+      "tools": [
+        {
+          "name": "Google Images Reverse Search",
+          "url": "images.google.com",
+          "method": "Drag image OR right-click > 'Search image with Google' OR paste image URL",
+          "free": true
+        },
+        {
+          "name": "TinEye",
+          "url": "tineye.com",
+          "method": "Upload image or paste URL — shows ALL known online occurrences with dates",
+          "free": true,
+          "strength": "Best for finding earliest known appearance"
+        },
+        {
+          "name": "Yandex Images",
+          "url": "yandex.com/images",
+          "method": "Upload image — particularly strong for faces and non-Western contexts",
+          "free": true,
+          "strength": "Often finds matches Google misses for Arabic/Egyptian content"
+        }
+      ],
+      "steps": [
+        "Save or copy the image URL",
+        "Open TinEye.com and paste the URL or upload the image",
+        "Check the OLDEST known appearance — if it predates the claimed event, the claim is false",
+        "Run the same search on Google Images to cross-check",
+        "Run on Yandex Images for additional matches (especially useful for Arabic-language content)",
+        "Check the original context where the image first appeared — does it match the current claim?"
+      ],
+      "stepsAr": [
+        "احفظ عنوان URL للصورة أو انسخها",
+        "افتح TinEye.com والصق عنوان URL أو حمّل الصورة",
+        "تحقق من أقدم ظهور معروف — إذا سبق الحدث المدعوم، فالادعاء كاذب",
+        "أجرِ نفس البحث على صور Google للتبادل",
+        "أجرِ البحث على صور Yandex للتطابقات الإضافية (مفيد بشكل خاص للمحتوى باللغة العربية)",
+        "تحقق من السياق الأصلي الذي ظهرت فيه الصورة لأول مرة — هل يتطابق مع الادعاء الحالي؟"
+      ],
+      "correctFinding": "A reverse image search reveals the photo was first posted in 2019, showing protests in Lebanon (Beirut), not Egypt. The 85,000 shares are spreading misinformation — the image is real but the context is fabricated.",
+      "correctFindingAr": "يكشف البحث العكسي عن الصور أن الصورة نُشرت لأول مرة عام 2019، وتُظهر احتجاجات في لبنان (بيروت) وليس مصر. المشاركات الـ85,000 تنشر معلومات مضللة — الصورة حقيقية لكن السياق مختلق.",
+      "explanation": "Context manipulation (using a real image with a false caption) is one of the most common forms of visual misinformation. The image itself is NOT fake — the lie is in the claimed context. Reverse image search is the fastest way to find the original context. TinEye shows the EARLIEST known appearance, which is critical for establishing timeline.",
+      "explanationAr": "التلاعب بالسياق (استخدام صورة حقيقية مع تعليق كاذب) هو أحد أكثر أشكال المعلومات المضللة البصرية شيوعًا. الصورة نفسها ليست مزورة — الكذب في السياق المدعوم. البحث العكسي عن الصور هو أسرع طريقة لإيجاد السياق الأصلي.",
+      "redFlags": [
+        "High share count does NOT indicate truth",
+        "Viral speed (6 hours) suggests emotional manipulation, not news verification",
+        "No original source cited",
+        "Vague timing ('yesterday') without specific date"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "investigation-scenario",
+      "title": "EXIF Metadata Analysis",
+      "titleAr": "تحليل بيانات EXIF التعريفية",
+      "scenario": "A news website publishes an article claiming: 'Exclusive photo taken during yesterday's [event] in Cairo, 2026.' You download the image file. How do you verify whether this photo was actually taken recently and in Cairo?",
+      "scenarioAr": "موقع إخباري ينشر مقالًا يدّعي: 'صورة حصرية التقطت خلال [حدث] أمس في القاهرة، 2026.' تقوم بتنزيل ملف الصورة. كيف تتحقق من أن هذه الصورة التُقطت فعلًا مؤخرًا وفي القاهرة؟",
+      "tools": [
+        {
+          "name": "Jeffrey's Exif Viewer (Exifdata.com)",
+          "url": "exifdata.com",
+          "method": "Upload image or paste URL — shows ALL embedded metadata",
+          "free": true,
+          "note": "Jeffrey Friedl's original tool moved to exifdata.com"
+        },
+        {
+          "name": "ExifTool (command line)",
+          "url": "exiftool.org",
+          "method": "exiftool filename.jpg — shows complete metadata",
+          "free": true,
+          "strength": "Most comprehensive, used by forensics professionals"
+        },
+        {
+          "name": "Foto Forensics",
+          "url": "fotoforensics.com",
+          "method": "Upload image — provides ELA (Error Level Analysis) and metadata",
+          "free": true
+        }
+      ],
+      "steps": [
+        "Download the image file to your computer",
+        "Go to exifdata.com and upload the image",
+        "Look for these key EXIF fields: DateTimeOriginal, GPS Latitude/Longitude, Software, Make/Model",
+        "DateTimeOriginal: Does it match the claimed date?",
+        "GPS coordinates: Do they match Cairo? (Cairo: ~30.0°N, 31.2°E) — Enter in Google Maps to verify location",
+        "Software field: Does it say 'Adobe Photoshop', 'Midjourney', 'Stable Diffusion', or 'DALL-E'? = Manipulated or AI-generated",
+        "Missing EXIF entirely: Could indicate the metadata was stripped — a potential red flag"
+      ],
+      "stepsAr": [
+        "قم بتنزيل ملف الصورة على جهاز الكمبيوتر الخاص بك",
+        "اذهب إلى exifdata.com وقم بتحميل الصورة",
+        "ابحث عن حقول EXIF الرئيسية: DateTimeOriginal وGPS Latitude/Longitude وSoftware وMake/Model",
+        "DateTimeOriginal: هل يتطابق مع التاريخ المدعوم؟",
+        "إحداثيات GPS: هل تتطابق مع القاهرة؟ (القاهرة: ~30.0°N, 31.2°E) — أدخلها في خرائط Google للتحقق من الموقع",
+        "حقل Software: هل يقول 'Adobe Photoshop' أو 'Midjourney' أو 'Stable Diffusion'؟ = مُعدَّل أو مولَّد بالذكاء الاصطناعي",
+        "EXIF مفقودة بالكامل: قد يشير إلى أن البيانات الوصفية تم تجريدها — علامة تحذير محتملة"
+      ],
+      "correctFinding": "The EXIF data shows DateTimeOriginal: 2019:11:15 14:32:01, GPS coordinates pointing to Amman, Jordan (31.9°N, 35.9°E), and Software: Adobe Photoshop 2020. This proves the photo is 6 years old, was taken in Jordan (not Cairo), and was post-processed in Photoshop.",
+      "correctFindingAr": "تُظهر بيانات EXIF: DateTimeOriginal: 2019:11:15 14:32:01، وإحداثيات GPS تشير إلى عمّان، الأردن (31.9°N, 35.9°E)، والبرنامج: Adobe Photoshop 2020. هذا يثبت أن الصورة عمرها 6 سنوات، والتُقطت في الأردن (وليس القاهرة)، وتمت معالجتها في Photoshop.",
+      "explanation": "EXIF metadata is embedded in most digital photos by cameras and smartphones. It can include precise GPS coordinates, timestamps accurate to the second, camera model, and software used for editing. However, metadata can be stripped or manipulated — its presence supports authenticity but its absence doesn't definitively prove manipulation. Always combine EXIF with reverse image search.",
+      "explanationAr": "بيانات EXIF التعريفية مُضمَّنة في معظم الصور الرقمية بواسطة الكاميرات والهواتف الذكية. يمكن أن تتضمن إحداثيات GPS دقيقة وطوابع زمنية دقيقة بالثانية وطراز الكاميرا والبرنامج المستخدم للتحرير. ومع ذلك، يمكن تجريد البيانات الوصفية أو التلاعب بها.",
+      "redFlags": [
+        "DateTimeOriginal doesn't match claimed date",
+        "GPS coordinates don't match claimed location",
+        "Software field shows Photoshop, GIMP, or AI tool names",
+        "EXIF completely absent on images claiming to be from a smartphone"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "investigation-scenario",
+      "title": "Geolocation Verification",
+      "titleAr": "التحقق من الموقع الجغرافي",
+      "scenario": "A video is shared claiming to show an Egyptian army operation 'somewhere near the border.' The video shows military vehicles on a road with distinctive terrain. You want to verify if this is actually Egypt. What visual clues do you look for and how do you verify location?",
+      "scenarioAr": "يتم تداول مقطع فيديو يدّعي أنه يُظهر عملية للجيش المصري 'في مكان ما بالقرب من الحدود.' يُظهر الفيديو مركبات عسكرية على طريق بتضاريس مميزة. تريد التحقق مما إذا كانت هذه فعلًا مصر. ما العلامات البصرية التي تبحث عنها وكيف تتحقق من الموقع؟",
+      "tools": [
+        {
+          "name": "Google Earth Pro",
+          "url": "earth.google.com",
+          "method": "Free desktop app — 3D terrain, historical imagery, street view integration",
+          "free": true
+        },
+        {
+          "name": "Google Maps Street View",
+          "url": "maps.google.com",
+          "method": "Street-level imagery — compare road markings, signs, building styles",
+          "free": true
+        },
+        {
+          "name": "Sentinel Hub EO Browser",
+          "url": "apps.sentinel-hub.com/eo-browser",
+          "method": "Free satellite imagery — identify terrain and infrastructure",
+          "free": true
+        },
+        {
+          "name": "SunCalc",
+          "url": "suncalc.org",
+          "method": "Determine sun position from shadow angles — verify time and hemisphere",
+          "free": true
+        }
+      ],
+      "steps": [
+        "Pause the video on frames showing background terrain, road signs, license plates, infrastructure",
+        "Note: Egypt-specific visual markers: Arabic script, Egyptian license plate format (white/black, Arabic numerals), Egyptian army vehicle markings",
+        "Note terrain type: Egypt is 94% desert — distinctive flat sandy terrain, limestone formations, or Nile Delta green",
+        "Look for unique landmarks: utility poles style, road barriers, building architecture",
+        "Take a screenshot of distinctive terrain and search on Google Earth for similar terrain matching the claimed region",
+        "Use SunCalc to verify: if the video has shadows, the shadow angle reveals the latitude and time of day — does it match Egypt?",
+        "Check if the road markings, signage, or license plates match Egyptian standards"
+      ],
+      "stepsAr": [
+        "أوقف الفيديو مؤقتًا على إطارات تُظهر تضاريس الخلفية ولافتات الطرق واللوحات ومحطات البنية التحتية",
+        "لاحظ: العلامات المرئية الخاصة بمصر: النص العربي، وتنسيق لوحة الترخيص المصرية (أبيض/أسود، أرقام عربية)، وعلامات المركبات العسكرية المصرية",
+        "لاحظ نوع التضاريس: مصر 94% صحراء — تضاريس رملية مسطحة مميزة أو تكوينات حجر جيري أو اخضرار دلتا النيل",
+        "ابحث عن معالم بارزة فريدة: أسلوب الأعمدة الكهربائية وحواجز الطرق وهندسة المباني",
+        "التقط لقطة شاشة للتضاريس المميزة وابحث على Google Earth عن تضاريس مماثلة تطابق المنطقة المدعومة",
+        "استخدم SunCalc للتحقق: إذا كان الفيديو يحتوي على ظلال، فإن زاوية الظل تكشف عن خط العرض ووقت اليوم — هل يطابق مصر؟"
+      ],
+      "correctFinding": "Visual analysis reveals: license plates have a format matching Libya (not Egypt), the road signs use Arabic numerals in a style distinct from Egypt's, the terrain and vegetation pattern matches coastal Libya. The military vehicles have insignia inconsistent with known Egyptian army markings. Conclusion: the video is likely from Libya, not Egypt.",
+      "correctFindingAr": "يكشف التحليل البصري: اللوحات لها تنسيق يطابق ليبيا (وليس مصر)، ولافتات الطرق تستخدم أرقامًا عربية بأسلوب مختلف عن مصر، والتضاريس ونمط الغطاء النباتي يطابق ساحل ليبيا. المركبات العسكرية تحمل شعارات غير متسقة مع العلامات المعروفة للجيش المصري.",
+      "explanation": "Geolocation (geolocating) is the process of determining the exact location where a photo or video was taken using visual clues. It is a key OSINT skill used by Bellingcat and other verification organizations. Visual clues include: terrain, vegetation, road infrastructure, signage, license plates, architecture, and sun/shadow position.",
+      "explanationAr": "تحديد الموقع الجغرافي (Geolocating) هو عملية تحديد الموقع الدقيق الذي التُقطت فيه صورة أو مقطع فيديو باستخدام الأدلة البصرية. إنها مهارة OSINT رئيسية تستخدمها Bellingcat ومنظمات التحقق الأخرى."
+    },
+    {
+      "id": 4,
+      "type": "investigation-scenario",
+      "title": "Wayback Machine: Researching Deleted or Historical Content",
+      "titleAr": "آلة الوايباك: البحث في المحتوى المحذوف أو التاريخي",
+      "scenario": "A political account claims: 'This news website never published the original article — they're hiding it!' Another account claims: 'This organization's website used to say something completely different last year.' How do you check what a website contained in the past?",
+      "scenarioAr": "يدّعي حساب سياسي: 'هذا الموقع الإخباري لم ينشر المقال الأصلي أبدًا — إنهم يخفونه!' ويدّعي حساب آخر: 'كان موقع هذه المنظمة يقول شيئًا مختلفًا تمامًا العام الماضي.' كيف تتحقق مما احتوى عليه الموقع في الماضي؟",
+      "tools": [
+        {
+          "name": "Wayback Machine (Internet Archive)",
+          "url": "web.archive.org",
+          "method": "Enter URL → see calendar of captured snapshots → browse historical versions",
+          "free": true,
+          "note": "Contains 800+ billion web pages archived since 1996"
+        },
+        {
+          "name": "CachedView",
+          "url": "cachedview.nl",
+          "method": "Check Google's cached version of a page (recent, 1-2 weeks)",
+          "free": true
+        },
+        {
+          "name": "Archive.today (archive.ph)",
+          "url": "archive.ph",
+          "method": "Save a snapshot of any current page, or search for saved pages",
+          "free": true
+        }
+      ],
+      "steps": [
+        "Go to web.archive.org",
+        "Enter the claimed URL in the search bar",
+        "The calendar view shows blue dots on dates when the page was captured",
+        "Click on a date to see what the page looked like at that time",
+        "Compare the historical version with the current version — note any differences",
+        "If a claim says 'article was deleted': check if the URL existed in Wayback Machine on the claimed date",
+        "Archive.ph is useful when you need to quickly save a current page as evidence before it disappears"
+      ],
+      "stepsAr": [
+        "اذهب إلى web.archive.org",
+        "أدخل عنوان URL المدعوم في شريط البحث",
+        "يُظهر عرض التقويم نقاطًا زرقاء في التواريخ التي تم فيها التقاط الصفحة",
+        "انقر على تاريخ لترى كيف كانت الصفحة تبدو في ذلك الوقت",
+        "قارن الإصدار التاريخي مع الإصدار الحالي — لاحظ أي اختلافات",
+        "إذا كان الادعاء يقول 'تم حذف المقال': تحقق مما إذا كان عنوان URL موجودًا في Wayback Machine في التاريخ المدعوم",
+        "Archive.ph مفيد عندما تحتاج إلى حفظ صفحة حالية بسرعة كدليل قبل أن تختفي"
+      ],
+      "correctFinding": "Wayback Machine search reveals: (1) The article WAS published — 12 snapshots exist from the original publication date. (2) The organization's website homepage from last year showed a different mission statement than the current one — confirming it did change. Both claims can now be verified with archived evidence rather than relying on memory or screenshots (which can be edited).",
+      "correctFindingAr": "كشف بحث Wayback Machine: (1) المقال نُشر فعلًا — توجد 12 لقطة من تاريخ النشر الأصلي. (2) أظهرت الصفحة الرئيسية لموقع المنظمة من العام الماضي بيان مهمة مختلفًا عن الحالي — مما يؤكد أنه تغيّر. يمكن الآن التحقق من كلا الادعاءين بأدلة مؤرشفة بدلًا من الاعتماد على الذاكرة أو لقطات الشاشة (التي يمكن تحريرها).",
+      "explanation": "The Wayback Machine is one of the most powerful fact-checking tools available. It captures and stores billions of web pages going back to 1996. It can prove what a website said at a specific time, verify if content was deleted, and show how websites and organizations have changed their messaging over time. Crucially, it cannot be retroactively edited by the website owners.",
+      "explanationAr": "Wayback Machine هي واحدة من أقوى أدوات التحقق من الحقائق المتاحة. تلتقط وتخزن مليارات صفحات الويب التي ترجع إلى عام 1996. يمكنها إثبات ما قاله موقع ويب في وقت محدد والتحقق مما إذا تم حذف المحتوى."
+    },
+    {
+      "id": 5,
+      "type": "investigation-scenario",
+      "title": "WHOIS Domain Registration Lookup",
+      "titleAr": "بحث تسجيل النطاق WHOIS",
+      "scenario": "A news website called 'egypt-breaking-news-today.com' is being widely shared on WhatsApp groups, claiming to publish 'exclusive government leaks.' The site looks professional with a logo. How do you investigate the credibility of this domain?",
+      "scenarioAr": "يتم تداول موقع إخباري يسمى 'egypt-breaking-news-today.com' على نطاق واسع في مجموعات WhatsApp، ويدّعي نشر 'تسريبات حكومية حصرية.' يبدو الموقع احترافيًا مع شعار. كيف تتحقق من مصداقية هذا النطاق؟",
+      "tools": [
+        {
+          "name": "WHOIS Lookup (ICANN)",
+          "url": "lookup.icann.org",
+          "method": "Enter domain name → see registration date, registrar, country, and sometimes owner",
+          "free": true
+        },
+        {
+          "name": "Whois.domaintools.com",
+          "url": "whois.domaintools.com",
+          "method": "More detailed WHOIS with historical data and related domains",
+          "free": true,
+          "note": "Some advanced features require account"
+        },
+        {
+          "name": "MediaBias/FactCheck (MBFC)",
+          "url": "mediabiasfactcheck.com",
+          "method": "Search for the domain — check its bias rating and factual reporting score",
+          "free": true
+        }
+      ],
+      "steps": [
+        "Go to lookup.icann.org",
+        "Enter the full domain name (e.g., egypt-breaking-news-today.com)",
+        "Check 'Creation Date': When was this domain registered? (A 2-week-old domain claiming 'years of reporting' = red flag)",
+        "Check 'Registrar': Legitimate news organizations typically use established registrars; anonymous privacy-protected registrations are suspicious",
+        "Check 'Registrant Country': Does it match the claimed location?",
+        "Search the domain on MediaBias/FactCheck to see if it has been previously investigated",
+        "Check if the 'About Us' page has real journalist names — search those names to verify they exist"
+      ],
+      "stepsAr": [
+        "اذهب إلى lookup.icann.org",
+        "أدخل اسم النطاق الكامل (مثل egypt-breaking-news-today.com)",
+        "تحقق من 'تاريخ الإنشاء': متى تم تسجيل هذا النطاق؟ (نطاق عمره أسبوعان يدّعي 'سنوات من التقارير' = علامة حمراء)",
+        "تحقق من 'المسجِّل': عادةً ما تستخدم المنظمات الإخبارية الشرعية مسجلين راسخين",
+        "تحقق من 'دولة المسجِّل': هل تطابق الموقع المدعوم؟",
+        "ابحث عن النطاق على MediaBias/FactCheck لترى إذا كان قد تم التحقيق فيه سابقًا",
+        "تحقق مما إذا كانت صفحة 'من نحن' تحتوي على أسماء صحفيين حقيقيين — ابحث عن هذه الأسماء للتحقق من وجودهم"
+      ],
+      "correctFinding": "WHOIS reveals: Domain registered 3 weeks ago, registered through a privacy protection service (owner hidden), registered in an Eastern European country despite claiming to be Egyptian. No records in MediaBias/FactCheck. The 'About Us' page names do not appear in any credible journalism database. This is a brand-new, anonymous website with no credibility — likely a disinformation site created for a specific influence operation.",
+      "correctFindingAr": "يكشف WHOIS: النطاق مسجَّل منذ 3 أسابيع، مسجَّل عبر خدمة حماية الخصوصية (المالك مخفي)، مسجَّل في دولة أوروبية شرقية على الرغم من ادعائه أنه مصري. لا سجلات في MediaBias/FactCheck. أسماء صفحة 'من نحن' لا تظهر في أي قاعدة بيانات صحفية موثوقة. هذا موقع ويب جديد ومجهول بدون مصداقية — على الأرجح موقع معلومات مضللة تم إنشاؤه لعملية تأثير محددة.",
+      "explanation": "WHOIS is a public database containing registration information for every domain on the internet. Key red flags: domain registered within weeks/months of claiming major stories, privacy-protected ownership (legitimate news organizations are typically transparent), country mismatch, and lack of any digital footprint for claimed staff.",
+      "explanationAr": "WHOIS هي قاعدة بيانات عامة تحتوي على معلومات تسجيل كل نطاق على الإنترنت. العلامات الحمراء الرئيسية: النطاق المسجَّل خلال أسابيع/أشهر من ادعاء قصص رئيسية، والملكية المحمية بخصوصية، وعدم تطابق البلد، وغياب أي بصمة رقمية للموظفين المدّعين."
+    }
+  ]
+}

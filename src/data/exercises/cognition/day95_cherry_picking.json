@@ -1,0 +1,128 @@
+{
+  "id": "day95_cherry_picking",
+  "phase": 2,
+  "week": 14,
+  "day": 95,
+  "title": "Cherry-Picking — Counting the Hits, Hiding the Misses",
+  "titleAr": "انتقاء الكرز — عدّ الإصابات، إخفاء الإخفاقات",
+  "description": "Show only the wins and the whole world looks like proof. The cure for cherry-picking is one question: where are the cases that didn't work?",
+  "descriptionAr": "ورّي النجاحات بس والدنيا كلها هتبان دليل. علاج انتقاء الكرز سؤال واحد: فين الحالات اللي ما نفعتش؟",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4719048/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A page posts 30 glowing testimonials from people the diet 'cured,' and not one story of anyone who got worse. What is missing that you must mentally add back?",
+      "claimAr": "صفحة بتنشر 30 شهادة مشرقة من ناس الحمية «شفتهم»، ولا قصّة واحدة عن حد اتعب أكتر. إيه الناقص اللي لازم ترجّعه ذهنياً؟",
+      "options": [
+        "Nothing — 30 stories is strong proof",
+        "The denominator: how many people TRIED it in total, including everyone it failed or harmed",
+        "More testimonials",
+        "The seller's phone number"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Thirty success stories tell you nothing without the denominator — how many people tried it in total. If 30 improved out of 30, that's interesting; if 30 improved out of 30,000 (with harms among the rest), that's a tragedy disguised as proof. Cherry-picking works by showing only the numerator. Always ask: out of how many? And: where are the people it didn't help?",
+      "explanationAr": "30 قصّة نجاح ما بتقول لك حاجة من غير المقام — كام واحد جرّبها إجمالاً. لو 30 اتحسّنوا من 30، ده مثير للاهتمام؛ لو 30 اتحسّنوا من 30 ألف (والباقي فيهم أضرار)، دي مأساة متنكّرة في صورة دليل. انتقاء الكرز بيشتغل بإظهار البسط بس. اسأل دايماً: من كام؟ وفين الناس اللي ما نفعتهمش؟",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4719048/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "With «نظام الطيبات», the people who improved posted videos online; the people who ended up in intensive care or died could not post. Before seeing the explanation — how confident are you that the visible feed of success stories accurately reflects what actually happened to most followers?",
+      "claimAr": "في «نظام الطيبات»، اللي اتحسّنوا نشروا فيديوهات أونلاين؛ واللي دخلوا العناية المركزة أو ماتوا ما قدروش ينشروا. قبل ما تشوف التفسير — قد إيه أنت واثق إن خلاصة النجاحات دي بتعكس بدقة اللي حصل لمعظم الأتباع؟",
+      "options": [
+        "Very confident — the feed shows what happened",
+        "Not confident at all — the feed is structurally biased toward survivors"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is survivorship bias, cherry-picking's automatic cousin. The improved can speak; the harmed are silent — in the ICU, grieving, or gone. So the visible record becomes an unbroken wall of success, and the absence of failure stories feels like proof of safety when it's really proof of who got silenced. Calibration check: if you felt very confident, notice that the design of social media itself — not just the poster's intent — generates this illusion.",
+      "explanationAr": "ده انحياز الناجين، ابن عم انتقاء الكرز التلقائي. اللي اتحسّن يقدر يتكلّم؛ واللي اتأذّى صامت — في العناية، أو حزين، أو راح. فالسجلّ الظاهر بيبقى حائط نجاح متصل، وغياب قصص الفشل بيبان دليل أمان وهو في الحقيقة دليل على مين اتسكّت. فحص المعايرة: لو حسّيت ثقة عالية، لاحظ إن تصميم السوشيال ميديا نفسه — مش بس قصد الناشر — بيولّد هذا الوهم.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "EAL-case-001:okaz-2026-05-10"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "True or false: if a prediction or remedy got it right several times, those hits are good evidence even if we don't know how many times it got it wrong.",
+      "claimAr": "صح ولا غلط: لو تنبّؤ أو علاج صحّ كذا مرّة، الإصابات دي دليل كويس حتى لو ما نعرفش غلط كام مرّة.",
+      "correctAnswer": false,
+      "selfExplain": {
+        "prompt": "In your own words: why does knowing ONLY the hits tell you almost nothing about whether a treatment actually works?",
+        "promptAr": "بكلماتك: ليه معرفة الإصابات بس ما بتقولكش تقريباً أي حاجة عن إذا كان العلاج شغّال فعلاً؟"
+      },
+      "explanation": "Hits mean nothing until you know the misses too. A 'psychic' who makes 100 vague predictions and reminds you only of the 3 that landed looks gifted — until you count the 97 failures. Same with a remedy: a handful of recoveries among unknown thousands of attempts can be pure chance and natural recovery. The honest measure is the full record — hits AND misses — never the highlight reel.",
+      "explanationAr": "الإصابات ما بتعنيش حاجة لحد ما تعرف الإخفاقات كمان. «بصّار» بيعمل 100 تنبّؤ مبهم وبيفكّرك بالـ3 اللي ظبطوا بس بيبان موهوب — لحد ما تعدّ الـ97 اللي فشلوا. ونفس الحاجة مع العلاج: حفنة شفاءات وسط آلاف محاولات مجهولة ممكن تكون صدفة محضة وشفاء طبيعي. المقياس الأمين هو السجلّ الكامل — الإصابات والإخفاقات — مش مقطع أحسن اللقطات.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4719048/",
+        "https://rationalwiki.org/wiki/Texas_sharpshooter_fallacy"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "inoculate",
+      "technique": "cherry-picking testimonials",
+      "techniqueAr": "انتقاء الشهادات",
+      "task": "You are now the marketer. Write a short promotional post for a harmless product (like a branded water bottle) using ONLY the technique of cherry-picked testimonials — find your three best fans, quote only them, and make it feel like universal proof. Keep it harmless.",
+      "taskAr": "إنت دلوقتي المسوّق. اكتب بوست ترويجي قصير لمنتج غير ضار (زي قارورة مياه ماركة) باستخدام شهادات منتقاة بس — لاقي أحسن ثلاثة معجبين، اقتبس منهم بس، وخلّيه يحسّس إنه دليل شامل.",
+      "tells": [
+        "Only winners are quoted — no failures, no neutral experiences, no 'it didn't work for me'.",
+        "The sample size is hidden or implied to be larger than it is ('everyone is saying...').",
+        "Vivid emotional language makes three stories feel like thousands.",
+        "There is no way to verify the testimonials or find the people who had bad experiences.",
+        "The absence of negative evidence is presented as positive evidence."
+      ],
+      "tellsAr": [
+        "الكسبانين بس بيتقتبس منهم — لا فشل، ولا تجارب محايدة، ولا «ما نفعتيش معايا».",
+        "حجم العيّنة متخفي أو بيبان أكبر مما هو («الكل بيقول...»).",
+        "اللغة العاطفية الحيّة بتخلّي ثلاثة قصص تحسّس بالآلاف.",
+        "مفيش طريقة تتحقق من الشهادات أو تلاقي الناس اللي جربوا واتأذّوا.",
+        "غياب الدليل السلبي بيتقدّم كدليل إيجابي."
+      ],
+      "explanation": "Writing the technique from the inside reveals the mechanics: you chose who to quote, you buried the rest, you let the emotional vividness do the statistical work. Now when you see a testimonial wall, you immediately know which questions to ask: How many total? Who can't be heard? What was the attrition?",
+      "explanationAr": "كتابة الحركة من جوّها بتكشف الميكانيكا: إنت اخترت مين تقتبس، وطمرت الباقي، وخلّيت الحيوية العاطفية تعمل الشغل الإحصائي. دلوقتي لمّا تشوف حائط شهادات، فوراً بتعرف الأسئلة اللي تسألها: كام واحد إجمالاً؟ مين ما يقدرش يتسمع؟ وكانت نسبة التسرّب إيه؟",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4719048/"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A seller analyses thousands of his clients afterward, finds the few who happened to recover, and presents only those as 'the results.' He genuinely believes he has found proof.",
+      "claimAr": "بائع بيحلّل آلاف عملائه بعد كده، بيلاقي القلّة اللي صدف إنهم شفيوا، وبيقدّمهم بس كـ«النتائج». وهو فعلاً مقتنع إنه لاقى دليل.",
+      "prompt": "What would have to be true for this analysis to actually constitute evidence? What would disprove his interpretation?",
+      "promptAr": "إيه اللي لازم يكون صح عشان التحليل ده يكوّن دليل فعلاً؟ وإيه اللي يكذّب تفسيره؟",
+      "modelPoints": [
+        "For this to be evidence, he'd need a pre-specified group (decided before seeing outcomes), not one found by looking for successes after the fact.",
+        "A comparable group who did NOT use his product and had the same recovery rate would disprove his claim that the product caused the recovery.",
+        "Natural recovery — diseases often resolve without treatment — must be ruled out.",
+        "The 'Texas sharpshooter' error: drawing the bullseye after the shots have landed is not aim."
+      ],
+      "modelPointsAr": [
+        "عشان يكون دليل، محتاج مجموعة محدَّدة مقدّماً (قبل ما يشوف النتايج)، مش مجموعة اتلاقت باتباع النجاحات بعد الواقعة.",
+        "مجموعة مقارنة ما استخدمتش منتجه وكان لها نفس معدل الشفاء كانت هتكذّب ادعاءه إن المنتج سبّب الشفاء.",
+        "الشفاء الطبيعي — الأمراض كتير بتتحسّن من غير علاج — لازم يتاستبعد.",
+        "خطأ «قنّاص تكساس»: رسم الهدف بعد ما الرصاص وقع مش تصويب."
+      ],
+      "explanation": "Considering what would disprove the claim reveals that the seller's method cannot distinguish 'my product worked' from 'these people would have recovered anyway.' Real evidence requires pre-specification and a control — both absent here.",
+      "explanationAr": "التفكير في اللي يكذّب الادعاء بيكشف إن طريقة البائع ما تقدرش تميّز بين «منتجي نجح» و«الناس دول كانوا هيتحسّنوا على كل حال». الدليل الحقيقي بيحتاج تحديداً مسبقاً وضابطاً — والاتنين غايبين هنا.",
+      "sources": [
+        "https://rationalwiki.org/wiki/Texas_sharpshooter_fallacy",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4719048/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    }
+  ]
+}

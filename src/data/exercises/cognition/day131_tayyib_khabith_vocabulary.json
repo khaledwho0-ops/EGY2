@@ -1,0 +1,123 @@
+{
+  "id": "day131_tayyib_khabith_vocabulary",
+  "phase": 3,
+  "week": 19,
+  "day": 131,
+  "title": "«Tayyib» and «Khabith»: Quranic Words, Not Nutrition Categories",
+  "titleAr": "«طيّب» و«خبيث»: كلمات قرآنية مش تصنيفات تغذية",
+  "description": "Understanding what these Quranic words actually mean — and what they cannot legitimately mean — is the key to seeing why the vocabulary trick worked, and why it fails.",
+  "descriptionAr": "فهم ما تعنيه هذه الكلمات القرآنية فعلاً — وما لا يمكنها أن تعنيه بشرعية — هو مفتاح رؤية سبب نجاح حيلة المفردات، وسبب فشلها.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://quran.com/7/157",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "In the Quran (7:157 and related contexts), «الطيبات» refers to:",
+      "claimAr": "في القرآن (7:157 وسياقات ذات صلة)، «الطيبات» تشير إلى:",
+      "options": [
+        "A specific list of nutritionally superior foods",
+        "Things that are wholesome, lawful, and good — a broad moral and legal category covering what God has permitted; it is NOT a nutritional classification system",
+        "Only organic or unprocessed foods",
+        "Any food that tastes pleasant"
+      ],
+      "correctAnswer": 1,
+      "explanation": "In Quranic usage, «الطيبات» (tayyibat) means things that are good, wholesome, and permitted — it is a category of divine permission and moral quality, not a nutritional rating. Similarly, «الخبائث» (khaba'ith) refers to what is impure or forbidden — not to a food's effect on a specific biochemical pathway. Importing these words into a diet system to classify eggs, milk, or chicken is a category error: applying a legal/moral term as if it were a clinical-nutrition measurement.",
+      "explanationAr": "في الاستخدام القرآني، «الطيبات» تعني الأشياء الطيبة والصالحة والمسموح بها — هي فئة إذن إلهي وجودة أخلاقية، لا نظام تصنيف غذائي. وبالمثل، «الخبائث» تشير إلى ما هو نجس أو محرّم — لا إلى تأثير طعام على مسار كيميائي حيوي محدّد. استيراد هذه الكلمات إلى نظام حمية لتصنيف البيض واللبن والدجاج هو خطأ في الفئات: تطبيق مصطلح قانوني/أخلاقي كأنه قياس تغذية سريرية.",
+      "sources": [
+        "https://quran.com/7/157",
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: calling a food «خبيث» (foul/impure) in the Quranic sense means it is nutritionally toxic.",
+      "claimAr": "صح ولا غلط: وصف طعام بـ«خبيث» بالمعنى القرآني يعني أنه سام غذائياً.",
+      "correctAnswer": false,
+      "myth_en": "Quranic 'impure' = nutritionally toxic.",
+      "myth_ar": "«الخبيث» قرآنياً = سام غذائياً.",
+      "explanation": "False. In classical Quranic Arabic, «خبيث» refers to moral impurity, forbidden status, or spiritual harm — not to a food's effect on, say, blood glucose or kidney function. Nutrition science measures biochemical effects using empirical methods (clinical trials, metabolomics, controlled feeding studies). The two frameworks use different tools and answer different questions. Blending them without evidence is how people were persuaded to stop medically necessary foods.",
+      "explanationAr": "غلط. في العربية القرآنية الكلاسيكية، «خبيث» يشير إلى النجاسة الأخلاقية أو الوضع المحرَّم أو الأذى الروحي — لا إلى تأثير طعام على، مثلاً، مستوى السكر في الدم أو وظائف الكلى. علم التغذية يقيس التأثيرات الكيميائية الحيوية باستخدام أساليب تجريبية (تجارب سريرية، ميتابولوميكس، دراسات تغذية محكومة). الإطاران يستخدمان أدوات مختلفة ويجيبان على أسئلة مختلفة. المزج بينهما بلا دليل هو كيف أُقنع الناس بالتوقف عن أطعمة ضرورية طبياً.",
+      "sources": [
+        "https://quran.com/7/157",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163457/"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A system brands chicken as «خبيث». You know chicken is a permitted (halal) food in Islam. Al-Mā'idah 5:87 says: 'O you who believe, do not prohibit the good things which Allah has made lawful to you.' How does this verse directly refute the food label?",
+      "claimAr": "نظام بيصنّف الفراخ كـ«خبيثة». إنت عارف إن الفراخ طعام حلال في الإسلام. آية المائدة 5:87 بتقول: «يا أيها الذين آمنوا لا تحرّموا طيّبات ما أحلّ الله لكم». إزّاي الآية دي بتردّ مباشرة على التصنيف ده؟",
+      "options": [
+        "It is permitted to restrict halal foods if you have a health reason",
+        "The verse prohibits adding religious prohibitions to lawfully permitted foods without divine authority — branding halal chicken as forbidden violates this directly",
+        "The verse only applies to communal fasting rules",
+        "Personal health choices are outside Quranic guidance"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why is it a religious problem — not just a scientific one — to declare halal chicken a «خبيث» food?",
+        "promptAr": "بكلماتك: ليه إعلان الفراخ الحلال طعاماً «خبيثاً» مشكلة دينية — مش علمية بس؟"
+      },
+      "explanation": "Al-Mā'idah 5:87 is a direct prohibition on declaring lawful (halal) things forbidden. Chicken has no Quranic or authenticated hadith prohibition. Branding it «خبيث» and advising people to avoid it as a religious duty is precisely what this verse forbids. A medical professional advising against chicken for a specific patient's condition (e.g. a specific allergy) is different — that is a clinical recommendation, not a religious ruling.",
+      "explanationAr": "آية المائدة 5:87 نهي مباشر عن إعلان الحلال حراماً. الدجاج لا يوجد نهي قرآني أو حديثي صحيح بشأنه. وصفه بـ«الخبيث» وإرشاد الناس لتجنّبه كواجب ديني هو بالضبط ما تنهى عنه هذه الآية. ممارس طبي ينصح بعدم تناول الدجاج لحالة مريض بعينه (مثل حساسية محدّدة) أمر مختلف — هذه توصية سريرية لا حكم ديني.",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://www.hsph.harvard.edu/nutritionsource/protein/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'The Quran uses the word «الطيبات» to describe good things. This diet uses «الطيبات» in its name. Therefore, this diet has Quranic endorsement — and questioning it means questioning God.'",
+      "claimAr": "فكّك الحُجّة دي: «القرآن بيستخدم كلمة «الطيبات» لوصف الأشياء الطيّبة. هذا النظام الغذائي بيستخدم «الطيبات» في اسمه. إذن النظام عنده تأييد قرآني — والتشكيك فيه معناه التشكيك في الله.»",
+      "parts": [
+        { "text": "This diet has Quranic endorsement.", "textAr": "هذا النظام عنده تأييد قرآني.", "role": "conclusion" },
+        { "text": "The Quran uses «الطيبات» to describe good things.", "textAr": "القرآن بيستخدم «الطيبات» لوصف الأشياء الطيّبة.", "role": "premise" },
+        { "text": "This diet uses «الطيبات» in its name.", "textAr": "النظام بيستخدم «الطيبات» في اسمه.", "role": "premise" },
+        { "text": "(Unstated) A product name taken from a religious text inherits the authority of that text.", "textAr": "(غير مذكور) اسم منتج مأخوذ من نص ديني يرث سلطة النص.", "role": "assumption" },
+        { "text": "Questioning this diet means questioning God.", "textAr": "التشكيك في النظام معناه التشكيك في الله.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION is the fatal flaw: a product name borrowed from scripture inherits no religious authority. Companies name products freely; the name is a marketing choice, not a ruling. The 'questioning God' line is IRRELEVANT — it is a shaming device designed to pre-empt dissent rather than address the evidence. Al-Naḥl 16:116 explicitly forbids using God's name to authorize personal rulings on what is permitted or forbidden.",
+      "explanationAr": "الافتراض الخفي هو العيب القاتل: اسم منتج مستعار من النص الديني لا يرث أي سلطة دينية. الشركات تُسمّي المنتجات بحرية؛ الاسم خيار تسويقي لا حكم. وجملة «التشكيك في الله» غير ذات صلة — هي أداة تعييب مصمّمة لسدّ باب الاعتراض لا لمعالجة الدليل. آية النحل 16:116 تنهى صراحة عن استخدام اسم الله لتفويض أحكام شخصية على الحلال والحرام.",
+      "sources": [
+        "https://quran.com/16/116",
+        "EAL-case-001:redflag-6"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A person hears a diet brand name is a Quranic word and immediately feels it must be trustworthy. The sacred name anchors all their later thinking about the diet.",
+      "claimAr": "شخص يعرف إن اسم علامة تجارية للحمية كلمة قرآنية فيحسّ فوراً أنها لازم تكون جديرة بالثقة. الاسم المقدّس بيأطّر كل تفكيره اللاحق عن النظام.",
+      "prompt": "What would DISPROVE the link between a sacred-sounding name and actual trustworthiness? What other explanations exist for why a brand might choose a Quranic name?",
+      "promptAr": "إيه اللي يكذّب الربط بين الاسم المقدّس الأسلوب والموثوقية الفعلية؟ وإيه التفسيرات التانية لليه علامة تجارية تختار اسماً قرآنياً؟",
+      "modelPoints": [
+        "A name is a marketing choice, not a quality-control system — companies choose names to trigger trust, not to prove efficacy.",
+        "Al-Naḥl 16:116 forbids using God's name to issue personal rulings on permissibility; a sacred name can itself be a violation.",
+        "The corrective question is always: 'What is the evidence for this system's specific claims — separate from the name?'",
+        "History has many harmful products with benign or pious-sounding names; name and substance are separate domains."
+      ],
+      "modelPointsAr": [
+        "الاسم خيار تسويقي لا نظام ضبط جودة — الشركات تختار الأسماء لتثير الثقة، مش لتثبت الفاعلية.",
+        "النحل 16:116 تنهى عن استخدام اسم الله لإصدار أحكام شخصية على الحِلّ؛ والاسم المقدّس نفسه قد يكون مخالفة.",
+        "السؤال التصحيحي دايماً: «إيه الدليل على ادعاءات النظام المحدّدة — بمعزل عن الاسم؟»",
+        "التاريخ فيه منتجات ضارة كثيرة بأسماء طيّبة أو تقيّة؛ الاسم والجوهر مجالان منفصلان."
+      ],
+      "sources": [
+        "https://quran.com/16/116",
+        "EAL-case-001:redflag-6",
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    }
+  ]
+}

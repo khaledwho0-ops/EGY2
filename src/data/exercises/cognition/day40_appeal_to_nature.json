@@ -1,0 +1,133 @@
+{
+  "id": "day40_appeal_to_nature",
+  "phase": 1,
+  "week": 6,
+  "day": 40,
+  "title": "Appeal to Nature — 'Natural' Is Not a Safety Label",
+  "titleAr": "مغالطة الطبيعة — «طبيعي» مش علامة أمان",
+  "description": "Calling something 'natural' feels reassuring — but it tells you nothing about safety or effectiveness. Today you practice catching this move before it costs someone their health.",
+  "descriptionAr": "تسمية حاجة بـ«طبيعي» بتدّي إحساس بالأمان — لكنها ما بتقولكش حاجة عن السلامة أو الفعّالية. النهاردة بتتدرّب على اكتشاف الحركة دي قبل ما تكلّف حد صحّته.",
+  "type": "logic",
+  "difficulty": 2,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Followers of the viral Taybat diet were told that insulin is 'artificial' and harmful, while the diet is 'natural' and healing. Insulin is in fact a hormone produced by every healthy human pancreas. What fallacy is operating here?",
+      "claimAr": "أتباع نظام الطيبات الشائع قيلهم إن الأنسولين «صناعي» وضار، بينما الحمية «طبيعية» وشافية. الأنسولين في الواقع هرمون بينتجه كل بنكرياس بشري سليم. أنهي مغالطة شغّالة هنا؟",
+      "options": [
+        "No fallacy — natural products are always safer",
+        "Appeal to nature: 'natural' and 'artificial' are being used as moral labels rather than scientific descriptions; insulin is a natural human molecule whether produced by the body or by medical synthesis",
+        "A reasonable preference for whole-food treatments",
+        "A valid critique of pharmaceutical manufacturing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is appeal to nature combined with a false framing of what 'natural' means. Insulin is one of the most natural substances in human biology — it is a protein hormone your body makes. Medically synthesised insulin is biologically identical. The move reclassified it as 'artificial' to trigger fear, while simultaneously branding the diet as 'natural' to trigger trust. Neither label is doing any scientific work — both are emotional levers.",
+      "explanationAr": "دي مغالطة الطبيعة مع تأطير كاذب لمعنى «طبيعي». الأنسولين واحد من أكثر المواد طبيعية في بيولوجيا الإنسان — هو هرمون بروتيني جسمك بيصنعه. الأنسولين المُصنَّع طبياً متطابق بيولوجياً. الحركة أعادت تصنيفه كـ«صناعي» لإثارة الخوف، وفي نفس الوقت وصمت الحمية بـ«طبيعية» لإثارة الثقة. أيٌّ من التسميتين لا تقوم بأي عمل علمي — كلتاهما روافع عاطفية.",
+      "sources": [
+        "EAL-case-001:redflag-9",
+        "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a herbal remedy sold as '100% natural, no chemicals' is automatically safer than a drug that has passed clinical trials.",
+      "claimAr": "صح ولا غلط: علاج عشبي مُباع كـ«100% طبيعي، بدون كيماويات» هو تلقائياً أأمن من دواء اجتاز تجارب سريرية.",
+      "options": ["True — natural always means safer than synthetic", "False — safety is determined by testing, dose, and individual biology, not by origin"],
+      "correctAnswer": 1,
+      "explanation": "False. Safety is determined by testing, dose, and individual biology — not by whether something grew in a field. Digitalis (from foxglove), hemlock, arsenic, cyanide, and aflatoxin are all entirely natural and entirely lethal. Meanwhile, aspirin — derived from willow bark — is both natural in origin and chemically synthesised, with a safety profile known from millions of patient-years of data. Every compound, natural or synthetic, is a chemical. Calibration note: if 'natural = safer' felt true before you answered, notice this is one of the most deeply embedded cultural assumptions — and one of the most exploited by health fraud.",
+      "explanationAr": "غلط. السلامة بتتحدّد بالاختبار والجرعة والبيولوجيا الفردية — مش بكون الشيء نبت في حقل. الديجيتال (من نبتة القفّاز)، والشوكران، والزرنيخ، والسيانيد، والأفلاتوكسين كلها طبيعية كلياً وقاتلة كلياً. ملاحظة المعايرة: لو «طبيعي = أأمن» حسّت صحيحة قبل إجابتك، لاحظ إن دي من أعمق الافتراضات الثقافية الراسخة — ومن الأكثر استغلالاً في الاحتيال الصحي.",
+      "sources": [
+        "https://sciencebasedmedicine.org/nature-knows-best/",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A seller advertises 'natural gum arabic dissolves kidney stones — no chemicals, no side effects.' What are the two questions that expose whether this claim holds up?",
+      "claimAr": "بائع بيعلن عن «صمغ عربي طبيعي يُذيب حصوات الكلى — بدون كيماويات وبدون آثار جانبية». إيه السؤالان اللي بيكشفوا إذا كان الادعاء صامد؟",
+      "options": [
+        "'How much does it cost?' and 'Is it popular?'",
+        "'What peer-reviewed trial tested it for kidney stones at what dose?' and 'What mechanism explains how it dissolves calcium or urate stones?'",
+        "'Is gum arabic natural?' and 'Has anyone reported it worked?'",
+        "'Does it smell natural?' and 'Is it approved anywhere?'"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why do 'no chemicals' and 'no side effects' tell you NOTHING useful about whether a remedy works or is safe? What do those phrases actually reveal?",
+        "promptAr": "بكلماتك: ليه «بدون كيماويات» و«بدون آثار جانبية» ما بيقولوكش حاجة مفيدة عن إذا كان العلاج بيشتغل أو آمن؟ وإيه اللي العبارتان دول بيكشفوه فعلاً؟"
+      },
+      "explanation": "These two questions — mechanism and trial evidence — are what separate a health claim from a marketing claim. 'No chemicals' is meaningless (everything is a chemical). 'No side effects' is actually a red flag: a substance with no biological effect has no side effects but also no therapeutic effect. A real medicine can have side effects precisely because it is doing something biologically real.",
+      "explanationAr": "هذان السؤالان — الآلية ودليل التجارب — هما اللي بيفصلوا ادعاء الصحة عن ادعاء التسويق. «بدون كيماويات» لا معنى له (كل شيء كيمياء). «بدون آثار جانبية» علامة خطر فعلاً: مادة من غير تأثير بيولوجي ليس لها آثار جانبية لكن أيضاً ليس لها تأثير علاجي. الدواء الحقيقي ممكن يكون له آثار جانبية بالظبط لأنه بيعمل حاجة بيولوجية حقيقية.",
+      "sources": [
+        "https://sciencebasedmedicine.org/nature-knows-best/",
+        "https://www.nhs.uk/live-well/eat-well/digestive-health/detox-diets-and-cleanses/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A friend says: \"I stopped my thyroid medication and replaced it with iodine-rich natural seaweed — it's what our ancestors ate and it's completely natural.\" It sounds reasonable — natural food, ancestral wisdom.",
+      "claimAr": "صديق بيقول: «وقّفت دوا الغدة الدرقية عندي واستبدلته بطحالب بحرية طبيعية غنية باليود — ده اللي كان أجدادنا يأكلوه وهو طبيعي كلياً». بيبدو معقولاً — طعام طبيعي، حكمة الأجداد.",
+      "prompt": "What would have to be TRUE if this decision is medically risky? What questions would a caring friend ask before supporting it?",
+      "promptAr": "لو القرار ده خطر طبياً، إيه اللي لازم يكون صح؟ وإيه الأسئلة اللي صديق مهتم هيسألها قبل ما يدعم الموضوع؟",
+      "modelPoints": [
+        "If risky: seaweed iodine content is highly variable across species and batches — some seaweed contains iodine levels that can paradoxically suppress or overstimulate thyroid function (Wolff-Chaikoff effect).",
+        "Untreated hypothyroidism has documented real harms: metabolic slowdown, cardiovascular risk, depression, cognitive effects, and in pregnancy, irreversible fetal neurological damage.",
+        "The 'ancestral diet' argument proves nothing about therapeutic equivalence — ancestors also had shorter lifespans and lacked the ability to diagnose thyroid dysfunction.",
+        "A caring question: 'Have you told your endocrinologist you're thinking about this? Could you try it alongside your medication first, and measure your thyroid levels?'"
+      ],
+      "modelPointsAr": [
+        "لو خطر: محتوى اليود في الطحالب متغيّر جداً بين الأنواع والدُّفعات — بعض الطحالب تحتوي على مستويات يود ممكن تُثبّط أو تُفرط في تحفيز الغدة الدرقية (تأثير وولف-تشايكوف).",
+        "قصور الغدة الدرقية غير المُعالَج له أضرار حقيقية موثَّقة: تباطؤ أيضي، خطر قلبي وعائي، اكتئاب، تأثيرات معرفية، وفي الحمل، ضرر عصبي جنيني لا رجعة فيه.",
+        "حجة «غذاء الأجداد» لا تثبت التكافؤ العلاجي — الأجداد كمان كانت متوسط أعمارهم أقصر وما كانوش قادرين يشخّصوا اضطراب الغدة الدرقية.",
+        "سؤال مهتم: «قلت لطبيب الغدد بتاعك إنك بتفكّر في ده؟ ممكن تجرّبه جنب الدوا الأول، وتقيس مستويات الغدة؟»"
+      ],
+      "explanation": "Two problems compound: appeal to nature ('natural seaweed, ancestral diet') and Red Flag #8 (stopping a tested medication). 'Natural' does not replace titrated pharmacology. The caring response is not to shame but to open a door: asking about the specialist and suggesting measurement keeps both the relationship and the conversation alive.",
+      "explanationAr": "مشكلتان تتضاعفان: مغالطة الطبيعة («طحالب طبيعية، غذاء الأجداد») وعلامة الخطر رقم 8 (إيقاف دواء مُختبَر). «الطبيعي» لا يحلّ محلّ الأدوية المُعايَرة. الرد المهتم مش التحريج لكن فتح باب: السؤال عن المتخصّص والاقتراح بالقياس بيحافظ على العلاقة والنقاش معاً.",
+      "sources": [
+        "EAL-case-001:redflag-8",
+        "https://www.niddk.nih.gov/health-information/endocrine-diseases/hypothyroidism",
+        "https://sciencebasedmedicine.org/nature-knows-best/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "appeal to nature framing",
+      "techniqueAr": "تأطير مغالطة الطبيعة",
+      "task": "Feel the move from the inside. Write 2–3 sentences marketing a harmless product (e.g. herbal tea) by exploiting the natural/artificial divide — make 'natural' sound virtuous and trustworthy and 'synthetic' sound threatening, without making any specific health claim.",
+      "taskAr": "احسّ بالحركة من جوّه. اكتب 2–3 جُمَل بتسوّق منتج غير ضار (مثلاً شاي عشبي) باستغلال الفاصل طبيعي/صناعي — خلّي «الطبيعي» يبدو فاضلاً وموثوقاً و«الصناعي» يبدو مهدِّداً، من غير ما تعمل أي ادعاء صحي محدّد.",
+      "tells": [
+        "The words 'natural,' 'pure,' 'clean,' 'ancient,' 'ancestral' are doing emotional work — not scientific work.",
+        "The contrast ('unlike synthetic chemicals') triggers fear of the alternative without evidence of harm.",
+        "No mechanism is claimed — the naturalness IS the implied proof.",
+        "It feels trustworthy and reassuring, which is the bait — that feeling is not evidence.",
+        "It would apply equally to hemlock, arsenic, or cyanide — all of which are natural. The frame proves nothing about safety."
+      ],
+      "tellsAr": [
+        "كلمات «طبيعي»، «نقي»، «نظيف»، «قديم»، «الأجداد» بتعمل شغل عاطفي — مش شغل علمي.",
+        "التناقض («بخلاف الكيماويات الصناعية») بيُثير خوفاً من البديل من غير دليل على ضرر.",
+        "ما في آلية مُدَّعاة — الطبيعية نفسها هي الدليل الضمني.",
+        "بيحسّس بثقة وأمان، وده هو الطُعم — الإحساس ده مش دليل.",
+        "ينطبق بالقدر نفسه على الشوكران والزرنيخ والسيانيد — وكلها طبيعية. الإطار لا يثبت شيئاً عن السلامة."
+      ],
+      "explanation": "Building the appeal from the inside is active inoculation. Once you've felt how easily 'natural' language generates warmth and trust — without any scientific content — you'll catch it faster in the wild. The corrective habit: replace 'natural/synthetic' with the two real questions: 'What does the evidence show?' and 'At what dose was it tested?'",
+      "explanationAr": "بناء التأطير من الداخل هو تلقيح نشط. لمّا تحسّ بقد إيه بسهولة لغة «الطبيعي» بتولّد دفء وثقة — من غير أي محتوى علمي — هتكشفها أسرع في الواقع. العادة التصحيحية: استبدل «طبيعي/صناعي» بالسؤالين الحقيقيين: «إيه اللي الدليل بيقوله؟» و«عند أنهي جرعة اتختبر؟»",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://sciencebasedmedicine.org/nature-knows-best/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    }
+  ]
+}

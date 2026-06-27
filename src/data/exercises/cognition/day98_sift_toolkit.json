@@ -1,0 +1,158 @@
+{
+  "id": "day98_sift_toolkit",
+  "phase": 2,
+  "week": 14,
+  "day": 98,
+  "title": "SIFT — Four Moves Before You Share",
+  "titleAr": "SIFT — أربع حركات قبل ما تشارك",
+  "description": "Stop · Investigate the source · Find better coverage · Trace to the original. SIFT is the fastest fact-checking habit you can build — today you drill it on Egyptian scenarios.",
+  "descriptionAr": "قِف · حقّق في المصدر · دوّر على تغطية أفضل · اتبع للأصل. SIFT هي أسرع عادة تحقّق يمكنك تبنيها — النهاردة بتتدرّب عليها على سيناريوهات مصرية.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://cor.inquirygroup.org/resources/sift-the-four-moves",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A WhatsApp message arrives: \"URGENT — new study proves cinnamon cures type-2 diabetes completely. Forward to save lives.\" Apply SIFT Step 1. What is it, and what does it tell you to do first?",
+      "claimAr": "رسالة واتساب وصلت: «عاجل — دراسة جديدة تثبت إن القرفة بتشفي السكري النوع الثاني بالكامل. إبعت عشان تنقذ حياة.» طبّق خطوة SIFT الأولى. إيه هي، وبتقولك تعمل إيه أول؟",
+      "options": [
+        "Forward it immediately to family",
+        "Stop — resist the emotional pull to act. The urgency is a designed trigger. Pause before you believe, share, or dismiss",
+        "Search Google immediately",
+        "Ask who sent it"
+      ],
+      "correctAnswer": 1,
+      "explanation": "S = Stop. Urgency, emotional appeal ('save lives'), and superlative claims ('completely') are designed to bypass slow thinking. The first move is simply to pause — neither sharing nor dismissing yet. This moment of hesitation is where critical thinking begins. Research on misinformation spread shows that sharing happens fastest when people are emotionally activated; stopping breaks that automaticity.",
+      "explanationAr": "S = قِف. الاستعجال والنداء العاطفي («انقذ حياة») والادعاءات المطلقة («بالكامل») مصمَّمة لتجاوز التفكير البطيء. الحركة الأولى هي ببساطة التوقّف — لا مشاركة ولا رفض بعد. لحظة التردّد دي هي حيث يبدأ التفكير النقدي. بحوث انتشار المعلومات المضلّلة بتبيّن إن المشاركة بتحصل بأسرع ما يكون لمّا الناس تكون متحمّسة عاطفياً؛ التوقّف بيكسر هذا التلقائية.",
+      "sources": [
+        "https://cor.inquirygroup.org/resources/sift-the-four-moves",
+        "https://www.science.org/doi/10.1126/science.aap9559"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "You stopped. Now SIFT Step 2: Investigate the source. The WhatsApp message has a screenshot of a website you've never seen — 'NaturalHealthTruth.net.' What do you do?",
+      "claimAr": "وقفت. دلوقتي خطوة SIFT الثانية: حقّق في المصدر. رسالة الواتساب فيها سكرين شوت من موقع ما شفتوش قبل كده — «NaturalHealthTruth.net». بتعمل إيه؟",
+      "options": [
+        "Trust it — it looks professional",
+        "Search the site name + 'review' or 'who is behind' in a separate tab; check if it appears in any indexed medical or news database",
+        "Ignore it completely",
+        "Share it and say 'unverified'"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why should you investigate a source by leaving the source rather than reading more of the source's own content?",
+        "promptAr": "بكلماتك: ليه المفروض تحقّق من مصدر بإنك تغادره مش بقراءة محتواه الخاص أكتر؟"
+      },
+      "explanation": "I = Investigate the source — but not by reading the source's own content. Open a new tab and search the site's name with terms like 'review', 'reliable', 'who runs this'. Check: Is it indexed on PubMed? Does it appear in journalism databases? Does any fact-checking site flag it? A site can look credible with a clean design and stock photos of scientists. The check is external reputation, not internal appearance. For health claims specifically, WHO, NHS, CDC, and indexed journals are reference points.",
+      "explanationAr": "I = حقّق في المصدر — لكن مش بقراءة محتوى المصدر نفسه. افتح تاب جديد وابحث عن اسم الموقع مع مصطلحات زي «مراجعة»، «موثوق»، «مين وراه». تحقّق: هل مُفهرَس على PubMed؟ هل بيظهر في قواعد بيانات الصحافة؟ هل أي موقع تحقّق بيُشير إليه؟ موقع ممكن يبان موثوقاً بتصميم نظيف وصور مخزونة لعلماء. الفحص هو السمعة الخارجية مش المظهر الداخلي. لادعاءات الصحة تحديداً، WHO وNHS وCDC والمجلات المُفهرسة هي نقاط مرجعية.",
+      "sources": [
+        "https://cor.inquirygroup.org/resources/sift-the-four-moves",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "SIFT Step 3: Find better coverage. You search 'cinnamon type-2 diabetes cure' and find: (A) NaturalHealthTruth.net says it cures completely; (B) a Cochrane review summary says cinnamon may modestly lower fasting glucose in some populations but does not replace medication; (C) a diabetes patient forum says 'it worked for me.' Before reading further — how confident are you in picking the most reliable source?",
+      "claimAr": "خطوة SIFT الثالثة: دوّر على تغطية أفضل. بحثت ولاقيت: (أ) NaturalHealthTruth.net بيقول يشفي بالكامل؛ (ب) ملخص مراجعة كوكران بيقول القرفة ممكن تخفّض السكر الصيامي باعتدال لكن ما تحلّش محلّ الدواء؛ (ج) منتدى مرضى سكر بيقول «نفعت معايا». قبل ما تكمل — قد إيه أنت واثق في اختيار أوثق مصدر؟",
+      "options": [
+        "A — it is the most dramatic claim",
+        "B — a Cochrane review pools multiple controlled trials and is explicitly designed to give the weight of evidence, not a single story or a single study",
+        "C — personal experience is most relatable",
+        "All three are equal"
+      ],
+      "correctAnswer": 1,
+      "explanation": "F = Find better coverage. A Cochrane systematic review represents the highest evidence tier: it pools all relevant controlled trials, assesses methodological quality, and gives a weighted estimate of what the evidence actually shows. The NaturalHealthTruth claim is a single website making an absolute claim with no cited trial. The forum testimonial is anecdote. When sources disagree, go with the highest methodological tier. Also notice: the Cochrane finding ('modest effect, does not replace medication') is more useful to someone with diabetes than a false 'complete cure' claim. Calibration check: if you were unsure between A and B, that's the uncertainty this habit is designed to resolve — by always asking 'what is the methodological tier of this source?'",
+      "explanationAr": "F = دوّر على تغطية أفضل. مراجعة كوكران المنهجية بتمثّل أعلى مستوى أدلة: بتجمّع كل التجارب المضبوطة ذات الصلة وبتُقيّم الجودة المنهجية وبتعطي تقديراً موزوناً لما الأدلة بتبيّنه فعلاً. ادعاء NaturalHealthTruth موقع واحد بيدّعي بإطلاق من غير تجربة مُستشهَد بها. شهادة المنتدى حكاية فردية. لمّا المصادر تختلف، روح لأعلى مستوى منهجي. لاحظ كمان: النتيجة الكوكرانية («تأثير متواضع، ما تحلّش محلّ الدواء») أكثر فائدة لمريض سكري من ادعاء «شفاء كامل» كاذب. فحص المعايرة: لو كنت متردّد بين أ وب، ده بالضبط عدم اليقين اللي العادة دي مصمَّمة تحلّه — بسؤال دايم «إيه المستوى المنهجي للمصدر ده؟»",
+      "sources": [
+        "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD007170.pub2/full",
+        "https://cor.inquirygroup.org/resources/sift-the-four-moves"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 4,
+      "mechanic": "recognize",
+      "claim": "SIFT Step 4: Trace to original. A friend shares a quote attributed to the WHO saying: 'Traditional diets prevent all chronic disease.' You search WHO.int directly for this quote. It does not appear. What do you conclude?",
+      "claimAr": "خطوة SIFT الرابعة: اتبع للأصل. صاحب شارك اقتباس منسوب لمنظمة الصحة العالمية بيقول: «الأنظمة الغذائية التقليدية بتمنع كل الأمراض المزمنة.» بحثت مباشرة على WHO.int عن الاقتباس ده. ما لقيتوش. إيه اللي بتستنتجه؟",
+      "options": [
+        "The WHO is hiding it",
+        "The quote is likely fabricated, misattributed, or badly paraphrased — you do not share it",
+        "The search is wrong",
+        "WHO data is unreliable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "T = Trace to original. When a quote or statistic is attributed to an authority, go to the authority's own website directly. If it cannot be found there, the quote is either fabricated, misattributed, or so distorted in paraphrase that it no longer represents the original. WHO does not say traditional diets prevent 'all' chronic disease — such an absolute claim fails basic biology. The correct rule: if you cannot find the original source, do not share. This single habit would stop a large proportion of health misinformation.",
+      "explanationAr": "T = اتبع للأصل. لمّا اقتباس أو إحصاء بيُنسَب لجهة، روح لموقع الجهة نفسه مباشرة. لو ما لاقيتوش هناك، الاقتباس إما مُلفَّق أو منسوب خطأ أو مشوّه في إعادة الصياغة لدرجة إنه ما بيمثّلش الأصل. منظمة الصحة العالمية ما بتقولش إن الأنظمة التقليدية تمنع «كل» الأمراض المزمنة — ادعاء مطلق من هذا النوع بيفشل في بيولوجيا أساسية. القاعدة الصحيحة: لو ما قدرتش تلاقي المصدر الأصلي، ما تشاركش. العادة الواحدة دي كانت هتوقف نسبة كبيرة من المعلومات الصحية المضلّلة.",
+      "sources": [
+        "https://cor.inquirygroup.org/resources/sift-the-four-moves",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "false urgency + authority borrowing",
+      "techniqueAr": "الإلحاح الزائف + استعارة السلطة",
+      "task": "You are testing your own defenses. Write a short WhatsApp-style health claim using two SIFT-defeating techniques at once: (1) urgency framing ('URGENT / forward to save lives'), and (2) a borrowed authority name (attribute a made-up statistic to a real institution like WHO or a university). Keep the claim harmless — something like 'walking 10 minutes a day prevents 90% of disease.'",
+      "taskAr": "إنت بتاختبر دفاعاتك الخاصة. اكتب ادعاء صحي قصير بأسلوب واتساب باستخدام تقنيتين تتحدّيان SIFT في آن: (1) إطار الإلحاح («عاجل / إبعت عشان تنقذ حياة»)، و(2) اسم سلطة مستعار (انسب إحصاء متلفَّق لمؤسسة حقيقية زي WHO أو جامعة). خلّي الادعاء غير ضار — حاجة زي «المشي 10 دقايق في اليوم بيمنع 90% من الأمراض».",
+      "tells": [
+        "Urgency language ('URGENT', 'forward', 'save lives') bypasses the Stop step by triggering an emotional obligation to act immediately.",
+        "A borrowed authority name (WHO, Harvard) gives the claim instant credibility it has not earned — and is very easy to fabricate since the name is real even when the statistic isn't.",
+        "Absolute numbers ('90%', 'prevents ALL') are a red flag: real health science rarely claims absolute prevention.",
+        "The 'forward' instruction exploits social trust — the most dangerous vector is someone you love sharing something they believed.",
+        "No link to the original source is given — making the Trace step impossible by design."
+      ],
+      "tellsAr": [
+        "لغة الإلحاح («عاجل»، «إبعت»، «انقذ حياة») بتتجاوز خطوة «قِف» بإشعال التزام عاطفي بالتصرّف فوراً.",
+        "اسم سلطة مستعار (WHO، هارفارد) بيعطي الادعاء مصداقية فورية ما كسبهاش — وسهل جداً تلفيقه لأن الاسم حقيقي حتى لو الإحصاء مش.",
+        "الأرقام المطلقة («90%»، «بيمنع الكل») علامة تحذير: العلم الصحي الحقيقي نادراً ما بيدّعي وقاية مطلقة.",
+        "تعليمة «إبعت» بتستغل الثقة الاجتماعية — أخطر ناقل هو حدّ بتحبّه بيشارك حاجة صدّقها.",
+        "لا رابط للمصدر الأصلي — مما بيجعل خطوة التتبّع مستحيلة بالتصميم."
+      ],
+      "explanation": "Writing these techniques in a harmless context trains your pattern-recognition. Now you know the exact feel of urgency + borrowed authority from the inside — and when you receive a real message using both, the recognition should be near-instant.",
+      "explanationAr": "كتابة الحركات دي في سياق غير ضار بيدرّب التعرّف على النمط. دلوقتي بتعرف الإحساس الدقيق للإلحاح + السلطة المستعارة من جوّهم — وقتما تستقبل رسالة حقيقية بيهم الاتنين، التعرّف المفروض يكون شبه فوري.",
+      "sources": [
+        "https://www.science.org/doi/10.1126/science.aap9559",
+        "https://cor.inquirygroup.org/resources/sift-the-four-moves"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 6,
+      "mechanic": "consider_opposite",
+      "claim": "A colleague says: 'I just share things on WhatsApp to keep people informed. I'm not responsible for whether they're true or not.'",
+      "claimAr": "زميل بيقول: «أنا بس بشارك حاجات على واتساب عشان ابقى على علم. مش مسؤول إذا كانت صح ولا لأ.»",
+      "prompt": "What would have to be true for the colleague's position to be defensible? What evidence or argument would disprove that sharing is 'neutral'?",
+      "promptAr": "إيه اللي لازم يكون صح عشان موقف الزميل يكون قابلاً للدفاع؟ وأنهي دليل أو حجة يكذّب إن المشاركة «محايدة»؟",
+      "modelPoints": [
+        "For sharing to be neutral, it would have to have no causal effect on beliefs or behaviour — but research shows forwarded messages are trusted more when they come from someone the receiver knows.",
+        "In the Taybat case, documented harm reached patients specifically through family WhatsApp groups, not through the original social media channel. Each forward extended the reach.",
+        "If the colleague genuinely did not care about truth, they would also forward things they knew were false — but they wouldn't. That selective restraint implies they already believe sharing carries some responsibility.",
+        "SIFT takes less than one minute. The effort cost of responsibility is very low."
+      ],
+      "modelPointsAr": [
+        "عشان المشاركة تكون محايدة، لازم ما يكونلهاش تأثير سببي على المعتقدات أو السلوك — لكن الأبحاث بتبيّن إن الرسايل المُعاد إرسالها بتتصدَّق أكتر لمّا بتيجي من حد بيعرفه المستقبِل.",
+        "في حالة «الطيبات»، الضرر الموثّق وصل للمرضى تحديداً من خلال مجموعات واتساب العائلية، مش من خلال قناة السوشيال ميديا الأصلية. كل إعادة إرسال مدّ الوصول.",
+        "لو الزميل فعلاً ما اهتمش بالحقيقة، كان هيبعت كمان حاجات يعرف إنها غلط — بس هو مش هيعمل كده. التحفّظ الانتقائي ده بيعني ضمنياً إنه أصلاً مقتنع إن المشاركة بتحمل نوع من المسؤولية.",
+        "SIFT بتاخد أقل من دقيقة. تكلفة الجهد للمسؤولية منخفضة جداً."
+      ],
+      "explanation": "Sharing is not neutral — it is amplification. In the Taybat case, the most serious harm reached patients through family and community WhatsApp groups, not through the original social media channel. Each forwarder extended the reach to someone who trusted them. The SIFT habit (four steps, often under a minute) is both a practical tool and an ethical position: we share because we care, which means checking before sharing is itself an act of caring.",
+      "explanationAr": "المشاركة مش محايدة — هي تضخيم. في حالة «الطيبات»، أخطر الأضرار وصلت للمرضى من خلال مجموعات واتساب العائلية والمجتمعية، مش من خلال قناة السوشيال ميديا الأصلية. كل شخص بعت مدّ الوصول لحدّ وثق فيه. عادة SIFT (أربع خطوات، غالباً أقل من دقيقة) هي أداة عملية وموقف أخلاقي معاً: بنشارك لأننا بنهتم، وده معناه إن الفحص قبل المشاركة هو نفسه فعل اهتمام.",
+      "sources": [
+        "https://www.science.org/doi/10.1126/science.aap9559",
+        "EAL-case-001:moh-eg-2026-05",
+        "https://cor.inquirygroup.org/resources/sift-the-four-moves"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "day42_slippery_slope_red_herring",
+  "phase": 1,
+  "week": 6,
+  "day": 42,
+  "title": "Slippery Slope & Red Herring — Week 6 Capstone",
+  "titleAr": "الانزلاق التدريجي والتضليل — خلاصة الأسبوع السادس",
+  "description": "Two final informal fallacies: the slippery slope invents a chain of disasters that was never established; the red herring pulls you away from the real question. Today also reviews the full week.",
+  "descriptionAr": "مغالطتان شائعتان أخيرتان: الانزلاق التدريجي يخترع سلسلة كوارث لم تُثبَت؛ والتضليل بيشدّك بعيداً عن السؤال الحقيقي. النهاردة بيراجع الأسبوع كله كمان.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A Taybat diet promoter argues: \"If we allow doctors to question this dietary system, next they will control every bite you eat, then ban all traditional food, then criminalise anyone who chooses to eat naturally.\" What fallacy is this?",
+      "claimAr": "مروّج نظام الطيبات بيحتجّ: «لو سمحنا للأطباء يشكّكوا في النظام الغذائي ده، بعدين هيتحكّموا في كل لقمة بتاكلها، وبعدين هيحظروا الأكل التقليدي كله، وبعدين هيجرّموا أي حد يختار يأكل طبيعي.» أنهي مغالطة دي؟",
+      "options": [
+        "A reasonable prediction based on historical trends",
+        "Slippery slope: a chain of unestablished causal links — no evidence is provided that medical scrutiny leads to criminalisation of food choice",
+        "Appeal to authority",
+        "Begging the question"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is a slippery slope: the argument leaps from 'doctors can scrutinise a diet claim' to 'your food will be criminalised' through a series of steps that are asserted but never supported. Each link in the chain ('then... then... then') needs its own evidence. The fallacy works by making listeners feel that any small concession will spiral into catastrophe. The defence: ask for evidence at each step, not just the conclusion.",
+      "explanationAr": "دي مغالطة الانزلاق التدريجي: الحجة تقفز من «الأطباء يمكنهم فحص ادعاء حمية» إلى «طعامك سيُجرَّم» عبر سلسلة خطوات تُؤكَّد لكن لا تُدعَم أبداً. كل حلقة في السلسلة («بعدين... بعدين... بعدين») تحتاج دليلها الخاص. المغالطة بتشتغل بجعل المستمعين يشعرون أن أي تنازل صغير سيتحوّل لكارثة. الدفاع: اطلب الدليل عند كل خطوة، مش فقط الخلاصة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A slippery slope argument is ALWAYS fallacious — there are no cases where a genuine causal chain from step A to step Z can be demonstrated.",
+      "claimAr": "حجة الانزلاق التدريجي دائماً مغالطة — ما في حالات يمكن فيها إثبات سلسلة سببية حقيقية من الخطوة أ إلى الخطوة ي.",
+      "correctAnswer": false,
+      "myth_en": "All slippery slopes are fallacies.",
+      "myth_ar": "كل الانزلاقات التدريجية مغالطات.",
+      "explanation": "False — the slippery slope is only a fallacy when the intermediate steps are not supported. If evidence exists for each causal link, the argument is legitimate. For example, there is genuine evidence that untreated pre-diabetes progresses to diabetes in a proportion of cases — that is a genuine (probabilistic) slope. The fallacy occurs when the chain is invented, not when it is demonstrated. The skill is asking: 'What evidence supports each step?' Calibrate: how confident were you before reading this?",
+      "explanationAr": "غلط — الانزلاق التدريجي مغالطة بس لمّا الخطوات المتوسّطة لا تكون مدعومة. لو الدليل موجود لكل حلقة سببية، الحجة مشروعة. على سبيل المثال، هناك دليل حقيقي أن مقدّمة السكري غير المُعالَجة تتطوّر إلى سكري في نسبة من الحالات — هذا انزلاق (احتمالي) حقيقي. المغالطة تحدث حين السلسلة مُخترَعة، لا حين تُثبَت. المهارة: اسأل «ما الدليل الداعم لكل خطوة؟»",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "recognize",
+      "claim": "During a debate on the Taybat diet, a questioner asks: \"Where are the clinical trial results?\" The promoter answers: \"Why are you so focused on papers? What matters is the thousands of people who have been helped and the families restored. You should ask why mainstream medicine has failed so many people.\" What happened?",
+      "claimAr": "خلال نقاش حول نظام الطيبات، سائل يسأل: «فين نتائج التجارب السريرية؟» المروّج يردّ: «ليه منكّب على الأوراق؟ اللي بيهمّ هو الآلاف اللي اتساعدوا والأسر اللي رُمَّمت. المفروض تسأل ليه الطب السائد فشل مع كتير من الناس.» إيه اللي حصل؟",
+      "options": [
+        "The promoter answered the question fully",
+        "Red herring: the question about clinical trials was redirected to a different, emotionally charged topic ('mainstream medicine's failures') — the original question was never answered",
+        "A fair point about institutional failures",
+        "Slippery slope reasoning"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is a red herring: a topic substitution. The question was about clinical trial evidence for this specific diet. The answer redirected to mainstream medicine's failures — a completely different subject. Institutional medicine's failures are real and worth discussing, but they are not an answer to 'where is your evidence?' The tell: the original question was never addressed. Staying on the actual question is the defence.",
+      "explanationAr": "دي تضليل: استبدال موضوع. السؤال كان عن دليل التجارب السريرية لهذه الحمية المحدّدة. الإجابة أعادت التوجيه لإخفاقات الطب السائد — موضوع مختلف تماماً. إخفاقات الطب المؤسسي حقيقية وتستحق النقاش، لكنها ليست إجابة على «أين دليلك؟». العلامة: السؤال الأصلي لم يُعالَج أبداً. البقاء في السؤال الفعلي هو الدفاع.",
+      "sources": [
+        "EAL-case-001:redflag-2",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 4,
+      "mechanic": "self_explain",
+      "claim": "A seller responds to a customer asking about side effects: \"You know what real side effects are? The side effects of a life without energy and meaning. Our product gives you that life back.\" This is a red herring combined with an appeal to emotion.",
+      "claimAr": "بائع بيردّ على عميل سأل عن الآثار الجانبية: «تعرف إيه الآثار الجانبية الحقيقية؟ الآثار الجانبية لحياة بلا طاقة ومعنى. منتجنا بيرجّعلك الحياة دي.» ده تضليل مع نداء عاطفي.",
+      "options": [
+        "True — the seller answered genuinely",
+        "True — it is a red herring and an emotional appeal combined"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what was the original question, what did the seller actually answer, and why does this matter for safety?",
+        "promptAr": "بكلماتك: إيه السؤال الأصلي، وإيه اللي ردّ عليه البائع فعلاً، وليه ده مهم من ناحية الأمان؟"
+      },
+      "explanation": "Two moves at once: (1) red herring — 'side effects of a product' was swapped for 'side effects of a bad life'; (2) appeal to emotion — hope, meaning, and energy are powerful emotional levers. The effect: the questioner's safety concern is dissolved by emotional redirection. The original question (does this product have documented pharmacological side effects?) remains unanswered. Beautiful rhetoric is not a product safety record.",
+      "explanationAr": "حركتان في آنٍ واحد: (1) تضليل — «الآثار الجانبية للمنتج» استُبدلت بـ«الآثار الجانبية للحياة السيّئة»؛ (2) نداء عاطفي — الأمل والمعنى والطاقة روافع عاطفية قوية. التأثير: قلق السائل الأمني يُذاب بإعادة التوجيه العاطفية. السؤال الأصلي (هل لهذا المنتج آثار جانبية صيدلانية موثَّقة؟) يظلّ بلا إجابة. البلاغة الجميلة ليست سجلّ سلامة منتج.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://sciencebasedmedicine.org/"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A health influencer claims: \"If we allow even one restriction on natural food choices, the whole food freedom will collapse — the government will end up controlling your entire diet.\"",
+      "claimAr": "مؤثّر صحي بيدّعي: «لو سمحنا بحتى قيد واحد على خيارات الأكل الطبيعي، كل حرية الغذاء هتنهار — الحكومة في النهاية هتتحكّم في أكلك كله.\"",
+      "prompt": "What would need to be true for the slippery slope chain here to be FALSE? What intermediate steps are missing?",
+      "promptAr": "إيه اللي لازم يكون صح علشان سلسلة الانزلاق التدريجي هنا تكون غلط؟ وإيه الخطوات المتوسّطة الغايبة؟",
+      "modelPoints": [
+        "Each step in the chain needs independent evidence: 'one restriction → total collapse' is not self-evident.",
+        "We can observe real-world counterexamples: food labelling laws exist in many countries without leading to full government diet control.",
+        "Democratic societies have mechanisms (courts, elections, public pressure) that stop cascades — the chain assumes a world with no checks.",
+        "The fallacy weaponises a genuine concern (food freedom) to make a specific, unsupported leap feel emotionally necessary.",
+        "Legitimate scrutiny of one health claim is categorically different from a government takeover — conflating them is a category error."
+      ],
+      "modelPointsAr": [
+        "كل خطوة في السلسلة محتاجة دليل مستقل: «قيد واحد ← انهيار كامل» مش بديهية.",
+        "نقدر نلاحظ أمثلة عكسية من الواقع: قوانين تسمية الأغذية موجودة في دول كتير بدون ما تؤدّي لسيطرة حكومية كاملة على النظام الغذائي.",
+        "المجتمعات الديمقراطية عندها آليات (محاكم، انتخابات، ضغط شعبي) بتوقف التسلسلات — السلسلة بتفترض عالم بلا رقابة.",
+        "المغالطة بتسلّح قلقاً حقيقياً (حرية الغذاء) علشان تخلّي قفزة بعينها غير مدعومة تحسّ ضرورية عاطفياً.",
+        "التدقيق المشروع في ادعاء صحي واحد مختلف جوهرياً عن استيلاء حكومي — ربطهم ببعض خطأ في التصنيف."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 6,
+      "mechanic": "retrieve",
+      "retrievalOf": 39,
+      "claim": "Week 6 review: a health influencer posts — 'Scientists who criticise our system eat junk food themselves [1]. They want to strip away your natural healing rights and turn you into a patient forever [2]. The whole medical system is corrupt anyway [3]. And thousands of people have recovered, why focus on numbers when real lives are at stake? [4]' — Match each numbered statement to its fallacy from weeks 5–6.",
+      "claimAr": "مراجعة الأسبوع السادس: مؤثّر صحي ينشر: «العلماء اللي ينتقدوا نظامنا بياكلوا جانك فود هُم [1]. عايزين يسلبوا حقوقك في الشفاء الطبيعي ويحوّلوك لمريض للأبد [2]. المنظومة الطبية كلها فاسدة أصلاً [3]. وآلاف الناس اتعافوا، ليه تركّز على أرقام وأرواح حقيقية على المحكّ؟ [4]» — طابق كل ادعاء مع مغالطته من الأسابيع 5–6.",
+      "options": [
+        "[1]=Straw man, [2]=Red herring, [3]=Slippery slope, [4]=False dichotomy",
+        "[1]=Ad hominem, [2]=Slippery slope, [3]=Red herring, [4]=Appeal to emotion",
+        "[1]=Appeal to nature, [2]=Begging the question, [3]=Ad hominem, [4]=False dichotomy",
+        "[1]=Slippery slope, [2]=Begging the question, [3]=Appeal to authority, [4]=Red herring"
+      ],
+      "correctAnswer": 1,
+      "explanation": "[1] is ad hominem — attacking scientists' personal eating habits says nothing about their arguments' validity. [2] is slippery slope — 'question the diet → patient forever' is an unestablished chain. [3] is a red herring — industry corruption is a separate topic from whether this diet's evidence holds up. [4] is appeal to emotion — 'real lives at stake' shifts attention from the legitimate question of whether evidence exists. Seeing all four in a single post is a sign of a rhetoric that has substituted for every argument.",
+      "explanationAr": "[1] شخصنة — مهاجمة عادات أكل العلماء الشخصية لا تقول شيئاً عن صحة حججهم. [2] انزلاق تدريجي — «اشكّك في الحمية ← مريض للأبد» سلسلة غير مُثبَتة. [3] تضليل — فساد الصناعة موضوع منفصل عن إذا كان دليل هذه الحمية صامداً. [4] نداء عاطفي — «أرواح حقيقية على المحكّ» يحوّل الانتباه عن السؤال المشروع عن وجود الدليل. رؤية الأربعة كلهم في منشور واحد علامة على خطاب استبدل كل حجة.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    }
+  ]
+}

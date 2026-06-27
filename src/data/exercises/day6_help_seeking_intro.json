@@ -1,0 +1,56 @@
+{
+  "id": "day6_help_seeking_intro",
+  "phase": 0,
+  "week": 1,
+  "day": 6,
+  "title": "Help-Seeking Introduction (GHSQ)",
+  "titleAr": "مقدمة طلب المساعدة (GHSQ)",
+  "description": "Explore barriers to seeking mental health support in Egyptian culture. Learn about the General Help-Seeking Questionnaire framework.",
+  "descriptionAr": "استكشف عوائق طلب الدعم النفسي في الثقافة المصرية. تعرف على إطار استبيان طلب المساعدة العام.",
+  "type": "help-seeking",
+  "difficulty": 2,
+  "estimatedMinutes": 18,
+  "instrument": "GHSQ",
+  "exercises": [
+    {
+      "id": 1,
+      "scenario": "Ahmad, a 25-year-old from Cairo, has been feeling persistently sad for 3 months. His family tells him 'Just pray more, you'll be fine.' He hasn't told anyone about his suicidal thoughts.",
+      "scenarioAr": "أحمد، شاب عمره ٢٥ سنة من القاهرة، يشعر بحزن مستمر منذ ٣ أشهر. عائلته تقول له 'صلّي أكتر وهتبقى كويس.' لم يخبر أحداً بأفكاره الانتحارية.",
+      "barriersToSeekingHelp": ["Religious minimization ('just pray')", "Stigma around mental illness", "Masculinity norms (men don't seek help)", "Fear of being labeled 'crazy'", "Lack of awareness about professional mental health services"],
+      "barriersAr": ["التقليل الديني ('صلّي وبس')", "وصمة المرض النفسي", "معايير الذكورة (الرجال لا يطلبون المساعدة)", "الخوف من وصف 'مجنون'", "نقص الوعي بخدمات الصحة النفسية المهنية"],
+      "appropriateResources": ["Egyptian National Mental Health Hotline: 08008880700", "WHO Mental Health Gap Action Programme (mhGAP)", "Cognitive Behavioral Therapy (CBT) from licensed psychologist", "Local community mental health center", "Islamic counseling that integrates with professional help"],
+      "ghsqInterpretation": "Ahmad's GHSQ score would likely show low help-seeking intention across all categories. Intervention should address stigma, integrate Islamic values WITH professional care, and provide accessible, confidential pathways.",
+      "islamicPerspective": "The Prophet Muhammad (PBUH) said: 'Make use of medical treatment, for Allah has not made a disease without appointing a remedy for it' (Abu Dawud 3855). Seeking professional mental health care is consistent with Islamic teaching on taking practical action alongside prayer."
+    },
+    {
+      "id": 2,
+      "scenario": "Fatima, a 30-year-old teacher in Upper Egypt, experiences severe anxiety attacks. Her mother-in-law insists she needs a 'sheikh to read Quran over her' and accuses her of weak faith.",
+      "scenarioAr": "فاطمة، معلمة عمرها ٣٠ سنة في صعيد مصر، تعاني من نوبات قلق شديدة. حماتها تصر أنها تحتاج 'شيخ يقرأ عليها قرآن' وتتهمها بضعف الإيمان.",
+      "barriersToSeekingHelp": ["Family authority overriding personal health decisions", "Spiritual attribution of mental illness", "Geographic barrier (limited services in Upper Egypt)", "Gender-specific stigma", "Economic barriers"],
+      "barriersAr": ["سلطة العائلة تتغلب على قرارات الصحة الشخصية", "نسب المرض النفسي لأسباب روحية", "عائق جغرافي (خدمات محدودة في الصعيد)", "وصمة خاصة بالنوع الاجتماعي", "عوائق اقتصادية"],
+      "appropriateResources": ["Telehealth psychology services (available throughout Egypt)", "Behman Hospital Psychiatric Center (can provide remote consultations)", "El-Amal Hospital mental health services", "WHO recommended stepped-care model"],
+      "ghsqInterpretation": "Fatima's barriers are multilayered: cultural, geographic, gendered, and economic. Intervention must engage the family system, validate spiritual practices WHILE adding professional care, and leverage telehealth for geographic access.",
+      "islamicPerspective": "Ruqyah (Quranic healing) and professional therapy are NOT mutually exclusive. Imam al-Ghazali in 'Ihya Ulum al-Din' discussed the health of the nafs (self) as requiring both spiritual AND practical intervention. True tawakkul (trust in Allah) includes taking practical steps."
+    },
+    {
+      "id": 3,
+      "scenario": "Omar, a 19-year-old university student, has been experiencing depression since failing his exams. He believes depression is a sign of weakness and tells himself 'real men don't feel this way.'",
+      "scenarioAr": "عمر، طالب جامعي عمره ١٩ سنة، يعاني من الاكتئاب منذ رسوبه في الامتحانات. يعتقد أن الاكتئاب علامة ضعف ويقول لنفسه 'الرجالة الحقيقية ما بتحسّش كده.'",
+      "barriersToSeekingHelp": ["Toxic masculinity norms", "Academic shame", "Self-stigma", "Lack of campus mental health resources", "Belief that depression is a choice"],
+      "barriersAr": ["معايير الذكورة السامة", "عار أكاديمي", "وصمة ذاتية", "نقص موارد الصحة النفسية في الحرم الجامعي", "اعتقاد أن الاكتئاب اختيار"],
+      "appropriateResources": ["University counseling center", "National Alliance on Mental Illness (NAMI) resources", "CBT self-help books (e.g., Feeling Good by David Burns)", "Peer support groups"],
+      "ghsqInterpretation": "Omar's toxic masculinity beliefs create a major barrier. Psychoeducation about depression as a medical condition (not a character flaw) is essential. Male-friendly mental health campaigns and peer support could increase his help-seeking intention.",
+      "islamicPerspective": "Multiple prophets experienced deep sadness: Prophet Ya'qub (Jacob) wept so much over Yusuf that he lost his sight (Quran 12:84). Prophet Muhammad himself experienced 'Am al-Huzn' (Year of Sorrow). Depression is NOT a sign of weak faith — it's a human experience acknowledged in our tradition."
+    },
+    {
+      "id": 4,
+      "scenario": "Nadia, a 40-year-old accountant, recognizes she needs therapy for her chronic anxiety but worries: 'If anyone at work finds out, I'll lose my job.'",
+      "scenarioAr": "نادية، محاسبة عمرها ٤٠ سنة، تدرك أنها تحتاج علاجاً نفسياً لقلقها المزمن لكنها تقلق: 'لو حد في الشغل عرف، هفقد شغلي.'",
+      "barriersToSeekingHelp": ["Fear of workplace discrimination", "Confidentiality concerns", "Career consequences", "Social stigma in professional settings"],
+      "barriersAr": ["خوف من التمييز في العمل", "مخاوف السرية", "عواقب مهنية", "وصمة اجتماعية في البيئات المهنية"],
+      "appropriateResources": ["Private practice psychologists (not connected to employer)", "Employee Assistance Programs (EAPs) if available", "Online therapy platforms with encryption", "Egyptian Mental Health Act protections"],
+      "ghsqInterpretation": "Nadia has high help-seeking awareness but practical barriers around confidentiality. Solutions should emphasize the legal protections for mental health patients, the confidentiality of therapy, and private service options.",
+      "islamicPerspective": "Islam mandates the preservation of reputation (hifdh al-'ird) as part of the Maqasid al-Shariah. Seeking confidential mental health care fulfills BOTH the preservation of intellect (hifdh al-'aql) AND reputation simultaneously."
+    }
+  ]
+}

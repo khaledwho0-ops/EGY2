@@ -1,0 +1,148 @@
+{
+  "id": "day134_religious_shield_mixed_sort",
+  "phase": 3,
+  "week": 20,
+  "day": 134,
+  "title": "Real Religion vs Weaponised Religion — Sort the Cases",
+  "titleAr": "الدين الحقيقي ضد الدين المُسلَّح — رتّب الحالات",
+  "description": "Some health claims genuinely reflect Islamic tradition; others borrow its vocabulary to silence you. Today you practise telling them apart — a skill that protects both your health and your faith.",
+  "descriptionAr": "في ادعاءات صحية بتعكس فعلاً التراث الإسلامي، وفي تانية بتستعير مفرداته علشان تسكّتك. النهاردة بتتدرّب تفرّق بينهم — مهارة بتحمي صحتك وإيمانك معاً.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "scenario": "Scenario A — A scholar says: \"Honey is mentioned in the Quran (Al-Naḥl 16:69) as a healing for people; I encourage you to use it as part of a balanced diet, while continuing your prescribed medicine.\" Scenario B — A social-media health account says: \"Honey is a Quranic cure — it replaces antibiotics. Anyone who still takes pills has weak faith.\"",
+      "scenarioAr": "سيناريو أ — عالم بيقول: «العسل مذكور في القرآن (النحل 16:69) شفاء للناس؛ أشجّعكم تستخدموه ضمن نظام غذائي متوازن مع الاستمرار في الدواء المقرّر.» سيناريو ب — حساب صحي على السوشيال ميديا بيقول: «العسل علاج قرآني — بيحلّ محلّ المضادات الحيوية. اللي لسّه بياخد حبوب إيمانه ضعيف.»",
+      "question": "Which scenario is legitimate, which is weaponised, and what is the single clearest dividing line?",
+      "questionAr": "أنهي سيناريو مشروع وأنهي مُسلَّح، وإيه أوضح خط فاصل بينهم؟",
+      "answer": "A",
+      "key_differentiators": [
+        "Scenario A cites the Quranic reference accurately and adds 'while continuing prescribed medicine' — it makes no efficacy claim beyond encouragement",
+        "Scenario B converts a Quranic encouragement into a medical replacement claim AND weaponises faith to shame those who question it",
+        "The dividing line: does the religious framing stop at encouragement, or does it replace a testable medical claim AND silence dissent?"
+      ],
+      "explanation": "The Quranic verse (16:69) describes honey as 'a healing for people' — a blessing, not a pharmacological claim with dose, indication, and contra-indication. Scenario A respects that limit. Scenario B crosses into Red Flag territory: it makes an untested replacement claim and uses faith to punish doubt. Those two moves together — unfalsifiable AND shaming — are the fingerprint of weaponised religion.",
+      "explanationAr": "الآية القرآنية (16:69) بتصف العسل بأنه «شفاء للناس» — بركة لا ادعاء صيدلاني بجرعة ومؤشر وموانع. سيناريو أ بيحترم الحد ده. سيناريو ب بيعدّي لحدود علامات الخطر: بيطرح ادعاء استبدال غير مُختبَر وبيستخدم الإيمان يعاقب الشكّ. الحركتان دول مع بعض — غير قابل للتفنيد + التعييب — هما بصمة الدين المُسلَّح.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3763651/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "The Quranic words «الطيبات» and «الخبائث» were meant as categories in Islamic jurisprudence to distinguish the permissible from the forbidden. Importing them directly into a nutritional system as labels for 'toxin-free' vs 'toxic' foods is a faithful use of the Quran.",
+      "claimAr": "كلمات «الطيبات» و«الخبائث» في القرآن مقصود بيها تصنيفات في الفقه الإسلامي للحلال والحرام. استيرادها مباشرةً لنظام تغذوي كتصنيفات لأكل «خالٍ من السموم» ضد «سام» استخدام أمين للقرآن.",
+      "correctAnswer": false,
+      "myth_en": "Using Quranic vocabulary in a diet system is automatically a faithful use of the text.",
+      "myth_ar": "استخدام المفردات القرآنية في نظام غذائي هو تلقائياً استخدام أمين للنص.",
+      "explanation": "False. Quranic jurisprudential categories refer to ritual permissibility — not to toxicology, biochemistry, or nutritional science. Al-Mā'idah 5:87 explicitly warns: 'do not prohibit the good things which Allah has made lawful to you.' Chicken and milk are lawful foods in Islamic law; declaring them 'toxic' while using Quranic vocabulary is not exegesis — it is appropriation. The move hijacks the language of the sacred to give a personal nutritional opinion the authority of revelation.",
+      "explanationAr": "غلط. التصنيفات الفقهية القرآنية بتشير للحِلّ الشرعي — مش للسُمية أو الكيمياء الحيوية أو علم التغذية. المائدة 5:87 بتحذّر صراحة: «لا تحرّموا طيّبات ما أحلّ الله لكم». الفراخ واللبن أكل حلال في الشريعة الإسلامية؛ وصفهم بـ«سام» مع استخدام المفردات القرآنية مش تفسيراً — ده اختطاف. الحركة دي بتخطف لغة المقدّس علشان تدّي رأي تغذوي شخصي سلطة الوحي.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "recognize",
+      "claim": "A community nutritionist advises: \"Fasting during Ramadan has documented health benefits for metabolic markers in otherwise healthy adults; stay hydrated when you break your fast.\" This is an example of weaponised religious framing.",
+      "claimAr": "مختصة تغذية مجتمعية بتنصح: «الصيام في رمضان له فوائد صحية موثّقة لمؤشرات الأيض عند البالغين الأصحاء؛ اشربوا كفاية من الماء وقت الإفطار». ده مثال على التأطير الديني المُسلَّح.",
+      "correctAnswer": false,
+      "myth_en": "Any health advice that references Islamic practice is weaponised framing.",
+      "myth_ar": "أي نصيحة صحية بتشير للممارسة الإسلامية هي تأطير مُسلَّح.",
+      "explanation": "False — and this distinction matters. Describing documented effects of a religious practice is not weaponisation; it is accurate reporting of evidence. The red flag is not 'religious reference' — it is 'religious reference used to make a claim unfalsifiable or to shame dissenters.' This advice is testable, specific to a population (healthy adults), and makes no absolute cure claim. It is legitimate health communication.",
+      "explanationAr": "غلط — والتمييز ده مهم. وصف الآثار الموثّقة لممارسة دينية مش تسليح؛ دي إبلاغ دقيق عن الأدلة. علامة الخطر مش «الإشارة الدينية» — لكن «الإشارة الدينية المستخدمة لتجعل الادعاء غير قابل للتفنيد أو تعيّب المختلفين». النصيحة دي قابلة للاختبار ومحدّدة لفئة (بالغون أصحاء) وما فيهاش ادعاء شفاء مطلق. دي تواصل صحي مشروع.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6471315/",
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 4,
+      "mechanic": "self_explain",
+      "claim": "A video says: 'Every food prohibited in the viral Taybat diet system is forbidden because science confirms it is harmful. The Quran already knew — this is a modern scientific miracle.' Two simultaneous moves are happening: fabricating a scientific consensus and making the food list unfalsifiable via divine framing.",
+      "claimAr": "فيديو بيقول: «كل أكل محرَّم في نظام الطيبات الفيروسي العلم بيأكّد ضرره. القرآن كان عارف — ده إعجاز علمي حديث». بتحصل حركتان في آن واحد: اختلاق إجماع علمي وجعل قائمة الطعام غير قابلة للتفنيد عبر التأطير الإلهي.",
+      "options": [
+        "Accurate science reporting + appreciation of Quranic wisdom",
+        "Fabricating a scientific consensus that does not exist + using 'scientific miracle' framing to make the food list unfalsifiable",
+        "Harmless motivation of faith",
+        "Citing a reliable meta-analysis"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does wrapping a false scientific claim in 'this is a Quranic miracle' make it HARDER to correct — even for someone who cares about both science and faith?",
+        "promptAr": "بكلماتك: ليه تغليف ادعاء علمي خاطئ بـ«ده إعجاز قرآني» بيجعل تصحيحه أصعب — حتى لشخص يهتم بالعلم والإيمان معاً؟"
+      },
+      "explanation": "Two simultaneous moves: (1) the scientific claim is false — there is no consensus that chicken, milk, or eggs are toxic; the WHO, Harvard SPH, and major dietary guidelines recommend them; (2) the 'scientific miracle' frame converts a personal nutritional theory into alleged divine revelation, making it unfalsifiable. Questioning the food list now means questioning God. This is the core exploit of weaponised religious framing: it imports a scientific-sounding claim, then wraps it in the sacred to protect it from evidence.",
+      "explanationAr": "حركتان في وقت واحد: (1) الادعاء العلمي كاذب — ما فيش إجماع إن الفراخ أو اللبن أو البيض سامة؛ منظمة الصحة العالمية وهارفارد والإرشادات الغذائية الكبرى بتوصي بيهم؛ (2) إطار «الإعجاز العلمي» بيحوّل نظرية تغذوية شخصية لوحي إلهي مزعوم، فيبقى مستحيل يتفنّد. التشكيك في قائمة الأكل بقى يعني التشكيك في الله. ده صميم استغلال التأطير الديني المُسلَّح: بيستورد ادعاء يبدو علمياً، وبعدين بيلفّه بالمقدّس علشان يحميه من الدليل.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://www.hsph.harvard.edu/nutritionsource/protein/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "scientific miracle framing",
+      "techniqueAr": "تأطير الإعجاز العلمي",
+      "task": "Feel this technique from the inside (so you can spot it later). Write a short post claiming that a harmless common food — like lentils — has a 'scientific miracle' in the Quran that 'modern researchers are just discovering.' Make it feel awe-inspiring and faith-affirming.",
+      "taskAr": "اشعر بهذه التقنية من جوّه (علشان تكشفها بعدين). اكتب بوست قصير بيدّعي إن طعام عادي غير ضار — زي العدس — فيه «إعجاز علمي» في القرآن «الباحثون الحديثون بس دلوقتي بيكتشفوه». خلّيه يبدو مُلهِماً ومؤكّداً للإيمان.",
+      "tells": [
+        "The 'scientific miracle' frame pre-empts any counter-evidence: disproving it now feels like attacking the Quran.",
+        "The claim cannot be falsified: any study showing the food is ordinary is dismissed as 'they haven't discovered the miracle yet.'",
+        "It conflates two separate questions: 'Does the Quran mention this food?' (historical/linguistic) and 'Does this food cure X disease?' (clinical).",
+        "It creates an emotional loyalty to the claim through faith identity — you defend the food to defend the Quran.",
+        "It typically cites no named verse, no named study, and no mechanism — the 'miracle' is deliberately vague."
+      ],
+      "tellsAr": [
+        "إطار «الإعجاز العلمي» بيسدّ مسبقاً أي دليل معاكس: تفنيده بقى يحسّس إنه هجوم على القرآن.",
+        "الادعاء مستحيل يتفنّد: أي دراسة تُظهِر إن الطعام عادي بتتجاهل بـ«لسه مكتشفوش الإعجاز».",
+        "بيخلط بين سؤالين منفصلين: «هل القرآن بيذكر الأكل ده؟» (تاريخي/لغوي) و«هل الأكل ده بيشفي المرض س؟» (إكلينيكي).",
+        "بيخلق ولاء عاطفي للادعاء عبر الهوية الإيمانية — بتدافع عن الأكل دفاعاً عن القرآن.",
+        "غالباً ما يستشهد بلا آية مسمّاة ولا دراسة مسمّاة ولا آلية — «الإعجاز» مُبهَم بقصد."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:redflag-6",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 6,
+      "mechanic": "consider_opposite",
+      "claim": "After learning the difference between legitimate and weaponised religious framing, a friend says: 'So we should never trust health advice from a religious scholar.'",
+      "claimAr": "بعد ما عرفت الفرق بين التأطير الديني المشروع والمُسلَّح، صديق بيقول: «يعني محدش يوثّق في أي نصيحة صحية من عالِم ديني؟»",
+      "prompt": "What would DISPROVE the idea that religious scholars can never be trusted on health? What would a more accurate, nuanced position look like?",
+      "promptAr": "إيه اللي يكذّب فكرة إن علماء الدين ما ينفعش يُوثَق بيهم في الصحة أبداً؟ وإيه الموقف الأدق والأكثر دقة؟",
+      "modelPoints": [
+        "A scholar speaking about spiritual dimensions of health (patience in illness, gratitude, community support) is in their domain — and there is good evidence for the mental-health benefits of spiritual community.",
+        "The three-question test applies to everyone: Is this their domain? Is the health claim separately evidenced? Does it require abandoning proven medicine?",
+        "Religious identity is not a disqualifier — it is simply not a substitute for clinical evidence in the medical domain.",
+        "The over-correction (never trust any religious voice on health) is itself black-and-white thinking — the same error as the over-trust."
+      ],
+      "modelPointsAr": [
+        "عالِم بيتكلّم في الجوانب الروحية للصحة (الصبر في المرض، الشكر، دعم المجتمع) هو في مجاله — وفي دليل كويس على فوائد الصحة النفسية للمجتمع الروحي.",
+        "اختبار الأسئلة الثلاثة ينطبق على الكل: هل ده مجاله؟ هل للادعاء الصحي دليل منفصل؟ هل بيطلب التخلّي عن الطب المُثبَت؟",
+        "الهوية الدينية مش سبب رفض — بس مش بديل عن الدليل الإكلينيكي في المجال الطبي.",
+        "التصحيح المبالغ فيه (لا تثق أبداً بأي صوت ديني في الصحة) هو نفسه تفكير ثنائي — نفس الخطأ بالنسبة للثقة المبالغ فيها."
+      ],
+      "sources": [
+        "https://www.apa.org/monitor/2013/12/ce-corner",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    }
+  ]
+}

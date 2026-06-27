@@ -1,0 +1,29 @@
+{
+  "id": "day15_reaction_time",
+  "phase": 0,
+  "week": 3,
+  "day": 15,
+  "title": "Reaction Time & Emotional Impulsivity",
+  "titleAr": "وقت ردة الفعل والاندفاع العاطفي",
+  "description": "10 viral claims shown rapidly. Can you resist sharing before thinking?",
+  "descriptionAr": "10 ادعاءات فيروسية بسرعة. هل تقاوم المشاركة قبل التفكير؟",
+  "type": "reaction_test",
+  "difficulty": 2,
+  "estimatedMinutes": 8,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "BREAKING: Egypt discovers massive oil under the Nile Delta — could make Egypt richer than Saudi Arabia!",
+      "claimAr": "عاجل: مصر تكتشف نفط ضخم تحت دلتا النيل — قد تصبح أغنى من السعودية!",
+      "truthValue": "false",
+      "category": "economics",
+      "difficulty": 2,
+      "explanation": "Sensational headlines with extreme claims are red flags. Wait 24h before sharing breaking news.",
+      "explanationAr": "العناوين المثيرة بادعاءات متطرفة علامات تحذيرية. انتظر 24 ساعة.",
+      "sources": [
+        "https://www.egpc.com.eg"
+      ],
+      "cognitivebiasAtPlay": "Sensationalism Bias"
+    }
+  ]
+}

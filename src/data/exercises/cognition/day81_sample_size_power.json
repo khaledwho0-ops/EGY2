@@ -1,0 +1,124 @@
+{
+  "id": "day81_sample_size_power",
+  "phase": 2,
+  "week": 12,
+  "day": 81,
+  "title": "How Many People? Sample Size and Statistical Power",
+  "titleAr": "عدد الناس — حجم العيّنة والقوة الإحصائية",
+  "description": "A study on 12 people can't tell you much. A study on 12,000 might. Learn how sample size determines whether a study can actually detect a real effect — and how sellers exploit small studies to generate impressive-looking numbers.",
+  "descriptionAr": "دراسة على 12 شخص ما تقدرش تقولك كتير. دراسة على 12,000 ممكن تقدر. اتعلّم كيف حجم العيّنة بيحدّد قدرة الدراسة على اكتشاف تأثير حقيقي — وكيف البيّاعين بيستغلوا الدراسات الصغيرة لينتجوا أرقام تبان مُثيرة.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-estimating-and-sampling",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A supplement is tested on 8 people. Five improve (62.5%). The seller says: \"More than half our patients showed improvement — this is strong evidence.\" What is the main problem here?",
+      "claimAr": "مكمّل اتختبر على 8 أشخاص. خمسة تحسّنوا (62.5%). البائع بيقول: «أكتر من نص مرضانا أظهروا تحسّن — ده دليل قوي.» إيه المشكلة الرئيسية هنا؟",
+      "options": [
+        "62.5% is always a low percentage",
+        "Eight people is far too small to separate a real effect from random variation; flipping a coin 8 times gets 5 heads fairly often",
+        "The seller should have tested 9 people",
+        "Improvement needs to be 100% to count"
+      ],
+      "correctAnswer": 1,
+      "explanation": "With only 8 people, random variation dominates. If you toss a fair coin 8 times, getting 5 heads (62.5%) has about a 1-in-3 chance of happening by luck. This study has no statistical power to distinguish a real treatment effect from natural fluctuation, placebo response, or measurement noise. A meaningful estimate of an effect requires adequate sample sizes — typically hundreds to thousands for medical interventions.",
+      "explanationAr": "مع 8 أشخاص بس، التباين العشوائي مسيطر. لو رميت عملة معدنية 8 مرات، الحصول على 5 صور (62.5%) عنده احتمال حوالي 1 من 3 يحصل بالحظ. الدراسة دي ما عندهاش القوة الإحصائية الكافية تفرّق بين تأثير علاج حقيقي والتذبذب الطبيعي أو استجابة الوهمي أو ضوضاء القياس. تقدير ذي معنى لتأثير ما يحتاج أحجام عيّنة كافية — عادةً مئات لآلاف للتدخّلات الطبية.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-estimating-and-sampling",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "Statistical power is the ability of a study to detect a real effect IF one exists. A study with low power that finds 'no significant result' proves the treatment truly doesn't work. True or false?",
+      "claimAr": "القوة الإحصائية هي قدرة الدراسة على اكتشاف تأثير حقيقي لو وُجد. دراسة بقوة منخفضة تلاقي «لا نتيجة هامة» يُثبت إن العلاج فعلاً ما بينفعش. صح ولا غلط؟",
+      "options": [
+        "True — no significant result means no effect",
+        "False — a low-powered study may simply lack the sample size to detect an effect that genuinely exists"
+      ],
+      "correctAnswer": 1,
+      "myth_en": "No significant result = no effect.",
+      "myth_ar": "لا نتيجة هامة = لا تأثير.",
+      "explanation": "False. A low-powered study may simply lack the sample size to detect an effect that genuinely exists. Imagine trying to weigh a feather on a bathroom scale — the scale says zero, but the feather has weight. The missing finding is a measurement failure, not proof of absence. This is called a Type II error (false negative). Before trusting a 'null result,' ask: was the study large enough to detect a meaningful effect?",
+      "explanationAr": "غلط. دراسة ذات قوة منخفضة ممكن ببساطة تفتقر لحجم العيّنة الكافي لاكتشاف تأثير موجود فعلاً. تخيّل إنك بتوزن ريشة على ميزان حمّام — الميزان بيقول صفر، لكن الريشة لها وزن. النتيجة الغائبة فشل في القياس، مش دليل على الغياب. ده اسمه خطأ النوع الثاني (نتيجة سالبة كاذبة). قبل ما تثق في «نتيجة صفرية»، اسأل: هل الدراسة كانت كبيرة بما يكفي لاكتشاف تأثير ذي معنى؟",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-estimating-and-sampling"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The Egyptian Medical Syndicate investigating the viral «نظام الطيبات» diet requested just three documented clinical cases with before/after lab results. Even three genuine recoveries cannot constitute solid clinical evidence.",
+      "claimAr": "نقابة الأطباء المصرية وهي بتحقّق في نظام «الطيبات» طلبت ثلاث حالات سريرية موثّقة بس بتحاليل قبل/بعد. حتى ثلاث تعافيات حقيقية ما تُشكّلش دليلاً سريرياً قوياً.",
+      "options": [
+        "Three cases is enough if they are Egyptian",
+        "Three cases cannot rule out that the result was due to placebo, natural recovery, or a different simultaneous treatment; massive variation in human health means small samples can't generalize"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does human biological variation mean that three cases — even three genuine recoveries — tell us almost nothing about whether a treatment reliably works?",
+        "promptAr": "بكلماتك: ليه التباين البيولوجي البشري يعني إن ثلاث حالات — حتى ثلاث تعافيات حقيقية — ما بتقولناش تقريباً حاجة عن إذا كان العلاج شغّال بشكل موثوق؟"
+      },
+      "explanation": "Three cases — even three genuine recoveries — cannot rule out spontaneous remission, placebo effect, other simultaneous interventions, or measurement error. Human bodies vary enormously. To claim a treatment works at a population level, you need enough patients to average out individual variation, a control group to compare against, and blinding to remove expectation effects. The Syndicate's request was a floor, not a ceiling — and receiving nothing at all was the most decisive possible finding.",
+      "explanationAr": "ثلاث حالات — حتى لو ثلاث تعافيات حقيقية — ما تقدرش تستبعد الهدأة العفوية، أو تأثير الوهمي، أو تدخّلات متزامنة أخرى، أو خطأ في القياس. أجساد البشر بتتباين بشكل كبير جداً. لتدّعي إن علاجاً شغّال على مستوى السكان، محتاج مرضى بما يكفي لمعدلة التباين الفردي، ومجموعة ضابطة للمقارنة، وتعمية لإزالة تأثيرات التوقّع. طلب النقابة كان الحدّ الأدنى، مش السقف — وعدم تلقّي أي حاجة خالص كان أحسم نتيجة ممكنة.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-estimating-and-sampling"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A seller proudly says: \"Our product was tested in a clinical trial!\" When you look, the trial had 15 participants and lasted 2 weeks. You are tempted to trust it because 'clinical trial' sounds rigorous.",
+      "claimAr": "بائع بيقول بفخر: «منتجنا اتختبر في تجربة سريرية!» لمّا تطلع، التجربة كان فيها 15 مشارك واستمرت أسبوعين. بتميل لتثق فيها لأن «تجربة سريرية» بتبان صارمة.",
+      "prompt": "What conditions would have to be true for this 15-person, 2-week trial to actually provide useful evidence? And which of those conditions is most likely NOT met?",
+      "promptAr": "إيه الشروط اللي لازم تكون صحيحة عشان التجربة دي على 15 شخص لأسبوعين تقدّم دليلاً مفيداً فعلاً؟ وأنهي من الشروط دي أكثر احتمالاً إنها مش موجودة؟",
+      "modelPoints": [
+        "For the trial to be useful: the effect would need to be so large that even 15 people could detect it reliably — like a fracture treatment, not a subtle metabolic change.",
+        "Two weeks is far too short for outcomes like weight loss, blood sugar control, or disease progression, where changes accumulate over months.",
+        "Most likely NOT met: the study was almost certainly underpowered (no sample-size calculation was done, or it would have shown the study needs far more participants).",
+        "The label 'clinical trial' covers everything from a 10-person pilot to a 30,000-person phase-3 RCT — the label alone tells you nothing about quality.",
+        "Honest sellers list sample size, duration, and power calculation in the abstract — which most of these cannot do."
+      ],
+      "modelPointsAr": [
+        "عشان التجربة تكون مفيدة: التأثير لازم يكون كبير جداً لدرجة إن 15 شخص حتى يقدروا يكشفوه بشكل موثوق — زي علاج كسر، مش تغيير أيضي خفيف.",
+        "أسبوعان قصيران جداً لنتائج زي خسارة الوزن أو التحكّم في السكر أو تطوّر المرض، حيث التغييرات بتتراكم على مدى أشهر.",
+        "الأكثر احتمالاً إنها مش موجودة: الدراسة كانت تقريباً قطعاً ضعيفة القوة الإحصائية (ما اتعملش حساب لحجم العيّنة، أو كان سيُظهر إن الدراسة محتاجة مشاركين أكتر بكتير).",
+        "مسمّى «التجربة السريرية» بيغطّي كل حاجة من تجربة تجريبية على 10 أشخاص لتجربة مرحلة ثالثة عشوائية على 30,000 شخص — المسمّى لوحده ما بيقولكش حاجة عن الجودة.",
+        "البيّاعين الأمناء بيدرجوا حجم العيّنة والمدة وحساب القوة في المستخلص — وهو اللي معظم هؤلاء ما يقدرش يعمله."
+      ],
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-estimating-and-sampling",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"A 200-person study and a 2,000-person study both got p = 0.04 for the same drug. Since both crossed the significance threshold, they provide equal evidence for the drug's effectiveness.\"",
+      "claimAr": "فكّك الحُجّة دي: «دراسة على 200 شخص ودراسة على 2,000 شخص كلتاهما حصلت على p = 0.04 لنفس الدواء. بما إن كلتاهما عدّت عتبة الأهمية، فهما بيقدّمان دليلاً متساوياً على فعالية الدواء.»",
+      "parts": [
+        { "text": "Both studies provide equal evidence for the drug's effectiveness.", "textAr": "كلتا الدراستين بيقدّمان دليلاً متساوياً على فعالية الدواء.", "role": "conclusion" },
+        { "text": "Both studies got p = 0.04.", "textAr": "كلتا الدراستين حصلت على p = 0.04.", "role": "premise" },
+        { "text": "(Unstated) p-value alone determines evidence quality — sample size adds nothing.", "textAr": "(غير مذكور) قيمة p وحدها تحدّد جودة الدليل — حجم العيّنة ما بيضيفش حاجة.", "role": "assumption" },
+        { "text": "Both crossed the significance threshold.", "textAr": "كلتاهما عدّت عتبة الأهمية.", "role": "premise" }
+      ],
+      "explanation": "The hidden assumption is that p-value alone determines evidence quality. It does not. The 2,000-person study will have a much tighter confidence interval — say 0.8–1.2 headaches/month — meaning the true effect is reliably near the estimate. The 200-person study might have a CI of 0.2–1.8 — the same p, but the effect could be tiny or large. Larger samples yield better precision, more reliable CIs, and estimates that generalize better to diverse patient populations.",
+      "explanationAr": "الافتراض الخفي هو إن قيمة p وحدها تحدّد جودة الدليل. ما بتحدّدش. دراسة الـ2,000 شخص هيكون عندها فترة ثقة أضيق بكتير — مثلاً 0.8–1.2 نوبة/شهر — يعني التأثير الحقيقي موثوق قريب من التقدير. دراسة الـ200 ممكن يكون فترة ثقتها 0.2–1.8 — نفس قيمة p، لكن التأثير ممكن يكون صغير أو كبير. العيّنات الأكبر بتنتج دقة أفضل وفترات ثقة أكثر موثوقية وتقديرات تُعمَّم بشكل أفضل على مجتمعات مرضى متنوّعة.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/6-estimating-and-sampling",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

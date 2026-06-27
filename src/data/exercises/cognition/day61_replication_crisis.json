@@ -1,0 +1,128 @@
+{
+  "id": "day61_replication_crisis",
+  "phase": 2,
+  "week": 9,
+  "day": 61,
+  "title": "When Science Gets It Wrong — The Replication Crisis",
+  "titleAr": "لمّا العلم بيغلط — أزمة التكرار",
+  "description": "Science corrects itself — but that process is slow and painful. The replication crisis shows why one study is never the final word, and why pseudoscience exploits single headlines.",
+  "descriptionAr": "العلم بيصحّح نفسه — لكن العملية دي بطيئة ومؤلمة. أزمة التكرار بتوضّح ليه دراسة واحدة مش الكلام الأخير أبداً، وليه العلم الزائف بيستغلّ عناوين الأخبار المفردة.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://www.nature.com/articles/533452a",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A nutrition study from 2015 showed that eating a specific herb daily reduced blood pressure in 80 participants. In 2019, three independent labs tried to repeat the study with the same protocol — none found the same effect. What does this mean?",
+      "claimAr": "دراسة تغذية من 2015 وضّحت إن أكل عشبة معيّنة يومياً خفّض الضغط في 80 مشارك. في 2019، ثلاث مختبرات مستقلة حاولت تكرار الدراسة بنفس البروتوكول — ولا واحدة لاقت نفس التأثير. ده بيعني إيه؟",
+      "options": [
+        "The 2015 result is definitely wrong; the herb kills people",
+        "The 2015 finding should now be held with much less confidence — replication failure suggests the original may have been a false positive or had a context-specific effect",
+        "The three labs are lying because the herb industry paid them",
+        "One study is always enough to act on immediately"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Replication — repeating a study independently — is one of science's most important quality checks. When a result cannot be replicated, it does not automatically mean fraud, but it does mean the original finding should be held with far less confidence. This is the replication crisis in action: in a landmark 2015 study, researchers tried to replicate 100 psychology studies and succeeded with fewer than 40%. Science acknowledges this and is reforming. Pseudoscience never tries to replicate at all.",
+      "explanationAr": "التكرار — إعادة الدراسة بشكل مستقل — هو من أهم فحوصات الجودة في العلم. لمّا نتيجة ما تتكرّرش، ده مش بيعني تلقائياً تزوير، لكن بيعني إن النتيجة الأصلية لازم تُؤخذ بثقة أقل بكتير. دي أزمة التكرار في الفعل: في دراسة مرجعية 2015، حاول باحثون تكرار 100 دراسة نفسية ونجحوا في أقل من 40%. العلم بيعترف بده وبيصلح نفسه. العلم الزائف ما بيحاولش التكرار أبداً.",
+      "sources": [
+        "https://www.nature.com/articles/533452a",
+        "https://www.science.org/doi/10.1126/science.aac4716"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A seller quotes a single 2009 study: \"Scientists proved omega-3 prevents heart disease.\" You know the Cochrane review from 2018 pooled many studies and found the effect was much smaller and uncertain. What is the honest response?",
+      "claimAr": "بائع بيقتبس دراسة واحدة من 2009: «العلماء أثبتوا إن أوميغا 3 بيمنع أمراض القلب». بتعرف إن مراجعة Cochrane من 2018 جمّعت دراسات كتير ولاقت التأثير أصغر بكتير وغير مؤكّد. إيه الردّ الأمين؟",
+      "options": [
+        "\"The 2018 review is wrong because the 2009 study was earlier.\"",
+        "\"A single older study is weaker evidence than a systematic review pooling many trials. The current best evidence suggests modest uncertainty — that is worth knowing.\"",
+        "\"All omega-3 studies are fake.\"",
+        "\"Accept both equally — all studies are equal.\""
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does a systematic review pooling many studies outweigh a single older study — even if the single study was done carefully?",
+        "promptAr": "بكلماتك: ليه مراجعة منهجية بتجمّع دراسات كتير بترجح على دراسة واحدة قديمة — حتى لو الدراسة الواحدة اتعملت بعناية؟"
+      },
+      "explanation": "On the evidence ladder, a systematic review or meta-analysis pooling many studies sits higher than any single trial. Citing one old study while ignoring a newer, larger review is cherry-picking — one of the 12 red flags of pseudoscience. The honest answer tells people where the current weight of evidence sits, including its uncertainty. That is protective, not pessimistic. Single studies can be flukes; convergence across many independent studies is harder to fake.",
+      "explanationAr": "على سلّم الأدلة، مراجعة منهجية أو تحليل بَعدي بيجمّع دراسات كتير بيقعد أعلى من أي تجربة فردية. الاستشهاد بدراسة واحدة قديمة مع تجاهل مراجعة أحدث وأكبر هو انتقاء الكرز — واحدة من 12 علامة تحذير من العلم الزائف. الإجابة الأمينة بتقول للناس فين يقع الوزن الحالي للأدلة، بما فيه عدم يقينه. ده وقاية مش تشاؤم. الدراسات الفردية ممكن تبقى صدفة؛ التقاطع عبر دراسات مستقلة كتير أصعب يكون مزيّف.",
+      "sources": [
+        "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD003177.pub4/full",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "The replication crisis proves science is broken. You are inclined to agree — scientists keep getting caught publishing results that don't hold up.",
+      "claimAr": "أزمة التكرار بتثبت إن العلم خربان. إنت مائل توافق — علماء بيتلبسوا بنشر نتائج ما بتصمدش.",
+      "prompt": "What would have to be true if this conclusion were wrong? What does the existence and public acknowledgement of the crisis itself actually signal?",
+      "promptAr": "لو الاستنتاج ده غلط، إيه اللي لازم يكون صح؟ وإيه اللي وجود الأزمة ورفعها للعامة بنفسه بيشير إليه؟",
+      "modelPoints": [
+        "A system that publicly discovers and names its own errors is demonstrating self-correction — the opposite of being broken.",
+        "Pseudoscience has zero replication attempts, zero public correction, and never admits a failure. That is what a truly broken system looks like.",
+        "The replication crisis is science working — slowly and painfully, but working. The findings that survive repeated independent testing are now more trustworthy, not less.",
+        "The logical fallacy here is a non-sequitur: 'some studies failed to replicate' does not lead to 'all of science is untrustworthy.'"
+      ],
+      "modelPointsAr": [
+        "النظام اللي بيكتشف ويسمّي أخطاءه علناً بيُظهر إصلاح ذاتي — عكس إنه خربان.",
+        "العلم الزائف عنده صفر محاولات تكرار، وصفر تصحيح عام، وما بيعترفش بفشل. ده هو شكل النظام الخربان فعلاً.",
+        "أزمة التكرار هي العلم وهو يشتغل — ببطء وبألم، لكنه شغّال. النتائج اللي صمدت للاختبار المتكرر المستقل بقت أجدر بالثقة، مش أقل.",
+        "المغالطة المنطقية هنا استنتاج فاسد: «بعض الدراسات ما اتكرّرتش» لا يؤدي إلى «كل العلم غير موثوق»."
+      ],
+      "explanation": "Considering the opposite reveals a non-sequitur: science's public self-correction is evidence of trustworthiness, not its opposite. Compare the Taybat system: zero independent replications, zero public correction when harm emerged. The real lesson is 'trust convergent, replicated findings' — not 'distrust everything.'",
+      "explanationAr": "التفكير في العكس بيكشف الاستنتاج الفاسد: الإصلاح الذاتي العلني للعلم هو دليل على جدارة الثقة، مش عكسها. قارن بنظام «الطيبات»: صفر تكرارات مستقلة، صفر تصحيح عام لمّا الأذى ظهر. الدرس الحقيقي هو «ثق في النتائج المتقاربة المُكرَّرة» — مش «شكّك في كل حاجة».",
+      "sources": [
+        "https://www.nature.com/articles/533452a",
+        "https://www.science.org/doi/10.1126/science.aac4716"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 4,
+      "mechanic": "recognize",
+      "claim": "Which of these behaviours best explains why the replication crisis happened?",
+      "claimAr": "أنهي من السلوكيات دي أفضل ما يفسّر ليه حصلت أزمة التكرار؟",
+      "options": [
+        "Scientists being paid by governments to lie",
+        "Journals preferring to publish exciting positive results over boring null results — causing 'publication bias'",
+        "Scientists not being smart enough",
+        "The internet making science too available"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Publication bias is the main structural driver: journals historically preferred surprising, positive results over null results, creating a scientific literature skewed toward findings that look exciting but may be false positives. Add small sample sizes, HARKing (hypothesizing after results are known), and pressure to publish — and you get a literature with inflated effect sizes. This is not malice; it is a systemic incentive problem that the scientific community is now actively reforming.",
+      "explanationAr": "انحياز النشر هو المحرّك الهيكلي الرئيسي: المجلات تاريخياً فضّلت النتائج المُثيرة الإيجابية على النتائج الصفرية، خالقةً أدبيات علمية منحازة نحو نتائج تبدو مثيرة لكن ممكن تكون إيجابيات كاذبة. أضف العيّنات الصغيرة، وHARKing (وضع الفرضية بعد معرفة النتائج)، وضغط النشر — وهتلاقي أدبيات بأحجام تأثير متضخّمة. ده مش سوء نية؛ ده مشكلة حوافز منظومية المجتمع العلمي بيُصلحها بنشاط دلوقتي.",
+      "sources": [
+        "https://www.nature.com/articles/533452a",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5546574/"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 60,
+      "claim": "A WhatsApp message says: \"Breaking: a new study proves coffee cures Alzheimer's.\" Using today's replication lesson AND yesterday's blinding lesson, name the two questions you should ask before sharing.",
+      "claimAr": "رسالة واتساب بتقول: «عاجل: دراسة جديدة أثبتت إن القهوة بتشفي الزهايمر». باستخدام درس التكرار النهاردة ودرس التعمية إمبارح، سمّي السؤالين اللي لازم تسألهم قبل ما تشارك.",
+      "options": [
+        "How much coffee should I drink, and what brand?",
+        "1) Has this finding been independently replicated? 2) Was the study blinded — did anyone measuring the outcome know who was in which group?",
+        "Did the researcher have a PhD, and was the journal expensive?",
+        "Is the headline exciting enough to share?"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Both lessons activate at once: replication (is this one study or a converging finding?) and blinding (was expectation controlled so hope didn't write the result?). A single unblinded study is the weakest possible signal — combining both weaknesses makes it essentially uninformative, no matter how dramatic the headline.",
+      "explanationAr": "كلا الدرسين بيشتغلان في نفس الوقت: التكرار (ده دراسة واحدة ولا نتيجة متقاربة؟) والتعمية (هل اتُحكِم في التوقّع علشان الأمل ما يكتبش النتيجة؟). الدراسة الواحدة غير المُعمَّاة هي أضعف إشارة ممكنة — الجمع بين الضعفين بيخلّيها غير مُخبِرة تقريباً، مهما كان العنوان مثيراً.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5746464/",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    }
+  ]
+}

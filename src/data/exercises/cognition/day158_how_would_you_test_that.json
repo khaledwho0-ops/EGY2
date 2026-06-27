@@ -1,0 +1,156 @@
+{
+  "id": "day158_how_would_you_test_that",
+  "phase": 4,
+  "week": 23,
+  "day": 158,
+  "title": "\"How Would You Test That?\" — The Socratic Move",
+  "titleAr": "«إزاي تختبر ده؟» — الحركة السقراطية",
+  "description": "Instead of 'you're wrong,' try 'how would you know if it stopped working?' This one question hands the tools of science back to the person — without a lecture.",
+  "descriptionAr": "بدل «إنت غلطان»، جرّب «إزاي هتعرف لو بطّل يشتغل؟» السؤال الواحد ده بيرجّع أدوات العلم للشخص — من غير محاضرة.",
+  "type": "logic",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/socratic-method/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A neighbour says: \"I've been on the diet for a month and my energy is so much better.\" Instead of explaining the placebo effect, you ask one Socratic question. Which one is most likely to open genuine reflection?",
+      "claimAr": "جار بيقول: «أنا على الحِمية من شهر وطاقتي أحسن بكتير.» بدل ما تشرح التأثير الوهمي، بتسأل سؤال سقراطي واحد. أنهي واحد فيهم الأرجح إنه يفتح تأمل حقيقي؟",
+      "options": [
+        "\"Did you know the placebo effect can produce real feelings of energy?\"",
+        "\"What changed in the same month — your sleep, your stress, your exercise?\"",
+        "\"The diet doesn't actually improve energy — there's no peer-reviewed evidence.\"",
+        "\"How many people have told you the same thing happened to them?\""
+      ],
+      "correctAnswer": 1,
+      "explanation": "Option B is a pure Socratic move: it doesn't introduce doubt by telling him he's wrong — it invites him to notice the confounders himself. A month of lifestyle change often involves sleep improvement, stress reduction, and reduced junk food, all of which independently improve energy. By asking what else changed, you plant the scientific concept of 'controlling for variables' without labelling it — and he arrives at the idea himself.",
+      "explanationAr": "الخيار ب هو حركة سقراطية خالصة: ما بيدخّلش الشك بإخباره إنه غلطان — بيدعوه يلاحظ بنفسه العوامل المربكة. شهر من تغيير نمط الحياة غالباً بيتضمّن تحسين النوم وتقليل التوتر وتقليل الأكل المُضرّ، والثلاثة دول بيحسّنوا الطاقة باستقلالية. بسؤال إيه اللي اتغيّر كمان، بتزرع مفهوم علمي «ضبط المتغيرات» من غير ما تسمّيه — وهو بيوصّل للفكرة بنفسه.",
+      "sources": [
+        "https://plato.stanford.edu/entries/socratic-method/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "When a claim is unfalsifiable ('it only fails if you didn't commit fully'), the most powerful response is to name the fallacy out loud. Before you answer — how sure are you?",
+      "claimAr": "لمّا ادعاء يكون مش قابل للتفنيد («بيفشل بس لو ما التزمتش كامل»)، أقوى ردّ هو إنك تسمّي المغالطة بصوت عالي. قبل ما تجاوب — إنت متأكد قد إيه؟",
+      "options": [
+        "True — name the fallacy, that's the strongest move",
+        "False — the stronger move is the Socratic question that lets them feel the unfalsifiability themselves"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Naming the fallacy ('that's unfalsifiable!') sounds like an attack and rarely lands. The more powerful move is the question that *shows* it: 'what outcome would convince you the system isn't working for you?' If they can name one, you share a standard. If they can't, they often discover for themselves that the system is built to be untestable. Now check your confidence against your answer: if you felt very sure but picked 'True', that gap is exactly the overconfidence this curriculum trains you to notice.",
+      "explanationAr": "تسمية المغالطة («ده غير قابل للتفنيد!») بتبدو كهجوم ونادراً ما تنجح. الحركة الأقوى هي السؤال اللي *يُريك* عدم القابلية للتفنيد: «أنهي نتيجة هتقنعك إن النظام مش شاغل معاك؟» لو قدروا يسمّوا واحدة، عندك معيار مشترك. لو ما قدروش، بيكتشفوا بنفسهم إن النظام متصمَّم ليكون مش قابل للاختبار. دلوقتي قارن ثقتك بإجابتك: لو كنت متأكد جداً واخترت «صح»، الفجوة دي بالظبط الثقة الزايدة اللي المنهج بيدرّبك تلاحظها.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:redflag-4"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A follower of the viral diet says: \"I believe in it completely — no study will change my mind.\" The skilful response is a question, not a counter-study. Which question best applies the 'how would you test that?' principle?",
+      "claimAr": "تابع لنظام «الطيبات» بيقول: «أنا مؤمن بيه تماماً — مفيش دراسة هتغيّر رأيي.» الردّ الماهر سؤال مش دراسة مضادة. أنهي سؤال أفضل تطبيق لمبدأ «إزاي تختبر ده»؟",
+      "options": [
+        "\"That sounds like faith, not health practice.\"",
+        "\"So if a family member were seriously harmed by following it, would that change anything for you?\"",
+        "\"The studies are very clear — I can send you links.\"",
+        "\"Why are you so closed-minded about this?\""
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does asking 'would harm to a loved one change your mind?' work better than sending him studies — when he just told you no study matters?",
+        "promptAr": "بكلماتك: ليه سؤال «لو حد بتحبّه اتأذى هيغيّر رأيك؟» بيشتغل أحسن من إنك تبعتله دراسات — وهو لسه قايلك إن مفيش دراسة بتفرق؟"
+      },
+      "explanation": "He already declared studies off-limits, so any study you send bounces off. Option B bypasses the 'no study' shield by switching to the one currency he said he'll consider — personal proximity. It doesn't mock his certainty; it gently introduces a real-world test he can't dismiss, and it plants a seed rather than demanding an answer now. Mind-changes rarely come from abstract data — they come through someone the person loves. Naming this reasoning yourself (as you just did) is what makes the move yours to reuse.",
+      "explanationAr": "هو قال صريح إن الدراسات ممنوعة، فأي دراسة تبعتها هترتدّ. الخيار ب بيتجاوز درع «لا دراسة» بالتحوّل للعملة الوحيدة اللي قال إنه هيأخذ بالها — القُرب الشخصي. ما بيسخرش من يقينه؛ بيدخّل بلطف اختباراً من الواقع ما يقدرش يرفضه، وبيزرع بذرة بدل ما يطلب إجابة دلوقتي. تغييرات الرأي نادراً ما تيجي من بيانات مجردة — بتيجي من خلال حد بيحبّه الشخص. وإنك تسمّي المنطق ده بنفسك (زي ما عملت) هو اللي بيخلّي الحركة ملكك تعيد استخدامها.",
+      "sources": [
+        "https://plato.stanford.edu/entries/socratic-method/",
+        "https://www.apa.org/monitor/2011/10/motivational-interviewing"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "You're convinced the Socratic question is ALWAYS the right tool — better than ever stating a fact. It feels respectful, gentle, and it works.",
+      "claimAr": "إنت مقتنع إن السؤال السقراطي هو دايماً الأداة الصح — أحسن من إنك تقول حقيقة أبداً. بيحسّ محترم ولطيف وبيشتغل.",
+      "prompt": "Argue the other side: when could 'just ask questions' actually fail, or even harm? What would have to be true for a direct, sourced statement to be the kinder move?",
+      "promptAr": "اتكلم بالعكس: إمتى «بس اسأل أسئلة» ممكن يفشل، أو حتى يأذي؟ إيه اللي لازم يكون صح علشان جملة مباشرة مدعومة بمصدر تكون هي الحركة الأرحم؟",
+      "modelPoints": [
+        "If the person is about to stop insulin TODAY, gentle questions waste time you don't have — a clear, sourced warning may be the safer act.",
+        "Endless questioning with no information of your own can feel like a trap or interrogation, not a conversation.",
+        "Socratic questions assume the person is reasoning toward truth; when a claim is causing imminent physical harm, the priority shifts from reflection to safety.",
+        "Bystanders reading the thread sometimes need to see the actual evidence stated plainly, not only implied by your questions.",
+        "The honest goal isn't 'never assert' — it's 'lower defences first, then offer evidence the person can actually hear.'"
+      ],
+      "modelPointsAr": [
+        "لو الشخص هيوقف الأنسولين النهاردة، الأسئلة اللطيفة بتضيّع وقت إنت مش مالكه — تحذير واضح بمصدر ممكن يكون الفعل الأأمن.",
+        "السؤال اللا-نهائي من غير أي معلومة من عندك ممكن يحسّ كفخ أو استجواب، مش محادثة.",
+        "الأسئلة السقراطية بتفترض إن الشخص بيفكّر نحو الحقيقة؛ لمّا الادعاء بيسبّب أذى جسدي وشيك، الأولوية بتتحوّل من التأمل للسلامة.",
+        "المتفرّجين اللي بيقروا المحادثة أحياناً محتاجين يشوفوا الدليل الفعلي مقول صريح، مش بس مُلمَّح ليه بأسئلتك.",
+        "الهدف الأمين مش «ما تأكّدش أبداً» — هو «نزّل الدفاعات الأول، وبعدين قدّم دليل الشخص يقدر يسمعه فعلاً»."
+      ],
+      "explanation": "Considering the opposite stops you from turning a good tool into a rigid rule. The Socratic move is powerful for reflection, not for emergencies. Holding it loosely — knowing when a plain sourced statement is the more compassionate act — is the mark of skill, not inconsistency.",
+      "explanationAr": "التفكير في العكس بيمنعك من تحويل أداة كويسة لقاعدة جامدة. الحركة السقراطية قوية للتأمل، مش للطوارئ. إنك تمسكها بخفّة — وتعرف إمتى الجملة المدعومة الصريحة هي الفعل الأرحم — دي علامة المهارة، مش التناقض.",
+      "sources": [
+        "https://plato.stanford.edu/entries/socratic-method/",
+        "EAL-case-001:redflag-8"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "the fake-Socratic 'just asking questions' move",
+      "techniqueAr": "حركة «أنا بس بسأل» السقراطية المزيّفة",
+      "task": "Manipulators borrow the Socratic style to spread doubt, not truth. Feel it from the inside (so you can spot it later): write 2–3 'innocent questions' that, instead of opening real inquiry, quietly push a harmless false idea — like 'maybe drinking water with meals is secretly bad for you' — by implying a hidden danger you never have to prove.",
+      "taskAr": "المتلاعبين بيستعيروا الأسلوب السقراطي علشان ينشروا الشك، مش الحقيقة. حسّها من جوّه (علشان تكشفها بعدين): اكتب 2-3 «أسئلة بريئة» اللي بدل ما تفتح بحث حقيقي، بتدفع بهدوء فكرة غلط غير ضارة — زي «يمكن شرب المية مع الأكل وحش ليك في السرّ» — بإنها تلمّح لخطر خفي إنت أصلاً مش مضطر تثبته.",
+      "tells": [
+        "The 'question' isn't really open — it already contains the conclusion it wants you to reach.",
+        "It implies a hidden danger but never names a testable mechanism or cites a source.",
+        "It puts the burden on YOU to disprove it, instead of on the asker to support it.",
+        "Real Socratic questions invite the other person to think; fake ones plant fear and leave.",
+        "If you answered the question honestly, the asker would just move the goalposts to a new 'innocent' question."
+      ],
+      "tellsAr": [
+        "«السؤال» مش مفتوح فعلاً — هو أصلاً شايل الخلاصة اللي عايزك توصلها.",
+        "بيلمّح لخطر خفي لكن ما بيسمّيش آلية قابلة للاختبار ولا بيستشهد بمصدر.",
+        "بيحطّ العبء عليك إنك تنفي، بدل ما يكون على السائل إنه يدعم.",
+        "الأسئلة السقراطية الحقيقية بتدعو الطرف التاني يفكّر؛ المزيّفة بتزرع خوف وتمشي.",
+        "لو جاوبت السؤال بأمانة، السائل هيحرّك المرمى لسؤال «بريء» جديد."
+      ],
+      "explanation": "Building the manipulation in a weakened, harmless dose is 'active inoculation' — research (signal-detection meta-analysis, N=37,025) shows it sharpens your ability to DISCRIMINATE a genuine question from a weaponised one, without making you distrust all questions. Now you've worn the fake-Socratic mask; you'll recognise it faster when someone uses 'I'm just asking' to smuggle a claim past your guard.",
+      "explanationAr": "إنك تبني التلاعب بجرعة مخفّفة غير ضارة ده «التلقيح النشط» — الأبحاث (تحليل بَعدي بنظرية كشف الإشارة، ن=37,025) بتبيّن إنه بيشحذ قدرتك على التمييز بين سؤال حقيقي وسؤال مُسلَّح، من غير ما يخلّيك مش واثق في كل سؤال. دلوقتي لبست قناع السقراطي المزيّف؛ هتكشفه أسرع لمّا حد يستخدم «أنا بس بسأل» علشان يهرّب ادعاء من تحت حراستك.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/pops.70015"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 6,
+      "mechanic": "decompose",
+      "claim": "Map this gentle Socratic exchange so you can see what makes it work: \"You've felt more energy this month — that's real and I'm glad. A month also changed your sleep and stress, which both lift energy on their own. So how would we tell which one did it? Maybe we check together in a month.\"",
+      "claimAr": "فكّك التبادل السقراطي اللطيف ده علشان تشوف إيه اللي بيخلّيه يشتغل: «حسّيت بطاقة أكتر الشهر ده — ده حقيقي وأنا مبسوط. الشهر ده غيّر كمان نومك وتوترك، والاتنين بيرفعوا الطاقة لوحدهم. فإزاي نعرف مين فيهم اللي عمل ده؟ يمكن نشوف مع بعض بعد شهر.»",
+      "parts": [
+        { "text": "Maybe we check together in a month — turning it into a shared, testable plan.", "textAr": "يمكن نشوف مع بعض بعد شهر — تحويلها لخطة مشتركة قابلة للاختبار.", "role": "conclusion" },
+        { "text": "Your energy improved this month, and that improvement is real.", "textAr": "طاقتك اتحسّنت الشهر ده، والتحسّن ده حقيقي.", "role": "premise" },
+        { "text": "Sleep and stress also changed this month and both lift energy on their own.", "textAr": "النوم والتوتر اتغيّروا كمان الشهر ده والاتنين بيرفعوا الطاقة لوحدهم.", "role": "premise" },
+        { "text": "(Unstated) A single uncontrolled change can't tell you which factor caused the result.", "textAr": "(غير مذكور) تغيير واحد غير مضبوط ما يقدرش يقولك أنهي عامل سبّب النتيجة.", "role": "assumption" }
+      ],
+      "explanation": "Mapping the exchange shows why it lands: it opens by validating a real feeling (premise), surfaces the confounders without accusation (second premise), rests on the hidden assumption that an uncontrolled change can't reveal its own cause, and ends not in a verdict but in a shared, testable plan (conclusion). There's no 'you're wrong' anywhere — the structure does the persuading. Seeing the parts lets you build your own Socratic moves instead of copying a script.",
+      "explanationAr": "تفكيك التبادل بيوضّح ليه بينجح: بيبدأ بالتصديق على شعور حقيقي (مقدّمة)، بيطلّع العوامل المربكة من غير اتهام (مقدّمة تانية)، بيرتكز على الافتراض الخفي إن تغيير غير مضبوط ما يقدرش يكشف سببه، وبينتهي مش بحُكم لكن بخطة مشتركة قابلة للاختبار (خلاصة). مفيش «إنت غلطان» في أي مكان — الهيكل هو اللي بيقنع. رؤية الأجزاء بتخلّيك تبني حركاتك السقراطية بنفسك بدل ما تنسخ سكريبت.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2795254/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    }
+  ]
+}

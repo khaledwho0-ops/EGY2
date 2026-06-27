@@ -1,0 +1,30 @@
+{
+  "id": "day26_sus_checkpoint",
+  "phase": 0,
+  "week": 4,
+  "day": 26,
+  "title": "Platform Usability (SUS)",
+  "titleAr": "قابلية الاستخدام SUS",
+  "description": "Rate your EAL experience using validated SUS instrument.",
+  "descriptionAr": "قيّم تجربتك مع منصة EAL.",
+  "type": "usability",
+  "difficulty": 1,
+  "estimatedMinutes": 5,
+  "instrument": "SUS (Brooke 1996)",
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "Complete the 10-item SUS questionnaire about EAL.",
+      "claimAr": "أكمل استبيان SUS المكون من 10 عناصر.",
+      "truthValue": "reflection",
+      "category": "usability",
+      "difficulty": 1,
+      "explanation": "SUS: 10 items, 5-point Likert. Score = sum × 2.5. Benchmarks: A(90+), B(80+), C(70+). Kirkpatrick L1.",
+      "explanationAr": "مقياس SUS: 10 عناصر. الدرجة = المجموع × 2.5.",
+      "sources": [
+        "https://www.usability.gov/how-to-and-tools/methods/system-usability-scale.html"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

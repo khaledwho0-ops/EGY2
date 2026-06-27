@@ -1,0 +1,123 @@
+{
+  "id": "day49_intro_cognitive_biases",
+  "phase": 1,
+  "week": 7,
+  "day": 49,
+  "title": "Meet the 16 Biases — Your Mind's Hidden Shortcuts",
+  "titleAr": "تعرّف على الـ16 انحياز — الاختصارات الخفية في عقلك",
+  "description": "Cognitive biases are not signs of stupidity — they are systematic, predictable patterns in how every human mind processes information under pressure, uncertainty, or emotion. Today you meet the first four and learn to spot them in real Egyptian scenarios.",
+  "descriptionAr": "الانحيازات المعرفية مش علامة غباء — دي أنماط منتظمة ومتوقّعة في الطريقة اللي كل عقل بشري بيعالج بيها المعلومات تحت الضغط أو عدم اليقين أو العاطفة. النهاردة تتعرّف على أول أربعة وتتعلّم تكتشفهم في مواقف مصرية حقيقية.",
+  "type": "bias",
+  "difficulty": 2,
+  "estimatedMinutes": 16,
+  "source": "https://www.apa.org/pubs/journals/releases/psp-783684.pdf",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Nadia has believed in a specific diet for three months. She reads ten articles: seven are sceptical, three are supportive. She remembers the three supportive ones clearly and finds the seven sceptical ones 'poorly written.' Which bias is at work?",
+      "claimAr": "ناديا مقتنعة بحمية معيّنة منذ ثلاثة أشهر. بتقرأ عشر مقالات: سبعة متشكّكة وثلاثة داعمة. بتتذكّر الثلاث الداعمة بوضوح وبتلاقي السبعة المتشكّكة «ضعيفة في الكتابة». أنهي انحياز بيشتغل؟",
+      "options": [
+        "Dunning-Kruger Effect",
+        "Confirmation Bias — the mind automatically magnifies evidence that fits an existing belief and discounts evidence that doesn't, without the person noticing",
+        "Survivorship Bias",
+        "Sunk-Cost Fallacy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Confirmation bias means the mind doesn't evaluate evidence neutrally — it acts as a lawyer defending an already-reached conclusion. Nadia isn't lying; her brain is genuinely processing the supportive articles as more vivid and persuasive. The defence: notice the pull — 'Am I evaluating this by its quality, or by whether it agrees with me?'",
+      "explanationAr": "انحياز التأكيد معناه إن العقل ما بيقيّمش الأدلة بحياد — بيعمل كمحامٍ بيدافع عن نتيجة وصل ليها مسبقاً. ناديا مش بتكذب؛ دماغها فعلاً بيعالج المقالات الداعمة كأكثر حيوية وإقناعاً. الدفاع: لاحظ الشدّ — «بقيّمها بجودتها، ولا بإنها بتتفق معايا؟»",
+      "sources": [
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: being aware of a cognitive bias fully protects you from falling into it.",
+      "claimAr": "صح ولا غلط: الوعي بالانحياز المعرفي بيحميك خالص من الوقوع فيه.",
+      "options": [
+        "True — knowing is enough",
+        "False — awareness reduces biases but does not eliminate them"
+      ],
+      "correctAnswer": 1,
+      "explanation": "False — and this is an important humility check. Research shows that awareness of cognitive biases reduces but does not eliminate them. The biases operate in fast, automatic cognition. Awareness helps engage slower, deliberate thinking to check the first response — but it takes practice, and even experts are susceptible. Set your confidence before checking: if you felt certain, ask yourself why.",
+      "explanationAr": "غلط — وده اختبار تواضع مهم. الأبحاث تُظهِر إن الوعي بالانحيازات المعرفية بيقلّلها لكن ما بيلغيهاش. الانحيازات بتشتغل في التفكير السريع التلقائي. الوعي بيساعد على تفعيل التفكير الأبطأ والمتأمّل — لكن ده يحتاج تدريب، وحتى الخبراء عرضة ليه. حدّد ثقتك قبل الكشف: لو حسّيت بيقين، اسأل نفسك ليه.",
+      "sources": [
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Bias Blind Spot"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "The viral Taybat diet community was full of testimonials about improvement. But those who ended up in the ICU or who died could not post their stories. Which bias shaped the community's overall impression of the diet's effectiveness?",
+      "claimAr": "مجتمع نظام «الطيبات» كان مليان شهادات عن تحسّن. لكن اللي وصلوا للعناية المركزة أو ماتوا ما قدروش ينشروا قصصهم. أنهي انحياز شكّل الانطباع العام للمجتمع عن فاعلية النظام؟",
+      "options": [
+        "Anchoring Bias",
+        "Survivorship Bias — judging a system by the visible successes while the non-survivors are structurally absent from the conversation"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: how could the exact same online community look completely different if we could also see the stories of those who were harmed?",
+        "promptAr": "بكلماتك: إزاي نفس المجتمع الأونلاين كان ممكن يبان مختلف تماماً لو كنّا نقدر نشوف كمان قصص اللي اتضرّروا؟"
+      },
+      "explanation": "Survivorship bias. The community's feed was structurally filtered — not by deliberate deception, but because the people who improved could post and those who deteriorated couldn't. The corrective question is: 'Who is not in the room — and why?' If only successes can speak, the evidence is systematically distorted before you even see it.",
+      "explanationAr": "انحياز الناجين. خلاصة المجتمع كانت مُصفَّاة هيكلياً — مش بالخداع المتعمّد، لكن لأن اللي تحسّنوا قدروا ينشروا واللي تدهوروا ما قدروش. السؤال التصحيحي: «مين مش في الأوضة — وليه؟» لو الناجين بس يقدروا يتكلّموا، الأدلة متشوّهة بشكل منهجي قبل ما تشوفها حتى.",
+      "sources": [
+        "EAL-case-001:masrawy-2026-04-30",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A doctor explains that insulin is a hormone the human body already makes — it is not foreign or 'chemical' in an unnatural sense. A patient's relative replies: 'But it's an injection — that's artificial. Herbs are natural.' The relative feels this is a strong point.",
+      "claimAr": "دكتور بيشرح إن الأنسولين هرمون جسم الإنسان بيصنعه أصلاً. قريب مريض بيردّ: «بس هي حقنة — ده اصطناعي. الأعشاب طبيعية». القريب حاسس إن ده نقطة قوية.",
+      "prompt": "What would have to be true if 'natural = safe, artificial = dangerous' were false? What counter-examples fit?",
+      "promptAr": "لو «طبيعي = آمن، اصطناعي = خطير» كانت غلط، إيه اللي لازم يكون صح؟ وإيه الأمثلة المعاكسة اللي تنطبق؟",
+      "modelPoints": [
+        "If the rule were false, we would expect natural things that are deadly and artificial things that are safe — and we find exactly that: hemlock, arsenic, certain mushrooms are natural and lethal; synthesised insulin is structurally identical to the body's own.",
+        "The category 'natural' carries no safety guarantee; what matters is the specific molecule, dose, and biological pathway — not origin.",
+        "Insulin produced by the pancreas and insulin synthesised for injection have the same molecular structure; calling one 'natural' and the other 'artificial' is a label, not a chemical difference.",
+        "Many herbs contain active compounds that are toxic at certain doses — 'natural' and 'safe' are not synonyms in chemistry or medicine."
+      ],
+      "modelPointsAr": [
+        "لو القاعدة غلط، هنتوقع حاجات طبيعية قاتلة وحاجات اصطناعية آمنة — وده بالظبط اللي بنلاقيه: الشوكران والزرنيخ وبعض الفطر طبيعية وقاتلة؛ والأنسولين المُصنَّع متطابق هيكلياً مع أنسولين الجسم نفسه.",
+        "فئة «الطبيعي» ما بتضمنش السلامة؛ اللي يهمّ هو الجزيء المحدّد والجرعة والمسار البيولوجي — مش المصدر.",
+        "الأنسولين المُنتَج من البنكرياس والأنسولين المُصنَّع للحقن عندهم نفس التركيب الجزيئي؛ تسمية أحدهما «طبيعي» والتاني «اصطناعي» تصنيف وصفي، مش فرق كيميائي.",
+        "كتير من الأعشاب بتحتوي على مركّبات فعّالة سامة بجرعات معيّنة — «طبيعي» و«آمن» مش مترادفان في الكيمياء أو الطب."
+      ],
+      "explanation": "The appeal-to-nature bias treats 'natural' and 'artificial' as moral categories. Considering the opposite reveals it is a label, not evidence. The question that actually protects health is: 'What does the evidence say about this specific substance at this specific dose?' — not 'where did it come from?'",
+      "explanationAr": "انحياز مغالطة الطبيعة بيعامل «الطبيعي» و«الاصطناعي» كفئتين أخلاقيتين. التفكير في العكس بيكشف إنها تصنيف وصفي، مش دليل. السؤال اللي بيحمي الصحة فعلاً: «إيه اللي بتقوله الأدلة على المادة دي بالتحديد بالجرعة دي؟» — مش «إيه أصلها؟»",
+      "sources": [
+        "https://www.nhs.uk/conditions/type-1-diabetes/living-with-type-1-diabetes/insulin-and-diabetes/",
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "retrievalOf": 46,
+      "claim": "A friend has been following the viral Taybat diet system for four months, spent money on it, told all his relatives, and is publicly identified with it. His health has not improved. He keeps following it. Which bias is most responsible for his continued commitment despite the evidence?",
+      "claimAr": "صاحب اتّبع نظام «الطيبات» أربعة أشهر، وصرف عليه، وأخبر كل أقاربه، ومعروف بارتباطه بيه. صحّته ما تحسّنتش. فضل متّبعه. أنهي انحياز الأكثر مسؤولية عن استمراره رغم الأدلة؟",
+      "options": [
+        "Availability Heuristic",
+        "Sunk-Cost Fallacy — the investment of time, money, and social identity makes stopping feel more costly than continuing, regardless of whether the plan is working",
+        "Dunning-Kruger Effect",
+        "Illusory Correlation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The sunk-cost fallacy: 'I've already invested so much — stopping now would mean it was all for nothing.' But past investment cannot be recovered by continuing. The rational question is: 'Given what I know now, is continuing the best path forward?' The social identity layer makes this especially hard: stopping isn't just admitting the diet failed, it's re-explaining yourself to everyone you told.",
+      "explanationAr": "مغالطة التكلفة الغارقة: «أنا بالفعل استثمرت كتير — إيقاف النفس دلوقتي معناه إن كل ده كان مجاناً». لكن الاستثمار السابق ما يُستعادش بالاستمرار. السؤال المنطقي: «بالنظر لما أعرفه دلوقتي، هل الاستمرار هو أحسن طريق للأمام؟» طبقة الهوية الاجتماعية بتجعل ده صعب بشكل خاص: الإيقاف مش بس الاعتراف بإن الحمية فشلت، ده إعادة الشرح لكل الناس اللي قلتلهم.",
+      "sources": [
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf",
+        "EAL-case-001:okaz-2026-05-10"
+      ],
+      "cognitivebiasAtPlay": "Sunk-Cost Fallacy"
+    }
+  ]
+}

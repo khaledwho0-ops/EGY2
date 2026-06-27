@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { width: 340px; margin: 0; background: #07070b; color: #e8e2d6; font-family: system-ui, sans-serif; padding: 14px; }
+      h1 { font-size: 15px; margin: 0 0 2px; }
+      .ar { color: #9aa0a6; font-size: 12px; }
+      textarea { width: 100%; box-sizing: border-box; min-height: 64px; margin-top: 10px; background: #11111a; color: #e8e2d6; border: 1px solid #2a2a33; border-radius: 8px; padding: 8px; font-size: 13px; resize: vertical; }
+      button { margin-top: 8px; width: 100%; background: #f0c030; color: #0b0b12; border: 0; border-radius: 8px; padding: 9px; font-weight: 700; font-size: 14px; cursor: pointer; }
+      .badge { font-weight: 700; margin: 10px 0 6px; }
+      #out { font-size: 12px; line-height: 1.5; }
+      a { color: #22d3ee; display: block; font-size: 11px; margin-top: 3px; word-break: break-all; }
+      .settings { margin-top: 14px; border-top: 1px solid #1d1d26; padding-top: 10px; }
+      .settings label { font-size: 11px; color: #8a909a; }
+      .settings input { width: 100%; box-sizing: border-box; margin-top: 4px; background: #11111a; color: #e8e2d6; border: 1px solid #2a2a33; border-radius: 6px; padding: 6px; font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>EAL — Cognitive Shield <span class="ar">· الدرع المعرفي</span></h1>
+    <div class="ar">Paste a claim — real sources or it says UNVERIFIED.</div>
+    <textarea id="claim" placeholder="Paste a claim to check… · الصق ادعاءً للتحقق منه…"></textarea>
+    <button id="check">Check · تحقّق</button>
+    <div class="badge" id="badge"></div>
+    <div id="out"></div>
+    <div class="settings">
+      <label for="base">EAL base URL</label>
+      <input id="base" placeholder="http://localhost:3000" />
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

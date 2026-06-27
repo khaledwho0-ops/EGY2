@@ -1,0 +1,97 @@
+{
+  "id": "prior_probability",
+  "phase": 2,
+  "week": 11,
+  "day": 22,
+  "title": "Prior Probability",
+  "titleAr": "الاحتمال المسبق",
+  "description": "Understanding prior probability in Bayesian reasoning, the critical error of base rate neglect, and how to properly incorporate prior knowledge when evaluating evidence.",
+  "descriptionAr": "فهم الاحتمال المسبق في الاستدلال البايزي، والخطأ الجوهري لإهمال معدل الأساس، وكيفية دمج المعرفة المسبقة بشكل صحيح عند تقييم الأدلة.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "statisticalConcept": {
+    "name": "Prior Probability & Base Rate Neglect",
+    "nameAr": "الاحتمال المسبق وإهمال معدل الأساس",
+    "definition": "Prior probability (or 'prior') is the probability assigned to a hypothesis before observing new data. In Bayesian inference, the posterior probability is proportional to the prior times the likelihood: P(H|D) ∝ P(H) × P(D|H). Base rate neglect is the cognitive bias where people ignore the prior probability (base rate) and focus exclusively on the likelihood of the evidence, leading to systematically wrong probability estimates. Kahneman & Tversky (1973) demonstrated this in their classic lawyer-engineer problem.",
+    "definitionAr": "الاحتمال المسبق (أو 'المسبق') هو الاحتمال المخصص لفرضية قبل ملاحظة بيانات جديدة. في الاستدلال البايزي، الاحتمال اللاحق يتناسب مع المسبق مضروبًا في الاحتمال: P(H|D) ∝ P(H) × P(D|H). إهمال معدل الأساس هو التحيز المعرفي حيث يتجاهل الناس الاحتمال المسبق ويركزون حصريًا على احتمال الدليل. أثبت كانمان وتفيرسكي (1973) هذا في مسألة المحامي-المهندس الكلاسيكية.",
+    "realWorldExample": "After the September 11 attacks, airport security flagged passengers based on behavioral profiles with a 99% accuracy rate. But if only 1 in 10 million passengers is a threat, even with 99% accuracy: P(threat|flagged) = (0.99 × 0.0000001) / [(0.99 × 0.0000001) + (0.01 × 0.9999999)] ≈ 0.00001 = 0.001%. Nearly all flagged passengers are false positives because the base rate of actual threats is extraordinarily low.",
+    "detectionMethod": "Ask: 'What is the base rate of this condition/event in the relevant population?' If someone presents compelling individual-level evidence but ignores how rare the condition is overall, base rate neglect is likely present. Common in medical screening, criminal profiling, and risk assessment."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "analyze",
+      "prompt": "A new lie detector test has 90% accuracy (detects lies 90% of the time, and correctly identifies truth-telling 90% of the time). In a workplace investigation, 5% of employees are actually lying. An employee tests positive for deception. What is the actual probability they are lying?",
+      "promptAr": "اختبار كشف كذب جديد بدقة 90% (يكشف الكذب 90% من الوقت، ويحدد قول الحقيقة بشكل صحيح 90%). في تحقيق عمل، 5% من الموظفين يكذبون فعلًا. موظف اختبر إيجابيًا للخداع. ما الاحتمال الفعلي أنه يكذب؟",
+      "options": [
+        "85% — slightly less than test accuracy",
+        "50% — could go either way",
+        "90% — matching the test accuracy",
+        "32.1% — only about one-third of positive results are true"
+      ],
+      "correctAnswer": 3,
+      "explanation": "P(lying|positive) = P(positive|lying) × P(lying) / [P(positive|lying) × P(lying) + P(positive|truthful) × P(truthful)] = (0.90 × 0.05) / [(0.90 × 0.05) + (0.10 × 0.95)] = 0.045 / (0.045 + 0.095) = 0.045 / 0.14 ≈ 32.1%. Despite the test being '90% accurate,' only about 1 in 3 positive results identifies an actual liar. This is why polygraph results are inadmissible in most courts — the base rate of deception in any given population dramatically affects the practical utility of the test.",
+      "explanationAr": "P(كذب|إيجابي) = (0.90 × 0.05) / [(0.90 × 0.05) + (0.10 × 0.95)] = 0.045 / 0.14 ≈ 32.1%. رغم أن الاختبار 'دقيق بنسبة 90%'، فإن حوالي 1 من كل 3 نتائج إيجابية فقط تحدد كاذبًا فعليًا. لهذا نتائج جهاز كشف الكذب غير مقبولة في معظم المحاكم."
+    },
+    {
+      "id": 2,
+      "type": "identify",
+      "prompt": "In Kahneman & Tversky's (1973) classic experiment, participants were told that a panel of 100 people consisted of 70 lawyers and 30 engineers (or vice versa). They were given personality descriptions and asked to estimate the probability of each person being an engineer. What did the researchers find?",
+      "promptAr": "في تجربة كانمان وتفيرسكي الكلاسيكية (1973)، أُخبر المشاركون أن لجنة من 100 شخص تتكون من 70 محاميًا و30 مهندسًا (أو العكس). أُعطوا أوصاف شخصية وطُلب منهم تقدير احتمال كون كل شخص مهندسًا. ماذا وجد الباحثون؟",
+      "options": [
+        "Participants largely ignored the base rates and judged almost entirely by the personality description's fit with stereotypes",
+        "Participants overweighted the base rates and ignored the descriptions",
+        "Participants performed optimally when given more time to think",
+        "Participants correctly adjusted their estimates based on the base rates"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kahneman & Tversky found that participants gave nearly identical probability estimates regardless of whether the base rate was 70% engineers or 30% engineers. They judged almost entirely by how well the description matched the stereotype of an engineer (representativeness heuristic), ignoring the base rate information. This demonstrated that people naturally focus on the likelihood P(description|engineer) while neglecting the prior P(engineer). This finding was foundational for behavioral economics and earned Kahneman the 2002 Nobel Prize.",
+      "explanationAr": "وجد كانمان وتفيرسكي أن المشاركين أعطوا تقديرات احتمال متطابقة تقريبًا بغض النظر عما إذا كان معدل الأساس 70% مهندسين أو 30%. حكموا بالكامل تقريبًا بمدى تطابق الوصف مع الصورة النمطية للمهندس (استدلال التمثيل)، متجاهلين معلومات معدل الأساس."
+    },
+    {
+      "id": 3,
+      "type": "evaluate",
+      "prompt": "A news headline reads: 'New AI system detects pancreatic cancer with 95% accuracy.' Pancreatic cancer has an annual incidence of approximately 13 per 100,000 people. If this test were applied to the general population, approximately what percentage of positive results would be true cases?",
+      "promptAr": "عنوان إخباري يقرأ: 'نظام ذكاء اصطناعي جديد يكشف سرطان البنكرياس بدقة 95%.' سرطان البنكرياس لديه معدل حدوث سنوي حوالي 13 لكل 100,000 شخص. إذا طُبق هذا الاختبار على عامة السكان، ما النسبة المئوية التقريبية للنتائج الإيجابية التي ستكون حالات حقيقية؟",
+      "options": [
+        "About 50% — similar to a coin flip",
+        "About 0.26% — almost all positives are false alarms",
+        "About 13% — proportional to incidence",
+        "About 95% — matching the test accuracy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "With base rate = 0.00013 (13/100,000), sensitivity = 95%, specificity = 95%: PPV = (0.95 × 0.00013) / [(0.95 × 0.00013) + (0.05 × 0.99987)] = 0.0001235 / (0.0001235 + 0.04999) = 0.0001235 / 0.0501 ≈ 0.0025 = 0.25%. Only about 1 in 400 positive results would be a true cancer case. This illustrates why population-wide screening for rare diseases requires extremely high specificity. The headline's '95% accuracy' is technically correct but profoundly misleading without context about base rates.",
+      "explanationAr": "مع معدل الأساس = 0.00013، الحساسية = 95%، النوعية = 95%: PPV ≈ 0.25%. فقط حوالي 1 من كل 400 نتيجة إيجابية ستكون حالة سرطان حقيقية. هذا يوضح لماذا الفحص السكاني للأمراض النادرة يتطلب نوعية عالية للغاية."
+    },
+    {
+      "id": 4,
+      "type": "calculate",
+      "prompt": "A Bayesian researcher studying ESP (extrasensory perception) sets a prior of P(ESP exists) = 0.001 based on known physics. An experiment produces data with a likelihood ratio of 50 in favor of ESP. What is the posterior probability that ESP exists?",
+      "promptAr": "باحث بايزي يدرس الإدراك خارج الحواس (ESP) يضع مسبقًا P(ESP موجود) = 0.001 بناءً على الفيزياء المعروفة. تجربة تنتج بيانات بنسبة احتمال 50 لصالح ESP. ما الاحتمال اللاحق لوجود ESP؟",
+      "options": [
+        "99.9% — overwhelming evidence",
+        "50% — the strong evidence overrides the prior",
+        "4.8% — still very unlikely despite the evidence",
+        "0.1% — the prior barely changes"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Prior odds = 0.001 / 0.999 ≈ 0.001. Posterior odds = prior odds × LR = 0.001 × 50 = 0.05. Posterior probability = 0.05 / 1.05 ≈ 4.8%. Even with a likelihood ratio of 50 (strong evidence), the extremely low prior keeps the posterior below 5%. This illustrates the 'extraordinary claims require extraordinary evidence' principle formally — to move P(ESP) above 50%, you'd need a likelihood ratio exceeding 1000. This is how Bayesian reasoning handles claims that contradict well-established science.",
+      "explanationAr": "احتمالات مسبقة = 0.001 / 0.999 ≈ 0.001. احتمالات لاحقة = 0.001 × 50 = 0.05. احتمال لاحق = 0.05 / 1.05 ≈ 4.8%. حتى مع نسبة احتمال 50 (دليل قوي)، المسبق المنخفض للغاية يبقي اللاحق تحت 5%. هذا يوضح مبدأ 'الادعاءات الاستثنائية تتطلب أدلة استثنائية' رسميًا."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "A prosecutor argues: 'The DNA match probability is 1 in 10 million. Therefore, there is only a 1 in 10 million chance the defendant is innocent.' This is known as the prosecutor's fallacy. What prior probability is being neglected?",
+      "promptAr": "محامي ادعاء يجادل: 'احتمال تطابق الحمض النووي هو 1 في 10 ملايين. لذلك، هناك فقط فرصة 1 في 10 ملايين أن المتهم بريء.' هذا يُعرف بمغالطة المدعي العام. ما الاحتمال المسبق الذي يُهمل؟",
+      "options": [
+        "The probability of laboratory error",
+        "The probability that the defendant has an identical twin",
+        "The probability of evidence tampering",
+        "The prior probability that any random person committed the crime (approximately 1/population of potential suspects)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The prosecutor confuses P(evidence|innocent) with P(innocent|evidence). If the city has 5 million potential suspects, and only one is guilty, then P(guilty before DNA) = 1/5,000,000. Using Bayes' theorem with a random match probability of 1/10,000,000: posterior odds = (1/5,000,000) × (1 / (1/10,000,000)) = 10,000,000/5,000,000 = 2:1 in favor of guilt — meaning roughly 67% probability of guilt, NOT 99.99999%. The prior probability (base rate of guilt among potential suspects) is critical. This fallacy has led to wrongful convictions, notably in the case of Sally Clark (1999) in the UK.",
+      "explanationAr": "المدعي يخلط بين P(دليل|بريء) وP(بريء|دليل). إذا كانت المدينة بها 5 ملايين مشتبه محتمل، وواحد فقط مذنب، فإن P(مذنب قبل DNA) = 1/5,000,000. باستخدام نظرية بايز مع احتمال تطابق عشوائي 1/10,000,000: احتمالات لاحقة = 2:1 لصالح الإدانة — أي حوالي 67% احتمال الإدانة، وليس 99.99999%."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "day107_ask_for_the_source",
+  "phase": 3,
+  "week": 16,
+  "day": 107,
+  "title": "Ask for the Source — Not Just the Story",
+  "titleAr": "اسأل عن المصدر — مش بس القصة",
+  "description": "The single most protective habit when you hear a religious or medical claim: ask for a real, attributable source — a book, chapter, verse number, or study — before accepting anything.",
+  "descriptionAr": "أكثر عادة واقية لمّا تسمع ادعاء ديني أو طبي: اسأل عن مصدر حقيقي منسوب — كتاب، فصل، رقم آية، أو دراسة — قبل قبول أي شيء.",
+  "type": "religion-literacy",
+  "difficulty": 2,
+  "estimatedMinutes": 14,
+  "source": "https://sunnah.com/abudawud",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A speaker in a Friday lecture says: 'The Prophet ﷺ never ate chicken in his life — it is proven in hadith.' You want to verify this before repeating it. What is the correct first move?",
+      "claimAr": "خطيب في درس جمعة بيقول: «النبي ﷺ ما أكلش فراخ في حياته أبداً — وده ثابت في الحديث». عايز تتحقق قبل ما تكرّر الكلام. إيه الخطوة الصح الأولى؟",
+      "options": [
+        "Trust the speaker — he is religious",
+        "Ask: which hadith collection, which book, and what is the chapter or hadith number?",
+        "Search for the claim on Facebook first",
+        "Assume it is true because it fits the diet you are following"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Asking for a real citation — hadith collection, book, chapter, and number — is the basic tool of Islamic hadith literacy. A sincere speaker will welcome the question; it is not disrespect, it is proper scholarship. If no citation exists, no claim exists. This habit alone would have stopped the 'Prophet did not eat chicken or milk' myth before it spread.",
+      "explanationAr": "طلب استشهاد حقيقي — مجموعة الحديث والكتاب والفصل والرقم — هو أداة الثقافة الحديثية الأساسية. الخطيب الصادق سيُرحّب بالسؤال؛ وهو ليس إساءة، بل هو المنهجية العلمية الصحيحة. إذا لم يوجد استشهاد، فلا يوجد ادعاء. هذه العادة وحدها كانت ستوقف أسطورة «النبي لم يأكل الفراخ أو اللبن» قبل أن تنتشر.",
+      "sources": [
+        "https://sunnah.com/abudawud"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: Sunan Abī Dāwūd and Sunan Ibn Mājah — both in the Six Books of authenticated hadith — contain documented narrations of the Prophet ﷺ eating chicken.",
+      "claimAr": "صح ولا غلط: سنن أبي داود وسنن ابن ماجه — كلاهما في الكتب الستة من الأحاديث المعتمدة — يحتويان على روايات موثّقة عن أكل النبي ﷺ الفراخ.",
+      "correctAnswer": true,
+      "myth_en": "There is no hadith of the Prophet eating chicken.",
+      "myth_ar": "لا يوجد حديث عن أكل النبي الفراخ.",
+      "explanation": "True. Both Sunan Abī Dāwūd and Sunan Ibn Mājah — canonical collections in the Six Books — contain narrations documenting that the Prophet ﷺ ate chicken. The claim that chicken was absent from his diet contradicts these authenticated hadith. Any dietary system that forbids chicken on the basis of the Prophet's practice has fabricated its religious premise.",
+      "explanationAr": "صح. سنن أبي داود وسنن ابن ماجه — مجموعتان معيارتان في الكتب الستة — يحتويان على روايات توثّق أن النبي ﷺ أكل الفراخ. ادعاء غياب الفراخ عن طعامه يتناقض مع هذه الأحاديث المعتمدة. أي نظام غذائي يحرّم الفراخ بحجة سنّة النبي يكون قد افترى مقدّمته الدينية.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://sunnah.com/ibnmajah"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A WhatsApp message says: 'Milk was not drunk by the Prophet ﷺ — scholars confirm this is the Islamic way.' It names no scholar, no hadith, and no book. How do you evaluate this responsibly?",
+      "claimAr": "رسالة واتساب بتقول: «اللبن ما كانش يُشرَب من النبي ﷺ — العلماء مؤكّدين إن دي الطريقة الإسلامية». بدون ذكر عالم أو حديث أو كتاب. كيف تقيّمها بمسؤولية؟",
+      "options": [
+        "Forward it — it must be true if it mentions scholars",
+        "Reject all religious content on WhatsApp",
+        "Treat it as an unverified claim until a specific scholar, hadith, and book can be cited",
+        "Accept it because it came from a religious group"
+      ],
+      "correctAnswer": 2,
+      "selfExplain": {
+        "prompt": "In your own words: why is 'scholars confirm' with no names the same as zero sourcing — and what three questions would you ask to turn this into a real claim?",
+        "promptAr": "بكلماتك: ليه «العلماء مؤكّدين» بدون أسماء يساوي صفر مصادر — وإيه الأسئلة التلاتة اللي هتسألها عشان الادعاء ده يبقى حقيقي؟"
+      },
+      "explanation": "In Islamic hadith scholarship, 'scholars confirm' with no names is equivalent to zero sourcing. A real claim has a real chain: a named scholar, a named hadith collection, and ideally a hadith grade (sahih, hasan, da'if). Sunan Abī Dāwūd contains documented narrations of the Prophet ﷺ drinking milk. An undocumented WhatsApp claim opposing this carries no weight. The three questions to ask: Which scholar exactly? Which collection and chapter? What is the hadith grade?",
+      "explanationAr": "في علم الحديث الإسلامي، «العلماء يؤكّدون» دون أسماء يساوي صفراً من المصادر. الادعاء الحقيقي له سلسلة حقيقية: عالم مسمّى ومجموعة حديث مسمّاة وبشكل مثالي درجة الحديث (صحيح، حسن، ضعيف). سنن أبي داود تحتوي على روايات موثّقة عن شرب النبي ﷺ اللبن. ادعاء واتساب غير موثّق يعارض هذا لا وزن له. الأسئلة التلاتة: أي عالم بالتحديد؟ أي مجموعة وفصل؟ ما درجة الحديث؟",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://sunnah.com/ibnmajah"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A diet promoter, when asked for hadith sources for his food bans, says: 'You don't need a hadith number — this is known among the pious.' This feels humble and deeply religious.",
+      "claimAr": "مروّج حمية لمّا يُسأل عن مصادر حديثية لتحريماته الغذائية يقول: «ما تحتاجش رقم حديث — ده معروف عند الصالحين». هذا يبدو متواضعاً وعميق الدين.",
+      "prompt": "What would you expect to hear from a sincere religious scholar responding to the same request? What does the absence of a citation actually mean in the hadith tradition?",
+      "promptAr": "إيه اللي هتتوقع تسمعه من عالم ديني صادق بيرد على نفس الطلب؟ وإيه اللي يعنيه غياب الاستشهاد فعلاً في تقليد الحديث؟",
+      "modelPoints": [
+        "A sincere Islamic scholar would welcome the citation request — the entire science of hadith (rijal, isnad) was built on exactly this demand for traceable chains.",
+        "If no citation exists, the claim does not exist as a hadith — full stop. 'Known among the pious' is social pressure, not a hadith source.",
+        "Responding to a request for evidence with 'you don't need to ask' treats inquiry as a transgression — the opposite of how the Prophet ﷺ encouraged his companions to ask and verify.",
+        "In Islamic scholarship, every health or legal ruling attributed to the Prophet must be traceable to a named collection and ideally a graded chain. The absence of a citation is a disqualifying fact, not a minor gap."
+      ],
+      "modelPointsAr": [
+        "العالم الإسلامي الصادق سيُرحّب بطلب الاستشهاد — علم الحديث كله (الرجال والإسناد) بُنِي بالضبط على هذا الطلب للسلاسل القابلة للتتبع.",
+        "إذا لم يوجد استشهاد، الادعاء لا يوجد كحديث — نقطة. «معروف عند الصالحين» ضغط اجتماعي، لا مصدر حديثي.",
+        "الرد على طلب الدليل بـ«ما محتاجش تسأل» يعامل الاستفسار كتجاوز — عكس كيفية تشجيع النبي ﷺ صحابته على السؤال والتحقق.",
+        "في علم الحديث الإسلامي، كل حكم صحي أو شرعي منسوب للنبي يجب أن يكون قابلاً للتتبع لمجموعة مسمّاة وبشكل مثالي سلسلة مُقيَّمة. غياب الاستشهاد حقيقة ناقضة، لا ثغرة بسيطة."
+      ],
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://www.iium.edu.my/deed/hadith/other/hadeethsciences.html"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'The Prophet ﷺ followed a pure diet — he was guided by Allah. Therefore his food choices are the correct medical choices for all humans in all times. So if the viral diet system claims to follow his diet, it must be medically valid.'",
+      "claimAr": "فكّك الحُجّة دي: «النبي ﷺ اتّبع نظاماً غذائياً طاهراً — كان مُوجَّهاً من الله. لهذا فاختياراته الغذائية هي الاختيارات الطبية الصحيحة لكل البشر في كل الأوقات. فلو نظام الطيبات يدّعي اتباع طعامه، يبقى لازم يكون صحيح طبياً.»",
+      "parts": [
+        { "text": "The viral diet system is medically valid.", "textAr": "نظام الطيبات صحيح طبياً.", "role": "conclusion" },
+        { "text": "The Prophet ﷺ was guided by Allah and followed a pure diet.", "textAr": "النبي ﷺ كان مُوجَّهاً من الله واتّبع نظاماً غذائياً طاهراً.", "role": "premise" },
+        { "text": "The viral diet system follows the Prophet's ﷺ diet.", "textAr": "نظام الطيبات يتّبع طعام النبي ﷺ.", "role": "premise" },
+        { "text": "(Unstated) Religious guidance automatically equals clinical medical efficacy for all people in all contexts.", "textAr": "(غير مذكور) التوجيه الديني يساوي تلقائياً الفاعلية الطبية السريرية لكل الناس في كل السياقات.", "role": "assumption" },
+        { "text": "(Unstated) The system's food rules actually match authenticated hadith.", "textAr": "(غير مذكور) قواعد طعام النظام تطابق فعلاً الأحاديث المعتمدة.", "role": "assumption" }
+      ],
+      "explanation": "Two hidden assumptions collapse the argument. First: religious guidance and clinical medical efficacy are distinct claims measured by different standards — the Prophet's ﷺ diet was not presented as a clinical protocol for chronic disease management. Second: authenticated hadith (Sunan Abī Dāwūd, Sunan Ibn Mājah) document the Prophet ﷺ eating chicken and drinking milk, which directly contradicts the system's bans. The second premise is therefore false — the system does not follow the authenticated record of the Prophet's diet.",
+      "explanationAr": "افتراضان خفيان يُنهيان الحُجّة. أولاً: التوجيه الديني والفاعلية الطبية السريرية ادعاءان مستقلان يُقاسان بمعايير مختلفة — لم يُقدَّم طعام النبي ﷺ كبروتوكول سريري لإدارة الأمراض المزمنة. ثانياً: الأحاديث المعتمدة (سنن أبي داود، سنن ابن ماجه) توثّق أكل النبي ﷺ الفراخ وشرب اللبن، مما يتناقض مباشرة مع تحريمات النظام. المقدمة الثانية إذاً كاذبة — النظام لا يتّبع السجل الموثّق لطعام النبي.",
+      "sources": [
+        "https://sunnah.com/abudawud",
+        "https://sunnah.com/ibnmajah",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "id": "day162_capstone_rebuttal_part1",
+  "phase": 4,
+  "week": 24,
+  "day": 162,
+  "title": "Capstone: Anatomy of an Empathetic Rebuttal",
+  "titleAr": "الختام: تشريح الردّ المتعاطف",
+  "description": "Before you can challenge a false health claim, you need three things: the exact fallacy, strong evidence, and a deep understanding of why the belief persists. Today you build that three-part skeleton.",
+  "descriptionAr": "قبل ما تتحدّى ادعاء صحي غلط، محتاج ثلاث حاجات: المغالطة بالاسم، دليل قوي، وفهم عميق ليه الاعتقاد بيفضل. النهاردة بتبني الهيكل الثلاثي ده.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235064/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A friend forwards a WhatsApp voice note: «الطيبات» proved that chicken and milk destroy your immune system. Your task: which SINGLE fallacy name best captures the core problem with this claim?",
+      "claimAr": "صاحب بعتلك رسالة صوتية على واتساب: «الطيبات» أثبتت إن الفراخ واللبن بيدمّروا الجهاز المناعي. مهمتك: أنهي اسم مغالطة واحد بيمسك المشكلة الجوهرية في الادعاء ده؟",
+      "options": [
+        "Ad hominem — attacking the person, not the idea",
+        "Appeal to Nature — 'natural = good, synthetic = bad'",
+        "Unfalsifiable claim — all failures blamed on the patient, never the system",
+        "Hasty generalisation — jumping to a universal rule (destroys immunity) from zero controlled evidence"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The core fallacy is a hasty generalisation: a sweeping universal claim ('destroys immunity') issued with no controlled study, no mechanism, and no measured biomarker. The claim leaps from anecdote to universal law. Naming the fallacy precisely is the first part of any good rebuttal — it tells your audience what kind of move was made, not just that it was wrong.",
+      "explanationAr": "المغالطة الجوهرية هي «التعميم المتسرّع»: ادعاء شامل («بيدمّر المناعة») صدر بلا دراسة محكومة ولا آلية ولا مؤشر حيوي مقاس. الادعاء قفز من حكاية لقانون شامل. تسمية المغالطة بدقة هو الجزء الأول من أي ردّ كويس — بيخلّي جمهورك يعرف نوع الحركة اللي اتعملت، مش بس إنها غلط.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://www.hsph.harvard.edu/nutritionsource/protein/"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "Part 2 of the same rebuttal: you must cite the strongest available evidence about chicken and dairy in a healthy diet. Which source type carries the most weight?",
+      "claimAr": "الجزء الثاني من نفس الردّ: لازم تستشهد بأقوى دليل متاح عن الفراخ ومنتجات الألبان في حمية صحية. أنهي نوع مصدر الأثقل وزناً؟",
+      "options": [
+        "A YouTube doctor with 2 million subscribers",
+        "A WHO nutrition fact-sheet summarising global dietary guidelines",
+        "A testimonial from 50 people who avoided chicken and felt better",
+        "An expert's personal clinical impression"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does a WHO fact-sheet outrank a doctor with 2 million subscribers AND 50 personal testimonials — even though far more people are 'behind' the other two?",
+        "promptAr": "بكلماتك: ليه صحيفة حقائق منظمة الصحة العالمية أقوى من دكتور عنده 2 مليون متابع ومن 50 شهادة شخصية — رغم إن ناس أكتر بكتير «وراهم»؟"
+      },
+      "explanation": "Numbers of fans or testimonials are not evidence rungs — they're all still anecdotes with no control group, so they can't separate a real effect from placebo, coincidence, or recall bias. A WHO fact-sheet sits near the top of the evidence pyramid because it summarises the consensus of multiple systematic reviews, critiqued by expert panels across countries. The rule you just explained back to yourself is the one to keep: when you cite, cite UPWARD on the pyramid, not WIDER across an audience.",
+      "explanationAr": "أعداد المعجبين أو الشهادات مش درجات دليل — كلها لسه حكايات بلا مجموعة ضابطة، فما تقدرش تفصل تأثير حقيقي عن وهمي أو صدفة أو انحياز تذكّر. صحيفة حقائق منظمة الصحة العالمية قريبة من قمة سلّم الأدلة لأنها بتلخّص إجماع مراجعات منهجية متعددة، منقودة من لجان خبراء من دول كتير. القاعدة اللي شرحتها لنفسك دلوقتي هي اللي تمسكها: لمّا تستشهد، استشهد بما هو فوق على السلّم، مش بما هو أوسع في الجمهور.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "decompose",
+      "claim": "Part 3 — the most-skipped step. Map this attempt at an empathetic rebuttal so you can see whether it actually does the 'why-it-persists' work: \"I get why this feels true — you gave it months and built a community around it. The strongest science (systematic reviews) shows chicken and milk are safe staples. Admitting that now would mean facing a sunk cost, so let's go slow.\"",
+      "claimAr": "الجزء الثالث — الخطوة الأكثر إهمالاً. فكّك المحاولة دي لردّ متعاطف علشان تشوف هل بتعمل فعلاً شغل «ليه بيفضل»: «أنا فاهم ليه ده بيحسّ صح — إديته شهور وبنيت مجتمع حواليه. أقوى علم (مراجعات منهجية) بيوضّح إن الفراخ واللبن أساسيات آمنة. الاعتراف بده دلوقتي يعني مواجهة تكلفة غارقة، فخلّينا نمشي بالراحة.»",
+      "parts": [
+        { "text": "Chicken and milk are safe staples (the position being argued for).", "textAr": "الفراخ واللبن أساسيات آمنة (الموقف المُحتجّ له).", "role": "conclusion" },
+        { "text": "The strongest science — systematic reviews — supports them.", "textAr": "أقوى علم — المراجعات المنهجية — بيدعمهم.", "role": "premise" },
+        { "text": "You invested months and built a community around the belief.", "textAr": "استثمرت شهور وبنيت مجتمع حوالين الاعتقاد.", "role": "premise" },
+        { "text": "(Unstated) Admitting a long, costly investment was a mistake is psychologically painful, so resistance is expected — not stupidity.", "textAr": "(غير مذكور) الاعتراف بإن استثمار طويل ومكلِّف كان غلط مؤلم نفسياً، فالمقاومة متوقّعة — مش غباء.", "role": "assumption" }
+      ],
+      "explanation": "Decomposing the rebuttal exposes its hidden engine: the unstated ASSUMPTION that resistance comes from sunk cost and identity, not from a lack of facts. That assumption is what makes the tone compassionate ('let's go slow') instead of combative. The two premises (strong evidence + real investment) are both acknowledged. Skipping Part 3 — leaving that assumption unspoken even to yourself — is exactly why pure information campaigns backfire: they answer a question the person isn't actually asking.",
+      "explanationAr": "تفكيك الردّ بيكشف محرّكه الخفي: الافتراض غير المذكور إن المقاومة بتيجي من التكلفة الغارقة والهوية، مش من نقص الحقائق. الافتراض ده هو اللي بيخلّي النبرة متعاطفة («نمشي بالراحة») بدل ما تكون قتالية. المقدّمتان (دليل قوي + استثمار حقيقي) الاتنين مُعترَف بيهم. إهمال الجزء الثالث — إنك تسيب الافتراض ده غير منطوق حتى لنفسك — هو بالظبط سبب إن حملات المعلومات الصرفة بتنعكس: بتجاوب على سؤال الشخص مش بيسأله أصلاً.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235064/",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Sunk-Cost Fallacy"
+    },
+    {
+      "id": 4,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "The three-part rebuttal (fallacy + evidence + why-it-persists) is mainly useful for convincing the person in front of you to change their mind on the spot. Set your confidence, then answer.",
+      "claimAr": "هيكل الردّ الثلاثي (المغالطة + الدليل + ليه بيفضل) مفيد أساساً لإقناع الشخص اللي أمامك يغيّر رأيه في الحال. حدّد ثقتك، وبعدين جاوب.",
+      "options": [
+        "True — a good rebuttal should convert the believer on the spot",
+        "False — its real value is planting doubt, protecting bystanders, and keeping the relationship open"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Expecting on-the-spot conversion leads to frustration and escalating arguments that entrench the belief further (the backfire effect). The three-part structure achieves something more realistic: it plants a doubt, protects bystanders who are listening, preserves the relationship, and offers a face-saving off-ramp to reconsider later. Now check your confidence: if you were highly sure it was 'True', that's a useful miss to notice — overestimating how fast people change is one of the most common errors in this work.",
+      "explanationAr": "توقّع التحوّل الفوري بيودّي لإحباط وجدالات متصاعدة بترسّخ الاعتقاد أكثر (أثر الارتداد). الهيكل الثلاثي بيحقق حاجة أكثر واقعية: بيزرع شك، بيحمي المستمعين الجنبيين، بيحافظ على العلاقة، وبيدّي مخرجاً يحفظ ماء الوجه لإعادة التفكير بعدين. دلوقتي قارن ثقتك: لو كنت متأكد جداً إنها «صح»، دي غلطة مفيدة تلاحظها — المبالغة في تقدير سرعة تغيّر الناس من أكتر الأخطاء شيوعاً في الشغل ده.",
+      "sources": [
+        "https://www.apa.org/pubs/journals/releases/bul-1083480.pdf",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235064/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "You are drafting a rebuttal to share online. Which opening line best follows the empathy-first principle?",
+      "claimAr": "بتكتب ردّاً تشاركه أونلاين. أنهي جملة افتتاحية بتتبع مبدأ «التعاطف أولاً» صح؟",
+      "options": [
+        "\"Only someone with no medical education could believe this.\"",
+        "\"I understand why this sounds convincing — the body of science actually shows something different, and here's how we know:\"",
+        "\"This is dangerous nonsense and people who share it are irresponsible.\"",
+        "\"I'm going to prove you wrong with data.\""
+      ],
+      "correctAnswer": 1,
+      "explanation": "\"I understand why this sounds convincing\" validates the person's intelligence and curiosity before introducing the correction — that keeps the door open rather than slamming it. Shame and contempt (options A, C) trigger psychological reactance, making the person defend the false belief harder. The phrase 'here is how we know' signals a knowledge journey, not a verdict — exactly the tone the curriculum is built on.",
+      "explanationAr": "«أنا فاهم ليه ده بيبان مقنع» بيُصادق على ذكاء الشخص وفضوله قبل ما يقدّم التصحيح — ده بيفضّل الباب مفتوح بدل ما يسدّه. الخزي والاستهزاء (الخيارات أ، ج) بيُطلقوا ردّ الفعل النفسي، وبيخلّي الشخص يدافع عن الاعتقاد الغلط أعنف. عبارة «إزاي بنعرف» بتشير لرحلة معرفية مش حُكم — وده بالظبط النبرة اللي المنهج كله متبنيه.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235064/"
+      ],
+      "cognitivebiasAtPlay": "Backfire Effect"
+    }
+  ]
+}

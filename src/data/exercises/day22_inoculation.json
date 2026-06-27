@@ -1,0 +1,30 @@
+{
+  "id": "day22_inoculation",
+  "phase": 0,
+  "week": 4,
+  "day": 22,
+  "title": "Psychological Inoculation",
+  "titleAr": "التحصين النفسي",
+  "description": "Inoculation theory — the vaccine against misinformation (d=0.52).",
+  "descriptionAr": "نظرية التحصين — اللقاح ضد التضليل.",
+  "type": "inoculation",
+  "difficulty": 2,
+  "estimatedMinutes": 15,
+  "instrument": "Roozenbeek & van der Linden 2019",
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "Emotional Appeal: A crying child image from Syria 2015 used for current events.",
+      "claimAr": "نداء عاطفي: صورة طفل يبكي من سوريا 2015 تُستخدم لأحداث حالية.",
+      "truthValue": "misleading",
+      "category": "media",
+      "difficulty": 2,
+      "explanation": "Emotional appeal technique. Exposure first = inoculation. Technique: trigger emotions, bypass critical thinking, use urgency to force sharing.",
+      "explanationAr": "تقنية النداء العاطفي. التعرض أولاً = تحصين.",
+      "sources": [
+        "https://www.nature.com/articles/s41599-019-0279-9"
+      ],
+      "cognitivebiasAtPlay": "Emotional Appeal"
+    }
+  ]
+}

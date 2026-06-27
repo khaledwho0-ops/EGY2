@@ -1,0 +1,123 @@
+{
+  "id": "day109_religion_vs_medical_claim",
+  "phase": 3,
+  "week": 16,
+  "day": 109,
+  "title": "Same Evidence Bar — Religion Does Not Exempt a Medical Claim",
+  "titleAr": "نفس معيار الدليل — الدين لا يُعفي ادعاءً طبياً",
+  "description": "A medical claim stays a medical claim even when dressed in religious language. Religious framing changes your feeling about it — it does not change the evidence needed to evaluate it.",
+  "descriptionAr": "الادعاء الطبي يبقى ادعاءً طبياً حتى لو لُبِس لباساً دينياً. التأطير الديني يغيّر شعورك تجاهه — لكنه لا يغيّر الدليل المطلوب لتقييمه.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A diet system says: 'Chicken causes cancer — and avoiding it is following the Sunnah.' Which of these correctly describes what has happened?",
+      "claimAr": "نظام غذائي بيقول: «الفراخ بتسبّب السرطان — وتجنّبها هو اتّباع السنة». أيٌّ مما يلي يصف ما حدث بشكل صحيح؟",
+      "options": [
+        "The religious framing proves the medical claim",
+        "Two separate claims have been fused: a medical claim ('chicken causes cancer') that needs clinical evidence, and a religious claim ('the Sunnah says so') that needs an authenticated hadith — and both are unproven",
+        "If the Sunnah confirms it, the medical debate is closed",
+        "The claim is probably true — cancer causes are well-known"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Fusing a medical claim with a religious one does not prove either. 'Chicken causes cancer' is a causal epidemiological claim that requires controlled studies and ideally a systematic review — decades of global research on poultry consumption do not support it. 'The Sunnah says so' is a religious claim requiring an authenticated hadith — and authenticated hadith document the Prophet ﷺ eating chicken. Both claims are unfounded.",
+      "explanationAr": "دمج ادعاء طبي مع ادعاء ديني لا يُثبت أياً منهما. «الفراخ تسبّب السرطان» ادعاء سببي وبائي يحتاج دراسات مُحكَمة وبشكل مثالي مراجعة منهجية — وعقود من البحث العالمي في استهلاك الدواجن لا تدعمه. «السنة تقول كذلك» ادعاء ديني يحتاج حديثاً معتمداً — والأحاديث المعتمدة توثّق أكل النبي ﷺ الفراخ. كلا الادعاءين بلا أساس.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://sunnah.com/abudawud"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if a doctor says 'stop your insulin — this diet replaces it,' the religious framing around the diet makes the advice safer.",
+      "claimAr": "صح ولا غلط: لو دكتور قال «وقّف الأنسولين بتاعك — الحمية دي بتحلّ محلّه»، التأطير الديني حول الحمية بيجعل النصيحة أكثر أماناً.",
+      "correctAnswer": false,
+      "myth_en": "Religious framing makes medical advice safer.",
+      "myth_ar": "التأطير الديني بيجعل النصيحة الطبية أكثر أماناً.",
+      "explanation": "False — and this misunderstanding has cost lives. Religious language changes your emotional response, not the biology of type-1 diabetes. Insulin is the only proven treatment for type-1 diabetes; stopping it, regardless of the framing, causes diabetic ketoacidosis and can cause death. The evidence bar for a medical claim is set by physiology and clinical trials — not by how the claim is packaged.",
+      "explanationAr": "غلط — وهذا المفهوم الخاطئ كلّف أرواحاً. اللغة الدينية تغيّر استجابتك العاطفية، لا بيولوجيا السكري من النوع الأول. الأنسولين هو العلاج المُثبَت الوحيد لسكري النوع الأول؛ وإيقافه، بصرف النظر عن التأطير، يسبّب الحماض الكيتوني السكري وقد يؤدي للوفاة. معيار الدليل للادعاء الطبي تحدّده وظائف الأعضاء والتجارب السريرية — لا طريقة تغليفه.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        "EAL-case-001:okaz-2026-05-10"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A seller promotes a 'Sunnah-based diet' that promises to heal autoimmune disease. A nurse asks him: 'What clinical studies support this?' He replies: 'This is above science — it is the word of Allah.' Which principle does this response violate?",
+      "claimAr": "بائع بيروّج «حمية الطب النبوي» بوعد بشفاء أمراض المناعة. ممرّضة بتسأله: «أي دراسات سريرية تدعم هذا؟». يردّ: «ده فوق العلم — ده كلام الله». أي مبدأ ينتهك هذا الجواب؟",
+      "options": [
+        "No principle — religious claims are exempt from medical evidence requirements",
+        "Karl Popper's falsifiability principle: dressing a medical claim in sacred language puts it above testing — which is the classic mark of pseudoscience, not science",
+        "The claim is reasonable — religion and medicine can substitute for each other",
+        "The nurse was wrong to ask"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does declaring a medical claim 'above science' make it pseudoscience rather than religion — and what does Islam's own scholarly tradition say about this?",
+        "promptAr": "بكلماتك: ليه الإعلان إن ادعاء طبي «فوق العلم» بيجعله علماً زائفاً لا ديناً — وإيه اللي يقوله التراث العلمي الإسلامي نفسه في هذا؟"
+      },
+      "explanation": "When a medical claim is declared 'above science,' it becomes unfalsifiable — which is the defining feature of pseudoscience, not religion. Islam has a rich tradition of empirical medicine (ibn Sīnā, ibn Rushd). Saying a dietary cure claim is beyond evaluation is not Islamic piety — it is using religion to immunise a commercial claim against scrutiny. Real religious claims and real medical claims can coexist; this is a misuse of both.",
+      "explanationAr": "حين يُعلَن أن ادعاءً طبياً «فوق العلم»، يصبح غير قابل للتفنيد — وهي السمة المميِّزة للعلم الزائف، لا للدين. للإسلام تراث غني من الطب التجريبي (ابن سينا، ابن رشد). القول بأن ادعاء علاج غذائي يتجاوز التقييم ليس تقوى إسلامية — بل استخدام الدين لتحصين ادعاء تجاري من التدقيق. الادعاءات الدينية الحقيقية والادعاءات الطبية الحقيقية يمكن أن تتعايش؛ هذا سوء استخدام لكليهما.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A family stops their elderly mother's hypertension medicine after a community leader says: 'True Muslims manage blood pressure through food, not chemicals.' This feels like a devout, loving decision.",
+      "claimAr": "عيلة وقّفت دواء ضغط أمّهم المسنّة بعد ما قائد مجتمعي قال: «المسلمون الحقيقيون يتحكّمون في ضغط الدم بالطعام لا بالمواد الكيميائية». هذا يبدو قراراً متديّناً ومحبّاً.",
+      "prompt": "What would you have to believe for this to be a safe decision? What facts would disprove the safety of stopping the medication?",
+      "promptAr": "إيه اللي لازم تصدّقه عشان القرار ده يكون آمن؟ وإيه الحقائق التي ستثبت خطورة إيقاف الدواء؟",
+      "modelPoints": [
+        "For it to be safe, you'd need evidence that dietary changes alone can fully control severe hypertension — WHO guidelines say lifestyle changes complement, not replace, prescribed antihypertensives in controlled hypertension.",
+        "Stopping antihypertensive medication without medical supervision causes rebound hypertensive crisis — a leading cause of stroke and cardiac events in elderly patients.",
+        "The community leader is not a cardiologist; 'true Muslim' language turns a medical decision into an identity choice, bypassing medical evaluation entirely.",
+        "Three active red flags: Red Flag #8 (stop your medicine), Red Flag #6 (moral/religious framing for food), Red Flag #7 (authority outside specialty).",
+        "A decision that feels spiritually right and medically dangerous is not protected by its spiritual framing — the biology remains the same."
+      ],
+      "modelPointsAr": [
+        "عشان يكون آمناً، هتحتاج دليل إن تغييرات الغذاء وحدها تتحكّم بالكامل في ضغط الدم الشديد — إرشادات WHO بتقول التغييرات الحياتية تكمّل خافضات الضغط الموصوفة، لا تحلّ محلّها في الضغط المُحكَم.",
+        "إيقاف دواء الضغط بدون إشراف طبي يسبّب أزمة ضغطية ارتدادية — من أهم أسباب السكتة الدماغية والأحداث القلبية في المرضى المسنّين.",
+        "القائد المجتمعي ليس متخصّصاً في القلب؛ لغة «المسلم الحقيقي» تحوّل القرار الطبي لاختيار هوياتي، متجاوزاً التقييم الطبي تماماً.",
+        "ثلاث علامات خطر نشطة: علامة الخطر ٨ (وقّف دواءك)، علامة الخطر ٦ (التأطير الأخلاقي/الديني للطعام)، علامة الخطر ٧ (سلطة خارج التخصص).",
+        "القرار الذي يبدو صحيحاً روحياً وخطيراً طبياً لا تحميه صياغته الروحية — البيولوجيا تبقى كما هي."
+      ],
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/hypertension",
+        "https://www.nhs.uk/conditions/high-blood-pressure-hypertension/treatment/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'Religious sincerity proves medical efficacy. I am sincerely following the Prophet's ﷺ practice. Therefore my diet protocol is medically effective for treating disease.'",
+      "claimAr": "فكّك الحُجّة دي: «الصدق الديني يُثبت الفاعلية الطبية. أنا بصدق أتّبع سنة النبي ﷺ. إذاً بروتوكول حميتي فعّال طبياً لعلاج المرض.»",
+      "parts": [
+        { "text": "My diet protocol is medically effective for treating disease.", "textAr": "بروتوكول حميتي فعّال طبياً لعلاج المرض.", "role": "conclusion" },
+        { "text": "I am sincerely following the Prophet's ﷺ practice.", "textAr": "أنا بصدق أتّبع سنة النبي ﷺ.", "role": "premise" },
+        { "text": "Religious sincerity proves medical efficacy.", "textAr": "الصدق الديني يُثبت الفاعلية الطبية.", "role": "assumption" },
+        { "text": "My sincerity is obvious to anyone who listens to me speak.", "textAr": "صدقي واضح لأي شخص يسمعني أتكلّم.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption is the fatal flaw: religious sincerity and medical efficacy are independent claims measured by different standards. A person can be deeply sincere in their faith and still promote a medically harmful practice — sincerity does not measure clinical outcomes. Medical efficacy is determined by controlled trials and systematic reviews, not by the believer's personal conviction. The 'sincerity is obvious' point is irrelevant to both the religious and medical questions.",
+      "explanationAr": "الافتراض الخفي هو العيب القاتل: الصدق الديني والفاعلية الطبية ادعاءان مستقلان يُقاسان بمعايير مختلفة. يمكن لشخص أن يكون صادقاً في إيمانه وفي الوقت ذاته يروّج لممارسة مُضرّة طبياً — الصدق لا يقيس النتائج السريرية. الفاعلية الطبية تُحدَّد بالتجارب المُحكَمة والمراجعات المنهجية، لا بقناعة المؤمن الشخصية. نقطة «صدقي واضح» غير ذات صلة بالسؤالَين الديني والطبي.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "day72_recall_bias",
+  "phase": 2,
+  "week": 11,
+  "day": 72,
+  "title": "Recall Bias — Memory Is Not a Camera",
+  "titleAr": "انحياز التذكّر — الذاكرة مش كاميرا",
+  "description": "When sick people try to remember past exposures, their memory is shaped by the illness itself. Why what we remember — and how clearly — depends on what we already know happened to us.",
+  "descriptionAr": "لمّا المرضى بيحاولوا يتذكّروا تعرّضات ماضية، ذاكرتهم بتتشكّل بالمرض نفسه. ليه اللي بنتذكّره — وبأد إيه وضوح — بيعتمد على اللي حصلنا.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://www.ncbi.nlm.nih.gov/books/NBK559106/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A case-control study asks cancer patients and healthy controls: 'How often did you eat processed meat in the past 10 years?' Why might cancer patients report higher consumption even if their actual intake was the same as controls?",
+      "claimAr": "دراسة حالات-شواهد بتسأل مرضى السرطان ومجموعة ضابطة صحية: «كنتوا بتاكلوا اللحوم المصنّعة قد إيه في آخر 10 سنين؟» ليه ممكن مرضى السرطان يُبلّغوا عن استهلاك أعلى حتى لو استهلاكهم الفعلي كان متساوياً؟",
+      "options": [
+        "Cancer patients eat more processed meat by definition",
+        "Recall bias — sick people search harder for a cause and unconsciously overestimate past exposures they now link to illness",
+        "Healthy controls are always more honest",
+        "The study design eliminates this problem automatically"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is recall bias: people who are ill are highly motivated to find an explanation for their illness, so they unconsciously search their memory more intensely and may 'remember' — or reconstruct — exposures that seem to explain their condition. Healthy controls have no such motivation. The result: sick people appear to have been more exposed even when they were not. This is one of the main weaknesses of case-control studies.",
+      "explanationAr": "ده انحياز التذكّر: المرضى محفّزون بشدة إنهم يلاقوا تفسير لمرضهم، فبيفتّشوا في ذاكرتهم بشكل أعمق وممكن «يتذكّروا» — أو يعيدوا بناء — تعرّضات تبدو مفسِّرة لحالتهم. المجموعة الصحية مفيهاش دافع زده. النتيجة: المرضى بيبدوا أكثر تعرّضاً حتى لو ماكانوش كده. دي واحدة من أهم نقاط الضعف في دراسات الحالات-الشواهد.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: in a case-control study, recall bias affects both the sick group and the healthy control group equally.",
+      "claimAr": "صح ولا غلط: في دراسة الحالات-الشواهد، انحياز التذكّر بيأثّر على مجموعة المرضى والمجموعة الضابطة الصحية بالتساوي.",
+      "correctAnswer": false,
+      "myth_en": "Both groups remember the past with equal accuracy.",
+      "myth_ar": "المجموعتان بتتذكّرا الماضي بنفس الدقة.",
+      "explanation": "False. Recall bias is asymmetric by design in case-control studies: sick people actively search for past exposures to explain their illness; healthy controls have no such incentive. This asymmetry is what inflates the apparent association between an exposure and a disease. Calibration moment: if you were confident this was TRUE, notice that the intuition 'fair questions should produce fair answers' is exactly what misleads — asymmetric motivation breaks the symmetry even when the questions are identical.",
+      "explanationAr": "غلط. انحياز التذكّر غير متماثل بطبيعته في دراسات الحالات-الشواهد: المرضى بيبحثوا بنشاط عن تعرّضات ماضية لتفسير مرضهم؛ والمجموعة الصحية مفيهاش دافع مماثل. عدم التماثل ده هو اللي بيضخّم الارتباط الظاهر. لحظة المعايرة: لو كنت واثق إنها صح، لاحظ إن الحدس «أسئلة عادلة لازم تنتج إجابات عادلة» هو بالظبط اللي بيضلّل — الدافع غير المتماثل بيكسر التماثل حتى لو الأسئلة متطابقة.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A follower of the viral «نظام الطيبات» diet says: 'I thought back carefully — I was eating chicken every day before I got IBS, and I stopped chicken and got better.' Which type of bias most contaminates this personal evidence?",
+      "claimAr": "تابع لنظام «الطيبات» بيقول: «فكّرت كويس — كنت باكل فراخ كل يوم قبل ما أصاب بالقولون، وبطّلت الفراخ وتحسّنت». أنهي نوع انحياز بيلوّث الدليل الشخصي ده أكثر؟",
+      "options": [
+        "No bias — personal memory is highly accurate",
+        "Recall bias combined with illusory correlation: knowing what he stopped eating makes him reconstruct memory of eating it frequently, while ignoring other possible causes"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: how does knowing the 'answer' (I stopped chicken and improved) change what you remember about the past? Why can't this person's memory be trusted as evidence here?",
+        "promptAr": "بكلماتك: إزاي معرفة «الإجابة» (بطّلت الفراخ وتحسّنت) بتغيّر اللي بتتذكّره عن الماضي؟ وليه ذاكرة الشخص ده ما تنفعش دليلاً هنا؟"
+      },
+      "explanation": "When someone already knows the conclusion, they reconstruct past memory to fit the story, exaggerating how often they ate chicken before. This is recall bias layered on illusory correlation. IBS symptoms naturally wax and wane, placebo effects are strong, and sleep, stress, and other foods changed at the same time. Without a control condition — without a period where nothing changed — there is no way to know what actually caused the improvement. Memory is not a recording; it is a reconstruction shaped by current beliefs.",
+      "explanationAr": "لمّا حد يعرف الخلاصة مسبقاً، بيعيد بناء الذاكرة الماضية لتناسب القصة، مبالغاً في تكرار أكله للفراخ قبلها. ده انحياز التذكّر مضاف عليه الترابط الوهمي. أعراض القولون بتيجي وبتروح طبيعياً، والتأثير الوهمي قوي، والنوم والتوتر وأكلات تانية اتغيّرت في نفس الوقت. من غير شرط ضابط — من غير فترة ما اتغيّرش فيها حاجة — ما فيش طريقة تعرف إيه اللي سبّب التحسّن فعلاً. الذاكرة مش تسجيل؛ هي إعادة بناء بتتشكّل بمعتقداتك الحالية.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/",
+        "EAL-case-001:redflag-3"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'I got IBS after eating chicken for years. I stopped chicken and improved immediately. My memory is clear — chicken must have caused my IBS. Anyone who questions this just didn't experience what I experienced.'",
+      "claimAr": "فكّك الحُجّة دي: «أصبت بالقولون بعد ما أكلت فراخ لسنين. بطّلت الفراخ وتحسّنت على طول. ذاكرتي واضحة — الفراخ لازم تكون سبّبت القولون. أي حد يشكّك ده مش عاش اللي أنا عشته».",
+      "parts": [
+        { "text": "Chicken must have caused my IBS.", "textAr": "الفراخ لازم تكون سبّبت القولون.", "role": "conclusion" },
+        { "text": "I stopped chicken and improved immediately.", "textAr": "بطّلت الفراخ وتحسّنت على طول.", "role": "premise" },
+        { "text": "(Unstated) If B follows the removal of A, then A caused the problem.", "textAr": "(غير مذكور) لو ب جاء بعد إزالة أ، يبقى أ سبّب المشكلة.", "role": "assumption" },
+        { "text": "Anyone who questions this didn't experience what I experienced.", "textAr": "أي حد يشكّك ما عاشش اللي أنا عشته.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption is post hoc ergo propter hoc — 'after this, therefore because of this' — one of the most ancient logical fallacies. IBS symptoms fluctuate naturally; improvement after removing chicken may be coincidence, placebo, or due to other simultaneous changes. The 'you didn't experience it' line is irrelevant — it substitutes personal experience for evidence and pre-discredits anyone who asks for data. Recall bias contaminates the premise itself: 'my memory is clear' is exactly what recall bias feels like from the inside.",
+      "explanationAr": "الافتراض الخفي هو post hoc ergo propter hoc — «بعد هذا، إذن بسببه» — واحدة من أقدم المغالطات المنطقية. أعراض القولون بتتفاوت طبيعياً؛ التحسّن بعد سحب الفراخ ممكن يكون مصادفة أو وهم أو ناتج عن تغييرات متزامنة أخرى. جملة «ما عشتوش» غير ذات صلة — بتحلّ التجربة الشخصية محل الدليل وبتُسقِط مقدماً أي شخص يطلب بيانات. انحياز التذكّر بيلوّث المقدّمة نفسها: «ذاكرتي واضحة» ده بالظبط شكل انحياز التذكّر من الداخل.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/",
+        "EAL-case-001:redflag-3"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 5,
+      "mechanic": "recognize",
+      "claim": "A researcher wants to minimize recall bias in a study of diet and heart disease. Which design upgrade would help most?",
+      "claimAr": "باحث عايز يحدّ من انحياز التذكّر في دراسة عن التغذية وأمراض القلب. أنهي ترقية في التصميم هتساعد أكثر؟",
+      "options": [
+        "Ask more detailed questions about diet",
+        "Collect dietary data prospectively with food diaries and biological markers (e.g. cholesterol, blood sugar) before any participants develop heart disease",
+        "Ask only young participants",
+        "Increase the sample size alone"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The gold standard fix for recall bias is to collect exposure data *before* the outcome occurs — prospectively. If you measure what people actually eat through food diaries, weighed records, or biomarkers (cholesterol, blood sugar, nutrient levels) at regular intervals before anyone falls ill, you eliminate the distortion that illness introduces into memory. This is the core strength of prospective cohort studies over retrospective case-control studies.",
+      "explanationAr": "الحل المثالي لانحياز التذكّر هو جمع بيانات التعرّض *قبل* حدوث النتيجة — بشكل استباقي. لو قستَ ما الناس بتاكله فعلاً من خلال يوميات غذائية أو سجلات موزونة أو علامات بيولوجية (كوليسترول، سكر دم، مستويات المغذيّات) على فترات منتظمة قبل ما أي حد يمرض، بتزيل التشويه اللي بيدخله المرض على الذاكرة. دي القوة الأساسية لدراسات الأتراب الاستباقية على دراسات الحالات-الشواهد الرجعية.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/5-measurement-error-and-bias"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

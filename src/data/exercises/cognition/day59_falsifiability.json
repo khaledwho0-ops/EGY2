@@ -1,0 +1,150 @@
+{
+  "id": "day59_falsifiability",
+  "phase": 2,
+  "week": 9,
+  "day": 59,
+  "title": "The One Rule That Separates Science from Everything Else",
+  "titleAr": "القاعدة الوحيدة اللي بتفرّق العلم عن كل حاجة تانية",
+  "description": "Karl Popper's insight: a claim is scientific only if you can name what would prove it wrong. If nothing can, it has left science.",
+  "descriptionAr": "فكرة كارل بوبر: الادعاء علمي بس لو تقدر تسمّي اللي ممكن يثبت إنه غلط. لو ما فيش حاجة تعمل كده، يبقى خرج من العلم.",
+  "type": "science",
+  "difficulty": 2,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A seller says: \"My remedy only fails if you didn't follow it correctly — so if you didn't get better, you must have done it wrong.\" What has happened to this claim scientifically?",
+      "claimAr": "بائع بيقول: «علاجي بيفشل بس لو ما اتبعتوش صح — يبقى لو ما تحسّنتيش لازم تكون عملته غلط». علمياً، حصل إيه للادعاء ده؟",
+      "options": [
+        "It is a strong claim because it explains every outcome",
+        "It has become unfalsifiable — no result can ever count against it, so it has exited science",
+        "It is reasonable quality control",
+        "It is a testable hypothesis"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Karl Popper's falsifiability criterion: a claim that can explain every possible outcome — success or failure — explains nothing. When failure is always blamed on the patient, no experiment could ever refute it. That is the signature of pseudoscience, not science. The viral Taybat diet used exactly this move: deterioration was attributed to imperfect adherence, never the system.",
+      "explanationAr": "معيار كارل بوبر للقابلية للتفنيد: الادعاء اللي يقدر يفسّر كل نتيجة محتملة — نجاح أو فشل — ما بيفسّرش حاجة. لمّا الفشل يتعلّق دايماً على المريض، ما فيش تجربة ممكن تفنّده. دي علامة العلم الزائف مش العلم. نظام «الطيبات» استخدم بالظبط نفس الحركة: التدهور اتنسب لعدم الالتزام، مش للنظام.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:redflag-4"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if a claim has a religious or sacred framing, it is automatically exempt from the falsifiability test when it is also making a medical claim.",
+      "claimAr": "صح ولا غلط: لو الادعاء فيه إطار ديني أو مقدّس، هيبقى تلقائياً معفي من اختبار القابلية للتفنيد لمّا يبقى ادعاء طبي كمان.",
+      "correctAnswer": false,
+      "myth_en": "Sacred framing puts a medical claim above testing.",
+      "myth_ar": "الإطار المقدّس بيرفع الادعاء الطبي فوق الاختبار.",
+      "explanation": "False. Popper's criterion applies to the claim's logic, not its dress. When a seller uses religious vocabulary to make a nutrition or cure claim, the medical portion of that claim still must be testable. In the Taybat case, Quranic words were imported into a diet system, making disagreement feel like religious heresy. But 'does removing chicken lower blood sugar?' is a medical question requiring a medical answer, regardless of the language used.",
+      "explanationAr": "غلط. معيار بوبر بينطبق على منطق الادعاء مش على شكله. لمّا بائع يستخدم مفردات دينية يعمل بيها ادعاء تغذية أو شفاء، الجزء الطبي من الادعاء ده لازم لسه يكون قابلاً للاختبار. في حالة «الطيبات»، استُوردت مفردات قرآنية لنظام غذائي فخلّت الاعتراض يبان كهرطقة دينية. لكن «هل حذف الفراخ بيخفّض سكر الدم؟» سؤال طبي محتاج إجابة طبية، بغض النظر عن اللغة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:redflag-6"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A researcher says: \"I believe the new herb lowers blood pressure. Here is what would prove me wrong: a blinded trial on 200 patients where the herb group has no better readings than the placebo group.\" Is this claim scientific?",
+      "claimAr": "باحث بيقول: «أعتقد إن العشب الجديد بيخفّض الضغط. ها هو اللي هيثبت إني غلط: تجربة معمّاة على 200 مريض الفيها مجموعة العشب ما تبقاش أفضل من مجموعة الوهمي». هل الادعاء ده علمي؟",
+      "options": [
+        "No — a real scientist would never admit he could be wrong",
+        "Yes — naming what would falsify it is exactly what makes a claim scientific",
+        "Only if the result comes out positive",
+        "No — you need to test it on millions first"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does being willing to name what would prove you wrong make a claim *stronger*, not weaker?",
+        "promptAr": "بكلماتك: ليه إنك تبقى مستعد تسمّي اللي يثبت إنك غلط بيعمل الادعاء *أقوى*، مش أضعف؟"
+      },
+      "explanation": "Science doesn't require certainty upfront — it requires a clear statement of what evidence would overturn the hypothesis. The researcher's willingness to be wrong is a strength, not a weakness. Compare this to the Taybat originator's response when asked for evidence: 'The truth will be proven in the future' — a claim that nothing could ever falsify. Naming the kill-shot is what keeps the investigation honest.",
+      "explanationAr": "العلم ما بيطلبش يقين مسبق — بيطلب بيان واضح لأي دليل يقلب الفرضية. استعداد الباحث للغلط هو نقطة قوة مش ضعف. قارنه بردّ صاحب نظام «الطيبات» لمّا اتطلب منه دليل: «الحقيقة هتثبت في المستقبل» — ادعاء ما فيش حاجة تفنّده أبداً. تسمية الضربة القاضية هي اللي بتخلّي البحث أميناً.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "After the Taybat system was banned and the originator died, some followers said: \"The ban proves they feared the truth.\" This feels compelling — the system must have been working.",
+      "claimAr": "بعد حظر نظام «الطيبات» ووفاة صاحبه، قال بعض الأتباع: «الحظر يثبت إنهم كانوا خايفين من الحقيقة». الكلام ده حاسس بيه — لازم يكون النظام شغّال.",
+      "prompt": "What would have to be TRUE if this argument were false? What outcomes would look exactly the same if the ban was justified by genuine harm?",
+      "promptAr": "لو الحجة دي غلط، إيه اللي لازم يكون صح؟ وإيه النتايج اللي هتبان بالظبط نفسها لو الحظر كان مبرَّراً بأذى حقيقي؟",
+      "modelPoints": [
+        "If the ban were justified by real harm, we'd expect exactly what we see: documented victims, ICU admissions, and official medical body warnings.",
+        "The 'fear' argument wins no matter what: acceptance proves it works, ban also proves it works. A claim that cannot lose is not an argument — it is a closed mind.",
+        "Regulatory bans in medicine routinely follow documented harm to patients — this is normal, not conspiracy.",
+        "The argument attacks the motivation of critics without engaging the actual evidence of harm."
+      ],
+      "modelPointsAr": [
+        "لو الحظر كان بسبب أذى حقيقي، هنتوقع بالظبط اللي بنشوفه: ضحايا موثّقة، دخول عناية مركزة، وتحذيرات من هيئات طبية رسمية.",
+        "حجة «الخوف» بتكسب مهما حصل: القبول يثبت إنه شغّال، والحظر كمان يثبت إنه شغّال. الادعاء اللي ما يخسرش مش حجة — ده عقل مغلق.",
+        "الحظر التنظيمي في الطب عادةً بييجي بعد أذى موثَّق للمرضى — ده طبيعي، مش مؤامرة.",
+        "الحجة بتهاجم دوافع الناقدين من غير ما تتعامل مع دليل الأذى الفعلي."
+      ],
+      "explanation": "Considering the opposite exposes the structure: this argument is self-sealing — no evidence could count against it. Popper called structures like this 'immunized against criticism.' Understanding this protects you: when a claim wins no matter what happens, it has stepped outside science entirely.",
+      "explanationAr": "التفكير في العكس بيكشف الهيكل: الحجة دي بتغلق نفسها — ما فيش دليل يُحسَب ضدّها. بوبر سمّى تراكيب زي دي «محصّنة ضد النقد». فهم ده بيحميك: لمّا ادعاء يكسب مهما حصل، يبقى خرج من العلم خالص.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:conspiracy-4"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"Scientists can't explain everything. This remedy cured my neighbour. So science has no answer here — and you should try it.\"",
+      "claimAr": "فكّك الحُجّة دي: «العلماء ما يقدروش يفسّروا كل حاجة. العلاج ده شفى جاري. يبقى العلم ما عنده إجابة هنا — ولازم تجرّبه».",
+      "parts": [
+        { "text": "You should try this remedy.", "textAr": "لازم تجرّب العلاج ده.", "role": "conclusion" },
+        { "text": "Scientists can't explain everything.", "textAr": "العلماء ما يقدروش يفسّروا كل حاجة.", "role": "irrelevant" },
+        { "text": "This remedy cured my neighbour.", "textAr": "العلاج ده شفى جاري.", "role": "premise" },
+        { "text": "(Unstated) A single recovery story is enough to recommend a remedy.", "textAr": "(غير مذكور) قصة شفاء واحدة كافية للتوصية بعلاج.", "role": "assumption" }
+      ],
+      "explanation": "The hidden ASSUMPTION does all the work: that one anecdote equals evidence. The 'science can't explain everything' line is IRRELEVANT — science's limits in one area say nothing about whether this remedy is safe or effective. Mapping the parts reveals that the conclusion rests entirely on an unfounded assumption, not on the premise stated.",
+      "explanationAr": "الافتراض الخفي هو اللي بيشتغل: إن حكاية واحدة تساوي دليل. جملة «العلم ما يقدرش يفسّر كل حاجة» غير ذات صلة — حدود العلم في منطقة ما بتقولش حاجة عن أمان العلاج أو فعاليته. تفكيك الأجزاء بيكشف إن الخلاصة مبنية على افتراض بلا أساس، مش على المقدّمة المُعلنة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5746464/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    },
+    {
+      "id": 6,
+      "mechanic": "inoculate",
+      "technique": "making a claim unfalsifiable",
+      "techniqueAr": "جعل الادعاء غير قابل للتفنيد",
+      "task": "Practice from the inside so you can spot it later. Write a short, confident post for a harmless product (e.g. 'drink more water') that is built so it CANNOT be disproved — every failure is the user's fault, every success proves the product works.",
+      "taskAr": "درّب نفسك من الجوّه علشان تكشفها بعدين. اكتب بوست قصير واثق لمنتج غير ضار (زي «اشرب مية أكتر») مبني بحيث لا يمكن تفنيده — كل فشل غلط المستخدم، وكل نجاح يثبت إن المنتج شغّال.",
+      "tells": [
+        "Every failure is blamed on the user ('you didn't do it right'), never on the product.",
+        "Every success is claimed as proof — no control group, no comparison.",
+        "The claim is sealed: there is no result that could ever count against it.",
+        "Sounds rigorous because it mentions 'correct method' — but the method can always be redefined after the fact."
+      ],
+      "tellsAr": [
+        "كل فشل يتحمّله المستخدم («ما عملتهوش صح»)، مش المنتج أبداً.",
+        "كل نجاح بيُدّعى إنه دليل — من غير مجموعة ضابطة ولا مقارنة.",
+        "الادعاء مغلق: ما فيش نتيجة تُحسَب ضده أبداً.",
+        "يبان صارم لأنه بيذكر «الطريقة الصح» — لكن الطريقة ممكن تتعرَّف من جديد بعد النتيجة."
+      ],
+      "explanation": "Active inoculation: building the unfalsifiable move yourself (in a harmless context) trains you to recognise its signature instantly when a real manipulator uses it. The key tell is the blame-shift: when failure is always the patient's fault, the claim has stepped outside science.",
+      "explanationAr": "التلقيح النشط: بناء الحركة غير القابلة للتفنيد بنفسك (في سياق غير ضار) بيدرّبك على تعرّف بصمتها فوراً لمّا مُتلاعِع حقيقي يستخدمها. العلامة الأساسية هي نقل اللوم: لمّا الفشل يبقى دايماً غلط المريض، الادعاء بيكون خرج من العلم.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/pops.70015"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

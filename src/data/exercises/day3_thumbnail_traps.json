@@ -1,0 +1,87 @@
+{
+  "id": "day3_thumbnail_traps",
+  "phase": 0,
+  "week": 1,
+  "day": 3,
+  "title": "Thumbnail Trap Detection",
+  "titleAr": "كشف فخاخ الصور المصغرة",
+  "description": "Learn to identify manipulative thumbnails and clickbait tactics commonly used in Arabic YouTube and social media.",
+  "descriptionAr": "تعلم التعرف على الصور المصغرة المتلاعبة وأساليب الكليك بيت الشائعة في يوتيوب العربي ووسائل التواصل الاجتماعي.",
+  "type": "detection",
+  "difficulty": 2,
+  "estimatedMinutes": 15,
+  "exercises": [
+    {
+      "id": 1,
+      "scenario": "A YouTube thumbnail shows a famous Egyptian actor with tears, red arrow pointing to a hospital, text reading 'BREAKING: [Actor Name] in Critical Condition!!!' The actual video is about the actor's movie role.",
+      "scenarioAr": "صورة مصغرة على يوتيوب تظهر ممثل مصري شهير بالدموع وسهم أحمر يشير لمستشفى ونص 'عاجل: [اسم الممثل] في حالة حرجة!!!' الفيديو الفعلي عن دور الممثل في فيلم.",
+      "manipulationTechnique": "Emotional Exploitation + False Urgency",
+      "manipulationTechniqueAr": "استغلال عاطفي + إلحاح زائف",
+      "redFlags": ["Multiple exclamation marks (!!!)", "Red arrow visual manipulation", "BREAKING label for non-breaking content", "Emotional image out of context", "Bait-and-switch content"],
+      "correctAnalysis": "This thumbnail uses emotional exploitation by showing the actor in distress, combined with false urgency ('BREAKING'). The red arrow is a visual anxiety trigger. The actual content is unrelated entertainment news — classic clickbait."
+    },
+    {
+      "id": 2,
+      "scenario": "A Facebook video thumbnail shows a split image: on the left, a mosque; on the right, a nightclub. The caption reads 'This is what Egypt has become... Share before they delete it!'",
+      "scenarioAr": "صورة مصغرة لفيديو فيسبوك تظهر صورة مقسمة: على اليسار مسجد، على اليمين ملهى ليلي. التعليق: 'هذا ما أصبحت عليه مصر... شارك قبل ما يحذفوه!'",
+      "manipulationTechnique": "False Dichotomy + Censorship Fear",
+      "manipulationTechniqueAr": "ثنائية زائفة + خوف من الرقابة",
+      "redFlags": ["False dichotomy (two extremes presented as only options)", "'Share before deletion' creates artificial urgency", "Morality framing to bypass critical thinking", "Juxtaposition manipulates emotional response"],
+      "correctAnalysis": "This uses a false dichotomy to present Egypt as only two extremes. The 'share before deletion' tactic creates artificial urgency and implies censorship. The split image is designed to trigger moral outrage, bypassing rational analysis."
+    },
+    {
+      "id": 3,
+      "scenario": "A YouTube thumbnail shows a shocked face emoji, a circle highlighting 'something' in the Pyramids, with text 'Scientists Can't Explain What Was Found Inside the Pyramid'.",
+      "scenarioAr": "صورة مصغرة على يوتيوب تظهر إيموجي وجه مصدوم، دائرة تبرز 'شيء ما' في الأهرامات، ونص 'العلماء لا يستطيعون تفسير ما وُجد داخل الهرم'.",
+      "manipulationTechnique": "Mystery Gap + Appeal to Ignorance",
+      "manipulationTechniqueAr": "فجوة الغموض + مناشدة الجهل",
+      "redFlags": ["Vague 'something' with red circle", "Shocked face emoji", "Appeal to mystery ('Can't explain')", "No specific claim — designed to exploit curiosity", "Capital letters for emphasis"],
+      "correctAnalysis": "This exploits the 'curiosity gap' — providing just enough intrigue to make you click. The vague red circle and 'scientists can't explain' are classic appeals to ignorance. Real scientific discoveries are reported with specific details."
+    },
+    {
+      "id": 4,
+      "scenario": "An Arabic news thumbnail shows a graph going dramatically downward with red color, headline 'The Egyptian Pound is Collapsing: What They Don't Want You to Know'.",
+      "scenarioAr": "صورة مصغرة لأخبار عربية تظهر رسماً بيانياً ينخفض بشكل درامي باللون الأحمر، عنوان 'الجنيه المصري ينهار: ما لا يريدونك أن تعرفه'.",
+      "manipulationTechnique": "Data Visualization Manipulation + Conspiracy Framing",
+      "manipulationTechniqueAr": "تلاعب بتصوير البيانات + تأطير مؤامراتي",
+      "redFlags": ["Graph without Y-axis scale (could be 0.1% change)", "Red color triggers fear", "Conspiracy framing ('What they don't want you to know')", "No time period specified for the graph", "Unnamed 'they' creating paranoia"],
+      "correctAnalysis": "The graph likely shows a real decline but with a manipulated Y-axis to exaggerate the drop. The conspiracy framing ('what they don't want you to know') bypasses rational analysis and creates an us-vs-them mentality."
+    },
+    {
+      "id": 5,
+      "scenario": "A viral TikTok preview shows a sheikh in traditional dress with the caption 'This sheikh predicted everything happening today — watch the full video'.",
+      "scenarioAr": "معاينة تيك توك فيروسية تظهر شيخاً بالزي التقليدي مع تعليق 'هذا الشيخ تنبأ بكل ما يحدث اليوم — شاهد الفيديو كاملاً'.",
+      "manipulationTechnique": "False Authority + Retroactive Prediction",
+      "manipulationTechniqueAr": "سلطة زائفة + تنبؤ بأثر رجعي",
+      "redFlags": ["Appeal to religious authority for non-religious claims", "Vague 'everything' allows confirmation bias", "Retroactive fitting of past statements to current events", "No specific checkable prediction given in preview"],
+      "correctAnalysis": "This exploits religious authority for clickbait. Vague predictions can be retrofitted to any current event (Barnum effect). Real predictions require specific, falsifiable, time-stamped claims."
+    },
+    {
+      "id": 6,
+      "scenario": "A news website article thumbnail shows a photo of Egyptian President with a foreign leader, headline reads 'Egypt Signs SECRET Agreement That Will Change Everything'.",
+      "scenarioAr": "صورة مصغرة لمقال إخباري تظهر صورة الرئيس المصري مع زعيم أجنبي، العنوان: 'مصر توقع اتفاقية سرية ستغير كل شيء'.",
+      "manipulationTechnique": "Secrecy Framing + Hyperbole",
+      "manipulationTechniqueAr": "تأطير السرية + مبالغة",
+      "redFlags": ["'SECRET' in caps — if it were truly secret, how would they know?", "'Change everything' is extreme hyperbole", "Official photo used out of diplomatic context", "No specific details about the 'agreement'"],
+      "correctAnalysis": "The paradox of calling something 'SECRET' while publishing it reveals the manipulative intent. 'Change everything' is unfalsifiable hyperbole. Real diplomatic reporting provides specific treaty details, signatories, and terms."
+    },
+    {
+      "id": 7,
+      "scenario": "An Instagram Reel thumbnail shows a before-and-after of a herbal supplement with text 'This Egyptian herb made me lose 20kg in 2 weeks — doctors hate this!'",
+      "scenarioAr": "صورة مصغرة لريل إنستجرام تظهر قبل وبعد لمكمل عشبي مع نص 'هذه العشبة المصرية خسّرتني ٢٠ كيلو في أسبوعين — الأطباء يكرهون هذا!'",
+      "manipulationTechnique": "False Testimonial + Anti-Authority Framing",
+      "manipulationTechniqueAr": "شهادة زائفة + تأطير مضاد للسلطة",
+      "redFlags": ["20kg in 2 weeks is medically dangerous and impossible through healthy means", "Before/after photos are easily manipulated", "'Doctors hate this' is classic snake-oil framing", "No ingredient or dosage information", "Anecdotal evidence only"],
+      "correctAnalysis": "Safe weight loss is 0.5-1 kg per week (WHO). 20kg in 2 weeks would require a 10,000 cal/day deficit — medically impossible. 'Doctors hate this' is a red flag indicating the product cannot withstand medical scrutiny. Before/after photos require verification of timing, lighting, and identity."
+    },
+    {
+      "id": 8,
+      "scenario": "A legitimate Al Jazeera Arabic thumbnail shows a satellite image of flooding with factual headline 'Derna Floods: Over 11,000 Dead in Libya's Worst Natural Disaster'.",
+      "scenarioAr": "صورة مصغرة شرعية من الجزيرة عربي تظهر صورة قمر صناعي للفيضانات مع عنوان واقعي 'فيضانات درنة: أكثر من ١١,٠٠٠ قتيل في أسوأ كارثة طبيعية في ليبيا'.",
+      "manipulationTechnique": "None — Legitimate Journalism",
+      "manipulationTechniqueAr": "لا يوجد — صحافة مشروعة",
+      "redFlags": ["This is an example of responsible journalism", "Specific numbers from official sources", "Satellite imagery is verifiable", "No emotional manipulation", "Factual headline without hyperbole"],
+      "correctAnalysis": "This is a legitimate news thumbnail. It uses factual reporting with specific, verifiable numbers from humanitarian sources. The satellite imagery provides objective evidence. No emotional manipulation tactics are employed. Not all dramatic headlines are clickbait — real tragedies exist."
+    }
+  ]
+}

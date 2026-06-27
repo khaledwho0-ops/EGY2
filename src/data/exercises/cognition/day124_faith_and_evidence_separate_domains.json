@@ -1,0 +1,129 @@
+{
+  "id": "day124_faith_and_evidence_separate_domains",
+  "phase": 3,
+  "week": 18,
+  "day": 124,
+  "title": "Faith and Evidence: Two Non-Conflicting Domains",
+  "titleAr": "الإيمان والدليل: مجالان لا يتعارضان",
+  "description": "Faith answers questions of meaning, purpose, and the unseen. Evidence answers questions about the physical world's measurable cause and effect. Protecting both domains from being hijacked is itself an act of intellectual and spiritual integrity.",
+  "descriptionAr": "الإيمان بيجاوب على أسئلة المعنى والغاية والغيب. الدليل بيجاوب على أسئلة السبب والأثر القابل للقياس في العالم المادي. حماية المجالين من الاختطاف هي نفسها فعل نزاهة فكرية وروحية.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/religion-science/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A patient with type-1 diabetes is told by a community: 'Stop your insulin — that is a foreign chemical. Trust in Allah's healing through this pure natural diet.' The patient stops insulin. Which harm has the framing caused?",
+      "claimAr": "مريضة سكري من النوع الأول بتقول لها مجتمع: «وقّفي الأنسولين — ده مادة كيميائية أجنبية. اتوكّلي على الله في الشفاء من خلال الحمية الطبيعية الطاهرة دي». وقّفت الأنسولين. أنهي أذى عمله التأطير؟",
+      "options": [
+        "None — the community was expressing genuine care",
+        "It collapsed two separate domains: a medical protocol (insulin for T1 diabetes) was replaced by a spiritual act, creating a false choice that costs lives",
+        "It was medically reasonable",
+        "It only caused psychological harm"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the deadly consequence of collapsing the two domains. Insulin for type-1 diabetes is the natural hormone the patient's own body cannot produce, validated by decades of RCTs and endorsed by every major health authority. Replacing it with a diet is not an act of faith; it is a medical decision without evidence. Trusting Allah does not require stopping a proven treatment — thousands of devout Muslims worldwide manage T1 diabetes with insulin while maintaining full faith. The framing created a false choice where none exists.",
+      "explanationAr": "دي النتيجة المميتة لدمج المجالين. الأنسولين لسكري النوع الأول هو الهرمون الطبيعي اللي جسم المريضة ما بينتجش، مُثبَت بعقود من التجارب المُحكَمة. استبداله بحمية مش فعل إيمان؛ ده قرار طبي بلا دليل. التوكّل على الله ما بيتطلّبش وقف علاج مُثبَت — آلاف المسلمين المتديّنين حول العالم بيتحكّموا في سكري النوع الأول بالأنسولين مع إيمان كامل.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        "EAL-case-001:okaz-2026-05-10"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "Requiring clinical evidence for a dietary health claim is a secular demand that contradicts Islamic values.",
+      "claimAr": "طلب دليل إكلينيكي على ادعاء صحي غذائي هو مطلب علماني يتعارض مع القيم الإسلامية.",
+      "options": [
+        "True — demanding evidence for health claims is un-Islamic",
+        "False — the Islamic scholarly tradition has a deep culture of evidence verification that is structurally similar to evidence-based medicine"
+      ],
+      "correctAnswer": 1,
+      "explanation": "False. The Islamic scholarly tradition has a profound culture of evidence verification — the science of hadith criticism (mustalah al-hadith) was built entirely on evaluating the reliability of narrators, chains of transmission, and consistency of content. The same intellectual discipline applied to hadith — 'who said this, through whom, and can it be verified?' — is structurally identical to evidence-based medicine's demand for sources, methodology, and replication. Demanding evidence is not a foreign import; it has deep roots in Islamic epistemology. Calibration check: how confident were you before reading the explanation?",
+      "explanationAr": "غلط. التراث العلمي الإسلامي عنده ثقافة عميقة في التحقّق من الأدلة — علم مصطلح الحديث بُني بالكامل على تقييم موثوقية الرواة وسلاسل السند. نفس الانضباط الفكري المُطبَّق على الحديث — «مين قاله، من خلال مين، وممكن يتحقّق منه؟» — هو بنيوياً مطابق لمطلب الطب المبني على الدليل. المطالبة بالدليل مش استيراد أجنبي؛ عندها جذور عميقة في المعرفية الإسلامية.",
+      "sources": [
+        "https://plato.stanford.edu/entries/religion-science/",
+        "https://sunnah.com/introduction"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A person says: 'I believe in both modern medicine and in Allah's power to heal. I take my medication and I also pray. My doctor knows about my faith and respects it.' Is there a conflict here?",
+      "claimAr": "شخص بيقول: «أنا بؤمن بالطب الحديث وفي نفس الوقت بقدرة الله على الشفاء. بآخد دوائي وبصلّي كمان. دكتوري عارف بإيماني وبيحترمه». في تعارض هنا؟",
+      "options": [
+        "Yes — medicine and faith are fundamentally incompatible",
+        "No — this person is correctly using each domain for what it is designed to answer; there is no inherent conflict"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what SPECIFIC question does medicine answer, and what SPECIFIC question does faith answer — and why do these not compete with each other?",
+        "promptAr": "بكلماتك: إيه السؤال المحدّد اللي الطب بيجاوب عليه، وإيه السؤال المحدّد اللي الإيمان بيجاوب عليه — وليه دول ما بيتنافسوش مع بعض؟"
+      },
+      "explanation": "This is the healthy integration. Medicine answers 'what measurable intervention produces what measurable outcome in this body?' Faith answers 'what does this suffering mean, what sustains me, and what is my ultimate hope?' These are not the same question, and they do not compete. Many of the world's most accomplished physicians are people of deep faith — including Muslim doctors who see no contradiction between conducting rigorous research and maintaining their prayers. The conflict is manufactured, not inherent.",
+      "explanationAr": "ده التكامل الصحي. الطب بيجاوب «أي تدخّل قابل للقياس ينتج أي نتيجة قابلة للقياس في هذا الجسم؟» الإيمان بيجاوب «ما معنى هذا الألم، وما الذي يُثبّتني، وما أملي الأعمق؟» دول مش نفس السؤال وما بيتنافسوش. كثير من أكثر الأطباء إنجازاً في العالم هم أهل إيمان عميق. التعارض مصنوع مش متأصّل.",
+      "sources": [
+        "https://plato.stanford.edu/entries/religion-science/",
+        "https://www.apa.org/topics/religion-spirituality/faith-health"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "The viral Taybat diet used the spiritual concept of bodily 'purity' to frame insulin as 'pollution' and certain vegetables as 'toxins.' A defender says this framing was harmless because it was motivated by genuine religious concern for purity.",
+      "claimAr": "نظام الطيبات المنتشر استخدم مفهوم «الطهارة» الروحية للجسم علشان يُأطّر الأنسولين كـ«تلوّث» وبعض الخضار كـ«سموم». مدافع بيقول التأطير ده كان غير ضار لأنه كان مدفوعاً بقلق ديني حقيقي على الطهارة.",
+      "prompt": "What would you need to find to show this framing WAS harmful — beyond the individual dietary choice? What community-level and public-health harms follow when whole networks learn to process medical decisions through a spiritual purity lens?",
+      "promptAr": "إيه اللي لازم تلاقيه علشان تُثبت إن التأطير ده كان ضاراً — بما يتعدّى الاختيار الغذائي الفردي؟ وإيه الأضرار على مستوى المجتمع والصحة العامة اللي بتجي لمّا شبكات كاملة تتعلّم معالجة القرارات الطبية من خلال عدسة الطهارة الروحية؟",
+      "modelPoints": [
+        "When an entire social network learns to process medical decisions through a spiritual purity framework, health authorities cannot communicate during emergencies: people who learned 'medication = spiritual pollution' are harder to reach with urgent public-health messages about vaccines, disease outbreaks, or safe treatment.",
+        "The framing trained whole communities to feel moral revulsion at medical interventions — that revulsion transfers to future, unrelated situations (vaccine hesitancy, rejection of antibiotics, distrust of cancer treatment).",
+        "Documented community-level harm: the 230+ reported victims by May 2026 were not isolated individuals — each had a family and community network using the purity framing to deflect concern and silence questions.",
+        "Sincere motivation does not determine outcome: a sincerely held framework that trains people to distrust proven treatments causes the same measurable harm regardless of the intention behind it."
+      ],
+      "modelPointsAr": [
+        "لمّا شبكة اجتماعية كاملة بتتعلّم إنها تعالج القرارات الطبية من خلال إطار الطهارة الروحية، السلطات الصحية ما تقدرش تتواصل في الطوارئ: الناس اللي اتعلّمت إن «الدواء = تلوّث روحي» أصعب وصولاً برسائل عاجلة عن اللقاحات أو انتشار الأمراض.",
+        "التأطير درّب مجتمعات كاملة على الشعور بالنفور الأخلاقي من التدخلات الطبية — النفور ده بينتقل لمواقف مستقبلية مختلفة (تردّد في اللقاحات، رفض المضادات الحيوية، عدم ثقة في علاج السرطان).",
+        "أذى موثّق على مستوى المجتمع: +230 ضحية مُبلَّغ عنهم بحلول مايو 2026 لم يكونوا أفراداً معزولين — كل واحد كان حواليه شبكة عائلية ومجتمعية بتستخدم إطار الطهارة لصرف القلق وتصميت الأسئلة.",
+        "الدافع الصادق لا يحدد النتيجة: إطار عقدي راسخ بصدق بيدرّب الناس على عدم الثقة في علاجات مُثبَتة بيُسبّب نفس الأذى القابل للقياس بغضّ النظر عن النية وراءه."
+      ],
+      "sources": [
+        "https://www.who.int/teams/risk-communication/infodemic-management",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "false domain-collapse: making a medical claim feel like a faith obligation",
+      "techniqueAr": "دمج مجالات زائف: تحويل ادعاء طبي لشعور بالالتزام الديني",
+      "task": "Feel the technique from inside (harmless version). Write a short post for a completely safe product (e.g. a specific brand of dates, or a herbal tea) that makes choosing a different product feel like a spiritual failing. Don't use any claims that could harm anyone — just make the domain-collapse as convincing as possible.",
+      "taskAr": "احسّ بالتقنية من جوّه (نسخة غير ضارة). اكتب بوست قصير لمنتج آمن تماماً (مثلاً نوع معين من التمر أو شاي عشبي) بيخلّي اختيار منتج تاني يحسّ بإخفاق روحي. ما تستخدمش أي ادعاءات ممكن تأذي حد — بس اعمل الدمج بين المجالين مُقنعاً قدر الإمكان.",
+      "tells": [
+        "The medical or commercial choice was reframed as a religious obligation — but the Quran or hadith never specified this brand/product.",
+        "Declining the product now feels like a moral or spiritual failure, not a neutral consumer choice — that emotional friction is manufactured, not earned.",
+        "No evidence is cited for why this specific product is better than alternatives — the spiritual framing did all the persuasion work.",
+        "The 'false choice' structure: you can either follow this spiritual path (and buy this product) or be spiritually negligent — no middle ground exists.",
+        "Strip out the religious vocabulary: what factual claim about the product remains? Usually very little — the sacred language was carrying the entire argument."
+      ],
+      "tellsAr": [
+        "الاختيار الطبي أو التجاري أُعيد تأطيره كالتزام ديني — لكن القرآن أو الحديث ما حدّدوا العلامة/المنتج ده أبداً.",
+        "رفض المنتج دلوقتي بيحسّ بإخفاق أخلاقي أو روحي لا خيار مستهلك محايد — الاحتكاك العاطفي ده مصنوع مش مكسوب.",
+        "لا دليل مذكور على ليه هذا المنتج بالذات أحسن من البدائل — التأطير الروحي عمل كل شغل الإقناع.",
+        "تركيب «الاختيار الزائف»: إما تتّبع هذا المسار الروحي (وتشتري المنتج) أو تكون مهملاً روحياً — لا وسط موجود.",
+        "اشيل المفردات الدينية: إيه الادعاء الواقعي عن المنتج اللي بيبقى؟ عادةً قليل جداً — اللغة المقدّسة كانت بتحمل الحجة كلها."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/religion-science/",
+        "https://www.apa.org/topics/religion-spirituality/faith-health"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    }
+  ]
+}

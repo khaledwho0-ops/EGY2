@@ -1,0 +1,161 @@
+{
+  "id": "reverse_image_day2",
+  "phase": 1,
+  "week": 6,
+  "day": 2,
+  "title": "Reverse Image Search: Egyptian Context",
+  "titleAr": "البحث العكسي عن الصور: السياق المصري",
+  "description": "Practice reverse image search with 5 scenarios specifically drawn from Egyptian misinformation patterns: old archive images, stock photos, images from other countries, cropped images, and AI-generated content",
+  "descriptionAr": "تدرّب على البحث العكسي عن الصور مع 5 سيناريوهات مستمدة تحديدًا من أنماط المعلومات المضللة المصرية: الصور الأرشيفية القديمة والصور المخزنة والصور من دول أخرى والصور المُقصَّصة والمحتوى المولَّد بالذكاء الاصطناعي",
+  "type": "investigation",
+  "difficulty": 3,
+  "estimatedMinutes": 22,
+  "bloomLevel": "apply",
+  "source": "Bellingcat Visual Verification Guide (2021); First Draft News; Tow Center for Digital Journalism",
+  "com_b_target": "Capability/Psychological",
+  "com_b_mechanism": "Specific scenario practice builds pattern recognition for Egyptian-context visual misinformation",
+  "exercises": [
+    {
+      "id": 1,
+      "type": "investigation-scenario",
+      "title": "Old Archive Image Misrepresented as Recent Event",
+      "titleAr": "صورة أرشيفية قديمة تُقدَّم على أنها حدث حديث",
+      "scenario": "WhatsApp message: 'Shocking footage from today's flooding in Delta governorates — residents evacuated.' The image shows people wading through deep floodwater in an urban area, with buildings visible in the background. The image looks blurry and the resolution appears low. How do you determine when this image was actually taken?",
+      "scenarioAr": "رسالة واتساب: 'لقطات صادمة من فيضانات اليوم في محافظات الدلتا — إخلاء السكان.' تُظهر الصورة أشخاصًا يخوضون في مياه فيضانات عميقة في منطقة حضرية، مع مبانٍ مرئية في الخلفية. تبدو الصورة ضبابية وتبدو دقتها منخفضة. كيف تحدد متى التُقطت هذه الصورة فعلًا؟",
+      "tools": ["TinEye.com", "Google Images Reverse Search", "Yandex Images"],
+      "steps": [
+        "The low resolution and blurry appearance is a RED FLAG — viral old images are often compressed many times",
+        "Save the image and upload to TinEye.com",
+        "Check the 'Earliest' tab — TinEye sorts results by age, showing the first time this image appeared online",
+        "Click on early matches to see original context (caption, website, date)",
+        "Run on Yandex Images — particularly useful as Arabic-language social media content often appears in Yandex results",
+        "Cross-reference with Google News search for actual recent Delta flooding news (check if official sources confirm)"
+      ],
+      "correctFinding": "TinEye finds the image dated to August 2015, from Gharbiya Governorate flooding — a real event 11 years ago. The image has been recycled across multiple flooding incidents since then. There is no current flooding in Delta governorates today according to Egyptian Meteorological Authority and official news sources.",
+      "correctFindingAr": "يجد TinEye أن الصورة مؤرخة في أغسطس 2015، من فيضانات محافظة الغربية — حدث حقيقي قبل 11 عامًا. تم إعادة تدوير الصورة عبر حوادث فيضانات متعددة منذ ذلك الحين. لا توجد فيضانات حالية في محافظات الدلتا اليوم وفقًا لهيئة الأرصاد الجوية المصرية ومصادر الأخبار الرسمية.",
+      "explanation": "Recycling old disaster images to represent new events is extremely common in Egyptian social media. The pattern: take a genuine old photo, add a fresh caption, and circulate during an actual (or fabricated) crisis period. The image 'feels' real because it IS real — just from a different time. Low resolution is a key indicator of an old viral image.",
+      "explanationAr": "إعادة تدوير صور الكوارث القديمة لتمثيل أحداث جديدة شائع للغاية في وسائل التواصل الاجتماعي المصرية. النمط: أخذ صورة حقيقية قديمة، وإضافة تعليق جديد، وتوزيعها خلال فترة أزمة حقيقية (أو مختلقة). الصورة 'تبدو' حقيقية لأنها حقيقية فعلًا — فقط من وقت مختلف.",
+      "redFlags": ["Low image resolution (multiple compressions)", "No visible Arabic date markers in image", "WhatsApp forwarding chain without original source"]
+    },
+    {
+      "id": 2,
+      "type": "investigation-scenario",
+      "title": "Stock Photo Used in Fake News Article",
+      "titleAr": "صورة مخزنة تُستخدم في مقال إخباري مزيف",
+      "scenario": "An article titled 'Egyptian Scientists Develop Revolutionary Cancer Cure' uses a professional photo of scientists in white lab coats standing around lab equipment. The article cites an unnamed 'Cairo University research team.' A friend shares it excitedly. What should you verify about the image?",
+      "scenarioAr": "مقال بعنوان 'علماء مصريون يطورون علاجًا ثوريًا للسرطان' يستخدم صورة احترافية لعلماء يرتدون معاطف بيضاء يقفون حول معدات المختبر. يستشهد المقال بـ'فريق بحثي من جامعة القاهرة' غير مسمى. صديق يشاركه بحماس. ماذا يجب أن تتحقق عن الصورة؟",
+      "tools": ["Google Images Reverse Search", "Shutterstock.com", "Getty Images", "iStock"],
+      "steps": [
+        "Right-click the article image and select 'Search image with Google' OR copy the image URL",
+        "Look at the reverse search results — do they lead to stock photography websites (Shutterstock, Getty, iStock, Adobe Stock)?",
+        "Stock photos have distinctive watermarks when searching unlicensed versions",
+        "Check the article's 'About' page for author credentials — vague 'admin' or no author = red flag",
+        "Search Google: '[Claimed discovery] Cairo University' + current year — do any credible science news sources (Nature, Science, SciDev.Net) report it?",
+        "For extraordinary scientific claims: check PubMed (pubmed.ncbi.nlm.nih.gov) for the peer-reviewed paper — extraordinary claims require peer-reviewed evidence"
+      ],
+      "correctFinding": "Google reverse image search shows the image is from Shutterstock (stock photo #123456789) — it is a generic 'scientists in lab' photo with no connection to Egypt. The Cairo University registry has no record of this research team. No peer-reviewed publication exists for the claimed cure. This is a fabricated article using stock photography to appear legitimate.",
+      "correctFindingAr": "يُظهر البحث العكسي عن الصور على Google أن الصورة من Shutterstock (صورة مخزنة رقم 123456789) — إنها صورة عامة لـ'علماء في مختبر' بلا علاقة بمصر. لا يوجد سجل لهذا الفريق البحثي في سجل جامعة القاهرة. لا يوجد نشر علمي محكَّم للعلاج المدعوم. هذا مقال مختلق يستخدم التصوير المخزن لإضفاء الشرعية عليه.",
+      "explanation": "Stock photography is widely used by fake news websites to make articles appear more credible. Legitimate news articles use their own photos or properly credited wire agency photos. Stock photos often have a telltale 'perfection' — too clean, too staged, no specific cultural markers that would tie them to the claimed location.",
+      "explanationAr": "يُستخدم التصوير المخزن على نطاق واسع من قبل مواقع الأخبار المزيفة لجعل المقالات تبدو أكثر مصداقية. المقالات الإخبارية الشرعية تستخدم صورها الخاصة أو صور وكالات الأنباء المُصرَّح بها. غالبًا ما تمتلك الصور المخزنة 'كمالًا' مميزًا — نظيفة جدًا، مدرجة جدًا، بدون علامات ثقافية محددة تربطها بالموقع المدعوم.",
+      "redFlags": ["Professional-looking generic image with no specific Egyptian markers", "Unnamed research team", "No peer-reviewed citation", "Extraordinary health claim"]
+    },
+    {
+      "id": 3,
+      "type": "investigation-scenario",
+      "title": "Image from Another Country Presented as Egyptian",
+      "titleAr": "صورة من دولة أخرى تُقدَّم على أنها مصرية",
+      "scenario": "A viral tweet: 'Look at the poverty in Egypt — this is what's happening in our streets.' The image shows children sitting on rubble in front of damaged buildings. The tweet has 200,000 likes and is being used in political arguments. How do you geolocate this image?",
+      "scenarioAr": "تغريدة فيروسية: 'انظروا إلى الفقر في مصر — هذا ما يحدث في شوارعنا.' تُظهر الصورة أطفالًا جالسين على أنقاض أمام مبانٍ متضررة. التغريدة حصلت على 200,000 إعجاب وتُستخدم في الجدالات السياسية. كيف تحدد موقع هذه الصورة جغرافيًا؟",
+      "tools": ["Google Images Reverse Search", "Yandex Images", "Google Earth Pro", "TinEye"],
+      "steps": [
+        "Run reverse image search on ALL three engines: Google, TinEye, and Yandex",
+        "Pay close attention to the CONTEXT of where the image appears: What language is the text in the original source?",
+        "Look at building architecture in the image: Is it Egyptian-style (limestone, concrete, specific Egyptian urban design) or different?",
+        "Examine any visible clothing, signage, or cultural markers in the image",
+        "If a specific location is suggested by matching results, use Google Earth to compare the building style with Egyptian vs. other regional architecture",
+        "Check if any credible journalists or fact-checkers have already investigated this image"
+      ],
+      "correctFinding": "Yandex reverse image search (stronger for Arabic-language content) finds the image was taken in Syria (Aleppo), 2013, during the civil war. Arabic-language fact-checkers (Misbar, Fatabyyano) have previously debunked this image when it was shared about Lebanon and Iraq. The architecture, rubble type, and building style are consistent with Aleppo, not Egyptian cities.",
+      "correctFindingAr": "يجد البحث العكسي عن الصور على Yandex (أقوى للمحتوى باللغة العربية) أن الصورة التُقطت في سوريا (حلب)، 2013، خلال الحرب الأهلية. قام مدققو الحقائق العرب (مصدر، فتبينوا) بتفنيد هذه الصورة سابقًا عندما تمت مشاركتها عن لبنان والعراق. الهندسة المعمارية ونوع الأنقاض وأسلوب المبنى متسقة مع حلب وليس المدن المصرية.",
+      "explanation": "Images of conflict, poverty, and disaster from Syria, Yemen, Gaza, and other war zones are routinely misattributed to Egypt and other Arab countries in online political debates. Yandex Images is particularly valuable for Arabic-language visual content because it indexes more Arabic-language web sources. Key skill: learning to identify architectural and cultural markers specific to different Arab countries.",
+      "explanationAr": "صور الصراع والفقر والكوارث من سوريا واليمن وغزة ومناطق حرب أخرى تُنسب بشكل روتيني إلى مصر ودول عربية أخرى في النقاشات السياسية الإلكترونية. صور Yandex ذات قيمة خاصة للمحتوى البصري باللغة العربية. المهارة الأساسية: تعلّم التعرف على العلامات المعمارية والثقافية الخاصة بدول عربية مختلفة.",
+      "redFlags": ["No specific Egyptian location given", "Political framing designed to provoke outrage", "Absence of date or journalist name"]
+    },
+    {
+      "id": 4,
+      "type": "investigation-scenario",
+      "title": "Cropped Image with Context Removed",
+      "titleAr": "صورة مُقصَّصة بإزالة السياق",
+      "scenario": "An image circulates showing an Egyptian official appearing to make a 'Hitler salute' gesture. The post has gone viral with outrage. However, the image appears to be tightly cropped — only the arm and part of the torso are visible. How do you find the full original image?",
+      "scenarioAr": "تنتشر صورة تُظهر مسؤولًا مصريًا يبدو وكأنه يؤدي 'تحية هتلر'. المنشور انتشر فيروسيًا مع موجة غضب. ومع ذلك، تبدو الصورة مُقصَّصة بإحكام — الذراع وجزء من الجذع فقط مرئيان. كيف تجد الصورة الأصلية الكاملة؟",
+      "tools": ["Google Images Reverse Search", "TinEye", "AFP Fact Check", "Misbar (misbar.com)"],
+      "steps": [
+        "Run reverse image search — cropped images STILL work with reverse search tools",
+        "Look for full versions of the image in search results",
+        "Check AFP Fact Check, Reuters Fact Check, and Misbar (Arabic fact-checking) for this image",
+        "If you find the full image: what is the original context? Was this a waving gesture, pointing, directing movement?",
+        "Look at news wire photo databases (AP Images, Reuters Pictures) for the full original photo",
+        "Consider: who benefits from this crop? Cropping to remove context is a deliberate manipulation technique"
+      ],
+      "correctFinding": "The full image (found via Google Images) shows the official mid-wave during a crowd greeting ceremony. The arm position that appeared as a 'salute' in the crop is simply the natural mid-point of a waving motion. AFP and Reuters both have the full video from the event confirming this. The crop deliberately removed the crowd, the other arm, and the smiling face — all context that disproves the malicious interpretation.",
+      "correctFindingAr": "الصورة الكاملة (التي وجدتها عبر Google Images) تُظهر المسؤول في منتصف التلويح خلال حفل تحية جماهيري. موضع الذراع الذي بدا كـ'تحية' في القص هو ببساطة نقطة الذروة الطبيعية لحركة التلويح. وكالتا AFP وReuters لديهما الفيديو الكامل من الحدث الذي يؤكد هذا. القص أزال عمدًا الجمهور والذراع الأخرى والوجه المبتسم — كل السياق الذي يدحض التفسير الخبيث.",
+      "explanation": "Decontextualization through cropping is one of the most sophisticated forms of visual manipulation because the image itself is real and unedited — only the frame has changed. The technique deliberately removes exculpatory context. The tell-tale sign: unusually tight cropping that leaves out everything that would explain the gesture, combined with an emotionally charged interpretation in the caption.",
+      "explanationAr": "إزالة السياق عبر القص هي إحدى أكثر أشكال التلاعب البصري تطورًا لأن الصورة نفسها حقيقية وغير مُعدَّلة — الإطار فقط هو الذي تغيّر. تُزيل التقنية عمدًا السياق الذي قد يُبرئ. العلامة المميزة: قص ضيق بشكل غير عادي يستبعد كل ما يمكن أن يفسر الإيماءة، مع تفسير مثير للعاطفة في التعليق.",
+      "redFlags": ["Unusually tight crop", "Missing face expression and body language context", "Emotionally charged caption designed to bypass critical thinking", "No original source or news organization cited"]
+    },
+    {
+      "id": 5,
+      "type": "investigation-scenario",
+      "title": "AI-Generated Image vs Real Photo",
+      "titleAr": "صورة مولَّدة بالذكاء الاصطناعي مقابل صورة حقيقية",
+      "scenario": "An image appears to show Egyptian military equipment in an unusual location, with a dramatic caption implying a military escalation. The image looks extremely sharp and high-quality, almost too perfect. Several details look slightly 'off' but you can't quite pinpoint why. How do you determine if this is AI-generated?",
+      "scenarioAr": "تظهر صورة تبدو وكأنها تُظهر معدات عسكرية مصرية في موقع غير عادي، مع تعليق درامي يُلمح إلى تصعيد عسكري. الصورة تبدو حادة للغاية وعالية الجودة، تقريبًا مثالية جدًا. بعض التفاصيل تبدو 'خاطئة' قليلًا لكن لا يمكنك تحديد السبب تمامًا. كيف تحدد ما إذا كانت هذه الصورة مولَّدة بالذكاء الاصطناعي؟",
+      "tools": [
+        {
+          "name": "AI or Not (aiornot.com)",
+          "url": "aiornot.com",
+          "method": "Upload image — gives probability score for AI generation",
+          "free": true
+        },
+        {
+          "name": "Hive AI Detector",
+          "url": "hivemoderation.com/ai-generated-content-detection",
+          "method": "Upload image for AI-generation probability",
+          "free": true
+        },
+        {
+          "name": "Illuminarty",
+          "url": "illuminarty.ai",
+          "method": "Upload image — AI detection with explanation of detected artifacts",
+          "free": true
+        },
+        {
+          "name": "Fotoforensics (ELA)",
+          "url": "fotoforensics.com",
+          "method": "Error Level Analysis — real photos show natural compression patterns; AI images show uniform patterns",
+          "free": true
+        }
+      ],
+      "steps": [
+        "Visual inspection first — look for: (a) Hands/fingers: AI struggles with correct finger counts and anatomy; (b) Text in image: AI-generated text is often garbled or non-language; (c) Reflections in eyes/glasses/water: often distorted in AI images; (d) Background consistency: AI backgrounds often have repetitive or physically impossible elements; (e) Edges: extremely sharp, 'plastic' look around objects",
+        "Check EXIF data — AI-generated images often have no camera EXIF data, or Software field shows 'Midjourney', 'DALL-E', 'Stable Diffusion'",
+        "Upload to aiornot.com for AI probability score",
+        "Upload to Fotoforensics for Error Level Analysis (ELA) — AI images show unusually uniform ELA patterns",
+        "Run reverse image search — AI images are new, so no earlier versions will exist (unlike recycled real photos)",
+        "For military/political content: check against official military photo databases and news wire services"
+      ],
+      "correctFinding": "Multiple AI detection signals: (1) aiornot.com returns 94% probability of AI generation; (2) EXIF shows no camera data, only software metadata; (3) Visual inspection: one military vehicle has 6 wheels on one side; a soldier's hand has 6 fingers; background text is garbled Arabic; (4) Reverse image search finds no earlier appearances — this image was never published before. Conclusion: AI-generated propaganda image created to simulate a military scenario that did not occur.",
+      "correctFindingAr": "إشارات متعددة للذكاء الاصطناعي: (1) تُعيد aiornot.com احتمال 94% للتوليد بالذكاء الاصطناعي؛ (2) تُظهر EXIF عدم وجود بيانات كاميرا، فقط بيانات وصفية للبرنامج؛ (3) الفحص البصري: إحدى المركبات العسكرية لها 6 عجلات على جانب واحد؛ يد جندي لها 6 أصابع؛ نص الخلفية عربي مشوه؛ (4) البحث العكسي عن الصور لا يجد ظهورات سابقة. الخلاصة: صورة دعاية مولَّدة بالذكاء الاصطناعي لمحاكاة سيناريو عسكري لم يحدث.",
+      "explanation": "AI-generated images (from tools like Midjourney, DALL-E, Stable Diffusion) are increasingly used in disinformation campaigns. They are convincing but have tell-tale artifacts: anatomical errors (especially hands and text), physically impossible backgrounds, and detectable AI signatures. The field is rapidly evolving — AI detectors are less reliable as AI improves, making visual analysis skills increasingly critical.",
+      "explanationAr": "تُستخدم الصور المولَّدة بالذكاء الاصطناعي (من أدوات مثل Midjourney وDALL-E وStable Diffusion) بشكل متزايد في حملات المعلومات المضللة. إنها مقنعة لكن لها آثار مميزة: أخطاء تشريحية (خاصةً الأيدي والنصوص) وخلفيات مستحيلة فيزيائيًا وتوقيعات ذكاء اصطناعي قابلة للاكتشاف.",
+      "redFlags": [
+        "Anatomically impossible details (hands, reflections, text)",
+        "Extremely high, 'perfect' image quality inconsistent with the claimed source",
+        "No EXIF camera data",
+        "Software EXIF shows AI tool name",
+        "No earlier occurrences on reverse image search",
+        "Dramatic political/military content with no news source"
+      ]
+    }
+  ]
+}

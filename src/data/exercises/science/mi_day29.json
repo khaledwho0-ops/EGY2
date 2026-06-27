@@ -1,0 +1,98 @@
+{
+  "id": "missing_data_imputation",
+  "phase": 2,
+  "week": 15,
+  "day": 29,
+  "title": "Missing Data & Multiple Imputation",
+  "titleAr": "البيانات المفقودة والتعويض المتعدد",
+  "description": "Understand the taxonomy of missing data mechanisms (MCAR, MAR, MNAR) and learn when and how to apply multiple imputation techniques.",
+  "descriptionAr": "فهم تصنيف آليات البيانات المفقودة (MCAR، MAR، MNAR) وتعلم متى وكيف تُطبق تقنيات التعويض المتعدد.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Missing Data Mechanisms & Multiple Imputation",
+    "nameAr": "آليات البيانات المفقودة والتعويض المتعدد",
+    "definition": "Rubin (1976) classified missing data into three mechanisms: MCAR (Missing Completely At Random) — missingness is unrelated to any variables; MAR (Missing At Random) — missingness depends on observed variables but not the missing values themselves; MNAR (Missing Not At Random) — missingness depends on the unobserved values. Multiple imputation (Rubin, 1987) creates m>1 complete datasets, analyzes each, and combines results using Rubin's rules to properly account for imputation uncertainty.",
+    "definitionAr": "صنف روبين (1976) البيانات المفقودة إلى: MCAR — الفقدان غير مرتبط بأي متغيرات؛ MAR — الفقدان يعتمد على المتغيرات المرصودة؛ MNAR — الفقدان يعتمد على القيم غير المرصودة. التعويض المتعدد ينشئ عدة مجموعات بيانات كاملة ويجمع النتائج.",
+    "realWorldExample": "In clinical trials, patients who experience side effects are more likely to drop out, creating MNAR data. If dropout depends on baseline severity (observed) but not on the unrecorded outcome, it is MAR. Complete case analysis can be valid under MCAR but leads to bias under MAR and MNAR.",
+    "detectionMethod": "Little's MCAR test (chi-square test of MCAR), pattern analysis of missingness, compare characteristics of complete vs. incomplete cases, sensitivity analyses with different assumptions (pattern-mixture models for MNAR)."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "In a depression treatment study, patients with severe symptoms are more likely to drop out before the final assessment. The missing outcome data depends on the unobserved (unmeasured) severity at the time of dropout. What type of missing data mechanism is this?",
+      "promptAr": "في دراسة علاج الاكتئاب، المرضى ذوو الأعراض الشديدة أكثر احتمالاً للانسحاب قبل التقييم النهائي. البيانات المفقودة تعتمد على الشدة غير المرصودة وقت الانسحاب. ما نوع آلية البيانات المفقودة؟",
+      "options": [
+        "MCAR — Missing Completely At Random",
+        "MAR — Missing At Random",
+        "MNAR — Missing Not At Random, because missingness depends on the unobserved value of the outcome itself",
+        "The data is not truly missing"
+      ],
+      "correctAnswer": 2,
+      "explanation": "This is MNAR because the probability of dropout depends on the unobserved outcome (depression severity at the endpoint they never reached). If patients drop out precisely because they are getting worse, the missing data mechanism depends on the value that would have been recorded. MNAR is the most problematic mechanism because no purely statistical solution exists — it requires untestable assumptions or sensitivity analyses.",
+      "explanationAr": "هذا MNAR لأن احتمال الانسحاب يعتمد على النتيجة غير المرصودة. إذا انسحب المرضى تحديداً لأنهم يزدادون سوءاً، فآلية الفقدان تعتمد على القيمة التي كانت ستُسجل."
+    },
+    {
+      "id": 2,
+      "type": "identify",
+      "prompt": "A survey has missing income data. Analysis shows that missingness on income is predicted by education level and age (observed variables) but not by income level itself. After controlling for education and age, the probability of reporting income is the same regardless of actual income. What mechanism is this?",
+      "promptAr": "استطلاع به بيانات دخل مفقودة. التحليل يُظهر أن فقدان الدخل يُتنبأ به من مستوى التعليم والعمر (متغيرات مرصودة) لكن ليس من مستوى الدخل نفسه. ما الآلية؟",
+      "options": [
+        "MNAR",
+        "Cannot be determined",
+        "MCAR",
+        "MAR — Missing At Random: missingness depends on observed variables (education, age) but conditional on these, is independent of the missing values"
+      ],
+      "correctAnswer": 3,
+      "explanation": "This is MAR: the probability of missing income depends on observed covariates (education, age) but not on income itself, conditional on those covariates. Under MAR, valid analyses include multiple imputation, maximum likelihood estimation (EM algorithm), and inverse probability weighting — all of which use the observed predictors to model missingness. Complete case analysis is generally biased under MAR.",
+      "explanationAr": "هذا MAR: احتمال فقدان الدخل يعتمد على المتغيرات المشتركة المرصودة لكن ليس على الدخل نفسه. التعويض المتعدد والتقدير بأقصى احتمالية صالحان تحت MAR."
+    },
+    {
+      "id": 3,
+      "type": "scenario",
+      "prompt": "A researcher uses multiple imputation with m=5 imputed datasets for a study with 40% missing data. Each imputation gives slightly different regression coefficients. How are results combined using Rubin's rules?",
+      "promptAr": "باحث يستخدم التعويض المتعدد بـ m=5 مجموعات بيانات معوضة لدراسة بـ 40% بيانات مفقودة. كل تعويض يعطي معاملات انحدار مختلفة قليلاً. كيف تُجمع النتائج باستخدام قواعد روبين؟",
+      "options": [
+        "Average the coefficients across all m imputations for the point estimate; combine within-imputation and between-imputation variance for proper standard errors that reflect imputation uncertainty",
+        "Use the imputation with the largest sample size",
+        "Use the median of the 5 coefficient estimates",
+        "Use the results from the first imputation only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Rubin's rules: (1) Point estimate = mean of m estimates: Q̄ = (1/m)ΣQ̂ᵢ. (2) Total variance = within-imputation variance (W̄) + between-imputation variance (B) + B/m: T = W̄ + (1+1/m)B. The between-imputation variance captures the additional uncertainty due to not knowing the true missing values. With 40% missing data, m=5 may be insufficient — current recommendations (White et al., 2011) suggest m ≥ percentage of incomplete cases.",
+      "explanationAr": "قواعد روبين: التقدير النقطي = متوسط التقديرات. التباين الإجمالي = التباين داخل التعويض + التباين بين التعويضات + B/m. التباين بين التعويضات يلتقط عدم اليقين الإضافي."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "A clinical database has 5% missing lab values because a lab machine malfunctioned on random days unrelated to patient characteristics or lab values. What mechanism is this, and what is the simplest valid analysis approach?",
+      "promptAr": "قاعدة بيانات سريرية بها 5% قيم مختبرية مفقودة لأن جهاز المختبر تعطل في أيام عشوائية لا علاقة لها بخصائص المرضى أو القيم المختبرية. ما الآلية وأبسط نهج تحليل صالح؟",
+      "options": [
+        "MAR — multiple imputation is required",
+        "MCAR — complete case analysis is valid (unbiased, though less efficient), as missingness is truly random and unrelated to any variables",
+        "The data cannot be analyzed",
+        "MNAR — sensitivity analysis is required"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is a textbook case of MCAR: the lab malfunction is entirely random, unrelated to patient characteristics or the lab values themselves. Under MCAR, complete case analysis produces unbiased estimates (though with reduced power due to smaller N). Mean imputation, while simple, would underestimate variance. Even under MCAR, multiple imputation is preferred for efficiency, but complete case analysis is valid.",
+      "explanationAr": "هذه حالة MCAR مثالية: عطل المختبر عشوائي تماماً. تحت MCAR، تحليل الحالات الكاملة ينتج تقديرات غير متحيزة (لكن بقوة أقل)."
+    },
+    {
+      "id": 5,
+      "type": "identify",
+      "prompt": "Why is single imputation (e.g., mean imputation or last observation carried forward) generally inferior to multiple imputation?",
+      "promptAr": "لماذا التعويض الأحادي (مثل تعويض المتوسط أو نقل آخر ملاحظة للأمام) أدنى عموماً من التعويض المتعدد؟",
+      "options": [
+        "There is no difference — single imputation is equally valid",
+        "Single imputation is computationally harder",
+        "Single imputation treats imputed values as if they were known with certainty, underestimating variance, artificially narrowing confidence intervals, and inflating Type I error rates",
+        "Single imputation always introduces more bias than multiple imputation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Single imputation's fundamental flaw is that it treats imputed values as observed data, ignoring the uncertainty about what the missing values truly were. This artificially reduces standard errors and makes confidence intervals too narrow. Multiple imputation addresses this by creating m plausible datasets, each with different imputed values, and Rubin's rules properly propagate the imputation uncertainty into the final inference. Donders et al. (2006) in the BMJ demonstrated this with clinical trial examples.",
+      "explanationAr": "العيب الجوهري للتعويض الأحادي أنه يعامل القيم المعوضة كبيانات مرصودة، متجاهلاً عدم اليقين. هذا يقلل الأخطاء المعيارية ويجعل فترات الثقة ضيقة جداً."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "likelihood_ratios",
+  "phase": 2,
+  "week": 11,
+  "day": 21,
+  "title": "Likelihood Ratios",
+  "titleAr": "نسب الاحتمال",
+  "description": "Understanding likelihood ratios in diagnostic testing, their connection to sensitivity and specificity, and how they update pre-test probability to post-test probability using Fagan's nomogram.",
+  "descriptionAr": "فهم نسب الاحتمال في الاختبارات التشخيصية، وارتباطها بالحساسية والنوعية، وكيفية تحديث الاحتمال قبل الاختبار إلى الاحتمال بعد الاختبار باستخدام مخطط فاغان.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "statisticalConcept": {
+    "name": "Likelihood Ratio",
+    "nameAr": "نسبة الاحتمال",
+    "definition": "A Likelihood Ratio (LR) expresses how much a test result changes the odds of a condition being present. The positive likelihood ratio (LR+) = sensitivity / (1 − specificity), representing how much more likely a positive result is in someone with the disease versus without. The negative likelihood ratio (LR−) = (1 − sensitivity) / specificity, representing how much less likely a negative result is in someone with the disease. LR+ > 10 or LR− < 0.1 are considered strong diagnostic evidence.",
+    "definitionAr": "نسبة الاحتمال (LR) تعبر عن مقدار تغيير نتيجة الاختبار لاحتمالات وجود حالة. نسبة الاحتمال الإيجابية (LR+) = الحساسية / (1 − النوعية)، وتمثل مدى احتمال النتيجة الإيجابية في شخص مصاب مقارنة بغير المصاب. نسبة الاحتمال السلبية (LR−) = (1 − الحساسية) / النوعية، وتمثل مدى انخفاض احتمال النتيجة السلبية في شخص مصاب. LR+ > 10 أو LR− < 0.1 تُعتبر دليلًا تشخيصيًا قويًا.",
+    "realWorldExample": "A rapid strep test has sensitivity = 86% and specificity = 95%. LR+ = 0.86/0.05 = 17.2, meaning a positive result makes strep 17× more likely. LR− = 0.14/0.95 = 0.147, meaning a negative result only modestly reduces the probability of strep. This is why clinicians may follow up a negative rapid test with a throat culture — the LR− is not strong enough to confidently rule out strep.",
+    "detectionMethod": "When evaluating diagnostic tests, look beyond simple sensitivity/specificity. Calculate LR+ and LR−. Be wary of tests marketed as 'highly sensitive' but with poor specificity, or vice versa. A test with 99% sensitivity but 50% specificity has LR+ = only 1.98, which barely changes the pre-test probability."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "calculate",
+      "prompt": "A screening test for colorectal cancer has sensitivity = 92% and specificity = 87%. Calculate the positive likelihood ratio (LR+). What does this value mean clinically?",
+      "promptAr": "اختبار فحص لسرطان القولون والمستقيم بحساسية = 92% ونوعية = 87%. احسب نسبة الاحتمال الإيجابية (LR+). ماذا تعني هذه القيمة سريريًا؟",
+      "options": [
+        "LR+ = 79.9 — a positive result virtually confirms the disease",
+        "LR+ = 1.06 — the test barely changes the probability of disease",
+        "LR+ = 7.08 — a positive result moderately increases the probability of disease",
+        "LR+ = 11.5 — a positive result strongly increases the probability of disease"
+      ],
+      "correctAnswer": 2,
+      "explanation": "LR+ = sensitivity / (1 − specificity) = 0.92 / (1 − 0.87) = 0.92 / 0.13 ≈ 7.08. An LR+ between 5 and 10 generates a moderate shift in probability. This means a positive result increases the odds of colorectal cancer by about 7-fold — meaningful but not definitive. A confirmatory colonoscopy would typically follow. Note: LR+ > 10 is generally needed to 'rule in' a diagnosis convincingly.",
+      "explanationAr": "LR+ = الحساسية / (1 − النوعية) = 0.92 / (1 − 0.87) = 0.92 / 0.13 ≈ 7.08. LR+ بين 5 و10 يولد تحولًا معتدلًا في الاحتمال. هذا يعني أن النتيجة الإيجابية تزيد احتمالات سرطان القولون والمستقيم بحوالي 7 أضعاف — ذو معنى لكن غير نهائي."
+    },
+    {
+      "id": 2,
+      "type": "analyze",
+      "prompt": "A D-dimer test for pulmonary embolism (PE) has sensitivity = 97% and specificity = 40%. The prevalence of PE in emergency department patients with pleuritic chest pain is about 15%. What is the post-test probability after a NEGATIVE D-dimer result?",
+      "promptAr": "اختبار D-dimer للانسداد الرئوي (PE) بحساسية = 97% ونوعية = 40%. انتشار PE في مرضى قسم الطوارئ الذين يعانون من ألم صدري جنبي حوالي 15%. ما هو الاحتمال بعد الاختبار بعد نتيجة D-dimer سلبية؟",
+      "options": [
+        "Approximately 7.5% — PE probability is halved but not eliminated",
+        "Approximately 12% — minimal change from pre-test probability",
+        "Cannot be determined without more information",
+        "Approximately 1.3% — PE is effectively ruled out"
+      ],
+      "correctAnswer": 3,
+      "explanation": "LR− = (1 − sensitivity)/specificity = 0.03/0.40 = 0.075. Pre-test odds = 0.15/0.85 = 0.176. Post-test odds = 0.176 × 0.075 = 0.0132. Post-test probability = 0.0132/(1 + 0.0132) ≈ 1.3%. The extremely high sensitivity makes a negative D-dimer very useful for ruling OUT PE (despite the low specificity making a positive result nearly useless for ruling IN). This is the clinical rationale: D-dimer is a 'rule-out' test, not a 'rule-in' test.",
+      "explanationAr": "LR− = (1 − الحساسية)/النوعية = 0.03/0.40 = 0.075. احتمالات ما قبل الاختبار = 0.15/0.85 = 0.176. احتمالات ما بعد الاختبار = 0.176 × 0.075 = 0.0132. احتمال ما بعد الاختبار = 0.0132/(1 + 0.0132) ≈ 1.3%. الحساسية العالية للغاية تجعل D-dimer السلبي مفيدًا جدًا لاستبعاد PE."
+    },
+    {
+      "id": 3,
+      "type": "identify",
+      "prompt": "A company markets a COVID-19 antibody test claiming '99% accuracy.' Upon investigation, it has sensitivity = 99% and specificity = 99%. In a population with 1% prevalence, what is the positive predictive value?",
+      "promptAr": "شركة تسوق اختبار أجسام مضادة لكوفيد-19 تدعي 'دقة 99%'. عند التحقيق، لديه حساسية = 99% ونوعية = 99%. في سكان بانتشار 1%، ما هي القيمة التنبؤية الإيجابية؟",
+      "options": [
+        "50% — half of positive results are false positives",
+        "90% — most positives are true positives",
+        "9.9% — most positive results are actually false positives",
+        "99% — matching the test's accuracy"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Using Bayes' theorem: PPV = (sensitivity × prevalence) / [(sensitivity × prevalence) + ((1−specificity) × (1−prevalence))] = (0.99 × 0.01) / [(0.99 × 0.01) + (0.01 × 0.99)] = 0.0099 / 0.0198 = 50%. Despite both sensitivity and specificity being 99%, only half of positive tests are true positives when prevalence is 1%. This is the base rate fallacy in action. The LR+ = 99, which is excellent, but it must operate on very low pre-test odds (1:99), resulting in post-test odds of 99:99 = 1:1.",
+      "explanationAr": "باستخدام نظرية بايز: PPV = (الحساسية × الانتشار) / [(الحساسية × الانتشار) + ((1−النوعية) × (1−الانتشار))] = (0.99 × 0.01) / [(0.99 × 0.01) + (0.01 × 0.99)] = 0.0099 / 0.0198 = 50%. رغم أن الحساسية والنوعية كلتاهما 99%، فإن نصف الاختبارات الإيجابية فقط إيجابية حقيقية عندما يكون الانتشار 1%."
+    },
+    {
+      "id": 4,
+      "type": "evaluate",
+      "prompt": "A systematic review evaluates troponin testing for myocardial infarction (MI) and reports LR+ = 24 and LR− = 0.06. Which statement best describes the diagnostic utility of this test?",
+      "promptAr": "مراجعة منهجية تقيّم اختبار التروبونين لاحتشاء عضلة القلب (MI) وتبلغ عن LR+ = 24 وLR− = 0.06. أي عبارة تصف أفضل الفائدة التشخيصية لهذا الاختبار؟",
+      "options": [
+        "Good for ruling out MI but poor for ruling in",
+        "Excellent for both ruling in and ruling out MI",
+        "Moderate for both purposes — additional testing always needed",
+        "Good for ruling in MI but poor for ruling out"
+      ],
+      "correctAnswer": 1,
+      "explanation": "LR+ = 24 (>10, strong rule-in) and LR− = 0.06 (<0.1, strong rule-out). This test performs excellently in both directions. A positive troponin dramatically increases the probability of MI, while a negative troponin dramatically decreases it. This is why troponin is considered the gold-standard biomarker for MI diagnosis. Few tests achieve both LR+ > 10 AND LR− < 0.1 simultaneously.",
+      "explanationAr": "LR+ = 24 (>10، استدلال قوي) وLR− = 0.06 (<0.1، استبعاد قوي). هذا الاختبار يؤدي بشكل ممتاز في كلا الاتجاهين. التروبونين الإيجابي يزيد بشكل كبير احتمال MI، بينما التروبونين السلبي يقلله بشكل كبير."
+    },
+    {
+      "id": 5,
+      "type": "analyze",
+      "prompt": "A screening mammogram has LR+ = 13.0 for women aged 50–59 but LR+ = 5.7 for women aged 40–49. The breast cancer prevalence is 2.5% in the older group and 1.5% in the younger group. What is the post-test probability of cancer after a positive mammogram for each age group?",
+      "promptAr": "تصوير ماموغرام فحصي لديه LR+ = 13.0 للنساء بعمر 50-59 لكن LR+ = 5.7 للنساء بعمر 40-49. انتشار سرطان الثدي 2.5% في المجموعة الأكبر و1.5% في الأصغر. ما احتمال ما بعد الاختبار للسرطان بعد ماموغرام إيجابي لكل فئة عمرية؟",
+      "options": [
+        "50–59: ~10%, 40–49: ~10% — similar in both groups",
+        "50–59: ~75%, 40–49: ~50% — mammography is highly conclusive",
+        "50–59: ~25%, 40–49: ~8% — much higher diagnostic value in older women",
+        "50–59: ~50%, 40–49: ~30% — high value in both groups"
+      ],
+      "correctAnswer": 2,
+      "explanation": "For age 50–59: Pre-test odds = 0.025/0.975 = 0.0256. Post-test odds = 0.0256 × 13.0 = 0.333. Post-test probability = 0.333/1.333 ≈ 25%. For age 40–49: Pre-test odds = 0.015/0.985 = 0.0152. Post-test odds = 0.0152 × 5.7 = 0.0868. Post-test probability = 0.0868/1.0868 ≈ 8.0%. The older group benefits from both higher prevalence (higher pre-test probability) AND a better-performing test (higher LR+). This explains evidence-based screening guidelines that recommend mammography starting at age 50 rather than 40.",
+      "explanationAr": "للعمر 50-59: احتمالات ما قبل الاختبار = 0.025/0.975 = 0.0256. احتمالات ما بعد الاختبار = 0.0256 × 13.0 = 0.333. احتمال ما بعد الاختبار ≈ 25%. للعمر 40-49: احتمالات ما قبل الاختبار = 0.015/0.985 = 0.0152. احتمالات ما بعد الاختبار = 0.0152 × 5.7 = 0.0868. احتمال ما بعد الاختبار ≈ 8.0%."
+    }
+  ]
+}

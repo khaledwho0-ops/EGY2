@@ -1,0 +1,29 @@
+{
+  "id": "day21_midpoint",
+  "phase": 0,
+  "week": 3,
+  "day": 21,
+  "title": "Mid-Program Assessment",
+  "titleAr": "تقييم منتصف البرنامج",
+  "description": "Comprehensive mid-point evaluation of all biases Days 8-20.",
+  "descriptionAr": "تقييم شامل لمنتصف البرنامج.",
+  "type": "assessment",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "A celebrity endorses an Egyptian supplement. Identify ALL cognitive biases at play.",
+      "claimAr": "مشهور يروج لمكملات مصرية. حدد كل التحيزات المعرفية.",
+      "truthValue": "misleading",
+      "category": "health",
+      "difficulty": 3,
+      "explanation": "Multiple biases: Authority (celebrity), Anecdotal (one person), Halo effect, Testimonial, Dunning-Kruger (celebrity not qualified). Check for RCT evidence.",
+      "explanationAr": "تحيزات متعددة: سلطة، دليل قصصي، تأثير الهالة. تحقق من أدلة التجارب المضبوطة.",
+      "sources": [
+        "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides"
+      ],
+      "cognitivebiasAtPlay": "Multiple"
+    }
+  ]
+}

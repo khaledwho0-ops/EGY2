@@ -1,0 +1,122 @@
+{
+  "id": "day38_false_dichotomy",
+  "phase": 1,
+  "week": 6,
+  "day": 38,
+  "title": "False Dichotomy — The Fake Either/Or",
+  "titleAr": "الثنائية الزائفة — الإمّا/أو المُلفَّقة",
+  "description": "When someone tells you there are only two options — and there are really more — that's a false dichotomy. It is one of the most common traps in health arguments and family pressure.",
+  "descriptionAr": "لمّا حد يقولك في خيارين بس — وفي خيارات تانية كتير — ده الثنائية الزائفة. دي واحدة من أكتر الفخاخ شيوعاً في نقاشات الصحة وضغوط الأسرة.",
+  "type": "logic",
+  "difficulty": 2,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A promoter of the viral Taybat diet says: \"You either believe in natural healing, or you believe in pumping your body full of chemicals. There is no middle ground.\" What is the logical problem here?",
+      "claimAr": "مروّج نظام الطيبات بيقول: «إمّا تؤمن بالشفاء الطبيعي، أو تؤمن بحشو جسمك بالكيماويات. مفيش أرضية وسط.» إيه المشكلة المنطقية هنا؟",
+      "options": [
+        "The argument is balanced and covers all possibilities",
+        "False dichotomy: it ignores a vast middle ground — evidence-based medicine that also uses plant-derived compounds, diet, lifestyle, and personalised care",
+        "The argument is correct because everyone must choose a side",
+        "It is a valid either/or because the two options are genuinely exhaustive"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is a false dichotomy: the two options presented ('pure natural healing' vs 'pumping chemicals') do not exhaust the real space. Evidence-based medicine includes dietary guidance, plant-derived medications, lifestyle interventions, and personalised care. The move works by making you feel forced to choose between an extreme you like and an extreme you dislike, when many positions exist in between.",
+      "explanationAr": "دي ثنائية زائفة: الخياران المقدَّمان ما بيغطّوش المجال الحقيقي. الطب المبني على الأدلة يتضمّن توجيه غذائي وأدوية مشتقّة من النباتات وتدخّلات في نمط الحياة ورعاية مخصَّصة. الحركة بتشتغل بإنها بتخليك حاسس إنك مضطر تختار بين طرفٍ تحبّه وطرفٍ تكرهه، في حين إن مواقف كتير موجودة بينهم.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A family member insists: \"Either you follow the diet completely — every rule, forever — or you're just someone who doesn't care about their health.\" How many actual options are being hidden?",
+      "claimAr": "أحد أفراد الأسرة بيصرّ: «إمّا بتتّبع الحمية بالكامل — كل قاعدة، للأبد — أو إنت ببساطة ما بتهتمّش بصحّتك.» كم خيار حقيقي بيتخبّى هنا؟",
+      "options": [
+        "None — the two options really are exhaustive",
+        "At least several: partial dietary changes, consulting a registered dietitian, addressing specific health goals, evidence-based medical management",
+        "One hidden option: ignoring health altogether",
+        "The family member is completely correct"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: name two real options the family member's framing hides. Why does 'all or nothing' language make it emotionally hard to name them?",
+        "promptAr": "بكلماتك: سمّي خيارين حقيقيين بتخبّيهم صياغة الأسرة. وليه لغة «كل شيء أو لا شيء» بتجعل تسميتهم صعبة عاطفياً؟"
+      },
+      "explanation": "The hidden options include: adopting some healthy dietary habits without the full system, working with a registered dietitian for evidence-based personalised nutrition, addressing specific health concerns with specialist care, lifestyle changes for prevention, and many more. 'All or nothing' framing makes nuanced, safe decisions feel like betrayal. That emotional charge is the move's real power.",
+      "explanationAr": "الخيارات المخبّية تشمل: تبنّي بعض العادات الغذائية الصحية من غير النظام كاملاً، والعمل مع أخصائي تغذية مُسجَّل، ومعالجة مشاكل صحية محدّدة برعاية متخصّصة، وتغييرات في نمط الحياة للوقاية. أسلوب «كل شيء أو لا شيء» بيخلّي القرارات الدقيقة الآمنة تبدو كخيانة. الشحنة العاطفية دي هي القوة الحقيقية للحركة.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: 'Either you trust mainstream medicine completely, or you think critically about health' is a valid pair of options.",
+      "claimAr": "صح ولا غلط: «إمّا تثق في الطب السائد بالكامل، أو بتفكّر بشكل نقدي في الصحة» ده زوج خيارات صحيح.",
+      "options": ["True — trust and critical thinking really are opposites", "False — critical thinking is exactly what produces calibrated, evidence-based trust"],
+      "correctAnswer": 1,
+      "explanation": "False — this is a false dichotomy. Critical thinking is exactly what leads you to calibrated, evidence-based trust. A doctor who reviews systematic reviews and updates her practice based on new evidence is both trusting in the scientific method AND thinking critically. Calibration note: this framing is common in wellness culture — if it felt somewhat true before you answered, notice how the either/or was doing emotional work.",
+      "explanationAr": "غلط — دي ثنائية زائفة. التفكير النقدي هو بالظبط ما بيقودك لثقة مُعايَرة مبنية على الأدلة. ملاحظة المعايرة: الصياغة دي شائعة في ثقافة العافية — لو حسّت صحيحة بعض الشيء قبل إجابتك، لاحظ إزاي الإمّا/أو كانت بتعمل شغل عاطفي.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument from a Taybat promoter: \"The viral diet system classified all foods as either pure (طيبات) or foul (خبائث). Since chicken and pure greens are طيبات and have fed civilisations, and since processed foods are خبائث that have made people sick, the classification is correct and scientifically sound.\"",
+      "claimAr": "فكّك الحُجّة دي من مروّج نظام الطيبات: «النظام صنّف كل الأطعمة إمّا طيبات أو خبائث. وبما إن الدجاج والخضار الطاهرة طيبات وأطعمت الحضارات، وبما إن الأطعمة المُصنَّعة خبائث وأمرضت الناس، يبقى التصنيف صح وعلمياً سليم».",
+      "parts": [
+        { "text": "The pure/foul food classification is correct and scientifically sound.", "textAr": "تصنيف الأطعمة طيبات/خبائث صح وعلمياً سليم.", "role": "conclusion" },
+        { "text": "Chicken and pure greens are طيبات and have fed civilisations.", "textAr": "الدجاج والخضار الطاهرة طيبات وأطعمت الحضارات.", "role": "premise" },
+        { "text": "Processed foods are خبائث and have made people sick.", "textAr": "الأطعمة المُصنَّعة خبائث وأمرضت الناس.", "role": "premise" },
+        { "text": "(Unstated) A food classification proven for some examples applies to ALL foods without exception.", "textAr": "(غير مذكور) تصنيف أثبت نفسه لبعض الأمثلة ينطبق على كل الأطعمة بلا استثناء.", "role": "assumption" },
+        { "text": "Nutrition science operates in spectrums and contexts, not binaries.", "textAr": "علم التغذية بيعمل في طيف وسياقات، مش ثنائيات.", "role": "irrelevant" }
+      ],
+      "explanation": "The broken joint is the hidden ASSUMPTION: that a two-example confirmation justifies a universal binary classification. Nutrition science operates in dose, context, individual biology, preparation, and interaction effects. The final sentence ('nutrition science operates in spectrums') is actually TRUE — but it is being used here as padding, not as a premise that supports the conclusion. The binary erases all the nuance that determines real nutritional impact.",
+      "explanationAr": "المفصل المكسور هو الافتراض الخفي: إن تأكيد بمثالين يبرّر تصنيفاً ثنائياً عالمياً. علم التغذية بيعمل في الجرعة والسياق والبيولوجيا الفردية وطريقة التحضير وتأثيرات التفاعل. الجملة الأخيرة («علم التغذية بيعمل في طيف») صحيحة فعلاً — لكنها بتُستخدم هنا كحشو، مش كمقدّمة بتدعم النتيجة. الثنائية بتمحي كل الدقة اللي بتحدّد التأثير الغذائي الحقيقي.",
+      "sources": [
+        "EAL-case-001:redflag-9",
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A friend under pressure says: \"I have to either start the full Taybat system or do absolutely nothing about my health.\" It feels like an honest description of his situation.",
+      "claimAr": "صديق تحت ضغط بيقول: «لازم إمّا أبدأ نظام الطيبات كامل أو ما أعملش أي حاجة لصحّتي». بيحسّ زي وصف صادق لوضعه.",
+      "prompt": "What real options does this framing erase? What would you ask him to help him see the middle ground — without making him feel foolish?",
+      "promptAr": "إيه الخيارات الحقيقية اللي الصياغة دي بتمحيها؟ وإيه اللي هتسأله علشان يساعده يشوف الأرضية الوسط — من غير ما تخلّيه يحسّ بغباء؟",
+      "modelPoints": [
+        "If the dichotomy were false, we'd expect: consulting a registered dietitian for personalised evidence-based guidance — a real, specific, safe option.",
+        "Addressing one specific health goal (e.g. improving energy or managing weight) with WHO-aligned dietary advice — no full system required.",
+        "Making sustainable changes (more vegetables, less processed food) based on established nutritional science without adopting any branded system.",
+        "The 'all or nothing' frame often comes from external pressure, not from the person's own assessment. Asking 'who told you those were the only two options?' can open the conversation gently."
+      ],
+      "modelPointsAr": [
+        "لو الثنائية زائفة، هنتوقع: استشارة أخصائي تغذية مُسجَّل لتوجيه مخصَّص مبني على الأدلة — خيار حقيقي ومحدّد وآمن.",
+        "معالجة هدف صحي محدّد واحد (مثلاً تحسين الطاقة أو إدارة الوزن) بنصائح غذائية متوافقة مع إرشادات منظمة الصحة العالمية — من غير نظام كامل.",
+        "إجراء تغييرات مستدامة (خضار أكتر، أطعمة مُصنَّعة أقل) مبنية على علم التغذية الراسخ من غير تبنّي أي نظام مُسمَّى.",
+        "إطار «كل شيء أو لا شيء» غالباً بييجي من ضغط خارجي، مش من تقييم الشخص نفسه. سؤال «مين قالك دول الخيارات الوحيدة؟» ممكن يفتح النقاش بهدوء."
+      ],
+      "explanation": "The best response is to open up the hidden options without attacking or shaming. Naming the dichotomy as false — and offering to explore together — preserves the relationship and moves toward genuine help. Shame never helps; alternatives do.",
+      "explanationAr": "أحسن ردّ هو إنك تفتح الخيارات الخفيّة من غير ما تهاجم أو تُحرج. تسمية الثنائية بأنها زائفة — والعرض للاستكشاف معاً — بيحافظ على العلاقة وبيتحرّك نحو مساعدة حقيقية. الإحراج لا يفيد أبداً؛ البدائل تفيد.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Black-and-White Thinking"
+    }
+  ]
+}

@@ -1,0 +1,976 @@
+/* ═══════════════════════════════════════════════════════════════
+ * design-wave.css — THE DESIGN WAVE gateway style system.
+ *
+ * Pure CSS. Zero JS. All tokens scoped under .dw-root so this file
+ * cannot leak into the rest of the app. Every effect from the build
+ * spec lives here as a static recipe: layered gradient display type,
+ * diagonal kinetic marquee, drifting orbs, glassmorphism, grain,
+ * sparkle, neon glow, boxed-highlight with corner ticks, duotone.
+ *
+ * Motion contract:
+ *   • prefers-reduced-motion: reduce → ALL @keyframes loops disabled.
+ *   • < 768px → marquee static, orbs calmed, layout stacks.
+ *
+ * Reveal contract (replaces framer whileInView): elements get the
+ * .dw-reveal class for the hidden state; useReveal() adds .is-in to
+ * toggle the visible state. No JS here — only the two states.
+ * ═══════════════════════════════════════════════════════════════ */
+
+.dw-root {
+  /* ---- canvas / darks ---- */
+  --dw-canvas: #07070b;
+  --dw-canvas-2: #0b0b12;
+  --dw-canvas-3: #11111b;
+  --dw-ink-line: #1a1a28;
+
+  /* ---- magenta display gradient ---- */
+  --dw-magenta-a: #ff2e9a;
+  --dw-magenta-b: #ff6ec7;
+  --dw-magenta-core: #ff1f8f;
+
+  /* ---- violet ---- */
+  --dw-violet: #7c3aed;
+  --dw-violet-2: #a855f7;
+  --dw-violet-deep: #4c1d95;
+
+  /* ---- cyan (the way up / the cold lure) ---- */
+  --dw-cyan: #22d3ee;
+  --dw-cyan-2: #06b6d4;
+
+  /* ---- text (bone, not pure white) ----
+   * §G4 CONTRAST: raised so descriptive text clears WCAG AA on near-black.
+   * --dw-bone-dim was #b8b4ac → #c9c5bd (the spec's ≥#C9C5BD floor).
+   * --dw-muted was #6e6a78 (failed AA on canvas) → #9a96a4 for labels;
+   * use --dw-muted ONLY for de-emphasised mono eyebrows on dark, never
+   * for body copy. */
+  --dw-bone: #f1efe9; /* primary body / headings on dark */
+  --dw-bone-dim: #c9c5bd; /* secondary text — AA floor */
+  --dw-muted: #9a96a4; /* mono labels / eyebrows only */
+  --dw-muted-strong: #b4b0bd; /* mono labels that must read clearly */
+
+  /* ---- glass tints ---- */
+  --dw-glass-fill: rgba(255, 255, 255, 0.04);
+  --dw-glass-fill-2: rgba(124, 58, 237, 0.06);
+  --dw-glass-border: rgba(255, 255, 255, 0.1);
+  --dw-glass-border-lit: rgba(168, 85, 247, 0.35);
+
+  /* ---- glow rgba ---- */
+  --dw-glow-magenta: rgba(255, 46, 154, 0.45);
+  --dw-glow-magenta-soft: rgba(255, 46, 154, 0.18);
+  --dw-glow-violet: rgba(124, 58, 237, 0.4);
+  --dw-glow-cyan: rgba(34, 211, 238, 0.35);
+
+  /* ---- composed glow shadows ---- */
+  --dw-glow-pill: 0 0 0 1px rgba(168, 85, 247, 0.5),
+    0 8px 24px var(--dw-glow-violet), 0 0 40px var(--dw-glow-violet);
+  --dw-glow-box: 0 0 0 1px var(--dw-magenta-core),
+    0 0 26px var(--dw-glow-magenta-soft);
+
+  /* ---- type scale ────────────────────────────────────────────
+   * §G2 LEGIBLE SCALE. Hard floors (the page QA said 9–11px was too
+   * small everywhere):
+   *   body       ≥ 15px / line-height 1.6
+   *   secondary  ≥ 13px
+   *   mono label ≥ 12px, NEVER < 11px
+   *   data value large
+   * All in rem (16px root). clamp() only scales UP from the floor.  */
+  --dw-t-data: clamp(2.25rem, 4vw, 3.5rem); /* big data-panel values   ≥36px */
+  --dw-t-data-sm: clamp(1.5rem, 2.4vw, 2rem); /* secondary data values  ≥24px */
+  --dw-t-h2: clamp(1.5rem, 2.6vw, 2.25rem); /* section sub-headlines    ≥24px */
+  --dw-t-case-name: clamp(1.0625rem, 1.4vw, 1.3125rem); /* case names    ≥17px */
+  --dw-t-lead: clamp(1.0625rem, 1.3vw, 1.1875rem); /* leads             ≥17px */
+  --dw-t-body: clamp(0.9375rem, 1.05vw, 1.0625rem); /* BODY FLOOR       =15px */
+  --dw-t-cta: 0.9375rem; /* CTA label                                   =15px */
+  --dw-t-secondary: 0.8125rem; /* secondary / captions FLOOR            =13px */
+  --dw-t-mono: 0.75rem; /* mono labels FLOOR                            =12px */
+  --dw-t-mono-min: 0.6875rem; /* the ABSOLUTE mono minimum              =11px */
+  --dw-t-eyebrow: 0.8125rem; /* eyebrow / kicker                        =13px */
+  --dw-t-side-label: 0.75rem; /* vertical kicker                        =12px */
+  --dw-t-marquee: clamp(1.4rem, 3vw, 2.4rem);
+  --dw-lh-body: 1.6;
+
+  /* heaviest Arabic display weight — §G3 bilingual equality */
+  --dw-ar-display-weight: 800;
+
+  color: var(--dw-bone);
+  background: var(--dw-canvas);
+  position: relative;
+}
+
+/* ════════════════════ BACKGROUND FIELD ════════════════════ */
+/* Replaces the R3F <Scene/>: a static radial gradient field + orbs. */
+.dw-bgfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      1200px 800px at 78% 8%,
+      rgba(255, 46, 154, 0.1),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 700px at 8% 92%,
+      rgba(124, 58, 237, 0.12),
+      transparent 62%
+    ),
+    radial-gradient(
+      700px 600px at 50% 50%,
+      rgba(34, 211, 238, 0.04),
+      transparent 70%
+    ),
+    var(--dw-canvas);
+}
+
+/* ════════════════════ DISPLAY TYPE ════════════════════ */
+.dw-word {
+  font-family: 'Clash Display', 'Archivo Expanded', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(4.5rem, 18vw, 16rem);
+  line-height: 0.82;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.dw-word--ar {
+  font-family: var(--font-heading-ar), 'Tajawal', 'Cairo', sans-serif;
+  font-weight: 900;
+  font-size: clamp(5rem, 20vw, 18rem);
+  line-height: 0.85;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.dw-gradient-text {
+  background: linear-gradient(
+    180deg,
+    var(--dw-magenta-a) 0%,
+    var(--dw-magenta-b) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* layered display: filled word + offset stroke ghost behind it */
+.dw-layer {
+  position: relative;
+  display: inline-block;
+}
+.dw-layer .dw-fill {
+  position: relative;
+  z-index: 3;
+}
+.dw-layer .dw-ghost {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  -webkit-text-stroke: 1.5px rgba(255, 46, 154, 0.25);
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transform: translate(10px, 12px) scale(1.02);
+  filter: blur(0.3px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ════════════════════ MARQUEE ════════════════════ */
+.dw-marquee {
+  position: relative;
+  width: 130%;
+  left: -10%;
+  transform: rotate(-7deg);
+  background: linear-gradient(
+    90deg,
+    var(--dw-violet-deep),
+    var(--dw-violet)
+  );
+  box-shadow: 0 8px 30px var(--dw-glow-violet);
+  padding: 0.55rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.dw-marquee__track {
+  display: inline-block;
+  will-change: transform;
+  animation: dw-marquee 22s linear infinite;
+  font-family: 'Clash Display', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: var(--dw-t-marquee);
+  color: var(--dw-bone);
+  letter-spacing: 0.02em;
+}
+.dw-marquee__track--rev {
+  animation-direction: reverse;
+}
+.dw-marquee__track > span {
+  margin: 0 1.5rem;
+  opacity: 0.92;
+}
+@keyframes dw-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ════════════════════ ORBS ════════════════════ */
+.dw-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.55;
+  will-change: transform;
+  pointer-events: none;
+}
+.dw-orb--1 {
+  width: 520px;
+  height: 520px;
+  top: -8%;
+  right: 6%;
+  background: radial-gradient(
+    circle at 35% 35%,
+    var(--dw-magenta-a),
+    var(--dw-violet-deep) 70%,
+    transparent 72%
+  );
+  animation: dw-drift 18s ease-in-out infinite;
+}
+.dw-orb--2 {
+  width: 340px;
+  height: 340px;
+  bottom: 12%;
+  left: -4%;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--dw-violet-2),
+    transparent 70%
+  );
+  animation: dw-drift 24s ease-in-out infinite reverse;
+}
+.dw-orb--3 {
+  width: 260px;
+  height: 260px;
+  top: 40%;
+  left: 38%;
+  opacity: 0.32;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--dw-cyan),
+    transparent 70%
+  );
+  animation: dw-drift 30s ease-in-out infinite;
+}
+@keyframes dw-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) scale(1.06);
+  }
+  66% {
+    transform: translate(-30px, 25px) scale(0.96);
+  }
+}
+
+/* ════════════════════ GLASS ════════════════════ */
+.dw-glass {
+  background: var(--dw-glass-fill);
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  border: 1px solid var(--dw-glass-border);
+  border-radius: 18px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 20px 60px rgba(0, 0, 0, 0.55);
+}
+.dw-glass--lit {
+  border-color: var(--dw-glass-border-lit);
+  box-shadow:
+    0 0 0 1px var(--dw-glass-border-lit),
+    0 20px 70px var(--dw-glow-violet);
+}
+
+/* ════════════════════ GRAIN ════════════════════ */
+.dw-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+}
+
+/* ════════════════════ SPARKLE ════════════════════ */
+.dw-spark {
+  position: absolute;
+  color: var(--dw-magenta-b);
+  font-size: 1.1rem;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 6px var(--dw-glow-magenta));
+  animation: dw-twinkle 3.2s ease-in-out infinite;
+  pointer-events: none;
+  user-select: none;
+}
+@keyframes dw-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.15);
+  }
+}
+
+/* ════════════════════ BOXED HIGHLIGHT ════════════════════ */
+.dw-box {
+  position: relative;
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  font-weight: 600;
+  font-size: var(--dw-t-case-name);
+  color: var(--dw-bone);
+  background: rgba(255, 31, 143, 0.1);
+  border: 1.5px solid var(--dw-magenta-core);
+  box-shadow: var(--dw-glow-box);
+}
+.dw-box::before,
+.dw-box::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--dw-magenta-a);
+}
+.dw-box::before {
+  top: -4px;
+  left: -4px;
+  border-right: 0;
+  border-bottom: 0;
+}
+.dw-box::after {
+  bottom: -4px;
+  right: -4px;
+  border-left: 0;
+  border-top: 0;
+}
+
+/* ════════════════════ PILL CTA ════════════════════ */
+.dw-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(
+    120deg,
+    var(--dw-violet),
+    var(--dw-violet-2)
+  );
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.5rem;
+  color: var(--dw-bone);
+  font-weight: 600;
+  font-size: var(--dw-t-cta);
+  cursor: pointer;
+  box-shadow: var(--dw-glow-pill);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.dw-pill:hover {
+  background: linear-gradient(
+    120deg,
+    var(--dw-violet-2),
+    var(--dw-violet-2)
+  );
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.7),
+    0 10px 30px var(--dw-glow-violet),
+    0 0 56px var(--dw-glow-violet);
+}
+.dw-pill:focus-visible {
+  outline: 2px solid var(--dw-cyan);
+  outline-offset: 3px;
+}
+
+/* ════════════════════ DUOTONE ════════════════════ */
+.dw-duotone {
+  position: relative;
+  filter: grayscale(1) contrast(1.15) brightness(0.9);
+}
+.dw-duotone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    var(--dw-magenta-a),
+    var(--dw-violet-deep)
+  );
+  mix-blend-mode: color;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* ════════════════════ MONO / EYEBROW / LABELS ════════════════════ */
+.dw-mono {
+  font-family: 'Space Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+.dw-eyebrow {
+  font-family: 'Space Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: var(--dw-t-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--dw-muted-strong);
+}
+.dw-side-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  font-family: 'Space Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: var(--dw-t-side-label);
+  letter-spacing: 0.22em;
+  color: var(--dw-muted-strong);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ════════════════════ §G2 LEGIBLE TEXT UTILITIES ════════════════════ */
+/* Body / lead / secondary — use these instead of ad-hoc text-[10px]. */
+.dw-body {
+  font-size: var(--dw-t-body);
+  line-height: var(--dw-lh-body);
+  color: var(--dw-bone-dim);
+  max-width: 65ch; /* §3 problem: cap measure */
+}
+.dw-lead {
+  font-size: var(--dw-t-lead);
+  line-height: 1.55;
+  color: var(--dw-bone);
+}
+.dw-secondary {
+  font-size: var(--dw-t-secondary);
+  line-height: 1.5;
+  color: var(--dw-bone-dim);
+}
+/* mono label — clamps so it can never fall below 11px */
+.dw-mono-label {
+  font-family: 'Space Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: max(var(--dw-t-mono), var(--dw-t-mono-min));
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dw-muted-strong);
+}
+
+/* ════════════════════ §G3 BILINGUAL EQUALITY ════════════════════
+ * Pair an EN line with its AR line at EQUAL visual weight. The Arabic
+ * gets the heavy display face and the SAME font-size as its English
+ * sibling — never the thin fallback, never smaller. Apply .dw-ar to
+ * any Arabic run; .dw-bi-h to a bilingual heading pair. */
+.dw-ar {
+  font-family: var(--font-heading-ar), 'Tajawal', 'Cairo', sans-serif;
+  font-weight: var(--dw-ar-display-weight);
+}
+.dw-ar--body {
+  /* Arabic body keeps a readable text face but still equal size/weight */
+  font-family: var(--font-body-ar), 'Tajawal', 'Cairo', sans-serif;
+  font-weight: 600;
+}
+.dw-bi-h {
+  /* a heading block holding EN + AR as equals */
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+}
+.dw-bi-h .dw-bi-en,
+.dw-bi-h .dw-bi-ar {
+  font-size: var(--dw-t-h2);
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--dw-bone);
+}
+.dw-bi-h .dw-bi-ar {
+  font-family: var(--font-heading-ar), 'Tajawal', 'Cairo', sans-serif;
+  font-weight: var(--dw-ar-display-weight);
+}
+
+/* ════════════════════ §G8 DATA-PANEL VALUES ════════════════════ */
+.dw-data-value {
+  font-family: 'Space Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: var(--dw-t-data);
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--dw-bone);
+}
+.dw-data-value--sm {
+  font-size: var(--dw-t-data-sm);
+}
+.dw-data-label {
+  font-family: 'Space Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: max(var(--dw-t-mono), var(--dw-t-mono-min));
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dw-bone-dim);
+}
+
+/* ════════════════════ §G8 .dw-panel — THE RIGHT-SIDE DATA PANEL ════════════════════
+ * The citation-chain / timeline / flatline / confidence-band / flow-map
+ * containers. Enlarged so diagrams render ~2× with ≥12px labels. A panel
+ * reads `--td-layer-accent` (set by its DescentLayer wrapper) so its
+ * frame + glow match the layer color. Diagrams should size to .dw-panel
+ * width (min-height enforces the 2× footprint). */
+.dw-panel {
+  --_acc: var(--td-layer-accent, var(--dw-magenta-core));
+  --_acc-rgb: var(--td-layer-accent-rgb, 255, 31, 143);
+  position: relative;
+  width: 100%;
+  min-height: clamp(320px, 42vh, 520px); /* the 2× footprint */
+  padding: clamp(1.25rem, 2vw, 2rem);
+  border-radius: 16px;
+  background: linear-gradient(
+      180deg,
+      rgba(var(--_acc-rgb), 0.05),
+      rgba(255, 255, 255, 0.015)
+    ),
+    var(--dw-canvas-2);
+  border: 1px solid rgba(var(--_acc-rgb), 0.28);
+  box-shadow:
+    0 0 0 1px rgba(var(--_acc-rgb), 0.1),
+    0 24px 70px rgba(0, 0, 0, 0.55),
+    0 0 48px -18px rgba(var(--_acc-rgb), 0.4);
+}
+/* the panel's title row — mono label + the layer's color chip */
+.dw-panel__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: clamp(0.85rem, 1.5vw, 1.25rem);
+}
+.dw-panel__title {
+  font-family: 'Space Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: var(--dw-t-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dw-bone);
+}
+.dw-panel__chip {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 3px;
+  background: var(--_acc);
+  box-shadow: 0 0 10px rgba(var(--_acc-rgb), 0.7);
+  flex: 0 0 auto;
+}
+/* every text node inside a panel inherits the ≥12px high-contrast floor */
+.dw-panel :where(text, .dw-panel-label) {
+  font-size: max(var(--dw-t-mono), var(--dw-t-mono-min));
+  fill: var(--dw-bone-dim);
+  color: var(--dw-bone-dim);
+}
+.dw-panel--full {
+  /* a panel that owns the full column (maps, flow) — even taller */
+  min-height: clamp(380px, 52vh, 620px);
+}
+
+/* ════════════════════ §G5 TIER LEGEND + BADGE ════════════════════ */
+/* A tier badge: small but legible (≥11px), color-coded, links to the key. */
+.dw-tier-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  font-family: 'Space Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: max(var(--dw-t-mono), var(--dw-t-mono-min));
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--_tier, var(--dw-bone));
+  background: rgba(var(--_tier-rgb, 241, 239, 233), 0.12);
+  border: 1px solid rgba(var(--_tier-rgb, 241, 239, 233), 0.45);
+  cursor: help;
+  white-space: nowrap;
+  transition: background 0.18s ease, box-shadow 0.18s ease;
+}
+.dw-tier-badge:hover,
+.dw-tier-badge:focus-visible {
+  background: rgba(var(--_tier-rgb, 241, 239, 233), 0.2);
+  box-shadow: 0 0 14px -4px rgba(var(--_tier-rgb, 241, 239, 233), 0.7);
+  outline: none;
+}
+.dw-tier-badge__dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--_tier, currentColor);
+  flex: 0 0 auto;
+}
+
+/* the legend block (evidence key) */
+.dw-tier-legend {
+  display: grid;
+  gap: 0.5rem;
+  padding: clamp(0.85rem, 1.4vw, 1.15rem);
+  border-radius: 14px;
+  background: var(--dw-canvas-2);
+  border: 1px solid var(--dw-glass-border);
+}
+.dw-tier-legend__row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.55rem;
+}
+.dw-tier-legend__meaning {
+  font-size: var(--dw-t-secondary);
+  line-height: 1.45;
+  color: var(--dw-bone-dim);
+}
+/* compact fixed affordance that opens the key */
+.dw-tier-key-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  font-family: 'Space Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: max(var(--dw-t-mono), var(--dw-t-mono-min));
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dw-bone-dim);
+  background: var(--dw-glass-fill);
+  border: 1px solid var(--dw-glass-border);
+  cursor: pointer;
+}
+.dw-tier-key-toggle:hover {
+  color: var(--dw-bone);
+  border-color: var(--dw-glass-border-lit);
+}
+
+/* ════════════════════ §G6 LAYER LEGEND ════════════════════ */
+/* tiny persistent key: each of the 8 layers → its fixed color + name. */
+.dw-layer-legend {
+  display: grid;
+  gap: 0.3rem;
+}
+.dw-layer-legend__row {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: max(var(--dw-t-mono), var(--dw-t-mono-min));
+  line-height: 1.3;
+}
+.dw-layer-legend__swatch {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 3px;
+  flex: 0 0 auto;
+  box-shadow: 0 0 8px -1px currentColor;
+}
+.dw-layer-legend__num {
+  font-family: 'Space Mono', 'IBM Plex Mono', ui-monospace, monospace;
+  font-weight: 700;
+  color: var(--dw-bone-dim);
+  min-width: 1.6rem;
+}
+.dw-layer-legend__name {
+  color: var(--dw-bone-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dw-layer-legend__row[data-active='true'] .dw-layer-legend__name {
+  color: var(--dw-bone);
+  font-weight: 600;
+}
+
+/* scroll-cue arrow bob */
+.dw-scrollcue {
+  animation: dw-bob 1.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px var(--dw-glow-magenta-soft));
+}
+@keyframes dw-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* social icons hover → cyan */
+.dw-social-ico {
+  color: var(--dw-bone-dim);
+  transition: color 0.2s ease, filter 0.2s ease;
+}
+.dw-social-ico:hover {
+  color: var(--dw-cyan);
+  filter: drop-shadow(0 0 8px var(--dw-glow-cyan));
+}
+
+/* ════════════════════ REVEAL (replaces framer whileInView) ════════════════════ */
+.dw-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.dw-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ════════════════════ SECTION RHYTHM ════════════════════ */
+.dw-section {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 96px;
+  padding-right: 96px;
+  padding-top: clamp(7rem, 12vh, 11rem);
+  padding-bottom: clamp(7rem, 12vh, 11rem);
+}
+.dw-divider {
+  border: 0;
+  border-top: 1px solid var(--dw-ink-line);
+  margin: 0;
+}
+
+/* ════════════════════ RESPONSIVE: < 768px ════════════════════ */
+@media (max-width: 767px) {
+  .dw-marquee__track {
+    animation: none !important;
+  }
+  .dw-orb {
+    animation: none !important;
+    opacity: 0.4;
+  }
+  .dw-side-label {
+    display: none;
+  }
+  .dw-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .dw-hero-stack {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ════════════════════ CLIMB ZONE — the palette shift magenta → cyan ════════════════════
+ * The gateway's accent arc is DESCENT (magenta/violet) → CLIMB (cyan) →
+ * ENTERPRISE (gold). Sections M12–M14 live in the climb. Wrapping a block
+ * in `.dw-climb` REBINDS the magenta display tokens to cyan so every
+ * primitive that reads --dw-magenta-* / --dw-glow-* shifts cold — a pure
+ * CSS palette swap, zero JS, no GSAP. `.dw-flip-lit` is the *animated*
+ * variant: it cross-fades the same token block from arterial-red → cyan
+ * when `.is-in` is toggled by useReveal() (THE FLIP, done in CSS). */
+.dw-climb {
+  /* magenta display gradient → cyan */
+  --dw-magenta-a: #5eead4;
+  --dw-magenta-b: #22d3ee;
+  --dw-magenta-core: #19e0c8;
+  /* violet → deep teal/cyan supports */
+  --dw-violet: #0e7490;
+  --dw-violet-2: #22d3ee;
+  --dw-violet-deep: #083344;
+  /* glass + glow rebind to cyan */
+  --dw-glass-fill-2: rgba(34, 211, 238, 0.06);
+  --dw-glass-border-lit: rgba(34, 211, 238, 0.38);
+  --dw-glow-magenta: rgba(34, 211, 238, 0.42);
+  --dw-glow-magenta-soft: rgba(34, 211, 238, 0.18);
+  --dw-glow-violet: rgba(13, 148, 136, 0.4);
+  --dw-glow-pill: 0 0 0 1px rgba(34, 211, 238, 0.5),
+    0 8px 24px var(--dw-glow-violet), 0 0 40px var(--dw-glow-cyan);
+  --dw-glow-box: 0 0 0 1px var(--dw-magenta-core),
+    0 0 26px var(--dw-glow-magenta-soft);
+  /* climb canvas */
+  --dw-climb-canvas: #06121a;
+  --dw-climb-arterial: #ff2e3e;
+}
+
+/* cyan-glow glass card (M13 verification arsenal) */
+.dw-glass--cyan {
+  border-color: rgba(34, 211, 238, 0.28);
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.16),
+    0 18px 60px rgba(0, 0, 0, 0.55),
+    0 0 38px rgba(34, 211, 238, 0.1);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+.dw-glass--cyan:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.4),
+    0 18px 60px rgba(0, 0, 0, 0.55),
+    0 0 60px rgba(34, 211, 238, 0.22);
+  transform: translateY(-3px);
+}
+
+/* live-API pulse dot */
+.dw-live-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--dw-cyan);
+  box-shadow: 0 0 8px var(--dw-glow-cyan);
+  animation: dw-pulse 1.8s ease-in-out infinite;
+}
+@keyframes dw-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* ════════════════════ THE FLIP — CSS palette shift (M12) ════════════════════
+ * Two stacked faces (fall = arterial red, rise = cyan) cross-fade purely
+ * on the `.is-in` class. No scrub, no pin, no GSAP — useReveal() flips it. */
+.dw-flip {
+  position: relative;
+  isolation: isolate;
+}
+.dw-flip__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #050304; /* fall floor */
+  transition: background 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dw-flip.is-in .dw-flip__bg {
+  background: var(--dw-climb-canvas, #06121a); /* rise dawn */
+}
+.dw-flip__vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    transparent 35%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  transition: background 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dw-flip.is-in .dw-flip__vignette {
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    rgba(34, 211, 238, 0.18) 0%,
+    transparent 60%
+  );
+}
+/* the two headline faces */
+.dw-flip-face {
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.dw-flip-face--fall {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dw-flip.is-in .dw-flip-face--fall {
+  opacity: 0;
+  transform: translateY(-28px);
+}
+.dw-flip-face--rise {
+  opacity: 0;
+  transform: translateY(28px);
+}
+.dw-flip.is-in .dw-flip-face--rise {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* the rise decor (orbs / marquee) surfaces with the flip */
+.dw-flip__rise-decor {
+  opacity: 0;
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+}
+.dw-flip.is-in .dw-flip__rise-decor {
+  opacity: 1;
+}
+/* the draining depth gauge: full (fall) → empty (rise) */
+.dw-flip__gauge-fill {
+  transition: height 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+}
+.dw-flip.is-in .dw-flip__gauge-fill {
+  height: 0%;
+}
+
+/* ════════════════════ NEON RADAR (M14) — nivo container skin ════════════════════ */
+.dw-radar {
+  filter: drop-shadow(0 0 28px rgba(34, 211, 238, 0.32));
+}
+.dw-radar-card {
+  border: 1px solid rgba(34, 211, 238, 0.22);
+  background: rgba(34, 211, 238, 0.05);
+  border-radius: 18px;
+  box-shadow: 0 0 60px -28px rgba(34, 211, 238, 0.7);
+}
+
+/* climb ladder spine fill (M14) — pure height transition, no DrawSVG */
+.dw-ladder-fill {
+  transition: transform 0.25s linear;
+  transform-origin: bottom;
+}
+
+/* ════════════════════ REDUCED MOTION ════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  .dw-marquee__track,
+  .dw-orb,
+  .dw-orb--1,
+  .dw-orb--2,
+  .dw-orb--3,
+  .dw-spark,
+  .dw-scrollcue,
+  .dw-live-dot {
+    animation: none !important;
+  }
+  .dw-reveal,
+  .dw-flip__bg,
+  .dw-flip__vignette,
+  .dw-flip-face,
+  .dw-flip__rise-decor,
+  .dw-flip__gauge-fill,
+  .dw-glass--cyan {
+    transition: none;
+  }
+  .dw-reveal {
+    opacity: 1;
+    transform: none;
+  }
+  /* reduced-motion FLIP: hard-cut to the risen state, both faces legible
+   * is handled in JSX by stacking the two posters — here we just ensure
+   * no token animates. The .is-in state (set immediately by useReveal on
+   * mount in-view) gives the risen palette without a transition. */
+}

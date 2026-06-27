@@ -1,0 +1,153 @@
+{
+  "id": "day56_intellectual_humility_training",
+  "phase": 1,
+  "week": 8,
+  "day": 56,
+  "interleaved": true,
+  "title": "The Cure: Intellectual Humility, 'I Don't Know,' and Productive Conversation",
+  "titleAr": "العلاج: التواضع المعرفي، «مش عارف»، والمحادثة المثمرة",
+  "description": "The fight against superstition is not a battle of information — it is psychological and moral self-training. This Phase-1 checkpoint interleaves the week's engines: practise intellectual humility, the courage to say 'I don't know,' and how to have a conversation that plants a seed without triggering a war.",
+  "descriptionAr": "محاربة الخرافة مش معركة معلومات — دي تدريب نفسي وأخلاقي للذات. نقطة المراجعة دي بتاعة الطور الأول بتشبّك محرّكات الأسبوع: تدرّب على التواضع المعرفي، وشجاعة إنك تقول «مش عارف»، وكيف تعمل محادثة تزرع بذرة من غير ما تفجّر حرب.",
+  "type": "psychology",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A colleague asks: 'Can this herbal supplement cure diabetes?' You genuinely don't know the answer. What is the most intellectually honest and practically useful response?",
+      "claimAr": "زميل بيسألك: «ممكن المكمّل العشبي ده يشفي السكري؟» إنت فعلاً ما بتعرفش الإجابة. أكتر رد صادق فكرياً ومفيد عملياً إيه؟",
+      "options": [
+        "'Yes, natural things always help.'",
+        "'I don't know — but here's how we'd find out: what does the high-quality evidence say, and has it been tested against a control group?'",
+        "'No — all supplements are useless.'",
+        "Change the subject"
+      ],
+      "correctAnswer": 1,
+      "explanation": "'I don't know' is not weakness — it is the most honest statement available when you genuinely don't know, and it is the starting point of real inquiry. The sentence 'I don't know, but here is how we'd find out' demonstrates intellectual humility AND models the scientific habit. It beats a confident wrong answer in every measurable way. The uncomfortable truth: most of us have been trained to perform certainty, not to model honest uncertainty.",
+      "explanationAr": "«مش عارف» مش ضعف — ده أصدق كلام ممكن تقوله لمّا فعلاً ما بتعرفش، وده نقطة البداية للبحث الحقيقي. الجملة «مش عارف، بس ده إزاي نعرف» بتوضّح التواضع المعرفي وبتنمذج العادة العلمية في نفس الوقت. بتتغلّب على إجابة غلطة وثقة في كل الطرق الممكن قياسها. الحقيقة الصعبة: معظمنا اتدرّب إنه يُظهر اليقين، مش يُنمذج عدم اليقين الصادق.",
+      "sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950",
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf"
+      ],
+      "cognitivebiasAtPlay": "Need for Cognitive Closure"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A speaker says 'I might be wrong about this, but here is the evidence.' Before you check the research: does admitting possible error make you trust them LESS or MORE?",
+      "claimAr": "متكلّم بيقول «ممكن أكون غلطان في ده، بس ده الدليل». قبل ما تراجع البحث: الاعتراف باحتمال الخطأ بيخلّيك تثق فيه «أقل» ولا «أكثر»؟",
+      "options": [
+        "Less — admitting you might be wrong weakens your credibility",
+        "More — signalling that you track truth over reputation tends to increase perceived trustworthiness"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Research consistently shows that saying 'I might be wrong, but here is the evidence' increases perceived trustworthiness — because it signals the person is tracking truth, not protecting reputation. Calibration check: notice whether your gut expected the opposite (we're trained to read certainty as strength). The viral diet system never said 'I might be wrong.' Science does, constantly — that is a feature, not a flaw. The strongest position is: 'Here is my best current understanding, and I will update it if the evidence demands it.'",
+      "explanationAr": "البحث باستمرار بيوضّح إن قول «ممكن أكون غلطان، بس ده الدليل» بيزيد المصداقية المحسوسة — لأنه بيشير إن الشخص بيتتبّع الحقيقة مش بيحمي سمعته. تحقّق المعايرة: لاحظ لو حدسك توقّع العكس (إحنا متدرّبين نقرأ اليقين كقوة). النظام اللي انتشر ما قالش «ممكن أكون غلطان» أبداً. العلم بيقولها باستمرار — وده ميزة مش عيب. أقوى موقف: «ده أفضل فهمي الحالي، وهحدّثه لو الدليل اقتضى ده.»",
+      "sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950"
+      ],
+      "cognitivebiasAtPlay": "Cognitive Narcissism (ego-defence)"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Your mother is deeply convinced about the viral Taybat diet and has stopped her blood pressure medication. She feels better. You want to plant a seed of doubt without a fight. Which opening works best — and why does it work?",
+      "claimAr": "أمّك مقتنعة جداً بنظام «الطيبات» اللي انتشر وأوقفت دوا ضغطها. بتحسّ بتحسّن. عايز تزرع بذرة شكّ من غير ما تتعارك. أنهي مدخل بيشتغل أحسن — وليه بيشتغل؟",
+      "options": [
+        "'Mum, that diet is dangerous — it's all been disproven.'",
+        "'Mum, I know you care about your health and I do too. Can I ask — what would make you want to check in with your doctor, just to make sure the numbers are safe?'",
+        "'The doctor said it's all nonsense.'",
+        "Say nothing — it's her choice"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": { "prompt": "In your own words: why does an open question from shared values open a door, while a direct 'it's disproven' slams it shut?", "promptAr": "بكلماتك: ليه سؤال مفتوح من قيم مشتركة بيفتح باب، بينما «ده مفنّد» المباشرة بتقفله؟" },
+      "explanation": "The Socratic approach for a loved one: start from shared values ('we both care about your health'), ask an open curious question rather than making a statement, and invite her own thinking rather than triggering her defence. 'What would make you want to check with your doctor?' doesn't attack the diet — it opens a door. Direct refutation of an identity-linked belief almost always backfires (the backfire effect). The goal of a first conversation is to plant one question, not to win the argument.",
+      "explanationAr": "النهج السقراطي مع شخص عزيز: ابدأ من القيم المشتركة («إحنا الاتنين بنهتم بصحتك»)، اسأل سؤالاً فضولياً مفتوحاً بدل ما تعمل ادعاءً، وادعو تفكيرها هي بدل ما تشغّل دفاعها. «إيه اللي هيخلّيكي تراجعي الدكتور؟» ما بيهاجمش النظام — بيفتح باباً. التفنيد المباشر لمعتقد مرتبط بالهوية بيرتدّ تقريباً دائماً (تأثير الارتداد). الهدف من محادثة أولى زراعة سؤال واحد، مش الفوز بالنقاش.",
+      "sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950",
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "Someone burned by misinformation before now says: 'I've learned my lesson — I don't trust anyone or anything anymore. Everything is equally dubious.' It sounds like hard-won wisdom and safety.",
+      "claimAr": "حد اتحرق من معلومات مغلوطة قبل كده بيقول دلوقتي: «اتعلّمت الدرس — ما بقاش بثق في أي حد أو أي حاجة. كل حاجة مشكوك فيها بنفس القدر». بتبان حكمة وأمان مكتسبين بصعوبة.",
+      "prompt": "Consider the opposite: does 'trust nothing equally' actually protect you — or does it leave you MORE exposed? What does it stop you from being able to do?",
+      "promptAr": "فكّر في العكس: «ما تثقش في حاجة بالتساوي» بيحميك فعلاً — ولا بيخلّيك «أكثر» انكشافاً؟ وبيمنعك من إنك تقدر تعمل إيه؟",
+      "modelPoints": [
+        "If everything is equally dubious, you can no longer tell a well-evidenced claim from a baseless one — so the most emotionally convincing story wins by default.",
+        "Hannah Arendt's point: a person who loses trust in their own ability to know truth doesn't become a sceptic — they become someone who will believe ANYTHING.",
+        "Real protection is not cynicism but discrimination: trusting the PROCESS (peer review, systematic evidence, transparent methods) even when no single person is infallible.",
+        "Distrusting everyone equally is the same surrender that made misinformation work the first time — just wearing the costume of caution."
+      ],
+      "modelPointsAr": [
+        "لو كل حاجة مشكوك فيها بالتساوي، ما بقتش تقدر تفرّق ادعاء موثّق من ادعاء بلا أساس — فالقصة الأكثر إقناعاً عاطفياً بتكسب تلقائياً.",
+        "فكرة هانا أرندت: اللي بيفقد الثقة في قدرته على معرفة الحقيقة ما بيبقاش شكّاكاً — بيبقى شخص هيصدّق «أي حاجة».",
+        "الحماية الحقيقية مش العدمية لكن التمييز: الثقة في «العملية» (المراجعة العلمية، الدليل المنهجي، الأساليب الشفافة) حتى لو ما فيش شخص واحد معصوم.",
+        "عدم الثقة في الكل بالتساوي هو نفس الاستسلام اللي خلّى المعلومات المغلوطة تشتغل أول مرة — بس لابس بدلة الحذر."
+      ],
+      "explanation": "Considering the opposite reveals that cynicism is not the antidote to gullibility — it is its twin. Arendt's insight: once the wall between true and false collapses, the most emotionally convincing narrative wins. The protective move is the opposite of 'trust nothing': re-learning to trust the process of evidence even though no individual or institution is infallible. Calibrated trust, not blanket distrust.",
+      "explanationAr": "التفكير في العكس بيكشف إن العدمية مش ترياق السذاجة — هي توأمها. فكرة أرندت: أول ما ينهار الحائط بين الصح والغلط، السردية الأكثر إقناعاً عاطفياً بتكسب. الحركة الواقية عكس «ما تثقش في حاجة»: إعادة تعلّم الثقة في عملية الدليل رغم إن مفيش فرد أو مؤسسة معصومة. ثقة معايَرة، مش عدم ثقة شامل.",
+      "sources": [
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261",
+        "https://plato.stanford.edu/entries/arendt/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 55,
+      "claim": "After eight weeks of training, you meet a new health claim on social media. Which sequence of internal moves represents intellectual maturity — and notice how it reverses the motivated-reasoning order from earlier this week.",
+      "claimAr": "بعد تمن أسابيع تدريب، بتقابل ادعاء صحي جديد على السوشيال ميديا. أنهي تسلسل من الحركات الداخلية بيمثّل النضج الفكري — ولاحظ إزاي بيعكس ترتيب الاستدلال المدفوع اللي شُفته بدري الأسبوع ده؟",
+      "options": [
+        "Feel it is right → share it → wait for feedback",
+        "Pause → notice which answer you WANT to be true → ask 'what is the source?' → check the evidence level → be willing to land on 'I don't know yet' if the evidence is insufficient",
+        "Reject it automatically because it's on social media",
+        "Search for confirming evidence → if you find some, accept it"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The mature sequence: PAUSE before reacting. NOTICE your desire (which conclusion do you want? — the 'C' moment from day 55). ASK for the source (not 'how compelling is the story?'). CHECK the evidence level on the ladder (anecdote vs RCT vs systematic review). LAND on 'I don't know yet' if the evidence is thin — and be genuinely comfortable there. Notice this deliberately reverses the motivated-reasoning order (need → conclusion → cherry-pick) you mapped earlier. This is all of Phase 1 distilled into one habit.",
+      "explanationAr": "التسلسل الناضج: قِف قبل ما ترد. لاحظ رغبتك (أنهي نتيجة عايزها؟ — لحظة «ج» بتاعة يوم 55). اسأل عن المصدر (مش «قد إيه القصة مقنعة؟»). تحقّق من مستوى الدليل على السلّم (حكاية مقابل تجربة عشوائية مقابل مراجعة منهجية). نزّل على «مش عارف لحد دلوقتي» لو الدليل ضعيف — وكون مرتاح فعلاً هناك. لاحظ إن ده بيعكس متعمّداً ترتيب الاستدلال المدفوع (حاجة ← نتيجة ← انتقاء) اللي رسمته بدري. ده كل الطور الأول مكثّفاً في عادة واحدة.",
+      "sources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950",
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf"
+      ],
+      "cognitivebiasAtPlay": "Intellectual Humility (the defence)"
+    },
+    {
+      "id": 6,
+      "mechanic": "inoculate",
+      "technique": "exploiting the need for closure and ego-flattery together",
+      "techniqueAr": "استغلال الحاجة للإغلاق ومجاملة الذات معاً",
+      "task": "Capstone of Phase 1 — feel the whole engine from the inside. Write a short, punchy post about a harmless topic (say, 'why your phone battery dies fast') that (1) gives ONE secret hidden cause explaining everything, and (2) flatters the reader as one of the few smart enough to see it. Make it feel both certain and special.",
+      "taskAr": "خاتمة الطور الأول — حسّ بالمحرّك كله من جوّه. اكتب بوست قصير ومؤثّر عن موضوع غير ضار (مثلاً «ليه بطارية موبايلك بتخلص بسرعة») بحيث (1) يدّي سبب واحد سرّي خفي بيفسّر كل حاجة، و(2) يجامل القارئ إنه من القلّة الذكية بما يكفي إنها تشوفه. خلّيه يحسّ بيقين وتميّز في نفس الوقت.",
+      "tells": [
+        "A single hidden cause that explains 100% of a messy thing — real causes are many and boring (need for closure).",
+        "Total certainty with zero sourcing ('the truth they won't tell you').",
+        "Ego-flattery: 'now YOU are one of the few who know' — the belief is sold as status, not data (cognitive narcissism).",
+        "It can't be tested: no observation could prove it wrong.",
+        "The satisfaction and the feeling of being special ARE the bait — not evidence."
+      ],
+      "tellsAr": [
+        "سبب خفي واحد بيفسّر 100% من حاجة فوضوية — الأسباب الحقيقية كتير ومملّة (الحاجة للإغلاق).",
+        "يقين كامل بصفر مصادر («الحقيقة اللي مش هيقولوهالك»).",
+        "مجاملة الذات: «دلوقتي «إنت» من القلّة اللي عارفة» — المعتقد بيتباع كمكانة، مش بيانات (النرجسية المعرفية).",
+        "ما ينفعش يتختبر: مفيش ملاحظة تقدر تثبت إنه غلط.",
+        "الرضا وإحساس التميّز «هما» الطُعم — مش دليل."
+      ],
+      "explanation": "This capstone makes you build the full Phase-1 engine in a harmless dose: it bundles the need for closure (one tidy hidden cause) with ego-defence (you're special for seeing it). Active inoculation (signal-detection meta-analysis, N=37,025) shows that making the move from the inside sharpens your ability to DISCRIMINATE manipulation from honest content without turning you cynical. You have now felt every engine of this week from within — closure, motivated reasoning, and ego-flattery — so you'll catch them faster when they arrive wearing serious, popular, or even sacred clothing.",
+      "explanationAr": "الخاتمة دي بتخلّيك تبني محرّك الطور الأول كامل بجرعة غير ضارة: بتجمع الحاجة للإغلاق (سبب خفي مرتّب واحد) مع الدفاع عن الذات (إنت متميّز لإنك شُفته). التلقيح النشط (تحليل بَعدي بنظرية كشف الإشارة، ن=37,025) بيبيّن إن عمل الحركة من جوّه بيشحذ قدرتك على التمييز بين التلاعب والمحتوى الصادق من غير ما يخلّيك متشكّك في كل حاجة. دلوقتي حسّيت كل محرّكات الأسبوع من جوّه — الإغلاق والاستدلال المدفوع ومجاملة الذات — فهتكشفهم أسرع لمّا ييجوا لابسين ثوباً جاداً أو رائجاً أو حتى مقدّساً.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/pops.70015"
+      ],
+      "cognitivebiasAtPlay": "Cognitive Narcissism (ego-defence)"
+    }
+  ]
+}

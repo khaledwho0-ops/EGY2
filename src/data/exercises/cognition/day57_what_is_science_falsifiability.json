@@ -1,0 +1,125 @@
+{
+  "id": "day57_what_is_science_falsifiability",
+  "phase": 2,
+  "week": 9,
+  "day": 57,
+  "title": "What Makes a Claim Scientific — Falsifiability",
+  "titleAr": "إيه اللي يخلّي الكلام علمي — قابلية التفنيد",
+  "description": "Karl Popper's test: a claim is scientific only if there's something that could prove it wrong. A claim that can never fail isn't strong — it's empty.",
+  "descriptionAr": "اختبار كارل بوبر: الكلام يبقى علمي بس لو فيه حاجة ممكن تثبت إنه غلط. الكلام اللي مستحيل يفشل مش قوي — ده فاضي.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A seller says: 'This remedy works for everyone. If it didn't help you, that proves your body wasn't ready for it.' What has happened to this claim, scientifically?",
+      "claimAr": "بائع بيقول: «العلاج ده بينفع مع كل الناس. ولو ما نفعش معاك، ده يثبت إن جسمك ماكانش مستعد له». الكلام ده حصل له إيه علمياً؟",
+      "options": [
+        "It became stronger — it explains every case",
+        "It became unfalsifiable: no possible result can ever count against it, so it has left science",
+        "It became a proper experiment",
+        "It is now a scientific law"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A claim that explains success AND failure equally — 'it worked' proves it, 'it didn't work' also proves it — can never be tested. Karl Popper's insight: a scientific claim must stick its neck out and say what result would prove it wrong. If nothing could ever disprove it, it isn't a strong claim, it's an empty one. Explaining everything is the same as explaining nothing.",
+      "explanationAr": "الكلام اللي بيفسّر النجاح والفشل بالتساوي — «نفع» يثبته، و«ما نفعش» كمان يثبته — مستحيل يتختبر. فكرة كارل بوبر: الادعاء العلمي لازم يحدّد بشجاعة أنهي نتيجة ممكن تثبت إنه غلط. لو مفيش حاجة ممكن تفنّده، يبقى مش ادعاء قوي، ده ادعاء فاضي. تفسير كل حاجة زيّه زيّ تفسير ولا حاجة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "In the «نظام الطيبات» community, when a follower got sicker, it was always blamed on 'not following the system perfectly' — never on the system itself. True or false: this makes the system's claims stronger.",
+      "claimAr": "في مجتمع «نظام الطيبات»، لمّا تابع كان بيزيد مرضه، الذنب دايماً كان على «إنه مش متبع النظام صح» — مش على النظام نفسه أبداً. صح ولا غلط: ده بيخلّي ادعاءات النظام أقوى.",
+      "options": [
+        "True — explaining every failure is comprehensive",
+        "False — this is the textbook unfalsifiability move, and it removes the claim from science"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does 'the patient always did it wrong' make the system impossible to evaluate — and what would a fair test of the system actually require?",
+        "promptAr": "بكلماتك: ليه «المريض دايماً اتصرّف غلط» بيخلّي النظام مستحيل يتقيَّم — وإيه اللي اختبار عادل للنظام كان هيحتاجه فعلاً؟"
+      },
+      "explanation": "False — this is the textbook unfalsifiability move (Red Flag #4). By blaming every bad outcome on the patient's adherence, the system arranges things so that no result can ever count against it: improvement proves it works, and deterioration also proves it works. That's not strength; it's the precise signal that the claim has left science. Popper warned that the more a theory 'explains,' the more suspicious we should be when it can never fail.",
+      "explanationAr": "غلط — دي حركة عدم القابلية للتفنيد بامتياز (علامة الخطر رقم 4). بإلقاء كل نتيجة سيئة على التزام المريض، النظام بيرتّب الأمور بحيث مفيش نتيجة ممكن تبقى ضدّه: التحسّن يثبت إنه شغّال، والتدهور كمان يثبت إنه شغّال. ده مش قوة؛ ده بالظبط إشارة إن الادعاء خرج من العلم. بوبر حذّر: كل ما النظرية «تفسّر» أكتر، كل ما المفروض نشكّ أكتر لما تبقى مستحيلة الفشل.",
+      "sources": [
+        "EAL-case-001:redflag-4",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "Which of these statements is the MOST scientific — meaning it could, in principle, be proven wrong by a clear observation?",
+      "claimAr": "أنهي عبارة من دول هي الأكثر علمية — يعني من حيث المبدأ ممكن تتثبت إنها غلط بملاحظة واضحة؟",
+      "options": [
+        "\"Good things happen to good people, eventually, in some form.\"",
+        "\"Invisible energy fields cause illness, but only sensitive people can detect them.\"",
+        "\"This medicine lowers blood sugar within two hours — measurable with a glucometer.\"",
+        "\"Everything happens for a hidden reason we can't know.\""
+      ],
+      "correctAnswer": 2,
+      "explanation": "The blood-sugar claim is scientific because it makes a risky, checkable prediction: measure with a glucometer, and if the sugar doesn't drop, the claim is wrong. The others are built to be uncheckable — 'eventually,' 'only sensitive people,' 'a reason we can't know' — each one slips out of any test. A claim earns trust by being brave enough to be wrong. Before checking: how confident were you? If you wavered, that uncertainty was healthy — this question has a genuinely testable answer.",
+      "explanationAr": "ادعاء سكر الدم علمي لأنه بيقدّم تنبؤ محدّد وقابل للفحص: قِسه بجهاز السكر، ولو السكر ما نزلش، يبقى الادعاء غلط. الباقي متبني علشان ما يتفحصش — «في الآخر»، «الحسّاسين بس»، «سبب ما نقدرش نعرفه» — كل واحد بيتملّص من أي اختبار. الادعاء بيكسب الثقة لمّا يبقى شجاع كفاية إنه يبقى غلط. قبل الكشف: كنت متأكد قد إيه؟ لو ترددت، عدم اليقين ده صحّي — السؤال عنده إجابة قابلة للاختبار فعلاً.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A friend says: 'Astrology must be true — every horoscope I read describes me perfectly.' He feels the personal fit is strong evidence.",
+      "claimAr": "صاحبك بيقول: «الأبراج لازم تكون صح — كل توقّع بقراه بيوصفني بالظبط». بيحسّ إن التطابق الشخصي دليل قوي.",
+      "prompt": "What would have to be true for the 'it describes me perfectly' feeling to be a poor test of truth? What alternative explanations could produce the same feeling?",
+      "promptAr": "لو إحساس «بيوصفني بالظبط» كان اختباراً ضعيفاً للحقيقة، إيه اللي لازم يكون صح؟ وإيه التفسيرات البديلة اللي ممكن تنتج نفس الإحساس؟",
+      "modelPoints": [
+        "If horoscope descriptions are written vaguely enough to fit almost anyone, every reader would feel 'described perfectly' — the text is engineered for that feeling, not derived from it.",
+        "A real test would need to be falsifiable: give a specific person descriptions from five different signs, without labels, and see if they identify their own as more accurate than the others. Studies doing exactly this find no above-chance accuracy.",
+        "The Forer effect (also called the Barnum effect) is the documented tendency to accept vague, flattering, or generally-applicable descriptions as uniquely accurate. It produces a strong feeling of personal fit with no actual specificity.",
+        "If the feeling of 'it describes me' proved truth, then every fortune cookie, every generalised self-help book, and every cold reading would be equally 'true' — which would mean they all contradict each other while being equally valid."
+      ],
+      "modelPointsAr": [
+        "لو توصيفات الأبراج بتتكتب بشكل ضبابي كفاية علشان تنطبق على أي حد تقريباً، كل قارئ هيحسّ إنه «موصوف بالظبط» — النص متصمّم لهذا الإحساس، مش مستنتَج منه.",
+        "اختبار حقيقي محتاج يكون قابلاً للتفنيد: ادّي شخص معيّن توصيفات خمسة أبراج مختلفة بدون تسمية، وشوف إذا كان بيعرّف برجه كأدق من الباقين. الدراسات اللي عملت ده بالظبط ما لاقتش دقة أعلى من الصدفة.",
+        "تأثير فورير (المسمّى كمان تأثير بارنوم) هو الميل الموثَّق لقبول توصيفات ضبابية أو مُطرِية أو عامة كأنها دقيقة بشكل فريد. بيولّد إحساساً قوياً بالتطابق الشخصي بدون أي تخصيص فعلي.",
+        "لو إحساس «بيوصفني» يُثبِت الحقيقة، يبقى كل فال، وكل كتاب تطوير ذاتي عام، وكل قراءة باردة ستكون «صحيحة» بالتساوي — وده معناه إنها كلها ستتناقض مع بعض وهي متساوية في الصحة."
+      ],
+      "explanation": "The Popper question — 'what would prove this wrong, and has anyone checked?' — is the most powerful tool here. The feeling of perfect fit is not a test of truth; it is the Forer effect, and it is engineered into the text.",
+      "explanationAr": "سؤال بوبر — «إيه اللي ممكن يثبت إن ده غلط، وهل حد دوّر عليه؟» — هو أقوى أداة هنا. إحساس التطابق الكامل مش اختبار للحقيقة؛ ده تأثير فورير، ومصمَّم داخل النص.",
+      "sources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://www.apa.org/monitor/2014/03/forer-effect"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'Millions of people feel better after using this wellness system. It has been used for thousands of years. The medical establishment refuses to study it. Therefore it must work, and doctors just don't want to admit it.'",
+      "claimAr": "فكّك الحُجّة دي: «ملايين الناس حسّوا أحسن بعد استخدام نظام العافية ده. استُخدم لآلاف السنين. المؤسسة الطبية ترفض دراسته. يبقى لازم يشتغل، والأطباء بس ما عايزينش يعترفوا».",
+      "parts": [
+        { "text": "This system must work.", "textAr": "النظام ده لازم يشتغل.", "role": "conclusion" },
+        { "text": "Millions of people feel better after using it.", "textAr": "ملايين الناس حسّوا أحسن بعد استخدامه.", "role": "premise" },
+        { "text": "It has been used for thousands of years.", "textAr": "استُخدم لآلاف السنين.", "role": "premise" },
+        { "text": "(Unstated) Widespread use and longevity prove efficacy.", "textAr": "(غير مذكور) الانتشار الواسع والقِدَم يُثبتان الفعالية.", "role": "assumption" },
+        { "text": "The medical establishment refuses to study it; doctors just don't want to admit it.", "textAr": "المؤسسة الطبية ترفض دراسته؛ الأطباء بس ما عايزينش يعترفوا.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION is the weak joint: neither widespread use nor longevity proves efficacy — bloodletting was used for 2,000 years and killed patients. 'Feeling better' without a control group cannot separate the system from placebo, time, and expectation. The 'doctors don't want to admit it' part is IRRELEVANT — it pre-discredits critics rather than addressing the evidence gap. Mapping the argument shows the conclusion has no properly evidenced pathway.",
+      "explanationAr": "الافتراض الخفي هو المفصل الضعيف: لا الانتشار الواسع ولا القِدَم يُثبتان الفعالية — الحجامة (الفصد) استُخدِمت 2000 سنة وقتلت مرضى. «حسّ أحسن» بدون مجموعة ضابطة ما يقدرش يفصل النظام عن الوهمي والوقت والتوقّع. جزء «الأطباء ما عايزينش يعترفوا» غير ذات صلة — بتُسقِط النقّاد مسبقاً بدل معالجة فجوة الأدلة. تفكيك الحُجّة بيُظهِر إن الخلاصة ما فيهاش مسار أدلة سليم.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://plato.stanford.edu/entries/pseudo-science/"
+      ],
+      "cognitivebiasAtPlay": "Appeal to Nature"
+    }
+  ]
+}

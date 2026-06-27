@@ -1,0 +1,144 @@
+{
+  "id": "day89_red_flags_in_action",
+  "phase": 2,
+  "week": 13,
+  "day": 89,
+  "title": "Red Flags in Action — Spot the Move",
+  "titleAr": "علامات الخطر في التطبيق — اكتشف الحركة",
+  "description": "Today we apply the 12 red flags to new scenarios you haven't seen — the real test of whether you have the tool, not just its name.",
+  "descriptionAr": "النهاردة بنطبّق الـ12 علامة خطر على سيناريوهات جديدة ما شفتهاش — الاختبار الحقيقي إنك معاك الأداة مش بس اسمها.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A new herbal system promises to cure psoriasis, vitiligo, arthritis, early-stage Alzheimer's, and hormonal infertility — all from the same product. Your aunt has three of these. She is excited. How many red flags does this trigger and which is the most decisive?",
+      "claimAr": "نظام عشبي جديد بيوعد بشفاء الصدفية والبهاق والتهاب المفاصل ومرحلة مبكرة من الزهايمر والعقم الهرموني — كله من نفس المنتج. عمّتك عندها ثلاثة منهم. هي متحمّسة. كم علامة خطر ده بيُشغّل وأيها الأكثر حسماً؟",
+      "options": [
+        "No flags — natural products work differently",
+        "Red Flag #1 ('cures everything') is decisive: these five conditions have completely unrelated biological mechanisms; no single agent can address all of them",
+        "One flag — the claim is a bit exaggerated",
+        "Red Flag #12 only — undisclosed financial interest"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Five mechanistically unrelated conditions sharing one cure is biologically impossible — Red Flag #1. Psoriasis is autoimmune, Alzheimer's is neurodegeneration, hormonal infertility involves the endocrine axis. A single herbal product cannot fix all of these, any more than one key can open every lock in a city. The empathy point: your aunt's hope is understandable. The answer is not ridicule but a gentle question: 'Can we ask the seller for peer-reviewed evidence on each of those five conditions specifically?'",
+      "explanationAr": "خمس حالات غير مترابطة آلياً بينها علاج واحد مستحيل بيولوجياً — علامة الخطر رقم 1. الصدفية مناعية ذاتية، الزهايمر تنكّس عصبي، العقم الهرموني بيشمل المحور الصمّاوي. منتج عشبي واحد ما يقدرش يُصلحهم كلهم، زيّ ما مفتاح واحد ما يقدرش يفتح كل الأقفال في مدينة. نقطة التعاطف: أمل عمّتك مفهوم. الردّ مش السخرية لكن سؤال هادي: «نقدر نسأل البائع عن دليل مراجَع على كل واحدة من الحالات الخمسة دي تحديداً؟»",
+      "sources": [
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer",
+        "https://www.who.int/news-room/fact-sheets/detail/dementia"
+      ],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A wellness coach says: \"Every patient who followed my protocol exactly recovered. The few who didn't recover just didn't follow it perfectly.\" Red Flag #4 (unfalsifiability) is at play here.",
+      "claimAr": "مدرّب صحة بيقول: «كل مريض اتّبع بروتوكولي بالظبط تعافى. القلّة اللي ما تعافوش بس ما اتّبعوه كامل.» علامة الخطر رقم 4 (عدم القابلية للتفنيد) هنا.",
+      "options": ["True — this is Red Flag #4, unfalsifiability", "False — this is just a testimonial claim"],
+      "correctAnswer": 0,
+      "explanation": "Red Flag #4: when failure is always blamed on imperfect adherence, the claim becomes unfalsifiable — no result can ever disprove it. A real medical treatment specifies in advance what counts as failure, and investigators check both. This move is emotionally compelling because it places responsibility on the patient — but scientifically it removes the claim from testable medicine entirely.",
+      "explanationAr": "علامة الخطر رقم 4: لمّا الفشل يُلصَق دايماً بعدم الالتزام الكامل، يصبح الادعاء غير قابل للتفنيد — لا نتيجة تقدر تدحضه أبداً. العلاج الطبي الحقيقي بيحدّد مسبقاً إيه اللي يُعدّ فشلاً، والباحثون بيفحصوا الاتنين. الحركة دي مقنعة عاطفياً لأنها بتحمّل المسؤولية للمريض — لكن علمياً ده بيزيل الادعاء من نطاق الطب القابل للاختبار خالص.",
+      "sources": [
+        "EAL-case-001:redflag-4",
+        "https://plato.stanford.edu/entries/popper/#FalsFalsCrit"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Using moral words like 'pure', 'blessed', or 'clean' to describe a food moves the conversation from evidence to identity — and that is Red Flag #6.",
+      "claimAr": "استخدام كلمات أخلاقية زي «طاهر» أو «مبارك» أو «نظيف» لوصف طعام بينقل الحوار من الدليل للهوية — وده علامة الخطر رقم 6.",
+      "options": ["True — this is Red Flag #6", "False — it is just normal marketing language"],
+      "correctAnswer": 0,
+      "selfExplain": {
+        "prompt": "In your own words: why does calling a food 'pure' or 'blessed' make it harder to evaluate with logic?",
+        "promptAr": "بكلماتك: ليه تسمية طعام «طاهر» أو «مبارك» بتصعّب تقييمه بالمنطق؟"
+      },
+      "explanation": "Red Flag #6: when food is described as 'pure,' 'blessed,' or 'clean,' eating it becomes an act of virtue and refusing it becomes a moral failure. This language moves the evaluation from evidence (what does the research show?) to identity (what kind of person am I?). Once a food choice is attached to religious or moral identity, it is nearly impossible to evaluate with logic — which is exactly why it is used.",
+      "explanationAr": "علامة الخطر رقم 6. لمّا الطعام يُوصَف بـ«الطاهر» أو «المبارك» أو «النظيف»، أكله بيبقى فعل فضيلة ورفضه بيبقى إخفاق أخلاقي. اللغة دي بتنقل التقييم من الدليل (إيه اللي يُظهره البحث؟) للهوية (أنا شخص إيه؟). لمّا اختيار الطعام يتعلّق بالهوية الدينية أو الأخلاقية، يصعب تقييمه بالمنطق — وده بالظبط ليه بيتُستخدَم.",
+      "sources": [
+        "EAL-case-001:redflag-6",
+        "https://www.apa.org/monitor/2019/03/emotional-eating"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A physician who is a respected heart surgeon sells a weight-loss supplement. His medical degree makes him a credible source on this product.",
+      "claimAr": "طبيب هو جرّاح قلب محترم بيبيع مكمّل لخسارة الوزن. شهادته الطبية بتخلّيه مصدراً موثوقاً للمنتج ده.",
+      "prompt": "What would have to be true for this to be WRONG? What is the hidden assumption the argument depends on?",
+      "promptAr": "إيه اللي لازم يكون صح عشان ده يبقى غلط؟ وإيه الافتراض الخفي اللي الحُجّة معتمدة عليه؟",
+      "modelPoints": [
+        "Credentials are domain-specific: cardiac surgery expertise does not transfer to weight-loss pharmacology or clinical nutrition.",
+        "The hidden assumption is 'all medical credentials are interchangeable' — they are not; specialties are different evidence bases.",
+        "Even the best surgeon operates outside their evidence base when giving advice in another specialty.",
+        "The relevant authority would be an obesity medicine specialist or a registered dietitian with research in the field."
+      ],
+      "modelPointsAr": [
+        "الشهادات مختصة بالمجال: خبرة جراحة القلب ما بتنتقلش لصيدلة إنقاص الوزن أو التغذية السريرية.",
+        "الافتراض الخفي هو «كل الشهادات الطبية قابلة للتبادل» — دي مش كده؛ التخصصات قواعد أدلة مختلفة.",
+        "حتى أفضل جرّاح بيشتغل خارج قاعدة أدلته لمّا بيدّي مشورة في تخصص تاني.",
+        "السلطة المناسبة هتكون أخصائي طب السمنة أو أخصائي تغذية معتمد مع بحث في المجال."
+      ],
+      "sources": [
+        "EAL-case-001:redflag-7",
+        "https://www.bmj.com/content/356/bmj.j686"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "authority outside specialty",
+      "techniqueAr": "استخدام السلطة خارج التخصص",
+      "task": "Feel this manipulation from the inside. Write a short social media post promoting a harmless product (e.g. 'drink more lemon water') where you borrow authority from an impressive but unrelated credential — like 'as a top aerospace engineer, I studied the body's chemistry and discovered...'",
+      "taskAr": "حسّ بالتلاعب ده من جوّه. اكتب بوست سوشيال ميديا قصير بيروّج لمنتج غير ضار (زي «اشرب مياه ليمون أكتر») بإنك تستعير سلطة من شهادة مثيرة للإعجاب لكن غير ذات صلة — زي «كمهندس فضاء كبير، درست كيمياء الجسم واكتشفت...»",
+      "tells": [
+        "The credential is real but in a completely different domain — expertise does not transfer.",
+        "The impressive title creates an emotional halo that makes you skip asking 'is this their specialty?'",
+        "There is no published research in the actual relevant field cited.",
+        "The authority claim replaces evidence — 'a smart person believes it' is not a study.",
+        "Spotting the domain mismatch takes one question: 'Is this their specialty?'"
+      ],
+      "tellsAr": [
+        "الشهادة حقيقية لكن في مجال مختلف تماماً — الخبرة ما بتنتقلش.",
+        "اللقب المثير يخلق هالة عاطفية بتخلّيك تتخطى السؤال «ده تخصصهم؟»",
+        "ما فيش بحث منشور في المجال الحقيقي ذي الصلة بيتُستشهد.",
+        "ادعاء السلطة بيحلّ محلّ الدليل — «شخص ذكي يؤمن بيها» مش دراسة.",
+        "اكتشاف عدم تطابق المجال بياخد سؤال واحد: «ده تخصصهم؟»"
+      ],
+      "sources": [
+        "EAL-case-001:redflag-7",
+        "https://www.bmj.com/content/356/bmj.j686"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 6,
+      "mechanic": "decompose",
+      "claim": "Decompose this argument: \"A board-certified doctor with millions of followers says this system stops medication. His followers all report feeling better. So stopping your medication must be safe — and doctors who disagree are just protecting their income.\"",
+      "claimAr": "فكّك الحُجّة دي: «دكتور معتمد معاه ملايين متابعين بيقول إن النظام ده بيوقّف الدواء. أتباعه كلهم بيبلّغوا إنهم حسّوا أحسن. يبقى وقف الدواء لازم يكون آمن — والأطباء اللي بيختلفوا بس بيحموا دخلهم.»",
+      "parts": [
+        { "text": "Stopping medication is safe under this system.", "textAr": "وقف الدواء آمن في ظل النظام ده.", "role": "conclusion" },
+        { "text": "A board-certified doctor with millions of followers endorses it.", "textAr": "دكتور معتمد بملايين متابعين بيدعمه.", "role": "premise" },
+        { "text": "His followers all report feeling better.", "textAr": "أتباعه كلهم بيبلّغوا إنهم حسّوا أحسن.", "role": "premise" },
+        { "text": "(Unstated) Followers' testimonials prove medical safety.", "textAr": "(غير مذكور) شهادات الأتباع بتثبت السلامة الطبية.", "role": "assumption" },
+        { "text": "Doctors who disagree are protecting their income.", "textAr": "الأطباء اللي بيختلفوا بيحموا دخلهم.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption — that testimonials prove medical safety — is the weak joint. Feeling better is real but cannot be separated from placebo, natural recovery, or unreported harms. The 'doctors protect income' line is irrelevant ad hominem: it attacks people instead of engaging with the safety evidence. The credential is also outside the relevant specialty (Red Flag #7). Red Flag #8 — encouraging medication cessation without physician oversight — is the documented cause of deaths in similar cases.",
+      "explanationAr": "الافتراض الخفي — إن الشهادات بتثبت السلامة الطبية — هو المفصل الضعيف. الإحساس بالتحسّن حقيقي لكن ما ينفعش يتفصل عن الوهمي أو التعافي الطبيعي أو الأضرار غير المُبلَّغ عنها. جملة «الأطباء بيحموا دخلهم» لا صلة لها — بتهاجم الناس بدل التعامل مع دليل السلامة. الشهادة كمان خارج التخصص ذي الصلة (علامة الخطر رقم 7). وعلامة الخطر رقم 8 — تشجيع وقف الدواء من غير إشراف طبي — هي السبب الموثَّق للوفيات في حالات مشابهة.",
+      "sources": [
+        "EAL-case-001:redflag-7",
+        "EAL-case-001:redflag-8",
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

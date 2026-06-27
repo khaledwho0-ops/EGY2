@@ -1,0 +1,98 @@
+{
+  "id": "volunteer_bias",
+  "phase": 2,
+  "week": 10,
+  "day": 14,
+  "title": "Volunteer Bias",
+  "titleAr": "تحيز المتطوع",
+  "description": "Understand how self-selection in study recruitment systematically distorts samples and threatens external validity.",
+  "descriptionAr": "فهم كيف يؤدي التطوع الذاتي في تجنيد المشاركين إلى تشويه العينات بشكل منهجي وتهديد الصلاحية الخارجية.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Volunteer Bias (Self-Selection Bias)",
+    "nameAr": "تحيز المتطوع (تحيز الاختيار الذاتي)",
+    "definition": "A systematic error that occurs when individuals who volunteer to participate in a study differ in meaningful ways from those who do not, leading to a non-representative sample. Volunteers tend to be more educated, higher socioeconomic status, more health-conscious, and more sociable (Rosenthal & Rosnow, 1975).",
+    "definitionAr": "خطأ منهجي يحدث عندما يختلف الأفراد الذين يتطوعون للمشاركة في دراسة بطرق جوهرية عن أولئك الذين لا يتطوعون، مما يؤدي إلى عينة غير ممثلة. يميل المتطوعون إلى أن يكونوا أكثر تعليماً وأعلى مستوى اجتماعياً واقتصادياً وأكثر وعياً صحياً.",
+    "realWorldExample": "The Hite Report (1976) on female sexuality used self-selected respondents from magazine readers, yielding a 3% response rate. Results dramatically differed from probability-sampled studies like the NHSLS (Laumann et al., 1994).",
+    "detectionMethod": "Compare demographic characteristics of respondents vs. non-respondents. Calculate response rates. Use wave analysis (compare early vs. late responders). Apply Heckman selection correction models."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A website posts an online poll asking 'Do you support stricter gun control?' and receives 50,000 responses showing 82% opposition. The site reports this as 'Americans overwhelmingly oppose gun control.' What is the primary statistical problem?",
+      "promptAr": "نشر موقع إلكتروني استطلاعاً يسأل 'هل تؤيد تشديد قوانين السلاح؟' وتلقى 50,000 رد يُظهر 82% معارضة. أبلغ الموقع عن ذلك بأن 'الأمريكيين يعارضون بأغلبية ساحقة تنظيم السلاح.' ما المشكلة الإحصائية الرئيسية؟",
+      "options": [
+        "The sample size of 50,000 is too small",
+        "The question wording is biased",
+        "Random sampling error",
+        "Volunteer bias: only people with strong opinions self-select into online polls"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Online opt-in polls suffer from severe volunteer bias. People with strong opinions—especially opposition—are more motivated to respond. This is not a probability sample, so the margin of error concept does not apply regardless of sample size. Literary Digest's 1936 presidential poll (2.4 million responses, wrong prediction) is the classic example of large N failing to compensate for selection bias.",
+      "explanationAr": "تعاني الاستطلاعات الإلكترونية الطوعية من تحيز المتطوع الشديد. الأشخاص ذوو الآراء القوية - وخاصة المعارضون - أكثر تحفيزاً للاستجابة. هذه ليست عينة احتمالية، لذا لا ينطبق مفهوم هامش الخطأ بغض النظر عن حجم العينة."
+    },
+    {
+      "id": 2,
+      "type": "scenario",
+      "prompt": "A health app study recruits participants through the app itself. They find that app users walk an average of 8,500 steps/day, concluding that 'average adults walk 8,500 steps daily.' A nationally representative accelerometer study (Tudor-Locke et al., 2009) found the US average is approximately 5,117 steps/day. What explains the discrepancy?",
+      "promptAr": "دراسة تطبيق صحي تجند المشاركين من خلال التطبيق نفسه. وجدوا أن مستخدمي التطبيق يمشون بمعدل 8,500 خطوة يومياً، وخلصوا إلى أن 'البالغين يمشون 8,500 خطوة يومياً.' دراسة تمثيلية وطنية وجدت أن المعدل الأمريكي حوالي 5,117 خطوة يومياً. ما الذي يفسر التناقض؟",
+      "options": [
+        "Self-selection bias: health-conscious, active people are more likely to use fitness apps",
+        "Steps have increased in the population since 2009",
+        "The sample sizes differ too much to compare",
+        "The app's accelerometer is more accurate than research-grade devices"
+      ],
+      "correctAnswer": 0,
+      "explanation": "People who download and actively use health/fitness apps are systematically different from the general population—they are already more health-motivated and physically active. This self-selection creates an upward bias in activity estimates. Convenience samples from app users cannot generalize to the broader population.",
+      "explanationAr": "الأشخاص الذين يحملون ويستخدمون تطبيقات الصحة واللياقة يختلفون بشكل منهجي عن عامة السكان - فهم أكثر تحفيزاً صحياً ونشاطاً بدنياً. هذا الاختيار الذاتي يخلق تحيزاً تصاعدياً في تقديرات النشاط."
+    },
+    {
+      "id": 3,
+      "type": "calculate",
+      "prompt": "A clinical trial for a new antidepressant advertises for volunteers with 'Are you feeling depressed?' flyers. Of 200 respondents, 160 meet clinical criteria for Major Depressive Disorder. The researchers report a population prevalence of MDD as 80%. The WHO estimates global MDD prevalence at approximately 3.8%. By what factor does volunteer bias inflate the estimate?",
+      "promptAr": "تجربة سريرية لمضاد اكتئاب جديد تعلن عن متطوعين بملصقات 'هل تشعر بالاكتئاب؟'. من 200 مستجيب، 160 يستوفون المعايير السريرية للاكتئاب الشديد. أبلغ الباحثون عن انتشار 80%. تقدر منظمة الصحة العالمية الانتشار بحوالي 3.8%. بكم ضعف يضخم تحيز المتطوع التقدير؟",
+      "options": [
+        "Approximately 10x inflation",
+        "Approximately 21x inflation",
+        "Approximately 50x inflation",
+        "Approximately 5x inflation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "80% ÷ 3.8% ≈ 21.1x inflation. The advertising specifically attracted people already experiencing depressive symptoms, creating extreme self-selection bias. This is why clinical trials require careful eligibility screening and should not confuse their enrolled sample characteristics with population prevalence.",
+      "explanationAr": "80% ÷ 3.8% ≈ 21.1 ضعف التضخم. الإعلان جذب تحديداً الأشخاص الذين يعانون بالفعل من أعراض اكتئابية، مما خلق تحيز اختيار ذاتي شديد."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "A researcher sends a 45-minute survey to 10,000 employees about workplace satisfaction. Only 1,200 respond (12% response rate). The results show 78% high satisfaction. According to Rogelberg et al. (2003), what is the most likely impact of this low response rate?",
+      "promptAr": "باحث يرسل استبياناً من 45 دقيقة إلى 10,000 موظف حول الرضا الوظيفي. يستجيب 1,200 فقط (معدل استجابة 12%). النتائج تُظهر 78% رضا مرتفع. ما هو التأثير الأكثر احتمالاً لمعدل الاستجابة المنخفض هذا؟",
+      "options": [
+        "Response rate does not affect the validity of survey results",
+        "Results are accurate because 1,200 is a large sample",
+        "Satisfied employees are more likely to respond, inflating satisfaction estimates (nonresponse bias)",
+        "Dissatisfied employees are more likely to respond to express grievances"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Research by Rogelberg et al. (2003) on organizational surveys shows that engaged, satisfied employees are more likely to complete lengthy workplace surveys. This creates a 'healthy responder' effect that inflates satisfaction estimates. The 12% response rate makes nonresponse bias virtually certain. Techniques like nonresponse weighting or follow-up of non-responders are needed.",
+      "explanationAr": "تظهر أبحاث روجلبيرج وآخرين أن الموظفين المنخرطين والراضين أكثر احتمالاً لإكمال استبيانات العمل الطويلة. هذا يخلق تأثير 'المستجيب الصحي' الذي يضخم تقديرات الرضا. معدل الاستجابة 12% يجعل تحيز عدم الاستجابة شبه مؤكد."
+    },
+    {
+      "id": 5,
+      "type": "scenario",
+      "prompt": "Two studies examine the relationship between social media use and depression in teens. Study A recruits via Instagram ads (n=5,000, finds strong positive correlation r=0.45). Study B uses stratified random sampling from school enrollment records (n=2,000, finds weak correlation r=0.12). Which study provides more valid population estimates?",
+      "promptAr": "دراستان تفحصان العلاقة بين استخدام وسائل التواصل الاجتماعي والاكتئاب لدى المراهقين. الدراسة أ تجند عبر إعلانات إنستغرام (ن=5,000، تجد ارتباطاً قوياً r=0.45). الدراسة ب تستخدم عينة عشوائية طبقية من سجلات المدارس (ن=2,000، تجد ارتباطاً ضعيفاً r=0.12). أي دراسة توفر تقديرات سكانية أكثر صحة؟",
+      "options": [
+        "Both are equally valid since both find a positive correlation",
+        "Neither is valid because correlation does not imply causation",
+        "Study A, because it has a larger sample size",
+        "Study B, because probability sampling reduces volunteer bias despite smaller N"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Study B's probability sampling from school records captures both heavy and light social media users, while Study A's Instagram recruitment over-represents heavy users who may also have higher depression rates. The larger N in Study A does not compensate for the systematic selection bias. This mirrors findings from Orben & Przybylski (2019) who found much smaller effect sizes (r ≈ 0.04) using representative UK datasets compared to convenience samples.",
+      "explanationAr": "العينة الاحتمالية في الدراسة ب من سجلات المدارس تلتقط المستخدمين بكثافة عالية ومنخفضة، بينما تجنيد الدراسة أ عبر إنستغرام يمثل بشكل مفرط المستخدمين بكثافة عالية. حجم العينة الأكبر لا يعوض التحيز المنهجي في الاختيار."
+    }
+  ]
+}

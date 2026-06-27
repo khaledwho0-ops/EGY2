@@ -1,0 +1,129 @@
+{
+  "id": "day130_stopping_medicine_not_piety",
+  "phase": 3,
+  "week": 19,
+  "day": 130,
+  "title": "Stopping Life-Saving Medicine Is Not Piety",
+  "titleAr": "وقف دواء منقذ الحياة مش تقوى",
+  "description": "Islamic scholars across all major schools agree: a sick person must seek treatment. Abandoning proven medicine for an unverified claim — however religious-sounding — is a danger to the life God commands be protected.",
+  "descriptionAr": "علماء الإسلام في كل المذاهب الكبرى متفقون: المريض لازم يسعى للعلاج. ترك دواء مُثبَت لادعاء غير مُثبَت — مهما بدا دينياً — خطر على الحياة التي أمر الله بحفظها.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://sunnah.com/abudawud:3855",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A diabetic man stops his insulin after an online personality (not a doctor, not a scholar) says insulin is 'against divine design.' His family says this shows strong faith. What does Islamic legal tradition actually say?",
+      "claimAr": "رجل مصاب بالسكري يوقف أنسولينه بعد ما شخصية أونلاين (مش دكتور ومش عالم) تقول إن الأنسولين «ضد التصميم الإلهي». أسرته تقول ده إيمان قوي. ماذا تقول الشريعة الإسلامية فعلاً؟",
+      "options": [
+        "Strong faith means avoiding all medicine",
+        "Islamic legal tradition (across Hanafi, Maliki, Shafi'i, and Hanbali schools) holds that treatment of a life-threatening condition is obligatory (wajib) — not optional; abandoning it without a medical alternative is negligence",
+        "Medicine is a personal choice with no religious dimension",
+        "Only herbal medicine is permissible"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The four major Sunni law schools (Hanafi, Maliki, Shafi'i, Hanbali) each have positions on al-tadawi (seeking treatment). For conditions where death or serious harm follows without treatment, the dominant opinion is that treatment is obligatory (wajib). An online personality with no medical or scholarly credentials cannot issue a valid ruling overriding this — and the family's sincere belief in his piety does not change the legal or medical reality.",
+      "explanationAr": "المذاهب الفقهية السنية الأربعة (الحنفية والمالكية والشافعية والحنابلة) لكلٍّ منها مواقف بشأن التداوي. للحالات التي يستتبع عدم علاجها الوفاة أو الضرر الجسيم، الرأي الراجح إن العلاج واجب. شخصية أونلاين بلا اعتماد طبي أو علمي لا تستطيع إصدار حكم صحيح يتجاوز هذا — وإيمان الأسرة الصادق بتقواه لا يغيّر الواقع القانوني أو الطبي.",
+      "sources": [
+        "https://sunnah.com/abudawud:3855",
+        "https://www.oxfordislamicstudies.com/article/opr/t125/e1482"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: Islamic jurisprudence allows a lupus patient to stop her corticosteroids if a popular diet system promises a natural cure, because 'trusting God' overrides medical advice.",
+      "claimAr": "صح ولا غلط: الفقه الإسلامي بيسمح لمريضة ذئبة تسيب كورتيزونها لو نظام حمية شعبي وعد بشفاء طبيعي، لأن «التوكّل على الله» يتجاوز النصيحة الطبية.",
+      "correctAnswer": false,
+      "myth_en": "Trusting God means you don't need medicine.",
+      "myth_ar": "التوكّل على الله معناه مش محتاج دواء.",
+      "explanation": "False. Al-tawakkul does not mean abandoning al-asbab (the means). The widely-cited Prophetic model is: 'Tie your camel, then rely on God.' Classical scholars including Ibn Hajar al-'Asqalani commented on this: taking precautions and seeking treatment is fulfilling tawakkul, not contradicting it. A lupus patient stopping corticosteroids without medical supervision risks a flare that can damage organs or be fatal. Faith and medicine work together, not against each other.",
+      "explanationAr": "غلط. التوكّل لا يعني ترك الأسباب. النموذج النبوي الشهير: «اعقل ناقتك ثم توكّل». علماء كلاسيكيون بما فيهم ابن حجر العسقلاني علّقوا على هذا: أخذ الاحتياطات والسعي للعلاج هو إعمال التوكّل لا تناقضه. مريضة ذئبة توقف كورتيزونها بلا إشراف طبي تخاطر بنوبة تضر الأعضاء أو تكون قاتلة. الإيمان والطب يعملان معاً لا ضد بعض.",
+      "sources": [
+        "https://sunnah.com/tirmidhi:2517",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068720/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A young woman with kidney disease joins a diet community and stops her nephrology follow-ups. Her friend says: 'At least she's trusting God now.' Six months later she's in ICU with acute kidney injury. Which combination of factors led here?",
+      "claimAr": "شابة عندها مرض كلوي بتنضمّ لمجتمع حمية وتوقف متابعتها مع طبيب الكلى. صاحبتها تقول: «على الأقل هي متوكّلة على الله دلوقتي». بعد ستة شهور هي في العناية المركزة بفشل كلوي حاد. أنهي تضافر عوامل أدّى لهذا؟",
+      "options": [
+        "Coincidence — kidney disease would have progressed anyway",
+        "Red Flag #8 (stop your medicine) + Authority Bias (unqualified source) + a false understanding of tawakkul — each amplifying the other",
+        "The medical system failed her",
+        "Diet was the only problem"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: how did the false framing of tawakkul make it harder for her to notice the danger she was in? What mental move would have protected her?",
+        "promptAr": "بكلماتك: إزاي التأطير الخاطئ للتوكّل جعل من الصعب عليها أن تلاحظ الخطر اللي كانت فيه؟ وأنهي حركة ذهنية كانت هتحميها؟"
+      },
+      "explanation": "The harm was a convergence: an unqualified person told her to stop care (Red Flag #8); she trusted that person because of authority bias amplified by religious framing; and a misunderstood tawakkul gave her permission to disengage from monitoring. Chronic kidney disease requires active management — unmonitored progression to acute injury is a known, preventable outcome. Understanding how these factors combine is the protection.",
+      "explanationAr": "الضرر كان تقاطعاً: شخص غير مؤهّل أخبرها بإيقاف الرعاية (علامة الخطر رقم 8)؛ وثقت في ذلك الشخص بسبب انحياز السلطة المعزَّز بالتأطير الديني؛ وتوكّل مساء الفهم أعطاها إذناً بالانسحاب من المتابعة. أمراض الكلى المزمنة تحتاج إدارة نشطة — التطوّر غير المُراقب لإصابة حادة نتيجة معروفة ويمكن الوقاية منها. فهم كيفية اجتماع هذه العوامل هو الحماية.",
+      "sources": [
+        "EAL-case-001:moh-eg-2026-05",
+        "https://www.who.int/news-room/fact-sheets/detail/chronic-kidney-disease"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "The authentic hadith 'Every disease has a cure' (Sahih Muslim 2204) is sometimes quoted to mean 'therefore this unverified system is the cure.' This seems like a natural extension of the hadith's meaning.",
+      "claimAr": "حديث «لكلّ داء دواء» (صحيح مسلم 2204) بيُستشهد به أحياناً بمعنى «إذن هذا النظام غير المُثبَت هو الدواء». ده بيبدو كامتداد طبيعي لمعنى الحديث.",
+      "prompt": "What would disprove that this is what the hadith means? What would you need to show to establish that 'a cure exists' and 'this specific claim is that cure' are two separate propositions?",
+      "promptAr": "إيه اللي يكذّب إن هذا هو ما يعنيه الحديث؟ إيه اللي محتاج تُثبته علشان تُثبت إن «علاج موجود» و«هذا الادعاء المحدّد هو ذلك العلاج» هما قضيتان منفصلتان؟",
+      "modelPoints": [
+        "If 'a cure exists' automatically meant 'this product is the cure,' then every product claiming to cure a disease would be valid — which contradicts basic logic and experience.",
+        "The hadith's logic (God created diseases and remedies) applies to all of medicine — including the chemotherapy the diet told her to stop. It does not single out any particular system.",
+        "A second, independent proof is always needed: clinical trials, peer-reviewed nutrition science, or medical review. Without that second step, the hadith proves only that looking for remedies is worthwhile — not that any given claim is one.",
+        "Classical scholars who commented on this hadith emphasised seeking qualified care — not accepting any untested remedy as the divinely intended cure."
+      ],
+      "modelPointsAr": [
+        "لو «علاج موجود» كانت تعني تلقائياً «هذا المنتج هو العلاج»، كان كل منتج يدّعي علاج مرض سيكون صحيحاً — وهو يتناقض مع المنطق الأساسي والتجربة.",
+        "منطق الحديث (الله خلق الأمراض والأدوية) ينطبق على كل الطب — بما فيه الكيماوي الذي قالت الحمية لها أن توقفه. لا يُفرِد أي نظام بعينه.",
+        "دليل ثانٍ مستقل مطلوب دائماً: تجارب سريرية، علم تغذية مُحكَّم، أو مراجعة طبية. بدون هذه الخطوة الثانية، الحديث يُثبت فقط إن البحث عن علاج أمر مفيد — لا إن أي ادعاء معيّن هو علاج.",
+        "العلماء الكلاسيكيون الذين علّقوا على هذا الحديث أكّدوا على طلب الرعاية المؤهّلة — لا على قبول أي علاج غير مُختبَر كعلاج مُقصود إلهياً."
+      ],
+      "sources": [
+        "https://sunnah.com/muslim:2204",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "nasiha (sincere advice) weaponisation",
+      "techniqueAr": "توظيف النصيحة (الصادقة) كسلاح",
+      "task": "Feel this from the inside. Write a short, warm, caring-sounding message telling a friend to stop a harmless, safe habit — say, drinking a glass of orange juice every morning — by framing the advice as sincere Islamic nasiha: invoke religious duty, express personal concern, and make stopping feel like the spiritually correct choice. Do NOT use a harmful scenario — orange juice is the stand-in.",
+      "taskAr": "احسّ بده من جوّه. اكتب رسالة قصيرة دافئة تبدو مهتمّة تقول فيها لصاحبك يوقّف عادة غير ضارة وآمنة — مثلاً شرب كوب عصير برتقال كل صبح — وأطّر النصيحة كنصيحة إسلامية صادقة: استحضر الواجب الديني، عبّر عن قلق شخصي، وخلّي الإيقاف يحسّس إنه الخيار الصواب روحياً. لا تستخدم سيناريو ضار — عصير البرتقال هو البديل.",
+      "tells": [
+        "Warm language and personal care are real — but they do not substitute for evidence that the advice is correct.",
+        "The framing of 'Islamic duty' attaches itself to the advice-giver's personal opinion, not to a scholarly ruling.",
+        "The receiver feels that refusing the nasiha means refusing sincere brotherhood/sisterhood — this is the emotional cost that makes the manipulation work.",
+        "No verifiable claim is made — the advice relies entirely on the relationship and the religious framing for its force.",
+        "The pattern exposes how genuine concern can be weaponised: notice when 'I care about you' is being used to bypass 'where is the evidence?'"
+      ],
+      "tellsAr": [
+        "اللغة الدافئة والاهتمام الشخصي حقيقيان — لكنهما لا يُعوِّضان عن دليل يُثبت صحة النصيحة.",
+        "إطار «الواجب الإسلامي» بيلصق نفسه برأي مُقدِّم النصيحة الشخصي، لا بحكم علمي.",
+        "المتلقّي يحسّ إن رفض النصيحة يعني رفض الأخوّة الصادقة — هذه هي التكلفة العاطفية التي تجعل التلاعب يعمل.",
+        "لا ادعاء قابل للتحقّق يُقدَّم — النصيحة تعتمد كلياً على العلاقة والتأطير الديني لقوّتها.",
+        "النمط يكشف كيف يمكن توظيف القلق الحقيقي: لاحظ متى يُستخدم «أنا مهتمّ بيك» لتجاوز سؤال «فين الدليل؟»"
+      ],
+      "sources": [
+        "https://sunnah.com/muslim:55",
+        "https://www.who.int/news-room/fact-sheets/detail/hypertension"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    }
+  ]
+}

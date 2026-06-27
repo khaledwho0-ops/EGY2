@@ -1,0 +1,73 @@
+{
+  "id": "day167_final_synthesis_stress_test",
+  "phase": 4,
+  "week": 24,
+  "day": 167,
+  "title": "Final Synthesis — The Full Stress Test",
+  "titleAr": "التوليف النهائي — اختبار الضغط الكامل",
+  "description": "One mixed gauntlet that interleaves everything: logic, evidence, biases, the religious shield, and your own calibration.",
+  "descriptionAr": "تحدٍّ مختلط واحد بيخلط كل حاجة: المنطق، والأدلة، والانحيازات، والدرع الديني، ومعايرتك أنت.",
+  "type": "integration",
+  "interleaved": true,
+  "difficulty": 5,
+  "estimatedMinutes": 18,
+  "source": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009",
+  "exercises": [
+    {
+      "id": 1, "mechanic": "calibrate", "calibrated": true,
+      "claim": "A slick post claims a single diet cures diabetes, cancer, and lupus, cites a Nobel-winning lab, quotes a Quranic word for 'pure', and says critics are paid by Big Pharma. Can ONE move you've learned dismantle most of it?",
+      "claimAr": "بوست مُتقَن بيدّعي إن حمية واحدة بتشفي السكري والسرطان والذئبة، وبيستشهد بمعمل نوبل، وبيقتبس كلمة قرآنية لـ«الطاهر»، وبيقول النقّاد مدفوعين من شركات الدوا. هل حركة واحدة اتعلّمتها تقدر تفكّك معظمه؟",
+      "options": ["No, it's too sophisticated", "Yes — 'cures unrelated diseases at once' is biologically impossible; that one red flag voids the core claim"],
+      "correctAnswer": 1,
+      "explanation": "Layered tricks can be undone at the root: no single diet cures mechanistically unrelated diseases (cancer alone is 200+ diseases). The Nobel lab is science-laundering, the Quranic word is a shield, the Big Pharma line is a conspiracy pre-emption — but the cure-all impossibility collapses the foundation they all sit on.",
+      "explanationAr": "الحِيَل المتراكمة بتتفكّ من الجذر: مفيش حمية واحدة بتشفي أمراض غير مرتبطة آلياً (السرطان وحده +200 مرض). معمل نوبل غسيل علمي، والكلمة القرآنية درع، وجملة شركات الدوا استباق مؤامرة — لكن استحالة «يشفي كل حاجة» بتهدّ الأساس اللي كلهم قاعدين عليه.",
+      "sources": ["EAL-case-001:redflag-1", "https://www.cancer.gov/about-cancer/understanding/what-is-cancer"],
+      "cognitivebiasAtPlay": "Proportionality Bias"
+    },
+    {
+      "id": 2, "mechanic": "recognize",
+      "claim": "'I tried it for two weeks and felt amazing.' On the evidence ladder, this is…",
+      "claimAr": "«جرّبته أسبوعين وحسّيت برعة». على سلّم الأدلة، ده…",
+      "options": ["A systematic review", "An RCT", "A single testimonial — the weakest rung, can't beat placebo or natural variation", "A cohort study"],
+      "correctAnswer": 2,
+      "explanation": "Bottom rung. A two-week personal feeling can't separate the diet from placebo, regression to the mean, or simply a good fortnight. Strong claims need to climb the ladder.",
+      "explanationAr": "أدنى درجة. إحساس شخصي لأسبوعين ما بيفصلش الحمية عن الوهمي أو الارتداد للمتوسط أو مجرد أسبوعين كويسين. الادعاءات القوية لازم تصعد السلّم.",
+      "sources": ["https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 3, "mechanic": "recognize",
+      "claim": "When a believer says 'critics just can't understand the deeper truth,' which technique is that?",
+      "claimAr": "لمّا مؤمن بيقول «النقّاد مش قادرين يفهموا الحقيقة الأعمق»، دي أنهي حركة؟",
+      "options": ["Honest debate", "Unfalsifiability + in-group flattery — it makes the claim immune to any disproof", "A citation", "A control group"],
+      "correctAnswer": 1,
+      "explanation": "It seals the claim from refutation (no critique counts) and flatters the in-group ('we get it, they don't'). A claim nothing could disprove has left science — recognizing this on sight is the whole point of the training.",
+      "explanationAr": "بيقفل الادعاء ضد التفنيد (ولا نقد بيتحسب) وبيجامل الجماعة («إحنا فاهمين، هما لأ»). ادعاء مفيش حاجة تكذّبه يبقى خرج من العلم — وكشف ده فوراً هو هدف التدريب كله.",
+      "sources": ["EAL-case-001:conspiracy-4"],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4, "mechanic": "inoculate",
+      "technique": "the religious-vocabulary shield",
+      "techniqueAr": "درع المفردات الدينية",
+      "task": "Final inoculation: in a weakened, clearly-fictional dose, write a one-line health pitch that borrows a sacred-sounding 'pure vs impure' framing to make a food rule feel un-questionable. Then you'll see the tells — and how the tradition itself answers it.",
+      "taskAr": "تلقيح أخير: بجرعة مخفّفة وخيالية بوضوح، اكتب سطر ترويج صحي بيستعير تأطير «طاهر ضد نجس» بطابع مقدّس علشان يخلّي قاعدة أكل تبان فوق السؤال. وبعدين هتشوف العلامات — وإزاي التقليد نفسه بيردّ عليها.",
+      "tells": [
+        "Moral/sacred words ('pure', 'impure', 'blessed') describing ordinary food — food is not a moral agent.",
+        "Disagreement is reframed as disagreeing with faith, not with a food list.",
+        "It becomes unfalsifiable: questioning = sin, so no evidence can enter.",
+        "The tradition itself refutes it: 5:87 forbids declaring lawful food forbidden; 16:116 forbids inventing halal/haram by personal opinion."
+      ],
+      "tellsAr": [
+        "كلمات أخلاقية/مقدّسة («طاهر»، «نجس»، «مبارك») بتوصف أكل عادي — الأكل مش فاعل أخلاقي.",
+        "الاعتراض بيتحوّل لاعتراض على الدين، مش على قائمة أكل.",
+        "بيبقى غير قابل للتفنيد: السؤال = ذنب، فمفيش دليل يدخل.",
+        "التقليد نفسه بيردّه: 5:87 بتنهى عن تحريم الحلال؛ 16:116 بتنهى عن اختراع حلال/حرام بالرأي."
+      ],
+      "explanation": "You've now built and disarmed the most dangerous move in the case from the inside — and seen that defending the tradition from misuse is itself part of the answer. That dual skill (spot the shield + know the verses) is exactly what was missing when this case cost lives.",
+      "explanationAr": "دلوقتي بنيت وفكّكت أخطر حركة في الحالة من جوّه — وشُفت إن الدفاع عن التقليد من سوء الاستخدام جزء من الإجابة نفسه. المهارة المزدوجة دي (تكشف الدرع + تعرف الآيات) هي بالظبط اللي كان ناقص لما الحالة دي كلّفت أرواح.",
+      "sources": ["EAL-case-001:religious-shield"],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

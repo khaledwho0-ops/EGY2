@@ -1,0 +1,266 @@
+{
+  "id": "video_forensics_day5",
+  "phase": 1,
+  "week": 6,
+  "day": 5,
+  "title": "Video Forensics: Detecting Deepfakes & Manipulated Video",
+  "titleAr": "الطب الشرعي للفيديو: اكتشاف الفيديوهات المزيفة والمُتلاعَب بها",
+  "description": "Develop skills to identify video deepfakes through 5 exercises covering face swap artifacts, lip sync detection, detection tools, Egyptian media deepfake scenarios, and contextual analysis",
+  "descriptionAr": "طوّر مهاراتك لتحديد الفيديوهات المزيفة من خلال 5 تمارين تغطي آثار مبادلة الوجه واكتشاف مزامنة الشفاه وأدوات الاكتشاف وسيناريوهات الفيديو المزيف في الإعلام المصري والتحليل السياقي",
+  "type": "investigation",
+  "difficulty": 4,
+  "estimatedMinutes": 28,
+  "bloomLevel": "analyze",
+  "source": "MIT Media Lab; Sensity AI Research; FaceForensics++ Benchmark; IEEE Transactions on Information Forensics and Security",
+  "com_b_target": "Capability/Technical",
+  "com_b_mechanism": "Video forensics skills are the final defense against the most sophisticated form of visual disinformation",
+  "exercises": [
+    {
+      "id": 1,
+      "type": "investigation-scenario",
+      "title": "Face Swap Artifacts: Visual Detection",
+      "titleAr": "آثار مبادلة الوجه: الاكتشاف البصري",
+      "scenario": "A video circulates claiming to show a prominent Egyptian businessman in a compromising situation. The video appears to be filmed in a private setting. Before running any tools, you examine the video frame by frame looking for visual artifacts. What specific visual artifacts indicate a face swap deepfake?",
+      "scenarioAr": "يتداول مقطع فيديو يدّعي تصوير رجل أعمال مصري بارز في موقف محرج. يبدو الفيديو مصوَّرًا في إعداد خاص. قبل تشغيل أي أدوات، تفحص الفيديو إطارًا إطارًا بحثًا عن الآثار البصرية. ما الآثار البصرية المحددة التي تشير إلى تزوير مبادلة الوجه؟",
+      "tools": [
+        {
+          "name": "Sensity AI",
+          "url": "sensity.ai",
+          "method": "Upload video — AI deepfake detection with per-frame analysis",
+          "free": false,
+          "note": "Free trial available; used by journalists and researchers"
+        },
+        {
+          "name": "Microsoft Video Authenticator (concept)",
+          "url": "microsoft.com/ai-video-authenticator",
+          "method": "Detects blending artifacts in deepfakes, provides per-pixel confidence",
+          "free": true,
+          "note": "Available to media organizations through Microsoft's journalism program; concept documented publicly"
+        },
+        {
+          "name": "FakeCatcher (Intel)",
+          "url": "intel.com/deepfake-detection",
+          "method": "Detects subtle blood flow changes in face using PPG (photoplethysmography)",
+          "free": false,
+          "note": "Available to media organizations; processes 72 streams simultaneously"
+        },
+        {
+          "name": "InVID WeVerify Plugin",
+          "url": "weverify.eu/invid-we-verify",
+          "method": "Browser plugin for video verification — keyframe analysis, reverse image, metadata",
+          "free": true,
+          "note": "Essential tool for journalists"
+        }
+      ],
+      "face_swap_artifacts": [
+        {
+          "artifact": "Blurry or Inconsistent Edges Around Face",
+          "artifactAr": "حواف ضبابية أو غير متسقة حول الوجه",
+          "description": "The boundary between the swapped face and the original neck/hair/background often shows blurring, double-edge artifacts, or unnatural blending. This is most visible at the hairline and around the ears.",
+          "descriptionAr": "الحد بين الوجه المبدَّل والرقبة/الشعر/الخلفية الأصلية كثيرًا ما يُظهر ضبابية أو آثار الحافة المزدوجة أو مزجًا غير طبيعي. هذا أكثر وضوحًا عند خط الشعر وحول الأذنين.",
+          "how_to_detect": "Pause on frames where the subject is moving and look at hairline edges — blurring that doesn't match the overall video quality"
+        },
+        {
+          "artifact": "Lighting Inconsistency Between Face and Body",
+          "artifactAr": "تناقض الإضاءة بين الوجه والجسم",
+          "description": "The light source direction on the swapped face often doesn't match the body. If the body lighting comes from the left, the face shadows may fall differently — indicating the face was lit in a different scene.",
+          "descriptionAr": "اتجاه مصدر الضوء على الوجه المبدَّل كثيرًا ما لا يتطابق مع الجسم. إذا جاء إضاءة الجسم من اليسار، قد تقع ظلال الوجه بشكل مختلف.",
+          "how_to_detect": "Look at shadow direction on nose/cheekbones vs. shadows on clothing/neck"
+        },
+        {
+          "artifact": "Eye Movement Abnormalities",
+          "artifactAr": "تشوهات حركة العين",
+          "description": "Eyes are particularly difficult for deepfake models — blinking frequency may be abnormally low or high, eye movement (saccades) may not follow natural patterns, and eye reflections may not match the environment.",
+          "descriptionAr": "العيون صعبة بشكل خاص لنماذج الفيديو المزيف — قد يكون تكرار الرمش منخفضًا أو مرتفعًا بشكل غير طبيعي، وقد لا تتبع حركة العين (الحركات السريعة) أنماطًا طبيعية.",
+          "how_to_detect": "Count blink frequency (normal: 15-20 blinks/minute); watch for asymmetric blinking or fixed-eye stare"
+        },
+        {
+          "artifact": "Temporal Inconsistency (Flickering)",
+          "artifactAr": "التناقض الزمني (الوميض)",
+          "description": "As the subject moves rapidly, deepfake models can fail to keep up — producing visible 'flickering' or momentary loss of face-swap quality, especially during fast head movements or when the subject turns profile.",
+          "descriptionAr": "عندما يتحرك الشخص بسرعة، يمكن أن تفشل نماذج الفيديو المزيف في مواكبة ذلك — مما ينتج 'وميضًا' مرئيًا أو فقدانًا لحظيًا لجودة مبادلة الوجه، خاصةً خلال تحركات الرأس السريعة.",
+          "how_to_detect": "Slow down video to 0.25x speed at points of rapid movement — look for momentary ghosting or resolution drop in the face region"
+        },
+        {
+          "artifact": "Skin Texture vs. Background Quality Mismatch",
+          "artifactAr": "عدم تطابق نسيج الجلد مع جودة الخلفية",
+          "description": "Many deepfakes produce skin that is too smooth — lacking natural pores, fine wrinkles, and micro-texture that cameras capture. The face skin may appear plastic while the background and body have natural texture.",
+          "descriptionAr": "تنتج العديد من الفيديوهات المزيفة جلدًا ناعمًا جدًا — يفتقر إلى المسام الطبيعية والتجاعيد الدقيقة والبنية الدقيقة التي تلتقطها الكاميرات. قد يبدو جلد الوجه بلاستيكيًا بينما الخلفية والجسم لهما نسيج طبيعي."
+        }
+      ],
+      "correctFinding": "Frame-by-frame analysis reveals: (1) Hairline shows consistent blurring and edge artifacts when the subject turns left — 47 affected frames identified; (2) Lighting on face comes from upper-right; lighting on shirt comes from left — inconsistent light source; (3) Blink frequency: 4 blinks/minute (normal: 15-20); (4) Sensity AI analysis: 96% deepfake probability with highlighted regions around eyes and hairline; (5) InVID keyframe reverse search: the body footage is from a Turkish TV show (2021). Conclusion: face swap deepfake using Turkish actor's body with businessman's face.",
+      "correctFindingAr": "يكشف التحليل إطارًا إطارًا: (1) يُظهر خط الشعر ضبابية متسقة وآثار حافة عندما يلتفت الشخص يسارًا — تم تحديد 47 إطارًا متأثرًا؛ (2) إضاءة الوجه تأتي من أعلى اليمين؛ إضاءة القميص تأتي من اليسار — مصدر ضوء غير متسق؛ (3) تكرار الرمش: 4 مرات/دقيقة (الطبيعي: 15-20)؛ (4) تحليل Sensity AI: احتمال 96% للفيديو المزيف. الخلاصة: فيديو مزيف بمبادلة الوجه.",
+      "explanation": "Face swap deepfakes are the most common video manipulation technique. Detection involves combining: (1) Visual artifact analysis (hairline, lighting, eyes); (2) AI detection tools (Sensity, Microsoft Video Authenticator); (3) Contextual verification (where did the body footage come from? who else appears in the background?). No single method is definitive — triangulation across methods provides the strongest evidence.",
+      "explanationAr": "فيديوهات مبادلة الوجه المزيفة هي تقنية التلاعب بالفيديو الأكثر شيوعًا. يتضمن الاكتشاف الجمع بين: (1) تحليل الآثار البصرية؛ (2) أدوات الكشف بالذكاء الاصطناعي؛ (3) التحقق السياقي. لا توجد طريقة واحدة حاسمة."
+    },
+    {
+      "id": 2,
+      "type": "investigation-scenario",
+      "title": "Lip Sync Mismatch Detection",
+      "titleAr": "اكتشاف عدم تزامن حركة الشفتين",
+      "scenario": "A news channel broadcasts a video showing a political figure apparently giving a speech in Arabic with alarming content. A viewer in your fact-checking team reports the lip movements look slightly 'off' compared to the audio. How do you systematically analyze lip sync accuracy to determine if this is a dubbed/AI-synchronized deepfake?",
+      "scenarioAr": "قناة إخبارية تبث مقطع فيديو يُظهر شخصية سياسية تُلقي خطابًا باللغة العربية على ما يبدو بمحتوى مثير للقلق. يُفيد أحد المشاهدين في فريق التحقق من الحقائق بأن حركات الشفاه تبدو 'خاطئة' قليلًا مقارنةً بالصوت. كيف تحلل بشكل منهجي دقة مزامنة الشفتين لتحديد ما إذا كان هذا فيديو مزيفًا مُدبلجًا أو مُزامَنًا بالذكاء الاصطناعي؟",
+      "tools": [
+        {
+          "name": "Wav2Lip Analyzer (Research)",
+          "url": "github.com/Rudrabha/Wav2Lip",
+          "method": "Python tool that measures lip-sync accuracy score",
+          "free": true,
+          "note": "Requires technical setup; used by media researchers"
+        },
+        {
+          "name": "FakeCatcher (Intel PPG)",
+          "url": "intel.com/deepfake-detection",
+          "method": "Detects subtle physiological signals (blood flow) that are not replicated in deepfakes",
+          "free": false
+        },
+        {
+          "name": "Manual Frame Analysis with VLC",
+          "url": "videolan.org/vlc",
+          "method": "Slow down to 0.1x speed and manually compare lip position with audio phonemes",
+          "free": true
+        }
+      ],
+      "lip_sync_analysis_method": {
+        "step1": "Slow the video to 0.25x speed in VLC (Playback > Speed > Slower)",
+        "step1Ar": "أبطئ الفيديو إلى 0.25x السرعة في VLC (تشغيل > سرعة > أبطأ)",
+        "step2": "Focus on specific Arabic phonemes that require distinctive mouth positions: (a) ب (ba) = bilabial stop — lips fully closed then open; (b) م (mim) = bilabial nasal — lips together during nasal sound; (c) و (waw) = bilabial approximant — lips round; (d) ف (fa) = labiodental fricative — upper teeth on lower lip",
+        "step2Ar": "ركز على أصوات عربية محددة تتطلب مواضع فم مميزة: (أ) الباء = انسداد شفوي؛ (ب) الميم = شفوي أنفي؛ (ج) الواو = شفاه دائرية؛ (د) الفاء = أسنان علوية على شفة سفلية",
+        "step3": "Check: Is the mouth position at frame N consistent with the phoneme being produced at audio time N?",
+        "step3Ar": "تحقق: هل موضع الفم عند الإطار N متسق مع الصوت المُنتَج في الوقت الصوتي N؟",
+        "step4": "Look for: (a) Lip closure for 'b/m/p' sounds when audio has these bilabials; (b) Mouth open for vowels (a, i, u); (c) Tongue-visible moments for specific Arabic sounds",
+        "step5": "Measure the delay: if audio consistently leads or lags video by >80ms, this is technically unacceptable for synchronized video"
+      ],
+      "correctFinding": "Systematic analysis identifies: (1) At 3 instances of Arabic 'م' (mim), the lips do NOT fully close (required for bilabial nasal), while the audio has a clear nasal sound; (2) At instances of ب (ba), lip closure occurs 120ms AFTER the bilabial plosive in the audio — systematic lip sync delay; (3) Intel FakeCatcher analysis: no detectable PPG (physiological blood flow) signal in the facial region — characteristic of a synthetic or composited face; (4) The original footage source (identified via background analysis) is a 2023 press conference where the speaker was discussing economic policy — completely different content from the dubbed audio. This is a lip-sync deepfake using real footage re-dubbed with fabricated speech.",
+      "correctFindingAr": "يحدد التحليل المنهجي: (1) في 3 حالات من 'م' العربية، لا تنغلق الشفاه بالكامل (مطلوب للصوت الأنفي الشفوي)، بينما الصوت له صوت أنفي واضح؛ (2) في حالات الباء، يحدث انغلاق الشفاه بعد 120 مللي ثانية من الانسداد الشفوي في الصوت؛ (3) تحليل Intel FakeCatcher: لا توجد إشارة PPG قابلة للاكتشاف في منطقة الوجه؛ (4) مصدر الفيديو الأصلي (المُعرَّف عبر تحليل الخلفية) مؤتمر صحفي عام 2023. هذا فيديو مزيف بمزامنة الشفاه.",
+      "explanation": "Lip sync deepfakes (also called 'dubbing deepfakes') replace the original audio with fabricated speech while modifying the speaker's lip movements to match. Key detection: Arabic phonemes provide excellent detection opportunities because they have distinctive, visible articulatory features. Bilabial consonants (ب، م، و، ف) require specific lip positions that AI synthesis sometimes fails to perfectly replicate.",
+      "explanationAr": "فيديوهات مزامنة الشفاه المزيفة (تُسمى أيضًا 'فيديوهات الدبلجة المزيفة') تُستبدل فيها الصوت الأصلي بكلام مختلق مع تعديل حركات شفتي المتحدث لتتطابق معه. الاكتشاف الرئيسي: أصوات اللغة العربية توفر فرص اكتشاف ممتازة لأن لها ميزات نطقية مرئية مميزة."
+    },
+    {
+      "id": 3,
+      "type": "investigation-scenario",
+      "title": "Detection Tools Workflow",
+      "titleAr": "سير عمل أدوات الاكتشاف",
+      "scenario": "Your fact-checking team receives a potentially deepfaked political video and has 30 minutes to make a preliminary assessment before the evening news cycle. You have access to: InVID WeVerify plugin, Sensity AI (trial account), and manual analysis. What is the optimal workflow to maximize verification coverage in limited time?",
+      "scenarioAr": "يتلقى فريق التحقق من الحقائق لديك فيديو سياسيًا قد يكون مزيفًا وتملك 30 دقيقة لإجراء تقييم أولي قبل دورة الأخبار المسائية. لديك إمكانية الوصول إلى: مكوّن InVID WeVerify الإضافي وSensity AI (حساب تجريبي) والتحليل اليدوي. ما هو سير العمل الأمثل لتعظيم تغطية التحقق في وقت محدود؟",
+      "tools": ["InVID WeVerify Plugin", "Sensity AI", "Google Images Reverse Search", "Yandex Images", "VLC (manual)"],
+      "optimal_workflow": {
+        "minutes_0_5": {
+          "action": "InVID WeVerify Plugin — keyframe extraction",
+          "actionAr": "مكوّن InVID WeVerify الإضافي — استخراج الإطارات الرئيسية",
+          "reason": "Fastest first step — InVID automatically extracts keyframes and runs reverse image search on each. If the video is composed of recycled footage, this identifies it immediately.",
+          "tools_used": ["InVID WeVerify Plugin"],
+          "expected_output": "List of keyframes; reverse image search results showing original sources of footage segments"
+        },
+        "minutes_5_10": {
+          "action": "Metadata analysis and source verification",
+          "actionAr": "تحليل البيانات الوصفية والتحقق من المصدر",
+          "reason": "Check video metadata (creation date, device, software). Identify the claimed source — does it match a known legitimate broadcaster? Does the account have history?",
+          "tools_used": ["ExifTool or MediaInfo"],
+          "expected_output": "Video creation date, encoding software, claimed source verification"
+        },
+        "minutes_10_20": {
+          "action": "Sensity AI deepfake detection + visual artifact analysis",
+          "actionAr": "اكتشاف الفيديو المزيف بـSensity AI + تحليل الآثار البصرية",
+          "reason": "Upload to Sensity AI while simultaneously doing manual frame-by-frame analysis in VLC at 0.25x speed. Look for hairline artifacts, lighting inconsistency, eye abnormalities.",
+          "tools_used": ["Sensity AI", "VLC"],
+          "expected_output": "AI deepfake probability score + identified visual artifacts list"
+        },
+        "minutes_20_30": {
+          "action": "Contextual verification and cross-reference",
+          "actionAr": "التحقق السياقي والمراجعة المتبادلة",
+          "reason": "Verify the claimed context: Did this event occur? Are there other news sources covering it? Contact the person's official press office if possible. Check Arabic fact-checking organizations (Misbar, Fatabyyano, Verify-sy).",
+          "tools_used": ["Google News", "AFP Fact Check", "Misbar.com"],
+          "expected_output": "Contextual verification confirming or contradicting the claimed event"
+        }
+      },
+      "correctFinding": "30-minute workflow results: (1) InVID keyframe analysis: body footage matches a 2022 BBC Arabic interview — different context entirely; (2) Metadata: video created June 10, 2026 at 03:47 (suspicious — the claimed event was midday); encoding: Handbrake (consumer re-encoding tool, not professional broadcast equipment); (3) Sensity AI: 89% deepfake probability, artifacts highlighted around left ear and neck transition; (4) Press office contact: confirms no such statement was made, provides official transcript of the actual June 10 event. Preliminary assessment: HIGH probability deepfake. Do not publish pending expert audio analysis. Issue a holding statement.",
+      "correctFindingAr": "نتائج سير العمل لمدة 30 دقيقة: (1) تحليل الإطارات الرئيسية InVID: لقطات الجسم تطابق مقابلة BBC Arabic عام 2022؛ (2) البيانات الوصفية: الفيديو تم إنشاؤه في 10 يونيو 2026 الساعة 03:47 (مشبوه)؛ (3) Sensity AI: احتمال 89% للفيديو المزيف؛ (4) اتصال مكتب الصحافة: يؤكد عدم الإدلاء بأي تصريح. التقييم الأولي: احتمال مرتفع للفيديو المزيف. لا تنشر.",
+      "explanation": "Efficient deepfake verification requires a structured workflow that maximizes evidence collection within time constraints. The 30-minute protocol combines: automated tool outputs (fastest, broadest coverage) + manual visual analysis (highest precision, slowest) + contextual verification (essential for final judgment). No tool is definitive — triangulation is the methodology.",
+      "explanationAr": "التحقق الفعّال من الفيديو المزيف يتطلب سير عمل منظمًا يُعظّم جمع الأدلة ضمن قيود الوقت. يجمع بروتوكول الـ30 دقيقة بين: مخرجات الأدوات الآلية + التحليل البصري اليدوي + التحقق السياقي. لا توجد أداة حاسمة — التثليث هو المنهجية."
+    },
+    {
+      "id": 4,
+      "type": "investigation-scenario",
+      "title": "Egyptian Media Deepfake Scenario",
+      "titleAr": "سيناريو الفيديو المزيف في الإعلام المصري",
+      "scenario": "During an Egyptian election period, a video circulates on Telegram and WhatsApp showing what appears to be a senior government official admitting to corruption in Egyptian Arabic (masri colloquial). The video is 47 seconds long. It has been forwarded 200,000 times in 4 hours. Multiple Egyptian news channels are calling your fact-checking organization to ask for your assessment. What is your complete analysis approach?",
+      "scenarioAr": "خلال فترة انتخابية مصرية، يتداول مقطع فيديو على تيليغرام وواتساب يُظهر ما يبدو أنه مسؤول حكومي رفيع يعترف بالفساد بالعربية المصرية العامية (المصري). الفيديو مدته 47 ثانية. تم توجيهه 200,000 مرة في 4 ساعات. تتصل قنوات إخبارية مصرية متعددة بمنظمة التحقق من الحقائق لديك لطلب تقييمك. ما هو نهجك التحليلي الكامل؟",
+      "analysis_layers": [
+        {
+          "layer": "1. Provenance (Source Tracing)",
+          "layerAr": "1. المصدر (تتبع المصدر)",
+          "steps": ["Which Telegram/WhatsApp account originally posted this?", "What is the account history? When was it created?", "Has this account shared other content during this election period?", "Is this account part of a coordinated inauthentic behavior network?"]
+        },
+        {
+          "layer": "2. Technical Deepfake Analysis",
+          "layerAr": "2. التحليل التقني للفيديو المزيف",
+          "steps": ["Run InVID keyframe analysis for footage source", "Sensity AI for deepfake probability", "Frame-by-frame analysis for visual artifacts", "Egyptian Arabic phoneme lip-sync analysis (focus on ب، م، ف sounds)"]
+        },
+        {
+          "layer": "3. Linguistic Analysis",
+          "layerAr": "3. التحليل اللغوي",
+          "steps": ["Is the Egyptian Arabic dialect consistent with the official's known speech patterns?", "Are there Fusha pronunciations where the official would use Egyptian colloquial?", "Does the vocabulary match the official's known speaking style?", "AI voice detection (ElevenLabs, Resemble Detect) for audio track"]
+        },
+        {
+          "layer": "4. Contextual Verification",
+          "layerAr": "4. التحقق السياقي",
+          "steps": ["Contact the official's press office for response", "Check if the claimed 'confession' event has any corroborating sources", "Review the official's known positions on the claimed topic", "Check Egyptian official news agency (MENA) archives"]
+        },
+        {
+          "layer": "5. Electoral Timing Analysis",
+          "layerAr": "5. تحليل التوقيت الانتخابي",
+          "steps": ["Note: viral disinformation accelerates during elections (Wardle & Derakhshan, 2017)", "The 4-hour viral spread pattern is consistent with coordinated amplification", "Check if similar videos targeting other candidates have emerged simultaneously"]
+        }
+      ],
+      "correctFinding": "Multi-layer analysis: (1) Telegram account created 3 days before the election — no prior posting history; (2) InVID: body footage identified as 2024 press conference (different topic); (3) Sensity AI: 94% deepfake probability; (4) ElevenLabs audio classifier: 88% AI voice synthesis; (5) Linguistic analysis: 4 instances of Fusha qaf where official always uses Egyptian glottal; (6) Press office: confirms official was in official meetings during the claimed time (verified by 3 independent press witnesses). Assessment: High confidence deepfake. Election-period political disinformation. Issued fact-check and notified Egyptian National Electoral Commission (ENEC).",
+      "correctFindingAr": "التحليل متعدد الطبقات: (1) حساب تيليغرام أُنشئ قبل 3 أيام من الانتخابات؛ (2) InVID: لقطات الجسم من مؤتمر صحفي عام 2024؛ (3) Sensity AI: احتمال 94% للفيديو المزيف؛ (4) مُصنِّف صوت ElevenLabs: 88% توليف صوت ذكاء اصطناعي؛ (5) التحليل اللغوي: 4 حالات من قاف الفصحى؛ (6) مكتب الصحافة: يؤكد أن المسؤول كان في اجتماعات رسمية خلال الوقت المدعوم. التقييم: فيديو مزيف بثقة عالية. إعلام مضلل في الفترة الانتخابية.",
+      "egyptian_context": "The Egyptian National Electoral Commission (ENEC) has established a dedicated digital monitoring unit. Media organizations can report suspected electoral deepfakes to ENEC or the Supreme Council for Media Regulation (SCMR). Contact: SCMR press office, EG-CERT for technical forensic support.",
+      "egyptian_context_ar": "أسست الهيئة الوطنية للانتخابات المصرية (ENEC) وحدة مراقبة رقمية مخصصة. يمكن لمنظمات الإعلام الإبلاغ عن الفيديوهات المزيفة الانتخابية المشتبه بها إلى ENEC أو المجلس الأعلى لتنظيم الإعلام (SCMR)."
+    },
+    {
+      "id": 5,
+      "type": "investigation-scenario",
+      "title": "Contextual Clues: Background and Behavioral Analysis",
+      "titleAr": "الأدلة السياقية: تحليل الخلفية والسلوك",
+      "scenario": "A 3-minute video purports to show a confrontation between Egyptian security forces and civilians in a specific Cairo neighborhood. You cannot identify any clear technical deepfake artifacts in the video itself. However, contextual analysis of the background and the behavior of other people in the scene may reveal whether the video is authentic. What contextual elements do you analyze?",
+      "scenarioAr": "يُزعم أن مقطع فيديو مدته 3 دقائق يُظهر مواجهة بين قوات الأمن المصرية والمدنيين في حي معين بالقاهرة. لا يمكنك تحديد أي آثار واضحة للفيديو المزيف تقنيًا في الفيديو نفسه. ومع ذلك، قد يكشف التحليل السياقي للخلفية وسلوك الأشخاص الآخرين في المشهد ما إذا كان الفيديو أصيلًا. ما العناصر السياقية التي تحللها؟",
+      "contextual_elements_to_analyze": [
+        {
+          "element": "Street Signage and Business Names",
+          "elementAr": "لافتات الشوارع وأسماء المحلات",
+          "method": "Photograph any visible street signs, shop names (in Arabic), or branded businesses. Cross-reference with Google Street View or Google Maps for the claimed Cairo neighborhood.",
+          "methodAr": "صوّر أي لافتات شوارع مرئية أو أسماء محلات (بالعربية) أو أعمال تجارية ذات علامات تجارية. قارن مع Google Street View أو خرائط Google للحي القاهري المدعوم."
+        },
+        {
+          "element": "Civilian Bystander Behavior",
+          "elementAr": "سلوك المارة المدنيين",
+          "method": "In genuine confrontation videos, background civilians typically show genuine fear responses (running, hiding, looking alarmed). Staged or re-enacted content often has background people who are unusually calm, looking at the camera, or ignoring events they would normally react to.",
+          "methodAr": "في مقاطع فيديو المواجهة الحقيقية، عادةً ما يُظهر المدنيون في الخلفية استجابات خوف حقيقية (الجري، الاختباء، النظر بقلق). المحتوى المُعدّ كثيرًا ما يضم أشخاصًا هادئين بشكل غير عادي في الخلفية."
+        },
+        {
+          "element": "Seasonal Consistency",
+          "elementAr": "الاتساق الموسمي",
+          "method": "Cairo has distinct seasonal differences. Check: Are people dressed appropriately for the claimed month? Are trees/vegetation consistent with the claimed season? Is the light angle consistent with the claimed time of day?",
+          "methodAr": "للقاهرة اختلافات موسمية مميزة. تحقق: هل الناس مرتدون بشكل مناسب للشهر المدعوم؟ هل الأشجار/النباتات متسقة مع الموسم المدعوم؟"
+        },
+        {
+          "element": "Vehicle License Plates",
+          "elementAr": "لوحات ترخيص المركبات",
+          "method": "Egyptian license plates have a specific format. Check any visible plates in the video for format consistency. License plate regions also encode governorate — does it match the claimed Cairo neighborhood?",
+          "methodAr": "للوحات الترخيص المصرية تنسيق محدد. تحقق من أي لوحات مرئية في الفيديو للتحقق من تناسق التنسيق. مناطق اللوحات تُشفّر أيضًا المحافظة — هل تتطابق مع حي القاهرة المدعوم؟"
+        },
+        {
+          "element": "Camera Technology and Filming Style",
+          "elementAr": "تقنية الكاميرا وأسلوب التصوير",
+          "method": "Authentic grassroots videos typically have: smartphone camera shake, auto-focus hunting, variable exposure as camera turns. Professional or staged content often has more stable footage, better-than-expected framing, and consistent audio levels.",
+          "methodAr": "مقاطع الفيديو الشعبية الأصيلة عادةً ما تحتوي على: اهتزاز كاميرا الهاتف الذكي وتتبع التركيز التلقائي وتعرض متغير. المحتوى المهني أو المُعدّ كثيرًا ما يكون أكثر ثباتًا."
+        }
+      ],
+      "correctFinding": "Contextual analysis reveals: (1) Street signage shows 'شارع 23 يوليو, الإسكندرية' (Corniche, Alexandria) — not Cairo as claimed; (2) Civilian bystanders are unusually calm — two people in the background are clearly looking toward the camera and then looking away; (3) One visible vehicle license plate is too blurry to read but plate color matches Alexandria-registered vehicles (not central Cairo); (4) Seasonal check: people wearing winter coats but the event is claimed to be in August; (5) Camera work is unusually stable for a 'spontaneous' confrontation video. Multiple contextual inconsistencies suggest staged content filmed in a different location and time than claimed.",
+      "correctFindingAr": "يكشف التحليل السياقي: (1) تُظهر لافتات الشوارع 'شارع 23 يوليو, الإسكندرية' (الكورنيش، الإسكندرية) — وليس القاهرة كما هو مدعوم؛ (2) المارة المدنيون هادئون بشكل غير عادي — شخصان في الخلفية ينظران بوضوح نحو الكاميرا ثم يبعدان النظر؛ (3) فحص موسمي: الناس يرتدون معاطف شتوية لكن الحدث يُدَّعى أنه في أغسطس؛ (4) عمل الكاميرا مستقر بشكل غير عادي. تناقضات سياقية متعددة تشير إلى محتوى مُعدّ.",
+      "explanation": "Contextual analysis is a powerful verification technique that does not require technical deepfake detection skills. It is particularly effective for staged (non-deepfake) video manipulation, which is far more common than technical deepfakes. Key principle: authentic videos have internal consistency across season, location, behavior, and technology. Staged content almost always has at least one contextual inconsistency.",
+      "explanationAr": "التحليل السياقي هو تقنية تحقق قوية لا تتطلب مهارات تقنية لاكتشاف الفيديو المزيف. إنه فعّال بشكل خاص للتلاعب بالفيديو المُعدّ (غير المزيف تقنيًا)، وهو أكثر شيوعًا بكثير من الفيديوهات المزيفة التقنية. المبدأ الرئيسي: مقاطع الفيديو الأصيلة تتمتع باتساق داخلي عبر الموسم والموقع والسلوك والتقنية."
+    }
+  ]
+}

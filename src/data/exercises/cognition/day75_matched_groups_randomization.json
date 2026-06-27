@@ -1,0 +1,126 @@
+{
+  "id": "day75_matched_groups_randomization",
+  "phase": 2,
+  "week": 11,
+  "day": 75,
+  "title": "Matched Groups and Randomization — Why Fairness in Science Is a Method",
+  "titleAr": "المجموعات المتطابقة والعشوائية — ليه العدل في العلم هو المنهج",
+  "description": "For a study to be fair, the groups being compared must start from the same place. Matching and randomization are the two tools that make comparison possible — not just plausible.",
+  "descriptionAr": "علشان الدراسة تبقى عادلة، المجموعات اللي بتتقارن لازم تبدأ من نفس النقطة. المطابقة والعشوائية هما الأداتان اللتان تجعلان المقارنة ممكنة — مش بس معقولة.",
+  "type": "science",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A new blood pressure drug is tested by giving it to 50 young, active patients and comparing them to 50 elderly, sedentary controls who received nothing. Blood pressure improves in the treatment group. Is this a valid result?",
+      "claimAr": "دواء ضغط جديد بيتاخد من 50 مريض صغير نشيط ومقارنتهم بـ50 مريض عجوز خامل ما أخدوش حاجة. الضغط اتحسّن في مجموعة العلاج. هل ده نتيجة صحيحة؟",
+      "options": [
+        "Yes — blood pressure improved, so the drug works",
+        "No — the groups were not comparable at the start: age, activity level, and baseline health are all confounders that make the comparison meaningless",
+        "Yes — 50 in each group is always enough",
+        "No — the study needed more patients"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Groups must be comparable before you can attribute any difference to the treatment. Here the groups differ on age, activity level, and likely on baseline blood pressure — all known predictors of cardiovascular outcomes. Any measured difference at the end could be entirely due to those starting differences, not the drug. For a comparison to be valid, both groups must be as similar as possible at the start — either through matching or, better, through randomization.",
+      "explanationAr": "المجموعات لازم تكون قابلة للمقارنة قبل ما تنسب أي فرق للعلاج. هنا المجموعات مختلفة في السن ومستوى النشاط وعلى الأرجح في الضغط الأساسي — وكلها متنبّئات معروفة للنتائج القلبية الوعائية. أي فرق مقيس في النهاية ممكن يكون بالكامل ناتج عن فروق البداية دي، لا عن الدواء. علشان المقارنة تكون صحيحة، المجموعتان لازم تكونا متشابهتين قدر الإمكان في البداية — إما من خلال المطابقة أو بشكل أفضل من خلال العشوائية.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "A supplement seller says: 'I've seen hundreds of people improve on my protocol — that's my proof it works.' A scientist asks: 'What happened to people who didn't take the protocol?' The seller has no comparison group.",
+      "claimAr": "بائع مكمّلات يقول: «أنا شفت مئات الناس تتحسّن على بروتوكولي — ده دليلي». عالِم يسأل: «إيه اللي حصل للناس اللي ما أخدتش البروتوكول؟» البائع مفيهوش مجموعة مقارنة.",
+      "options": [
+        "The hundreds of improvements are enough proof — the scientist is being unreasonably skeptical",
+        "Without a comparison group, improvement could be due to natural recovery, placebo, or the passage of time — not the supplement"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what would a comparison group tell us that the seller's 'hundreds of improvements' cannot tell us? Why is it the key missing piece?",
+        "promptAr": "بكلماتك: إيه اللي مجموعة المقارنة هتقوله لينا بينما «المئات اللي تحسّنوا» عند البائع ما يقدرش يقوله؟ ليه هي القطعة المفقودة الأساسية؟"
+      },
+      "explanation": "A comparison group tells you what would have happened anyway, without the treatment. Many conditions improve naturally over time (IBS flare-ups, back pain, fatigue episodes). If 70% of untreated people would also improve naturally, seeing 70% improvement in treated people proves nothing about the treatment. The comparison group — ideally randomized and matched — is what makes it possible to say 'this improvement is above what would have happened without it.' Without it, you have a story, not science.",
+      "explanationAr": "مجموعة المقارنة بتقولك إيه اللي كان هيحصل على أي حال، من غير العلاج. كثير من الحالات بتتحسّن طبيعياً بمرور الوقت (نوبات القولون، آلام الظهر، نوبات الإعياء). لو 70% من الناس غير المعالجين كانوا هيتحسّنوا طبيعياً كمان، رؤية 70% تحسّن في المعالجين لا يُثبت شيئاً عن العلاج. مجموعة المقارنة — مثالياً عشوائية ومطابَقة — هي اللي بتجعل ممكناً أن تقول «التحسّن ده فوق ما كان هيحصل من غيره». من غيرها عندك قصة لا علم.",
+      "sources": [
+        "EAL-case-001:redflag-3",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "A matched case-control study shows that people who ate a specific local herb weekly were 40% less likely to develop a certain digestive condition. A health blogger concludes: 'This herb protects the gut. Everyone should eat it.'",
+      "claimAr": "دراسة حالات-شواهد مطابَقة بتُري إن الناس اللي اكلوا عشبة محلية معيّنة أسبوعياً كانوا أقل عرضة 40% لتطوير حالة هضمية معيّنة. مدوّن صحي يستنتج: «العشبة دي بتحمي الأمعاء. الكل لازم ياكلها.»",
+      "prompt": "Before accepting the herb recommendation: what would have to be true if the herb is NOT protective? What unmeasured confounders could explain the 40% difference without the herb doing anything?",
+      "promptAr": "قبل ما تقبل توصية العشبة: إيه اللي لازم يكون صح لو العشبة مش بتحمي فعلاً؟ إيه العوامل المربِكة غير المقيسة اللي ممكن تفسّر الفرق الـ40% من غير ما العشبة تعمل حاجة؟",
+      "modelPoints": [
+        "People who regularly eat traditional herbs may also have a generally healthier diet — more vegetables, less processed food — that is the real protective factor.",
+        "Regular herb users may be from a particular socioeconomic background, region, or family culture that correlates with other health behaviours.",
+        "The matched study controlled for age, sex, and smoking — but not for overall dietary quality, physical activity, or other food patterns.",
+        "If the herb is truly protective, we'd expect the association to survive statistical control of diet quality — a test the blog post did not mention.",
+        "The 40% could be a genuine signal, a confounder effect, or statistical noise — a matched study cannot distinguish these without measuring and controlling for diet."
+      ],
+      "modelPointsAr": [
+        "الناس اللي بياكلوا عشب تقليدي بانتظام ممكن يكون عندهم تغذية أكثر صحة بشكل عام — خضار أكثر وأكل مصنّع أقل — وده هو العامل الوقائي الحقيقي.",
+        "مستخدمو العشب المنتظمون ممكن يكونوا من خلفية اجتماعية-اقتصادية أو منطقة أو ثقافة عائلية معيّنة ترتبط بسلوكيات صحية أخرى.",
+        "الدراسة المطابَقة ضبطت السن والجنس والتدخين — لكن مش جودة التغذية الكلية أو النشاط البدني أو أنماط الأكل الأخرى.",
+        "لو العشبة وقائية فعلاً، هنتوقع أن الارتباط يصمد مع الضبط الإحصائي لجودة التغذية — اختبار ما ذكره البوست المدوّن.",
+        "الـ40% ممكن تكون إشارة حقيقية أو أثر عامل مربِك أو ضجيج إحصائي — الدراسة المطابَقة ما تقدرش تميّز بينهم من غير قياس التغذية وضبطها."
+      ],
+      "explanation": "Considering the opposite reveals the most important rule: 'associated with' in a matched study is not the same as 'causes' until you have controlled for the most plausible confounders. The blogpost recommendation skips from correlation to causal prescription, which is exactly the leap that evidence-based practice exists to prevent.",
+      "explanationAr": "التفكير في العكس بيكشف القاعدة الأهم: «مرتبط بـ» في دراسة مطابَقة مش نفس «يسبّب» لحد ما تضبط أهم العوامل المربِكة المحتملة. توصية المدوّنة بتقفز من الارتباط إلى وصفة سببية — وده بالظبط القفزة اللي الممارسة المبنية على الدليل موجودة لمنعها.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK559106/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 4,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a randomized controlled trial with 300 participants tells us more about the average effect of a treatment than a carefully matched study with 3,000 participants.",
+      "claimAr": "صح ولا غلط: تجربة عشوائية محكَمة بـ300 مشارك بتخبرنا أكثر عن متوسّط أثر علاج من دراسة مطابَقة بعناية بـ3000 مشارك.",
+      "options": [
+        "True — randomization is generally more powerful than matching at removing confounding, even with fewer participants",
+        "False — larger studies are always more reliable",
+        "True — but only if the RCT uses a placebo",
+        "False — matching on all variables is equivalent to randomization"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This is often true, especially regarding internal validity (whether the treatment effect is real). Randomization is the only method that distributes both measured and unmeasured confounders across groups. A 300-person RCT, if properly conducted, eliminates the threat of lurking variables that a 3,000-person matched study cannot eliminate. However, the larger matched study may have greater statistical power to detect smaller effects — both designs have a role. Calibration: if you found this counterintuitive ('bigger must be better'), that intuition conflates statistical precision with causal validity — different things.",
+      "explanationAr": "ده كثيراً صحيح، خاصةً فيما يخص الصحة الداخلية (هل أثر العلاج حقيقي). العشوائية هي الطريقة الوحيدة اللي بتوزّع العوامل المربِكة المقيسة وغير المقيسة على المجموعات. تجربة RCT بـ300 شخص، لو نُفِّذت صح، بتزيل خطر المتغيّرات الخفيّة اللي الدراسة المطابَقة بـ3000 شخص ما تقدرش تزيلها. لكن الدراسة المطابَقة الأكبر ممكن يكون لها قوة إحصائية أعلى لاكتشاف آثار أصغر. المعايرة: لو لقيتها غير بديهية («أكبر لازم أفضل»)، الحدس ده بيخلط الدقة الإحصائية بالصحة السببية — حاجتان مختلفتان.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 70,
+      "claim": "Using what you learned about randomization and blinding (day 70): a supplement trial randomly assigned 200 people to take the supplement or a placebo. Neither participants nor outcome assessors knew which they received. The supplement group improved by 15% more than placebo. What two design features make this 15% more credible than the seller's '80% of my believers improved'?",
+      "claimAr": "باستخدام ما تعلّمته عن العشوائية والتعمية (يوم 70): تجربة مكمّل وزّعت 200 شخص عشوائياً على المكمّل أو وهم. لا المشاركون ولا مُقيِّمو النتائج عرفوا مَن أخذ أيّاً. مجموعة المكمّل تحسّنت بنسبة 15% أكثر من الوهم. أنهي ميزتَي تصميم بتجعل الـ15% ده أكثر مصداقية من «80% من مؤمنيّ تحسّنوا» عند البائع؟",
+      "options": [
+        "The trial was more expensive and longer",
+        "Randomization removes selection bias (both groups start equal) and double-blinding removes information bias (neither group knows which treatment they received, so improvement reflects the treatment, not expectation)",
+        "The 200 participants are younger and healthier",
+        "The seller used social media while the trial used a lab"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Spaced retrieval of day 70: randomization ensures both groups are comparable at baseline (distributing known and unknown confounders equally), and double-blinding ensures the outcome measurement is not contaminated by expectation or observer bias. Together they allow the 15% difference to be attributed specifically to the supplement — not to group differences at baseline or to the human tendency to improve when you believe you are being treated.",
+      "explanationAr": "استرجاع مُتباعِد ليوم 70: العشوائية بتضمن إن المجموعتين قابلتان للمقارنة في البداية (توزيع العوامل المربِكة المعروفة والمجهولة بالتساوي)، ومزدوجة التعمية بتضمن إن قياس النتيجة مش ملوّث بالتوقّع أو انحياز المراقِب. معاً بيسمحا بنسب الفرق الـ15% تحديداً للمكمّل — مش لفروق المجموعة في البداية أو للميل البشري للتحسّن لمّا تصدّق إنك بتتعالج.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+        "EAL-case-001:redflag-3"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    }
+  ]
+}

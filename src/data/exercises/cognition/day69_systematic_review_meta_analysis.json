@@ -1,0 +1,100 @@
+{
+  "id": "day69_systematic_review_meta_analysis",
+  "phase": 2,
+  "week": 10,
+  "day": 69,
+  "title": "The View From the Top — Systematic Reviews & Meta-Analysis",
+  "titleAr": "المنظر من القمة — المراجعات المنهجية والتحليل البَعدي",
+  "description": "Instead of trusting one study, a team gathers ALL the good studies, pools them, and lets peers worldwide attack the result. This is the top of the ladder — and the opposite of cherry-picking.",
+  "descriptionAr": "بدل ما نثق في دراسة واحدة، فريق بيجمع كل الدراسات الكويسة، بيدمجها، وبيخلّي خبراء العالم يهاجموا النتيجة. دي قمة السلّم — وعكس انتقاء ما يحلو لك.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "Dr. Ismail's hunch about the rash has now been studied by many teams worldwide. Instead of picking his favourite study, a group gathers EVERY good study on the question, pools the data, and analyses them together. What is this?",
+      "claimAr": "حدس د. إسماعيل عن الطفح دُرِس دلوقتي من فِرَق كتير حول العالم. بدل ما يختار دراسته المفضّلة، مجموعة بتجمع كل دراسة كويسة عن السؤال، بتدمج البيانات، وبتحلّلها سوا. ده إيه؟",
+      "options": [
+        "A single case report",
+        "A systematic review and meta-analysis: a structured gathering of all relevant studies, statistically combined — the top of the evidence ladder",
+        "An online opinion poll",
+        "A cross-sectional snapshot"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A systematic review searches for every relevant study using a pre-declared method, judges their quality, and a meta-analysis statistically combines their results into one bigger, more reliable picture. Because it pools many studies and is critiqued by experts around the world, it sits at the very top of the evidence ladder. The key word is systematic: you commit to including all the good evidence, not just the pieces you like.",
+      "explanationAr": "المراجعة المنهجية بتدوّر على كل دراسة ذات صلة بطريقة معلَنة مقدّماً، بتحكم على جودتها، والتحليل البَعدي بيدمج نتايجها إحصائياً في صورة واحدة أكبر وأكثر موثوقية. ولأنها بتجمع دراسات كتير وبيراجعها خبراء حول العالم، فهي في أعلى قمة سلّم الأدلة. الكلمة المفتاحية «منهجية»: إنت بتلتزم بإدراج كل الدليل الكويس، مش بس القطع اللي بتعجبك.",
+      "sources": ["https://www.cochranelibrary.com/about/about-cochrane-reviews"],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "The fictional quack 'Dr. K' links only the three studies that support his herb and ignores the twenty that found nothing. The «نظام الطيبات» originator did the same with anything that looked supportive. What is this move — and how does a systematic review defeat it?",
+      "claimAr": "الدجّال الخيالي «د. ك» بيحطّ روابط لتلات دراسات بس بتأيّد عشبه ويتجاهل العشرين اللي ما لقتش حاجة. وصاحب «نظام الطيبات» عمل نفس الحاجة مع أي حاجة بانت مؤيِّدة. الحركة دي إيه — والمراجعة المنهجية بتهزمها إزاي؟",
+      "options": [
+        "It's fair research; a systematic review does the same",
+        "It's cherry-picking; a systematic review defeats it by committing in advance to include ALL qualifying studies, so you can't just keep the flattering ones"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does committing to a search method BEFORE looking at the results change everything about whether cherry-picking is possible?",
+        "promptAr": "بكلماتك: ليه الالتزام بمنهج بحث قبل ما تبصّ في النتايج بيغيّر كل حاجة في هل انتقاء ما يحلو لك ممكن؟"
+      },
+      "explanation": "Showing only the studies that agree with you is cherry-picking — the most common trick of pseudoscience. A systematic review is the direct antidote: it declares its search and inclusion rules before looking, then must include every study that qualifies, including the unflattering ones. Once the rules are declared publicly, breaking them is visible fraud — any reader can check whether all qualifying studies were included. That pre-commitment is exactly what removes the freedom to keep only the evidence you like. Naming this logic yourself makes it harder to miss in the wild.",
+      "explanationAr": "إنك توري الدراسات اللي بتوافقك بس ده «انتقاء ما يحلو لك» — أشهر حيلة في العلم الزائف. المراجعة المنهجية هي الترياق المباشر: بتعلن قواعد بحثها وإدراجها قبل ما تبصّ، وبعدين لازم تدرج كل دراسة مؤهَّلة، بما فيها غير المؤيِّدة. بمجرد ما تتعلن القواعد علناً، كسرها يبقى تلاعب ظاهر — أي قارئ يقدر يتحقّق هل كل الدراسات المؤهَّلة اتدرجت. الالتزام المسبق ده هو بالظبط اللي بيشيل حرية إنك تحتفظ بالدليل اللي بيعجبك بس. إنك تسمّي المنطق ده بنفسك بيخلّيه أصعب يفوتك في الواقع.",
+      "sources": ["EAL-case-001:ems-2026-03", "https://www.cochranelibrary.com/about/about-cochrane-reviews"],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a meta-analysis is only as good as the studies inside it — if it pools many weak, biased studies, the polished result can still be misleading. Before checking: how confident are you that a 'meta-analysis' label automatically guarantees trustworthy results?",
+      "claimAr": "صح ولا غلط: التحليل البَعدي قيمته من قيمة الدراسات اللي جوّاه — لو دمج دراسات ضعيفة ومنحازة كتير، النتيجة المصقولة ممكن تفضل مضلِّلة. قبل ما تتأكد: قد إيه واثق إن لافتة «تحليل بَعدي» بتضمن تلقائياً نتايج موثوقة؟",
+      "correctAnswer": true,
+      "myth_en": "Any meta-analysis automatically gives the truth.",
+      "myth_ar": "أي تحليل بَعدي بيدّي الحقيقة تلقائياً.",
+      "explanation": "True — and this is the mature, non-naive view. 'Garbage in, garbage out' applies: if a meta-analysis pools weak or biased studies, its tidy-looking number inherits all their flaws. That's why good reviews don't just average everything; they rate each study's quality and weight them accordingly. So the skill isn't to bow to the words 'meta-analysis', but to ask: which studies went in, how were they judged, and who was allowed to critique the result? Calibration note: if you felt confident in the label, notice that authority-to-the-label is itself a bias — even the top of the ladder must earn your trust.",
+      "explanationAr": "صح — ودي النظرة الناضجة غير الساذجة. «قمامة تدخل، قمامة تطلع» بتنطبق: لو التحليل البَعدي دمج دراسات ضعيفة أو منحازة، رقمه المرتّب بيورث كل عيوبها. علشان كده المراجعات الكويسة ما بتوسّطش كل حاجة وخلاص؛ بتقيّم جودة كل دراسة وبتوزن بناءً عليها. فالمهارة مش إنك تنحني لكلمة «تحليل بَعدي»، لكن تسأل: أنهي دراسات دخلت، اتحكم عليها إزاي، ومين اتسمح له ينقد النتيجة؟ ملاحظة معايرة: لو حسيت بثقة في اللافتة، لاحظ إن الثقة في السلطة-اللافتة هي نفسها انحياز — حتى قمة السلّم لازم تكسب ثقتك.",
+      "sources": ["https://www.cochranelibrary.com/about/about-cochrane-reviews"],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'Scientists disagree on everything. Even their systematic reviews contradict each other. So the science changes all the time — therefore, your grandmother's traditional remedy is just as valid as any study.'",
+      "claimAr": "فكّك الحُجّة دي: «العلماء بيختلفوا على كل حاجة. حتى مراجعاتهم المنهجية بتتناقض مع بعض. فالعلم بيتغيّر طول الوقت — يبقى علاج جدّتك التقليدي صح زيه زي أي دراسة».",
+      "parts": [
+        { "text": "Traditional remedies are as valid as systematic reviews.", "textAr": "العلاجات التقليدية صحيحة زيها زي المراجعات المنهجية.", "role": "conclusion" },
+        { "text": "Scientists sometimes disagree, and some systematic reviews on the same topic reach different conclusions.", "textAr": "العلماء أحياناً بيختلفوا، وبعض المراجعات المنهجية على نفس الموضوع بتوصل لنتايج مختلفة.", "role": "premise" },
+        { "text": "(Unstated) If experts ever disagree, all claims on the topic become equally valid.", "textAr": "(غير مذكور) لو الخبراء اختلفوا في أي وقت، كل الادعاءات على الموضوع بتبقى صحيحة بالتساوي.", "role": "assumption" },
+        { "text": "The science changes all the time.", "textAr": "العلم بيتغيّر طول الوقت.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION is a classic false equivalence: that disagreement among experts erases the entire quality ladder. But disagreement between two systematic reviews (often on different sub-questions, populations, or study quality thresholds) is nothing like the gap between a Cochrane review and a grandmother's anecdote. The 'science changes' observation is IRRELEVANT to the conclusion: that science updates when better evidence arrives is its strength, not a weakness that puts untested remedies on equal footing. Spotting the assumption is the move.",
+      "explanationAr": "الافتراض الخفي هو تسوية كاذبة كلاسيكية: إن الخلاف بين الخبراء بيمحي سلّم الجودة كله. لكن الخلاف بين مراجعتين منهجيتين (غالباً على أسئلة فرعية مختلفة، أو مجتمعات، أو عتبات جودة دراسة) مش زي الفجوة بين مراجعة كوكرين وحكاية جدّة. ملاحظة «العلم بيتغيّر» غير ذات صلة بالنتيجة: إن العلم بيتحدّث لمّا يجي دليل أحسن ده قوّته، مش ضعف بيحطّ العلاجات غير المختبَرة على قدم المساواة. كشف الافتراض هو الحركة.",
+      "sources": ["https://www.cochranelibrary.com/about/about-cochrane-reviews"],
+      "cognitivebiasAtPlay": "False Equivalence"
+    },
+    {
+      "id": 5,
+      "mechanic": "retrieve",
+      "retrievalOf": 65,
+      "claim": "Back to day 65: the «نظام الطيبات» community collected hundreds of success testimonials — essentially a very large case series. Why does a systematic review of proper controlled studies completely replace, rather than just complement, that collection of testimonials?",
+      "claimAr": "رجعنا ليوم 65: مجتمع «نظام الطيبات» جمع مئات شهادات النجاح — بشكل أساسي سلسلة حالات كبيرة جداً. ليه المراجعة المنهجية للدراسات المضبوطة الصحيحة بتحلّ محلّ مجموعة الشهادات دي بالكامل، بدل ما تكمّلها بس؟",
+      "options": [
+        "It doesn't replace them — more data is always better regardless of quality",
+        "Because a systematic review pools studies that each removed a specific bias (selection, recall, placebo) that testimonials never remove — so the two are not on the same evidence ladder at all",
+        "Because testimonials are always false",
+        "Because systematic reviews are longer documents"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A pile of testimonials, no matter how large, inherits all the structural problems of case series: no comparison group, no blinding, survivorship bias, recall bias. A systematic review pools studies that each structurally addressed those problems. They don't occupy adjacent rungs of the same ladder — they occupy different structures altogether. Adding testimonials to a systematic review doesn't make it stronger; the testimonials are already made redundant by what the controlled studies measured. Remembering the structural gap is how you resist the intuitive pull of 'but so many people say it worked'.",
+      "explanationAr": "كومة من الشهادات، مهما كانت كبيرة، بتورث كل المشاكل الهيكلية لسلاسل الحالات: لا مجموعة مقارنة، لا تعمية، انحياز البقاء، انحياز التذكّر. المراجعة المنهجية بتجمع دراسات كل منها عالجت هيكلياً المشاكل دي. مش بيحتلّوا درجات متجاورة في نفس السلّم — بيحتلّوا هياكل مختلفة تماماً. إضافة الشهادات لمراجعة منهجية ما بيقوّيهاش؛ الشهادات بقت بالفعل زائدة بما قاسته الدراسات المضبوطة. إنك تفتكر الفجوة الهيكلية هو إزاي بتقاوم الجذب البديهي لـ«لكن كذا ناس قالت إنها نفعت».",
+      "sources": ["EAL-case-001:ems-2026-03", "https://www.cochranelibrary.com/about/about-cochrane-reviews"],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    }
+  ]
+}

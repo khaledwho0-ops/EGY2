@@ -1,0 +1,152 @@
+{
+  "id": "day41_appeal_to_emotion_begging",
+  "phase": 1,
+  "week": 6,
+  "day": 41,
+  "title": "Appeal to Emotion & Begging the Question",
+  "titleAr": "مغالطة العاطفة ومصادرة المطلوب",
+  "description": "Emotion is not evidence — and assuming your conclusion inside your premise is not argument. Two fallacies that feel compelling but prove nothing.",
+  "descriptionAr": "العاطفة مش دليل — وافتراض نتيجتك داخل مقدّمتك مش حجة. مغالطتان تبدوان مقنعتين لكن لا تُثبتان شيئاً.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A promoter shares a video of a crying mother saying: \"I lost my child to conventional medicine. Please, don't let them take yours too — try the natural diet.\" This story is real and painful. Is it evidence that the diet works?",
+      "claimAr": "مروّج بيشارك فيديو لأمّ باكية بتقول: «خسرت ابني بسبب الطب التقليدي. رجاءً، ما خلّوهمش ياخدوا ولدكم — جرّبوا الحمية الطبيعية.» القصة دي حقيقية ومؤلمة. هل هي دليل على إن الحمية بتنفع؟",
+      "options": [
+        "Yes — her pain is genuine proof of the diet's value",
+        "No — her grief is real and deserves respect, but grief is not clinical evidence; the diet's effectiveness requires its own evidence separate from this story",
+        "Yes — ignoring her experience is cruel",
+        "Maybe — emotional stories count as weak evidence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is an appeal to emotion. The mother's grief is real, her loss is real, and her pain deserves deep empathy — but these facts say nothing about whether the diet would have helped her child, or whether it helps anyone. Confusing 'this is emotionally compelling' with 'this is true' is exactly the move. The question of whether a treatment works must be answered by evidence about the treatment, not by the feelings it generates.",
+      "explanationAr": "دي مغالطة عاطفة. حزن الأمّ حقيقي، خسارتها حقيقية، وألمها يستحق تعاطفاً عميقاً — لكن هذه الحقائق لا تقول شيئاً عن إذا كانت الحمية ستساعد طفلها، أو إذا كانت تساعد أي أحد. الخلط بين «ده مؤثّر عاطفياً» و«ده صحيح» هو الحركة بالضبط. سؤال إذا كان علاج ما بينفع لازم يُجاب بأدلة عن العلاج، مش بالمشاعر اللي بيولّدها.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A promoter of the viral Taybat diet system says: \"Thousands of families have saved themselves from toxic medicine — if you truly love your children, you'll choose the pure path.\" Does this contain any logical argument at all?",
+      "claimAr": "مروّج نظام الطيبات بيقول: «آلاف الأسر خلّصت نفسها من الدواء السام — لو بتحبّ أولادك حقاً، هتختار المسار الطاهر.» هل ده يحتوي أي حجة منطقية؟",
+      "options": [
+        "Yes — it references thousands of families as evidence",
+        "No — it uses fear, guilt, and bandwagon instead of data; none of these establish whether the diet is safe or effective"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Three emotional levers in one sentence: (1) fear — 'toxic medicine' triggers anxiety without evidence of toxicity; (2) guilt/love — 'if you truly love' implies a parent who disagrees doesn't love their child; (3) bandwagon — 'thousands of families' gives social proof. None of these establish that the diet is safe or effective. Spotting all three and asking 'but where is the actual evidence?' is the defence. Calibrate: how certain were you before reading the explanation?",
+      "explanationAr": "ثلاثة روافع عاطفية في جملة واحدة: (1) الخوف — «الدواء السام» يُثير القلق بدون دليل على السُمية؛ (2) الذنب/الحب — «لو بتحبّ حقاً» يُلمح إلى أن والداً يختلف لا يحبّ طفله؛ (3) أثر العربة — «آلاف الأسر» يُعطي دليلاً اجتماعياً. لا أيٌّ من هذه يُثبت أن الحمية آمنة أو فعّالة. اكتشاف الثلاثة كلهم والسؤال «لكن أين الدليل الفعلي؟» هو الدفاع.",
+      "sources": [
+        "EAL-case-001:redflag-4",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Availability Heuristic"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A friend argues: \"The Taybat diet must be healthy — it's called the 'Taybat' system, which means pure and good, so it clearly promotes what is pure and good.\" This is begging the question (circular reasoning).",
+      "claimAr": "صديق بيحتجّ: «نظام الطيبات لازم يكون صحي — اسمه نظام الطيبات، يعني طاهر وجيّد، يبقى بوضوح بيروّج للطاهر والجيّد.» ده مصادرة المطلوب (التفكير الدائري).",
+      "options": [
+        "True — the name confirms its goodness",
+        "False — the name was chosen by the promoter and does not independently verify the diet's properties"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why can't a product's name serve as proof of what it does?",
+        "promptAr": "بكلماتك: ليه اسم المنتج ما ينفعش يبقى دليل على إيه بيعمل؟"
+      },
+      "explanation": "This is begging the question (circular reasoning): the argument assumes the diet is good because its name means 'good.' But the name was chosen by its promoter — it does not independently verify the diet's properties. The premise and conclusion are the same thing dressed differently. The question at issue — 'is this diet actually good for you?' — cannot be answered by pointing to the name. Names are marketing; evidence is separate.",
+      "explanationAr": "دي مصادرة المطلوب (التفكير الدائري): الحجة تفترض أن الحمية جيّدة لأن اسمها يعني «جيّد». لكن الاسم اختاره مروّجه — وهو لا يتحقّق من خصائص الحمية بشكل مستقل. المقدّمة والخلاصة هما نفس الشيء بملابس مختلفة. السؤال محلّ الخلاف — «هل هذه الحمية مفيدة لك فعلاً؟» — لا يمكن الإجابة عليه بالإشارة إلى الاسم. الأسماء تسويق؛ الأدلة منفصلة.",
+      "sources": [
+        "EAL-case-001:redflag-6",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "When a treatment story is deeply moving — a real patient, real suffering, real recovery — it feels like strong evidence that the treatment worked.",
+      "claimAr": "لمّا قصة علاج بتكون مؤثّرة جداً — مريض حقيقي، معاناة حقيقية، شفاء حقيقي — بتحسّ إنها دليل قوي إن العلاج نجح.",
+      "prompt": "What would have to be true for this emotional story to NOT be reliable evidence? What other explanations could account for the patient's improvement?",
+      "promptAr": "إيه اللي لازم يكون صح علشان القصة العاطفية دي ما تبقاش دليل موثوق؟ وإيه التفسيرات التانية اللي ممكن تفسّر تحسّن المريض؟",
+      "modelPoints": [
+        "Natural remission — many conditions improve on their own; without a control group we cannot separate the treatment from time.",
+        "Placebo effect — genuine physiological improvement triggered by the belief that treatment is working, not by the treatment itself.",
+        "Regression to the mean — people seek treatment when symptoms are worst; they often improve regardless of what they do next.",
+        "Other simultaneous changes — the patient may have also changed diet, sleep, or stress, making attribution impossible.",
+        "The emotional intensity of the story is an appeal to emotion — it activates our empathy and suppresses our critical faculty, which is a feature of the rhetoric, not evidence of the treatment's effectiveness."
+      ],
+      "modelPointsAr": [
+        "مغفرة طبيعية — حالات كتير بتتحسّن من تلقاء نفسها؛ بدون مجموعة ضابطة ما ينفعش نفصل العلاج عن عامل الوقت.",
+        "تأثير الوهم — تحسّن فسيولوجي حقيقي ناتج عن الاعتقاد إن العلاج بيشتغل، مش عن العلاج نفسه.",
+        "الرجوع للمتوسط — الناس بتطلب العلاج وهي في أسوأ حالاتها؛ كثيراً ما تتحسّن بصرف النظر عن اللي بتعمله بعد كده.",
+        "تغييرات متزامنة تانية — المريض ممكن يكون غيّر أكله أو نومه أو ضغطه في نفس الوقت، وده بيخلي تحديد السبب مستحيل.",
+        "شدّة القصة العاطفية هي نداء عاطفي — بينشّط تعاطفنا ويكبت ملكتنا النقدية، وده سمة في الخطاب مش دليل على فعالية العلاج."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://journals.sagepub.com/doi/10.1177/0963721417718261"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"We know the diet cures diabetes because the people who were cured all followed the diet — and anyone who says otherwise is just paid by pharma.\"",
+      "claimAr": "فكّك الحُجّة دي: «نحن نعلم أن الحمية تشفي السكري لأن الأشخاص الذين شُفوا كلّهم اتّبعوا الحمية — وأي حد بيقول غير كده مدفوع من الدواء».",
+      "parts": [
+        { "text": "The diet cures diabetes.", "textAr": "الحمية بتشفي السكري.", "role": "conclusion" },
+        { "text": "The people who were cured all followed the diet.", "textAr": "الأشخاص الذين شُفوا كلّهم اتّبعوا الحمية.", "role": "premise" },
+        { "text": "(Unstated) Following a treatment and improving proves the treatment caused the improvement.", "textAr": "(غير مذكور) اتّباع علاج والتحسّن يثبت إن العلاج هو السبب.", "role": "assumption" },
+        { "text": "Anyone who disagrees is paid by pharma.", "textAr": "أي حد بيعارض مدفوع من الدواء.", "role": "irrelevant" }
+      ],
+      "explanation": "Mapping the argument exposes two weaknesses: (1) the hidden ASSUMPTION that correlation proves causation — people may have improved due to natural remission, placebo, or other changes; no control group means we cannot attribute improvement to the diet. (2) the 'paid by pharma' line is IRRELEVANT ad hominem — it attacks the critic's motive, not the evidence. Once you see the parts, the conclusion no longer follows.",
+      "explanationAr": "تفكيك الحُجّة يكشف نقطتَي ضعف: (1) الافتراض الخفي إن الترابط يثبت السببية — الناس ممكن تتحسّن بسبب مغفرة طبيعية أو وهم أو تغييرات تانية؛ بلا مجموعة ضابطة ما نقدرش ننسب التحسّن للحمية. (2) جملة «مدفوع من الدواء» شخصنة غير ذات صلة — بتهاجم دوافع الناقد مش الدليل. أول ما تشوف الأجزاء، الخلاصة ما بتلزمش.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 6,
+      "mechanic": "inoculate",
+      "technique": "appeal to emotion replacing evidence",
+      "techniqueAr": "النداء العاطفي بديلاً عن الأدلة",
+      "task": "Write a short post promoting a harmless claim — say, 'drink more water' — but use ONLY emotional levers (fear, love, guilt, social proof). No data, no studies. Make it feel urgent and caring.",
+      "taskAr": "اكتب بوست قصير يروّج لادعاء غير ضار — زي «اشرب مية أكتر» — بس استخدم روافع عاطفية بس (خوف، حب، ذنب، دليل اجتماعي). بلا بيانات ولا دراسات. خلّيه يحسّ عاجل ومهتم.",
+      "tells": [
+        "Zero data — the entire post runs on feeling, not measurement.",
+        "Guilt framing — implies that someone who disagrees doesn't love or care enough.",
+        "Fear language — exaggerates risk without citing any source.",
+        "Social proof without a denominator — 'thousands' or 'everyone' without context.",
+        "The urgency itself is manufactured: no emergency exists, but the tone says otherwise."
+      ],
+      "tellsAr": [
+        "صفر بيانات — البوست كله بيشتغل على الإحساس مش القياس.",
+        "إطار الذنب — بيلمّح إن اللي يعارض ما بيحبّش أو ما يهتمش بما فيه الكفاية.",
+        "لغة الخوف — بتضخّم الخطر بدون ذكر أي مصدر.",
+        "دليل اجتماعي بدون مقام — «آلاف» أو «الكل» بدون سياق.",
+        "الإلحاح نفسه مصطنع: ما في حالة طوارئ، لكن النبرة بتقول غير كده."
+      ],
+      "explanation": "Building the manipulation in a weakened, harmless dose is active inoculation. When you construct an emotional appeal yourself, you start to see its skeleton — the moves that activate feeling while bypassing evidence. Now you can recognise the same skeleton in health claims, diet systems, and any persuasion that substitutes emotion for data.",
+      "explanationAr": "بناء التلاعب بجرعة مخفّفة غير ضارة هو التلقيح النشط. لمّا تبني النداء العاطفي بنفسك، بتبدأ تشوف هيكله — الحركات اللي بتنشّط الشعور وبتتجاوز الأدلة. دلوقتي تقدر تتعرّف على نفس الهيكل في ادعاءات الصحة وأنظمة الحمية وأي إقناع بيستبدل العاطفة بالبيانات.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

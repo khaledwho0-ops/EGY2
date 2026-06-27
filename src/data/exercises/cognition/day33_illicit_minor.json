@@ -1,0 +1,119 @@
+{
+  "id": "day33_illicit_minor",
+  "phase": 1,
+  "week": 5,
+  "day": 33,
+  "title": "The Illicit Minor",
+  "titleAr": "إساءة استغراق الحدّ الأصغر",
+  "description": "\"This diet is natural. All natural things are safe... so ALL safe things are this diet\"? Today: why a conclusion can't claim more about a group than the premises gave.",
+  "descriptionAr": "«الحمية دي طبيعية. وكل الطبيعي آمن... يبقى كل الآمن هو الحمية دي»؟ النهاردة: ليه النتيجة ما تقدرش تدّعي عن مجموعة أكتر مما إدّته المُقدّمات.",
+  "type": "logic",
+  "difficulty": 4,
+  "estimatedMinutes": 15,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A promoter argues: \"My followers got better. My followers used my system. Therefore EVERYONE who gets better is using my system\" — and uses that to claim every recovery in the country as proof. Where is the slip?",
+      "claimAr": "مُروّج بيقول: «أتباعي اتحسّنوا. أتباعي استخدموا نظامي. إذن كل اللي بيتحسّن بيستخدم نظامي» — وبيستخدم ده علشان يدّعي كل تعافٍ في البلد كدليل. الزلّة فين؟",
+      "options": [
+        "It's valid — every recovery counts for him",
+        "Illicit minor: from 'my followers got better' you can only talk about your followers, not leap to a claim about ALL people who got better; most recoveries have nothing to do with him",
+        "He's right that he heals everyone",
+        "Recovery is impossible without a system"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The conclusion says something about 'everyone who got better' — a whole group — but the premises only ever described 'his followers.' Stretching the conclusion to cover a bigger group than the premises distributed is the illicit minor. Most people in Egypt who recover do so through prescribed medicine, surgery, time, or the body's own healing — entirely without him. Claiming the country's recoveries as his evidence is logically helping himself to a group he was never given.",
+      "explanationAr": "النتيجة بتقول حاجة عن «كل اللي اتحسّن» — مجموعة كاملة — بينما المُقدّمات وصفت بس «أتباعه». مدّ النتيجة لتغطّي مجموعة أكبر مما استغرقت المُقدّمات هو «إساءة استغراق الحدّ الأصغر». أغلب الناس في مصر اللي بيتعافوا بيحصل ده بدوا موصوف أو جراحة أو وقت أو شفاء الجسم نفسه — من غيره خالص. ادعاء تعافي البلد كدليل له هو منطقياً إنه بياخد لنفسه مجموعة ما اتعطّلهاش.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-3"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: \"All my satisfied clients trust me. All my satisfied clients are Egyptians. Therefore ALL Egyptians trust me\" is valid reasoning.",
+      "claimAr": "صح ولا غلط: «كل عملائي الراضيين بيثقوا فيّ. كل عملائي الراضيين مصريين. إذن كل المصريين بيثقوا فيّ» استدلال صحيح.",
+      "correctAnswer": false,
+      "explanation": "False — this is a textbook illicit minor. The premises only describe his satisfied clients (a small group); the conclusion suddenly speaks for ALL Egyptians. A subgroup's feeling cannot be stretched to the whole population — the millions who never heard of him, or who actively distrust him, were never part of the premises. This is the engine behind 'everyone is switching to this' marketing: it quietly upgrades 'some fans' into 'everyone,' and popularity-by-illusion follows.",
+      "explanationAr": "غلط — دي «إساءة استغراق الحدّ الأصغر» نموذجية. المُقدّمات بتوصف بس عملاءه الراضيين (مجموعة صغيرة)؛ والنتيجة فجأة بتتكلّم باسم كل المصريين. إحساس مجموعة صغيرة ما يتمدّش على كل الناس — الملايين اللي عمرهم ما سمعوا عنه، أو اللي بيشكّوا فيه، ماكانوش جزء من المُقدّمات. دي الماكينة ورا تسويق «الكل بيتحوّل للحاجة دي»: بيرقّي بهدوء «بعض المعجبين» لـ«الكل»، وبعدين تيجي شعبية الوهم.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.who.int/teams/risk-communication/infodemic-management"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A relative reasons: \"The people who defended the system online are sincere. Those defenders are part of our community. So OUR WHOLE community defends the system and you'd be betraying us to doubt it.\" Why is the jump to 'whole community' illicit?",
+      "claimAr": "قريب بيقول: «الناس اللي دافعوا عن النظام أونلاين مخلصين. والمدافعين دول جزء من مجتمعنا. يبقى مجتمعنا كله بيدافع عن النظام وهتبقى خاين لو شكّيت». ليه القفزة لـ«المجتمع كله» غير مشروعة؟",
+      "options": [
+        "It's fair — the loud defenders speak for all",
+        "Illicit minor: the premises cover only the vocal defenders, not the whole community; turning a subgroup into 'all of us' manufactures false consensus and weaponises loyalty to silence questions"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what is the difference between 'some people in our community defended it' and 'our whole community defends it' — and why does that difference matter here?",
+        "promptAr": "بكلماتك: إيه الفرق بين «ناس في مجتمعنا دافعوا عنه» وبين «مجتمعنا كله بيدافع عنه» — وليه الفرق ده مهم هنا؟"
+      },
+      "explanation": "The vocal defenders are a subgroup; the conclusion illicitly inflates them into 'our whole community,' then uses that fake unanimity to make a sincere question feel like treason (Red Flag #11). Most of the community may be silent, unsure, or quietly worried — they simply aren't posting. The kind, firm move is to refuse the false 'all of us': you can love your community AND ask where the evidence is. Loyalty to people does not require loyalty to a claim that may be hurting them.",
+      "explanationAr": "المدافعين بصوت عالي مجموعة صغيرة؛ والنتيجة بتنفخهم بشكل غير مشروع لـ«مجتمعنا كله»، وبعدين بتستخدم الإجماع المزيّف ده علشان تخلّي السؤال الصادق يبان خيانة (علامة الخطر 11). أغلب المجتمع ممكن يكون ساكت أو مش متأكد أو قلقان في صمت — هم بس مش بينشروا. الحركة اللطيفة الحازمة إنك ترفض «كلنا» المزيّفة: تقدر تحبّ مجتمعك وتسأل فين الدليل في نفس الوقت. الولاء للناس ما بيتطلّبش ولاء لادعاء ممكن يكون بيأذيهم.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-11"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "\"The patients I personally saw improve are the proof; my patients are my research, and that means my method works for all patients.\"",
+      "claimAr": "«المرضى اللي شُفتهم بنفسي بيتحسّنوا هم الدليل؛ مرضايا هم بحثي، ومعنى كده إن طريقتي بتنفع لكل المرضى».",
+      "prompt": "What would DISPROVE the leap from 'my seen patients improved' to 'works for all patients'? Who is missing from the picture?",
+      "promptAr": "إيه اللي يكذّب القفزة من «المرضى اللي شُفتهم اتحسّنوا» لـ«بتنفع لكل المرضى»؟ مين الغايب من الصورة؟",
+      "modelPoints": [
+        "If false, we'd expect to find a large group of patients who started the system, didn't improve, and stopped coming — and because they stopped, they never appear in 'my patients who improved.' That group exists but is systematically invisible.",
+        "Patients who got worse or died don't come back for follow-up and don't post testimonials. The seen sample is entirely self-selected by survival and continued engagement.",
+        "A proper trial would enrol all patients, track everyone from start to finish including dropouts, and compare to a control group. None of this was done.",
+        "The same kind of evidence ('my seen patients') could be produced by any practitioner for any treatment — even a harmful one — as long as harmful outcomes are invisible."
+      ],
+      "modelPointsAr": [
+        "لو غلط، هنتوقع إننا نلاقي مجموعة كبيرة من المرضى بدأوا النظام وما اتحسّنوش ووقفوا الحضور — ولأنهم وقفوا، عمرهم ما ظهروا في «مرضايا اللي اتحسّنوا». المجموعة دي موجودة لكنها غير مرئية بشكل منهجي.",
+        "المرضى اللي تردّد أو ماتوا ما بيرجعوش للمتابعة وما بينشروش شهادات. العيّنة المرئية منتقاة بالكامل بالبقاء والاستمرار في الحضور.",
+        "تجربة صحيحة هتسجّل كل المرضى، وتتابع الكل من البداية للنهاية بما فيهم اللي تركوا، وتقارن بمجموعة ضابطة. مش حاجة من ده اتعملت.",
+        "نفس الدليل («مرضايا اللي شُفتهم») ممكن يقدّمه أي ممارس لأي علاج — حتى ضارّ — طالما النتائج الضارة غير مرئية."
+      ],
+      "explanation": "Considering the opposite reveals that the 'seen patients improved' evidence base has a structural blind spot: the unseen dropouts and the harmed. A representative sample would require tracking everyone who started — including those who left. The case here is exactly this fallacy plus survivorship bias: 'my patients are my research' was the entire evidence base, and it systematically excluded the denominator that would tell the truth.",
+      "explanationAr": "التفكير في العكس بيكشف إن قاعدة أدلة «المرضى المرئيين اتحسّنوا» فيها نقطة عمى هيكلية: اللي تركوا غير المرئيين واللي تضرّروا. عيّنة ممثِّلة كانت هتستلزم تتبّع كل من بدأ — بما فيهم اللي مشوا. الحالة هنا بالظبط هي المغالطة دي مع انحياز الناجين: «مرضايا هم بحثي» كانت قاعدة الأدلة بالكامل، وبشكل منهجي استبعدت المقام الكسري اللي كان هيقول الحقيقة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-3"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"All the kids on my street love football, and they're all Egyptians, so all Egyptians love football — and anyone who says they don't is probably just saying it because they didn't grow up in a real community.\"",
+      "claimAr": "فكّك الحُجّة دي: «كل عيال شارعي بيحبوا الكورة، وهم كلهم مصريين، يبقى كل المصريين بيحبوا الكورة — وأي حد بيقول مش كده هو على الأرجح بيقول كده لأنه ما كبرش في مجتمع حقيقي».",
+      "parts": [
+        { "text": "All Egyptians love football.", "textAr": "كل المصريين بيحبوا الكورة.", "role": "conclusion" },
+        { "text": "All the kids on my street love football and they are Egyptians.", "textAr": "كل عيال شارعي بيحبوا الكورة وهم مصريين.", "role": "premise" },
+        { "text": "(Unstated) A group of children on one street can represent all Egyptians.", "textAr": "(غير مذكور) مجموعة عيال في شارع واحد ممكن تمثّل كل المصريين.", "role": "assumption" },
+        { "text": "Anyone who disagrees didn't grow up in a real community.", "textAr": "أي حد بيختلف ما كبرش في مجتمع حقيقي.", "role": "irrelevant" }
+      ],
+      "explanation": "Mapping reveals the hidden assumption — that a street-corner sample represents an entire nation — which is the illicit minor. The irrelevant line ('didn't grow up in a real community') is a classic loyalty weapon: it pre-discredits anyone who might challenge the conclusion by questioning their authenticity. Seeing these parts separately makes the sweeping claim from a tiny sample obvious, and shows how the irrelevant part is doing emotional work to protect the fallacy.",
+      "explanationAr": "التفكيك بيكشف الافتراض المخفي — إن عيّنة زاوية شارع بتمثّل أمة كاملة — وهو «إساءة استغراق الحدّ الأصغر». السطر غير ذي الصلة («ما كبرش في مجتمع حقيقي») هو سلاح ولاء كلاسيكي: بيُسقِط مقدماً أي حد ممكن يتحدّى النتيجة بالتشكيك في أصالته. رؤية الأجزاء دي منفصلة بتوضّح الادعاء الشامل من عيّنة صغيرة جداً، وبتوضّح كيف الجزء غير ذي الصلة بيعمل شغلاً عاطفياً لحماية المغالطة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.who.int/teams/risk-communication/infodemic-management"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    }
+  ]
+}

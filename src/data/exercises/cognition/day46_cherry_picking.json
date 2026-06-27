@@ -1,0 +1,142 @@
+{
+  "id": "day46_cherry_picking",
+  "phase": 1,
+  "week": 7,
+  "day": 46,
+  "title": "Cherry-Picking — The Evidence That Wasn't Invited",
+  "titleAr": "انتقاء الشواهد — الأدلة اللي ما اتدعتش",
+  "description": "Selecting only the studies, stories, or data points that support a conclusion while ignoring all the ones that don't — and why the missing evidence is often the most important part.",
+  "descriptionAr": "اختيار الدراسات أو الحكايات أو البيانات اللي بتدعم نتيجة بس، مع تجاهل كل اللي ما بتدعمهاش — وليه الأدلة المفقودة غالباً هي الجزء الأهم.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 13,
+  "source": "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A promoter of a diet shows a graph: 'Three patients who followed my plan had lower blood sugar after 12 weeks.' He does not mention the twelve patients who did not improve, the two who were hospitalised, or the five who improved without changing their diet. What is this?",
+      "claimAr": "مروّج حمية بيعرض رسم بياني: «ثلاثة مرضى اتّبعوا خطّتي عندهم سكر أقل بعد 12 أسبوع». ما بيذكرش الاتناشر مريض اللي ما تحسّنوش، الاتنين اللي اتحجزوا في المستشفى، ولا الخمسة اللي تحسّنوا بدون ما يغيّروا أكلهم. إيه ده؟",
+      "options": [
+        "A valid case series",
+        "Cherry-picking: presenting only favourable data while hiding the rest — a form of selective reporting that misrepresents what the evidence actually shows",
+        "A well-designed cohort study",
+        "An honest preliminary finding"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Cherry-picking selectively uses only the evidence that supports a conclusion and suppresses the rest. Three improvements from an unreported total is meaningless — you need the denominator. If 3 improved out of 22 people, the diet's success rate is 14%. If 3 improved out of 3 who started, that's a totally different story. The suppressed data transforms the meaning of the presented data.",
+      "explanationAr": "انتقاء الشواهد بيستخدم بشكل انتقائي الأدلة اللي بتدعم نتيجة بس ويكبت الباقي. ثلاثة تحسّنات من مجموع غير مُبلَّغ عنه لا معنى لها — لازم تعرف المقام. لو 3 تحسّنوا من 22 شخص، معدل نجاح الحمية 14%. لو 3 تحسّنوا من 3 بدأوا، دي حكاية مختلفة تماماً. البيانات المكبوتة بتغيّر معنى البيانات المعروضة.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "The community around the viral Taybat diet was full of 'success' testimonials. People who experienced harm rarely posted. This is survivorship bias amplifying cherry-picking.",
+      "claimAr": "مجتمع نظام «الطيبات» كان مليان شهادات «نجاح». اللي اتأذّوا ما نشروا نادراً. ده انحياز الناجين بيضخّم انتقاء الشواهد.",
+      "options": [
+        "False — the testimonials are still valid individual evidence",
+        "True — the structure of online communities guarantees a skewed sample"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why can't a forum full of success stories tell you the diet's actual success rate? What is structurally missing?",
+        "promptAr": "بكلماتك: ليه منتدى مليان قصص نجاح ما يقدرش يقولك معدل نجاح الحمية الفعلي؟ وإيه اللي مفقود هيكلياً؟"
+      },
+      "explanation": "Survivorship bias amplifies cherry-picking because the 'selection' of data isn't just deliberate choice — it's structural. The people who deteriorated or died literally could not post their stories. So the forum becomes a self-curating collection of the best outcomes, making the evidence look far stronger than it is. A fair evidence pool must find ways to count the silent majority — that's why hospitals and syndicate investigations matter.",
+      "explanationAr": "انحياز الناجين بيضخّم انتقاء الشواهد لأن «الاختيار» للبيانات مش بس قرار متعمّد — ده هيكلي. الناس اللي تدهورت أو ماتوا ما قدروش حرفياً ينشروا قصصهم. فبيبقى المنتدى مجموعة منتقية ذاتياً من أفضل النتائج، وبيجعل الأدلة تبدو أقوى بكتير مما هي. مجموعة أدلة عادلة لازم تلاقي طرق تعدّ الأغلبية الصامتة — وده هو سبب أهمية المستشفيات وتحقيقات النقابة.",
+      "sources": [
+        "EAL-case-001:masrawy-2026-04-30",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A systematic review is designed specifically to prevent cherry-picking.",
+      "claimAr": "المراجعة المنهجية مصمَّمة بالتحديد لمنع انتقاء الشواهد.",
+      "correctAnswer": true,
+      "myth_en": "All scientific reviews are equally objective.",
+      "myth_ar": "كل المراجعات العلمية بيساوي بعض في الموضوعية.",
+      "explanation": "True. A systematic review uses a pre-registered protocol that specifies in advance which studies will be included and which excluded, and why — before the authors see the results. This prevents selecting only the studies with favourable outcomes. Meta-analysis goes further by statistically combining all included studies, including those with null or negative results. This is why Cochrane reviews sit at the top of the evidence pyramid. Calibrate: how confident were you before answering?",
+      "explanationAr": "صح. المراجعة المنهجية بتستخدم بروتوكولاً مُسجَّلاً مسبقاً بيحدّد مسبقاً أي الدراسات هتُدرَج وأي هتُستبعَد ولماذا — قبل ما المؤلفون يشوفوا النتائج. ده بيمنع اختيار الدراسات ذات النتائج المواتية بس. التحليل البَعدي بيمشي أبعد بتجميع إحصائي لكل الدراسات المُدرَجة، بما فيها ذات النتائج الصفرية أو السلبية. ده هو سبب قعود مراجعات كوكرين في قمة هرم الأدلة.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A social-media post shares a study headline: 'Coffee linked to lower cancer risk.' It does not mention the dozens of studies with null or conflicting results. This one headline is enough to draw a conclusion about coffee and cancer.",
+      "claimAr": "بوست سوشيال ميديا بيشارك عنوان دراسة: «القهوة مرتبطة بانخفاض خطر السرطان». ما بيذكرش العشرات من الدراسات ذات النتائج الصفرية أو المتضاربة. العنوان الواحد ده كافي نستنتج منه حاجة عن القهوة والسرطان.",
+      "prompt": "What would need to be true for a single positive study headline to be INSUFFICIENT as evidence? What context is structurally absent?",
+      "promptAr": "إيه اللي لازم يكون صح علشان عنوان دراسة إيجابية واحدة يكون غير كافٍ كدليل؟ وإيه السياق الغايب هيكلياً؟",
+      "modelPoints": [
+        "Publication bias: journals prefer positive results — so the studies we see are themselves a cherry-picked sample of all studies run. The single headline may be one of ten that found a positive result while 40 found none.",
+        "The denominator is missing: five supporting studies from a literature of six is very different from five out of fifty. You need to know the total.",
+        "A single observational study cannot control for all confounders — perhaps coffee drinkers in that study also exercised more or smoked less.",
+        "Consistency and replication matter: if only one study found this, the effect may be an artifact of that study's specific sample or method.",
+        "The correct question before sharing: 'What does the full body of evidence — ideally a Cochrane review — show about this claim?'"
+      ],
+      "modelPointsAr": [
+        "انحياز النشر: المجلات بتفضّل النتائج الإيجابية — فالدراسات اللي بنشوفها هي نفسها عيّنة منتقاة من كل الدراسات المُجرَاة. العنوان الواحد ممكن يكون واحد من عشرة لقت نتيجة إيجابية بينما 40 ما لاقتش حاجة.",
+        "المقام مفقود: خمس دراسات داعمة من أدبيات فيها ستة مختلفة جداً عن خمسة من خمسين. لازم تعرف الإجمالي.",
+        "دراسة استطلاعية واحدة ما تقدرش تتحكّم في كل العوامل المُربِكة — ربما شاربو القهوة في الدراسة دي مارسوا الرياضة أكتر أو دخّنوا أقل.",
+        "الاتساق والتكرار مهمّان: لو دراسة واحدة بس لقت ده، التأثير ممكن يكون مجرد خاصية لعيّنة الدراسة أو أسلوبها.",
+        "السؤال الصح قبل المشاركة: «إيه اللي تُظهِره مجموعة الأدلة كاملة — مُفضَّلاً مراجعة كوكرين — عن الادعاء ده؟»"
+      ],
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/1-what-epidemiology"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'My diet plan works — here are five peer-reviewed studies that support it. Thousands of users have posted their successes. And it's based on ancient wisdom that modern science is only beginning to rediscover.'",
+      "claimAr": "فكّك الحُجّة دي: «خطة حميتي بتنفع — هنا خمس دراسات محكَّمة بتدعمها. آلاف المستخدمين نشروا نجاحاتهم. وهي مبنية على حكمة قديمة العلم الحديث بدأ بس يكتشفها».",
+      "parts": [
+        { "text": "This diet plan works.", "textAr": "خطة الحمية دي بتنفع.", "role": "conclusion" },
+        { "text": "Five peer-reviewed studies support it.", "textAr": "خمس دراسات محكَّمة بتدعمها.", "role": "premise" },
+        { "text": "Thousands of users report success.", "textAr": "آلاف المستخدمين بيبلّغوا عن نجاح.", "role": "premise" },
+        { "text": "(Unstated) Five supporting studies from an unknown total, and selected testimonials, constitute complete and unbiased evidence.", "textAr": "(غير مذكور) خمس دراسات داعمة من إجمالي مجهول، وشهادات منتقاة، تشكّل أدلة كاملة وغير متحيّزة.", "role": "assumption" },
+        { "text": "It is based on ancient wisdom that modern science is rediscovering.", "textAr": "مبنية على حكمة قديمة العلم الحديث بيعيد اكتشافها.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION does the cherry-picking: five supporting studies from an unknown total could be five from fifty (a 10% hit rate). The thousands of testimonials are survivorship-biased — we don't hear from those who failed. The 'ancient wisdom' line is IRRELEVANT — appeal to antiquity is its own fallacy and adds nothing to the evidence question. Exposing the assumption and the missing denominator is the key move.",
+      "explanationAr": "الافتراض الخفي هو اللي بيعمل انتقاء الشواهد: خمس دراسات داعمة من إجمالي مجهول ممكن تكون خمسة من خمسين (معدل نجاح 10%). آلاف الشهادات محيّزة بانحياز الناجين — ما بنسمعش من اللي فشلوا. جملة «الحكمة القديمة» غير ذات صلة — النداء للقِدَم مغالطة في حد ذاتها وما بتضيفش حاجة لسؤال الأدلة. كشف الافتراض والمقام المفقود هو الحركة الأساسية.",
+      "sources": [
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews",
+        "EAL-case-001:masrawy-2026-04-30"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    },
+    {
+      "id": 6,
+      "mechanic": "retrieve",
+      "retrievalOf": 40,
+      "claim": "A promoter argues: 'Eggs are natural — ancient humans ate them — so they are perfectly healthy in any amount.' Which fallacy from week 6 is embedded here, and what additional error about evidence does today's topic add?",
+      "claimAr": "مروّج بيحتجّ: «البيض طبيعي — البشر القدامى أكلوه — يبقى صحي تماماً بأي كميّة». أنهي مغالطة من الأسبوع السادس مختبئة هنا، وإيه الغلط الإضافي في الأدلة اللي موضوع النهارده بيضيفه؟",
+      "options": [
+        "Ad hominem from week 6; cherry-picking adds nothing new here",
+        "Appeal to nature from week 6; cherry-picking adds that 'ancient humans ate it' selects only the convenient historical fact while ignoring dose, context, and the full body of modern nutritional evidence",
+        "Slippery slope from week 6; cherry-picking means we need more testimonials",
+        "False dichotomy from week 6; cherry-picking means one study is enough"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Two layers: (1) appeal to nature (week 6) — 'natural' and 'ancient' do not establish safety or optimal quantity; natural things can harm. (2) cherry-picking (today) — 'ancient humans ate eggs' selects one historical data point while ignoring: modern humans eat far more eggs than ancient humans did, dietary context differs entirely, and the full body of nutritional science on dietary cholesterol and cardiovascular risk is not a simple 'eggs = good' verdict. Both layers must be seen to evaluate the claim fairly.",
+      "explanationAr": "طبقتان: (1) نداء الطبيعة (الأسبوع السادس) — «طبيعي» و«قديم» ما يثبتوش الأمان أو الكميّة المثلى؛ الأشياء الطبيعية ممكن تضرّ. (2) انتقاء الشواهد (النهارده) — «البشر القدامى أكلوا البيض» بتختار نقطة بيانات تاريخية واحدة مع تجاهل: البشر الحديثون بياكلوا بيض بكميّة أكبر بكتير من البشر القدامى، السياق الغذائي مختلف كلياً، ومجموعة علوم التغذية الكاملة عن الكوليسترول الغذائي وخطر القلب والأوعية مش حكم بسيط «البيض = كويّس». لازم نشوف الطبقتين علشان نقيّم الادعاء بشكل عادل.",
+      "sources": [
+        "https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/fats-and-cholesterol/",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    }
+  ]
+}

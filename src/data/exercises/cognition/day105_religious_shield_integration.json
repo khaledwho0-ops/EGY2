@@ -1,0 +1,158 @@
+{
+  "id": "day105_religious_shield_integration",
+  "phase": 3,
+  "week": 15,
+  "day": 105,
+  "title": "The Religious Shield — Full Integration",
+  "titleAr": "الدرع الديني — التكامل الكامل",
+  "description": "Week 15 checkpoint. Bring together all five moves of the religious-vocabulary exploit: the import, the two refuting verses, the hadith test, the unfalsifiability trap, and the practice/claim distinction.",
+  "descriptionAr": "نقطة تفتيش الأسبوع الـ15. اجمع الحركات الخمس لاستغلال المفردات الدينية: الاستيراد، الآيتان الراديتان، اختبار الحديث، فخّ عدم التفنيد، وتمييز الممارسة/الادعاء.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 18,
+  "source": "https://quran.com/5/87",
+  "interleaved": true,
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A friend sends a voice note: 'This system is not a diet — it's the Quranic way of eating. الطيبات are blessed foods, الخبائث are harmful — it's right there in the Book. To reject it is to reject Allah's wisdom.' Identify ALL the exploitation moves in this message.",
+      "claimAr": "صاحبك بعتلك رسالة صوتية: «النظام ده مش حمية — دي طريقة الأكل القرآنية. الطيبات أطعمة مباركة، والخبائث ضارة — موجودة في الكتاب. رفضها رفضٌ لحكمة الله». حدّد كل حركات الاستغلال في الرسالة دي.",
+      "options": [
+        "None — this is a valid religious statement",
+        "Three moves: (1) vocabulary import — Quranic words glued to a private food list; (2) false equivalence — rejecting the food list = rejecting the Quran; (3) unfalsifiability through faith armor — data against the system becomes data against Allah",
+        "One move: he is simply wrong",
+        "Two moves: vocabulary import and personal opinion"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The message deploys three layered moves. First, vocabulary import: «طيبات»/«خبائث» are lifted from the Quran and glued to a private food list they were not meant to govern. Second, false equivalence: 'rejecting the food list = rejecting Allah's wisdom' — but the food list is not the Quran. Third, unfalsifiability through faith armor: once the claim is framed as divine, any evidence against it is pre-dismissed as spiritual defiance. Recognizing all three is the first protective move.",
+      "explanationAr": "الرسالة تنشر ثلاث حركات متراكبة. أولاً، الاستيراد المفرداتي: «طيبات»/«خبائث» مرفوعتان من القرآن وملصقتان بقائمة طعام خاصة لم تكن مُعَدَّة لحكمها. ثانياً، التساوي الكاذب: «رفض قائمة الطعام = رفض حكمة الله» — لكن قائمة الطعام ليست القرآن. ثالثاً، عدم التفنيد عبر درع الإيمان: لمّا يتأطَّر الادعاء كإلهي، أي دليل ضده يُرفَض مسبقاً كتمرّد روحي. التعرّف على الثلاثة هو أول حركة وقائية.",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://quran.com/16/116",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a person can simultaneously be a sincere, devout Muslim AND require clinical evidence before accepting a diet as a medical treatment — these two positions are compatible.",
+      "claimAr": "صح ولا غلط: شخص ممكن يكون مسلماً صادقاً مخلصاً وفي نفس الوقت يشترط دليلاً سريرياً قبل قبول حمية كعلاج طبي — الموقفان متوافقان.",
+      "correctAnswer": true,
+      "myth_en": "Real believers accept religious health claims without evidence.",
+      "myth_ar": "المؤمنون الحقيقيون بيقبلوا الادعاءات الصحية الدينية بدون دليل.",
+      "explanation": "True — and this is the most important myth of the phase to dispel. Faith and critical evaluation of medical claims are in different domains. Islamic history is full of physician-scholars (Ibn Sīnā, Ibn al-Nafīs) who were devout believers and rigorous empiricists simultaneously. The 'real believer accepts without evidence' framing is itself a manipulation: it uses faith to suppress legitimate medical scrutiny. Calibration: how confident were you before reading the explanation?",
+      "explanationAr": "صح — وهذه أهم أسطورة في هذه المرحلة لدحضها. الإيمان والتقييم النقدي للادعاءات الطبية في نطاقين مختلفين. التاريخ الإسلامي مليء بأطباء-علماء (ابن سينا، ابن النفيس) كانوا مؤمنين متديّنين وتجريبيين صارمين في آنٍ واحد. صياغة «المؤمن الحقيقي يقبل بدون دليل» هي نفسها تلاعب: تستخدم الإيمان لإخماد التدقيق الطبي المشروع. معايرة: كنت واثق قد إيه قبل ما تقرأ الشرح؟",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068645/",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A mother says: 'My son stopped his epilepsy medication for this system because it said it is the Quranic cure. He had a seizure at school.' Which combination of failures allowed this to happen?",
+      "claimAr": "أمّ بتقول: «ابني أوقف دواء الصرع من أجل النظام ده لأنه قال إنه العلاج القرآني. عنده نوبة في المدرسة». أنهي مزيج من الإخفاقات سمح بحدوث ده؟",
+      "options": [
+        "Only the mother's failure to supervise",
+        "A chain: religious vocabulary inflated the claim's authority → authority bias short-circuited independent evaluation → unfalsifiable structure removed any way to detect failure → stopping a validated medical treatment without a physician",
+        "Only the system originator's fault",
+        "The school's failure to monitor medication"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: trace the chain — which single tool, if taught earlier, would most likely have broken it?",
+        "promptAr": "بكلماتك: تتبّع السلسلة — أيّ أداة واحدة لو اتعلّمها قبل كده كانت على الأرجح هتكسرها؟"
+      },
+      "explanation": "The chain: religious vocabulary inflated the claim's authority → authority bias short-circuited evaluation → unfalsifiable structure removed any way to detect failure → stopping a validated medication. The mother and son are not foolish — these are predictable vulnerabilities when a dangerous claim is wrapped in a sacred frame and the tools to separate them were never taught. The single most protective tool at the top of the chain: recognising that religious vocabulary does not transfer medical authority. That is what this curriculum builds.",
+      "explanationAr": "السلسلة: المفردات الدينية ضخّمت سلطة الادعاء ← انحياز السلطة أوقف التقييم ← البنية غير قابلة التفنيد أزالت أي طريقة لاكتشاف الفشل ← إيقاف دواء مُثبَت. الأمّ والابن ليسا أغبياء — هذه نقاط ضعف متوقّعة حين يُغلَّف ادعاء خطير بإطار مقدّس ولم تُدرَّس أدوات الفصل. أكثر أداة وقائية فردية في قمة السلسلة: الإدراك بأن المفردات الدينية لا تنقل السلطة الطبية. هذا ما يبنيه المنهج الدراسي هذا.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/epilepsy",
+        "EAL-case-001:ems-2026-03",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A friend says: 'The system was wrong about some things but it made people eat better overall — isn't that worth defending?'",
+      "claimAr": "صاحبك بيقول: «النظام كان غلطاً في حاجات بس خلّى الناس ياكلوا أحسن بشكل عام — مش ده يستاهل الدفاع عنه؟»",
+      "prompt": "What would have to be true for the 'overall better eating' to justify defending the dangerous package? And what is the honest alternative?",
+      "promptAr": "إيه اللي لازم يكون صح علشان «أكل أحسن بشكل عام» يبرّر الدفاع عن الحزمة الخطرة؟ وإيه البديل الصادق؟",
+      "modelPoints": [
+        "For the argument to hold, the 'eat more vegetables' advice would need to be inseparable from the 'stop your insulin' instruction. It is not — the same general advice appears in every mainstream nutrition guideline without the dangerous package.",
+        "The unique contribution of this system was not 'eat more vegetables' — that existed before it. The unique contribution was the specific dangerous instructions and the unfalsifiable religious framing that prevented questioning.",
+        "Defending a system that caused documented deaths because some of its generic advice was reasonable is the sunk-cost fallacy in action: the past investment in the system does not make the lethal parts safe.",
+        "The honest alternative: take the good advice (eat more vegetables, less processed food) from sources that do not require stopping medication or accepting unfalsifiable religious prohibitions."
+      ],
+      "modelPointsAr": [
+        "علشان الحجة تصمد، نصيحة «أكل خضار أكثر» كانت ستحتاج أن تكون غير منفصلة عن تعليمة «أوقف الأنسولين». مش كذلك — نفس النصيحة العامة موجودة في كل إرشادات التغذية السائدة بدون الحزمة الخطرة.",
+        "الإسهام الفريد لهذا النظام لم يكن «أكل خضار أكثر» — ده كان موجود قبله. الإسهام الفريد كان التعليمات المحدّدة الخطرة والتأطير الديني غير قابل التفنيد الذي منع التساؤل.",
+        "الدفاع عن نظام أدّى لوفيات موثَّقة لأن بعض نصائحه العامة كانت معقولة هو مغالطة التكلفة الغارقة في الفعل: الاستثمار الماضي في النظام لا يجعل الأجزاء المميتة آمنة.",
+        "البديل الصادق: خُذ النصيحة الجيدة (أكل خضار أكثر، معالَج أقل) من مصادر لا تشترط إيقاف الدواء أو قبول تحريمات دينية غير قابلة للتفنيد."
+      ],
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+        "https://quran.com/5/87"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "religious-vocabulary import to shield a product claim",
+      "techniqueAr": "استيراد مصطلح ديني لحماية ادعاء منتج",
+      "task": "Feel the trick from the inside. Write three sentences marketing a completely harmless product (like a morning tea) using sacred-sounding vocabulary — make the product feel spiritually obligatory and questioning it feel like religious impiety. Harmless topic only.",
+      "taskAr": "حسّ بالحيلة من جوّه. اكتب ثلاث جمل تسوّق منتجاً غير ضار خالص (زي شاي الصباح) باستخدام مفردات ذات رنة مقدّسة — اجعل المنتج يبان واجباً روحياً والتشكيك فيه يبان كاستهانة دينية. موضوع غير ضار فقط.",
+      "tells": [
+        "Sacred vocabulary (pure, blessed, prescribed, divine) is attached to a secular product without any scholarly authority granting that attachment.",
+        "Questioning the product is framed as questioning God or tradition — mixing the product's identity with a sacred identity.",
+        "No evidence standard is set — the feeling of rightness substitutes for proof.",
+        "The unfalsifiable structure: if it works, the sacred connection is proven; if it doesn't, the user's intention or sincerity is blamed.",
+        "The emotional cost of stopping ('am I being ungrateful / disloyal / irreverent?') is much higher than the evidence requires."
+      ],
+      "tellsAr": [
+        "مفردات مقدّسة (طاهر، مبارك، مقرَّر، إلهي) مُلصَقة بمنتج علماني بلا سلطة علمية شرعية تمنح هذا الإلصاق.",
+        "التشكيك في المنتج يتأطّر كتشكيك في الله أو الموروث — بخلط هوية المنتج بهوية مقدّسة.",
+        "لا معيار دليل يُحدَّد — الشعور بالصواب يحلّ محلّ الإثبات.",
+        "البنية غير قابلة للتفنيد: لو اشتغل، الارتباط المقدّس اتثبت؛ لو ما اشتغلش، النية أو الإخلاص يُلام.",
+        "التكلفة العاطفية للتوقف («هل أنا ناكر للجميل / وفائي ضعيف / أعتدي؟») أعلى بكثير مما يستدعيه الدليل."
+      ],
+      "explanation": "Writing this manipulation in a harmless domain makes every tell immediately visible from the inside. The Taybat system used exactly these five techniques — but with dangerous medical instructions attached. Now you have experienced the construction; the tells will surface faster when they appear in the wild, before the emotional weight accumulates.",
+      "explanationAr": "كتابة هذا التلاعب في مجال غير ضار تجعل كل علامة كشف مرئية فوراً من الداخل. نظام الطيبات استخدم بالضبط هذه الأساليب الخمسة — لكن مع تعليمات طبية خطرة ملحقة. دلوقتي جرّبت البناء؛ العلامات ستظهر أسرع لمّا تبدو في الواقع، قبل تراكم الثقل العاطفي.",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://quran.com/16/116",
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 6,
+      "mechanic": "decompose",
+      "claim": "Map this checkpoint argument: 'Arranging these four responses from weakest to strongest — (A) \"You are just wrong\"; (B) quote Al-Mā'idah 5:87; (C) ask which authenticated hadith documents the absence of chicken; (D) ask whether this is a medical claim or a religious practice — D is obviously the strongest.'",
+      "claimAr": "فكّك حجة نقطة التفتيش دي: «ترتيب الردود الأربعة من الأضعف للأقوى — (أ) «إنت غلطان»؛ (ب) الاستشهاد بالمائدة 5:87؛ (ج) سؤال أي حديث صحيح يوثّق غياب الدجاج؛ (د) سؤال هل هذا ادعاء طبي أم ممارسة دينية — (د) هو الأقوى بوضوح».",
+      "parts": [
+        { "text": "(D) 'Is this a medical claim or a religious practice?' is the strongest response.", "textAr": "(د) «هل هذا ادعاء طبي أم ممارسة دينية؟» هو الأقوى.", "role": "conclusion" },
+        { "text": "(A) 'You are just wrong' offers nothing to think with; (B) uses the tradition's own text; (C) asks for a specific sourced hadith; (D) teaches the structural distinction.", "textAr": "(أ) «إنت غلطان» لا يعطي شيئاً للتفكير؛ (ب) يستخدم النص الخاص بالتقليد؛ (ج) يطلب حديثاً محدّداً بمصدر؛ (د) يعلّم التمييز البنيوي.", "role": "premise" },
+        { "text": "(Unstated) A response that teaches the underlying structure is stronger than one that answers only this instance.", "textAr": "(غير مذكور) الرد الذي يعلّم البنية الكامنة أقوى من الذي يجيب على هذه الحالة فقط.", "role": "assumption" },
+        { "text": "Most people find (B) emotionally satisfying because it uses the Quran directly.", "textAr": "معظم الناس يجدون (ب) مُرضياً عاطفياً لأنه يستخدم القرآن مباشرة.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption is what makes (D) strongest: teaching the structural question (is this medical or religious?) is transferable — once learned, it applies to any future religious-vocabulary exploit, not just the Taybat case. (B) and (C) are strong for this instance but require knowing the specific verses and hadith. (A) is weak because it gives the other person nothing to work with. The 'emotionally satisfying' note is irrelevant — emotional satisfaction and structural strength are different things.",
+      "explanationAr": "الافتراض الخفي هو ما يجعل (د) الأقوى: تعليم السؤال البنيوي (هل هذا طبي أم ديني؟) قابل للنقل — لمّا يُتعلَّم، بينطبق على أي استغلال مستقبلي للمفردات الدينية، مش على حالة الطيبات فقط. (ب) و(ج) أقوياء لهذه الحالة لكنهما يستلزمان معرفة الآيات والأحاديث المحدّدة. (أ) ضعيف لأنه لا يعطي الطرف الآخر شيئاً للتعامل معه. ملاحظة «المُرضي عاطفياً» غير ذات صلة — الرضا العاطفي والقوة البنيوية شيئان مختلفان.",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://quran.com/16/116",
+        "https://sunnah.com/abudawud",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    }
+  ]
+}

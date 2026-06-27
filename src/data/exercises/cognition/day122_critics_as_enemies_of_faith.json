@@ -1,0 +1,129 @@
+{
+  "id": "day122_critics_as_enemies_of_faith",
+  "phase": 3,
+  "week": 18,
+  "day": 122,
+  "title": "'Critics Are Enemies of Faith': The Thought-Stopper",
+  "titleAr": "«الناقدون أعداء الدين»: قاطع التفكير",
+  "description": "When critics of a medical system are labelled enemies of religion or of Islam, a thought-stopper is installed — making honest evaluation feel like betrayal.",
+  "descriptionAr": "لمّا منتقدو نظام طبي يتوصفوا بأعداء الدين أو الإسلام، بيتركّب قاطع تفكير — بيخلّي التقييم الصادق يحسّ بالخيانة.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.apa.org/monitor/2023/01/conspiracy-theories-thinking",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "After the Medical Syndicate investigated the viral Taybat diet and found no documented cases, a community member posted: 'The Syndicate is attacking this because it threatens pharmaceutical profits — they are enemies of the Islamic healing tradition.' What rhetorical move is this?",
+      "claimAr": "بعد ما نقابة الأطباء فحصت نظام الطيبات المنتشر وما لقتش حالات موثّقة، عضو في المجتمع نشر: «النقابة بتهاجمه لأنه بيهدّد أرباح الدواء — هم أعداء تراث الشفاء الإسلامي». أنهي حركة خطابية دي؟",
+      "options": [
+        "A legitimate critique of the Syndicate's findings",
+        "A thought-stopper: labelling critics as enemies of faith so no evidence they produce needs to be considered",
+        "A factual statement about the Syndicate's motives",
+        "A balanced call for more research"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the thought-stopper in action. By framing the Syndicate's review as an attack on Islamic healing, the community member pre-discredits any evidence the critics produce. Followers no longer need to engage with the findings — because engaging with 'enemies' feels like betrayal. Notice: the Syndicate's actual request was minimal (three documented cases). That request went unanswered. The religious framing exists to prevent that fact from landing.",
+      "explanationAr": "ده قاطع التفكير في الفعل. بتأطير مراجعة النقابة كهجوم على الشفاء الإسلامي، عضو المجتمع بيُسقِط مسبقاً أي دليل بينتجوه المنتقدون. الأتباع ما محتاجوش يتعاملوا مع النتائج — لأن التعامل مع «الأعداء» يحسّ بالخيانة. لاحظ: طلب النقابة الفعلي كان ثلاث حالات موثّقة. الطلب ما اتجاوبش.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.apa.org/monitor/2023/01/conspiracy-theories-thinking"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "If specialists from Saudi Arabia, Egypt, and Morocco all independently warn against the same diet after ICU admissions, labelling all of them 'enemies of faith' is a reasonable response.",
+      "claimAr": "لو متخصّصون من السعودية ومصر والمغرب كلهم حذّروا باستقلالية من نفس الحمية بعد دخول مرضى للعناية المركزة، وصفهم جميعاً بـ«أعداء الدين» ردّ معقول.",
+      "options": [
+        "True — convergent warnings could still be a coordinated conspiracy against Islamic healing",
+        "False — independent convergent warnings from multiple countries with different healthcare systems is evidence, not conspiracy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "False. When independent institutions in different countries, with different healthcare systems and different political interests, all arrive at the same warning after real ICU admissions — that convergence is evidence, not conspiracy. Dismissing it requires believing in an impossibly coordinated global operation. Saudi Arabia's Ministry of Health warning (June 2026) followed their own patients being hospitalised — not a pharmaceutical lobby directive. Calibration check: how certain were you that the 'enemies of faith' framing could still be right?",
+      "explanationAr": "غلط. لمّا مؤسسات مستقلة في بلاد مختلفة، بأنظمة صحية مختلفة ومصالح سياسية مختلفة، كلها توصل لنفس التحذير بعد دخول مرضى حقيقيين للعناية — التقاطع ده دليل مش مؤامرة. تحذير وزارة الصحة السعودية (يونيو 2026) جه بعد دخول مرضاهم للمستشفى — مش بتوجيه من لوبي دوائي.",
+      "sources": [
+        "EAL-case-001:moh-sa-2026-06-08",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A follower says: 'Every doctor who criticises this system is either ignorant of Islamic medicine or paid by pharma.' This statement pre-discredits all critics on two independent tracks, so that no doctor's critique ever needs to be considered.",
+      "claimAr": "تابع بيقول: «كل دكتور بينتقد النظام ده إما جاهل بالطب الإسلامي أو متدفّعله من شركات الدوا». الكلام ده بيُسقِط كل الناقدين مسبقاً على مسارين مستقلين بحيث ما فيش نقد أي دكتور محتاج يتأخذ بالاعتبار.",
+      "options": [
+        "This is a fair challenge that leaves room for evidence to be considered",
+        "This closes every evidential path in advance — it is a thought-stopper that makes the claim impossible to challenge from any direction"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does a statement that pre-discredits ALL possible critics make the claim impossible to test — and what is the difference between genuine skepticism and this move?",
+        "promptAr": "بكلماتك: ليه كلام بيُسقِط مسبقاً كل الناقدين المحتملين بيخلّي الادعاء مستحيل الاختبار — وما الفرق بين الشكّ الحقيقي وهذه الحركة؟"
+      },
+      "explanation": "This is a thought-stopper with full coverage. If a doctor knows Islamic medicine, he's paid by pharma; if he's not paid by pharma, he's ignorant. No doctor can survive both screens — so no doctor's critique ever needs to be considered. This is not skepticism; it is a built-in immunity system for the claim. Karl Popper called claims structured this way 'immunized' — they cannot be threatened because every threatening move is pre-blocked. Real skepticism asks 'what would change my mind?'; this structure ensures nothing ever can.",
+      "explanationAr": "ده قاطع تفكير بتغطية كاملة. لو الدكتور عارف بالطب الإسلامي، يبقى متدفّعله؛ لو ما اتدفّعلوش، يبقى جاهل. مفيش دكتور يقدر يعدّي الغربالين — فما فيش نقد أي دكتور محتاج يتأخذ بالاعتبار. ده مش تشكيك؛ ده جهاز مناعة مدمج في الادعاء. التشكيك الحقيقي بيسأل «إيه اللي يغيّر رأيي؟»؛ هذا التركيب بيضمن إنه لا شيء يقدر.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.apa.org/monitor/2023/01/conspiracy-theories-thinking"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "inoculate",
+      "technique": "thought-stopper: labelling critics as enemies of faith",
+      "techniqueAr": "قاطع التفكير: تصوير الناقدين كأعداء الدين",
+      "task": "Feel the move from the inside (harmless version). Write a short community post defending a completely harmless claim (e.g. 'walking barefoot is healthy') by pre-labelling any future critic as either ignorant of traditional wisdom or in the pay of the shoe industry. Make it feel protective and righteous.",
+      "taskAr": "احسّ بالحركة من جوّه (نسخة غير ضارة). اكتب بوست مجتمعي قصير بيدافع عن ادعاء غير ضار تماماً (مثلاً «المشي حافياً صحي») بتصوير أي ناقد مستقبلي إما جاهل بالحكمة التقليدية أو في خدمة صناعة الأحذية. خلّيه يبان وقائي وفيه صواب.",
+      "tells": [
+        "The post attacks who will speak, not what they will say — notice no evidence is addressed, only people are pre-labelled.",
+        "It creates an in-group ('we know the truth') and an out-group ('they profit from your ignorance') — tribal structure with no data.",
+        "Any future evidence against the claim is pre-neutralised: the critic who produces it is corrupt by definition.",
+        "The feeling of righteousness ('protecting an important truth') is a designed feature, not a signal that the claim is correct.",
+        "Test: imagine the strongest possible evidence against the claim appearing tomorrow — the thought-stopper would block you from even reading it."
+      ],
+      "tellsAr": [
+        "البوست بيهاجم مين هيتكلم مش إيه هيقوله — لاحظ ما فيش دليل بيتناوَل، بس الناس بيتُوسَموا مسبقاً.",
+        "بيخلق جماعة داخلية («إحنا عارفين الحقيقة») وخارجية («هم بيكسبوا من جهلك») — بنية قبلية بلا بيانات.",
+        "أي دليل مستقبلي ضد الادعاء بيتحيّد مسبقاً: الناقد اللي بينتجه فاسد بالتعريف.",
+        "إحساس الصواب («بنحمي حقيقة مهمة») خاصية مصمّمة مش إشارة على صحة الادعاء.",
+        "اختبار: تخيّل أقوى دليل ممكن ضد الادعاء بيظهر بكرة — قاطع التفكير هيمنعك من إنك حتى تقرأه."
+      ],
+      "sources": [
+        "https://www.apa.org/monitor/2023/01/conspiracy-theories-thinking",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A community member says: 'When we question a health system defended with religious language, we risk damaging someone's faith — so it's better to stay quiet.'",
+      "claimAr": "عضو في مجتمع بيقول: «لمّا نشكّك في نظام صحي مدعوم بلغة دينية، بنخاطر بإننا نضرّ بإيمان حد — فالأحسن نفضل ساكتين».",
+      "prompt": "Before accepting silence: what harms follow from staying quiet? What does silence actually protect — and what does it expose?",
+      "promptAr": "قبل قبول الصمت: إيه الأضرار اللي بتجي من الصمت؟ الصمت فعلاً بيحمي إيه — وبيكشف إيه؟",
+      "modelPoints": [
+        "Silence protects the system, not the person: every individual who stayed quiet while a loved one stopped insulin or a cancer patient stopped treatment was 'protecting faith' while enabling a documented harm.",
+        "Faith is not damaged by evidence — it is damaged by discovering you were told untruths in its name. Correcting a fraud is an act of religious integrity, not disrespect.",
+        "The 'stay quiet to protect faith' argument was the thought-stopper working perfectly: it made the cost of speaking feel higher than the cost of silence.",
+        "The Syndicate's documented cases (230+ reported victims by May 2026) are the real cost of the silence that preceded them."
+      ],
+      "modelPointsAr": [
+        "الصمت بيحمي النظام مش الشخص: كل فرد فضل ساكت بينما شخص محبوب وقّف الأنسولين أو مريض سرطان وقّف علاجه كان «بيحمي الإيمان» وهو بيُمكّن أذى موثّقاً.",
+        "الإيمان ما بيتضرّرش من الدليل — بيتضرّر من اكتشاف إنه اتقالت له أكاذيب باسمه. تصحيح الاحتيال هو فعل نزاهة دينية مش عدم احترام.",
+        "حجة «افضل ساكت لتحمي الإيمان» كانت قاطع التفكير شغّال بكمال: خلّت تكلفة الكلام تبان أعلى من تكلفة الصمت.",
+        "الحالات الموثّقة للنقابة (+230 ضحية بحلول مايو 2026) هي التكلفة الحقيقية للصمت اللي سبقها."
+      ],
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182950"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    }
+  ]
+}

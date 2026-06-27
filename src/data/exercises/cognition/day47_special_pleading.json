@@ -1,0 +1,132 @@
+{
+  "id": "day47_special_pleading",
+  "phase": 1,
+  "week": 7,
+  "day": 47,
+  "title": "Special Pleading — One Rule for Me, Another for You",
+  "titleAr": "الاستثناء الخاص — قاعدة لي وقاعدة لك",
+  "description": "When someone claims their idea, person, or practice is exempt from the rules everyone else must follow — without a justifiable reason — that is special pleading. Learn to spot it in health claims, authority arguments, and everyday reasoning.",
+  "descriptionAr": "لمّا حد بيدّعي إن فكرته أو شخصه أو ممارسته معفيّة من القواعد اللي كل التاني لازم يلتزم بها — بدون سبب مقبول — ده الاستثناء الخاص. اتعلّم تكتشفه في ادعاءات الصحة وحجج السلطة والمنطق اليومي.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "When the Medical Syndicate asked the viral Taybat diet system for clinical documentation, the response was: 'My patients are my research — I don't need the same kind of studies that others need.' What fallacy is this?",
+      "claimAr": "لمّا نقابة الأطباء طلبت من نظام «الطيبات» توثيقاً طبياً، كان الرد: «مرضايا هم بحثي — ما محتاجش نفس نوع الدراسات اللي التانيين محتاجينها». إيه المغالطة دي؟",
+      "options": [
+        "A legitimate research philosophy",
+        "Special pleading: claiming exemption from the evidentiary standards that apply to everyone else, without providing a valid justification for the exception",
+        "A valid appeal to experience",
+        "Argument from authority"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Special pleading occurs when someone invokes an exception to a general rule for their own case without adequate justification. Every medical claim — regardless of the presenter's sincerity, credentials, or popularity — must meet the same documentation standard. 'My patients are my research' is a sincere-sounding phrase that actually claims exemption from the burden of proof.",
+      "explanationAr": "الاستثناء الخاص بيحصل لمّا حد بيستدعي استثناء لقاعدة عامة في حالته الخاصة بدون مبرّر كافٍ. كل ادعاء طبي — بصرف النظر عن صدق المقدِّم أو مؤهلاته أو شعبيته — لازم يستوفي نفس معيار التوثيق. «مرضايا هم بحثي» عبارة تبدو صادقة لكنها في الحقيقة بتدّعي إعفاء من عبء الإثبات.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: there are legitimate reasons to apply different standards of evidence to different questions — special pleading is only a fallacy when the exception is unjustified.",
+      "claimAr": "صح ولا غلط: في أسباب مشروعة لتطبيق معايير أدلة مختلفة على أسئلة مختلفة — الاستثناء الخاص بيبقى مغالطة بس لمّا يكون الاستثناء غير مبرَّر.",
+      "options": [
+        "False — all claims must be held to exactly the same standard",
+        "True — it is the justification that matters, not the difference itself"
+      ],
+      "correctAnswer": 1,
+      "explanation": "True — and this distinction is important. A claim that 'this herb cures cancer' requires more evidence than 'this herb tastes nice' because the consequences of being wrong are more severe. These are justified differences. Special pleading is the unjustified kind: claiming an exception to avoid accountability, not to account for a real difference in context. Rate your confidence before checking — if you felt very sure without pausing to think about it, notice that.",
+      "explanationAr": "صح — والتمييز ده مهم. ادعاء «العشبة دي بتشفي السرطان» يحتاج أدلة أكتر من «العشبة دي طعمها حلو» لأن عواقب الغلط أشد خطورة. دول اختلافات مبرَّرة. الاستثناء الخاص هو النوع غير المبرَّر: ادعاء استثناء لتفادي المساءلة. قيّم ثقتك قبل ما تكشف الإجابة — لو حسّيت بيقين من غير ما توقّف للتفكير، لاحظ ده.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A friend argues: 'Scientists need double-blind studies to prove their drugs work. But my herbal remedy doesn't need that — it works on a different principle that science can't measure.' Identify the fallacy and its deeper problem.",
+      "claimAr": "صاحب بيحتجّ: «العلماء محتاجين دراسات مزدوجة التعمية. لكن علاجي العشبي مش محتاج ده — بيشتغل على مبدأ مختلف العلم ما يقدرش يقيسه». حدّد المغالطة ومشكلتها الأعمق.",
+      "options": [
+        "It is only special pleading",
+        "Special pleading — plus claiming to be unmeasurable, which makes the claim unfalsifiable and exits science entirely"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does saying 'science can't measure my remedy' make things worse, not better, for the claim?",
+        "promptAr": "بكلماتك: ليه قول «العلم ما يقدرش يقيس علاجي» بيخلّي الادعاء أسوأ، مش أحسن؟"
+      },
+      "explanation": "Two problems: First, special pleading — 'I'm exempt from the scientific standard.' Second, any claim that says 'it works on principles science cannot measure' has made the claim unfalsifiable. If no measurement can ever disprove it, it isn't a scientific claim at all. Real alternative mechanisms are studied with the same methods; the claim of unmeasurability is the exemption, not the mechanism.",
+      "explanationAr": "في مشكلتين: الأولى، الاستثناء الخاص — «أنا معفي من المعيار العلمي». الثانية، أي ادعاء بيقول «بيشتغل على مبادئ العلم ما يقدرش يقيسها» جعل الادعاء غير قابل للتفنيد. لو ما في قياس ممكن يفنّده أبداً، ده مش ادعاء علمي. الآليات البديلة الحقيقية بتتدرس بنفس المناهج؛ ادعاء عدم القياسية هو الاستثناء، مش الآلية.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A community member says: 'The Medical Syndicate investigations are only valid when they find in our favour. When they ruled against us, the process was corrupted by pharmaceutical lobbying.'",
+      "claimAr": "عضو في مجتمع بيقول: «تحقيقات نقابة الأطباء بتبقى صح بس لمّا بتطلع لصالحنا. لمّا حكمت ضدّنا، الإجراء كان فاسداً بسبب لوبي الدواء».",
+      "prompt": "What would have to be true if this claim were false? What is a non-conspiracy explanation for the same facts?",
+      "promptAr": "لو الادعاء ده غلط، إيه اللي لازم يكون صح؟ وإيه التفسير من غير مؤامرة لنفس الحقائق؟",
+      "modelPoints": [
+        "If the process is legitimate, we would expect exactly this: results sometimes favour the claimant, sometimes not — because facts are mixed. Perfect agreement would be the suspicious outcome.",
+        "The Syndicate review was conducted by university specialists with no documented financial stake; Saudi health warnings followed their own ICU admissions — a different country's independent concern.",
+        "The claim is unfalsifiable: any ruling in favour = the system works; any ruling against = the system is corrupt. No possible outcome can challenge it — the hallmark of conspiracy framing, not skepticism.",
+        "Institutional corruption is a real phenomenon — but alleging it requires independent evidence of the corruption itself, not just disagreement with the result."
+      ],
+      "modelPointsAr": [
+        "لو الإجراء شرعي، هنتوقع بالظبط ده: النتائج أحياناً بتجيء للمتقدّم وأحياناً لأ — لأن الحقائق مختلطة. الاتفاق الكامل هو النتيجة المشبوهة.",
+        "مراجعة النقابة أجرتها أساتذة جامعات بدون مصلحة مالية موثّقة؛ وتحذيرات الصحة السعودية تبعت دخول عناية مركزة خاصة بيهم — قلق مستقل لدولة مختلفة.",
+        "الادعاء غير قابل للتفنيد: أي حكم لصالحه = النظام شغّال؛ وأي حكم ضدّه = النظام فاسد. مفيش نتيجة ممكنة تتحدّاه — علامة إطار المؤامرة، مش الشكّ.",
+        "الفساد المؤسسي ظاهرة حقيقية — لكن الادعاء بيه يحتاج دليل مستقل على الفساد نفسه، مش مجرد الاختلاف مع النتيجة."
+      ],
+      "explanation": "This is classic special pleading fused with conspiracy framing. The rule 'Syndicate findings are credible' is applied selectively — only when it supports the belief. Considering the opposite exposes that the claim is unfalsifiable: structured to survive any outcome.",
+      "explanationAr": "ده استثناء خاص كلاسيكي ممزوج بإطار المؤامرة. قاعدة «نتائج النقابة موثوقة» مطبَّقة بانتقائية. التفكير في العكس بيكشف إن الادعاء غير قابل للتفنيد: متصمّم يصمد أمام أي نتيجة.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "In-group / Out-group"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "special pleading",
+      "techniqueAr": "الاستثناء الخاص",
+      "task": "Feel the trick from the inside. Write a short paragraph for a harmless product — say, a brand of tea — claiming it deserves to skip the usual quality standards because 'its results speak for themselves and traditional methods don't apply to it.' Make it sound reasonable.",
+      "taskAr": "حسّ بالحركة من جوّه. اكتب فقرة قصيرة لمنتج غير ضار — مثلاً علامة شاي — بتدّعي إنه يستحق يتجاوز معايير الجودة المعتادة لأن «نتائجه بتتكلّم عن نفسها والأساليب التقليدية ما بتنطبقش عليه». خلّيها تبدو معقولة.",
+      "tells": [
+        "The phrase 'results speak for themselves' is doing the work of exemption — it sounds proud but actually means 'don't ask for evidence.'",
+        "Claiming a different principle that existing tests can't measure removes the claim from accountability entirely.",
+        "The more sincere and confident the tone, the harder it is to notice the sleight of hand.",
+        "The test: ask 'what would have to happen for this claim to be wrong?' If the answer is 'nothing,' you've built special pleading.",
+        "Real exceptions (children vs. adults in drug trials) have documented, checkable reasons — not 'it just doesn't apply to us.'"
+      ],
+      "tellsAr": [
+        "عبارة «النتائج بتتكلّم عن نفسها» بتعمل الإعفاء — تبدو فخراً لكن معناها الحقيقي «ما تطلبش دليل».",
+        "ادعاء مبدأ مختلف ما تقدر الاختبارات الموجودة تقيسه بيُخرِج الادعاء من المساءلة خالص.",
+        "كل ما النبرة أصدق وأكثر ثقة، كل ما الخفّة يدين أصعب ملاحظة.",
+        "الاختبار: اسأل «إيه اللي لازم يحصل علشان الادعاء ده يبقى غلط؟» لو الإجابة «ولا حاجة»، إنت بنيت استثناء خاص.",
+        "الاستثناءات الحقيقية (الأطفال مقابل البالغين في تجارب الدواء) عندها أسباب موثّقة وقابلة للفحص — مش «ببساطة ما بتنطبقش علينا»."
+      ],
+      "explanation": "Building special pleading in a harmless dose is 'active inoculation' — research shows it improves your ability to DISCRIMINATE manipulative from honest content. The key tell is always the same: an exemption claimed without a verifiable reason is special pleading regardless of how sincere the tone.",
+      "explanationAr": "بناء الاستثناء الخاص بجرعة غير ضارة ده «التلقيح النشط» — الأبحاث تُظهِر إنه بيحسّن قدرتك على التمييز بين المحتوى المتلاعب والصادق. الإشارة الكاشفة دايماً نفسها: استثناء مدّعى بدون سبب قابل للتحقّق هو استثناء خاص بصرف النظر عن صدق النبرة.",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

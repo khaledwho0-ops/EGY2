@@ -1,0 +1,99 @@
+{
+  "id": "selection_bias",
+  "phase": 2,
+  "week": 10,
+  "day": 12,
+  "title": "Selection Bias",
+  "titleAr": "تحيز الاختيار",
+  "description": "Master selection bias — systematic errors arising from how participants are chosen or retained in a study. Cover Berkson's paradox (hospital admission bias), the healthy worker effect, volunteer bias, and collider bias. Learn to identify and mitigate selection bias in research design.",
+  "descriptionAr": "أتقن تحيز الاختيار — الأخطاء المنهجية الناشئة من كيفية اختيار المشاركين أو الاحتفاظ بهم في دراسة. يغطي مفارقة بيركسون (تحيز القبول بالمستشفى)، وتأثير العامل الصحي، وتحيز المتطوعين، وتحيز المتصادم.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Selection Bias",
+    "nameAr": "تحيز الاختيار",
+    "definition": "Selection bias occurs when the sample studied is not representative of the target population due to systematic differences in how participants are selected, included, or retained. This creates spurious associations or obscures real ones. Major subtypes include: Berkson's bias (hospital-based sampling creates artificial associations between diseases), healthy worker effect (employed populations are healthier than the general population), volunteer bias (self-selected participants differ systematically from non-participants), attrition bias (differential dropout), and collider bias (conditioning on a common effect of two variables creates a spurious association). Heckman (1979) won the Nobel Prize in Economics partly for his work on correcting selection bias in observational studies.",
+    "definitionAr": "تحيز الاختيار يحدث عندما لا تكون العينة المدروسة ممثلة للسكان المستهدفين بسبب اختلافات منهجية في كيفية اختيار المشاركين أو إدراجهم أو الاحتفاظ بهم. الأنواع الفرعية الرئيسية تشمل: تحيز بيركسون، وتأثير العامل الصحي، وتحيز المتطوعين، وتحيز الاستنزاف، وتحيز المتصادم.",
+    "realWorldExample": "Berkson's Paradox (1946): Joseph Berkson showed that studies conducted in hospital settings can create spurious associations between diseases. If Disease A and Disease B both independently increase the probability of hospitalization, then among hospitalized patients, the two diseases will appear negatively correlated — even if they are independent in the general population. This occurs because conditioning on hospitalization (a collider) induces a spurious association. For example, a hospital study might find that diabetes and cholecystitis appear inversely related, when they are actually independent in the population. This was formally described in Berkson (1946, Biometrics Bulletin, 2:47-53).",
+    "realWorldExampleAr": "مفارقة بيركسون (1946): أظهر جوزيف بيركسون أن الدراسات المجراة في المستشفيات يمكن أن تخلق ارتباطات زائفة بين الأمراض. إذا كان المرض أ والمرض ب كلاهما يزيد احتمال الدخول للمستشفى بشكل مستقل، فإن بين مرضى المستشفى سيبدو المرضان مرتبطين سلبياً — حتى لو كانا مستقلين في عامة السكان.",
+    "detectionMethod": "Draw a DAG to identify colliders — never condition on a collider variable. Use population-based studies instead of hospital-based ones when possible. Apply Heckman's two-step correction for selection bias in observational studies. Compare baseline characteristics of included vs. excluded participants. In clinical trials, use intention-to-treat analysis to prevent attrition bias. Report flow diagrams (CONSORT) showing how participants were selected and retained."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A hospital-based study finds that patients with respiratory disease are LESS likely to also have bone fractures compared to the general population. However, population-based data shows no such association. What explains this discrepancy?",
+      "promptAr": "وجدت دراسة مبنية على المستشفى أن مرضى أمراض الجهاز التنفسي أقل عرضة أيضاً لكسور العظام مقارنة بعامة السكان. لكن البيانات السكانية لا تظهر مثل هذا الارتباط. ما الذي يفسر هذا التناقض؟",
+      "options": [
+        "Respiratory disease protects against bone fractures",
+        "Berkson's paradox — both conditions independently increase hospital admission probability. Conditioning on being hospitalized (a collider) induces a spurious negative association between the two independent diseases",
+        "The hospital sample was too small",
+        "Population-based data is always more accurate"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is Berkson's paradox (Berkson, 1946). Hospitalization acts as a collider — both respiratory disease and fractures independently increase the probability of being in the hospital. When we restrict our analysis to hospitalized patients (conditioning on the collider), a spurious negative association is created: among hospitalized patients, those admitted for respiratory disease are less likely to also have fractures because fractures were not the reason for their admission. In DAG terms: Respiratory Disease → Hospitalization ← Fractures. Conditioning on hospitalization opens a non-causal pathway between the two diseases.",
+      "explanationAr": "هذه مفارقة بيركسون (1946). الدخول للمستشفى يعمل كمتصادم — كل من أمراض الجهاز التنفسي والكسور يزيدان بشكل مستقل احتمال التواجد في المستشفى. عند قصر التحليل على مرضى المستشفى (التكييف على المتصادم)، يُخلق ارتباط سلبي زائف."
+    },
+    {
+      "id": 2,
+      "type": "analyze",
+      "prompt": "An occupational health study finds that factory workers have LOWER mortality rates than the general population of the same age. Should we conclude that factory work is protective of health?",
+      "promptAr": "وجدت دراسة صحة مهنية أن عمال المصانع لديهم معدلات وفيات أقل من عامة السكان في نفس العمر. هل يجب أن نستنتج أن العمل في المصانع يحمي الصحة؟",
+      "options": [
+        "Mortality rates cannot be compared across groups",
+        "Yes — lower mortality proves factory work is healthy",
+        "No — this is the 'healthy worker effect': employed populations are pre-selected for good health because sick, disabled, and frail individuals are less likely to be employed. The comparison group (general population) includes unemployed, disabled, and chronically ill individuals",
+        "The data must be wrong because factories are dangerous"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The healthy worker effect, first formally described by McMichael (1976, Journal of Occupational Medicine), is a well-established selection bias where workers appear healthier than the general population simply because employment selects for health. People who are severely ill, disabled, or frail are less likely to hold jobs. The general population includes these individuals, inflating its mortality rate. This bias can mask genuine occupational hazards. To address it, researchers compare workers to other workers (not the general population), use internal comparisons within the workforce, or apply standardized mortality ratios adjusted for the healthy worker effect.",
+      "explanationAr": "تأثير العامل الصحي، الذي وصفه ماكمايكل (1976) رسمياً لأول مرة، هو تحيز اختيار راسخ حيث يبدو العمال أكثر صحة من عامة السكان ببساطة لأن التوظيف يختار للصحة. الأشخاص المرضى بشدة أو المعاقون أقل عرضة للاحتفاظ بوظائف."
+    },
+    {
+      "id": 3,
+      "type": "evaluate",
+      "prompt": "An online survey about job satisfaction finds that 85% of respondents are 'satisfied' or 'very satisfied' with their jobs. The survey was posted on LinkedIn and received 2,000 voluntary responses. What selection bias threatens these results?",
+      "promptAr": "وجد استطلاع عبر الإنترنت عن الرضا الوظيفي أن 85% من المستجيبين 'راضون' أو 'راضون جداً' عن وظائفهم. نُشر الاستطلاع على LinkedIn وتلقى 2000 رد طوعي. ما تحيز الاختيار الذي يهدد هذه النتائج؟",
+      "options": [
+        "Online surveys are always valid",
+        "The question wording was probably biased",
+        "2,000 responses is sufficient for any conclusion",
+        "Volunteer bias (self-selection bias) — people who are employed, career-oriented, and satisfied enough to maintain active LinkedIn profiles are more likely to respond. Unemployed, underemployed, and deeply dissatisfied workers are underrepresented. This is compounded by the platform's professional-networking context"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Volunteer bias (Rosenthal & Rosnow, 1975, 'The Volunteer Subject') occurs when participants self-select into a study and differ systematically from non-participants. LinkedIn users are already a non-representative subset of all workers: they skew toward white-collar, professional, employed, and career-engaged individuals. People who are unemployed, working informal jobs, or deeply dissatisfied are less likely to be on LinkedIn and even less likely to respond to a voluntary survey about job satisfaction. Sample size (2,000) does not correct for systematic selection bias — a biased sample remains biased regardless of size.",
+      "explanationAr": "تحيز المتطوعين يحدث عندما يختار المشاركون أنفسهم للدراسة ويختلفون منهجياً عن غير المشاركين. مستخدمو LinkedIn عينة فرعية غير ممثلة: يميلون نحو الموظفين المحترفين المنخرطين مهنياً. حجم العينة لا يصحح تحيز الاختيار المنهجي."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "Researchers study why attractive people seem to be perceived as less intelligent. They sample from a dating app where users are rated on both attractiveness and perceived intelligence. In the population, there is no correlation between attractiveness and intelligence. What explains the observed negative correlation in the dating app data?",
+      "promptAr": "يدرس باحثون لماذا يبدو أن الأشخاص الجذابين يُنظر إليهم على أنهم أقل ذكاءً. يأخذون عينة من تطبيق مواعدة حيث يُقيّم المستخدمون على الجاذبية والذكاء المتصور. في السكان عامة، لا يوجد ارتباط بين الجاذبية والذكاء. ما الذي يفسر الارتباط السلبي الملاحظ في بيانات التطبيق؟",
+      "options": [
+        "Collider bias (a form of selection bias) — being on the dating app requires sufficient attractiveness OR intelligence to get matches. Conditioning on being successful on the app (the collider) induces a spurious negative association between the two traits",
+        "The rating system is flawed",
+        "People lie about their intelligence on dating apps",
+        "Attractive people are genuinely less intelligent"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This is collider bias, formally described in causal inference by Pearl (2009). If success on the app (getting matches/remaining active) is a collider influenced by both attractiveness and intelligence — either high attractiveness OR high intelligence can lead to app success — then restricting analysis to successful app users creates a spurious negative correlation. Among the selected group, someone who is high in attractiveness 'doesn't need' to be high in intelligence to succeed, and vice versa. Elwert and Winship (2014, Annual Review of Sociology) provide a comprehensive treatment of endogenous selection bias as collider bias.",
+      "explanationAr": "هذا تحيز المتصادم. إذا كان النجاح في التطبيق متصادماً يتأثر بكل من الجاذبية والذكاء، فإن تقييد التحليل لمستخدمي التطبيق الناجحين يخلق ارتباطاً سلبياً زائفاً. بين المجموعة المختارة، من هو عالي الجاذبية 'لا يحتاج' لذكاء عالٍ للنجاح، والعكس صحيح."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "Which of the following study designs is MOST resistant to selection bias?",
+      "promptAr": "أي من تصميمات الدراسة التالية الأكثر مقاومة لتحيز الاختيار؟",
+      "options": [
+        "Case-control study using hospital controls",
+        "Cross-sectional survey of social media users",
+        "Population-based prospective cohort study with random sampling and active follow-up of all enrolled participants, regardless of outcomes",
+        "Retrospective analysis of insurance claims data"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A population-based prospective cohort study with random sampling minimizes selection bias at enrollment (random selection from the target population) and at follow-up (active tracking of all participants prevents differential attrition). Hospital-based controls (option A) are vulnerable to Berkson's bias. Social media surveys (option B) suffer from volunteer bias and platform-specific demographics. Insurance claims (option D) exclude uninsured populations and are subject to healthy user bias. Rothman, Greenland, and Lash (2008, 'Modern Epidemiology') rank population-based cohorts as the strongest observational design for minimizing selection bias, though even they require careful attention to non-response and loss-to-follow-up.",
+      "explanationAr": "دراسة الأتراب المستقبلية السكانية مع أخذ عينات عشوائية تقلل تحيز الاختيار عند التسجيل وعند المتابعة. ضوابط المستشفى عرضة لتحيز بيركسون. استطلاعات وسائل التواصل تعاني من تحيز المتطوعين. بيانات التأمين تستبعد غير المؤمنين."
+    }
+  ]
+}

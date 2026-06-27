@@ -1,0 +1,98 @@
+{
+  "id": "effect_size",
+  "phase": 2,
+  "week": 11,
+  "day": 17,
+  "title": "Effect Size: Cohen's d",
+  "titleAr": "حجم التأثير: معامل كوهين",
+  "description": "Understand effect sizes as measures of practical significance, learn Cohen's d benchmarks, and distinguish statistical from practical significance.",
+  "descriptionAr": "فهم أحجام التأثير كمقاييس للأهمية العملية، وتعلم معايير كوهين، والتمييز بين الدلالة الإحصائية والأهمية العملية.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Cohen's d Effect Size",
+    "nameAr": "حجم تأثير كوهين",
+    "definition": "Cohen's d is a standardized measure of the difference between two group means, expressed in standard deviation units: d = (M₁ − M₂) / SD_pooled. Cohen (1988) proposed benchmarks: d=0.2 (small), d=0.5 (medium), d=0.8 (large). These benchmarks are rough guidelines and should be interpreted in context — a 'small' effect can be clinically important if the outcome is mortality.",
+    "definitionAr": "معامل كوهين هو مقياس معياري للفرق بين متوسطي مجموعتين، معبراً عنه بوحدات الانحراف المعياري. اقترح كوهين (1988) معايير: 0.2 (صغير)، 0.5 (متوسط)، 0.8 (كبير).",
+    "realWorldExample": "The effect of psychotherapy for depression is approximately d=0.8 (large). Aspirin's effect on heart attack prevention is d≈0.07 (very small), yet it saves thousands of lives annually. Effect size and practical importance are distinct concepts.",
+    "detectionMethod": "Calculate d from group means and pooled SD. For odds ratios, use the Hasselblad & Hedges conversion: d = ln(OR) × √3/π. Report confidence intervals around effect sizes."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "calculate",
+      "prompt": "A study compares test scores between a new teaching method (M=78, SD=12) and traditional method (M=72, SD=14). Calculate Cohen's d using pooled SD. How would you classify this effect?",
+      "promptAr": "دراسة تقارن درجات الاختبار بين طريقة تدريس جديدة (م=78، ا.م=12) وطريقة تقليدية (م=72، ا.م=14). احسب معامل كوهين. كيف تصنف هذا التأثير؟",
+      "options": [
+        "d = 0.23, small effect",
+        "d = 0.50, medium effect",
+        "d = 0.46, medium effect",
+        "d = 0.86, large effect"
+      ],
+      "correctAnswer": 2,
+      "explanation": "SD_pooled = √((12² + 14²)/2) = √((144 + 196)/2) = √170 ≈ 13.04. Cohen's d = (78 − 72)/13.04 = 6/13.04 ≈ 0.46. By Cohen's benchmarks, this is a medium effect (between 0.2 and 0.8). In educational research, Hattie (2009) considers effects above d=0.40 as the 'zone of desired effects.'",
+      "explanationAr": "الانحراف المعياري المجمع = √((144+196)/2) = √170 ≈ 13.04. معامل كوهين = 6/13.04 ≈ 0.46. بمعايير كوهين، هذا تأثير متوسط."
+    },
+    {
+      "id": 2,
+      "type": "scenario",
+      "prompt": "A drug trial with 50,000 participants finds a statistically significant reduction in blood pressure of 1.2 mmHg (p<0.001, d=0.03). A reviewer argues this is an important finding because of the tiny p-value. What is the correct assessment?",
+      "promptAr": "تجربة دواء مع 50,000 مشارك تجد انخفاضاً معنوياً إحصائياً في ضغط الدم بمقدار 1.2 ملم زئبق (p<0.001, d=0.03). مراجع يجادل بأن هذه نتيجة مهمة بسبب قيمة p الصغيرة. ما التقييم الصحيح؟",
+      "options": [
+        "The large sample size makes the effect more meaningful",
+        "Cohen's d doesn't apply to clinical trials",
+        "The reviewer is correct — the p-value confirms clinical importance",
+        "The effect is statistically significant but clinically negligible; d=0.03 is trivially small and 1.2 mmHg is below clinically meaningful thresholds"
+      ],
+      "correctAnswer": 3,
+      "explanation": "With N=50,000, even trivially small effects achieve statistical significance. A 1.2 mmHg reduction is below the minimum clinically important difference for blood pressure (typically ≥5 mmHg). Cohen's d=0.03 is far below even the 'small' benchmark of 0.2. This illustrates the critical distinction between statistical significance (p-value) and practical significance (effect size).",
+      "explanationAr": "مع ن=50,000، حتى التأثيرات الضئيلة جداً تحقق دلالة إحصائية. انخفاض 1.2 ملم زئبق أقل من الحد الأدنى للفرق المهم سريرياً. d=0.03 أقل بكثير من معيار 'صغير' وهو 0.2."
+    },
+    {
+      "id": 3,
+      "type": "identify",
+      "prompt": "Which of the following correctly describes the relationship between Cohen's d and the overlap between two normal distributions?",
+      "promptAr": "أي مما يلي يصف بشكل صحيح العلاقة بين معامل كوهين والتداخل بين توزيعين طبيعيين؟",
+      "options": [
+        "d=0.0: 100% overlap; d=0.8: about 69% overlap; d=2.0: about 32% overlap",
+        "d=0.2: 0% overlap; d=0.8: 50% overlap; d=2.0: 100% overlap",
+        "Cohen's d has no relationship to distributional overlap",
+        "d=0.5: the two distributions do not overlap at all"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Cohen's U₃ and the overlap coefficient relate d to distributional overlap. At d=0.0, distributions are identical (100% overlap). At d=0.8 (large effect), there is still approximately 69% overlap between groups. Even at d=2.0, roughly 32% of distributions overlap. This demonstrates why even 'large' effects don't mean all individuals in one group outperform all in the other.",
+      "explanationAr": "عند d=0.0، التوزيعان متطابقان. عند d=0.8 (تأثير كبير)، لا يزال هناك حوالي 69% تداخل. حتى التأثيرات 'الكبيرة' لا تعني أن جميع أفراد مجموعة يتفوقون على جميع أفراد الأخرى."
+    },
+    {
+      "id": 4,
+      "type": "calculate",
+      "prompt": "A meta-analysis reports an odds ratio (OR) of 2.5 for a risk factor. Convert this to Cohen's d using the Hasselblad & Hedges formula: d = ln(OR) × √3/π. What is the approximate effect size?",
+      "promptAr": "تحليل تلوي يبلغ عن نسبة أرجحية (OR) قدرها 2.5 لعامل خطر. حوّل هذا إلى معامل كوهين باستخدام صيغة هاسلبلاد وهيدجز: d = ln(OR) × √3/π. ما حجم التأثير التقريبي؟",
+      "options": [
+        "d ≈ 0.80, large effect",
+        "d ≈ 0.51, medium effect",
+        "d ≈ 1.38, very large effect",
+        "d ≈ 0.25, small effect"
+      ],
+      "correctAnswer": 1,
+      "explanation": "d = ln(2.5) × √3/π = 0.916 × 1.732/3.142 = 0.916 × 0.551 ≈ 0.505. This is a medium effect by Cohen's standards. The Hasselblad & Hedges (1995) conversion allows comparison of effect sizes across studies that report different metrics (means vs. proportions).",
+      "explanationAr": "d = ln(2.5) × √3/π = 0.916 × 0.551 ≈ 0.505. هذا تأثير متوسط بمعايير كوهين. تحويل هاسلبلاد وهيدجز يسمح بمقارنة أحجام التأثير عبر مقاييس مختلفة."
+    },
+    {
+      "id": 5,
+      "type": "scenario",
+      "prompt": "A psychology researcher reports: 'Our intervention produced a large effect (d=0.85).' However, the study had only 15 participants per group. What important caveat applies?",
+      "promptAr": "باحث نفسي يبلغ: 'تدخلنا أنتج تأثيراً كبيراً (d=0.85).' لكن الدراسة شملت 15 مشاركاً فقط في كل مجموعة. ما التحفظ المهم؟",
+      "options": [
+        "Only the p-value matters, not the effect size",
+        "Cohen's d cannot be calculated with fewer than 30 participants",
+        "Small samples produce upwardly biased d estimates; Hedges' g correction should be applied, and the confidence interval around d will be very wide",
+        "The effect size is accurate regardless of sample size"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Cohen's d is positively biased in small samples. Hedges' g applies a correction factor: g = d × (1 − 3/(4(n₁+n₂)−9)). With n=15 per group: g = 0.85 × (1 − 3/111) ≈ 0.85 × 0.973 ≈ 0.827. Additionally, the 95% CI for d with N=30 total spans approximately ±0.53, meaning the true effect could range from d=0.32 (small) to d=1.38 (very large). Small samples yield imprecise effect size estimates.",
+      "explanationAr": "معامل كوهين متحيز إيجابياً في العينات الصغيرة. معامل هيدجز يطبق عامل تصحيح. مع ن=15 لكل مجموعة، فترة الثقة 95% واسعة جداً مما يعني تقديرات غير دقيقة."
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "day22_inoculation_intro",
+  "phase": 0,
+  "week": 4,
+  "day": 22,
+  "title": "Prebunking: Psychological Inoculation Against Manipulation",
+  "titleAr": "التطعيم النفسي ضد أساليب التلاعب الإعلامي",
+  "description": "Learn the science of 'prebunking' — exposing manipulation TECHNIQUES before you encounter them in the wild. Based on inoculation theory (Roozenbeek & van der Linden 2019, Nature Human Behaviour, d=0.52). You will see each technique explained first, then practice detecting it in Egyptian media examples.",
+  "descriptionAr": "تعلم علم 'التطعيم المسبق' — التعرف على أساليب التلاعب قبل مواجهتها في الواقع. مبني على نظرية التطعيم النفسي (روزنبيك وفان درلندن ٢٠١٩، Nature Human Behaviour، حجم تأثير d=0.52). ستتعرف أولاً على كل أسلوب، ثم تتدرب على كشفه في أمثلة إعلامية مصرية.",
+  "type": "inoculation",
+  "difficulty": 3,
+  "estimatedMinutes": 25,
+  "instrument": "MIST-20",
+  "theoreticalBasis": {
+    "theory": "Inoculation Theory",
+    "originalFormulation": "McGuire, W.J. (1961). The effectiveness of supportive and refutational defenses in immunizing beliefs against persuasion. Sociometry, 24(2), 184-197.",
+    "digitalAdaptation": "Roozenbeek, J., & van der Linden, S. (2019). Fake news game confers psychological resistance against online misinformation. Palgrave Communications, 5(1), 65.",
+    "metaAnalysis": "Compton, J., van der Linden, S., Cook, J., & Basol, M. (2021). Inoculation theory in the post-truth era: Extant findings and new frontiers for contested science, misinformation, and conspiracy theories. Social and Personality Psychology Compass, 15(6), e12602.",
+    "effectSize": "d = 0.52 (medium-large; equivalent to 5 percentage-point resistance increase per manipulation technique learned)",
+    "mechanism": "Exposing people to weakened doses of manipulation techniques triggers cognitive antibodies — mental schemas that recognize and reject manipulation attempts",
+    "prebunkingNote": "Prebunking outperforms debunking because it inoculates BEFORE exposure, preventing persuasion rather than correcting it after the fact.",
+    "source_urls": [
+      "https://www.nature.com/articles/s41599-019-0279-9",
+      "https://www.cam.ac.uk/research/news/social-media-misinformation-can-be-inoculated-against-study-finds",
+      "https://socialmediaanddemocracy.org/inoculation-theory/"
+    ]
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "technique_name": "Emotional Appeal (Fear/Outrage Hijacking)",
+      "technique_name_ar": "الاستغلال العاطفي (تصعيد الخوف والغضب)",
+      "technique_description_en": "Misinformation often triggers intense emotional reactions — fear, outrage, or disgust — to bypass your critical thinking. When a message makes you feel an overwhelming emotion BEFORE presenting evidence, pause. The emotion itself is the manipulation.",
+      "technique_description_ar": "كثيراً ما تستثير المعلومات المضللة مشاعر قوية كالخوف والغضب والاشمئزاز بهدف تعطيل تفكيرك النقدي. حين يجعلك محتوى ما تشعر بعاطفة طاغية قبل تقديم الأدلة — توقف. العاطفة نفسها هي أداة التلاعب.",
+      "inoculation_example": {
+        "context_en": "Before you see real examples in your feed, recognize this structure: 'BREAKING: Egyptian doctors are FORBIDDEN from telling you that [common herb] destroys [disease] in 3 days! Share before it's deleted!' Notice: urgency + suppression conspiracy + fear of missing cure + emotional all-caps.",
+        "context_ar": "قبل أن ترى أمثلة حقيقية في خلاصتك، تعرف على هذا الشكل: 'عاجل: الأطباء المصريون ممنوعون من إخبارك أن [عشبة شائعة] تقضي على [مرض] في ٣ أيام! شارك قبل الحذف!' لاحظ: الاستعجال + مؤامرة الكبت + الخوف من ضياع العلاج + الحروف الكبيرة العاطفية.",
+        "red_flags": ["ALL CAPS urgency", "Share before deletion threat", "Secret suppressed by authorities", "Cure-all claim"]
+      },
+      "test_example": {
+        "stimulus_en": "A Facebook post you encounter: '😱😡 DANGER!! Egyptian health ministry HIDING the truth about fluoride in Nile water causing autism in children. Mothers, share immediately to save your kids before they DELETE this!!'",
+        "stimulus_ar": "منشور فيسبوك تصادفه: '😱😡 خطر!! وزارة الصحة المصرية تخفي الحقيقة عن الفلوريد في مياه النيل الذي يسبب التوحد عند الأطفال. أمهات، شاركي فوراً لإنقاذ أطفالك قبل حذف هذا!!'",
+        "question_en": "Which emotional manipulation techniques do you identify in this post?",
+        "question_ar": "ما أساليب التلاعب العاطفي التي تحددها في هذا المنشور؟"
+      },
+      "correct_detection": {
+        "techniques_present": ["Fear appeal (danger to children)", "Urgency (share immediately)", "Suppression conspiracy (hiding truth, delete threat)", "Emotional punctuation (😱😡, CAPS)"],
+        "verdict": "misleading",
+        "explanation_en": "The CDC, WHO, and Egyptian EEAA confirm that fluoride in municipal water supplies (0.6-0.8 mg/L, per Egyptian Standard ES 3783:2019) is safe and unlinked to autism. The autism-fluoride claim has been examined in multiple meta-analyses (e.g., Duan et al. 2020, JAMA Pediatrics — no causal relationship found).",
+        "explanation_ar": "المراكز الأمريكية للسيطرة على الأمراض ومنظمة الصحة العالمية والهيئة المصرية لحماية البيئة تؤكد أن الفلوريد في مياه الشبكات البلدية (0.6-0.8 ملغ/لتر، وفق المعيار المصري ES 3783:2019) آمن ولا صلة له بالتوحد.",
+        "source_urls": ["https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/water-safety-and-quality/drinking-water-quality-guidelines", "https://jamanetwork.com/journals/jamapediatrics/fullarticle/2748634"]
+      }
+    },
+    {
+      "id": 2,
+      "technique_name": "False Authority",
+      "technique_name_ar": "السلطة الزائفة",
+      "technique_description_en": "Misinformation often invokes authority figures — real or fabricated — to lend credibility. Watch for: vague 'experts say', unnamed 'Harvard scientists', real names used out of context, or credentials that cannot be verified.",
+      "technique_description_ar": "تستند المعلومات المضللة غالباً لشخصيات سلطوية — حقيقية أو مختلقة — لاكتساب المصداقية. احذر من: 'يقول الخبراء' المبهمة، 'علماء هارفارد' مجهولو الهوية، أسماء حقيقية مستخدمة خارج سياقها، أو شهادات لا يمكن التحقق منها.",
+      "inoculation_example": {
+        "context_en": "Structure to recognize: 'Dr. Ahmed Refaat, PROFESSOR at Cairo University Medical School [credential sounds real], says that [extraordinary claim]. He was silenced by the medical establishment.' Often the person is real but the quote is fabricated or severely distorted.",
+        "context_ar": "الشكل الذي يجب التعرف عليه: 'الدكتور أحمد رفعت، أستاذ في كلية طب جامعة القاهرة [اسم الشهادة يبدو حقيقياً]، يقول إن [ادعاء استثنائي]. أسكتته المؤسسة الطبية.' في الغالب الشخص حقيقي لكن الاقتباس مختلق أو محرف بشدة.",
+        "red_flags": ["Authority named but quote unverifiable", "Claim contradicts the expert's published work", "Expert 'silenced' narrative", "Credential cannot be looked up"]
+      },
+      "test_example": {
+        "stimulus_en": "WhatsApp message: 'Professor Essam Heggy (Egyptian-NASA geologist) warned that the Aswan High Dam will collapse within 2 years due to GERD filling. The Egyptian government suppressed his report. Pass this on to save lives.'",
+        "stimulus_ar": "رسالة واتساب: 'البروفيسور عصام حجي (جيولوجي مصري في ناسا) حذر من انهيار السد العالي خلال سنتين بسبب ملء سد النهضة. الحكومة المصرية أخفت تقريره. مرر هذا لإنقاذ الأرواح.'",
+        "question_en": "How would you verify whether Prof. Essam Heggy actually made this claim?",
+        "question_ar": "كيف تتحقق مما إذا كان البروفيسور عصام حجي قال هذا فعلاً؟"
+      },
+      "correct_detection": {
+        "techniques_present": ["Real authority (Essam Heggy is a real Egyptian-French planetary geologist)", "False quote attribution", "Suppression conspiracy", "Urgency (save lives)"],
+        "verdict": "false",
+        "explanation_en": "Essam Heggy is a real scientist (CNRS/USC), but no such report exists in his published work or public statements. EHCSS (Egyptian High Commission for Scientific Studies) dam safety assessments, reviewed annually, show no imminent structural failure risk. Verify by checking Heggy's actual Google Scholar profile and official EHCSS reports.",
+        "explanation_ar": "عصام حجي عالم حقيقي (CNRS/USC)، لكن لا يوجد مثل هذا التقرير في أعماله المنشورة أو تصريحاته العلنية. تقييمات سلامة السد الصادرة عن الجهات المصرية المختصة والتي تُراجع سنوياً لا تُظهر خطر انهيار وشيك.",
+        "source_urls": ["https://scholar.google.com/citations?user=essam-heggy", "https://www.nature.com/articles/s41561-021-00775-4"]
+      }
+    },
+    {
+      "id": 3,
+      "technique_name": "Cherry-Picking Evidence",
+      "technique_name_ar": "انتقاء الأدلة الانتقائي",
+      "technique_description_en": "Presenting only the evidence that supports a predetermined conclusion while ignoring contradicting evidence. Real science requires looking at ALL available evidence, especially systematic reviews and meta-analyses, not single selected studies.",
+      "technique_description_ar": "تقديم الأدلة الداعمة للنتيجة المحددة مسبقاً فقط مع تجاهل الأدلة المعارضة. يستلزم العلم الحقيقي النظر في جميع الأدلة المتاحة، لا سيما المراجعات المنهجية والتحليلات الشاملة، لا دراسة واحدة منتقاة.",
+      "inoculation_example": {
+        "context_en": "Structure: 'A study published in [journal] found that [substance/practice] reduces [disease] by 40%!' — Notice: one study is cited. What about the 20 studies that found no effect? Always ask: 'What does the totality of evidence say?'",
+        "context_ar": "الشكل: 'دراسة نُشرت في [مجلة] وجدت أن [مادة/ممارسة] تقلل [مرضاً] بنسبة 40%!' — لاحظ: دراسة واحدة هي المستشهد بها. ماذا عن الـ 20 دراسة التي لم تجد أي تأثير؟ اسأل دائماً: 'ماذا تقول مجمل الأدلة؟'",
+        "red_flags": ["Single study cited", "No mention of conflicting research", "No meta-analysis or systematic review referenced", "Extraordinary effect size without qualification"]
+      },
+      "test_example": {
+        "stimulus_en": "An Egyptian health influencer posts: 'A study from Al-Azhar University found that cupping (hijama) reduces high blood pressure by 25% — BETTER than medication! Throw away your pills!' (The post links to one pilot study of 30 patients, RCT, unpublished).",
+        "stimulus_ar": "مؤثر صحي مصري ينشر: 'دراسة من جامعة الأزهر وجدت أن الحجامة تقلل ضغط الدم المرتفع بنسبة 25% — أفضل من الدواء! ارمِ حبوبك!' (المنشور يرتبط بدراسة أولية واحدة على 30 مريضاً، غير منشورة).",
+        "question_en": "Identify the cherry-picking in this post and explain what evidence you would need to evaluate the claim fairly.",
+        "question_ar": "حدد الانتقاء الانتقائي في هذا المنشور واشرح الأدلة التي تحتاجها لتقييم الادعاء بعدالة."
+      },
+      "correct_detection": {
+        "techniques_present": ["Single pilot study", "No systematic review cited", "Dangerous advice (stop medication)", "Appeal to tradition (cupping is Islamic)", "Unpublished/unverifiable source"],
+        "verdict": "misleading",
+        "explanation_en": "A 2019 systematic review in Complementary Therapies in Clinical Practice (Lee et al.) found limited evidence for cupping in hypertension — small sample sizes, methodological weaknesses. No major cardiology guideline recommends cupping as a replacement for antihypertensives. Stopping blood pressure medication without medical supervision is dangerous and potentially fatal.",
+        "explanation_ar": "مراجعة منهجية ٢٠١٩ في مجلة Complementary Therapies in Clinical Practice (لي وآخرون) وجدت أدلة محدودة على الحجامة في ارتفاع ضغط الدم — عينات صغيرة، نقاط ضعف منهجية. لا يوصي أي دليل إرشادي رئيسي لأمراض القلب بالحجامة بديلاً عن أدوية ضغط الدم.",
+        "source_urls": ["https://pubmed.ncbi.nlm.nih.gov/31541838/", "https://www.ahajournals.org/doi/10.1161/HYP.0000000000000065"]
+      }
+    },
+    {
+      "id": 4,
+      "technique_name": "Conspiracy Theory Framework",
+      "technique_name_ar": "إطار نظرية المؤامرة",
+      "technique_description_en": "Conspiracy theories share recurring structural features: an all-powerful hidden group (Big Pharma, Freemasons, 'the West') secretly controls events; evidence against the conspiracy is 'proof' they are hiding it; the believer is a special insider who can 'see through' the deception. These structural features are cognitive red flags, independent of content.",
+      "technique_description_ar": "تتشارك نظريات المؤامرة سمات هيكلية متكررة: مجموعة مخفية قوية (شركات الأدوية، الماسونيون، 'الغرب') تتحكم سراً في الأحداث؛ الأدلة ضد المؤامرة هي 'دليل' على إخفائها؛ المؤمن بها 'مطلع داخلي' يستطيع كشف الخداع. هذه الميزات الهيكلية علامات تحذيرية معرفية بصرف النظر عن المحتوى.",
+      "inoculation_example": {
+        "context_en": "CONSPIRATORIAL TEMPLATE (recognize it): 'They' [vague powerful group] are doing [bad thing] to 'us' [Egyptians/Muslims/Arabs]. 'The media is lying' [mainstream rejection = evidence of cover-up]. 'Those who debunk this are paid agents.' [immunization of conspiracy against refutation].",
+        "context_ar": "القالب التآمري (تعرف عليه): 'هم' [مجموعة غامضة قوية] يفعلون [شيئاً سيئاً] بـ 'نحن' [المصريين/المسلمين/العرب]. 'الإعلام يكذب' [رفض السائد = دليل على التستر]. 'من يكذّب هذا عميل مأجور.' [تحصين المؤامرة ضد الدحض].",
+        "red_flags": ["Vague all-powerful 'They'", "Mainstream rejection used as proof", "Accusation of paid debunkers", "Unfalsifiable claims"]
+      },
+      "test_example": {
+        "stimulus_en": "Egyptian Twitter thread: 'The Suez Canal expansion was DELIBERATELY sabotaged by Israel and the US using HAARP weather control to cause Ever Given to block the canal and damage Egypt economically. Zionists control Lloyd's of London which insured the ship. Why isn't the Egyptian media reporting this? Because they're controlled too.'",
+        "stimulus_ar": "خيط على تويتر المصري: 'توسع قناة السويس أُفسد عمداً من قِبل إسرائيل وأمريكا باستخدام السيطرة على الطقس بـ HAARP لتسبب انحشار إيفر جيفن وإضرار الاقتصاد المصري. الصهاينة يسيطرون على لويدز التي أمّنت السفينة. لماذا لا يُغطي الإعلام المصري هذا؟ لأنه مسيطر عليه هو أيضاً.'",
+        "question_en": "Identify the structural conspiracy features in this thread.",
+        "question_ar": "حدد السمات الهيكلية التآمرية في هذا الخيط."
+      },
+      "correct_detection": {
+        "techniques_present": ["Powerful hidden group (Israel, US, Zionists)", "Unfalsifiable (media silence = proof of control)", "HAARP pseudoscience", "Circular reasoning (every denial proves conspiracy)", "Victim narrative (Egypt as target)"],
+        "verdict": "false",
+        "explanation_en": "The Ever Given grounding (March 23-29, 2021) was attributed to strong winds (40-knot gusts, causing the 400m vessel to go sideways) and reduced visibility in sandstorm conditions. The Suez Canal Authority's official investigation, Egyptian court proceedings, and independent maritime analyses all confirm mechanical/weather causation. HAARP is a US ionospheric research facility that cannot control global weather; this has been repeatedly confirmed by atmospheric physicists.",
+        "explanation_ar": "جنوح إيفر جيفن (٢٣-٢٩ مارس ٢٠٢١) نُسب إلى رياح قوية (عواصف 40 عقدة أدت لانحراف السفينة البالغ طولها 400 متر) وانخفاض الرؤية في العاصفة الرملية. تحقيق هيئة قناة السويس الرسمي والإجراءات القضائية المصرية والتحليلات البحرية المستقلة تؤكد كلها الأسباب الميكانيكية/المناخية.",
+        "source_urls": ["https://www.suezcanal.gov.eg/English/MediaCenter/Pages/NewsDetails.aspx?newsId=1101", "https://www.emsa.europa.eu/"]
+      }
+    },
+    {
+      "id": 5,
+      "technique_name": "Ad Hominem & Discrediting Sources",
+      "technique_name_ar": "الهجوم الشخصي والتشكيك في المصادر",
+      "technique_description_en": "Instead of addressing the evidence, ad hominem attacks the credibility of the person or institution presenting it. 'Don't trust [scientist/doctor/organization] because they are [corrupt/foreign agents/atheists/paid by pharma].' Attacking the messenger doesn't change the validity of the message.",
+      "technique_description_ar": "بدلاً من معالجة الأدلة، تهاجم الهجمات الشخصية مصداقية الشخص أو المؤسسة التي تقدمها. 'لا تثق في [عالم/طبيب/منظمة] لأنهم [فاسدون/عملاء أجانب/ملحدون/مأجورون من شركات الأدوية].' مهاجمة الرسول لا تغير صحة الرسالة.",
+      "inoculation_example": {
+        "context_en": "STRUCTURE: 'Dr. [Name] says vaccines are safe — but did you know Dr. [Name] received FUNDING from [Pfizer/Gates Foundation]? He's not telling you the truth!' Notice: the argument about vaccine safety is never actually addressed — only the source is attacked.",
+        "context_ar": "الشكل: 'الدكتور [اسم] يقول إن اللقاحات آمنة — لكن هل تعلم أن الدكتور [اسم] تلقى تمويلاً من [فايزر/مؤسسة بيل غيتس]؟ إنه لا يخبرك بالحقيقة!' لاحظ: الحجة المتعلقة بسلامة اللقاحات لم تُعالج أبداً — فقط المصدر يتعرض للهجوم.",
+        "red_flags": ["Attacks person not argument", "Funding source = automatic invalidation claim", "No counter-evidence provided", "Labeling as traitor/agent/atheist"]
+      },
+      "test_example": {
+        "stimulus_en": "Egyptian health page post: 'The Egyptian Ministry of Health says fluoride toothpaste is safe for children. BUT: The Ministry is influenced by Western dental corporations! These same corporations pay Egyptian dentists to lie to you! Don't trust these Western agents who want to poison our children!'",
+        "stimulus_ar": "منشور على صفحة صحية مصرية: 'وزارة الصحة المصرية تقول إن معجون أسنان الفلورايد آمن للأطفال. لكن: الوزارة متأثرة بشركات الأسنان الغربية! هذه الشركات تدفع لأطباء الأسنان المصريين ليكذبوا عليك! لا تثق في هؤلاء العملاء الغربيين الذين يريدون تسميم أطفالنا!'",
+        "question_en": "What ad hominem techniques are used here, and what would a proper evidence-based counter-argument look like?",
+        "question_ar": "ما أساليب الهجوم الشخصي المستخدمة هنا، وكيف يبدو الرد المضاد القائم على الأدلة الصحيح؟"
+      },
+      "correct_detection": {
+        "techniques_present": ["Attack on institution (Ministry)", "Conspiracy of corporate influence", "Xenophobia (Western agents)", "Nationalism weaponization (our children)", "No evidence against fluoride safety presented"],
+        "verdict": "false",
+        "explanation_en": "Fluoride toothpaste safety (1000-1500 ppm for children over 3) is supported by the Cochrane Collaboration (systematic review of 96 trials, Walsh et al. 2019), the WHO, and the ADA. The Egyptian Dental Syndicate recommendations align with international evidence. The 'corporate influence' claim is an ad hominem that does not engage with the scientific evidence.",
+        "explanation_ar": "سلامة معجون الأسنان بالفلورايد (1000-1500 جزء في المليون للأطفال فوق 3 سنوات) مدعومة بتعاون كوكران (مراجعة منهجية لـ 96 تجربة، والش وآخرون ٢٠١٩) ومنظمة الصحة العالمية ورابطة الأسنان الأمريكية. توصيات نقابة الأسنان المصرية تتوافق مع الأدلة الدولية.",
+        "source_urls": ["https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD002280.pub3/full", "https://www.who.int/news-room/fact-sheets/detail/oral-health"]
+      }
+    },
+    {
+      "id": 6,
+      "technique_name": "False Dilemma (Black-and-White Thinking)",
+      "technique_name_ar": "الخيار الثنائي الزائف (التفكير الأبيض والأسود)",
+      "technique_description_en": "Presenting only two extreme options when many intermediate positions exist. 'Either you support [position A] completely, or you are an enemy.' This technique eliminates nuance, forces tribal allegiance, and prevents rational evaluation of complex issues.",
+      "technique_description_ar": "تقديم خيارين متطرفين فقط بينما توجد العديد من المواقف الوسطية. 'إما تدعم [الموقف أ] كلياً، أو أنت عدو.' يُقضي هذا الأسلوب على الدقة ويُجبر على الولاء القبلي ويمنع التقييم العقلاني للقضايا المعقدة.",
+      "inoculation_example": {
+        "context_en": "STRUCTURE: 'Either you agree that [Egypt's/Islam's/the nation's] [policy/teaching] is 100% correct, or you are a traitor/kafir/Zionist agent.' Watch for: absolute binary, no middle ground, loyalty test framing.",
+        "context_ar": "الشكل: 'إما أن توافق على أن [سياسة/تعليم مصر/الإسلام/الأمة] صحيح 100%، أو أنت خائن/كافر/عميل صهيوني.' احذر من: ثنائية مطلقة، لا وسط، صياغة اختبار الولاء.",
+        "red_flags": ["Only two options presented", "Loyalty test framing", "Label or shame the nuanced position", "No acknowledgment of complexity"]
+      },
+      "test_example": {
+        "stimulus_en": "Egyptian political post: 'Either you support the GERD negotiations approach 100% as Egypt's government has handled them, or you are working against Egypt's national interests and helping Ethiopia. There is NO third option. Choose your side.'",
+        "stimulus_ar": "منشور سياسي مصري: 'إما أن تدعم نهج مفاوضات سد النهضة 100% كما أدارتها حكومة مصر، أو أنت تعمل ضد المصالح الوطنية المصرية وتساعد إثيوبيا. لا يوجد خيار ثالث. اختر جانبك.'",
+        "question_en": "Identify the false dilemma and list at least three legitimate middle-ground positions on GERD that the post excludes.",
+        "question_ar": "حدد الخيار الثنائي الزائف وأدرج على الأقل ثلاثة مواقف وسطية مشروعة بشأن سد النهضة يستبعدها المنشور."
+      },
+      "correct_detection": {
+        "techniques_present": ["False dilemma (100% support vs. traitor)", "Patriotism weaponization", "Elimination of legitimate criticism", "Tribal framing"],
+        "verdict": "manipulative",
+        "explanation_en": "Complex geopolitical issues like GERD involve many legitimate positions: supporting Egypt's water rights while critiquing specific negotiation tactics; advocating for more AU mediation; supporting international arbitration; accepting partial agreements while monitoring implementation. None of these positions make one 'pro-Ethiopia.' Critical analysis of policy is a civic right, not treason.",
+        "explanation_ar": "القضايا الجيوسياسية المعقدة كسد النهضة تتضمن مواقف مشروعة عديدة: دعم حقوق مصر المائية مع نقد أساليب تفاوضية محددة؛ المناصرة لمزيد من الوساطة الأفريقية؛ دعم التحكيم الدولي؛ قبول اتفاقيات جزئية مع مراقبة التنفيذ. لا يجعل أي من هذه المواقف أحداً 'مؤيداً لإثيوبيا'.",
+        "source_urls": ["https://www.aljazeera.com/tag/gerd/", "https://www.un.org/en/conferences/water/about"]
+      }
+    },
+    {
+      "id": 7,
+      "technique_name": "Trojan Horse Memes (Humor as Manipulation)",
+      "technique_name_ar": "الميمات كحصان طروادة (الفكاهة كأداة تلاعب)",
+      "technique_description_en": "Memes and humorous content are used as Trojan horses for misinformation because humor lowers critical defenses. You laugh first, and the false claim sneaks in. Research shows humor-packaged misinformation is harder to identify and more likely to be shared (Tandoc et al. 2021, Journal of Information Technology & Politics).",
+      "technique_description_ar": "تُستخدم الميمات والمحتوى الفكاهي كحصان طروادة للمعلومات المضللة لأن الفكاهة تخفض دفاعات التفكير النقدي. تضحك أولاً، ثم يتسلل الادعاء الكاذب. تُظهر الأبحاث أن المعلومات المضللة المُعبَّأة بالفكاهة أصعب في الكشف وأكثر احتمالاً للمشاركة.",
+      "inoculation_example": {
+        "context_en": "STRUCTURE: Funny Egyptian meme with bold-text punchline that contains an unverified factual claim. Example frame: [Comedic image] + 'FACT: [Egyptian historical revisionism or health myth]' — the humor makes you lower your guard.",
+        "context_ar": "الشكل: ميم مصري مضحك مع نص عريض يحتوي على ادعاء واقعي غير موثق. إطار مثال: [صورة كوميدية] + 'حقيقة: [مراجعة تاريخية مصرية أو أسطورة صحية]' — الفكاهة تجعلك تُخفض حارسك.",
+        "red_flags": ["Humor preceding factual claim", "Bold 'FACT:' label without citation", "Claim would be rejected if stated seriously", "High share count from amusement not accuracy"]
+      },
+      "test_example": {
+        "stimulus_en": "Viral Egyptian meme showing a grinning pharaoh statue with text: '😂😂😂 FUN FACT: Ancient Egyptians invented aspirin from willow trees 3000 years BEFORE Europe. European medicine = STOLEN from us! Share to spread the truth about our ancestors! 🇪🇬🇪🇬'",
+        "stimulus_ar": "ميم مصري منتشر يُظهر تمثال فرعون يبتسم مع نص: '😂😂😂 حقيقة ممتعة: المصريون القدماء اخترعوا الأسبرين من الصفصاف قبل أوروبا بـ 3000 سنة. الطب الأوروبي = مسروق منا! شارك لنشر الحقيقة عن أجدادنا! 🇪🇬🇪🇬'",
+        "question_en": "Separate the humor from the factual claims and evaluate each claim's accuracy.",
+        "question_ar": "افصل الفكاهة عن الادعاءات الواقعية وقيّم دقة كل ادعاء."
+      },
+      "correct_detection": {
+        "techniques_present": ["Humor as guard-lowering mechanism", "Nationalism appeal", "Cherry-picked partial truth embedded in exaggeration", "Historical revisionism"],
+        "verdict": "misleading",
+        "explanation_en": "Partial truth: The Ebers Papyrus (c.1550 BCE) does mention willow bark for pain, and Hippocrates described it in 400 BCE. The active compound salicylic acid was isolated by Johann Andreas Buchner (1828) and synthesized as aspirin by Felix Hoffmann at Bayer (1897). So Egyptians did use willow medicinally before Europe — but calling modern pharmaceutical aspirin 'stolen' misrepresents patent history and scientific development. The meme contains a kernel of truth amplified into a misleading nationalist narrative.",
+        "explanation_ar": "جزئية الحقيقة: يذكر بردي إيبيرس (حوالي 1550 ق.م.) لحاء الصفصاف لتسكين الألم، ووصفه أبقراط في 400 ق.م. عُزل المركب الفعال حمض الساليسيليك على يد بوكنر (1828) وصُنع كأسبرين بواسطة هوفمان في بايير (1897). إذن المصريون القدماء استخدموا الصفصاف طبياً قبل أوروبا — لكن وصف أسبرين الصيدلاني الحديث بـ 'مسروق' يُحرّف تاريخ براءات الاختراع والتطور العلمي.",
+        "source_urls": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1382282/", "https://www.sciencemuseum.org.uk/objects-and-stories/medicine/aspirin"]
+      }
+    },
+    {
+      "id": 8,
+      "technique_name": "Manufactured Consensus (Bandwagon Effect)",
+      "technique_name_ar": "الإجماع المصطنع (تأثير عربة الموكب)",
+      "technique_description_en": "Creating the impression that 'everyone believes this' or 'millions have confirmed this' to trigger social conformity. Misinformation spreads partly because we are social creatures who look to others for truth. Bot networks, comment manipulation, and share-padding manufacture false social proof.",
+      "technique_description_ar": "إيجاد انطباع بأن 'الجميع يؤمن بهذا' أو 'الملايين أكدوا هذا' لإثارة المطابقة الاجتماعية. تنتشر المعلومات المضللة جزئياً لأننا مخلوقات اجتماعية نستند لآراء الآخرين في تحديد الحقيقة. تصنع شبكات الروبوتات وتلاعب التعليقات وتضخيم المشاركات دليلاً اجتماعياً زائفاً.",
+      "inoculation_example": {
+        "context_en": "STRUCTURE: 'Over 10 MILLION Egyptians have shared this truth!' or video showing comment section of thousands agreeing. Ask: Are these real people? Can I verify this? High share count ≠ accurate content.",
+        "context_ar": "الشكل: 'أكثر من 10 مليون مصري شاركوا هذه الحقيقة!' أو فيديو يُظهر قسم تعليقات بآلاف الموافقين. اسأل: هل هؤلاء أشخاص حقيقيون؟ هل يمكنني التحقق من ذلك؟ عدد المشاركات الكبير ≠ محتوى دقيق.",
+        "red_flags": ["Unverifiable share/view count claims", "Comment sections flooded with identical responses", "'Everyone in Egypt knows this'", "Social proof substituting for evidence"]
+      },
+      "test_example": {
+        "stimulus_en": "An Egyptian YouTube video titled 'THE TRUTH ABOUT WATER PRIVATIZATION IN EGYPT — 8.5 MILLION VIEWS — WHAT THEY DON'T WANT YOU TO KNOW' claims that all Egyptian tap water is being sold to foreign companies. The video has 250,000 likes and thousands of comments saying 'this is 100% true, wake up Egyptians!'",
+        "stimulus_ar": "فيديو مصري على يوتيوب بعنوان 'الحقيقة عن خصخصة المياه في مصر — 8.5 مليون مشاهدة — ما يخفونه عنك' يدعي أن جميع مياه الصنبور المصرية تُباع لشركات أجنبية. الفيديو يحوي 250,000 إعجاب وآلاف التعليقات التي تقول 'هذا 100% صحيح، صحّوا يا مصريين!'",
+        "question_en": "How would you investigate whether this view count represents genuine public opinion versus manufactured consensus?",
+        "question_ar": "كيف تستقصي ما إذا كان هذا العدد من المشاهدات يمثل رأياً عاماً حقيقياً أم إجماعاً مصطنعاً؟"
+      },
+      "correct_detection": {
+        "techniques_present": ["View count as social proof", "Comment flood (potential bot activity)", "Suppression conspiracy framing", "Claim without official source cross-check"],
+        "verdict": "requires_investigation",
+        "investigation_steps": [
+          "Check if the claim is verified in official Egyptian NOPWASD (National Organization for Potable Water and Sanitary Drainage) reports",
+          "Use Bot Sentinel or Social Blade to analyze comment authenticity",
+          "Search Egyptian Parliament records for any water privatization legislation",
+          "Cross-reference with USAID Egypt Water reports (publicly available)",
+          "Check World Bank Egypt Water Sector data (open access)"
+        ],
+        "explanation_en": "Egypt's water supply is primarily managed by NOPWASD under the Housing Ministry. While some PPP (Public-Private Partnership) arrangements exist for infrastructure, full privatization to foreign companies is not established policy. High view counts can be purchased; the Egyptian government has faced criticism for legitimate water access inequalities without the 'full foreign sale' framing. Verify with primary government sources, not view counts.",
+        "explanation_ar": "إمدادات المياه في مصر تُدار أساساً من قِبل الشركة القومية لمياه الشرب والصرف الصحي التابعة لوزارة الإسكان. بينما توجد ترتيبات شراكة بين القطاعين العام والخاص للبنية التحتية، لا تُعدّ الخصخصة الكاملة للشركات الأجنبية سياسة معتمدة. يمكن شراء أعداد المشاهدات.",
+        "source_urls": ["https://www.nopwasd.gov.eg/", "https://www.worldbank.org/en/country/egypt/overview", "https://www.usaid.gov/egypt/water-and-sanitation"]
+      }
+    }
+  ],
+  "summary": {
+    "techniques_learned": [
+      "Emotional Appeal (Fear/Outrage Hijacking)",
+      "False Authority",
+      "Cherry-Picking Evidence",
+      "Conspiracy Theory Framework",
+      "Ad Hominem & Discrediting Sources",
+      "False Dilemma",
+      "Trojan Horse Memes",
+      "Manufactured Consensus"
+    ],
+    "key_takeaway_en": "You are now psychologically inoculated against these 8 manipulation techniques. Research shows that recognizing techniques — not just debunking specific claims — provides durable resistance against novel misinformation (Roozenbeek et al., 2022, Annual Review of Psychology).",
+    "key_takeaway_ar": "أنت الآن محصّن نفسياً ضد هذه الأساليب الثمانية للتلاعب. تُظهر الأبحاث أن التعرف على الأساليب — لا مجرد دحض ادعاءات محددة — يوفر مقاومة دائمة ضد المعلومات المضللة الجديدة.",
+    "inoculation_score_contribution": 8,
+    "source_urls": [
+      "https://www.nature.com/articles/s41562-022-01383-z",
+      "https://www.cam.ac.uk/research/features/fighting-fake-news-with-prebunking",
+      "https://inoculation.science/"
+    ]
+  }
+}

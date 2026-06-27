@@ -1,0 +1,26 @@
+{
+  "id": "day9_source_evaluation",
+  "phase": 0,
+  "week": 2,
+  "day": 9,
+  "title": "Source Evaluation",
+  "titleAr": "تقييم المصادر",
+  "type": "source_evaluation",
+  "difficulty": 2,
+  "estimatedMinutes": 15,
+  "exercises": [
+    {
+      "id": 1,
+      "claim": "A YouTube health coach with 3M views says Mediterranean diet prevents ALL heart disease.",
+      "claimAr": "مدرب صحي على يوتيوب بـ3مليون مشاهدة يقول حمية البحر المتوسط تمنع كل أمراض القلب",
+      "truthValue": "misleading",
+      "category": "health",
+      "difficulty": 3,
+      "explanation": "PREDIMED trial (NEJM 2013) shows reduced risk but prevents ALL is absolute. Views do not equal expertise.",
+      "sources": [
+        "https://www.nejm.org/doi/full/10.1056/nejmoa1200303"
+      ],
+      "cognitivebiasAtPlay": "Halo Effect"
+    }
+  ]
+}

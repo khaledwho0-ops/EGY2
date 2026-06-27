@@ -1,0 +1,130 @@
+{
+  "id": "day37_straw_man",
+  "phase": 1,
+  "week": 6,
+  "day": 37,
+  "title": "The Straw Man — Arguing Against a Fake Version",
+  "titleAr": "رجل القش — المجادلة ضد نسخة مُلفَّقة",
+  "description": "A straw man replaces your real argument with a weaker, easier-to-attack version — then defeats that fake version and pretends to have defeated you. Recognising it is how you keep the real debate alive.",
+  "descriptionAr": "رجل القش بيستبدل حجّتك الحقيقية بنسخة أضعف وأسهل للهجوم — بعدين بيهزم النسخة المزيّفة ويتصوّر إنه هزمك. التعرّف عليه هو الطريقة إنك تفضل النقاش الحقيقي قائم.",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A doctor says: \"The Taybat diet has not been tested in randomized controlled trials for the specific conditions it claims to treat.\" A follower replies: \"So you're saying nobody should care about their diet at all?\" What happened here?",
+      "claimAr": "دكتور بيقول: «نظام الطيبات ما اتختبرش في تجارب عشوائية محكَمة للحالات المحدّدة اللي بيدّعي علاجها.» تابع بيردّ: «يعني بتقول محدش يهتمّش بأكله خالص؟» إيه اللي حصل هنا؟",
+      "options": [
+        "The follower correctly summarised the doctor's argument",
+        "A straw man: the doctor said nothing about diet in general — the follower replaced a specific methodological claim with an extreme and easy-to-ridicule position",
+        "The follower raised a valid concern",
+        "The doctor's argument was too technical to understand"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is a classic straw man. The doctor's actual argument was narrow and specific: no RCT evidence for specific disease claims. The follower swapped that for an absurd general claim ('nobody should care about diet') that is easy to mock and easy to defeat. The real argument — about standards of proof — was never addressed. The tell: after 'so you're saying…', check whether what follows is actually what was said.",
+      "explanationAr": "دي شخصية رجل القش الكلاسيكية. حجة الدكتور الفعلية كانت ضيّقة ومحدّدة: لا دليل من تجارب عشوائية على ادعاءات الأمراض المحدّدة. التابع استبدلها بادعاء عام سخيف («محدش يهتمّش بأكله») سهل السخرية منه وهزيمته. الحجة الحقيقية — عن معايير الدليل — ما اتناقشتش أبداً. العلامة: بعد «يعني بتقول...»، افحص إذا كان اللي جاي بعدها هو فعلاً اللي اتقال.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Straw Man"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: if someone responds to your argument with 'that's an extreme position,' and your actual position was moderate and nuanced, that response has successfully refuted your argument.",
+      "claimAr": "صح ولا غلط: لو حد ردّ على حجّتك بـ«ده موقف متطرّف»، وموقفك الفعلي كان معتدلاً ودقيقاً، يبقى الردّ ده نجح في تفنيد حجّتك.",
+      "options": ["True — calling it extreme is itself a refutation", "False — calling your position extreme is only relevant if they have accurately described it first"],
+      "correctAnswer": 1,
+      "explanation": "False. Calling your position extreme is only relevant if they've accurately described it. If they exaggerated or distorted it first, they are fighting a straw man they built, not your actual argument. Calibration check: if this felt 'obviously false,' notice how often in real conversations people still accept the distortion rather than calmly reclaiming their actual position.",
+      "explanationAr": "غلط. وصف موقفك بالتطرّف بيكون وجيهاً بس لو وصفوه بدقة الأول. لو هم بالغوا أو شوّهوا، يبقى بيحاربوا رجل قش بنوه هُم. ملاحظة المعايرة: لو ده حسّ «غلط بوضوح»، لاحظ قد إيه في المحادثات الحقيقية الناس بتقبل التشويه بدل ما تستعيد موقفها الفعلي بهدوء.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Straw Man"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A parent tells a relative: \"I'm not saying the viral diet is worthless — I'm saying our diabetic son should not stop his insulin without specialist advice, because the diet hasn't been tested for T1 diabetes.\" The relative replies: \"You just want him to stay on medicine forever and never try anything natural.\"",
+      "claimAr": "والد بيقول لقريب: «ما بقولش إن النظام الغذائي المنتشر عديم القيمة — بقول إن ابننا المصاب بالسكري محدش يوقّف أنسولينه من غير نصيحة متخصّص». القريب بيردّ: «إنت عايزه يفضل على الدوا للأبد وما يجرّبش أي حاجة طبيعية».",
+      "options": [
+        "The relative accurately captured the parent's concern",
+        "Straw man: the parent said nothing about 'forever' or 'never natural' — the relative inflated a narrow safety concern into an extreme blanket position",
+        "The parent was being overprotective",
+        "Both are correct in different ways"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: what was the parent's ACTUAL argument, and what did the relative replace it with? Why does this substitution make the real safety issue harder to address?",
+        "promptAr": "بكلماتك: إيه كانت حجة الوالد الفعلية، وبإيه استبدلها القريب؟ وليه الاستبدال ده بيخلّي القضية الأمنية الحقيقية أصعب للمعالجة؟"
+      },
+      "explanation": "The parent's actual position was precise and safety-focused: don't stop a tested medication for an untested dietary claim. The relative turned this into a cartoon of closed-mindedness. The harm: the actual safety question never got addressed — and in real Taybat cases, this exact pattern (relative dismisses careful concern as extreme) preceded documented deaths.",
+      "explanationAr": "موقف الوالد كان دقيقاً ومركّزاً على السلامة: ما تقفّلش دواء مُختبَر بسبب ادعاء غذائي غير مُختبَر. القريب حوّله لكاريكاتير من الجمود الفكري. الضرر: السؤال الأمني الحقيقي ما اتعولجش أبداً — وفي حالات الطيبات الحقيقية، النمط ده بالظبط سبق وفيات موثّقة.",
+      "sources": [
+        "EAL-case-001:redflag-8",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Straw Man"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "Which of these is a straw man of the position: 'We should require clinical trials before marketing a diet as a cure for diabetes'? The two distortions both feel like they're just 'taking the argument to its logical conclusion.'",
+      "claimAr": "أيٍّ من دي رجل قش لموقف «ينبغي اشتراط تجارب سريرية قبل تسويق حمية كعلاج للسكري»؟ التشويهان الاتنين بيحسّوا إنهم بس «بياخدوا الحجة لنتيجتها المنطقية».",
+      "prompt": "Before answering: what is the ACTUAL claim? What would a fair restatement look like that doesn't inflate or shrink it?",
+      "promptAr": "قبل الإجابة: إيه الادعاء الفعلي؟ وإيه اللي هتبدو عليه إعادة صياغة عادلة ما بتضخّمش ولا بتصغّرش؟",
+      "modelPoints": [
+        "The actual claim is narrow: clinical trials are a prerequisite for a specific therapeutic claim about a specific disease. It says nothing about banning diets or preventing information sharing.",
+        "Option A ('you think no new treatments should ever be tried') inflates a procedural standard into a blanket ban — that's a straw man.",
+        "Option B ('you want all health information regulated') inflates a specific evidentiary claim into total censorship — also a straw man.",
+        "A fair restatement: 'You're saying a trial is a prerequisite before calling a diet a cure for diabetes — that's a standard evidence bar, not a ban on anything.' That's what should be debated."
+      ],
+      "modelPointsAr": [
+        "الادعاء الفعلي ضيّق: التجارب السريرية شرط مسبق لادعاء علاجي محدّد عن مرض محدّد. ما بيقولش حاجة عن حظر الحميات أو منع تداول المعلومات.",
+        "الخيار أ («تفكّر إن لا علاجات جديدة تتجرّب أبداً») يضخّم معيار إجرائي لحظر شامل — ده رجل قش.",
+        "الخيار ب («عايز كل المعلومات الصحية تتنظَّم») يضخّم ادعاء أدلة محدّد لرقابة شاملة — ده كمان رجل قش.",
+        "إعادة صياغة عادلة: «بتقول إن التجربة شرط مسبق قبل ما تتسمّى الحمية علاجاً للسكري — ده معيار دليل، مش حظر لأي حاجة». ده اللي المفروض يتناقش."
+      ],
+      "explanation": "Straw men often feel like they're 'following the logic' — but they're smuggling in extra content. The tell is that the restatement is broader, more absolute, or more extreme than the original. The defence is to offer the fair version first: 'What I'm actually saying is...'",
+      "explanationAr": "رجال القش غالباً بيحسّوا إنهم «بيتبعوا المنطق» — لكنهم بيهرّبوا محتوى إضافي. العلامة هي إن إعادة الصياغة أعمّ أو أكثر إطلاقاً أو أشدّ تطرّفاً من الأصل. الدفاع هو إنك تقدّم النسخة العادلة الأول: «اللي بقوله فعلاً هو...»",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.bmj.com/content/359/bmj.j4849"
+      ],
+      "cognitivebiasAtPlay": "Straw Man"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "straw man construction",
+      "techniqueAr": "بناء رجل القش",
+      "task": "Feel it from the inside. Someone says: 'People should check the source of a health claim before sharing it.' Write 2 sentences that straw-man this position — make it sound extreme and unreasonable without addressing the actual point.",
+      "taskAr": "احسّ بيها من جوّه. حد بيقول: «الناس المفروض تتحقق من مصدر الادعاء الصحي قبل ما تشاركه». اكتب 2 جُملة بتحوّلوا لرجل قش — خلّيه يبان متطرّف وغير معقول من غير ما تناقش النقطة الفعلية.",
+      "tells": [
+        "The restatement is more absolute than the original ('you can NEVER share anything' vs 'check the source').",
+        "It introduces content that was never in the original ('so you think everyone is lying').",
+        "It triggers defensiveness rather than engaging the argument.",
+        "It sounds like a direct quote but isn't — the 'so you're saying…' formula is a red flag.",
+        "Defeating the straw man feels like winning while the real question goes unanswered."
+      ],
+      "tellsAr": [
+        "إعادة الصياغة أكثر إطلاقاً من الأصل («ما تشاركش أي حاجة أبداً» مقابل «تحقق من المصدر»).",
+        "بيُدخل محتوى ما كانش في الأصل («يعني بتفكّر إن الكل بيكدب»).",
+        "بيُثير دفاعية بدل ما يتعامل مع الحجة.",
+        "بيبدو زي اقتباس مباشر لكنه مش — صيغة «يعني بتقول...» علامة تحذير.",
+        "هزيمة رجل القش بتحسّ كفوز بينما السؤال الحقيقي يفضل بلا إجابة."
+      ],
+      "explanation": "Building the distortion yourself makes the move visceral. The defence in real life: when you hear 'so you're saying…', pause and check whether what follows is actually what was said. If not, gently reclaim your position: 'That's not quite what I meant — what I actually said was…'",
+      "explanationAr": "بناء التشويه بنفسك بيخلّي الحركة محسوسة. الدفاع في الواقع: لمّا تسمع «يعني بتقول...»، توقّف وافحص إذا كان اللي جاي بعدها هو فعلاً اللي اتقال. لو لأ، استعد موقفك بهدوء: «مش ده قصدي بالظبط — اللي قلته فعلاً هو...»",
+      "sources": [
+        "https://www.jmir.org/2023/1/e49255",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Straw Man"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "day39_appeal_to_authority",
+  "phase": 1,
+  "week": 6,
+  "day": 39,
+  "title": "Appeal to Authority — When Credentials Mislead",
+  "titleAr": "مغالطة السلطة — لمّا الشهادات تضلّل",
+  "description": "Expertise is real and genuinely matters — but only within its domain. Today you learn to ask: is this authority actually qualified for this specific claim?",
+  "descriptionAr": "الخبرة حقيقية ومهمة فعلاً — لكن في نطاقها فقط. النهاردة بتتعلّم تسأل: هل هذه السلطة مؤهَّلة فعلاً لهذا الادعاء المحدّد؟",
+  "type": "logic",
+  "difficulty": 3,
+  "estimatedMinutes": 15,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "The originator of the viral Taybat diet system was a board-certified anaesthesiologist. Many followers trusted his nutritional and oncological prescriptions because 'he is a real doctor.' What is the logical flaw?",
+      "claimAr": "مبتكر نظام الطيبات الغذائي الشائع كان طبيب تخدير معتمد. كثير من الأتباع وثقوا في وصفاته الغذائية والأورامية لأنه «دكتور حقيقي». إيه الخلل المنطقي؟",
+      "options": [
+        "None — a doctor is qualified for all medical topics",
+        "Appeal to authority outside domain: his credentials were in anaesthesia, not clinical nutrition, endocrinology, or oncology — the fields his recommendations actually concerned",
+        "He was not really a doctor, so it was fraud",
+        "Followers were wrong to trust any doctor"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the domain problem with appeal to authority: credentials are specific, not general. A real doctorate in anaesthesia confers genuine expertise in pain management, surgical sedation, and critical care — not in long-term dietary management of cancer or type-1 diabetes. Trusting him on diet because he is qualified in anaesthesia is the same logical structure as trusting a licensed civil engineer on heart surgery.",
+      "explanationAr": "دي مشكلة النطاق في مغالطة السلطة: الشهادات محدّدة، مش عامّة. دكتوراه حقيقية في التخدير بتمنح خبرة فعلية في إدارة الألم والتخدير الجراحي والعناية المركزة — لا في الإدارة الغذائية طويلة المدى للسرطان أو سكري النوع الأول. الثقة فيه في التغذية لأنه مؤهَّل في التخدير لها نفس التركيب المنطقي زي الثقة في مهندس مدني معتمد في جراحة القلب.",
+      "sources": [
+        "EAL-case-001:redflag-7",
+        "https://plato.stanford.edu/entries/fallacies/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: when evaluating a specific medical claim, 'consensus of specialists in that exact field' is a more relevant authority than 'one brilliant scientist from a different field who disagrees.'",
+      "claimAr": "صح ولا غلط: عند تقييم ادعاء طبي محدّد، «إجماع المتخصّصين في هذا المجال بالتحديد» هو سلطة أكثر وجاهةً من «عالم بارع من مجال آخر يختلف».",
+      "options": ["False — a genius dissenter is always more credible than a group", "True — scientific authority is domain-calibrated and consensus carries more weight than individual dissent"],
+      "correctAnswer": 1,
+      "explanation": "True. Scientific authority is domain-calibrated. The consensus of cardiologists on heart disease, endocrinologists on diabetes, or oncologists on cancer protocols carries far more evidential weight than one dissenting voice — even a brilliant one from another field. Brilliant people from outside a field are valuable for generating new hypotheses, not for overriding the accumulated evidence of a specialist community. Calibration check: if the 'lone genius' option felt compelling, that pull is the romantic narrative of the lone rebel — powerful emotionally, but not how evidence works.",
+      "explanationAr": "صح. السلطة العلمية مُعايَرة حسب المجال. إجماع أطباء القلب في أمراض القلب يحمل وزناً أدلةً أكثر بكثير من صوت واحد مخالف — حتى لو كان بارعاً من مجال آخر. ملاحظة المعايرة: لو خيار «العبقري الوحيد» بدا مُقنِعاً، الشعور ده هو الرواية الرومانسية للمتمرّد الوحيد — قوية عاطفياً، لكن مش كده الأدلة بتشتغل.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A famous football player stars in an advertisement saying a probiotic supplement cures IBS. A neighbour says: 'He wouldn't lie — he's so famous.' Should his endorsement count as evidence?",
+      "claimAr": "لاعب كرة قدم مشهور بيظهر في إعلان بيقول إن مكمّل البروبيوتيك ده بيشفي القولون العصبي. جارك بيقول: «هو مش هيكدب — هو مشهور جداً». هل تزكيته تُعدّ دليلاً؟",
+      "options": [
+        "Yes — his fame means he has done his research",
+        "Yes — celebrities have no reason to lie",
+        "No — his expertise is in football, not gastroenterology; celebrity endorsement is not clinical evidence",
+        "Maybe — it depends on how famous he is"
+      ],
+      "correctAnswer": 2,
+      "selfExplain": {
+        "prompt": "In your own words: what is the difference between social influence and scientific authority? Why does famousness not transfer to medical credibility?",
+        "promptAr": "بكلماتك: إيه الفرق بين التأثير الاجتماعي والسلطة العلمية؟ وليه الشهرة ما بتنتقلش للمصداقية الطبية؟"
+      },
+      "explanation": "No. A celebrity has zero domain expertise on IBS. His 'authority' is social influence, not scientific credibility. The question for any health claim is always the same: is there peer-reviewed, domain-specific evidence? Celebrity endorsement is marketing, not medicine — and mixing the two is how millions are spent on supplements that systematic reviews show have no effect beyond placebo for specific conditions.",
+      "explanationAr": "لأ. المشهور ليس لديه أي خبرة في مجال القولون العصبي. «سلطته» هي تأثير اجتماعي، مش مصداقية علمية. السؤال لأي ادعاء صحي دائماً نفسه: هل هناك دليل مُحكَّم ومحدّد المجال؟ تزكية المشاهير تسويق لا طبّ — وخلط الاثنين هو الطريقة التي تُنفَق بها الملايين على مكمّلات المراجعات المنهجية بتُري أنها ليس لها تأثير يتجاوز الوهمي لحالات محدّدة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "https://www.nhs.uk/conditions/probiotics/"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "decompose",
+      "claim": "Map this argument: \"You should trust the Taybat diet system. Its originator was a real doctor — so he understood the human body. He also had 3 million followers who shared testimonials. And the government banned it, which proves it was working, because governments suppress what threatens their pharmaceutical revenues.\"",
+      "claimAr": "فكّك الحُجّة دي: «المفروض تثق في نظام الطيبات. مبتكره كان دكتور حقيقي — يبقى كان فاهم جسم الإنسان. وكمان عنده 3 مليون تابع بيشاركوا شهادات. والحكومة حظرته، وده بيثبت إنه كان بيشتغل، لأن الحكومات بتقمع اللي بيهدّد إيراداتها من الأدوية».",
+      "parts": [
+        { "text": "You should trust the Taybat diet system.", "textAr": "المفروض تثق في نظام الطيبات.", "role": "conclusion" },
+        { "text": "Its originator was a board-certified doctor.", "textAr": "مبتكره كان طبيب معتمد.", "role": "premise" },
+        { "text": "3 million followers shared positive testimonials.", "textAr": "3 مليون تابع شاركوا شهادات إيجابية.", "role": "premise" },
+        { "text": "The government ban proves the system was effective.", "textAr": "الحظر الحكومي يثبت إن النظام كان فعّالاً.", "role": "premise" },
+        { "text": "(Unstated) A doctor qualified in any field is qualified in all medical fields; testimonials prove efficacy; and bans are always suppression of truth.", "textAr": "(غير مذكور) طبيب مؤهَّل في أي مجال هو مؤهَّل في كل المجالات الطبية؛ والشهادات تثبت الفعّالية؛ والحظر دائماً قمع للحقيقة.", "role": "assumption" },
+        { "text": "Governments suppress what threatens their pharmaceutical revenues.", "textAr": "الحكومات بتقمع اللي بيهدّد إيراداتها من الأدوية.", "role": "irrelevant" }
+      ],
+      "explanation": "Three premises stack, but the hidden ASSUMPTION holding them together is broken in three places: (1) medical credentials don't transfer across domains; (2) testimonials don't prove efficacy without controls; (3) bans happen for many reasons (public harm, fraud) — they are not automatic evidence of effectiveness. The 'government suppression' premise is irrelevant to whether the system works — it attacks the messenger without addressing the evidence.",
+      "explanationAr": "ثلاث مقدّمات بتتراكم، لكن الافتراض الخفي اللي بيجمعهم مكسور في ثلاث أماكن: (1) الشهادات الطبية ما بتنتقلش بين المجالات؛ (2) الشهادات لا تثبت الفعّالية بدون ضوابط؛ (3) الحظر بيحصل لأسباب كتيرة (ضرر عام، احتيال) — مش دليل تلقائي على الفعّالية. مقدّمة «القمع الحكومي» مش وجيهة لسؤال هل النظام بيشتغل — بتهاجم الرسول من غير ما تناقش الدليل.",
+      "sources": [
+        "EAL-case-001:redflag-7",
+        "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/oxford-centre-for-evidence-based-medicine-levels-of-evidence-march-2009"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A neighbour says their chiropractor told them to stop blood pressure medication and use herbal drops instead. Your neighbour trusts him completely because 'he's been in practice for 30 years.' It seems reasonable to defer to someone with that much experience.",
+      "claimAr": "جارك بيقول إن معالج العظام قاله يوقّف دواء الضغط ويستخدم قطرات عشبية بدله. جارك يثق فيه كلياً لأنه «شغّال في مهنته من 30 سنة». بيبدو معقولاً إنك تخضع لحد عنده كل التجربة دي.",
+      "prompt": "What would have to be true if the '30 years = qualified' reasoning is flawed? What questions would an epistemically careful person ask before deferring?",
+      "promptAr": "لو منطق «30 سنة = مؤهَّل» معيب، إيه اللي لازم يكون صح؟ وإيه الأسئلة اللي هيسألها شخص حذر معرفياً قبل ما يُسلِّم أمره؟",
+      "modelPoints": [
+        "If the reasoning is flawed, we'd expect: 30 years of chiropractic practice built expertise in musculoskeletal conditions — not in hypertension pharmacology, which is a separate specialist domain.",
+        "Experience length does not transfer across domains any more than credentials do. '30 years of experience' at the wrong task is 30 years of experience at the wrong task.",
+        "The right questions: Is chiropractic in the domain of hypertension management? Is there peer-reviewed evidence that these herbal drops affect blood pressure at a clinically meaningful dose?",
+        "Red Flag #8: instructing a patient to stop a clinically tested medication — regardless of who gives the instruction — is a documented pattern in pseudomedicine cases."
+      ],
+      "modelPointsAr": [
+        "لو المنطق معيب، هنتوقع: 30 سنة من ممارسة الكيروبراكتيك بنت خبرة في الحالات العضلية الهيكلية — مش في صيدلة ارتفاع ضغط الدم، اللي هي مجال متخصّص منفصل.",
+        "طول التجربة ما بيتنقلش بين المجالات أكتر من الشهادات. «30 سنة خبرة» في المهمة الغلط هي 30 سنة خبرة في المهمة الغلط.",
+        "الأسئلة الصح: هل الكيروبراكتيك ضمن نطاق إدارة ارتفاع ضغط الدم؟ وهل في دليل مُحكَّم إن القطرات دي بتأثّر على ضغط الدم بجرعة ذات معنى سريري؟",
+        "علامة الخطر رقم 8: توجيه مريض لإيقاف دواء مُختبَر سريرياً — بغض النظر عمّن يعطي التعليمات — هو نمط موثَّق في حالات الطب الزائف."
+      ],
+      "explanation": "Two problems compound: appeal to authority outside domain (chiropractic experience ≠ hypertension pharmacology) and Red Flag #8 (stopping tested medication). Uncontrolled hypertension causes stroke and heart attack — the stakes make the fallacy dangerous, not just logically wrong.",
+      "explanationAr": "مشكلتان تتراكمان: مغالطة السلطة خارج النطاق (خبرة الكيروبراكتيك ≠ صيدلة ضغط الدم) وعلامة الخطر رقم 8 (إيقاف دواء مُختبَر). ارتفاع ضغط الدم غير المُتحكَّم فيه يسبّب السكتة الدماغية والنوبة القلبية — المخاطر بتجعل المغالطة خطرة، مش مجرد خاطئة منطقياً.",
+      "sources": [
+        "EAL-case-001:redflag-7",
+        "EAL-case-001:redflag-8",
+        "https://www.who.int/news-room/fact-sheets/detail/hypertension"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    }
+  ]
+}

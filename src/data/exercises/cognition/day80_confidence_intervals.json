@@ -1,0 +1,118 @@
+{
+  "id": "day80_confidence_intervals",
+  "phase": 2,
+  "week": 12,
+  "day": 80,
+  "title": "Confidence Intervals — The Range Behind the Number",
+  "titleAr": "فترات الثقة — المدى وراء الرقم",
+  "description": "A single number from a study is always an estimate. The confidence interval shows you the realistic range — and tells you whether a result is actually useful, or just technically non-zero.",
+  "descriptionAr": "رقم واحد من دراسة هو دايماً تقدير. فترة الثقة بتوريك المدى الواقعي — وبتقولك إذا كانت النتيجة مفيدة فعلاً، أم مجرد غير صفرية من الناحية التقنية.",
+  "type": "science",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/4-statements-probability-and-confidence",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A study finds that a supplement reduces fasting blood sugar by 2 mmol/L (95% CI: 1.8 to 2.2 mmol/L). A seller quotes only '2 mmol/L reduction.' Why does the confidence interval matter?",
+      "claimAr": "دراسة بتلاقي إن مكمّل بيقلّل سكر الصيام بـ2 مليمول/لتر (فترة ثقة 95%: من 1.8 لـ2.2 مليمول/لتر). بائع بيقتبس بس «انخفاض 2 مليمول/لتر». ليه فترة الثقة مهمة؟",
+      "options": [
+        "It doesn't matter — the number 2 is what counts",
+        "The CI shows the range of plausible true effects — a tight CI (1.8–2.2) here signals a consistent, reliable finding",
+        "The CI is only for statisticians",
+        "The CI makes the result less reliable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A 95% confidence interval means: if we repeated this study 100 times under the same conditions, about 95 of those studies would produce a CI that contains the true effect. A narrow CI (1.8–2.2) tells you the estimate is precise and the result is consistent. If instead the CI were 0.1–3.9, the true effect could be tiny or substantial — much less useful for a medical decision.",
+      "explanationAr": "فترة الثقة 95% تعني: لو كررنا الدراسة دي 100 مرة في نفس الشروط، تقريباً 95 من الدراسات دي هتنتج فترة ثقة بتحتوي التأثير الحقيقي. فترة ثقة ضيّقة (1.8–2.2) بتقولك التقدير دقيق والنتيجة متسقة. لو كانت الفترة 0.1–3.9 بدل كده، التأثير الحقيقي ممكن يكون ضئيل أو كبير — أقل فائدة بكتير لقرار طبي.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/4-statements-probability-and-confidence"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "A herbal product's study reports: \"Reduced inflammation marker by 15% (95% CI: –3% to 33%).\" The seller claims this is proof the product works. Is the CI alone enough to support that claim?",
+      "claimAr": "دراسة منتج عشبي بتحكي: «قلّل مؤشر الالتهاب بـ15% (فترة ثقة 95%: من -3% لـ33%).» البائع بيقول ده دليل على إن المنتج شغّال. فترة الثقة لوحدها كافية لتدعم الادعاء ده؟",
+      "options": [
+        "Yes — 15% reduction is impressive",
+        "No — the CI crosses zero (–3%), meaning we cannot rule out that the true effect is zero or even harmful at conventional significance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When the 95% confidence interval includes zero (or in this case crosses into negative territory), the study cannot rule out that the true effect is zero — the result is not statistically significant even if the point estimate looks good. A CI of –3% to +33% means the product may reduce inflammation by up to a third, or it may slightly increase it. That enormous uncertainty should appear in any honest discussion of the product.",
+      "explanationAr": "لمّا فترة الثقة 95% بتتضمّن الصفر (أو في الحالة دي بتعدّي لأرقام سالبة)، الدراسة ما تقدرش تستبعد إن التأثير الحقيقي صفر — النتيجة مش ذات أهمية إحصائية حتى لو التقدير النقطي بيبان كويس. فترة ثقة من -3% لـ+33% يعني المنتج ممكن يقلّل الالتهاب لحد ثُلث، أو ممكن يزيده قليلاً. عدم اليقين الضخم ده المفروض يظهر في أي نقاش أمين عن المنتج.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/4-statements-probability-and-confidence",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198538/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 3,
+      "mechanic": "recognize",
+      "claim": "True or false: a '95% confidence interval' means there is a 95% chance the true value lies inside that specific interval.",
+      "claimAr": "صح ولا غلط: «فترة الثقة 95%» تعني في احتمال 95% إن القيمة الحقيقية موجودة جوه الفترة المحددة دي.",
+      "correctAnswer": false,
+      "myth_en": "95% CI means 95% chance the true value is inside it.",
+      "myth_ar": "فترة الثقة 95% تعني احتمال 95% إن القيمة الحقيقية جوّاها.",
+      "explanation": "False — and this is one of the most common misinterpretations in health media. The true value either is or isn't in that interval; we just don't know which. What '95%' refers to is the long-run procedure: if you repeated the study many times, 95% of the CIs you construct would capture the true value. Think of it as a measure of the method's reliability, not a probability statement about this one interval.",
+      "explanationAr": "غلط — وده من أكثر التفسيرات الغلط شيوعاً في إعلام الصحة. القيمة الحقيقية إما موجودة في الفترة دي أو مش موجودة؛ نحن بس ما عارفينش أيّهما. اللي يشير إليه «95%» هو الإجراء على المدى الطويل: لو كررت الدراسة مرات كتير، 95% من فترات الثقة اللي بتبنيها هتحتوي القيمة الحقيقية. فكّر فيها كقياس لموثوقية المنهج، مش تصريح باحتمالات عن الفترة الواحدة دي.",
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/4-statements-probability-and-confidence"
+      ],
+      "cognitivebiasAtPlay": "Illusory Correlation"
+    },
+    {
+      "id": 4,
+      "mechanic": "self_explain",
+      "claim": "A promoter of the viral «نظام الطيبات» diet reports that in their follower testimonials, diabetes recovery rates were high. They quote a single percentage: 70%. Without a confidence interval, the crucial missing piece is the range of uncertainty around that 70%.",
+      "claimAr": "مروّج نظام «الطيبات» بيحكي إن في شهادات أتباعهم معدلات تعافي السكري كانت عالية. بيقتبس نسبة واحدة: 70%. من غير فترة الثقة، المعلومة الأساسية الناقصة هي مدى عدم اليقين حول الـ70% دي.",
+      "options": [
+        "The cost of the diet",
+        "The range of uncertainty around that 70% — is it actually 40%–95%, making it nearly meaningless as a precise claim?"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: if the 70% came from only 10 testimonials, why is that single number almost useless — and what would make it meaningful?",
+        "promptAr": "بكلماتك: لو الـ70% جت من 10 شهادات بس، ليه الرقم الواحد ده بلا معنى تقريباً — وإيه اللي هيخلّيه ذا معنى؟"
+      },
+      "explanation": "A single percentage like '70%' hides its own precision. If it came from 10 testimonials, the confidence interval might span from 35% to 93% — a range so wide it tells you almost nothing. If it came from 1,000 verified clinical cases, the CI would be much narrower and more informative. But the deeper problem remains: testimonials are not a clinical measure of 'recovery' to begin with. The CI exposes how thin the claim's precision really is.",
+      "explanationAr": "نسبة واحدة زي «70%» بتخبّي دقّتها الذاتية. لو جت من 10 شهادات، فترة الثقة ممكن تمتد من 35% لـ93% — مدى واسع لدرجة إنه ما بيقولكش تقريباً حاجة. لو جت من 1,000 حالة سريرية مُتحقَّق منها، الفترة كانت هتكون أضيق وأكثر معلوماتية. لكن المشكلة الأعمق فاضلة: الشهادات مش قياساً سريرياً للـ«تعافي» من البداية. فترة الثقة بتكشف قد إيه دقة الادعاء رقيقة فعلاً.",
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/4-statements-probability-and-confidence"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "A promoter says: 'Both studies give the same result — a blood-pressure drug reduces pressure by 8 mmHg.' Study A: 95% CI –7 to –9. Study B: 95% CI –2 to –14.",
+      "claimAr": "مروّج بيقول: «كلتا الدراستين بيدّوا نفس النتيجة — دواء ضغط بيقلّل الضغط بـ8 ملم زئبق.» دراسة أ: فترة ثقة 95% من -7 لـ-9. دراسة ب: فترة ثقة 95% من -2 لـ-14.",
+      "prompt": "What would you have to believe about confidence intervals for this claim to be correct? And what does the CI difference actually reveal?",
+      "promptAr": "إيه اللي هتبقى محتاج تصدّقه عن فترات الثقة عشان الادعاء ده يكون صح؟ وإيه اللي الفرق في الفترة بيكشفه فعلاً؟",
+      "modelPoints": [
+        "The claim treats point estimates as the whole story — which would only be valid if CIs were irrelevant to clinical decisions.",
+        "Study A's tight CI (–7 to –9 mmHg) shows the drug reliably reduces pressure around 8 mmHg across the population — high precision.",
+        "Study B's wide CI (–2 to –14) means the drug could reduce pressure by only 2 mmHg (barely useful) or by 14 mmHg (potentially too much for some patients) — the result is imprecise.",
+        "Same average, dramatically different clinical reliability. For a doctor choosing a dosage, Study A is far more actionable.",
+        "The promoter's claim is technically true but practically misleading: the CI is not a minor detail — it is where the clinical decision lives."
+      ],
+      "modelPointsAr": [
+        "الادعاء بيتعامل مع التقديرات النقطية كأنها القصة كلها — اللي سيكون صحيحاً فقط لو كانت فترات الثقة غير ذات صلة بالقرارات السريرية.",
+        "الفترة الضيّقة في دراسة أ (-7 لـ-9 ملم زئبق) بتوضّح إن الدواء بشكل موثوق بيقلّل الضغط حوالي 8 ملم زئبق في المجتمع — دقة عالية.",
+        "الفترة الواسعة في دراسة ب (-2 لـ-14) تعني الدواء ممكن يقلّل الضغط بـ2 ملم زئبق بس (بالكاد مفيد) أو بـ14 ملم زئبق (ممكن يكون كتير أوي لبعض المرضى) — النتيجة غير دقيقة.",
+        "نفس المتوسط، موثوقية سريرية مختلفة جذرياً. لطبيب بيختار جرعة، دراسة أ أكثر قابلية للتطبيق بكتير.",
+        "ادعاء المروّج صحيح تقنياً لكن مضلّل عملياً: فترة الثقة مش تفصيلة صغيرة — هي المكان اللي بيعيش فيه القرار السريري."
+      ],
+      "sources": [
+        "https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/4-statements-probability-and-confidence",
+        "https://www.who.int/news-room/fact-sheets/detail/hypertension"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

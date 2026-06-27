@@ -1,0 +1,98 @@
+{
+  "id": "collider_bias",
+  "phase": 2,
+  "week": 17,
+  "day": 35,
+  "title": "Collider Bias",
+  "titleAr": "تحيز المتصادم",
+  "description": "Understand collider bias (Berkson's paradox), how conditioning on a common effect creates spurious associations, and real-world examples including the obesity paradox.",
+  "descriptionAr": "فهم تحيز المتصادم (مفارقة بيركسون)، وكيف يخلق التكييف على تأثير مشترك ارتباطات زائفة، والأمثلة الواقعية بما في ذلك مفارقة السمنة.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Collider Bias (Berkson's Paradox)",
+    "nameAr": "تحيز المتصادم (مفارقة بيركسون)",
+    "definition": "A collider is a variable that is caused by two or more other variables. In a DAG: A → C ← B, where C is the collider. Conditioning on (adjusting for, stratifying by, or restricting to) a collider opens a spurious non-causal path between A and B, creating a biased association even if A and B are truly independent. This is the opposite of confounding: confounders should be adjusted for, but colliders should NOT be adjusted for.",
+    "definitionAr": "المتصادم هو متغير ناتج عن متغيرين أو أكثر. في DAG: أ → ج ← ب. التكييف على المتصادم يفتح مساراً زائفاً غير سببي بين أ و ب. هذا عكس المتغير المربك.",
+    "realWorldExample": "Berkson's paradox (1946): in hospital-based studies, diseases appear negatively correlated even when they are independent in the population, because being hospitalized (the collider) is caused by either disease. The obesity paradox — where obesity appears protective in patients with heart failure — may be partly explained by collider bias through selection into the study population.",
+    "detectionMethod": "Draw a DAG and identify colliders (variables with two or more arrows pointing INTO them). Do not condition on colliders or their descendants. Use inverse probability weighting to correct for collider stratification when selection is unavoidable."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "In a hospital-based study, researchers find that diabetes and broken bones are negatively correlated: patients with diabetes are LESS likely to also have fractures. In the general population, no such association exists. What explains this finding?",
+      "promptAr": "في دراسة مستشفائية، يجد الباحثون أن السكري وكسور العظام مرتبطان سلبياً: مرضى السكري أقل احتمالاً لأن يكون لديهم كسور أيضاً. في عامة السكان، لا يوجد ارتباط كهذا. ما التفسير؟",
+      "options": [
+        "Berkson's paradox (collider bias): hospitalization is a collider caused by both diabetes and fractures. Among hospitalized patients, knowing someone has diabetes makes fractures less necessary to explain their presence, creating a spurious negative association",
+        "The hospital sample is too small",
+        "This is confounding by age",
+        "Diabetes protects against fractures through calcium metabolism"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This is the classic Berkson's paradox (1946). Hospitalization (C) is a collider: Diabetes (A) → Hospitalization ← Fractures (B). By restricting the study to hospitalized patients (conditioning on C), a spurious negative association is created. Among hospitalized patients, if someone doesn't have diabetes, they must have some other reason for hospitalization (such as fractures), creating an artificial negative correlation.",
+      "explanationAr": "هذه مفارقة بيركسون الكلاسيكية. الاستشفاء هو متصادم. بتقييد الدراسة على المستشفى، يُخلق ارتباط سلبي زائف."
+    },
+    {
+      "id": 2,
+      "type": "scenario",
+      "prompt": "The 'obesity paradox' refers to the finding that among patients with established heart failure, obese patients have BETTER survival than normal-weight patients. DAG: Obesity → Heart Failure ← Other Risk Factors. Why might this be collider bias rather than a true protective effect?",
+      "promptAr": "مفارقة السمنة تشير إلى أن مرضى قصور القلب البدناء لديهم بقاء أفضل من ذوي الوزن الطبيعي. DAG: السمنة → قصور القلب ← عوامل خطر أخرى. لماذا قد يكون هذا تحيز متصادم وليس تأثيراً وقائياً حقيقياً؟",
+      "options": [
+        "Obesity genuinely improves survival through metabolic reserves",
+        "Heart failure is a collider: conditioning on having heart failure selects for different pathways into the disease. Normal-weight heart failure patients may have more severe genetic or other risk factors driving their disease, making them sicker than obese patients whose heart failure is primarily weight-driven",
+        "The studies used incorrect BMI cutoffs",
+        "Obese patients receive better medical care"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Lajous et al. (2014) and Banack & Kaufman (2014) argued that the obesity paradox is substantially explained by collider bias. Heart failure (C) is caused by both obesity (A) and other severe risk factors (B) like genetics, valve disease, or cardiomyopathy. Among HF patients (conditioning on C), normal-weight patients reached HF through these other severe pathways, making them sicker with worse prognosis. Obese patients may have a 'milder' form of HF driven mainly by weight, hence better survival.",
+      "explanationAr": "قصور القلب هو متصادم ناتج عن السمنة وعوامل خطر شديدة أخرى. بين مرضى القصور، مرضى الوزن الطبيعي وصلوا للمرض عبر مسارات أشد خطورة."
+    },
+    {
+      "id": 3,
+      "type": "identify",
+      "prompt": "A university admissions study (inspired by Berkeley admissions, Bickel et al., 1975) finds that female applicants have a LOWER overall acceptance rate than males. However, within each department, females have EQUAL or HIGHER acceptance rates. What structural bias explains this?",
+      "promptAr": "دراسة قبول جامعي تجد أن المتقدمات لديهن معدل قبول إجمالي أقل من الذكور. لكن داخل كل قسم، المتقدمات لديهن معدلات قبول مساوية أو أعلى. ما التحيز الهيكلي الذي يفسر هذا؟",
+      "options": [
+        "Statistical calculation error",
+        "Direct gender discrimination",
+        "Simpson's paradox: women applied disproportionately to more competitive (lower acceptance rate) departments. Department is a collider (influenced by gender through application choices and by competitiveness), so the aggregate analysis is misleading",
+        "Sample size differences between departments"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Berkeley admissions case (Bickel, Hammel & O'Connell, 1975) is a famous example of Simpson's paradox involving collider-like structure. Women disproportionately applied to departments with low acceptance rates (like English), while men applied to departments with high acceptance rates (like Engineering). The aggregate statistics showed apparent discrimination, but department-level analysis revealed the opposite. The department variable, influenced by both gender and selectivity, acts as a mediating/collider structure.",
+      "explanationAr": "حالة قبول بيركلي هي مثال شهير على مفارقة سيمبسون. النساء تقدمن بشكل غير متناسب للأقسام ذات معدلات القبول المنخفضة، بينما الرجال تقدموا للأقسام ذات المعدلات العالية."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "In the DAG: Talent → Hollywood Success ← Physical Attractiveness, Hollywood Success is a collider. If we study only successful Hollywood actors, what spurious association might we observe between talent and attractiveness?",
+      "promptAr": "في DAG: الموهبة → النجاح في هوليوود ← الجاذبية الجسدية. النجاح هو متصادم. إذا درسنا فقط ممثلي هوليوود الناجحين، ما الارتباط الزائف الذي قد نلاحظه؟",
+      "options": [
+        "No association would be observed",
+        "Talent and attractiveness would appear positively correlated",
+        "Talented actors would appear more attractive",
+        "A negative correlation: among successful actors, those who are less attractive must compensate with more talent, and vice versa. This creates a spurious negative association between talent and attractiveness that does not exist in the general population"
+      ],
+      "correctAnswer": 3,
+      "explanation": "This is a textbook collider bias example. In the general population, talent and attractiveness may be independent. But among successful actors (conditioning on the collider), a negative association emerges: less attractive actors must be extremely talented to succeed, while less talented actors must be very attractive. This 'explaining away' effect (Pearl, 2009) creates an inverse relationship in the selected subpopulation. The same logic applies to restaurant survival (conditioning on staying open) creating a spurious negative association between food quality and location quality.",
+      "explanationAr": "بين الممثلين الناجحين، الأقل جاذبية يجب أن يكونوا أكثر موهبة والعكس. هذا 'تأثير التفسير البديل' يخلق ارتباطاً عكسياً في المجموعة المختارة."
+    },
+    {
+      "id": 5,
+      "type": "scenario",
+      "prompt": "A COVID-19 study found that smokers had LOWER rates of hospitalized COVID-19 than non-smokers, leading some to suggest smoking was protective. DAG: Smoking → COVID Severity ← Age/Comorbidities; Smoking → Hospital Testing ← Symptoms. Which collider bias mechanism best explains this?",
+      "promptAr": "دراسة COVID-19 وجدت أن المدخنين لديهم معدلات أقل من COVID-19 المستشفوي مقارنة بغير المدخنين. أي آلية تحيز متصادم تفسر هذا بشكل أفضل؟",
+      "options": [
+        "Selection bias via collider: hospital-based studies condition on hospitalization (a collider caused by COVID, smoking-related diseases, and other conditions). Among hospitalized patients, non-smokers need COVID to explain their presence, while smokers may be there for other reasons. Additionally, early testing was restricted to symptomatic/hospitalized patients, another collider",
+        "Smokers had better immune systems",
+        "The studies were too small to detect the true effect",
+        "Nicotine blocks ACE2 receptors, genuinely protecting against COVID"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Griffith et al. (2020, Nature Communications) demonstrated that the apparent protective effect of smoking on COVID-19 was largely explained by collider bias. Hospitalization is influenced by both COVID-19 severity and smoking-related diseases. Conditioning on hospitalization creates a spurious negative association. Additionally, index event bias (restricting to COVID-positive cases who were tested, where testing probability was itself influenced by symptoms and access) further distorted the association. Similar collider bias affected early studies of COVID-19 risk factors.",
+      "explanationAr": "أوضح غريفيث وآخرون أن التأثير الوقائي الظاهري للتدخين على COVID-19 كان بسبب تحيز المتصادم. الاستشفاء يتأثر بشدة COVID وأمراض التدخين. التكييف على الاستشفاء يخلق ارتباطاً سلبياً زائفاً."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "week": 9,
+    "days": [57, 58, 59, 60, 61, 62, 63],
+    "description": "Week 9: Scientific Literacy - Statistical Fallacies (Part 1)",
+    "dailyPattern": {
+      "scientificFallaciesPerDay": 6,
+      "components": ["paper-auditor", "forensic-image", "evidence", "osint-investigator", "threat-map"],
+      "deepRealChunk": "cases/chunk2.json",
+      "fridayInspection": ["threat-map", "rumor-heatmap"]
+    }
+  },
+  {
+    "week": 10,
+    "days": [64, 65, 66, 67, 68, 69, 70],
+    "description": "Week 10: Scientific Literacy - Statistical Fallacies (Part 2) & Methodological (Part 1)",
+    "dailyPattern": {
+      "scientificFallaciesPerDay": 6,
+      "components": ["paper-auditor", "forensic-c2pa", "evidence", "osint-investigator", "threat-map"],
+      "deepRealChunk": "cases/chunk3.json",
+      "fridayInspection": ["threat-map", "rumor-heatmap"]
+    }
+  },
+  {
+    "week": 11,
+    "days": [71, 72, 73, 74, 75, 76, 77],
+    "description": "Week 11: Scientific Literacy - Methodological Fallacies (Part 2)",
+    "dailyPattern": {
+      "scientificFallaciesPerDay": 6,
+      "components": ["paper-auditor", "forensic-image", "evidence", "osint-investigator", "threat-map"],
+      "deepRealChunk": "cases/chunk4.json",
+      "fridayInspection": ["threat-map", "rumor-heatmap"]
+    }
+  },
+  {
+    "week": 12,
+    "days": [78, 79, 80, 81, 82, 83, 84],
+    "description": "Week 12: Scientific Literacy - Methodological Fallacies (Part 3)",
+    "dailyPattern": {
+      "scientificFallaciesPerDay": 6,
+      "components": ["paper-auditor", "forensic-c2pa", "evidence", "osint-investigator", "threat-map"],
+      "deepRealChunk": "cases/chunk5.json",
+      "fridayInspection": ["threat-map", "rumor-heatmap"]
+    }
+  },
+  {
+    "week": 13,
+    "days": [85, 86, 87, 88, 89, 90, 91],
+    "description": "Week 13: Scientific Literacy - Communication & Framing (Part 1)",
+    "dailyPattern": {
+      "scientificFallaciesPerDay": 6,
+      "components": ["paper-auditor", "forensic-image", "evidence", "osint-investigator", "threat-map"],
+      "deepRealChunk": "cases/chunk6.json",
+      "fridayInspection": ["threat-map", "rumor-heatmap"]
+    }
+  },
+  {
+    "week": 14,
+    "days": [92, 93, 94, 95, 96, 97, 98],
+    "description": "Week 14: Scientific Literacy - Communication & Framing (Part 2)",
+    "dailyPattern": {
+      "scientificFallaciesPerDay": 6,
+      "components": ["paper-auditor", "forensic-c2pa", "evidence", "osint-investigator", "threat-map"],
+      "deepRealChunk": "cases/chunk7.json",
+      "fridayInspection": ["threat-map", "rumor-heatmap"]
+    }
+  }
+]

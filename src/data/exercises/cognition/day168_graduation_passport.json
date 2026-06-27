@@ -1,0 +1,73 @@
+{
+  "id": "day168_graduation_passport",
+  "phase": 4,
+  "week": 24,
+  "day": 168,
+  "title": "Graduation — Your Inoculation Passport",
+  "titleAr": "التخرّج — جواز سفر التلقيح بتاعك",
+  "description": "The last day is about you, not a claim. The deepest defense isn't a fact you memorized — it's a habit of mind you now carry.",
+  "descriptionAr": "آخر يوم عنك إنت، مش عن ادعاء. أعمق دفاع مش حقيقة حفظتها — ده عادة ذهنية بقيت شايلها.",
+  "type": "reflection",
+  "difficulty": 3,
+  "estimatedMinutes": 14,
+  "source": "https://www.nature.com/articles/s41599-025-06143-6",
+  "exercises": [
+    {
+      "id": 1, "mechanic": "recognize",
+      "claim": "After 168 days, what is the truest summary of what protects you from superstition?",
+      "claimAr": "بعد 168 يوم، إيه أصدق تلخيص لـاللي بيحميك من الخرافة؟",
+      "options": ["Knowing more facts than others", "Being smarter than average", "A trained habit of mind: pause, ask for the source, tolerate 'I don't know', and watch your own wants", "Never trusting anything"],
+      "correctAnswer": 2,
+      "explanation": "The fight against superstition was never a battle of information — it's psychological and moral self-training. Smart people build elaborate illusions; facts alone don't immunize. What protects you is the habit: slow down, ask 'what's the source, not how good is the story', sit with uncertainty, and notice which answer you WANT to be true. That habit is your passport.",
+      "explanationAr": "محاربة الخرافة ما كانتش أبداً معركة معلومات — دي تدريب نفسي وأخلاقي للنفس. الأذكياء بيبنوا أوهام معقّدة؛ الحقائق لوحدها ما بتحصّنش. اللي بيحميك العادة: بطّئ، اسأل «إيه المصدر، مش القصة حلوة قد إيه»، اقعد مع عدم اليقين، ولاحظ أنهي إجابة *نفسك* تكون صح. العادة دي هي جوازك.",
+      "sources": ["https://www.nature.com/articles/s41599-025-06143-6"],
+      "cognitivebiasAtPlay": "Bias Blind Spot"
+    },
+    {
+      "id": 2, "mechanic": "self_explain",
+      "claim": "Everyone has a 'zone of fragility' — a fear or need through which a comforting false belief could slip in.",
+      "claimAr": "كل واحد عنده «منطقة هشاشة» — خوف أو احتياج ممكن يدخل منه معتقد غلط مريّح.",
+      "options": ["I have one too", "I'm immune"],
+      "correctAnswer": 0,
+      "selfExplain": { "prompt": "Name your own most likely zone of fragility — fear of the unknown? wanting to feel special? hating helplessness? needing things to be fair? — and one claim that could exploit it.", "promptAr": "سمّي منطقة الهشاشة الأرجح عندك — خوف من المجهول؟ رغبة تحسّ إنك مميّز؟ كره العجز؟ احتياج إن الأمور تكون عادلة؟ — وادعاء واحد ممكن يستغلّها." },
+      "explanation": "The graduate's humility: the question is never just 'how did THEY fall for it' but 'which myth could I believe if it touched MY need?'. Knowing your own opening is the strongest guard — you can't defend a door you pretend isn't there.",
+      "explanationAr": "تواضع الخرّيج: السؤال أبداً مش بس «هما وقعوا فيها إزاي» لكن «أنهي خرافة ممكن أصدّقها لو لمست احتياجي أنا؟». معرفة مدخلك أنت أقوى حارس — ما تقدرش تحمي باب بتتظاهر إنه مش موجود.",
+      "sources": ["https://journals.sagepub.com/doi/10.1177/0963721417718261"],
+      "cognitivebiasAtPlay": "Intellectual Humility"
+    },
+    {
+      "id": 3, "mechanic": "calibrate", "calibrated": true,
+      "claim": "Now that you're trained, should your confidence that 'I could never be fooled' be HIGH?",
+      "claimAr": "دلوقتي وإنت متدرّب، المفروض ثقتك إن «مستحيل أتخدع» تكون عالية؟",
+      "options": ["Yes — I'm trained now", "No — staying a little humble and alert is exactly what keeps the training working"],
+      "correctAnswer": 1,
+      "explanation": "The trap at the finish line is graduation-overconfidence: 'now I'm immune.' The opposite of the gullible person isn't the arrogant skeptic who rejects everything — it's the calibrated mind that stays discerning AND humble. If you felt very sure just now, smile at it: that flicker is the lifelong work.",
+      "explanationAr": "الفخّة عند خطّ النهاية هي ثقة-التخرّج الزائدة: «دلوقتي أنا محصّن». عكس الشخص السهل التصديق مش المتشكّك المغرور اللي بيرفض كل حاجة — ده العقل المُعايَر اللي بيفضل مميِّز *و*متواضع. لو حسّيت بثقة كبيرة دلوقتي، ابتسم لها: الومضة دي هي شغل العمر.",
+      "sources": ["https://onlinelibrary.wiley.com/doi/full/10.1002/acp.4236"],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 4, "mechanic": "consider_opposite",
+      "claim": "Your passport is issued. Tomorrow a message arrives that you instantly love because it confirms exactly what you already believe.",
+      "claimAr": "جوازك اتصدر. بكرة بتيجي رسالة بتحبّها فوراً لأنها بتأكّد بالظبط اللي إنت أصلاً مصدّقه.",
+      "prompt": "Apply the passport: what's the FIRST thing you'll do before believing or forwarding it?",
+      "promptAr": "طبّق الجواز: إيه أول حاجة هتعملها قبل ما تصدّق أو تبعت؟",
+      "modelPoints": [
+        "Pause — notice the pleasure of agreement is a warning light, not proof.",
+        "Ask for the source, and whether it could be tested or disproven.",
+        "Deliberately look for the disconfirming case: 'what would make this false?'",
+        "Especially distrust it BECAUSE you wanted it to be true — that's when your guard is lowest."
+      ],
+      "modelPointsAr": [
+        "بطّئ — لاحظ إن لذّة الاتفاق لمبة تحذير، مش دليل.",
+        "اسأل عن المصدر، وهل ممكن يتختبر أو يتكذّب.",
+        "بقصد دوّر على الحالة المعارِضة: «إيه اللي يخلّيه غلط؟».",
+        "شكّك فيه بالذات *لأنك* عايزه يكون صح — ساعتها حارسك بيكون في أوطى حالاته."
+      ],
+      "explanation": "The hardest claim to evaluate fairly is the one you already agree with. Using the passport on the beliefs you LIKE — not just the ones you dislike — is the mark of real graduation. Carry it well.",
+      "explanationAr": "أصعب ادعاء تقيّمه بإنصاف هو اللي إنت أصلاً متفق معاه. استخدام الجواز على المعتقدات اللي *بتحبّها* — مش بس اللي بتكرهها — هو علامة التخرّج الحقيقي. شيله كويس.",
+      "sources": ["https://www.nature.com/articles/s41599-025-06143-6"],
+      "cognitivebiasAtPlay": "Confirmation Bias"
+    }
+  ]
+}

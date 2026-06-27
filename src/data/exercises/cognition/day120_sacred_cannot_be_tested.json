@@ -1,0 +1,121 @@
+{
+  "id": "day120_sacred_cannot_be_tested",
+  "phase": 3,
+  "week": 18,
+  "day": 120,
+  "title": "When the Sacred Cannot Be Tested: Popper and the Religious Shield",
+  "titleAr": "لمّا المقدّس ما يُختبرش: بوبر والدرع الديني",
+  "description": "Karl Popper's insight: a claim dressed in religious language becomes immune to evidence — and that immunity is a warning sign, not a proof of truth.",
+  "descriptionAr": "فكرة كارل بوبر: الادعاء اللي يتلبّس لغة دينية بيصبح محصّناً ضد الدليل — والحصانة دي إشارة خطر مش دليل صواب.",
+  "type": "religion-literacy",
+  "difficulty": 3,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A seller names his diet after Quranic words for 'the pure' and 'the foul.' A customer asks: 'Where is the clinical trial?' The seller replies: 'Are you doubting what Allah made pure?' Which move has just happened?",
+      "claimAr": "بائع سمّى حميته بألفاظ قرآنية معناها «الطيبات» و«الخبائث». زبون سأل: «فين التجربة الإكلينيكية؟» فردّ البائع: «إنت بتشكّك في اللي أحلّه الله؟» أنهي حركة حصلت هنا؟",
+      "options": [
+        "A sincere theological answer",
+        "The question was fairly reframed",
+        "A medical claim was swapped for a religious identity challenge — shifting the burden away from evidence",
+        "Proof that the diet is Quranically endorsed"
+      ],
+      "correctAnswer": 2,
+      "explanation": "This is the core of the religious shield: a nutrition question (where is the evidence?) is converted into a faith question (do you doubt God?). The swap is powerful because now answering honestly feels like an attack on religion. Karl Popper called this the 'immunizing move' — when a claim is wrapped in something too sacred to test, it exits science. The diet's claim is still a medical claim and still needs the same evidence bar, regardless of the language used.",
+      "explanationAr": "ده جوهر الدرع الديني: سؤال تغذوي (فين الدليل؟) اتحوّل لسؤال عقيدة (هل بتشكّك في الله؟). الاستبدال قوي لأن الإجابة الصادقة دلوقتي بتبان هجوم على الدين. كارل بوبر سمّى ده «حركة التحصين» — لمّا الادعاء يتلفّ في حاجة مقدّسة جداً إنها تُختبر، بيطلع من العلم.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "If a health claim is expressed using Quranic vocabulary, it requires less scientific evidence than the same claim without religious language.",
+      "claimAr": "لو ادعاء صحي اتعبّر بمفردات قرآنية، محتاج دليل علمي أقل من نفس الادعاء من غير لغة دينية.",
+      "options": [
+        "True — religious language lowers the evidence bar",
+        "False — the evidence bar depends on the claim's nature, not its vocabulary"
+      ],
+      "correctAnswer": 1,
+      "explanation": "False. The evidence bar for a health claim depends entirely on the claim's nature — not on the vocabulary used to dress it. A diet that claims to cure cancer requires the same robust evidence whether it is called 'System X' or 'the Divinely Pure System.' Mixing sacred words into a medical claim does not give it a religious endorsement; it gives it a persuasion advantage — and a dangerous one, because it weaponises the listener's faith against their own critical thinking. Calibration check: if you felt uncertain before deciding, that uncertainty was well-placed.",
+      "explanationAr": "غلط. سقف الدليل على الادعاء الصحي بيعتمد كلياً على طبيعة الادعاء نفسه — مش على المفردات. حمية بتدّعي شفاء السرطان بتحتاج نفس الدليل القوي سواء اتسمّت «نظام س» أو «نظام الطيبات الإلهية». خلط الألفاظ المقدّسة في ادعاء طبي ما بيديهاش تزكية دينية، بيديها ميزة إقناع خطيرة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "Karl Popper said a claim is scientific only if it can — in principle — be proven wrong. A diet promoter says: 'If it heals you, that proves it works. If it doesn't heal you, your body wasn't pure enough.'",
+      "claimAr": "كارل بوبر قال إن الادعاء علمي بس لو ممكن — من حيث المبدأ — يتثبت إنه غلط. صاحب حمية بيقول: «لو برّأتك، ده دليل نجاحها. لو ما برأتكش، جسمك ما كانش طاهر كفاية».",
+      "options": [
+        "This is a strong double-confirmation method",
+        "It is unfalsifiable — because no possible outcome can disprove the claim, it has left the domain of science"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does a claim that explains EVERY outcome — success AND failure — tell you nothing useful about whether the treatment actually works?",
+        "promptAr": "بكلماتك: ليه ادعاء بيفسّر كل النتائج — النجاح والفشل معاً — ما بيقولكش حاجة مفيدة عن إذا كان العلاج بيشتغل فعلاً؟"
+      },
+      "explanation": "This is Popper's classic unfalsifiability test. When every possible outcome is explained away — success confirms the system, failure confirms the patient is to blame — no result can ever threaten the claim. This is not extra-strong science; it is the exit from science. The Taybat system ran precisely on this logic: deterioration was attributed to the follower's imperfect adherence, never to the system itself. A claim that can explain anything explains nothing.",
+      "explanationAr": "ده اختبار بوبر الكلاسيكي للتفنيد. لمّا كل نتيجة ممكنة تتبرّر — النجاح بيأكّد النظام، والفشل بيأكّد إن المريض مقصّر — مفيش نتيجة تهدّد الادعاء. ده مش علم قوي بالزيادة؛ ده خروج من العلم. نظام الطيبات شغّل بالضبط على المنطق ده. ادعاء يفسّر كل شيء لا يفسّر شيء.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "Verse 16:116 of the Quran says: 'Do not say of what your tongues assert of falsehood, This is lawful and this is unlawful, inventing lies about Allah.' A diet issuing halal/haram rulings on ordinary foods argues this verse does not apply to health-based food prohibitions.",
+      "claimAr": "الآية 116 من سورة النحل تقول: «وَلَا تَقُولُوا لِمَا تَصِفُ أَلْسِنَتُكُمُ الْكَذِبَ هَٰذَا حَلَالٌ وَهَٰذَا حَرَامٌ». حمية تُصدر أحكام حلال/حرام على أطعمة عادية بتقول إن الآية دي ما بتنطبقش على محظورات الطعام الصحية.",
+      "prompt": "What would you need to find to show the verse DOES apply to health-based food prohibitions? What does the verse's plain meaning say about personal-opinion food rulings?",
+      "promptAr": "إيه اللي محتاج تلاقيه علشان تُثبت إن الآية بتنطبق فعلاً على محظورات الطعام الصحية؟ وإيه اللي ظاهر الآية بتقوله عن أحكام الطعام المبنية على الرأي الشخصي؟",
+      "modelPoints": [
+        "The verse says 'do not say … this is lawful and this is unlawful' — the prohibition is on the act of labelling, not on the motivation behind it. Health reasons do not exempt the act.",
+        "Chicken and milk are lawful (halal) in Islamic jurisprudence by scholarly consensus, with no Quranic verse or authenticated hadith prohibiting them. Declaring them 'toxic' and effectively banning them falls precisely under what 16:116 forbids.",
+        "The verse does not carve out an exception for medical authority — personal theory, whatever its domain, cannot issue divine rulings on permissibility.",
+        "Defending this verse against misuse is an act of protecting Islam — not attacking it."
+      ],
+      "modelPointsAr": [
+        "الآية بتقول «لا تقولوا … هذا حلال وهذا حرام» — النهي عن فعل التصنيف نفسه مش عن الدافع وراءه. الأسباب الصحية لا تُعفي من الفعل.",
+        "الفراخ واللبن حلال بالإجماع الفقهي الإسلامي، ولا آية قرآنية ولا حديث صحيح يُحرّمهم. إعلانهم «ساميين» وحظرهم فعلياً بيقع بالضبط تحت ما تنهى عنه الآية 16:116.",
+        "الآية ما بتفتحش استثناء للسلطة الطبية — النظرية الشخصية، مهما كان مجالها، لا تملك إصدار أحكام إلهية على الحِلّ والحُرمة.",
+        "الدفاع عن الآية دي ضد سوء الاستخدام هو فعل حماية للإسلام — مش هجوم عليه."
+      ],
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 5,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'I keep my faith and my health decisions completely separate — I trust my doctor for medicine and religious scholars for theology. That means I'm disrespecting religion by not letting it guide my body.'",
+      "claimAr": "فكّك الحجة دي: «أنا بفصل إيماني وقراراتي الصحية تماماً — بثق في دكتوري في الطب وفي علماء الدين في اللاهوت. ده معناه إني بعدم احترام الدين لأني ما بخلّيهوش يوجّه جسمي».",
+      "parts": [
+        { "text": "Therefore I am disrespecting religion by not letting it guide my medical decisions.", "textAr": "يبقى أنا بعدم احترام الدين لأني ما بخلّيهوش يوجّه قراراتي الطبية.", "role": "conclusion" },
+        { "text": "I keep faith and health decisions in separate domains.", "textAr": "أنا بفصل الإيمان والقرارات الصحية في مجالين منفصلين.", "role": "premise" },
+        { "text": "(Unstated) Religion must guide every domain of life, including the choice of medical treatment.", "textAr": "(غير مذكور) الدين لازم يوجّه كل مجالات الحياة، بما فيها اختيار العلاج الطبي.", "role": "assumption" },
+        { "text": "My doctor and my religious scholars both give good advice.", "textAr": "دكتوري وعلماء الدين بيدّوا نصيحة كويسة.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden assumption is that 'religion must guide every domain' — but this is a contested theological view, not the only Islamic position. Faith answers questions of meaning, values, and the unseen; empirical medicine answers questions about measurable cause and effect in the body. Separating them is not disrespect — it protects each domain from being weaponised against the other. Many devout Muslims worldwide manage chronic diseases with modern medicine while maintaining full faith.",
+      "explanationAr": "الافتراض الخفي هو إن «الدين لازم يوجّه كل مجال» — لكن دي وجهة نظر لاهوتية مثار خلاف، مش الموقف الإسلامي الوحيد. الإيمان بيجاوب على المعنى والقيم والغيب؛ والطب التجريبي بيجاوب على السبب والأثر القابل للقياس في الجسم. الفصل ده مش عدم احترام — بيحمي كل مجال من إنه يُستخدَم ضد التاني.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.apa.org/topics/religion-spirituality/faith-health"
+      ],
+      "cognitivebiasAtPlay": null
+    }
+  ]
+}

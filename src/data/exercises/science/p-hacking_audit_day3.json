@@ -1,0 +1,98 @@
+{
+  "id": "p_hacking_audit",
+  "phase": 2,
+  "week": 9,
+  "day": 3,
+  "title": "P-Hacking Audit",
+  "titleAr": "تدقيق اختراق القيمة الاحتمالية",
+  "description": "Learn to identify p-hacking — the practice of manipulating data analysis until statistically significant results emerge. Study real-world cases including the Cornell Food Lab scandal, and develop skills to detect p-hacking in published research.",
+  "descriptionAr": "تعلم كيفية تحديد اختراق القيمة الاحتمالية — ممارسة التلاعب بتحليل البيانات حتى تظهر نتائج ذات دلالة إحصائية. ادرس حالات واقعية بما في ذلك فضيحة مختبر كورنيل للغذاء، وطوّر مهارات كشف اختراق القيمة الاحتمالية في الأبحاث المنشورة.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "statisticalConcept": {
+    "name": "P-Hacking",
+    "nameAr": "اختراق القيمة الاحتمالية",
+    "definition": "P-hacking (also called data dredging or specification searching) refers to the practice of repeatedly analyzing data using different statistical tests, variable combinations, subgroups, or data exclusion criteria until a p-value below 0.05 is obtained. This inflates the false-positive rate far beyond the nominal 5% α level. Simmons, Nelson, and Simonsohn (2011) demonstrated in their landmark paper 'False-Positive Psychology' that common researcher degrees of freedom can produce p < 0.05 for virtually any hypothesis.",
+    "definitionAr": "اختراق القيمة الاحتمالية (يُعرف أيضاً بالتنقيب في البيانات أو البحث عن المواصفات) يشير إلى ممارسة تحليل البيانات بشكل متكرر باستخدام اختبارات إحصائية مختلفة أو مجموعات متغيرات أو مجموعات فرعية أو معايير استبعاد بيانات مختلفة حتى يتم الحصول على قيمة احتمالية أقل من 0.05. هذا يضخم معدل الإيجابيات الخاطئة بشكل كبير فوق مستوى ألفا الاسمي 5%. أثبت سيمونز ونيلسون وسيمونسون (2011) في ورقتهم البارزة 'علم النفس الإيجابي الخاطئ' أن درجات حرية الباحث الشائعة يمكن أن تنتج قيمة احتمالية أقل من 0.05 لأي فرضية تقريباً.",
+    "realWorldExample": "The Cornell Food Lab scandal (2018): Professor Brian Wansink's lab at Cornell University was found to have engaged in systematic p-hacking across dozens of published papers. An investigation triggered by a blog post where Wansink encouraged a graduate student to find 'significant results' in a dataset about pizza buffets led to the retraction of 18 papers. Wansink resigned from Cornell in 2018. The case revealed practices including: testing multiple dependent variables without correction, selectively reporting only significant subgroups, rounding p-values down to 0.05, and inconsistent data across publications from the same dataset. JAMA alone retracted 6 of his papers.",
+    "realWorldExampleAr": "فضيحة مختبر كورنيل للغذاء (2018): تبيّن أن مختبر البروفيسور بريان وانسينك في جامعة كورنيل قد مارس اختراق القيمة الاحتمالية بشكل منهجي في عشرات الأوراق المنشورة. أدى تحقيق أُطلق بسبب تدوينة شجع فيها وانسينك طالبة دراسات عليا على إيجاد 'نتائج مهمة' في بيانات عن مطاعم بيتزا بنظام البوفيه إلى سحب 18 ورقة بحثية. استقال وانسينك من جامعة كورنيل في 2018. كشفت القضية عن ممارسات تشمل: اختبار متغيرات تابعة متعددة دون تصحيح، والإبلاغ الانتقائي عن المجموعات الفرعية ذات الدلالة فقط، وتقريب القيم الاحتمالية إلى 0.05، وبيانات غير متسقة عبر المنشورات من نفس مجموعة البيانات.",
+    "detectionMethod": "Check for: (1) p-values clustering just below 0.05 — use a p-curve analysis (Simonsohn, Nelson & Simmons, 2014); (2) unreported multiple comparisons — count the number of tests relative to hypotheses; (3) inconsistent degrees of freedom or sample sizes — use GRIM and SPRITE tests; (4) absence of pre-registration; (5) selective reporting of outcomes — compare protocol/registration to published results; (6) unusually high rate of significant results — Schimmack's R-Index."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A nutrition researcher tests whether 12 different food additives affect weight gain in mice. They report only the one additive that showed p = 0.04. What statistical problem is most evident here?",
+      "promptAr": "يختبر باحث في التغذية ما إذا كانت 12 مادة غذائية مضافة مختلفة تؤثر على زيادة الوزن في الفئران. يبلغ فقط عن المادة الواحدة التي أظهرت قيمة احتمالية = 0.04. ما المشكلة الإحصائية الأكثر وضوحاً هنا؟",
+      "options": [
+        "P-hacking via unreported multiple comparisons — with 12 tests at α=0.05, the probability of at least one false positive is 1-(0.95)^12 ≈ 46%",
+        "The sample size is too small",
+        "The mice are not representative of humans",
+        "Valid finding — p < 0.05 confirms the effect"
+      ],
+      "correctAnswer": 0,
+      "explanation": "With 12 independent tests at α = 0.05, the family-wise error rate is 1 - (1 - 0.05)^12 ≈ 0.46, meaning there is roughly a 46% chance of finding at least one significant result purely by chance. Reporting only the one 'hit' without adjusting for multiple comparisons (e.g., Bonferroni correction: α/12 = 0.004) constitutes p-hacking.",
+      "explanationAr": "مع 12 اختباراً مستقلاً عند مستوى ألفا = 0.05، يكون معدل الخطأ على مستوى العائلة 1 - (1 - 0.05)^12 ≈ 0.46، مما يعني أن هناك احتمال حوالي 46% للعثور على نتيجة واحدة مهمة على الأقل بالصدفة البحتة. الإبلاغ عن 'الإصابة' الواحدة فقط دون تعديل للمقارنات المتعددة (مثل تصحيح بونفيروني: ألفا/12 = 0.004) يشكل اختراقاً للقيمة الاحتمالية."
+    },
+    {
+      "id": 2,
+      "type": "analyze",
+      "prompt": "In the Cornell Food Lab case, Brian Wansink emailed a graduate student: 'I don't think I've ever had a null result... We need to squeeze some more out of this data.' Which specific p-hacking techniques were later identified in his retracted papers?",
+      "promptAr": "في قضية مختبر كورنيل للغذاء، أرسل بريان وانسينك بريداً إلكترونياً لطالبة دراسات عليا: 'لا أعتقد أنني حصلت على نتيجة صفرية من قبل... نحتاج أن نعصر المزيد من هذه البيانات.' ما تقنيات اختراق القيمة الاحتمالية المحددة التي تم تحديدها لاحقاً في أوراقه المسحوبة؟",
+      "options": [
+        "Only image manipulation was found",
+        "Selective reporting of subgroups, testing multiple DVs without correction, rounding p-values to 0.05, inconsistent Ns across papers from same dataset",
+        "His data was completely fabricated from scratch",
+        "He only made minor arithmetic errors"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Investigations by Nick Brown, Tim van der Zee, and Jordan Anaya (2017) using the GRIM test found 150+ inconsistencies across four of Wansink's papers from a single dataset. The problems included: testing dozens of outcome variables and reporting only significant ones, splitting data into arbitrary subgroups (e.g., by gender, by meal type), rounding p-values (e.g., reporting p = 0.05 when calculated p was higher), and having incompatible means-and-Ns. This was not outright fabrication but systematic exploitation of researcher degrees of freedom.",
+      "explanationAr": "كشفت التحقيقات التي أجراها نيك براون وتيم فان دير زي وجوردان أنايا (2017) باستخدام اختبار GRIM عن أكثر من 150 تناقضاً عبر أربع أوراق لوانسينك من مجموعة بيانات واحدة. شملت المشاكل: اختبار عشرات متغيرات النتائج والإبلاغ عن المهمة فقط، وتقسيم البيانات إلى مجموعات فرعية تعسفية، وتقريب القيم الاحتمالية، ووجود متوسطات وأعداد عينات غير متوافقة."
+    },
+    {
+      "id": 3,
+      "type": "evaluate",
+      "prompt": "A published study reports exactly p = 0.048 for its primary outcome, p = 0.051 for the secondary outcome (reported as 'marginally significant'), and includes a post-hoc subgroup analysis with p = 0.03 that was not in the pre-registration. How many red flags for p-hacking can you identify?",
+      "promptAr": "دراسة منشورة تبلغ عن قيمة احتمالية = 0.048 بالضبط للنتيجة الأولية، وقيمة احتمالية = 0.051 للنتيجة الثانوية (أُبلغ عنها على أنها 'ذات دلالة هامشية')، وتشمل تحليل مجموعة فرعية بأثر رجعي بقيمة احتمالية = 0.03 لم يكن في التسجيل المسبق. كم عدد العلامات التحذيرية لاختراق القيمة الاحتمالية التي يمكنك تحديدها؟",
+      "options": [
+        "No red flags — all p-values are near conventional thresholds",
+        "One red flag: the subgroup analysis",
+        "At least three red flags: p-value just below 0.05, 'marginally significant' language for non-significant result, and unregistered post-hoc subgroup analysis",
+        "The study is valid because p < 0.05 for the primary outcome"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Three clear red flags: (1) Primary p = 0.048 sits suspiciously just below 0.05 — p-curve analysis by Simonsohn et al. (2014) shows that a preponderance of p-values just below 0.05 suggests p-hacking. (2) Describing p = 0.051 as 'marginally significant' is a well-documented euphemism for a non-significant result (Pritschet et al., 2016, found 495 different terms for 'marginally significant' in psychology). (3) A post-hoc subgroup analysis not in the pre-registration is a classic researcher degree of freedom that inflates Type I error.",
+      "explanationAr": "ثلاث علامات تحذيرية واضحة: (1) القيمة الاحتمالية الأولية 0.048 تقع بشكل مريب أسفل 0.05 — يظهر تحليل منحنى القيمة الاحتمالية بواسطة سيمونسون وآخرين (2014) أن غلبة القيم الاحتمالية أسفل 0.05 مباشرة تشير إلى اختراق القيمة الاحتمالية. (2) وصف القيمة 0.051 بأنها 'ذات دلالة هامشية' هو تعبير ملطف موثق لنتيجة غير مهمة. (3) تحليل المجموعة الفرعية بأثر رجعي غير المسجل مسبقاً هو درجة حرية باحث كلاسيكية."
+    },
+    {
+      "id": 4,
+      "type": "calculate",
+      "prompt": "A researcher runs 20 independent statistical tests, each at α = 0.05. Assuming all null hypotheses are true, what is the probability of finding at least one statistically significant result by chance alone?",
+      "promptAr": "يجري باحث 20 اختباراً إحصائياً مستقلاً، كل منها عند مستوى ألفا = 0.05. بافتراض أن جميع فرضيات العدم صحيحة، ما احتمال إيجاد نتيجة واحدة على الأقل ذات دلالة إحصائية بالصدفة وحدها؟",
+      "options": [
+        "100%",
+        "23.5%",
+        "5%",
+        "64.2%"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The probability of at least one false positive = 1 - (1 - α)^k = 1 - (0.95)^20 = 1 - 0.3585 = 0.6415, or approximately 64.2%. This demonstrates why running many tests without correction virtually guarantees false positives. The Bonferroni-corrected threshold would be α/20 = 0.0025, dramatically reducing false discoveries.",
+      "explanationAr": "احتمال إيجابية خاطئة واحدة على الأقل = 1 - (1 - ألفا)^ك = 1 - (0.95)^20 = 1 - 0.3585 = 0.6415، أو حوالي 64.2%. يوضح هذا لماذا يضمن إجراء العديد من الاختبارات دون تصحيح إيجابيات خاطئة تقريباً. سيكون حد بونفيروني المصحح ألفا/20 = 0.0025."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "You are reviewing a paper using a p-curve analysis tool. The p-curve shows a flat distribution of significant p-values (roughly equal numbers of p=0.01, p=0.02, p=0.03, p=0.04 results). What does this flat p-curve suggest about the underlying research?",
+      "promptAr": "أنت تراجع ورقة باستخدام أداة تحليل منحنى القيمة الاحتمالية. يُظهر منحنى القيمة الاحتمالية توزيعاً مسطحاً للقيم الاحتمالية المهمة (أعداد متساوية تقريباً من نتائج 0.01 و0.02 و0.03 و0.04). ماذا يقترح هذا المنحنى المسطح عن البحث الأساسي؟",
+      "options": [
+        "A right-skewed p-curve (many low p-values) would indicate evidential value; a flat p-curve suggests the studies lack evidential value and may reflect selective reporting or p-hacking",
+        "The p-curve confirms all results are valid",
+        "Flat p-curves are the expected normal pattern",
+        "The studies have genuine effects of varying sizes"
+      ],
+      "correctAnswer": 0,
+      "explanation": "According to Simonsohn, Nelson, and Simmons (2014), when studies investigate true effects, the p-curve should be right-skewed — meaning more p-values near 0.01 than near 0.05. A flat p-curve indicates the set of studies lacks evidential value, suggesting the significant results may have been obtained through p-hacking or selective reporting rather than genuine effects. A left-skewed p-curve (clustering near 0.05) is even stronger evidence of p-hacking.",
+      "explanationAr": "وفقاً لسيمونسون ونيلسون وسيمونز (2014)، عندما تبحث الدراسات في تأثيرات حقيقية، يجب أن يكون منحنى القيمة الاحتمالية مائلاً لليمين — مما يعني وجود قيم احتمالية قرب 0.01 أكثر من تلك القريبة من 0.05. يشير المنحنى المسطح إلى أن مجموعة الدراسات تفتقر إلى القيمة الاستدلالية، مما يوحي بأن النتائج المهمة ربما تم الحصول عليها من خلال اختراق القيمة الاحتمالية."
+    }
+  ]
+}

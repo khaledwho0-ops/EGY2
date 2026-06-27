@@ -1,0 +1,130 @@
+{
+  "id": "day136_unfalsifiable_sacred",
+  "phase": 3,
+  "week": 20,
+  "day": 136,
+  "title": "The Unfalsifiable Sacred — When Holiness Blocks the Question",
+  "titleAr": "المقدّس الذي لا يُفنَّد — حين القداسة تُسكِت السؤال",
+  "description": "Karl Popper's insight: once something is made sacred, it exits science. Today you practise spotting — without disrespect — when a claim has been placed beyond testing by religious wrapping.",
+  "descriptionAr": "بصيرة كارل بوبر: لمّا حاجة تتقدَّس، بتخرج من العلم. النهاردة بتتدرّب تكتشف — بدون عدم احترام — لمّا ادعاء يتحصّن خلف تغليف ديني.",
+  "type": "religion-literacy",
+  "difficulty": 4,
+  "estimatedMinutes": 17,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A seller says: \"My herbal blend is blessed — every batch is read over with Quran. The cure is in the blessing, not the chemistry.\" Why does this move specifically block scientific testing?",
+      "claimAr": "بائع بيقول: «خلطتي العشبية متبرَّك بيها — كل دفعة بتتقرأ عليها قرآن. الشفاء في البركة مش الكيمياء». ليه الحركة دي بالتحديد بتمنع الاختبار العلمي؟",
+      "options": [
+        "It does not block testing — we can still test the herbs",
+        "By locating the cure in an untestable property (the blessing), any chemical analysis that shows no effect becomes irrelevant — a laboratory cannot measure a blessing",
+        "Because Quranic recitation is always healing",
+        "Because the seller is honest about the mechanism"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the Popper trap: by saying the cure is in the blessing, not the chemistry, the claim has been placed outside any possible test. A controlled trial can test the herbs; no trial can measure a blessing. Therefore the claim is unfalsifiable. This is not about whether blessings exist spiritually — that is a theological question — but about whether a medical efficacy claim can be validated by asserting a non-measurable cause. A cancer patient needs a tested mechanism, not an untestable one.",
+      "explanationAr": "دي فخّ بوبر: بقوله إن الشفاء في البركة مش الكيمياء، الادعاء اتحطّ خارج أي اختبار ممكن. تجربة مُحكَمة تقدر تختبر العشب؛ ما فيش تجربة تقيس البركة. ومن ثمّ الادعاء مستحيل يتفنّد. ده مش عن وجود البركات روحياً — دي مسألة لاهوتية — لكن عن هل ادعاء الفاعلية الطبية يمكن التحقق منه بادّعاء سبب غير قابل للقياس. الإجابة لأ. مريض سرطان محتاج آلية مُختبَرة مش آلية مستحيل اختبارها.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.cancer.gov/about-cancer/treatment/cam"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "self_explain",
+      "claim": "True or false: Islamic scholarship has its own long tradition of accepting that the Quran addresses spiritual and moral matters, while medicine and natural science operate by separate empirical methods — the two need not conflict.",
+      "claimAr": "صح ولا غلط: للعلم الإسلامي تقليد طويل يقبل إن القرآن بيتناول الشؤون الروحية والأخلاقية، بينما الطب والعلوم الطبيعية تعمل بمناهج تجريبية منفصلة — والاثنان لا يتعارضان بالضرورة.",
+      "correctAnswer": true,
+      "myth_en": "Islam requires every scientific claim to be validated by Quranic text, or vice versa.",
+      "myth_ar": "الإسلام بيلزم كل ادعاء علمي يتحقق منه بنص قرآني أو العكس.",
+      "selfExplain": {
+        "prompt": "In your own words: if Islamic scholars like Ibn Sina actively separated empirical medicine from theology, what does that tell us about the claim that 'questioning a diet's food list is questioning God'?",
+        "promptAr": "بكلماتك: لو علماء إسلاميون زي ابن سينا فصلوا بنشاط بين الطب التجريبي واللاهوت، إيه اللي ده بيقوله عن الادعاء إن «التشكيك في قائمة طعام الحمية يعني التشكيك في الله»؟"
+      },
+      "explanation": "True. Classical Islamic scholars including Ibn Sīnā (Avicenna) integrated Greek medicine with Islamic thought while clearly distinguishing revelation from empirical inquiry. The tradition of Islamic medicine itself rests on systematic observation, not only on Quranic text. Modern Islamic scholarly consensus broadly accepts the separation of empirical science from theology. The weaponisation of Quranic vocabulary in medical claims is a recent and aberrant phenomenon that many Islamic scholars explicitly condemn.",
+      "explanationAr": "صح. علماء إسلاميون كلاسيكيون بما فيهم ابن سينا دمجوا الطب اليوناني بالفكر الإسلامي مع تمييزهم الواضح بين الوحي والبحث التجريبي. تراث الطب الإسلامي نفسه يقوم على الملاحظة المنهجية لا على النص القرآني فقط. الإجماع العلمي الإسلامي الحديث يقبل على نطاق واسع الفصل بين العلم التجريبي واللاهوت. توظيف المفردات القرآنية في الادعاءات الطبية ظاهرة حديثة وشاذة يُدينها كثير من العلماء المسلمين صراحةً.",
+      "sources": [
+        "https://plato.stanford.edu/entries/ibn-sina/",
+        "https://www.who.int/publications/i/item/9789290616108"
+      ],
+      "cognitivebiasAtPlay": null
+    },
+    {
+      "id": 3,
+      "mechanic": "decompose",
+      "claim": "Map this argument: 'Black seed was called the cure for everything except death in an authentic hadith. My capsules contain black seed. Therefore my capsules guarantee your asthma is cured — no need for your inhaler. The Prophet ﷺ guaranteed it.'",
+      "claimAr": "فكّك الحُجّة دي: «حبة البركة اتسمّيت شفاء من كل داء إلا الموت في حديث صحيح. كبسولاتي فيها حبة البركة. إذن كبسولاتي بتضمن شفاء ربوك — ما محتاجش بخّاختك. النبي ﷺ ضمنها.»",
+      "parts": [
+        { "text": "My capsules guarantee your asthma is cured — no need for your inhaler.", "textAr": "كبسولاتي بتضمن شفاء ربوك — ما محتاجش بخّاختك.", "role": "conclusion" },
+        { "text": "Black seed was called 'cure for everything except death' in an authentic hadith.", "textAr": "حبة البركة اتسمّيت «شفاء من كل داء إلا الموت» في حديث صحيح.", "role": "premise" },
+        { "text": "My capsules contain black seed.", "textAr": "كبسولاتي فيها حبة البركة.", "role": "premise" },
+        { "text": "(Unstated) An authentic hadith about black seed generally endorses any specific commercial capsule for any specific disease.", "textAr": "(غير مذكور) حديث صحيح عن حبة البركة بشكل عام يوافق على أي كبسولة تجارية محدّدة لأي مرض محدّد.", "role": "assumption" },
+        { "text": "The Prophet ﷺ guaranteed it.", "textAr": "النبي ﷺ ضمنها.", "role": "irrelevant" }
+      ],
+      "explanation": "The hidden ASSUMPTION collapses the argument: a hadith praising black seed generally does NOT endorse a specific commercial product's clinical claims for a specific disease like asthma. The 'Prophet guaranteed it' line is IRRELEVANT and dangerous: attributing a commercial guarantee to the Prophet ﷺ for a product he never knew is a serious misattribution. Red Flag #8 (telling patients to stop proven medicine) makes this the most dangerous type of argument — the patient's inhaler is a life-saving intervention for asthma attacks.",
+      "explanationAr": "الافتراض الخفي يهدم الحُجّة: حديث يمدح حبة البركة بشكل عام لا يُوافق على ادعاءات إكلينيكية لمنتج تجاري محدّد لمرض بعينه كالربو. وجملة «النبي ﷺ ضمنها» غير ذات صلة وخطيرة: نسب ضمان تجاري للنبي ﷺ لمنتج ما عرفه نسبٌ خاطئ بالغ الخطورة. علامة الخطر رقم 8 (إخبار المرضى بوقف الدواء المُثبَت) تجعل هذا أخطر أنواع الحُجَج — بخّاخ المريض تدخّل منقذ للحياة في نوبات الربو.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3642442/",
+        "EAL-case-001:ems-2026-03"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "consider_opposite",
+      "claim": "A product marketed as 'Prophetic medicine' claims to cure autoimmune disease. When asked for clinical evidence, the seller responds: 'You cannot test divine healing with human experiments.' This feels like a sincere religious position.",
+      "claimAr": "منتج يُسوَّق كـ«طب نبوي» بيدّعي إنه بيشفي المرض المناعي الذاتي. لمّا تُطلَب منه أدلة إكلينيكية، البائع بيرد: «ما تقدرش تختبر الشفاء الإلهي بتجارب بشرية». ده بيحسّس بموقف ديني صادق.",
+      "prompt": "What would DISPROVE the idea that this is a sincere religious position rather than a structural move to prevent testing? What does authentic Islamic tradition actually say about seeking evidence for medical claims?",
+      "promptAr": "إيه اللي يكذّب فكرة إن ده موقف ديني صادق بدل حركة هيكلية لمنع الاختبار؟ وإيه اللي التراث الإسلامي الأصيل بيقوله فعلاً عن طلب الدليل على الادعاءات الطبية؟",
+      "modelPoints": [
+        "If it were a sincere religious position we'd expect: the seller also applying it consistently and refusing to test the product's ingredients for purity or safety — but sellers typically do want lab validation of safety, just not efficacy.",
+        "Islamic medicine historically required empirical testing: al-Razi conducted controlled clinical comparisons in the 9th century — the tradition of demanding evidence for medical claims is Islamic, not foreign.",
+        "Red Flag #4 (unfalsifiability) is the structural tell: when failure is always explainable and success is never independently verifiable, the claim is designed to survive any evidence.",
+        "The claim is medical (names a disease, promises a cure) — medical claims need medical evidence regardless of their metaphysical framing."
+      ],
+      "modelPointsAr": [
+        "لو كان موقفاً دينياً صادقاً، هنتوقع: البائع يطبّقه باتساق ويرفض اختبار مكوّنات المنتج للنقاء أو السلامة — لكن البائعين عادةً يريدون تحقق المختبر من السلامة، فقط لا الفاعلية.",
+        "الطب الإسلامي تاريخياً اشترط الاختبار التجريبي: الرازي أجرى مقارنات سريرية مُحكَمة في القرن التاسع — تراث المطالبة بالدليل للادعاءات الطبية إسلامي لا أجنبي.",
+        "علامة الخطر رقم 4 (عدم قابلية التفنيد) هي الإشارة الهيكلية: حين يُفسَّر الفشل دائماً والنجاح لا يُتحقق منه بشكل مستقل، الادعاء مصمَّم للنجاة من أي دليل.",
+        "الادعاء طبي (يُسمّي مرضاً ويعد بشفاء) — الادعاءات الطبية تحتاج دليلاً طبياً بغضّ النظر عن تأطيرها الميتافيزيقي."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.cancer.gov/about-cancer/treatment/cam",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068720/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "sacred unfalsifiability",
+      "techniqueAr": "القداسة غير القابلة للتفنيد",
+      "task": "Feel this technique from the inside. Design a short pitch for a harmless product (e.g. a herbal tea) that makes it impossible to test by locating its power in a sacred property. Make the listener feel that asking for evidence would be disrespectful.",
+      "taskAr": "اشعر بهذه التقنية من جوّه. صمّم بيتش قصير لمنتج غير ضار (مثل شاي عشبي) بيجعله مستحيل الاختبار بوضع قوّته في خاصية مقدّسة. خلّي المستمع يحسّ إن طلب الدليل سيكون قلّة احترام.",
+      "tells": [
+        "The mechanism is always unverifiable: 'the blessing,' 'the prophetic intention,' 'the spiritual frequency' — none measurable.",
+        "Asking for evidence is reframed as spiritual failure or disrespect: it creates social cost for the honest question.",
+        "Failure is always the patient's fault: 'you didn't have enough faith,' 'you didn't follow the ritual correctly' — Red Flag #4.",
+        "It uses real religious language accurately (a real verse, a real practice) as a wrapper around an unverifiable medical claim.",
+        "The move is specifically designed to survive clinical testing by removing the standard of evidence entirely."
+      ],
+      "tellsAr": [
+        "الآلية دايماً غير قابلة للتحقق: «البركة»، «النية النبوية»، «التردد الروحي» — لا شيء منها قابل للقياس.",
+        "طلب الدليل يُعاد تأطيره كفشل روحي أو قلّة احترام: بيخلق تكلفة اجتماعية للسؤال الصادق.",
+        "الفشل دايماً ذنب المريض: «إيمانك مش كفاية»، «ما اتبعتش الطقوس بصح» — علامة الخطر رقم 4.",
+        "بيستخدم لغة دينية حقيقية بدقة (آية حقيقية، ممارسة حقيقية) كغلاف حول ادعاء طبي غير قابل للتحقق.",
+        "الحركة مصمّمة تحديداً للنجاة من الاختبار الإكلينيكي بإزالة معيار الدليل كلياً."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:redflag-4",
+        "https://www.cancer.gov/about-cancer/treatment/cam"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "day147_social_media_amplification",
+  "phase": 4,
+  "week": 21,
+  "day": 147,
+  "title": "Layer 7 — Amplification and Integration: How a Local Claim Became a Regional Crisis",
+  "titleAr": "الطبقة السابعة — التضخيم والتكامل: إزاي ادعاء محلي بقى أزمة إقليمية",
+  "description": "The final layer of the live walkthrough. Social media turned one interview into 3.7 million views; the ban triggered the Streisand effect; the structural soil of Egypt let it root. Today you interleave every tool — logic, science, religion, bias — on the amplification machine.",
+  "descriptionAr": "الطبقة الأخيرة في المرور الحيّ. السوشيال ميديا حوّلت مقابلة واحدة لـ3.7 مليون مشاهدة؛ والحظر أطلق أثر سترايسند؛ والتربة البنيوية في مصر سمحت له يتجذّر. النهاردة بتداخل كل الأدوات — منطق وعلم ودين وانحياز — على ماكينة التضخيم.",
+  "type": "integration",
+  "difficulty": 5,
+  "estimatedMinutes": 18,
+  "interleaved": true,
+  "source": "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "One TV interview reached 3.7 million views with no medical counter-panel, and the algorithm kept pushing it because it drove engagement. A viewer says: 'Millions watched and believed it — that many people can't be wrong.' Which move is this?",
+      "claimAr": "مقابلة تلفزيونية واحدة وصلت لـ3.7 مليون مشاهدة بدون لجنة طبية مقابلة، والخوارزمية فضلت تدفعها لأنها بتجيب تفاعل. مشاهد بيقول: «الملايين شافوا وصدّقوا — العدد ده ما يمكنش يكون غلط». الحركة دي إيه؟",
+      "options": [
+        "Reasonable trust in the wisdom of crowds",
+        "Bandwagon effect — popularity is produced by an engagement algorithm, not by truth; reach is not validation",
+        "Authority bias",
+        "Sunk-cost fallacy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The bandwagon effect: 'so many people believe it' feels like proof, but views are manufactured by an algorithm that rewards emotional, controversial content — not accuracy. A medical claim with no counter-panel reaching millions is a story about distribution, not validity. Popularity and truth are independent: the most-shared claim and the best-evidenced claim are frequently not the same one.",
+      "explanationAr": "أثر العربة: «ناس كتير مصدّقاه» بيحسّ كأنه دليل، لكن المشاهدات بتصنّعها خوارزمية بتكافئ المحتوى العاطفي المثير للجدل — مش الدقّة. ادعاء طبي بلا لجنة مقابلة بيوصل للملايين قصة عن التوزيع، مش الصحّة. الرواج والحقيقة مستقلّين: الادعاء الأكثر مشاركة والادعاء الأقوى دليلاً كتير ما بيكونوش نفس الواحد.",
+      "sources": [
+        "EAL-case-001:bias-bandwagon",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    },
+    {
+      "id": 2,
+      "mechanic": "recognize",
+      "claim": "When the Supreme Council banned the content, sharing and searches for it surged instead of fading. Followers read the surge as 'see, the truth can't be silenced.' What is the name of this amplification dynamic, and what does the surge actually measure?",
+      "claimAr": "لمّا المجلس الأعلى حظر المحتوى، المشاركة والبحث عنه زادوا بدل ما يخفّوا. الأتباع قروا الزيادة كـ«شوف، الحقيقة ما تتسكّتش». إيه اسم ديناميكية التضخيم دي، والزيادة بتقيس إيه فعلاً؟",
+      "options": [
+        "The Streisand effect — trying to suppress something draws more attention to it; the surge measures curiosity and reaction, not the claim's correctness",
+        "The placebo effect — the surge proves the diet works",
+        "Confirmation bias — the surge is real evidence",
+        "There is no known dynamic; the surge proves suppression of truth"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The Streisand effect: attempts to suppress information often amplify it, as the suppression itself becomes newsworthy and provocative. The post-ban surge measures attention and defiance — not whether the diet is safe or effective. Followers fold the surge into the unfalsifiable frame ('they tried to hide it, so it must be true'), but a spike in clicks is a fact about human curiosity, not about endocrinology. Separating 'this got attention' from 'this is true' is the whole skill of the amplification layer.",
+      "explanationAr": "أثر سترايسند: محاولات قمع المعلومة كتير بتضخّمها، لأن القمع نفسه بيبقى خبر ومثير. والزيادة بعد الحظر بتقيس الانتباه والتحدّي — مش إذا كانت الحمية آمنة أو فعّالة. الأتباع بيطبّقوا الزيادة في الإطار غير القابل للتفنيد («حاولوا يخفوها، يبقى لازم صح»)، لكن قفزة الكليكات حقيقة عن فضول البشر، مش عن الغدد. وفصل «ده جاب انتباه» عن «ده صح» هو كل مهارة طبقة التضخيم.",
+      "sources": [
+        "EAL-case-001:scmr-2026-05-03",
+        "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "It's tempting to conclude: 'Egyptians fell for this because of poor education — smarter, better-schooled people would never be fooled.'",
+      "claimAr": "مغري إنك تستنتج: «المصريين وقعوا في ده بسبب التعليم الضعيف — الناس الأذكى والأحسن تعليماً ما كانوش هيتخدعوا أبداً».",
+      "prompt": "Consider the opposite: what would have to be true if smart, educated people fall for this too? What structural conditions — not personal stupidity — let the claim take root?",
+      "promptAr": "فكّر في العكس: لو الناس الذكية المتعلّمة كمان بتقع في ده، إيه اللي لازم يكون صح؟ وإيه الظروف البنيوية — مش الغباء الشخصي — اللي سمحت للادعاء يتجذّر؟",
+      "modelPoints": [
+        "Intelligent, educated people fall for elaborate beliefs everywhere — intelligence can defend a false belief more skilfully, not prevent it.",
+        "The soil was structural, not a matter of IQ: a health-literacy gap, the high cost of specialists vs a free video, and a real, historical trust deficit toward institutions.",
+        "Media reach without media literacy let health entertainment be mistaken for health journalism.",
+        "A genuine cultural archetype — the trusted 'sheikh-healer' blending charisma and religious framing — gave the claim a ready-made channel of trust.",
+        "Blaming 'stupidity' both misdiagnoses the cause and shames the very people you need to reach — which entrenches the belief further."
+      ],
+      "modelPointsAr": [
+        "الناس الذكية المتعلّمة بتقع في معتقدات معقّدة في كل مكان — الذكاء بيدافع عن المعتقد الكاذب بمهارة أكبر، مش بيمنعه.",
+        "التربة بنيوية مش مسألة ذكاء: فجوة ثقافة صحية، وتكلفة المتخصصين العالية مقابل فيديو مجاني، وعجز ثقة تاريخي حقيقي تجاه المؤسسات.",
+        "انتشار إعلامي بلا ثقافة إعلامية خلّى التسلية الصحية تتحسب صحافة صحية.",
+        "نمط ثقافي حقيقي — «الشيخ-المُعالِج» الموثوق اللي بيمزج الكاريزما والتأطير الديني — أدّى الادعاء قناة ثقة جاهزة.",
+        "لوم «الغباء» بيشخّص السبب غلط وبيهين بالظبط الناس اللي محتاج توصلّها — وده بيرسّخ المعتقد أكتر."
+      ],
+      "explanation": "Considering the opposite dismantles the comforting 'I'm too smart for this' story — which is itself an ego-defence that leaves you more exposed, not less. The case spread through structural conditions any of us share, not a deficit of intelligence. This is the empathy that makes the whole curriculum work: you defend people by understanding the soil, not by looking down on those who grew in it.",
+      "explanationAr": "التفكير في العكس بيفكّك قصة «أنا أذكى من كده» المريّحة — اللي هي نفسها دفاع عن الأنا بيخلّيك مكشوف أكتر مش أقل. الحالة انتشرت من خلال ظروف بنيوية كلنا بنشاركها، مش نقص ذكاء. ده التعاطف اللي بيخلّي المنهج كله يشتغل: بتدافع عن الناس بفهم التربة، مش بالتعالي على اللي اتربّى فيها.",
+      "sources": [
+        "EAL-case-001:structural-factors",
+        "https://www.apa.org/topics/personality/motivated-reasoning"
+      ],
+      "cognitivebiasAtPlay": "Dunning–Kruger Effect"
+    },
+    {
+      "id": 4,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "Week-21 integration check — set your confidence before answering. A single post claims a 'natural protocol cures three unrelated chronic diseases at once, the cure your doctor won't tell you about.' Using everything from this week, is one red flag here enough to distrust the whole claim?",
+      "claimAr": "فحص تكامل الأسبوع 21 — حدّد ثقتك قبل الإجابة. بوست واحد بيدّعي «بروتوكول طبيعي بيشفي ثلاثة أمراض مزمنة غير مرتبطة في نفس الوقت، العلاج اللي دكتورك مش هيقوله لك». باستخدام كل حاجة من الأسبوع ده، هل علامة خطر واحدة هنا تكفي إنك تشكّك في الادعاء كله؟",
+      "options": [
+        "No — you'd need to disprove it scientifically first before doubting",
+        "Yes — it already stacks several red flags (cures-everything #1, conspiracy framing #5, an implied 'hidden cure'), and any one of these is enough to demand strong evidence before belief"
+      ],
+      "correctAnswer": 1,
+      "explanation": "By now this should feel almost automatic — that's the point of the week. The post triggers 'cures everything' (#1: unrelated diseases can't share one cure), conspiracy framing (#5: 'the cure they won't tell you'), and the hidden-knowledge flatter. You don't owe an extraordinary claim a full rebuttal before you withhold belief; the burden of proof sits with the claimant. Check whether your confidence matched the evidence: trained pattern-recognition should now be high AND well-calibrated, not blind cynicism.",
+      "explanationAr": "دلوقتي ده المفروض يحسّ تلقائي تقريباً — وده هدف الأسبوع. البوست بيشغّل «يشفي كل حاجة» (رقم 1: أمراض غير مرتبطة ما تتشاركش علاج واحد)، وإطار المؤامرة (رقم 5: «العلاج اللي مش هيقولوهولك»)، ومجاملة المعرفة الخفيّة. إنت ما عليكش إنك تردّ بالكامل على ادعاء استثنائي قبل ما تمنع تصديقك؛ عبء الإثبات على صاحب الادعاء. اتأكّد إن ثقتك طابقت الأدلة: التعرّف المُدرَّب على الأنماط المفروض يبقى عالي ومُعايَر كويس، مش تشكّك أعمى.",
+      "sources": [
+        "EAL-case-001:redflag-1",
+        "EAL-case-001:redflag-5"
+      ],
+      "cognitivebiasAtPlay": "Need for Cognitive Closure"
+    },
+    {
+      "id": 5,
+      "mechanic": "transfer",
+      "transferDomain": "a non-medical viral political rumour",
+      "claim": "Take the amplification skill out of health entirely. A viral post claims a hidden foreign hand caused a recent local economic problem; it's shared millions of times, and 'the attempt to fact-check it proves they're scared.' Which two moves from this week are operating here?",
+      "claimAr": "طلّع مهارة التضخيم بره الصحة خالص. بوست منتشر بيدّعي إن إيد أجنبية خفيّة سبّبت مشكلة اقتصادية محلية حصلت مؤخراً؛ اتشارك ملايين المرات، و«محاولة التحقّق منه بتثبت إنهم خايفين». أنهي حركتين من الأسبوع ده شغّالين هنا؟",
+      "options": [
+        "Authority bias and the placebo effect",
+        "The bandwagon effect (millions of shares read as truth) plus the unfalsifiable frame (fact-checking 'proves' fear) — the exact pair you spotted in the diet case, now in politics",
+        "Survivorship bias and confounding",
+        "Sunk-cost fallacy and anchoring"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Far transfer is the real test of learning: the same two engines that drove the diet case run identically here. Millions of shares feel like proof (bandwagon), and 'checking it proves they're scared' is the unfalsifiable shield — any rebuttal is folded in as confirmation. A complex economic problem usually has many uncoordinated causes, just like a messy health outcome. If you can run this week's tools on a political rumour, a financial scam, or a parenting myth, the case has done its job — the skill, not the topic, is what you keep.",
+      "explanationAr": "النقل البعيد هو الاختبار الحقيقي للتعلّم: نفس المحرّكين اللي ساقوا حالة الحمية بيشتغلوا بالظبط هنا. ملايين المشاركات بتحسّ كدليل (العربة)، و«التحقّق منه بيثبت إنهم خايفين» هو الدرع غير القابل للتفنيد — أي ردّ بيتطبّق كتأكيد. المشكلة الاقتصادية المعقّدة عادةً ليها أسباب كتير غير منسّقة، زي بالظبط نتيجة صحية فوضوية. لو تقدر تشغّل أدوات الأسبوع ده على شائعة سياسية، أو نصب مالي، أو خرافة تربية، يبقى الحالة عملت شغلها — المهارة، مش الموضوع، هي اللي بتفضل معاك.",
+      "sources": [
+        "EAL-case-001:bias-bandwagon",
+        "https://www.apa.org/topics/personality/motivated-reasoning"
+      ],
+      "cognitivebiasAtPlay": "Bandwagon Effect"
+    }
+  ]
+}

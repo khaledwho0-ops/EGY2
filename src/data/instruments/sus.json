@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "instrument": "SUS",
+    "fullName": "System Usability Scale",
+    "citation": "Brooke, J. (1996). SUS: A 'Quick and Dirty' Usability Scale. In: Usability Evaluation in Industry, pp. 189-194. Taylor & Francis.",
+    "reliability": "Cronbach's α = .91",
+    "items": 10,
+    "responseFormat": "Likert 1–5 (Strongly Disagree to Strongly Agree)",
+    "scoreRange": "0–100",
+    "phases": ["post"],
+    "benchmarks": {
+      "source": "Sauro & Lewis (2016); Bangor et al. (2009)",
+      "gradeA": {"threshold": 80.3, "description": "Excellent / Top 10%"},
+      "gradeB": {"threshold": 68, "description": "Above average"},
+      "gradeC": {"threshold": 51, "description": "Average"},
+      "gradeF": {"threshold": 0, "description": "Poor"},
+      "adjectiveScale": {
+        "85+": "Best Imaginable",
+        "73–85": "Excellent",
+        "52–73": "Good / OK",
+        "38–52": "Poor",
+        "<25": "Worst Imaginable"
+      }
+    },
+    "itemWordingNote": "Items use the EXACT original wording from Brooke (1996). The word 'system' must NOT be changed to 'platform' or 'app' — doing so invalidates the psychometric properties. Brooke explicitly states 'system' is intentionally generic.",
+    "framework": "§3.2.5, §4.5"
+  },
+  "config": {
+    "id": "sus-post",
+    "name": "System Usability Scale (SUS)",
+    "shortName": "SUS",
+    "description": "Rate your agreement with each statement about the system you just used. Note: \"system\" refers to the Egyptian Awareness Library platform.",
+    "shuffle": false
+  },
+  "options": [
+    {"value": 1, "label": "Strongly Disagree"},
+    {"value": 2, "label": "Disagree"},
+    {"value": 3, "label": "Neutral"},
+    {"value": 4, "label": "Agree"},
+    {"value": 5, "label": "Strongly Agree"}
+  ],
+  "questions": [
+    {
+      "id": "sus-01",
+      "text": "I think that I would like to use this system frequently.",
+      "type": "likert",
+      "polarity": "positive",
+      "itemNumber": 1,
+      "scoringContribution": "response - 1"
+    },
+    {
+      "id": "sus-02",
+      "text": "I found the system unnecessarily complex.",
+      "type": "likert",
+      "polarity": "negative",
+      "reversed": true,
+      "itemNumber": 2,
+      "scoringContribution": "5 - response"
+    },
+    {
+      "id": "sus-03",
+      "text": "I thought the system was easy to use.",
+      "type": "likert",
+      "polarity": "positive",
+      "itemNumber": 3,
+      "scoringContribution": "response - 1"
+    },
+    {
+      "id": "sus-04",
+      "text": "I think that I would need the support of a technical person to be able to use this system.",
+      "type": "likert",
+      "polarity": "negative",
+      "reversed": true,
+      "itemNumber": 4,
+      "scoringContribution": "5 - response"
+    },
+    {
+      "id": "sus-05",
+      "text": "I found the various functions in this system were well integrated.",
+      "type": "likert",
+      "polarity": "positive",
+      "itemNumber": 5,
+      "scoringContribution": "response - 1"
+    },
+    {
+      "id": "sus-06",
+      "text": "I thought there was too much inconsistency in this system.",
+      "type": "likert",
+      "polarity": "negative",
+      "reversed": true,
+      "itemNumber": 6,
+      "scoringContribution": "5 - response"
+    },
+    {
+      "id": "sus-07",
+      "text": "I would imagine that most people would learn to use this system very quickly.",
+      "type": "likert",
+      "polarity": "positive",
+      "itemNumber": 7,
+      "scoringContribution": "response - 1"
+    },
+    {
+      "id": "sus-08",
+      "text": "I found the system very cumbersome to use.",
+      "type": "likert",
+      "polarity": "negative",
+      "reversed": true,
+      "itemNumber": 8,
+      "scoringContribution": "5 - response"
+    },
+    {
+      "id": "sus-09",
+      "text": "I felt very confident using the system.",
+      "type": "likert",
+      "polarity": "positive",
+      "itemNumber": 9,
+      "scoringContribution": "response - 1"
+    },
+    {
+      "id": "sus-10",
+      "text": "I needed to learn a lot of things before I could get going with this system.",
+      "type": "likert",
+      "polarity": "negative",
+      "reversed": true,
+      "itemNumber": 10,
+      "scoringContribution": "5 - response"
+    }
+  ],
+  "scoring": {
+    "algorithm": "brooke_1996",
+    "description": "Odd-numbered items (1,3,5,7,9): contribution = response - 1. Even-numbered items (2,4,6,8,10): contribution = 5 - response. Total = sum of contributions × 2.5 → scaled to 0–100.",
+    "formula": "total_score = (sum_of_contributions) × 2.5",
+    "outputs": {
+      "total_score": {"range": "0–100", "description": "Overall usability score"},
+      "grade_value": {
+        "range": "0–3",
+        "description": "Grade classification: 3=A (≥80.3), 2=B (≥68), 1=C (≥51), 0=F (<51)"
+      }
+    }
+  }
+}

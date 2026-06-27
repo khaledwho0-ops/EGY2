@@ -1,0 +1,99 @@
+{
+  "id": "survivorship_bias",
+  "phase": 2,
+  "week": 10,
+  "day": 11,
+  "title": "Survivorship Bias",
+  "titleAr": "تحيز البقاء",
+  "description": "Understand survivorship bias — the error of drawing conclusions from only the survivors or successes while ignoring those that failed or were lost. Study Abraham Wald's WWII aircraft armor analysis and modern applications in business, medicine, and research.",
+  "descriptionAr": "افهم تحيز البقاء — خطأ استخلاص الاستنتاجات من الناجين أو النجاحات فقط مع تجاهل الذين فشلوا أو فُقدوا. ادرس تحليل أبراهام والد لدروع الطائرات في الحرب العالمية الثانية والتطبيقات الحديثة في الأعمال والطب والبحث.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Survivorship Bias",
+    "nameAr": "تحيز البقاء",
+    "definition": "Survivorship bias is a form of selection bias that occurs when analysis is conducted only on subjects that have 'survived' (or succeeded, or been selected) through some process, while systematically ignoring those that did not. This leads to false conclusions because the failures are invisible in the dataset. The bias was formalized in statistical literature through the work of the Statistical Research Group (SRG) at Columbia University during WWII, and has since been identified in finance (mutual fund performance), medicine (clinical trial attrition), business (entrepreneurship success stories), architecture (ancient buildings), and military research.",
+    "definitionAr": "تحيز البقاء هو شكل من أشكال تحيز الاختيار يحدث عندما يُجرى التحليل فقط على الموضوعات التي 'نجت' (أو نجحت أو اختيرت) خلال عملية ما، مع تجاهل منهجي للذين لم ينجوا. يؤدي هذا إلى استنتاجات خاطئة لأن حالات الفشل غير مرئية في مجموعة البيانات.",
+    "realWorldExample": "During WWII, the US military examined bullet hole patterns on bombers returning from missions and initially planned to add armor to the most-damaged areas (fuselage and wings). Abraham Wald, a mathematician at the Statistical Research Group (SRG) at Columbia University, recognized this was survivorship bias: the planes they were examining had SURVIVED. The holes showed where planes could sustain damage and still return. The missing bullet holes — on the engines and cockpit — represented the planes that had been shot down and never returned. Wald recommended armoring the areas with NO bullet holes. His analysis, documented in SRG memoranda (later published by Mangel & Samaniego, 1984, JASA), saved countless lives and became a canonical example of survivorship bias.",
+    "realWorldExampleAr": "خلال الحرب العالمية الثانية، فحص الجيش الأمريكي أنماط ثقوب الرصاص على القاذفات العائدة من المهمات وخطط مبدئياً لإضافة دروع للمناطق الأكثر ضرراً. أدرك أبراهام والد، عالم رياضيات في مجموعة البحث الإحصائي في جامعة كولومبيا، أن هذا تحيز بقاء: الطائرات التي فحصوها نجت. أوصى والد بتدريع المناطق التي لا بها ثقوب رصاص — لأن الطائرات المصابة هناك لم تعد أبداً.",
+    "detectionMethod": "Ask: 'What is missing from this dataset? Who or what did NOT survive the selection process?' Actively seek out failure cases, dropouts, and non-survivors. In clinical trials, conduct intention-to-treat analysis. In finance, include defunct funds (free of survivorship bias databases). Use sensitivity analysis to model the potential impact of missing data."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "The US military in WWII observed that returning bombers had bullet holes concentrated on the fuselage, wings, and tail. They proposed reinforcing these areas. Abraham Wald disagreed. Why?",
+      "promptAr": "لاحظ الجيش الأمريكي في الحرب العالمية الثانية أن القاذفات العائدة بها ثقوب رصاص مركزة على جسم الطائرة والأجنحة والذيل. اقترحوا تعزيز هذه المناطق. عارض أبراهام والد. لماذا؟",
+      "options": [
+        "The holes on returning planes showed where a plane could be hit and SURVIVE — the areas without holes (engines, cockpit) were where hits were fatal, so those areas needed the armor",
+        "Bullet hole patterns were randomly distributed",
+        "The military had already tried armoring those areas",
+        "The armor would make the planes too heavy"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Wald's insight was that the sample of returning planes was biased — it excluded planes that were shot down. The damage patterns on survivors showed where planes could sustain hits and still fly home. The ABSENCE of damage in certain areas (engines, fuel systems, cockpit) on returning planes meant that planes hit in those areas did not return. This is the essence of survivorship bias: the data you see (survivors) systematically differs from the data you don't see (non-survivors). Wald's analysis, preserved in SRG memoranda and republished by Mangel & Samaniego (1984, Journal of the American Statistical Association), remains the most famous illustration of this bias.",
+      "explanationAr": "كانت رؤية والد أن عينة الطائرات العائدة متحيزة — استبعدت الطائرات التي أُسقطت. أظهرت أنماط الضرر على الناجين أين يمكن للطائرات تحمل الإصابات والعودة. غياب الضرر في مناطق معينة (المحركات، قمرة القيادة) على الطائرات العائدة يعني أن الطائرات المصابة هناك لم تعد."
+    },
+    {
+      "id": 2,
+      "type": "analyze",
+      "prompt": "A financial magazine reports: 'The average mutual fund has returned 12% annually over the past 20 years, beating the S&P 500.' However, this analysis only includes funds that currently exist. What is the problem?",
+      "promptAr": "تبلغ مجلة مالية: 'متوسط عائد صندوق الاستثمار المشترك 12% سنوياً خلال العشرين سنة الماضية، متفوقاً على مؤشر S&P 500.' لكن هذا التحليل يشمل فقط الصناديق الموجودة حالياً. ما المشكلة؟",
+      "options": [
+        "The S&P 500 is not a valid benchmark",
+        "Survivorship bias — funds that performed poorly were closed or merged and dropped from the dataset, inflating the apparent average return. Elton, Gruber, and Blake (1996) estimated this bias inflates reported returns by about 0.9% per year",
+        "20 years is too short a period",
+        "Mutual fund returns cannot be averaged"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Elton, Gruber, and Blake (1996, 'Survivorship Bias and Mutual Fund Performance,' Review of Financial Studies, 9:1097-1120) demonstrated that survivorship bias in mutual fund databases inflates average reported returns by approximately 0.9 percentage points per year. Poorly performing funds are frequently liquidated or merged into better-performing funds, removing their poor track records from the database. The CRSP Survivor-Bias-Free US Mutual Fund Database was specifically created to address this problem. When defunct funds are included, the evidence that actively managed funds beat index funds essentially disappears (Malkiel, 1995, Journal of Finance).",
+      "explanationAr": "أثبت إلتون وغروبر وبليك (1996) أن تحيز البقاء في قواعد بيانات صناديق الاستثمار يضخم متوسط العوائد المبلغ عنها بحوالي 0.9 نقطة مئوية سنوياً. الصناديق ذات الأداء الضعيف تُصفى أو تُدمج في صناديق أفضل أداءً، مما يزيل سجلاتها السيئة من قاعدة البيانات."
+    },
+    {
+      "id": 3,
+      "type": "evaluate",
+      "prompt": "A self-help author interviews 50 successful entrepreneurs and identifies 'common traits of success': risk-taking, dropping out of college, and working 80+ hours/week. What critical methodological flaw invalidates these conclusions?",
+      "promptAr": "يقابل مؤلف كتب تطوير ذات 50 رائد أعمال ناجحاً ويحدد 'سمات مشتركة للنجاح': المخاطرة، والتسرب من الجامعة، والعمل أكثر من 80 ساعة أسبوعياً. ما العيب المنهجي الحاسم الذي يبطل هذه الاستنتاجات؟",
+      "options": [
+        "Entrepreneurs are not representative of the general population",
+        "50 is too small a sample",
+        "Survivorship bias — the author only studied successes, never examining the thousands of entrepreneurs with the same traits who failed. Risk-taking, dropping out, and overwork may be equally common among failed entrepreneurs, making them non-predictive",
+        "Self-help books are never scientifically valid"
+      ],
+      "correctAnswer": 2,
+      "explanation": "This is survivorship bias in its purest form. By studying only successful entrepreneurs, the author cannot determine whether the identified traits actually predict success or are simply common among all entrepreneurs (successful and failed alike). Denrell (2003, Management Science, 'Vicarious Learning, Undersampling of Failure, and the Myths of Management') formally showed that studying only successes leads to systematic overestimation of the role of risk-taking and bold strategies, because the failed risk-takers are invisible. To draw valid conclusions, one must compare successful entrepreneurs with a matched control group of failed entrepreneurs.",
+      "explanationAr": "هذا تحيز بقاء بأنقى أشكاله. بدراسة رواد الأعمال الناجحين فقط، لا يمكن للمؤلف تحديد ما إذا كانت السمات المحددة تتنبأ فعلاً بالنجاح أو مجرد شائعة بين جميع رواد الأعمال. أظهر دنريل (2003) رسمياً أن دراسة النجاحات فقط تؤدي لمبالغة منهجية في دور المخاطرة."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "Someone argues: 'Ancient Roman buildings are still standing after 2,000 years, proving they built structures far more durable than modern construction.' What bias is at work?",
+      "promptAr": "يجادل شخص: 'المباني الرومانية القديمة لا تزال قائمة بعد 2000 سنة، مما يثبت أنهم بنوا هياكل أكثر متانة بكثير من البناء الحديث.' ما التحيز الذي يعمل هنا؟",
+      "options": [
+        "Confirmation bias",
+        "The Romans genuinely had superior construction technology",
+        "Appeal to tradition",
+        "Survivorship bias — the vast majority of Roman buildings collapsed, decayed, or were demolished centuries ago. We only see the exceptional survivors (the Pantheon, Colosseum), not the thousands of ordinary Roman structures that crumbled"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Nassim Nicholas Taleb (2012, 'Antifragile') discussed this as a classic survivorship bias. Romans built millions of structures — houses, shops, walls, aqueducts, roads — the vast majority of which no longer exist. The structures that survive (the Pantheon, Pont du Gard, Colosseum) are the extraordinary outliers, not the representative sample. Modern construction will also have exceptional structures standing in 2,000 years, while the majority will not. We cannot compare the top 0.01% of ancient buildings with the average of modern buildings. This is also called the 'Lindy effect' confusion when applied to durability arguments.",
+      "explanationAr": "ناقش طالب (2012) هذا كتحيز بقاء كلاسيكي. بنى الرومان ملايين الهياكل — منازل ومحلات وجدران — الغالبية العظمى منها لم تعد موجودة. الهياكل الباقية (البانثيون، الكولوسيوم) هي القيم المتطرفة الاستثنائية وليست العينة الممثلة."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "A clinical trial reports results only for patients who completed the full 12-month treatment. 40% of participants dropped out during the study, many due to side effects. How does survivorship bias affect the trial's conclusions?",
+      "promptAr": "تبلغ تجربة سريرية عن نتائج المرضى الذين أكملوا العلاج الكامل لمدة 12 شهراً فقط. انسحب 40% من المشاركين خلال الدراسة، كثير منهم بسبب آثار جانبية. كيف يؤثر تحيز البقاء على استنتاجات التجربة؟",
+      "options": [
+        "Survivorship bias inflates the apparent efficacy and understates side effects, because patients who experienced adverse effects or treatment failure dropped out. Intention-to-treat (ITT) analysis, which includes all randomized patients, is the gold standard to counter this",
+        "The dropout rate is within normal limits",
+        "Only per-protocol analysis is valid",
+        "It has no effect — completers are the relevant population"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Analyzing only treatment completers creates survivorship bias: patients who experienced severe side effects, lack of efficacy, or worsening symptoms dropped out and are excluded from the 'survivor' analysis. This artificially inflates efficacy estimates and minimizes adverse effect rates. The FDA and ICH-E9 guidelines mandate intention-to-treat (ITT) analysis, which includes ALL randomized patients regardless of completion, as the primary analysis for clinical trials. Montori and Guyatt (2001, CMAJ) showed that per-protocol analyses (completers only) can overestimate treatment effects by 25-50% compared to ITT analyses. With 40% attrition, the bias would be substantial.",
+      "explanationAr": "تحليل المكملين فقط يخلق تحيز بقاء: المرضى الذين عانوا من آثار جانبية شديدة أو عدم فعالية انسحبوا واستُبعدوا. تحليل نية العلاج (ITT) الذي يشمل جميع المرضى المعشوشين هو المعيار الذهبي. أظهر مونتوري وغيات (2001) أن تحليلات المكملين فقط قد تبالغ في تقدير تأثيرات العلاج بنسبة 25-50%."
+    }
+  ]
+}

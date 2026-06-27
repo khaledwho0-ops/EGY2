@@ -1,0 +1,128 @@
+{
+  "id": "day163_capstone_fallacy_evidence",
+  "phase": 4,
+  "week": 24,
+  "day": 163,
+  "title": "Capstone: Name the Fallacy, Cite the Evidence",
+  "titleAr": "الختام: سمّي المغالطة، استشهد بالدليل",
+  "description": "Practice completing the first two parts of the empathetic rebuttal — fallacy identification and evidence citation — across different pseudoscience scenarios.",
+  "descriptionAr": "تدرّب على إكمال الجزءين الأولين من الردّ المتعاطف — تحديد المغالطة والاستشهاد بالدليل — عبر سيناريوهات علم زائف مختلفة.",
+  "type": "integration",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/fallacies/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "A promoter says: «نظام الطيبات» works. If it didn't work for you, you didn't follow it correctly. Which fallacy makes this claim permanently safe from any test?",
+      "claimAr": "مروّج بيقول: «نظام الطيبات» شغّال. لو ما نفعش معاك، إنت ما التزمتش صح. أنهي مغالطة بتخلّي الادعاء ده محمياً دايماً من أي اختبار؟",
+      "options": [
+        "False dichotomy — only two options given",
+        "Unfalsifiable / 'No True Scotsman' — failure is always blamed on the follower, never on the system",
+        "Ad hominem — attacking the person",
+        "Straw man — misrepresenting the opponent"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the unfalsifiable move: when every possible failure is explained away (you didn't believe enough / follow enough / stay long enough), there is literally no evidence that could disprove the claim. Karl Popper called this the mark of pseudoscience — a claim that cannot be tested cannot be trusted. Notice the empathy angle: followers aren't stubborn; this structure makes them genuinely feel the fault is theirs, not the system's.",
+      "explanationAr": "دي الحركة غير القابلة للتفنيد: لمّا كل فشل ممكن يتفسَّر بعيداً (ما صدّقتش كفاية / ما التزمتش كفاية / ما أكملتش كفاية)، حرفياً فيش دليل ممكن يفنّد الادعاء. كارل بوبر وصف ده بعلامة العلم الزائف — الادعاء اللي ما ينقدرش يُختبَر ما ينقدرش يُوثَق. ولاحظ البُعد المتعاطف: الأتباع مش عنيدين؛ الهيكل ده بيخليهم يحسّوا فعلاً إن الغلط منهم مش من النظام.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:redflag-4"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 2,
+      "mechanic": "decompose",
+      "claim": "Map this argument so you can name the fallacy precisely: \"A board-certified doctor said this diet fixes diabetes. He's a real doctor. So in nutrition he must be right — and anyone who studied less than him can't object.\"",
+      "claimAr": "فكّك الحُجّة دي علشان تسمّي المغالطة بدقة: «دكتور معتمد قال إن الحِمية دي بتظبّط السكري. هو دكتور حقيقي. يبقى في التغذية لازم يكون صح — وأي حد درس أقل منه ما يقدرش يعترض.»",
+      "parts": [
+        { "text": "In nutrition he must be right.", "textAr": "في التغذية لازم يكون صح.", "role": "conclusion" },
+        { "text": "He is a board-certified doctor.", "textAr": "هو دكتور معتمد.", "role": "premise" },
+        { "text": "(Unstated) Credentials in one medical field transfer to every other field.", "textAr": "(غير مذكور) الشهادات في مجال طبي بتنتقل لكل مجال تاني.", "role": "assumption" },
+        { "text": "Anyone who studied less than him can't object.", "textAr": "أي حد درس أقل منه ما يقدرش يعترض.", "role": "irrelevant" }
+      ],
+      "explanation": "Mapping exposes the weak joint: the hidden ASSUMPTION that credentials transfer across domains. They don't — an anaesthesia licence is not an endocrinology or clinical-nutrition licence (the authority is outside its specialty). The 'studied less can't object' line is IRRELEVANT: it pre-silences critics instead of addressing the evidence. Once the parts are visible, the conclusion no longer follows — and you can state precisely which move broke it. The right evidence for a nutrition claim is a controlled dietary trial or systematic review from that field.",
+      "explanationAr": "التفكيك بيكشف المفصل الضعيف: الافتراض الخفي إن الشهادات بتنتقل عبر المجالات. مش بتنتقل — رخصة التخدير مش رخصة غدد ولا تغذية إكلينيكية (السلطة خارج تخصّصها). وجملة «اللي درس أقل ما يقدرش يعترض» غير ذات صلة: بتُسكِت النقّاد مقدماً بدل ما تتناول الدليل. أول ما الأجزاء تبان، الخلاصة ما بتلزمش — وتقدر تقول بالظبط أنهي حركة كسرتها. الدليل الصح لادعاء تغذوي هو تجربة غذائية محكومة أو مراجعة منهجية من المجال ده.",
+      "sources": [
+        "https://plato.stanford.edu/entries/fallacies/",
+        "EAL-case-001:redflag-7"
+      ],
+      "cognitivebiasAtPlay": "Authority Bias"
+    },
+    {
+      "id": 3,
+      "mechanic": "self_explain",
+      "claim": "A health influencer posts: \"Our ancestors never ate processed food and had no cancer. Therefore, returning to their diet cures cancer.\" Which option names both the logical fallacy AND the evidential gap?",
+      "claimAr": "منشور من مؤثر صحي: «أجدادنا ما أكلوش معالَج وما كانوش عندهم سرطان. يبقى الرجوع لأكلهم بيشفي السرطان.» أنهي خيار بيسمّي المغالطة المنطقية والفجوة الدليلية معاً؟",
+      "options": [
+        "Fallacy: Slippery slope. Gap: no comparative data",
+        "Fallacy: Post hoc ergo propter hoc / false cause, plus survivorship bias (ancestors who died young from infection are invisible). Gap: no RCT linking ancestral diet to cancer remission",
+        "Fallacy: Ad hominem. Gap: sample size",
+        "No fallacy — this is correct evolutionary reasoning"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why is 'our ancestors had no cancer' survivorship bias — and what is the simplest everyday reason most of them never lived long enough to develop it?",
+        "promptAr": "بكلماتك: ليه «أجدادنا ما كانوش عندهم سرطان» انحياز ناجين — وإيه أبسط سبب يومي إن أغلبهم ما عاشوش كفاية علشان يجيلهم؟"
+      },
+      "explanation": "Two problems at once: (1) 'They had no cancer' is survivorship bias — ancestors often died young from infection, war, and famine, before cancer typically appears, so the people who would have developed it are invisible from history. (2) Even if the correlation across centuries were real, correlation isn't causation; concluding the diet cured cancer is post hoc reasoning. The evidential gap: no randomized trial has shown an 'ancestral diet' produces cancer remission. Evolutionary diet arguments are interesting hypotheses, not treatment evidence — and explaining that back to yourself is what locks it in.",
+      "explanationAr": "مشكلتان في وقت واحد: (1) «ما كانوش عندهم سرطان» انحياز ناجين — الأجداد غالباً ماتوا صغار من عدوى وحروب ومجاعات، قبل ما السرطان يظهر عادةً، فالناس اللي كان ممكن يجيلهم غير مرئيين في التاريخ. (2) حتى لو الترابط عبر القرون حقيقي، الترابط مش سببية؛ استنتاج إن الحمية شفت السرطان استدلال «بعده = بسببه». الفجوة الدليلية: لا تجربة عشوائية أثبتت إن «حمية الأجداد» بتنتج تراجعاً في السرطان. حجج تطوّر التغذية فرضيات مثيرة، مش دليل علاج — وإنك تشرح ده لنفسك هو اللي بيثبّته.",
+      "sources": [
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer",
+        "https://www.cochranelibrary.com/about/about-cochrane-reviews"
+      ],
+      "cognitivebiasAtPlay": "Survivorship Bias"
+    },
+    {
+      "id": 4,
+      "mechanic": "recognize",
+      "claim": "Which of these is the strongest evidence citation you could use when rebutting a claim that stopping insulin improves diabetes outcomes?",
+      "claimAr": "أنهي من دي أقوى استشهاد بدليل تقدر تستخدمه لمّا بتردّ على ادعاء إن إيقاف الأنسولين بيحسّن نتائج السكري؟",
+      "options": [
+        "A clinic's list of 200 success stories",
+        "An international diabetes association clinical guideline backed by systematic reviews of insulin therapy outcomes",
+        "A documentary film about low-carb diets",
+        "A prominent nutritionist's personal protocol"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Clinical practice guidelines from major diabetes associations (such as the International Diabetes Federation or the American Diabetes Association) are built on systematic reviews and meta-analyses of thousands of patients. For type-1 diabetes especially, the evidence that stopping insulin is lethal is overwhelming and requires no debate. A list of 200 stories cannot compete — it has no control group and cannot count the deaths that occurred after stopping.",
+      "explanationAr": "إرشادات الممارسة الإكلينيكية من جمعيات السكري الكبرى (مثل الاتحاد الدولي للسكري أو الجمعية الأمريكية للسكري) مبنية على مراجعات منهجية وتحليلات بَعدية لآلاف المرضى. لسكري النوع الأول خاصةً، الدليل على إن إيقاف الأنسولين مميت ساحق ولا يحتاج نقاشاً. قائمة 200 حكاية ما تقدرش تنافس — فيها لا مجموعة ضابطة ولا قدرة على عدّ الوفيات اللي حصلت بعد الإيقاف.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6235064/"
+      ],
+      "cognitivebiasAtPlay": "Anecdotal Reasoning"
+    },
+    {
+      "id": 5,
+      "mechanic": "consider_opposite",
+      "claim": "You're tempted to rebut the diet's religious framing with a purely secular argument: 'leave religion out of it, just look at the science.' It feels cleaner and avoids touching faith.",
+      "claimAr": "إنت مغرى إنك تردّ على التأطير الديني للحمية بحجة علمانية بحتة: «سيبك من الدين، بُص للعلم بس». بيحسّ أنضف وبيتجنّب إنك تلمس الإيمان.",
+      "prompt": "Argue the opposite: why might answering from INSIDE the tradition — using verses the case itself documents — be both more accurate and more respectful than 'leave religion out'? What real, attributable text could you point to?",
+      "promptAr": "اتكلم بالعكس: ليه الإجابة من جوّه التراث — باستخدام آيات الحالة نفسها بتوثّقها — ممكن تكون أدق وأكثر احتراماً من «سيب الدين»؟ أنهي نصّ حقيقي مَنسوب تقدر تشير ليه؟",
+      "modelPoints": [
+        "The trick was importing sacred words into a diet, so 'leave religion out' concedes the very ground the manipulation stole — it doesn't reclaim it.",
+        "Al-Mā'idah 5:87 explicitly forbids prohibiting the good (lawful) foods Allah has permitted — the diet does exactly that to chicken and milk, so the verse refutes it from within.",
+        "Al-Naḥl 16:116 forbids inventing 'this is halal, this is haram' from personal assertion — which is precisely how the food rulings were issued.",
+        "Answering from inside the tradition defends the faith from misuse rather than asking a believer to set their faith aside to hear you — which lowers defences instead of raising them.",
+        "A secular-only reply can feel like a second attack on identity; the in-tradition reply meets the person on shared ground."
+      ],
+      "modelPointsAr": [
+        "الحيلة كانت استيراد ألفاظ مقدّسة لحمية، فـ«سيب الدين» بيتنازل عن نفس الأرض اللي التلاعب سرقها — مش بيستردّها.",
+        "المائدة 5:87 بتنهى صريح عن تحريم الطيّبات (الحلال) اللي أحلّها الله — والحمية بتعمل ده بالظبط مع الفراخ واللبن، فالآية بتفنّدها من الداخل.",
+        "النحل 16:116 بتنهى عن اختراع «ده حلال وده حرام» من الرأي الشخصي — وده بالظبط إزاي اتصدرت الأحكام الغذائية.",
+        "الإجابة من جوّه التراث بتدافع عن الإيمان من سوء الاستخدام بدل ما تطلب من المؤمن يسيب إيمانه علشان يسمعك — وده بينزّل الدفاعات بدل ما يرفعها.",
+        "الردّ العلماني البحت ممكن يحسّ كهجوم تاني على الهوية؛ الردّ من داخل التراث بيقابل الشخص على أرض مشتركة."
+      ],
+      "explanation": "Considering the opposite reveals that 'leave religion out of it' isn't neutral — it surrenders the exact territory the manipulation captured. Because the diet weaponised the sacred, the most precise rebuttal is to show, from real and attributable verses the case documents (Al-Mā'idah 5:87 and Al-Naḥl 16:116), that the tradition itself forbids both prohibiting lawful food and inventing halal/haram rulings. This is not critiquing Islam; it is defending it from those who misuse it. (Never cite a verse or hadith you cannot attribute — use only these documented texts.)",
+      "explanationAr": "التفكير في العكس بيكشف إن «سيب الدين» مش محايد — بيسلّم نفس الأرض اللي التلاعب احتلّها. لأن الحمية سلّحت المقدّس، أدقّ ردّ هو إنك توضّح، من آيات حقيقية مَنسوبة الحالة بتوثّقها (المائدة 5:87 والنحل 16:116)، إن التراث نفسه بينهى عن تحريم الحلال واختراع أحكام حلال/حرام. ده مش نقد للإسلام؛ ده دفاع عنه ممّن يسيئون استخدامه. (ما تستشهدش أبداً بآية أو حديث ما تقدرش تنسبه — استخدم بس النصوص الموثّقة دي.)",
+      "sources": [
+        "https://quran.com/5/87",
+        "https://quran.com/16/116"
+      ],
+      "cognitivebiasAtPlay": "Anchoring Bias"
+    }
+  ]
+}

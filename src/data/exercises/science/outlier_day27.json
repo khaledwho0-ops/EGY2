@@ -1,0 +1,98 @@
+{
+  "id": "outlier_handling",
+  "phase": 2,
+  "week": 15,
+  "day": 27,
+  "title": "Outlier Handling",
+  "titleAr": "التعامل مع القيم الشاذة",
+  "description": "Learn systematic methods for identifying and handling outliers using IQR, z-scores, and Cook's distance, and understand how arbitrary outlier removal biases results.",
+  "descriptionAr": "تعلم الطرق المنهجية لتحديد والتعامل مع القيم الشاذة باستخدام المدى الربيعي ودرجات z ومسافة كوك.",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Outlier Detection and Handling",
+    "nameAr": "اكتشاف ومعالجة القيم الشاذة",
+    "definition": "Outliers are observations that deviate markedly from other members of the sample. Common detection methods include: IQR method (values beyond Q1−1.5×IQR or Q3+1.5×IQR), z-score method (|z|>3), and Cook's distance (Di > 4/n or Di > 1 for regression). Outlier removal without pre-specified criteria is a researcher degree of freedom that can inflate false positive rates.",
+    "definitionAr": "القيم الشاذة هي ملاحظات تنحرف بشكل ملحوظ عن باقي أفراد العينة. تشمل طرق الاكتشاف: طريقة المدى الربيعي، طريقة درجة z، ومسافة كوك.",
+    "realWorldExample": "Anscombe's quartet (1973) demonstrates that identical summary statistics can arise from vastly different datasets, some containing influential outliers. In climate science, removing legitimate extreme temperature readings can mask genuine trends.",
+    "detectionMethod": "IQR fences (1.5×IQR from quartiles), z-scores (|z|>2 or 3), Grubbs' test (single outlier), Cook's distance (regression influence), DFBETAS, and leverage-residual plots. Always pre-specify criteria and report results with and without outliers."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "calculate",
+      "prompt": "A dataset has Q1=25, Q3=75, so IQR=50. Using the standard 1.5×IQR rule, what are the lower and upper fences for outlier detection?",
+      "promptAr": "مجموعة بيانات Q1=25، Q3=75، لذا IQR=50. باستخدام قاعدة 1.5×IQR القياسية، ما هي الحدود السفلية والعلوية لاكتشاف القيم الشاذة؟",
+      "options": [
+        "Lower fence = −50, Upper fence = 150",
+        "Lower fence = 0, Upper fence = 100",
+        "Lower fence = 25, Upper fence = 75",
+        "Lower fence = −25, Upper fence = 125"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Lower fence = Q1 − 1.5×IQR = 25 − 1.5(50) = 25 − 75 = −50. Upper fence = Q3 + 1.5×IQR = 75 + 1.5(50) = 75 + 75 = 150. Any observation below −50 or above 150 is flagged as a potential outlier. Note: Tukey (1977) also defined 'far outliers' at 3×IQR from the quartiles.",
+      "explanationAr": "الحد السفلي = 25 − 75 = −50. الحد العلوي = 75 + 75 = 150. أي ملاحظة أقل من −50 أو أعلى من 150 تُعتبر قيمة شاذة محتملة."
+    },
+    {
+      "id": 2,
+      "type": "identify",
+      "prompt": "A regression analysis with 200 observations identifies one data point with Cook's distance Di = 0.85. The common threshold is Di > 4/n. Should this observation be investigated?",
+      "promptAr": "تحليل انحدار بـ 200 ملاحظة يحدد نقطة بيانات واحدة بمسافة كوك Di = 0.85. العتبة الشائعة هي Di > 4/n. هل يجب التحقيق في هذه الملاحظة؟",
+      "options": [
+        "No, because Di < 1",
+        "Yes: 4/n = 4/200 = 0.02, and 0.85 >> 0.02. This point has extreme influence on the regression and should be investigated",
+        "Only if the residual is also large",
+        "Cook's distance is not relevant for regression"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Cook's distance measures the influence of each observation on all fitted values. With n=200, the threshold is 4/200 = 0.02. A Cook's distance of 0.85 is 42.5 times the threshold, indicating this single observation has extraordinary influence on the regression coefficients. Investigation should determine if it represents a data error, a legitimately different population, or a genuine extreme value. Results should be reported with and without this observation.",
+      "explanationAr": "مسافة كوك تقيس تأثير كل ملاحظة على جميع القيم المتوقعة. مع ن=200، العتبة هي 0.02. مسافة كوك 0.85 هي 42.5 ضعف العتبة، مما يشير إلى تأثير استثنائي."
+    },
+    {
+      "id": 3,
+      "type": "scenario",
+      "prompt": "A researcher runs an experiment and finds p=0.08 (non-significant). They then identify 2 'outliers' using no pre-specified criterion, remove them, and obtain p=0.03 (significant). They report only the final result. What is the methodological problem?",
+      "promptAr": "باحث يجري تجربة ويجد p=0.08 (غير معنوي). ثم يحدد 'قيمتين شاذتين' بدون معيار محدد مسبقاً، يزيلهما، ويحصل على p=0.03 (معنوي). يبلغ فقط عن النتيجة النهائية. ما المشكلة المنهجية؟",
+      "options": [
+        "The p=0.03 result is valid because outliers distort data",
+        "Outlier removal is always acceptable if justified post-hoc",
+        "This is a researcher degree of freedom: post-hoc outlier removal without pre-specified criteria to achieve significance is a form of p-hacking",
+        "Two outliers is too few to affect results"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Post-hoc outlier removal without pre-specified criteria is a well-documented researcher degree of freedom (Simmons et al., 2011). The researcher's motivation was clearly to achieve significance, not to apply a principled cleaning procedure. Best practice: pre-register outlier criteria, report results both with and without outlier exclusion, and use robust statistical methods that are less sensitive to outliers.",
+      "explanationAr": "إزالة القيم الشاذة بعد الحقيقة بدون معايير محددة مسبقاً هي درجة حرية باحث موثقة. أفضل الممارسات: تسجيل معايير القيم الشاذة مسبقاً والإبلاغ عن النتائج مع وبدون الاستبعاد."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "In a dataset of n=30 from a normal distribution, approximately how many observations would you expect to fall beyond |z|>2 by chance alone?",
+      "promptAr": "في مجموعة بيانات من ن=30 من توزيع طبيعي، كم ملاحظة تتوقع أن تقع خارج |z|>2 بالصدفة وحدها؟",
+      "options": [
+        "About 10 observations",
+        "About 15 observations",
+        "Zero — values beyond |z|>2 are always outliers",
+        "Approximately 1-2 observations (about 4.6% of 30 ≈ 1.4)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "In a standard normal distribution, approximately 4.56% of observations fall beyond |z|=2 (2.28% in each tail). With n=30: 30 × 0.0456 ≈ 1.4 observations. This means that flagging all |z|>2 observations as 'outliers' and removing them from a normally distributed sample would inappropriately trim legitimate data. The |z|>3 criterion (0.27% expected) is more conservative and more appropriate for small samples.",
+      "explanationAr": "في التوزيع الطبيعي، حوالي 4.56% من الملاحظات تقع خارج |z|=2. مع ن=30: حوالي 1.4 ملاحظة. إزالة جميع |z|>2 سيقص بيانات مشروعة."
+    },
+    {
+      "id": 5,
+      "type": "identify",
+      "prompt": "Which of the following is the BEST practice for handling outliers in a pre-registered study?",
+      "promptAr": "أي مما يلي هو أفضل ممارسة للتعامل مع القيم الشاذة في دراسة مسجلة مسبقاً؟",
+      "options": [
+        "Pre-specify outlier criteria (e.g., |z|>3 or IQR×1.5), report results with and without exclusions, use robust methods (e.g., trimmed means, bootstrapping) as sensitivity analyses",
+        "Remove outliers until the results are significant",
+        "Remove all values beyond 1 SD from the mean",
+        "Never remove any outliers regardless of the reason"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Best practice includes: (1) pre-specifying outlier criteria before data collection, (2) distinguishing between data errors and legitimate extreme values, (3) reporting results both with and without outlier exclusions as a sensitivity analysis, (4) using robust statistical methods (trimmed means, Winsorizing, bootstrapped CIs, M-estimators) that are less sensitive to outliers. This approach prevents outlier handling from becoming a covert p-hacking tool.",
+      "explanationAr": "أفضل الممارسات: تحديد معايير القيم الشاذة مسبقاً، التمييز بين أخطاء البيانات والقيم المتطرفة المشروعة، الإبلاغ عن النتائج مع وبدون الاستبعادات، واستخدام طرق إحصائية متينة."
+    }
+  ]
+}

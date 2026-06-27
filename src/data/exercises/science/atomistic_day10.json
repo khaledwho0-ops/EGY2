@@ -1,0 +1,99 @@
+{
+  "id": "atomistic_fallacy",
+  "phase": 2,
+  "week": 10,
+  "day": 10,
+  "title": "Atomistic Fallacy",
+  "titleAr": "المغالطة الذرية",
+  "description": "Understand the atomistic fallacy — the inverse of the ecological fallacy — where individual-level data is incorrectly used to draw conclusions about group-level or population-level phenomena. Learn why individual risk factors may not explain population-level patterns (Rose, 1985).",
+  "descriptionAr": "افهم المغالطة الذرية — عكس المغالطة البيئية — حيث تُستخدم البيانات على مستوى الفرد بشكل خاطئ لاستخلاص استنتاجات حول ظواهر على مستوى المجموعة أو السكان. تعلم لماذا قد لا تفسر عوامل الخطر الفردية الأنماط على مستوى السكان (روز، 1985).",
+  "type": "statistical-fallacy",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Atomistic Fallacy",
+    "nameAr": "المغالطة الذرية",
+    "definition": "The atomistic fallacy (also called the individualistic fallacy) occurs when conclusions about group-level or ecological-level phenomena are drawn from individual-level data. It is the logical inverse of the ecological fallacy. While the ecological fallacy moves erroneously from group to individual, the atomistic fallacy moves erroneously from individual to group. Alker (1969) formally defined this as one of the cross-level fallacies in political science. The key insight is that group-level properties (e.g., social cohesion, herd immunity, income inequality) are emergent and cannot be reduced to individual-level measurements. Geoffrey Rose (1985, International Journal of Epidemiology) articulated this powerfully in his distinction between 'causes of cases' and 'causes of incidence.'",
+    "definitionAr": "المغالطة الذرية (تُعرف أيضاً بالمغالطة الفردانية) تحدث عندما تُستخلص استنتاجات حول ظواهر على مستوى المجموعة أو المستوى البيئي من بيانات على مستوى الفرد. هي العكس المنطقي للمغالطة البيئية. حددها ألكر (1969) رسمياً كإحدى مغالطات العبور بين المستويات. الفكرة الرئيسية هي أن خصائص المجموعة (مثل التماسك الاجتماعي، مناعة القطيع) خصائص ناشئة لا يمكن اختزالها في قياسات فردية.",
+    "realWorldExample": "Geoffrey Rose (1985) illustrated this with blood pressure and stroke: at the individual level, a person with blood pressure of 140/90 has higher stroke risk than someone at 120/80. But the POPULATION-level question — 'Why does Japan have different stroke rates than the UK?' — cannot be answered by individual blood pressure readings alone. Population-level factors like dietary salt norms, healthcare access, and genetic admixture patterns are emergent group properties. Similarly, knowing that an individual smoker has a 15-fold increase in lung cancer risk does not explain why lung cancer rates vary between countries — that requires population-level analysis of smoking prevalence, regulation, and cultural norms.",
+    "realWorldExampleAr": "أوضح جيفري روز (1985) هذا مع ضغط الدم والسكتة الدماغية: على المستوى الفردي، الشخص ذو ضغط الدم 140/90 لديه خطر سكتة أعلى. لكن السؤال على مستوى السكان — 'لماذا تختلف معدلات السكتة بين اليابان وبريطانيا؟' — لا يمكن الإجابة عليه بقراءات ضغط الدم الفردية وحدها. العوامل على مستوى السكان مثل أنماط الملح الغذائية والوصول للرعاية الصحية هي خصائص جماعية ناشئة.",
+    "detectionMethod": "Use multi-level modeling that explicitly distinguishes between within-group and between-group variation. Recognize emergent group properties that have no individual-level analogue (e.g., income inequality, herd immunity threshold, social capital). Apply Rose's distinction between 'causes of cases' and 'causes of incidence.' Check whether the outcome variable is meaningful at the group level."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "identify",
+      "prompt": "A clinical study finds that reducing individual salt intake by 2g/day lowers personal blood pressure by ~3 mmHg. A policy analyst concludes: 'Therefore, a national salt-reduction campaign will reduce national stroke rates proportionally.' What fallacy is present?",
+      "promptAr": "وجدت دراسة سريرية أن تقليل تناول الملح الفردي بمقدار 2 غرام/يوم يخفض ضغط الدم الشخصي بـ 3 ملم زئبق تقريباً. يستنتج محلل سياسات: 'لذلك، حملة وطنية لتقليل الملح ستخفض معدلات السكتة الدماغية الوطنية بشكل متناسب.' ما المغالطة الموجودة؟",
+      "options": [
+        "Ecological fallacy",
+        "Gambler's fallacy",
+        "No fallacy — individual evidence directly scales to populations",
+        "Atomistic fallacy — individual dose-response relationships cannot be directly scaled to predict population-level health outcomes without accounting for compliance rates, population distribution of salt intake, competing risks, and the non-linear relationship between blood pressure and stroke"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Rose (1985, 'Sick Individuals and Sick Populations') showed that the causes of individual cases differ from the causes of population incidence. Individual-level trials show that reducing salt lowers blood pressure, but the population-level effect depends on: the distribution of salt intake in the population, compliance with the intervention, the proportion of strokes attributable to hypertension vs. other causes, and whether the relationship is linear across the population distribution. He et al. (2013, BMJ) showed that population-level salt reduction had smaller effects than individual trial data predicted.",
+      "explanationAr": "أظهر روز (1985) أن أسباب الحالات الفردية تختلف عن أسباب الحدوث السكاني. التأثير السكاني يعتمد على توزيع تناول الملح في السكان، والامتثال للتدخل، ونسبة السكتات المنسوبة لارتفاع ضغط الدم مقابل أسباب أخرى."
+    },
+    {
+      "id": 2,
+      "type": "analyze",
+      "prompt": "An economist finds that individuals with more education earn higher salaries. They conclude: 'If we give everyone a university degree, average national income will rise by the same amount.' Why is this reasoning flawed?",
+      "promptAr": "يجد اقتصادي أن الأفراد ذوي التعليم الأعلى يحصلون على رواتب أعلى. يستنتج: 'إذا منحنا الجميع شهادة جامعية، سيرتفع متوسط الدخل الوطني بنفس المقدار.' لماذا هذا الاستدلال معيب؟",
+      "options": [
+        "Atomistic fallacy — the individual education-income premium partly reflects credential signaling and relative positioning; if everyone has a degree, the signaling value collapses (credential inflation) and the wage premium shrinks",
+        "The sample of educated individuals was biased",
+        "National income cannot be measured",
+        "Education doesn't actually affect income"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Spence's (1973) job market signaling model and the credential inflation literature (Collins, 1979, 'The Credential Society') demonstrate that part of the individual returns to education reflect relative advantage — standing out from those without degrees. If everyone obtains a degree, this signaling value diminishes (composition effect). Additionally, the labor market cannot absorb unlimited degree-holders into high-paying jobs. The individual-level relationship (more education → higher pay) does not linearly aggregate to the population level because of general equilibrium effects, signaling theory, and labor market constraints. This is a textbook atomistic fallacy.",
+      "explanationAr": "يوضح نموذج إشارات سوق العمل لسبنس (1973) وأدبيات التضخم في الشهادات أن جزءاً من العوائد الفردية للتعليم يعكس ميزة نسبية. إذا حصل الجميع على شهادة، تتضاءل قيمة الإشارة. العلاقة الفردية لا تتجمع خطياً على مستوى السكان بسبب تأثيرات التوازن العام ونظرية الإشارات."
+    },
+    {
+      "id": 3,
+      "type": "evaluate",
+      "prompt": "Individual vaccine efficacy trials show 95% protection against a disease. A government official says: 'We only need to vaccinate 95% of the population to achieve herd immunity.' What is wrong with this reasoning?",
+      "promptAr": "تظهر تجارب فعالية اللقاح الفردية حماية 95%. يقول مسؤول حكومي: 'نحتاج فقط لتطعيم 95% من السكان لتحقيق مناعة القطيع.' ما الخطأ في هذا الاستدلال؟",
+      "options": [
+        "The reasoning is perfectly correct",
+        "Atomistic fallacy — herd immunity threshold depends on the basic reproduction number (R₀) of the pathogen, not directly on individual vaccine efficacy. For measles (R₀ ≈ 12-18), the threshold is ~92-95%; for COVID-19 variants (R₀ ≈ 5-8), it is ~80-88%",
+        "Vaccines don't work at the population level",
+        "95% vaccination is impossible to achieve"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The herd immunity threshold is calculated as 1 - 1/R₀, adjusted for vaccine efficacy (VE): threshold = (1 - 1/R₀)/VE. Individual vaccine efficacy (a property of individual immunity) does not directly determine the population-level vaccination coverage needed — that depends on the pathogen's transmissibility (R₀), contact patterns, population density, and waning immunity. Fine, Eames, and Heymann (2011, Clinical Infectious Diseases) showed that herd immunity is an emergent population property that cannot be simply derived from individual protection data. Confusing the two is an atomistic fallacy.",
+      "explanationAr": "حد مناعة القطيع يُحسب كـ 1 - 1/R₀ معدلاً بفعالية اللقاح. فعالية اللقاح الفردية لا تحدد مباشرة تغطية التطعيم السكانية المطلوبة — ذلك يعتمد على قابلية انتقال الممرض وأنماط الاتصال والكثافة السكانية وتضاؤل المناعة. مناعة القطيع خاصية سكانية ناشئة."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "Research shows that individuals who exercise regularly have lower rates of depression. A town mayor concludes: 'Building a new gym will reduce our town's depression rate by the same percentage seen in individual studies.' What level-of-analysis problem is this?",
+      "promptAr": "يُظهر بحث أن الأفراد الذين يمارسون الرياضة بانتظام لديهم معدلات اكتئاب أقل. يستنتج عمدة مدينة: 'بناء صالة رياضية جديدة سيخفض معدل الاكتئاب في مدينتنا بنفس النسبة المئوية التي شوهدت في الدراسات الفردية.' ما مشكلة مستوى التحليل هذه؟",
+      "options": [
+        "Regression to the mean",
+        "Ecological fallacy",
+        "Atomistic fallacy — individual-level exercise-depression associations cannot predict community-level outcomes because of self-selection (motivated individuals exercise regardless of gym access), compliance barriers, and the fact that community depression rates are influenced by systemic factors (unemployment, social isolation, poverty) beyond individual exercise",
+        "Survivorship bias"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The individual-level evidence (exercisers are less depressed) is confounded by self-selection — people who exercise may already be less depressed, more motivated, and more health-conscious. Building a gym does not eliminate these selection effects. Community-level depression is driven by systemic, emergent factors (unemployment, housing instability, social cohesion, access to mental health services) that have no individual-level analogue. Extrapolating the individual exercise-depression relationship to predict population-level outcomes ignores these compositional and contextual effects. This is the atomistic fallacy as described by Diez-Roux (1998, American Journal of Public Health).",
+      "explanationAr": "الأدلة على المستوى الفردي مشوبة بالاختيار الذاتي — الأشخاص الذين يمارسون الرياضة قد يكونون أقل اكتئاباً أصلاً. الاكتئاب المجتمعي مدفوع بعوامل نظامية ناشئة (البطالة، عدم استقرار السكن، التماسك الاجتماعي) ليس لها نظير فردي."
+    },
+    {
+      "id": 5,
+      "type": "evaluate",
+      "prompt": "How does Geoffrey Rose's (1985) distinction between 'causes of cases' and 'causes of incidence' relate to the atomistic fallacy?",
+      "promptAr": "كيف يرتبط تمييز جيفري روز (1985) بين 'أسباب الحالات' و'أسباب الحدوث' بالمغالطة الذرية؟",
+      "options": [
+        "Rose argued that only individual-level causes matter",
+        "Rose's framework only applies to infectious diseases",
+        "They are unrelated concepts from different fields",
+        "Rose showed that individual risk factors (causes of cases) explain why specific people get sick, but population-level risk factor distributions and social/environmental conditions (causes of incidence) explain why one population has more disease than another — conflating these two levels is the atomistic fallacy"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Rose (1985, 'Sick Individuals and Sick Populations,' Int J Epidemiol, 14:32-38) made a foundational distinction: individual risk factors explain which individuals within a population get sick (causes of cases), but they do not explain why entire populations differ in disease rates (causes of incidence). For example, high cholesterol predicts individual heart attack risk, but the REASON one country has more heart attacks than another relates to population-level diet, lifestyle, and healthcare system differences — emergent properties. Applying individual-level risk factor data to explain population-level variation commits the atomistic fallacy. This insight reshaped public health strategy from high-risk individual approaches to population-wide prevention.",
+      "explanationAr": "ميّز روز (1985) تمييزاً أساسياً: عوامل الخطر الفردية تفسر أي الأفراد يمرضون (أسباب الحالات)، لكنها لا تفسر لماذا تختلف مجموعات سكانية بأكملها في معدلات المرض (أسباب الحدوث). تطبيق بيانات عوامل الخطر الفردية لتفسير التباين السكاني يرتكب المغالطة الذرية."
+    }
+  ]
+}

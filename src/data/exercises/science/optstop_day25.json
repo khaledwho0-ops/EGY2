@@ -1,0 +1,98 @@
+{
+  "id": "optimal_stopping",
+  "phase": 2,
+  "week": 14,
+  "day": 25,
+  "title": "Optimal Stopping Problem",
+  "titleAr": "مشكلة التوقف الأمثل",
+  "description": "Learn the mathematical framework of optimal stopping theory, including the secretary problem and its 37% rule, with applications to decision-making under uncertainty.",
+  "descriptionAr": "تعلم الإطار الرياضي لنظرية التوقف الأمثل، بما في ذلك مشكلة السكرتير وقاعدة 37%، مع تطبيقات على اتخاذ القرار تحت عدم اليقين.",
+  "type": "statistical-fallacy",
+  "difficulty": 4,
+  "estimatedMinutes": 20,
+  "statisticalConcept": {
+    "name": "Optimal Stopping Theory / Secretary Problem",
+    "nameAr": "نظرية التوقف الأمثل / مشكلة السكرتير",
+    "definition": "The secretary problem asks: how do you choose the best candidate from a sequence of n applicants when you must accept or reject each immediately? The optimal strategy is to reject the first n/e ≈ 36.8% of candidates (the 'look' phase), then accept the first candidate who is better than all previously seen. This yields the best candidate with probability 1/e ≈ 36.8%, regardless of n.",
+    "definitionAr": "مشكلة السكرتير تسأل: كيف تختار أفضل مرشح من تسلسل n متقدم عندما يجب قبول أو رفض كل منهم فوراً؟ الاستراتيجية المثلى هي رفض أول n/e ≈ 36.8% من المرشحين ثم قبول أول مرشح أفضل من جميع من سبقوه.",
+    "realWorldExample": "Applications extend beyond hiring: house hunting (look at 37% of available options then commit), dating decisions, optimal auction design, and clinical trial stopping rules. Seale & Rapoport (1997) found that humans tend to stop too early, consistent with the 'satisficing' heuristic described by Simon (1956).",
+    "detectionMethod": "Model as a sequential decision problem. Calculate the optimal stopping threshold using the 1/e rule for the classical version, or dynamic programming for variants with recall, costs, or partial information."
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "type": "calculate",
+      "prompt": "You are interviewing 100 candidates sequentially for one position. You must accept or reject each immediately with no callbacks. Using the optimal stopping rule (1/e ≈ 0.368), how many candidates should you 'look at' (reject automatically) before starting to accept?",
+      "promptAr": "تجري مقابلات لـ 100 مرشح بالتتابع لمنصب واحد. يجب قبول أو رفض كل مرشح فوراً بدون رجعة. باستخدام قاعدة التوقف الأمثل، كم مرشحاً يجب أن 'تنظر إليهم' (ترفضهم تلقائياً) قبل البدء بالقبول؟",
+      "options": [
+        "Accept the very first candidate who seems good",
+        "Reject the first 10, then accept the next best",
+        "Reject the first 37, then accept the first candidate better than all 37",
+        "Reject the first 50, then accept the next best"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The optimal strategy for the classical secretary problem is to reject the first ⌊n/e⌋ = ⌊100/2.718⌋ = ⌊36.8⌋ = 37 candidates, then accept the first subsequent candidate who is better than all previously seen. This gives approximately a 1/e ≈ 36.8% probability of selecting the absolute best candidate — remarkably high for a problem with 100 options and no recall.",
+      "explanationAr": "الاستراتيجية المثلى هي رفض أول 37 مرشحاً ثم قبول أول مرشح لاحق أفضل من جميع الـ 37 السابقين. هذا يعطي احتمال 36.8% تقريباً لاختيار أفضل مرشح."
+    },
+    {
+      "id": 2,
+      "type": "identify",
+      "prompt": "In the secretary problem, what happens if you use the optimal 1/e rule but the best candidate was among the first 37% you automatically rejected?",
+      "promptAr": "في مشكلة السكرتير، ماذا يحدث إذا استخدمت قاعدة 1/e المثلى لكن أفضل مرشح كان ضمن أول 37% الذين رفضتهم تلقائياً؟",
+      "options": [
+        "The algorithm adjusts and picks the second-best",
+        "This scenario is impossible with the optimal strategy",
+        "You can go back and hire them",
+        "You will reject all remaining candidates (none will be better than the best you've seen) and end up with no one or the last candidate"
+      ],
+      "correctAnswer": 3,
+      "explanation": "This is the key risk of the strategy. With probability ≈ 36.8%, the best candidate falls in the exploration phase and is irrevocably rejected. In this case, every subsequent candidate fails to beat the benchmark, and the searcher either ends up with no selection or must take the last candidate by default. This is why the strategy succeeds only 36.8% of the time — not higher.",
+      "explanationAr": "هذا هو الخطر الرئيسي للاستراتيجية. باحتمال 36.8%، أفضل مرشح يقع في مرحلة الاستكشاف ويُرفض نهائياً. في هذه الحالة، لا مرشح لاحق يتجاوز المعيار."
+    },
+    {
+      "id": 3,
+      "type": "scenario",
+      "prompt": "You are apartment hunting in a competitive market. You can view 20 apartments over the next month, but each will be taken by someone else if you don't commit immediately. Your friend advises: 'Just take the first nice one you see.' A mathematician advises using the 1/e rule. What is the advantage of the mathematical approach?",
+      "promptAr": "تبحث عن شقة في سوق تنافسي. يمكنك مشاهدة 20 شقة خلال الشهر القادم، لكن كل شقة ستؤخذ إذا لم تلتزم فوراً. صديقك ينصح: 'خذ أول شقة جيدة تراها.' عالم رياضيات ينصح باستخدام قاعدة 1/e. ما ميزة النهج الرياضي؟",
+      "options": [
+        "By viewing 7-8 apartments first (37% of 20) to calibrate standards, then committing to the next one that exceeds all seen, you maximize the probability of getting the best option (≈36.8%) versus taking the first good one",
+        "It saves time by viewing fewer apartments",
+        "There is no advantage; the friend's advice is optimal",
+        "It guarantees finding the best apartment"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 1/e rule says view ⌊20/e⌋ ≈ 7 apartments to calibrate your standards, then commit to the first apartment that exceeds everything you've seen. Without calibration, you cannot distinguish 'good' from 'best' — the exploration phase provides a reference distribution. This principle appears in behavioral economics, where premature commitment (satisficing) is common.",
+      "explanationAr": "قاعدة 1/e تقول شاهد 7 شقق لمعايرة معاييرك، ثم التزم بأول شقة تتجاوز كل ما رأيته. مرحلة الاستكشاف توفر توزيعاً مرجعياً."
+    },
+    {
+      "id": 4,
+      "type": "identify",
+      "prompt": "Seale & Rapoport (1997) found that in experimental settings, humans systematically deviate from the optimal stopping rule. How do they typically deviate?",
+      "promptAr": "وجد سيل ورابوبورت (1997) أن البشر ينحرفون بشكل منهجي عن قاعدة التوقف الأمثل في البيئات التجريبية. كيف ينحرفون عادةً؟",
+      "options": [
+        "They wait too long and end up with the last option",
+        "They stop too early, accepting candidates before the optimal threshold — consistent with risk aversion and the 'satisficing' heuristic",
+        "They follow the optimal rule exactly",
+        "They randomly accept and reject without any pattern"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Experimental research consistently shows humans stop searching too early. This aligns with Herbert Simon's (1956) concept of 'satisficing' — accepting a 'good enough' option rather than optimizing. Loss aversion also plays a role: the fear of ending up with nothing (if the best was already passed) motivates premature commitment. The typical human threshold is closer to 25-30% rather than the optimal 37%.",
+      "explanationAr": "البحث التجريبي يظهر أن البشر يتوقفون عن البحث مبكراً جداً، متسقاً مع مفهوم 'الإرضاء' لهربرت سايمون — قبول خيار 'جيد بما فيه الكفاية' بدلاً من التحسين."
+    },
+    {
+      "id": 5,
+      "type": "calculate",
+      "prompt": "In a variant of the secretary problem with 'recall' (you can go back to any previously rejected candidate), the optimal strategy changes. If you can recall, what is the probability of selecting the best candidate with the optimal strategy when n is large?",
+      "promptAr": "في نسخة من مشكلة السكرتير مع 'الاسترجاع' (يمكنك العودة لأي مرشح تم رفضه سابقاً)، تتغير الاستراتيجية المثلى. إذا كان بإمكانك الاسترجاع، ما احتمال اختيار أفضل مرشح مع الاستراتيجية المثلى عندما n كبير؟",
+      "options": [
+        "Approximately 80%",
+        "Still 1/e ≈ 36.8%",
+        "Approximately 58% — recall significantly improves the success probability",
+        "100% — you can always go back to the best"
+      ],
+      "correctAnswer": 2,
+      "explanation": "With full recall (the ability to return to any previously seen candidate if they are still available), the optimal strategy achieves approximately 58% success rate for large n. The strategy involves a more aggressive exploration phase (reject the first √n candidates approximately), then set a declining threshold. This was analyzed by Gilbert & Mosteller (1966). The improvement from 36.8% to 58% quantifies the value of having a 'second chance.'",
+      "explanationAr": "مع الاسترجاع الكامل، الاستراتيجية المثلى تحقق معدل نجاح حوالي 58% لـ n كبير. التحسن من 36.8% إلى 58% يحدد قيمة وجود 'فرصة ثانية'."
+    }
+  ]
+}

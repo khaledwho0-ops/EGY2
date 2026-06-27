@@ -1,0 +1,231 @@
+{
+  "id": "day9_expert_voice",
+  "phase": 0,
+  "week": 2,
+  "day": 9,
+  "title": "Expert Voice Calibration",
+  "titleAr": "معايرة صوت الخبير",
+  "description": "Can you distinguish a real expert from a fake one? Evaluate 8 scenarios involving real and fabricated Egyptian and international 'experts' making health, science, and policy claims. Learn the red flags that signal pseudoexpertise.",
+  "descriptionAr": "هل تستطيع التمييز بين الخبير الحقيقي والمزيف؟ قيّم ٨ سيناريوهات تتضمن خبراء مصريين ودوليين حقيقيين ومزيفين يُقدمون ادعاءات في الصحة والعلوم والسياسات.",
+  "type": "expert_voice_calibration",
+  "difficulty": 2,
+  "estimatedMinutes": 14,
+  "instrument": "ExpertVoice_v1",
+  "reference": {
+    "citation": "Nichols, T. (2017). The Death of Expertise. Oxford University Press. DOI: 10.1093/oso/9780190469412.001.0001",
+    "url": "https://doi.org/10.1093/oso/9780190469412.001.0001"
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "claim_en": "The Nile River is safe to drink directly from after it passes through Cairo — the natural filtration removes all pollutants.",
+      "claim_ar": "مياه نهر النيل آمنة للشرب مباشرة بعد مرورها بالقاهرة — الترشيح الطبيعي يزيل جميع الملوثات.",
+      "speaker": "Dr. Ahmed Salah",
+      "credentials_presented": "Water Treatment Specialist, National Research Center (NRC) Egypt — 25 years experience",
+      "credentials_real": false,
+      "credential_red_flags": [
+        "No verifiable profile on NRC Egypt's official website (nrc.sci.eg)",
+        "Contradicts publicly available HCWW (Holding Company for Water and Wastewater) treatment data",
+        "Claim violates basic chemistry — Cairo industrial runoff introduces heavy metals not removed by natural filtration",
+        "No journal publications searchable on Google Scholar under this name in this field",
+        "Shared only via Facebook, not peer-reviewed channels"
+      ],
+      "correct_verdict": "distrust",
+      "explanation_en": "The Nile River passing through Cairo receives substantial industrial effluents, agricultural runoff, and domestic wastewater. Egypt's own HCWW (Holding Company for Water and Wastewater) operates 343 water treatment plants precisely because raw Nile water is not safe to drink. CAPMAS 2022 reports show 97.6% of urban Egyptians have access to treated piped water. A genuine NRC water expert would never make this claim, and the absence of any verifiable academic profile is a critical red flag.",
+      "explanation_ar": "يتلقى نهر النيل عبر القاهرة كميات كبيرة من الملوثات الصناعية والزراعية والمنزلية. تشغّل شركة المياه والصرف الصحي ٣٤٣ محطة معالجة تحديداً لأن مياه النيل الخام غير آمنة للشرب. غياب أي ملف أكاديمي قابل للتحقق هو علامة حمراء بالغة الأهمية.",
+      "verification_steps": [
+        "Search NRC Egypt official directory at nrc.sci.eg for 'Ahmed Salah'",
+        "Search Google Scholar for publications: author:salah water treatment nile egypt",
+        "Cross-reference with HCWW official water quality reports at hcww.com.eg",
+        "Check WHO Egypt water quality country reports"
+      ],
+      "source_url": "https://www.hcww.com.eg"
+    },
+    {
+      "id": 2,
+      "claim_en": "Eating more than 2 eggs per day increases heart disease risk by 60% in Egyptians.",
+      "claim_ar": "تناول أكثر من ٢ بيضتين يومياً يزيد خطر أمراض القلب بنسبة ٦٠٪ لدى المصريين.",
+      "speaker": "Dr. Mona Khalil",
+      "credentials_presented": "Professor of Cardiology, Cairo University Faculty of Medicine — Author of 47 peer-reviewed papers",
+      "credentials_real": true,
+      "credential_notes": "Cairo University Faculty of Medicine is Egypt's oldest and most prestigious medical school, established 1827. A professor with 47 peer-reviewed papers is credentialed. However, VERIFY the specific claim against current evidence.",
+      "credential_red_flags": [
+        "The 60% figure is specific — ask for the source study",
+        "Recent systematic reviews (PREDIMED, 2022) show complex relationship between dietary cholesterol and heart disease that depends on overall diet pattern",
+        "Egyptian dietary patterns (high legume intake) may modify egg-related cardiovascular risk differently than Western populations"
+      ],
+      "correct_verdict": "verify",
+      "explanation_en": "Dr. Khalil's credentials are real and strong — Cairo University cardiology professors are genuine experts. However, the specific claim ('60% increase') requires verification against the underlying study. The current scientific consensus (AHA, 2021; PREDIMED-Plus) is nuanced: dietary cholesterol from eggs has a modest effect that depends on overall diet quality, genetic factors, and preparation method. For Egyptian patients specifically, consulting Ain Shams Cardiology Department publications or the Egyptian Heart Journal would provide Egypt-specific data. VERDICT: Trust the expert, verify the specific statistic.",
+      "explanation_ar": "بيانات الدكتورة خليل حقيقية وقوية — أساتذة أمراض القلب في جامعة القاهرة خبراء حقيقيون. لكن الادعاء المحدد ('زيادة ٦٠٪') يحتاج تحققاً من الدراسة الأصلية. الإجماع العلمي الحالي (AHA 2021) أكثر تعقيداً من هذا.",
+      "verification_steps": [
+        "Ask for the specific study DOI or citation",
+        "Search PubMed: eggs cardiovascular risk Egypt",
+        "Check AHA 2021 dietary guidelines on eggs",
+        "Review Egyptian Heart Journal (ehjjournal.org) for Egyptian-specific data"
+      ],
+      "source_url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000977"
+    },
+    {
+      "id": 3,
+      "claim_en": "I've treated hundreds of COVID-19 patients in my clinic and I can tell you — Ivermectin works better than any vaccine for preventing COVID.",
+      "claim_ar": "عالجت مئات من مرضى كوفيد-١٩ في عيادتي ويمكنني أن أؤكد لكم — الإيفرمكتين أفضل من أي لقاح في الوقاية من كوفيد.",
+      "speaker": "Dr. Ibrahim Mahmoud",
+      "credentials_presented": "General Practitioner, Mansoura — Owner of medical Facebook page with 500,000 followers",
+      "credentials_real": "Partial — licensed GP, but no specialization in infectious disease, pharmacology, or clinical trials",
+      "credential_red_flags": [
+        "General Practitioner ≠ Infectious Disease specialist or pharmacologist",
+        "Anecdotal clinical experience ('hundreds of patients') is not equivalent to a randomized controlled trial",
+        "High social media following is NOT a credential — it is a popularity metric",
+        "Ivermectin for COVID-19 has been studied in multiple large RCTs (TOGETHER trial, ACTIV-6) and found ineffective",
+        "EDA (Egyptian Drug Authority) and WHO both do NOT recommend Ivermectin for COVID-19 treatment or prevention"
+      ],
+      "correct_verdict": "distrust",
+      "explanation_en": "The TOGETHER trial (Reis et al., NEJM 2022) and ACTIV-6 (Stewart et al., JAMA 2023) — large, rigorous RCTs — found ivermectin no better than placebo for COVID-19. Dr. Mahmoud's personal clinical observation ('hundreds of patients') lacks the control group and blinding essential to establish causation. Furthermore, his domain (general practice) does not qualify him to make authoritative statements about antiviral pharmacology. 500,000 Facebook followers is a popularity metric, not a credential. The WHO explicitly does not recommend ivermectin for COVID-19 outside clinical trials.",
+      "explanation_ar": "تجربة TOGETHER (NEJM 2022) وACTIV-6 (JAMA 2023) — تجارب عشوائية صارمة — وجدت أن الإيفرمكتين ليس أفضل من الدواء الوهمي لكوفيد-١٩. ملاحظة الدكتور محمود السريرية الشخصية تفتقر إلى مجموعة التحكم والعمى الضروريين. ٥٠٠,٠٠٠ متابع على فيسبوك هو مقياس شعبية، وليس اعتمادية.",
+      "verification_steps": [
+        "Search PubMed: ivermectin COVID-19 RCT 2022 2023",
+        "Check WHO ivermectin guidance at who.int",
+        "Check EDA Egypt official statements at eda.mohp.gov.eg",
+        "Verify GP's license at Egyptian Medical Syndicate registry"
+      ],
+      "source_url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2115869"
+    },
+    {
+      "id": 4,
+      "claim_en": "Ancient Egyptians were the first civilization to use anesthesia — they used opium-based preparations for surgery thousands of years before modern medicine.",
+      "claim_ar": "المصريون القدماء كانوا أول حضارة تستخدم التخدير — استخدموا مستحضرات الأفيون للجراحة قبل آلاف السنين من الطب الحديث.",
+      "speaker": "Dr. Zeinab Farouk",
+      "credentials_presented": "Lecturer in History of Medicine, Ain Shams University, Department of Community Medicine — Published book on Egyptian Medical History",
+      "credentials_real": true,
+      "credential_notes": "Ain Shams University is a legitimate Egyptian research university. History of medicine is a genuine academic discipline.",
+      "credential_red_flags": [],
+      "correct_verdict": "trust",
+      "explanation_en": "This claim is accurate and well-supported. The Ebers Papyrus (c. 1550 BCE, now at Leipzig University Library) documents the use of opium (from the poppy plant) as a sedative and pain reliever in ancient Egyptian medicine. The Edwin Smith Papyrus (c. 1600 BCE) describes 48 surgical cases with rational treatment approaches. Dr. Farouk's credentials (Ain Shams University, history of medicine, published academic work) are appropriate for this claim. The specific claim aligns with mainstream Egyptological and history-of-medicine scholarship. Reference: Nunn, J.F. (1996) Ancient Egyptian Medicine, British Museum Press.",
+      "explanation_ar": "هذا الادعاء دقيق ومدعوم جيداً. بردية إيبرس (حوالي ١٥٥٠ قبل الميلاد، محفوظة في مكتبة جامعة لايبزيغ) توثّق استخدام الأفيون كمهدئ ومسكن للألم في الطب المصري القديم. بردية إدوين سميث (حوالي ١٦٠٠ قبل الميلاد) تصف ٤٨ حالة جراحية. اعتمادية الدكتورة فاروق مناسبة لهذا الادعاء.",
+      "verification_steps": [
+        "Verify Ain Shams University faculty directory",
+        "Cross-reference with Ebers Papyrus scholarship at Leipzig University",
+        "Search: Nunn Ancient Egyptian Medicine British Museum Press 1996",
+        "Check Egyptian Museum Cairo documentation of medical papyri"
+      ],
+      "source_url": "https://www.bmj.com/content/313/7070/1486"
+    },
+    {
+      "id": 5,
+      "claim_en": "I am a nutritionist and I can tell you that the Egyptian traditional diet — ful medames, lentils, molokhia — is nutritionally superior to any Mediterranean diet and prevents all chronic diseases.",
+      "claim_ar": "أنا أخصائية تغذية ويمكنني إخبارك بأن النظام الغذائي المصري التقليدي — الفول، العدس، الملوخية — متفوق غذائياً على أي نظام غذائي متوسطي ويمنع جميع الأمراض المزمنة.",
+      "speaker": "Hana El-Masry",
+      "credentials_presented": "Certified Nutritionist — Instagram influencer with 1.2 million followers — Author of 'Eat Like an Egyptian' e-book",
+      "credentials_real": "Partial — 'Certified Nutritionist' in Egypt requires verification; without specifying the certifying body it is unverifiable. Instagram following and e-book are not credentials.",
+      "credential_red_flags": [
+        "'Certified Nutritionist' is a vague claim — ask: certified by whom? (Egyptian Dietetic Association? ESPEN? American CDR?)",
+        "Instagram following (1.2M) is a popularity metric, not an academic credential",
+        "The claim 'prevents ALL chronic diseases' is absolute language — legitimate nutritionists never claim a single diet prevents ALL diseases",
+        "No mention of peer-reviewed publications or clinical experience",
+        "Egyptian traditional diet is generally healthy but the claim of superiority over ALL Mediterranean diets is unsubstantiated"
+      ],
+      "correct_verdict": "verify",
+      "explanation_en": "The Egyptian traditional diet (ful medames, lentils, molokhia, fenugreek) is genuinely nutritious — high in fiber, plant protein, and micronutrients. However, the claim 'prevents all chronic diseases' is scientifically untenable. Egypt has significant rates of type 2 diabetes (15.6% prevalence per IDF 2021), hypertension, and cardiovascular disease despite traditional dietary patterns. The Mediterranean diet has the strongest evidence base (PREDIMED trial, NEJM 2013). The word 'all' is the red flag. Also, 'Certified Nutritionist' in Egypt — verify if registered with Egyptian Nutrition Society or Syndicate of Health Professions.",
+      "explanation_ar": "النظام الغذائي المصري التقليدي مغذٍّ بالفعل، لكن ادعاء 'يمنع جميع الأمراض' لا يمكن دعمه علمياً. مصر لديها معدلات كبيرة من السكري (١٥.٦٪ وفق IDF 2021) والأمراض القلبية الوعائية رغم الأنماط الغذائية التقليدية. كلمة 'جميع' هي العلامة الحمراء.",
+      "verification_steps": [
+        "Ask for the specific certifying body and verify at Egyptian Nutrition Society",
+        "Search PubMed: Egyptian traditional diet chronic disease prevention",
+        "Compare with PREDIMED trial evidence (NEJM 2013)",
+        "Check IDF Diabetes Atlas for Egypt diabetes prevalence"
+      ],
+      "source_url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1200303"
+    },
+    {
+      "id": 6,
+      "claim_en": "A new study from our team at the Egyptian Atomic Energy Authority proves that low-dose radiation from mobile phones causes brain cancer in Egyptians.",
+      "claim_ar": "دراسة جديدة من فريقنا في هيئة الطاقة الذرية المصرية تُثبت أن الإشعاع المنخفض الجرعة من الهواتف المحمولة يسبب سرطان الدماغ لدى المصريين.",
+      "speaker": "Unnamed 'Scientist' from EAEA",
+      "credentials_presented": "Egyptian Atomic Energy Authority research team",
+      "credentials_real": "The EAEA is a real institution (eaea.org.eg) but this specific claim has not been published — it is unverifiable without a DOI or journal citation",
+      "credential_red_flags": [
+        "No named researcher — anonymity prevents verification",
+        "No journal name, DOI, or publication date provided",
+        "The ICNIRP and WHO have reviewed all existing evidence and found no conclusive link between mobile phones and brain cancer",
+        "The INTERPHONE study (IARC, 2010) — largest study ever on mobile phones and cancer — found no increased risk at normal usage levels",
+        "Burden of proof: a claim this significant requires extraordinary evidence in a peer-reviewed journal"
+      ],
+      "correct_verdict": "distrust",
+      "explanation_en": "The Egyptian Atomic Energy Authority (EAEA) is a real institution, but an unnamed 'study' without DOI, journal, or named researcher is unverifiable. The global scientific consensus on mobile phones and cancer (IARC INTERPHONE 2010, WHO 2014 review, ICNIRP 2020 guidelines) does not support a causal link at normal exposure levels. Mobile phones emit non-ionizing radiofrequency radiation, which does not have enough energy to damage DNA. Until this 'study' is published in a peer-reviewed journal with a verifiable DOI, it must be treated as unconfirmed.",
+      "explanation_ar": "هيئة الطاقة الذرية المصرية مؤسسة حقيقية، لكن 'دراسة' مجهولة بدون DOI أو مجلة أو باحث مسمى غير قابلة للتحقق. الإجماع العلمي العالمي (IARC 2010, WHO 2014, ICNIRP 2020) لا يدعم وجود رابط سببي عند مستويات التعرض الطبيعية.",
+      "verification_steps": [
+        "Request the DOI and journal name",
+        "Search PubMed with researcher name and EAEA affiliation",
+        "Check EAEA official publications at eaea.org.eg",
+        "Review WHO electromagnetic fields and public health report"
+      ],
+      "source_url": "https://www.who.int/news-room/fact-sheets/detail/electromagnetic-fields-and-public-health-mobile-phones"
+    },
+    {
+      "id": 7,
+      "claim_en": "I'm a pharmacist and I guarantee this herbal supplement from Saudi Arabia will reverse Type 2 diabetes in 90 days — we have thousands of Egyptian customers who are cured.",
+      "claim_ar": "أنا صيدلاني وأضمن أن هذا المكمل العشبي من المملكة العربية السعودية سيعكس مرض السكري من النوع الثاني في ٩٠ يوماً — لدينا آلاف العملاء المصريين الذين شُفوا.",
+      "speaker": "Mohamed Assem",
+      "credentials_presented": "Licensed Pharmacist, member of Egyptian Pharmaceutical Syndicate",
+      "credentials_real": "Partial — pharmacist license may be real, but claims about curing T2D diabetes are outside pharmacist authority and contradicted by evidence",
+      "credential_red_flags": [
+        "'Thousands of customers who are cured' — this is anecdotal, not clinical evidence",
+        "No herbal supplement has been shown in RCTs to reverse Type 2 diabetes; the claim of 'cure' is not in medical literature",
+        "Pharmacists are not authorized to make disease cure claims — this falls under Egyptian Consumer Protection Agency regulations",
+        "Foreign origin (Saudi Arabia) + cure claim = high fraud risk profile",
+        "The Egyptian Drug Authority (EDA) requires approval for any medicinal product claims",
+        "Survivorship bias: satisfied customers are visible, those who stopped insulin and deteriorated are not"
+      ],
+      "correct_verdict": "distrust",
+      "explanation_en": "Type 2 diabetes can achieve remission through significant lifestyle changes, GLP-1 agonists, or bariatric surgery (Lean et al., Lancet 2018 DiRECT trial). No herbal supplement has replicated these outcomes in rigorous RCTs. A pharmacist can legitimately advise on medications but cannot legally claim a product 'cures' diabetes — this violates Egyptian Consumer Protection Law No. 67/2006 and EDA regulations. The '90-day cure' is a classic fraud marker. Diabetic patients who discontinue medication based on this advice risk dangerous hyperglycemia. Report to EDA (eda.mohp.gov.eg) or Consumer Protection Agency (cpa.gov.eg).",
+      "explanation_ar": "مرض السكري من النوع الثاني يمكن أن يصل إلى هدأة من خلال تغييرات نمط الحياة أو جراحة السمنة (تجربة DiRECT، لانسيت ٢٠١٨)، لكن لا يوجد مكمل عشبي حقق هذه النتائج في تجارب عشوائية صارمة. ادعاء '٩٠ يوماً للشفاء' هو علامة احتيال كلاسيكية.",
+      "verification_steps": [
+        "Search EDA approved products database at eda.mohp.gov.eg",
+        "Search PubMed for the specific supplement + Type 2 diabetes + RCT",
+        "Check Egyptian Consumer Protection Agency for complaints at cpa.gov.eg",
+        "Consult an endocrinologist at a university hospital (Kasr Al-Aini, Ain Shams)"
+      ],
+      "source_url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)33102-1/fulltext"
+    },
+    {
+      "id": 8,
+      "claim_en": "Egypt's fertility rate has dropped significantly since 2008, and the main cause is increased female education — not family planning programs.",
+      "claim_ar": "انخفض معدل الخصوبة في مصر بشكل ملحوظ منذ عام ٢٠٠٨، والسبب الرئيسي هو زيادة تعليم المرأة — وليس برامج تنظيم الأسرة.",
+      "speaker": "Dr. Hoda Rashad",
+      "credentials_presented": "Professor of Demography, Social Research Center, American University in Cairo (AUC) — Former Head of CAPMAS — Published extensively on Egyptian fertility",
+      "credentials_real": true,
+      "credential_notes": "AUC's Social Research Center is a legitimate, internationally respected research institution. CAPMAS (Central Agency for Public Mobilization and Statistics) is Egypt's official statistics body. Dr. Hoda Rashad is a real and prominent Egyptian demographer.",
+      "credential_red_flags": [],
+      "correct_verdict": "trust",
+      "explanation_en": "Dr. Hoda Rashad is a real, internationally recognized Egyptian demographer whose work on Egyptian fertility is widely cited. Egypt's TFR (Total Fertility Rate) did drop from ~3.5 (2008) to ~3.1 (2014) but then ROSE to ~3.4 (2019) before resuming decline per EDHS 2021. The relationship between female education, family planning programs, and fertility in Egypt is a genuine ongoing academic debate. Her credentials (AUC SRC, former CAPMAS head, peer-reviewed publications) are fully verifiable. This is exactly the type of expert to trust on Egyptian demographic data — while the specific causal claim (education vs. programs) is a legitimate academic dispute, the underlying data is sound.",
+      "explanation_ar": "الدكتورة هدى رشاد عالمة ديموغرافيا مصرية حقيقية معترف بها دولياً. معدل الخصوبة الإجمالي في مصر انخفض من ~٣.٥ (٢٠٠٨) إلى ~٣.١ (٢٠١٤) ثم ارتفع إلى ~٣.٤ (٢٠١٩) قبل استئناف الانخفاض. اعتمادياتها قابلة للتحقق بالكامل.",
+      "verification_steps": [
+        "Verify at AUC Social Research Center website: src.aucegypt.edu",
+        "Check CAPMAS demographic publications",
+        "Search: Rashad Egyptian fertility education EDHS",
+        "Review EDHS 2021 (Egypt Demographic and Health Survey) at dhsprogram.com"
+      ],
+      "source_url": "https://www.dhsprogram.com/data/dataset/Egypt_Standard-DHS_2021.cfm"
+    }
+  ],
+  "scoring": {
+    "algorithm": "expert_calibration_score",
+    "description": "Each correct verdict (trust/distrust/verify) scores 1 point. Maximum score: 8. Score 7-8: excellent expert discrimination. Score 5-6: moderate, review red flag checklist. Score <5: study Expert Voice framework.",
+    "red_flag_checklist": [
+      "No verifiable name or affiliation",
+      "Social media following cited as credential",
+      "Absolute language ('always', 'never', 'cures all')",
+      "No peer-reviewed publication trail",
+      "Domain mismatch (e.g., GP claiming pharmacological authority)",
+      "No DOI or verifiable study citation",
+      "Anecdotal evidence ('thousands of clients say')",
+      "Product for sale by the expert"
+    ],
+    "trust_hierarchy": {
+      "level_5_highest": "Systematic reviews and meta-analyses (Cochrane, PubMed)",
+      "level_4": "Randomized Controlled Trials (RCTs)",
+      "level_3": "Cohort and case-control studies",
+      "level_2": "Expert opinion with peer-reviewed track record",
+      "level_1_lowest": "Anecdotal evidence, social media claims"
+    }
+  }
+}

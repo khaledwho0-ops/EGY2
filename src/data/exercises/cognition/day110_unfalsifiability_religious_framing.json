@@ -1,0 +1,128 @@
+{
+  "id": "day110_unfalsifiability_religious_framing",
+  "phase": 3,
+  "week": 16,
+  "day": 110,
+  "title": "When 'Sacred' Means 'Untestable'",
+  "titleAr": "لمّا «مقدّس» يعني «غير قابل للاختبار»",
+  "description": "One of the cleverest moves in pseudoscience is wrapping a claim in sacred identity — because then any counter-evidence becomes an attack on faith. Recognising this move is a skill, not a theological debate.",
+  "descriptionAr": "من أذكى الحركات في العلم الزائف هو تغليف الادعاء بهويّة مقدّسة — لأن أي دليل مضادّ بعدها يصبح هجوماً على الإيمان. الاعتراف بهذه الحركة مهارة، وليس جدلاً لاهوتياً.",
+  "type": "religion-literacy",
+  "difficulty": 4,
+  "estimatedMinutes": 16,
+  "source": "https://plato.stanford.edu/entries/popper/",
+  "exercises": [
+    {
+      "id": 1,
+      "mechanic": "recognize",
+      "claim": "When confronted with documented ICU admissions from the viral Taybat diet, followers responded: 'The doctors are lying — this is a conspiracy against Islamic medicine.' What cognitive and rhetorical move is this?",
+      "claimAr": "لمّا واجَهوا بحالات عناية مركزة موثّقة من نظام الطيبات الفيروسي، ردّ الأتباع: «الأطباء بيكذبوا — دي مؤامرة ضد الطب الإسلامي». ما الحركة المعرفية والبلاغية هذه؟",
+      "options": [
+        "A valid counter-argument that requires a direct rebuttal",
+        "The unfalsifiability move: because the claim is sacred, any evidence against it is automatically reframed as persecution — making the claim immune to all evidence",
+        "A request for more data",
+        "Confirmation that the system works"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the unfalsifiability trap in its religious form: acceptance proves the system; rejection proves the conspiracy. There is no evidence that could, even in principle, change the follower's mind — which is Karl Popper's exact definition of a non-scientific claim. The harm of this move is not theological; it is that the person is now permanently protected from information that could save their life.",
+      "explanationAr": "هذا هو فخّ عدم قابلية التفنيد في صورته الدينية: القبول يُثبت النظام؛ والرفض يُثبت المؤامرة. لا يوجد دليل يمكنه، حتى من حيث المبدأ، تغيير رأي التابع — وهو بالضبط تعريف كارل بوبر للادعاء غير العلمي. ضرر هذه الحركة ليس لاهوتياً؛ بل أن الشخص الآن محمي بشكل دائم من المعلومات التي قد تنقذ حياته.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:moh-sa-2026-06-08"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 2,
+      "mechanic": "calibrate",
+      "calibrated": true,
+      "claim": "True or false: a medical claim that can never be tested or disproved — because any counter-evidence is dismissed as enemy action — is stronger and more reliable than a claim that can be tested.",
+      "claimAr": "صح ولا غلط: ادعاء طبي لا يمكن اختباره أبداً — لأن أي دليل مضادّ يُرفض كعمل عدو — أقوى وأكثر موثوقية من ادعاء قابل للاختبار.",
+      "correctAnswer": false,
+      "myth_en": "An untestable claim is more trustworthy because no one can disprove it.",
+      "myth_ar": "الادعاء الذي لا يُدحَض أكثر جدارة بالثقة لأنه لا أحد يستطيع دحضه.",
+      "explanation": "False — and this is a reversal of how knowledge works. Testability and falsifiability are what make a claim trustworthy, not their absence. A claim that cannot be falsified is not safe; it is unmoored from reality. As Popper showed, the ability to specify what evidence would disprove a claim is what separates science from unfalsifiable belief systems. Being impossible to disprove is a warning sign, not a seal of quality.",
+      "explanationAr": "غلط — وهذا عكس كيفية عمل المعرفة. قابلية الاختبار والتفنيد هي ما يجعل الادعاء جديراً بالثقة، لا غيابهما. الادعاء الذي لا يمكن تفنيده ليس آمناً؛ بل هو منفصل عن الواقع. كما أوضح بوبر، القدرة على تحديد أي دليل سيدحض الادعاء هي ما يفصل العلم عن أنظمة الاعتقاد غير القابلة للتفنيد. كون شيء مستحيل الدحض علامة تحذير، لا ختم جودة.",
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Overconfidence"
+    },
+    {
+      "id": 3,
+      "mechanic": "consider_opposite",
+      "claim": "A seller posts: 'The ban on our system proves it works — they only attack what threatens them.' If you accepted this logic, the ban would count as proof. If there were no ban, success would count as proof. Both outcomes confirm the claim.",
+      "claimAr": "بائع ينشر: «الحظر على نظامنا يُثبت إنه شغّال — بيهاجموا بس ما يُهدِّدهم». لو قبلت هذا المنطق، الحظر سيكون دليلاً. ولو لم يكن هناك حظر، النجاح سيكون دليلاً. كلا النتيجتين تُؤكّد الادعاء.",
+      "prompt": "What would disprove this claim? If both outcomes (banned and not-banned) are taken as proof, what has happened to the idea of 'evidence'?",
+      "promptAr": "إيه اللي يكذّب هذا الادعاء؟ لو كلتا النتيجتين (محظور وغير محظور) تُؤخَذ كدليل، إيه اللي حصل لفكرة «الدليل»؟",
+      "modelPoints": [
+        "If both outcomes confirm the claim, nothing can disprove it — which means the claim is not actually using evidence at all; it is a self-sealing narrative.",
+        "The Egyptian Medical Syndicate expelled the originator because he could not produce three documented cases with before/after labs — not because of a commercial threat. This is a documented institutional fact.",
+        "The Saudi Ministry of Health warned against the diet after documented ICU admissions — a graded official source, not persecution.",
+        "A claim that interprets ALL possible outcomes as confirming evidence has left the domain of rational evaluation. The question to ask: 'What outcome would you accept as evidence that your claim is wrong?'"
+      ],
+      "modelPointsAr": [
+        "لو كلتا النتيجتين تُؤكّد الادعاء، فلا شيء يستطيع دحضه — مما يعني أن الادعاء لا يستخدم الدليل أصلاً؛ بل هو سرد مُغلَق على نفسه.",
+        "نقابة الأطباء المصرية شطبت صاحب النظام لأنه لم يستطع تقديم ثلاث حالات موثّقة بتحاليل قبل/بعد — لا بسبب تهديد تجاري. هذه حقيقة مؤسسية موثّقة.",
+        "وزارة الصحة السعودية حذّرت من الحمية بعد حالات عناية مركزة موثّقة — مصدر رسمي مُصنَّف، لا اضطهاد.",
+        "الادعاء الذي يُفسّر كل النتائج الممكنة كدليل مُؤكِّد قد غادر مجال التقييم العقلاني. السؤال المطلوب: «أي نتيجة ستقبلها دليلاً على أن ادعاءك خاطئ؟»"
+      ],
+      "sources": [
+        "EAL-case-001:ems-2026-03",
+        "EAL-case-001:moh-sa-2026-06-08",
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "cognitivebiasAtPlay": "Motivated Reasoning"
+    },
+    {
+      "id": 4,
+      "mechanic": "self_explain",
+      "claim": "A well-meaning friend says: 'I respect your faith fully — but here is what the Medical Syndicate found, and here are the authenticated hadith that actually document the Prophet ﷺ eating chicken and milk.' The follower responds: 'Your evidence is from enemies.' How can you continue the conversation constructively?",
+      "claimAr": "صديق حسن النية يقول: «أنا بحترم إيمانك تماماً — بس هنا اللي لقته نقابة الأطباء، وهنا الأحاديث المعتمدة اللي بتوثّق فعلاً أكل النبي ﷺ الفراخ واللبن». التابع يردّ: «أدلتك من أعداء». كيف تكمل الحوار بشكل بنّاء؟",
+      "options": [
+        "Argue louder and repeat the evidence more firmly",
+        "Acknowledge the feeling, ask a curious question ('What source would you trust?'), and protect the relationship — data must get past identity before it can land",
+        "Give up — the person is beyond help",
+        "Share more alarming statistics"
+      ],
+      "correctAnswer": 1,
+      "selfExplain": {
+        "prompt": "In your own words: why does repeating evidence louder backfire when identity is threatened — and what does 'keeping the relationship' buy you in the long run?",
+        "promptAr": "بكلماتك: ليه تكرار الدليل بصوت أعلى بيعكس النتيجة لمّا تكون الهوية مُهدَّدة — وإيه اللي «الحفاظ على العلاقة» بيشتريه لك على المدى البعيد؟"
+      },
+      "explanation": "When identity is threatened, data entrenches rather than persuades. The constructive path is to keep the relationship, not win the argument. Ask: 'What kind of source would feel trustworthy to you?' — this sometimes opens a door. Never ridicule or escalate; shame entrenches belief (the backfire effect). The goal is to leave the door open so that when doubt naturally arises — and it often does — there is a trusted person to turn to.",
+      "explanationAr": "حين تُهدَّد الهوية، البيانات ترسّخ بدل أن تُقنع. المسار البنّاء هو الحفاظ على العلاقة، لا كسب الجدال. اسأل: «أي نوع من المصادر سيبدو موثوقاً لك؟» — هذا أحياناً يفتح باباً. لا تسخر ولا تصعّد؛ الإهانة ترسّخ المعتقد (أثر الارتداد). الهدف أن تبقي الباب مفتوحاً حتى حين يظهر الشكّ طبيعياً — وكثيراً ما يظهر — يكون هناك شخص موثوق يلجأ إليه.",
+      "sources": [
+        "https://www.apa.org/pubs/journals/releases/psp-783684.pdf"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    },
+    {
+      "id": 5,
+      "mechanic": "inoculate",
+      "technique": "sacred unfalsifiability — making a claim immune to evidence by religious framing",
+      "techniqueAr": "عدم قابلية التفنيد المقدّس — تحصين الادعاء من الدليل بالتأطير الديني",
+      "task": "Feel this from the inside. Write a short post promoting a harmless habit (like 'drink warm water in the morning') that uses sacred framing to make it feel unchallengeable. Any sceptic should be made to feel they are attacking faith. Keep the actual claim harmless.",
+      "taskAr": "حسّ بهذا من الداخل. اكتب بوست قصير يروّج لعادة غير ضارة (زي «اشرب ماء دافئ في الصباح») يستخدم التأطير المقدّس عشان يبدو غير قابل للتحدّي. أي شكّاك لازم يحسّ إنه بيهاجم الإيمان. ابقي الادعاء الفعلي غير ضاراً.",
+      "tells": [
+        "The claim is made 'sacred' — any evidence against it becomes blasphemy or conspiracy, not a scientific counter-argument.",
+        "Acceptance confirms the system; rejection also confirms the system (persecution narrative) — both outcomes are pre-wired as proof.",
+        "The emotional cost of questioning is raised to spiritual risk: 'do you dare doubt what Allah ordained?'",
+        "No citation is needed because the source is beyond human verification by design.",
+        "The technique disconnects the person from any information pipeline that could reach them — making it the most dangerous form of the unfalsifiability trap."
+      ],
+      "tellsAr": [
+        "الادعاء يُجعَل «مقدّساً» — أي دليل ضدّه يصبح كفراً أو مؤامرة، لا حُجّة علمية مضادّة.",
+        "القبول يُؤكّد النظام؛ والرفض أيضاً يُؤكّد النظام (سردية الاضطهاد) — كلتا النتيجتين مُبرمَجتان مسبقاً كدليل.",
+        "التكلفة العاطفية للتشكيك تُرفع لخطر روحي: «هل تجرؤ على الشكّ فيما قدّره الله؟»",
+        "لا استشهاد مطلوب لأن المصدر فوق التحقق البشري بالتصميم.",
+        "التقنية تفصل الشخص عن أي مسار معلومات يمكن أن يصله — مما يجعلها أخطر أشكال فخّ عدم قابلية التفنيد."
+      ],
+      "sources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "EAL-case-001:moh-sa-2026-06-08"
+      ],
+      "cognitivebiasAtPlay": "Belief Perseverance"
+    }
+  ]
+}

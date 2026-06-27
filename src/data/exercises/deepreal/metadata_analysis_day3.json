@@ -1,0 +1,141 @@
+{
+  "id": "metadata_analysis_day3",
+  "phase": 1,
+  "week": 6,
+  "day": 3,
+  "title": "Metadata Analysis & Content Credentials",
+  "titleAr": "تحليل البيانات الوصفية وبيانات اعتماد المحتوى",
+  "description": "Master EXIF metadata analysis for 5 verification scenarios: GPS contradictions, timestamp forgery, Photoshop evidence, metadata stripping, and understanding C2PA content credentials",
+  "descriptionAr": "أتقن تحليل بيانات EXIF الوصفية لـ5 سيناريوهات تحقق: تناقضات GPS، تزوير الطوابع الزمنية، أدلة Photoshop، تجريد البيانات الوصفية، وفهم بيانات اعتماد محتوى C2PA",
+  "type": "investigation",
+  "difficulty": 3,
+  "estimatedMinutes": 20,
+  "bloomLevel": "analyze",
+  "source": "Bellingcat OSINT Manual; C2PA (Coalition for Content Provenance and Authenticity) Technical Standard; EXIF.tools",
+  "com_b_target": "Capability/Technical",
+  "com_b_mechanism": "Technical metadata skills provide concrete verification capabilities beyond visual assessment alone",
+  "exercises": [
+    {
+      "id": 1,
+      "type": "investigation-scenario",
+      "title": "GPS Coordinates Contradicting Claimed Location",
+      "titleAr": "إحداثيات GPS تتناقض مع الموقع المدعوم",
+      "scenario": "A news report claims a photo was taken in Sinai, Egypt, showing alleged illegal mining activity. The EXIF data you examine shows the following: DateTimeOriginal: 2025:03:15 09:23:44, GPS Latitude: 27.2046°N, GPS Longitude: 33.8323°E. Is the claimed location of Sinai, Egypt plausible? How do you verify?",
+      "scenarioAr": "يدّعي تقرير إخباري أن صورة التُقطت في سيناء، مصر، وتُظهر أنشطة تعدين غير قانونية مزعومة. تُظهر بيانات EXIF التي تفحصها ما يلي: DateTimeOriginal: 2025:03:15 09:23:44، GPS Latitude: 27.2046°N، GPS Longitude: 33.8323°E. هل الموقع المدعوم لسيناء، مصر معقول؟ كيف تتحقق؟",
+      "tools": ["Google Maps (maps.google.com)", "What3Words (what3words.com)", "Sentinel Hub EO Browser"],
+      "steps": [
+        "Take the GPS coordinates: 27.2046°N, 33.8323°E",
+        "Enter in Google Maps search bar: 27.2046, 33.8323",
+        "Examine the location: What does Google Maps show for these coordinates?",
+        "Check: Sinai Peninsula GPS range is approximately 27-31°N latitude, 32-35°E longitude",
+        "Switch to Satellite view in Google Maps to compare the terrain with the photo",
+        "Cross-reference: use Sentinel Hub (satellite imagery) to check if there is any visible mining activity at these coordinates",
+        "Note: GPS can be manually edited in EXIF — presence of GPS data does NOT guarantee authenticity, but GPS that contradicts the claimed location is a definitive red flag"
+      ],
+      "correctFinding": "Entering 27.2046°N, 33.8323°E in Google Maps reveals a location in the Eastern Desert of Egypt near the Red Sea coast (Hurghada region) — NOT the Sinai Peninsula as claimed. The terrain visible in satellite view (limestone desert formations) matches the photo, confirming the image is from Eastern Egypt, not Sinai. The mining claim's geographical framing is false.",
+      "correctFindingAr": "إدخال 27.2046°N, 33.8323°E في خرائط Google يكشف موقعًا في الصحراء الشرقية المصرية بالقرب من ساحل البحر الأحمر (منطقة الغردقة) — وليس شبه جزيرة سيناء كما هو مدعى. التضاريس المرئية في عرض الأقمار الاصطناعية (تكوينات الصحراء الجيرية) تطابق الصورة، مما يؤكد أن الصورة من شرق مصر وليس سيناء.",
+      "explanation": "GPS metadata embedded in photos is valuable but not infallible. Key points: (1) GPS can be manually altered using tools like ExifTool; (2) However, when GPS coordinates CONTRADICT the claimed location, this is strong evidence of falsity; (3) Professional cameras often don't have GPS — GPS data is most common from smartphones; (4) Location verification should always combine GPS with terrain/landmark analysis.",
+      "explanationAr": "بيانات GPS الوصفية المضمنة في الصور قيّمة لكنها ليست معصومة من الخطأ. نقاط رئيسية: (1) يمكن تغيير GPS يدويًا باستخدام أدوات مثل ExifTool؛ (2) ومع ذلك، عندما تتناقض إحداثيات GPS مع الموقع المدعوم، فهذا دليل قوي على الزيف؛ (3) التحقق من الموقع يجب أن يجمع دائمًا بين GPS وتحليل التضاريس/المعالم."
+    },
+    {
+      "id": 2,
+      "type": "investigation-scenario",
+      "title": "Timestamp Showing Image is Years Old",
+      "titleAr": "الطابع الزمني يُظهر أن الصورة عمرها سنوات",
+      "scenario": "A viral image on Egyptian Twitter (X) claims to show 'this morning's scene at [a major Cairo hospital] showing the dire conditions inside.' You access the EXIF data and find: DateTimeOriginal: 2018:07:22 11:45:33. Today is 2026. What does this tell you, and how do you verify further?",
+      "scenarioAr": "صورة فيروسية على تويتر (X) المصري تدّعي تصوير 'مشهد الصباح في [مستشفى كبير بالقاهرة] يُظهر الأوضاع السيئة في الداخل.' تصل إلى بيانات EXIF وتجد: DateTimeOriginal: 2018:07:22 11:45:33. اليوم هو 2026. ماذا يخبرك هذا، وكيف تتحقق أكثر؟",
+      "tools": ["ExifData.com", "TinEye.com", "Twitter Advanced Search", "Google Images"],
+      "steps": [
+        "DateTimeOriginal: 2018:07:22 — this photo is 8 years old, NOT from 'this morning'",
+        "Check if the timestamp could be wrong: was the camera's clock set incorrectly? (rare but possible)",
+        "Cross-verify with TinEye: find the earliest online appearance — does it match 2018?",
+        "Search Twitter Advanced Search (search.twitter.com) for this image in 2018 — did it circulate before?",
+        "Contact the hospital's official social media account or press office for current information",
+        "Note: IMPORTANT — the conditions in 2018 may have been REAL even if the 'today' claim is false. The underlying issue (hospital conditions) may be worth investigating separately.",
+        "Verify the claimed hospital: does the interior architecture match the named institution?"
+      ],
+      "correctFinding": "TinEye confirms the image first appeared in July 2018 with a news article about temporary overcrowding during Ramadan at a different Cairo hospital than the one currently claimed. The conditions depicted were real in 2018 but the hospital is misidentified and the timing ('this morning') is completely fabricated. This is a manipulated context case — true photo, false current framing.",
+      "correctFindingAr": "يؤكد TinEye أن الصورة ظهرت لأول مرة في يوليو 2018 مع مقال إخباري حول اكتظاظ مؤقت خلال شهر رمضان في مستشفى قاهري مختلف عن المُدَّعى حاليًا. الظروف المُصوَّرة كانت حقيقية في 2018 لكن المستشفى مُعرَّف خطأً والتوقيت ('الصباح') مختلق تمامًا.",
+      "explanation": "Camera timestamps are the most reliable EXIF field because they are automatically set by the camera's internal clock. They cannot be accidentally altered like GPS. However, they CAN be deliberately edited. The combination of EXIF timestamp + TinEye earliest appearance date provides strong evidence. Note: DateTimeOriginal is distinct from DateTimeDigitized (when scanned) and DateTime (when processed) — look specifically for DateTimeOriginal.",
+      "explanationAr": "الطوابع الزمنية للكاميرا هي أكثر حقول EXIF موثوقية لأنها تُعيَّن تلقائيًا بواسطة الساعة الداخلية للكاميرا. لا يمكن تغييرها عرضًا كـGPS. ومع ذلك، يمكن تحريرها عمدًا. الجمع بين الطابع الزمني EXIF وتاريخ أقدم ظهور في TinEye يوفر دليلًا قويًا."
+    },
+    {
+      "id": 3,
+      "type": "investigation-scenario",
+      "title": "Software Field Revealing Manipulation",
+      "titleAr": "حقل البرنامج يكشف التلاعب",
+      "scenario": "An image claims to show a famous Egyptian politician meeting with a foreign leader — a politically significant claim. The image looks authentic: natural lighting, casual body language, informal setting. You run EXIF analysis and find Software: Adobe Photoshop CC 2023, and the DateTimeOriginal is absent but the DateTime field shows 2025:08:15 14:22:10. What does this tell you?",
+      "scenarioAr": "تدّعي صورة أنها تُظهر سياسيًا مصريًا مشهورًا في اجتماع مع زعيم أجنبي — ادعاء ذو أهمية سياسية كبيرة. تبدو الصورة أصيلة: إضاءة طبيعية ولغة جسد غير رسمية وإعداد غير رسمي. تُجري تحليل EXIF وتجد Software: Adobe Photoshop CC 2023، وDateTimeOriginal غائب بينما يُظهر حقل DateTime: 2025:08:15 14:22:10. ماذا يخبرك هذا؟",
+      "tools": ["ExifData.com", "Fotoforensics.com (ELA)", "Google Images Reverse Search"],
+      "steps": [
+        "Software: Adobe Photoshop CC 2023 = the image was PROCESSED in Photoshop. This doesn't automatically mean it's fake — legitimate news photos are edited for brightness/contrast. BUT it warrants further investigation",
+        "CRITICAL: DateTimeOriginal is ABSENT. This field records when the photo was originally taken. Its absence suggests the original camera metadata was STRIPPED — a common manipulation indicator",
+        "DateTime (present) records when the file was last saved/modified — NOT when the photo was taken. DateTime without DateTimeOriginal is a red flag",
+        "Run Error Level Analysis (ELA) on Fotoforensics.com: look for inconsistent compression artifacts around faces/bodies that suggest compositing",
+        "Search for the officials in the claimed meeting context: Did this meeting happen? Are there any official records, press releases, or wire photos?",
+        "Run reverse image search to check if either person's image comes from a different original photo"
+      ],
+      "correctFinding": "Error Level Analysis on Fotoforensics shows dramatically different compression levels around the two figures compared to the background — classic composite image signature. Reverse image search finds the politician's image came from a 2022 press conference and the foreign leader's image from a 2024 UN summit. The 'meeting' photo is a composite (face-swapped/body composited) fabrication. No official record of this meeting exists.",
+      "correctFindingAr": "يُظهر تحليل مستوى الخطأ (ELA) على Fotoforensics مستويات ضغط مختلفة بشكل كبير حول الشخصيتين مقارنةً بالخلفية — التوقيع الكلاسيكي لصورة مُركَّبة. البحث العكسي عن الصور يجد أن صورة السياسي جاءت من مؤتمر صحفي عام 2022 وصورة الزعيم الأجنبي من قمة الأمم المتحدة 2024. صورة 'الاجتماع' مركَّبة مختلقة. لا يوجد أي سجل رسمي لهذا الاجتماع.",
+      "explanation": "Software EXIF field reveals the editing history. Key signals: (1) 'Adobe Photoshop' presence = edited, but not necessarily manipulated — news photos are routinely color-corrected; (2) 'Midjourney', 'Stable Diffusion', 'DALL-E' in Software = AI-generated; (3) Missing DateTimeOriginal with present DateTime = metadata stripped/manipulated; (4) ELA (Error Level Analysis) is the gold standard for detecting compositing — it shows inconsistencies in JPEG compression that reveal edited regions.",
+      "explanationAr": "حقل Software EXIF يكشف تاريخ التحرير. الإشارات الرئيسية: (1) وجود 'Adobe Photoshop' = مُحرَّر، لكن ليس بالضرورة مُتلاعبًا به؛ (2) 'Midjourney' أو 'Stable Diffusion' أو 'DALL-E' في Software = مولَّد بالذكاء الاصطناعي؛ (3) غياب DateTimeOriginal مع وجود DateTime = بيانات وصفية مجردة/مُتلاعب بها؛ (4) تحليل مستوى الخطأ (ELA) هو المعيار الذهبي للكشف عن التركيب."
+    },
+    {
+      "id": 4,
+      "type": "investigation-scenario",
+      "title": "Missing EXIF — What Does It Mean?",
+      "titleAr": "EXIF مفقودة — ماذا تعني؟",
+      "scenario": "A dramatic photo is shared claiming to document an Egyptian human rights violation. The image is powerful and emotionally affecting. You run EXIF analysis and find: ABSOLUTELY NO metadata — not even basic fields like camera model or file creation date. Should you conclude the photo is fake? What should you do?",
+      "scenarioAr": "تتم مشاركة صورة درامية تدّعي توثيق انتهاك مصري لحقوق الإنسان. الصورة قوية ومؤثرة عاطفيًا. تُجري تحليل EXIF وتجد: لا توجد بيانات وصفية على الإطلاق — حتى الحقول الأساسية مثل طراز الكاميرا أو تاريخ إنشاء الملف. هل يجب أن تستنتج أن الصورة مزيفة؟ ماذا يجب أن تفعل؟",
+      "tools": ["ExifData.com", "TinEye.com", "Google Images", "Amnesty International's Digital Verification Corps resources"],
+      "steps": [
+        "Missing EXIF is NOT proof of manipulation — it is a yellow flag that increases suspicion but is NOT definitive",
+        "LEGITIMATE reasons for missing EXIF: (a) Image saved through messaging apps (WhatsApp strips metadata for privacy); (b) Image uploaded to social media platforms (Twitter/Facebook strip EXIF automatically); (c) Image was scanned (scanned photos have no camera EXIF); (d) Image was deliberately stripped to protect source/location in conflict zones",
+        "Run reverse image search — this is your primary verification tool when EXIF is absent",
+        "Search specifically within human rights databases: Amnesty International, Human Rights Watch photo archives",
+        "Look for environmental and contextual clues within the image itself (clothing, architecture, signage)",
+        "Apply the Poynter SIFT method: Stop, Investigate the source of the post, Find better coverage, Trace the claim to origin"
+      ],
+      "correctFinding": "Reverse image search finds the photo originates from a legitimate Egyptian photojournalist whose work appeared in Reuters in 2023 (before this post). The EXIF was stripped because the photo was shared through multiple WhatsApp groups — a normal process that removes metadata. The original Reuters photo credit is available. The image is authentic — the EXIF absence was due to transmission, not manipulation. The claim's accuracy must be verified separately through journalistic sources.",
+      "correctFindingAr": "يجد البحث العكسي عن الصور أن الصورة تنشأ من مصوّر صحفي مصري شرعي ظهر عمله في رويترز عام 2023 (قبل هذا المنشور). تم تجريد EXIF لأن الصورة تمت مشاركتها عبر مجموعات WhatsApp متعددة — عملية طبيعية تزيل البيانات الوصفية. يتوفر حقوق الصورة الأصلية لرويترز. الصورة أصيلة — غياب EXIF كان بسبب الإرسال وليس التلاعب.",
+      "explanation": "Missing EXIF is one of the most misunderstood indicators in visual verification. It creates suspicion but proves nothing. WhatsApp, Telegram, Twitter, Facebook, and Instagram ALL strip EXIF metadata from uploaded photos. This means most viral photos will have no EXIF. The solution is to focus on what CAN be verified: reverse image search, visual analysis, and source tracing.",
+      "explanationAr": "غياب EXIF هو أحد المؤشرات الأكثر سوء فهمًا في التحقق المرئي. يثير الشك لكنه لا يثبت شيئًا. WhatsApp وTelegram وTwitter وFacebook وInstagram تُجرّد جميعها بيانات EXIF من الصور المُحمَّلة. هذا يعني أن معظم الصور الفيروسية لن تحتوي على EXIF. الحل هو التركيز على ما يمكن التحقق منه: البحث العكسي عن الصور والتحليل المرئي وتتبع المصدر."
+    },
+    {
+      "id": 5,
+      "type": "investigation-scenario",
+      "title": "C2PA Content Credentials: The Future of Digital Provenance",
+      "titleAr": "بيانات اعتماد محتوى C2PA: مستقبل المصدر الرقمي",
+      "scenario": "You encounter a news photo that displays a small camera icon (🔏) in the corner, or a website shows a 'Content Credentials' label when you hover over an image. You've never seen this before. What is this, and how does it help verify the image's authenticity?",
+      "scenarioAr": "تصادف صورة إخبارية تعرض أيقونة كاميرا صغيرة (🔏) في الزاوية، أو يُظهر موقع ويب علامة 'بيانات اعتماد المحتوى' عند التمرير فوق صورة. لم تره من قبل. ما هذا، وكيف يساعد في التحقق من أصالة الصورة؟",
+      "tools": [
+        {
+          "name": "C2PA Verify (contentcredentials.org/verify)",
+          "url": "contentcredentials.org/verify",
+          "method": "Upload image to verify Content Credentials attached to the file",
+          "free": true
+        },
+        {
+          "name": "Truepic Lens",
+          "url": "truepic.com",
+          "method": "Camera app that embeds C2PA credentials at the moment of capture",
+          "free": true,
+          "note": "Used by Reuters and AP for photojournalism"
+        }
+      ],
+      "steps": [
+        "C2PA (Coalition for Content Provenance and Authenticity) is an industry standard for cryptographically signing digital content at the moment of creation",
+        "How it works: When a C2PA-enabled camera, phone, or AI tool creates content, it embeds a cryptographic certificate ('manifest') into the file that records: who created it, when, with what device/software, and what edits were made",
+        "Go to contentcredentials.org/verify and upload the image",
+        "The tool shows: Original creation device and time, any edits applied (e.g., crop, color adjustment), whether it was AI-generated, the software used",
+        "KEY LIMITATION: C2PA ONLY works if the content was created with a C2PA-enabled tool AND the credential was not stripped. Most current photos do NOT have C2PA — it is new (major adoption 2023-2025)",
+        "Who uses it: Reuters, AP, Getty Images for photojournalism; Adobe (Photoshop, Firefly); Microsoft (Bing Image Creator); Sony, Nikon, Leica cameras",
+        "AI image generators (Midjourney, DALL-E 3) now attach C2PA credentials marking content as AI-generated"
+      ],
+      "correctFinding": "The image has valid C2PA Content Credentials showing: Captured by Reuters photojournalist using a Sony Alpha 1 camera, in Cairo, Egypt, on June 10, 2026 at 15:42:33 UTC. Edits: Lightroom crop and exposure adjustment on June 10, 2026. No AI generation detected. The credential cryptographic signature is intact — meaning it was not tampered with after capture. This is a verified authentic news photograph with documented provenance.",
+      "correctFindingAr": "تحتوي الصورة على بيانات اعتماد محتوى C2PA صالحة تُظهر: التقاطها بواسطة مصوّر صحفي من رويترز باستخدام كاميرا Sony Alpha 1 في القاهرة، مصر، في 10 يونيو 2026 الساعة 15:42:33 بالتوقيت العالمي. التعديلات: قص وتعديل التعرض في Lightroom في 10 يونيو 2026. لم يتم اكتشاف توليد ذكاء اصطناعي. التوقيع المشفر لبيانات الاعتماد سليم — مما يعني أنه لم يتم التلاعب به بعد الالتقاط.",
+      "explanation": "C2PA represents a fundamental shift in content verification — from forensic analysis after the fact to provenance documentation at the point of creation. It is not yet widespread (2024-2026 is the early adoption phase) but is being rapidly deployed by major news agencies and camera manufacturers. Understanding C2PA positions verifiers for the next phase of the information verification ecosystem. The system works even for AI-generated content — AI generators now attach C2PA credentials marking content as 'AI-generated' — which is a transparency measure, not a deception one.",
+      "explanationAr": "تمثل C2PA تحولًا جذريًا في التحقق من المحتوى — من التحليل الجنائي بعد الحدث إلى توثيق المصدر عند نقطة الإنشاء. لم تنتشر بعد (2024-2026 هي مرحلة التبني المبكر) لكنها تُنشَر بسرعة من قبل وكالات الأنباء الكبرى ومصنّعي الكاميرات. تعمل هذه الأنظمة حتى للمحتوى المولَّد بالذكاء الاصطناعي — يُرفق منشئو الذكاء الاصطناعي الآن بيانات اعتماد C2PA تُعلّم المحتوى بـ'مولَّد بالذكاء الاصطناعي'."
+    }
+  ]
+}

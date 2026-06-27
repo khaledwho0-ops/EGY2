@@ -91,11 +91,15 @@ function buildSlots(): ProviderSlot[] {
 
 const SLOTS = buildSlots();
 
-if (SLOTS.length === 0) {
-  throw new Error("[MegaRotator] No API keys found in .env.local!");
+// Defer the no-keys check to the first runtime call. Throwing at module-load
+// time crashes `next build` on Vercel when env vars aren't set yet (the build
+// only collects page data; it never actually calls the rotator).
+// The runtime path below still fails LOUD per the One-Law when actually used.
+if (SLOTS.length > 0) {
+  console.log(`[MegaRotator v8] ✅ ${SLOTS.length} slots (Gemini-first, NVIDIA-last): ${SLOTS.map((s) => s.provider).join(", ")}`);
+} else {
+  console.warn("[MegaRotator v8] ⚠️ No API keys configured — calls will fail at request time with UNVERIFIED (One-Law: never fabricate). Set GEMINI_API_KEY / GROQ_API_KEY / etc. in Vercel env vars to enable AI features.");
 }
-
-console.log(`[MegaRotator v8] ✅ ${SLOTS.length} slots (Gemini-first, NVIDIA-last): ${SLOTS.map((s) => s.provider).join(", ")}`);
 
 // ── STATE ──
 const cooldowns: Map<number, number> = new Map();

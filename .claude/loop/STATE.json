@@ -1,0 +1,11 @@
+{
+  "status": "running",
+  "ticks": 0,
+  "lastTickAt": null,
+  "lastTickResult": null,
+  "doneRoutes": [],
+  "skippedRoutes": [],
+  "remainingRoutes": null,
+  "errors": [],
+  "startedAt": "2026-06-27T22:32:22.591Z"
+}

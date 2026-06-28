@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  serverExternalPackages: ["natural", "tesseract.js"],
+  // ESM-only packages must not be bundled by webpack — they error with
+  // "require() of ES Module" on Next 15.5+ serverless. Add any package the
+  // build complains about here.
+  serverExternalPackages: ["natural", "tesseract.js", "duck-duck-scrape", "cheerio", "exifr", "isomorphic-dompurify"],
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   // Parse *.geojson assets (e.g. src/data/egypt-governorates.geojson used by

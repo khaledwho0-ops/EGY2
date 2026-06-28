@@ -15,6 +15,22 @@ import { nvidiaFirstGenerateJSON } from '@/lib/ai/nvidia-first';
 import { AGENT_PROFILES } from '@/lib/agents/profiles';
 import type { AgentResult, InvestigationReport } from '@/lib/agents/types';
 
+// Tell Vercel this route may take up to its full 60s budget (5 parallel AI
+// agents + a verdict synthesis call). Default is 10s on Hobby — which
+// reliably exceeded, hanging the whole investigation past the wall.
+export const runtime = 'nodejs';
+export const maxDuration = 60;
+
+/** Promise.race against a soft timeout that resolves with a fallback value
+ * instead of throwing. Lets one slow agent degrade gracefully without
+ * blocking the rest of the swarm or the request itself. */
+function withTimeout<T>(p: Promise<T>, ms: number, fallback: T): Promise<T> {
+  return Promise.race([
+    p,
+    new Promise<T>((resolve) => setTimeout(() => resolve(fallback), ms)),
+  ]);
+}
+
 // ── Zod Schemas for each agent ─────────────────────────────
 
 const sourceHunterSchema = z.object({
@@ -206,7 +222,20 @@ export async function POST(request: NextRequest) {
       }
     });
 
-    const agentResults = await Promise.all(agentPromises);
+    // Each agent gets a 40s soft timeout — if it stalls, we keep the
+    // fallback "timed out" result so the verdict synthesis still runs
+    // on whatever the other agents found. No hang past the Vercel wall.
+    const agentResults = await Promise.all(
+      agentPromises.map((p, i) =>
+        withTimeout<AgentResult>(p, 40000, {
+          agentId: AGENT_PROFILES[i].id,
+          findings: 'Agent timed out (>40s). Verdict synthesised from the agents that completed in time.',
+          confidence: 0,
+          sources: [],
+          timestamp: Date.now(),
+        })
+      )
+    );
 
     // Generate overall verdict — NVIDIA primary
     const combinedFindings = agentResults
@@ -225,11 +254,18 @@ export async function POST(request: NextRequest) {
     try {
       const verdictPrompt = `You are the Chief Verdict Officer of the Angry Debunkers AI system. Synthesize findings from 5 specialized agents into a FINAL verdict.\n\nClaim: "${claim.trim()}"\n\nAgent Findings:\n${combinedFindings}\n\nReturn ONLY valid JSON:\n{"verdict":"TRUE|FALSE|MISLEADING|UNVERIFIED|PARTIALLY_TRUE","explanation":"Clear 2-3 sentence verdict explanation in English","explanation_ar":"شرح الحكم بالعربية في جملتين","layers_detected":["layer1","layer2"],"manipulationScore":0.0-1.0,"recommendedAction_ar":"ماذا يجب أن يفعل القارئ؟"}`;
 
-      const { data: nvidiaVerdict } = await nvidiaFirstGenerateJSON(verdictPrompt, {
-        systemPrompt: 'You are the Chief Verdict Officer synthesizing 5 AI agents. Return ONLY valid JSON.',
-        maxTokens: 600,
-        temperature: 0.1,
-      });
+      // 12s soft timeout so the verdict step can't blow the rest of the
+      // request's budget. If it does time out, the catch below falls back
+      // to Gemini, then to a deterministic confidence-weighted verdict.
+      const { data: nvidiaVerdict } = await withTimeout(
+        nvidiaFirstGenerateJSON(verdictPrompt, {
+          systemPrompt: 'You are the Chief Verdict Officer synthesizing 5 AI agents. Return ONLY valid JSON.',
+          maxTokens: 600,
+          temperature: 0.1,
+        }),
+        12000,
+        { data: null }
+      );
 
       if (nvidiaVerdict) {
         overallVerdict = (nvidiaVerdict as any).verdict || 'UNVERIFIED';

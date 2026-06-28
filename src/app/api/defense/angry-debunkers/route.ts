@@ -310,8 +310,16 @@ Generate strictly per schema.`;
         deepResult = object;
       }
 
-      const auditLayers = Object.values(deepResult.god_system_7_layer_audit);
-      const deepConfidence = auditLayers.reduce((acc: number, layer: any) => acc + layer.confidence, 0) / auditLayers.length;
+      // Guard against missing field — under quota / rate limit failover the AI
+      // can return a deepResult shaped slightly different from the Zod schema
+      // (NVIDIA path is unvalidated). Without this guard Object.values(undefined)
+      // throws a TypeError that aborts the entire POST with 500.
+      const auditObj = (deepResult as Record<string, unknown> | undefined)?.god_system_7_layer_audit;
+      const auditLayers = (auditObj && typeof auditObj === 'object') ? Object.values(auditObj) : [];
+      const deepConfidence = auditLayers.length
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ? auditLayers.reduce((acc: number, layer: any) => acc + (typeof layer?.confidence === 'number' ? layer.confidence : 0), 0) / auditLayers.length
+        : 0;
 
       responseData.deep = {
         ...deepResult,

@@ -184,13 +184,39 @@ export async function POST(request: NextRequest) {
 
         const confidence = typeof data.confidence === 'number' ? data.confidence : 0.7;
 
+        // Robust formatter — the NVIDIA path (no Zod) often returns nested
+        // objects like {original_source: {primary: "...", secondary: "..."}}.
+        // The old `String(val)` turned those into literal "[object Object]".
+        // Now: plain values pass through, arrays-of-objects expand to key:val
+        // pairs, single objects flatten to one line per key.
+        const fmt = (v: unknown): string => {
+          if (v === null || v === undefined) return '—';
+          if (typeof v === 'string') return v.trim();
+          if (typeof v === 'number' || typeof v === 'boolean') return String(v);
+          if (Array.isArray(v)) {
+            return v.map((x) =>
+              x === null || x === undefined ? '' :
+              typeof x === 'string' ? x.trim() :
+              typeof x === 'object' ? Object.values(x as Record<string, unknown>).filter((y) => typeof y === 'string' || typeof y === 'number').join(' — ') :
+              String(x)
+            ).filter(Boolean).join('; ');
+          }
+          if (typeof v === 'object') {
+            return Object.entries(v as Record<string, unknown>)
+              .map(([k, vv]) => {
+                const inner = typeof vv === 'string' ? vv.trim()
+                  : Array.isArray(vv) ? vv.filter((x) => typeof x === 'string').join('; ')
+                  : typeof vv === 'object' && vv !== null ? Object.values(vv as Record<string, unknown>).filter((y) => typeof y === 'string').join(' — ')
+                  : String(vv);
+                return `  • ${k.replace(/_/g, ' ')}: ${inner}`;
+              }).join('\n');
+          }
+          return String(v);
+        };
         const findings = Object.entries(data)
           .filter(([key]) => key !== 'confidence')
-          .map(([key, val]) => {
-            if (Array.isArray(val)) return `${key}: ${val.join('; ')}`;
-            return `${key}: ${String(val)}`;
-          })
-          .join('\n');
+          .map(([key, val]) => `${key.replace(/_/g, ' ')}:\n${fmt(val)}`)
+          .join('\n\n');
 
         const sources = Array.isArray(data.relatedFactChecks)
           ? data.relatedFactChecks as string[]

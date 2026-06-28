@@ -71,3 +71,14 @@ git-log.js
 
 .vercel
 .env*
+
+# build artifacts / logs (cleanup 2026-06-28)
+*.tsbuildinfo
+*.log
+build_log.txt
+build_output.txt
+a11y_out.json
+dev_server.log
+start-*.log
+.runtime/
+

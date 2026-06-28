@@ -373,7 +373,7 @@ export default function AngryDebunkersWarRoom() {
       const res = await fetch("/api/defense/angry-debunkers", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        signal: AbortSignal.timeout(20000), // never hang forever on a stalled API
+        signal: AbortSignal.timeout(55000), // 55s — matches the route's maxDuration:60s with 5s buffer. 20s was too tight: the route runs an AI swarm (Quran + scientific aggregator + Cohere rerank + verdict synthesis) which legitimately takes 30–45s on a complex claim, and a too-short client timeout aborted before the server finished → "signal timed out" in dev overlay.
         body: JSON.stringify({
           query: query || (pdfFile ? `Analyze this document: ${pdfFile.name}` : ""),
           pdfBase64: pdfBase64 || null,

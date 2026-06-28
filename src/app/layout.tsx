@@ -152,6 +152,20 @@ export default function RootLayout({
             <script
               dangerouslySetInnerHTML={{
                 __html: `
+                  // Suppress Event-shaped Promise rejections from the dev overlay.
+                  // Things like SW.getRegistrations(), audio decoders, image
+                  // load errors, etc. sometimes reject with a DOM Event that
+                  // has no .message, which Next.js renders as the unhelpful
+                  // 'Runtime Error: [object Event]'. They are non-fatal and
+                  // need to be silenced so they don't mask real errors.
+                  window.addEventListener('unhandledrejection', function(e) {
+                    var r = e.reason;
+                    if (r && (r instanceof Event || (typeof r === 'object' && typeof r.type === 'string' && !r.message))) {
+                      e.preventDefault();
+                      try { console.warn('[suppressed] Event-shaped unhandled rejection:', r.type || r); } catch (_) {}
+                    }
+                  });
+
                   if ('serviceWorker' in navigator && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
                     window.addEventListener('load', function() {
                       navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -162,10 +176,18 @@ export default function RootLayout({
                     });
                   } else if ('serviceWorker' in navigator) {
                     navigator.serviceWorker.getRegistrations().then(function(registrations) {
-                      registrations.forEach(function(r) { r.unregister(); });
+                      registrations.forEach(function(r) {
+                        // unregister returns a Promise — chain .catch so a
+                        // single denied unregister doesn't surface as an
+                        // unhandled rejection in the dev overlay.
+                        var p = r.unregister();
+                        if (p && typeof p.catch === 'function') p.catch(function(){});
+                      });
+                    }).catch(function(err) {
+                      console.warn('SW cleanup skipped:', err && err.message || err);
                     });
                   }
-                `,
+`,
               }}
             />
             </QuarantineProvider>

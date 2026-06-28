@@ -1,149 +1,122 @@
-# Egyptian Awareness Library
+# Egyptian Awareness Library (EAL)
 
-A Next.js 16 platform delivering three evidence-based awareness engines targeting misinformation defense, mental health literacy, and religious moderation for Egyptian university students (18–30).
+> A bilingual (English / Egyptian-Arabic) evidence-based platform for misinformation defense, scientific literacy, and mental-health literacy — built for Egyptian university students.
 
-## Overview
+**Live:** **[egy2.vercel.app](https://egy2.vercel.app)** · Next.js 15 · React 19 · TypeScript · Tailwind v4 · Deployed on Vercel
 
-The Egyptian Awareness Library (EAL) is a research-driven web application designed as part of a quasi-experimental study (N = 84, pre/post with control). It integrates validated psychometric instruments, AI-powered claim verification, and culturally adapted content across three core modules:
+---
 
-| Module | Focus | Key Instruments |
-|--------|-------|-----------------|
-| **DeepReal** | Misinformation & media forensics | MIST-20 (α = .77) |
-| **Mental Health** | Literacy, stigma reduction, help-seeking | MHLS (α = .873), GHSQ (r = .86) |
-| **Religion Hub** | Positive coping, moderation, fatwa verification | Brief RCOPE (α = .90/.81) |
+## What it is
 
-Cross-cutting measures: SUS (α = .91) for usability, MC-SDS (α = .75) as covariate.
+EAL is a deployable web platform that ships three things together:
 
-## Tech Stack
+1. **Verification engines** — pasted-claim debunkers, image/media forensics, fact-check aggregators, Islamic-text authentication tools, and a 7-layer deception-analysis pipeline.
+2. **A 140-day Cognition Curriculum** — bilingual daily exercises that build the *habits of mind* science says protect against pseudoscience: retrieval, calibration, self-explanation, considering the opposite, active inoculation, argument decomposition. Anchored to a real Egyptian case study («نظام الطيبات»).
+3. **A measurement layer** — confidence calibration, signal-detection discrimination guard (so the build provably makes users discerning, not cynical), and the validated MIST-20 / MHLS / Brief-RCOPE psychometric instruments planned for an N=84 pilot study.
 
-- **Framework:** Next.js 16 (App Router, Turbopack)
-- **UI:** React 19, Tailwind CSS v4, Framer Motion, Three.js / React Three Fiber
-- **AI Integration:** Vercel AI SDK, Google Generative AI, Groq, LangChain, LangGraph
-- **Data Visualization:** Recharts, Nivo, D3.js
-- **NLP:** wink-nlp, natural, VADER sentiment
-- **Internationalization:** i18next, react-i18next (EN ↔ AR with full RTL)
-- **Auth:** jose (JWT), bcryptjs
-- **Testing:** Vitest, Playwright, Testing Library
-- **Deployment:** Vercel / Firebase Hosting, Docker Compose
+Everything operates under one binding rule — **the One-Law**: no claim reaches the user without a real, resolvable source. When the platform can't ground a fact, it says so loudly ("UNVERIFIED / غير موثّق") rather than fabricating.
 
-## Quick Start
+## Scale at a glance
 
-### Prerequisites
+| | |
+|---|---|
+| Routes | **135 pages** · **86 API endpoints** · 10 categories |
+| Cognition curriculum | **140 days · 721 exercises · 0 unsourced** (verified) |
+| Exercise mechanics | 8 evidence-based (recognize, calibrate, self-explain, consider-opposite, inoculate, decompose, retrieve, transfer) |
+| AI providers (failover stack) | 7× Gemini · 5× Groq · NVIDIA · Cohere · Cerebras · OpenRouter · HuggingFace · Together · SambaNova · Cloudflare · Moonshot · OpenAlex · SightEngine |
+| i18n | English + Egyptian Arabic, full RTL on every page |
 
-- Node.js 20+
-- npm 10+
-
-### Installation
+## Quick start
 
 ```bash
-git clone https://github.com/khaledwho0-ops/EGY-awareness-library.git
-cd EGY-awareness-library
-npm install
+git clone https://github.com/khaledwho0-ops/EGY2.git
+cd EGY2
+npm install --legacy-peer-deps
+cp .env.example .env.local       # add at least JWT_SECRET + one AI key
+npm run dev                      # http://localhost:3000
 ```
 
-### Environment
-
-Copy the example environment file and fill in any API keys you wish to enable:
-
-```bash
-cp .env.example .env.local
-```
-
-See [`.env.example`](.env.example) for the full list of supported integrations.
-
-### Development
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-### Production Build
+Production build:
 
 ```bash
 npm run build
 npm start
 ```
 
-## Project Structure
+See **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)** for the full Vercel deploy guide (env vars, branch previews, rollback).
+
+## Project layout
 
 ```
 src/
-├── app/                    # Next.js App Router pages (55+ routes)
-│   ├── angry-debunkers/    # AI-powered claim debunking
-│   ├── deepreal/           # DeepReal MVP — verification engine
-│   ├── mental-health/      # Mental Health MVP — literacy & support
-│   ├── religion-hub/       # Religion Hub MVP — moderation & coping
-│   ├── dashboard/          # User progress & analytics
-│   ├── assessment/         # Psychometric assessments (MIST-20, MHLS, Brief RCOPE)
-│   ├── api/                # API routes (chat, debunking, analysis)
-│   └── ...
-├── components/             # Reusable UI components
-│   ├── shared/             # Layout, navbar, footer, RTL provider
-│   ├── exercises/          # Exercise engine & verification console
-│   ├── science/            # Research visualization components
-│   └── six-layers/         # 8-layer deception anatomy
-├── data/                   # Static data & research content
-│   ├── research/           # Cognitive knowledge, module libraries
-│   ├── i18n/               # Bilingual string constants
-│   ├── exercises/          # Exercise content per module
-│   └── defense/            # Defense plans & page maps
-├── lib/                    # Core business logic
-│   ├── debunking/          # Claim classifier, API swarm, LLM rotator
-│   ├── ai/                 # AI provider configuration
-│   └── auth.ts             # JWT authentication
-├── features/               # Feature-specific modules
-└── types/                  # TypeScript type definitions
+├── app/                     # Next.js App Router (135 page.tsx, 86 route.ts)
+│   ├── cognition-curriculum/    # The 140-day course player (bilingual + measurement)
+│   ├── explore/                 # The 124-tool catalog hub
+│   ├── deepreal/                # Media forensics engine
+│   ├── mental-health/           # PHQ-9 + literacy + crisis lines
+│   ├── religion-hub/            # Hadith / fatwa / Quran verification suite
+│   ├── angry-debunkers/         # Truth-sandwich claim debunker
+│   └── api/                     # 86 backend routes
+├── components/              # 200+ React components (engines, charts, RTL UI)
+├── data/
+│   ├── cases/eltaybat-case-001.ts        # Sourced anchor: 12 red flags, 16 biases, evidence ladder
+│   └── exercises/cognition/              # 140 daily exercise JSONs + manifest
+├── lib/
+│   ├── ai/                  # Multi-provider rotator (Gemini-first, 12 failovers)
+│   ├── cognition/           # FLICC, MIST-20, SM-2, calibration profile, SDT guard
+│   ├── debunking/           # Classifier + API swarm + workers
+│   └── standard/            # Executable form of the One-Law
+├── data/exercises/cognition/_ENGINE_V2_SPEC.md     # The 8-mechanic spec
+└── data/exercises/cognition/_AUTHORING_BRIEF.md    # Content rules + One-Law contract
+docs/
+├── DEPLOYMENT.md            # Vercel deploy guide
+└── HANDOFF.md               # Contributor handoff (the project's "law")
+HI CLAUDE/                   # The governing scientific standard (binding for all output)
 ```
 
-## Analysis Backend
+## The One-Law (governing standard)
 
-An optional FastAPI scaffold lives in `services/analysis-backend`, exposing:
+`HI CLAUDE/00_THE_SCIENTIFIC_STANDARD.md` is the project's constitution. Every page, chatbot, API route, and AI output complies with it. Key contracts:
 
-- `POST /deepfake_image` — Image forensics
-- `POST /metadata_extraction` — EXIF/metadata analysis
-- `POST /c2pa_verification` — Content authenticity verification
-- `POST /deepfake_video` — Video analysis
-- `POST /audio_analysis` — Audio deepfake detection
-- `POST /arabic` — Arabic NLP processing
-- `GET /health` — Health check
+- **No fabrication.** If a claim can't be sourced, render `UNVERIFIED / غير موثّق`.
+- **Source tier whitelist.** Tier S (peer-reviewed, WHO/CDC/Cochrane) → Tier 1 (mainstream journalism) → Tier 5 (no source).
+- **Islamic Authenticity Protocol.** Hadith / fatwa output requires real, attributable references; never invent a chain.
+- **8-layer deception taxonomy.** Every verdict tags which layer of manipulation the claim uses.
 
-## Docker Compose
+The code references it in 8+ source files (`src/lib/standard/*`, `src/lib/ai/output-enforcer.ts`).
 
-```bash
-docker compose up --build
-```
+## Pilot study (honest disclosure)
 
-Starts the Next.js app (`:3000`), FastAPI backend (`:8000`), and Redis (`:6379`).
+The platform is **designed for** a quasi-experimental N=84 study (pre/post with control) measuring misinformation resilience (MIST-20), mental-health literacy (MHLS, GHSQ), and positive religious coping (Brief RCOPE). The efficacy engine is built; the *measured* Egyptian effect size is currently **N=0** — the real number comes from the pilot. We deliberately do not claim measured efficacy.
 
-## Testing
+## Tech stack
 
-```bash
-npm run lint          # ESLint
-npm run build         # TypeScript & build verification
-```
+- **Framework:** Next.js 15.5.19 (App Router), React 19, TypeScript 5, Tailwind v4
+- **AI:** Vercel AI SDK + 12-provider failover rotator (`src/lib/ai/`)
+- **Data viz:** Recharts, Nivo, D3.js
+- **NLP:** wink-nlp, natural, VADER sentiment
+- **i18n:** i18next, full RTL
+- **Auth:** jose (JWT), bcryptjs
+- **Testing:** Vitest, Playwright, Testing Library
+- **Deploy:** Vercel (auto-deploy on `git push`)
 
-## Research Documentation
+## Status
 
-The `RESEARCH_VAULT/` directory contains the project's research foundation:
-
-- Implementation plans and conversation analysis
-- Layer-specific research prompts
-- Scientific methodology documentation
+- ✅ Cognition curriculum complete (140 days, all v2 mechanics, 0 unsourced)
+- ✅ Deployed to production with all AI keys configured
+- ✅ All 135 pages + 86 APIs build clean
+- ✅ Validators in place (`scripts/validate-cognition.js`, `gen-manifest.js`)
+- ⚠️ The N=84 pilot is scheduled; effect-size measurements are pending
+- ⚠️ Some specialised pages (BLACKBOX, Medical Life) flag "real-data depth pending" honestly per the One-Law
 
 ## Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit changes (`git commit -m 'feat: add your feature'`)
-4. Push to branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
+Read **[docs/HANDOFF.md](docs/HANDOFF.md)** first — it's the binding contract for anyone (human or AI agent) modifying this codebase. It covers the One-Law, name-free rule, bilingual requirement, and the validators to run after any change.
 
 ## License
 
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
+See [LICENSE](LICENSE).
 
-## Author
+---
 
-**Khalid Sayed** — [khalidsayed459@gmail.com](mailto:khalidsayed459@gmail.com)
+*Internal strategy, research sources (BRAINS methodology transcripts, the «نظام الطيبات» case-study analysis, the Science Platform PRD, presentation scripts) live in a separate private vault repo — they shaped the product but don't belong in the public production tree.*

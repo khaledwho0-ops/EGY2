@@ -15,8 +15,8 @@
     {
       "id": 1,
       "mechanic": "recognize",
-      "claim": "When a follower of «نظام الطيبات» got sicker, the answer was always: 'You didn't follow it perfectly.' When someone improved, it was: 'The system works.' What property does this give the claim?",
-      "claimAr": "لمّا تابع «نظام الطيبات» يزيد مرضه، الإجابة دايماً: «إنت ماطبّقتوش صح». ولمّا حد يتحسّن: «النظام شغّال». إيه الخاصية اللي بتدّيها للادعاء دي؟",
+      "claim": "When a follower of «نظام دايت» got sicker, the answer was always: 'You didn't follow it perfectly.' When someone improved, it was: 'The system works.' What property does this give the claim?",
+      "claimAr": "لمّا تابع «نظام دايت» يزيد مرضه، الإجابة دايماً: «إنت ماطبّقتوش صح». ولمّا حد يتحسّن: «النظام شغّال». إيه الخاصية اللي بتدّيها للادعاء دي؟",
       "options": [
         "It makes the claim very strong",
         "It makes the claim unfalsifiable — no possible outcome is allowed to count against it",
@@ -108,7 +108,7 @@
         { "text": "Patients who got worse had hidden toxins that needed to come out first.", "textAr": "المرضى اللي اتدهوروا كان عندهم سموم خفية محتاجة تخرج الأول.", "role": "assumption" }
       ],
       "explanation": "The architecture is closed-loop unfalsifiability: testimonials (no control group) support the claim; deterioration is reframed as necessary ('hidden toxins coming out'); and 'science hasn't caught up' positions all future evidence as irrelevant in advance. Every possible outcome — improvement, no change, deterioration — is absorbed into 'proof the system works.' This is the precise structure of pseudoscience, and it was the documented architecture of the Taybat system.",
-      "explanationAr": "البنية هي عدم قابلية للتفنيد بحلقة مغلقة: الشهادات (بلا مجموعة ضابطة) بتدعم الادعاء؛ التدهور يُعاد صياغته كحاجة («سموم خفية بتخرج»)؛ و«العلم لسه ما لحقش» بيضع كل الأدلة المستقبلية خارج النطاق مسبقاً. كل نتيجة ممكنة — تحسّن، لا تغيّر، تدهور — بتُمتصّ في «دليل إن النظام شغّال». ده البنية الدقيقة للعلم الزائف، وكانت البنية الموثَّقة لنظام الطيبات.",
+      "explanationAr": "البنية هي عدم قابلية للتفنيد بحلقة مغلقة: الشهادات (بلا مجموعة ضابطة) بتدعم الادعاء؛ التدهور يُعاد صياغته كحاجة («سموم خفية بتخرج»)؛ و«العلم لسه ما لحقش» بيضع كل الأدلة المستقبلية خارج النطاق مسبقاً. كل نتيجة ممكنة — تحسّن، لا تغيّر، تدهور — بتُمتصّ في «دليل إن النظام شغّال». ده البنية الدقيقة للعلم الزائف، وكانت البنية الموثَّقة لنظام دايت.",
       "sources": [
         "EAL-case-001:redflag-4",
         "EAL-case-001:ems-2026-03",

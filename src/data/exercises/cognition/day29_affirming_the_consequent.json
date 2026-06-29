@@ -15,7 +15,7 @@
     {
       "id": 1,
       "mechanic": "recognize",
-      "claim": "A neighbour reasons: \"If the «نظام الطيبات» diet really cures diabetes, the patient's sugar drops. My uncle's sugar dropped — so the diet cured him.\" Where does the logic break?",
+      "claim": "A neighbour reasons: \"If the «نظام دايت» diet really cures diabetes, the patient's sugar drops. My uncle's sugar dropped — so the diet cured him.\" Where does the logic break?",
       "claimAr": "جار بيقول: «لو حمية الطيبات بتشفي السكّر، يبقى سكّر المريض هينزل. عمّي سكّره نزل — يبقى الحمية شفته». المنطق بيقع منين؟",
       "options": [
         "It doesn't break — sugar dropping proves the diet worked",

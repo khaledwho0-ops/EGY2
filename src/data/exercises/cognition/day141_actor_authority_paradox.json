@@ -6,7 +6,7 @@
   "title": "Layer 1 — The Actor: Real Credentials, Wrong Domain",
   "titleAr": "الطبقة الأولى — الشخصية: شهادة حقيقية، مجال خاطئ",
   "description": "Week 21 opens the full Taybat case. Today: why a real doctor's title made a dangerous diet feel safe — and what 'authority bias' actually costs.",
-  "descriptionAr": "الأسبوع 21 بيفتح حالة الطيبات كاملة. النهاردة: ليه لقب دكتور حقيقي خلّى حمية خطيرة تبدو آمنة — وإيه تمن «انحياز السلطة» فعلاً.",
+  "descriptionAr": "الأسبوع 21 بيفتح حالة دايت كاملة. النهاردة: ليه لقب دكتور حقيقي خلّى حمية خطيرة تبدو آمنة — وإيه تمن «انحياز السلطة» فعلاً.",
   "type": "integration",
   "difficulty": 3,
   "estimatedMinutes": 16,
@@ -42,7 +42,7 @@
       "myth_en": "Confidence and a large audience prove expertise.",
       "myth_ar": "الثقة والجمهور الكبير يُثبتان الخبرة.",
       "explanation": "False. Confidence is a presentation style, not an evidence grade. A large audience is produced by the algorithm, not by peer review. The Taybat system reached 3.7 million views on a single interview with no medical counter-panel — that is social reach, not scientific validation. The Dunning–Kruger effect also predicts that low knowledge breeds high confidence, so the most confident voice is not always the most informed.",
-      "explanationAr": "غلط. الثقة أسلوب عرض، مش درجة دليل. الجمهور الكبير بتنتجه الخوارزمية، مش المراجعة العلمية. نظام الطيبات وصل لـ3.7 مليون مشاهدة في مقابلة واحدة بدون لجنة طبية مقابلة — ده وصول اجتماعي، مش تحقّق علمي. كمان تأثير دانينغ-كروغر بيتنبّأ إن قلّة المعرفة بتولّد ثقة عالية، يعني الصوت الأكثر ثقة مش دايماً الأكثر خبرة.",
+      "explanationAr": "غلط. الثقة أسلوب عرض، مش درجة دليل. الجمهور الكبير بتنتجه الخوارزمية، مش المراجعة العلمية. نظام دايت وصل لـ3.7 مليون مشاهدة في مقابلة واحدة بدون لجنة طبية مقابلة — ده وصول اجتماعي، مش تحقّق علمي. كمان تأثير دانينغ-كروغر بيتنبّأ إن قلّة المعرفة بتولّد ثقة عالية، يعني الصوت الأكثر ثقة مش دايماً الأكثر خبرة.",
       "sources": [
         "EAL-case-001:ems-2026-03",
         "https://www.apa.org/topics/expertise"
@@ -86,7 +86,7 @@
         { "text": "Millions of followers and a full clinic.", "textAr": "ملايين المتابعين وعيادة ممتلية.", "role": "irrelevant" }
       ],
       "explanation": "Two hidden ASSUMPTIONS collapse the argument: (1) credentials don't transfer across domains — 20 years of anaesthesia experience gives no cancer nutrition authority; (2) testimonials cannot prove efficacy — they cannot separate the treatment from placebo, natural disease variation, or other factors (Red Flag #3). Millions of followers and a full clinic are IRRELEVANT — they measure social reach and financial success, not scientific validity. The Taybat case had all these features and still caused documented deaths.",
-      "explanationAr": "افتراضان خفيان يهدمان الحُجّة: (1) الشهادات لا تنتقل عبر المجالات — 20 سنة من خبرة التخدير لا تمنح سلطة في تغذية السرطان؛ (2) الشهادات الشخصية لا تُثبت الفاعلية — لا تستطيع الفصل بين العلاج والوهمي أو تقلّب المرض الطبيعي أو عوامل أخرى (علامة الخطر رقم 3). ملايين المتابعين وعيادة ممتلية غير ذات صلة — يقيسان الوصول الاجتماعي والنجاح المالي لا الصلاحية العلمية. حالة الطيبات كانت عندها كل هذه السمات ومع ذلك تسبّبت في وفيات موثّقة.",
+      "explanationAr": "افتراضان خفيان يهدمان الحُجّة: (1) الشهادات لا تنتقل عبر المجالات — 20 سنة من خبرة التخدير لا تمنح سلطة في تغذية السرطان؛ (2) الشهادات الشخصية لا تُثبت الفاعلية — لا تستطيع الفصل بين العلاج والوهمي أو تقلّب المرض الطبيعي أو عوامل أخرى (علامة الخطر رقم 3). ملايين المتابعين وعيادة ممتلية غير ذات صلة — يقيسان الوصول الاجتماعي والنجاح المالي لا الصلاحية العلمية. حالة دايت كانت عندها كل هذه السمات ومع ذلك تسبّبت في وفيات موثّقة.",
       "sources": [
         "EAL-case-001:redflag-7",
         "EAL-case-001:redflag-3",
@@ -98,7 +98,7 @@
       "id": 5,
       "mechanic": "consider_opposite",
       "claim": "After the Medical Syndicate's investigation found no documented evidence, the originator of the viral Taybat diet was expelled and his license revoked. A follower argues: 'The Syndicate is jealous of his success.'",
-      "claimAr": "بعد ما تحقيق نقابة الأطباء ما لاقاش دليل موثّق، اتشطب صاحب نظام الطيبات وأُلغي ترخيصه. تابع بيقول: «النقابة غيران من نجاحه».",
+      "claimAr": "بعد ما تحقيق نقابة الأطباء ما لاقاش دليل موثّق، اتشطب صاحب نظام دايت وأُلغي ترخيصه. تابع بيقول: «النقابة غيران من نجاحه».",
       "prompt": "What would you need to see to DISPROVE that the Syndicate acted from jealousy rather than evidence? What ordinary explanations account for the expulsion?",
       "promptAr": "إيه اللي محتاج تشوفه عشان تكذّب إن النقابة تصرّفت من غيرة لا من دليل؟ وإيه التفسيرات العادية اللي تفسّر الشطب؟",
       "modelPoints": [

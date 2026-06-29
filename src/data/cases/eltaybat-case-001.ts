@@ -1,5 +1,5 @@
 /**
- * CASE STUDY #001 — نظام الطيبات (The "Taybat" Diet System)
+ * CASE STUDY #001 — نظام دايت (The "Taybat" Diet System)
  * ───────────────────────────────────────────────────────────────────────────
  * Canonical, sourced data module for the EAL Cognition curriculum.
  *
@@ -18,7 +18,7 @@
  * record has a gap (e.g. no official death count), we say so loudly.
  *
  * NAME POLICY (platform UI rule — legal safety)
- * Learner-facing display strings refer to the SYSTEM ("نظام الطيبات", already
+ * Learner-facing display strings refer to the SYSTEM ("نظام دايت", already
  * public and banned) and to its originator only by role ("a board-certified
  * anaesthesiologist"), never by personal name. The originator's identity is
  * fully documented in the public sources cited in `BIBLIOGRAPHY`; we simply do
@@ -66,7 +66,7 @@ export const ORIGINATOR = {
 
 export const CASE_META = {
   id: 'case-001-eltaybat',
-  systemName: { en: 'The "Taybat" Diet System', ar: 'نظام الطيبات' } as Bilingual,
+  systemName: { en: 'The "Taybat" Diet System', ar: 'نظام دايت' } as Bilingual,
   oneLineEn:
     'How pseudoscience, a fabricated religious shield, conspiracy framing, and 16 cognitive biases combined to produce documented deaths — and a community that defended the disaster.',
   oneLineAr:

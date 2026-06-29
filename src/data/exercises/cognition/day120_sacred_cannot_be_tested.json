@@ -44,7 +44,7 @@
       ],
       "correctAnswer": 1,
       "explanation": "False. The evidence bar for a health claim depends entirely on the claim's nature — not on the vocabulary used to dress it. A diet that claims to cure cancer requires the same robust evidence whether it is called 'System X' or 'the Divinely Pure System.' Mixing sacred words into a medical claim does not give it a religious endorsement; it gives it a persuasion advantage — and a dangerous one, because it weaponises the listener's faith against their own critical thinking. Calibration check: if you felt uncertain before deciding, that uncertainty was well-placed.",
-      "explanationAr": "غلط. سقف الدليل على الادعاء الصحي بيعتمد كلياً على طبيعة الادعاء نفسه — مش على المفردات. حمية بتدّعي شفاء السرطان بتحتاج نفس الدليل القوي سواء اتسمّت «نظام س» أو «نظام الطيبات الإلهية». خلط الألفاظ المقدّسة في ادعاء طبي ما بيديهاش تزكية دينية، بيديها ميزة إقناع خطيرة.",
+      "explanationAr": "غلط. سقف الدليل على الادعاء الصحي بيعتمد كلياً على طبيعة الادعاء نفسه — مش على المفردات. حمية بتدّعي شفاء السرطان بتحتاج نفس الدليل القوي سواء اتسمّت «نظام س» أو «نظام دايت الإلهية». خلط الألفاظ المقدّسة في ادعاء طبي ما بيديهاش تزكية دينية، بيديها ميزة إقناع خطيرة.",
       "sources": [
         "https://plato.stanford.edu/entries/popper/",
         "https://www.who.int/news-room/spotlight/how-to-report-misinformation-online"
@@ -66,7 +66,7 @@
         "promptAr": "بكلماتك: ليه ادعاء بيفسّر كل النتائج — النجاح والفشل معاً — ما بيقولكش حاجة مفيدة عن إذا كان العلاج بيشتغل فعلاً؟"
       },
       "explanation": "This is Popper's classic unfalsifiability test. When every possible outcome is explained away — success confirms the system, failure confirms the patient is to blame — no result can ever threaten the claim. This is not extra-strong science; it is the exit from science. The Taybat system ran precisely on this logic: deterioration was attributed to the follower's imperfect adherence, never to the system itself. A claim that can explain anything explains nothing.",
-      "explanationAr": "ده اختبار بوبر الكلاسيكي للتفنيد. لمّا كل نتيجة ممكنة تتبرّر — النجاح بيأكّد النظام، والفشل بيأكّد إن المريض مقصّر — مفيش نتيجة تهدّد الادعاء. ده مش علم قوي بالزيادة؛ ده خروج من العلم. نظام الطيبات شغّل بالضبط على المنطق ده. ادعاء يفسّر كل شيء لا يفسّر شيء.",
+      "explanationAr": "ده اختبار بوبر الكلاسيكي للتفنيد. لمّا كل نتيجة ممكنة تتبرّر — النجاح بيأكّد النظام، والفشل بيأكّد إن المريض مقصّر — مفيش نتيجة تهدّد الادعاء. ده مش علم قوي بالزيادة؛ ده خروج من العلم. نظام دايت شغّل بالضبط على المنطق ده. ادعاء يفسّر كل شيء لا يفسّر شيء.",
       "sources": [
         "https://plato.stanford.edu/entries/popper/",
         "EAL-case-001:ems-2026-03"

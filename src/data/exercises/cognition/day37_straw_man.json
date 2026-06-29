@@ -16,7 +16,7 @@
       "id": 1,
       "mechanic": "recognize",
       "claim": "A doctor says: \"The Taybat diet has not been tested in randomized controlled trials for the specific conditions it claims to treat.\" A follower replies: \"So you're saying nobody should care about their diet at all?\" What happened here?",
-      "claimAr": "دكتور بيقول: «نظام الطيبات ما اتختبرش في تجارب عشوائية محكَمة للحالات المحدّدة اللي بيدّعي علاجها.» تابع بيردّ: «يعني بتقول محدش يهتمّش بأكله خالص؟» إيه اللي حصل هنا؟",
+      "claimAr": "دكتور بيقول: «نظام دايت ما اتختبرش في تجارب عشوائية محكَمة للحالات المحدّدة اللي بيدّعي علاجها.» تابع بيردّ: «يعني بتقول محدش يهتمّش بأكله خالص؟» إيه اللي حصل هنا؟",
       "options": [
         "The follower correctly summarised the doctor's argument",
         "A straw man: the doctor said nothing about diet in general — the follower replaced a specific methodological claim with an extreme and easy-to-ridicule position",

@@ -76,7 +76,7 @@
       "id": 4,
       "mechanic": "decompose",
       "claim": "Map this argument: \"The Taybat system was never independently tested. But thousands of followers reported improvement. And the Medical Syndicate asked for cases but received none. So the system must have been suppressed unfairly.\"",
-      "claimAr": "فكّك الحُجّة دي: «نظام الطيبات ما اتختبرش بشكل مستقل. لكن آلاف الأتباع بلّغوا بتحسّن. ونقابة الأطباء طلبت حالات وما تلقّتش ولا واحدة. يبقى النظام لازم اتُقمِع بظلم».",
+      "claimAr": "فكّك الحُجّة دي: «نظام دايت ما اتختبرش بشكل مستقل. لكن آلاف الأتباع بلّغوا بتحسّن. ونقابة الأطباء طلبت حالات وما تلقّتش ولا واحدة. يبقى النظام لازم اتُقمِع بظلم».",
       "parts": [
         { "text": "The system was suppressed unfairly.", "textAr": "النظام اتُقمِع بظلم.", "role": "conclusion" },
         { "text": "Thousands of followers reported improvement.", "textAr": "آلاف الأتباع بلّغوا بتحسّن.", "role": "premise" },

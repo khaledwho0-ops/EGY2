@@ -101,11 +101,11 @@
       "id": 5,
       "mechanic": "decompose",
       "claim": "Map this argument: 'The Prophet ﷺ followed a pure diet — he was guided by Allah. Therefore his food choices are the correct medical choices for all humans in all times. So if the viral diet system claims to follow his diet, it must be medically valid.'",
-      "claimAr": "فكّك الحُجّة دي: «النبي ﷺ اتّبع نظاماً غذائياً طاهراً — كان مُوجَّهاً من الله. لهذا فاختياراته الغذائية هي الاختيارات الطبية الصحيحة لكل البشر في كل الأوقات. فلو نظام الطيبات يدّعي اتباع طعامه، يبقى لازم يكون صحيح طبياً.»",
+      "claimAr": "فكّك الحُجّة دي: «النبي ﷺ اتّبع نظاماً غذائياً طاهراً — كان مُوجَّهاً من الله. لهذا فاختياراته الغذائية هي الاختيارات الطبية الصحيحة لكل البشر في كل الأوقات. فلو نظام دايت يدّعي اتباع طعامه، يبقى لازم يكون صحيح طبياً.»",
       "parts": [
-        { "text": "The viral diet system is medically valid.", "textAr": "نظام الطيبات صحيح طبياً.", "role": "conclusion" },
+        { "text": "The viral diet system is medically valid.", "textAr": "نظام دايت صحيح طبياً.", "role": "conclusion" },
         { "text": "The Prophet ﷺ was guided by Allah and followed a pure diet.", "textAr": "النبي ﷺ كان مُوجَّهاً من الله واتّبع نظاماً غذائياً طاهراً.", "role": "premise" },
-        { "text": "The viral diet system follows the Prophet's ﷺ diet.", "textAr": "نظام الطيبات يتّبع طعام النبي ﷺ.", "role": "premise" },
+        { "text": "The viral diet system follows the Prophet's ﷺ diet.", "textAr": "نظام دايت يتّبع طعام النبي ﷺ.", "role": "premise" },
         { "text": "(Unstated) Religious guidance automatically equals clinical medical efficacy for all people in all contexts.", "textAr": "(غير مذكور) التوجيه الديني يساوي تلقائياً الفاعلية الطبية السريرية لكل الناس في كل السياقات.", "role": "assumption" },
         { "text": "(Unstated) The system's food rules actually match authenticated hadith.", "textAr": "(غير مذكور) قواعد طعام النظام تطابق فعلاً الأحاديث المعتمدة.", "role": "assumption" }
       ],

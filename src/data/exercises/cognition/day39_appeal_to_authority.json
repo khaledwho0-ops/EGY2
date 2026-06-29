@@ -16,7 +16,7 @@
       "id": 1,
       "mechanic": "recognize",
       "claim": "The originator of the viral Taybat diet system was a board-certified anaesthesiologist. Many followers trusted his nutritional and oncological prescriptions because 'he is a real doctor.' What is the logical flaw?",
-      "claimAr": "مبتكر نظام الطيبات الغذائي الشائع كان طبيب تخدير معتمد. كثير من الأتباع وثقوا في وصفاته الغذائية والأورامية لأنه «دكتور حقيقي». إيه الخلل المنطقي؟",
+      "claimAr": "مبتكر نظام دايت الغذائي الشائع كان طبيب تخدير معتمد. كثير من الأتباع وثقوا في وصفاته الغذائية والأورامية لأنه «دكتور حقيقي». إيه الخلل المنطقي؟",
       "options": [
         "None — a doctor is qualified for all medical topics",
         "Appeal to authority outside domain: his credentials were in anaesthesia, not clinical nutrition, endocrinology, or oncology — the fields his recommendations actually concerned",
@@ -76,9 +76,9 @@
       "id": 4,
       "mechanic": "decompose",
       "claim": "Map this argument: \"You should trust the Taybat diet system. Its originator was a real doctor — so he understood the human body. He also had 3 million followers who shared testimonials. And the government banned it, which proves it was working, because governments suppress what threatens their pharmaceutical revenues.\"",
-      "claimAr": "فكّك الحُجّة دي: «المفروض تثق في نظام الطيبات. مبتكره كان دكتور حقيقي — يبقى كان فاهم جسم الإنسان. وكمان عنده 3 مليون تابع بيشاركوا شهادات. والحكومة حظرته، وده بيثبت إنه كان بيشتغل، لأن الحكومات بتقمع اللي بيهدّد إيراداتها من الأدوية».",
+      "claimAr": "فكّك الحُجّة دي: «المفروض تثق في نظام دايت. مبتكره كان دكتور حقيقي — يبقى كان فاهم جسم الإنسان. وكمان عنده 3 مليون تابع بيشاركوا شهادات. والحكومة حظرته، وده بيثبت إنه كان بيشتغل، لأن الحكومات بتقمع اللي بيهدّد إيراداتها من الأدوية».",
       "parts": [
-        { "text": "You should trust the Taybat diet system.", "textAr": "المفروض تثق في نظام الطيبات.", "role": "conclusion" },
+        { "text": "You should trust the Taybat diet system.", "textAr": "المفروض تثق في نظام دايت.", "role": "conclusion" },
         { "text": "Its originator was a board-certified doctor.", "textAr": "مبتكره كان طبيب معتمد.", "role": "premise" },
         { "text": "3 million followers shared positive testimonials.", "textAr": "3 مليون تابع شاركوا شهادات إيجابية.", "role": "premise" },
         { "text": "The government ban proves the system was effective.", "textAr": "الحظر الحكومي يثبت إن النظام كان فعّالاً.", "role": "premise" },

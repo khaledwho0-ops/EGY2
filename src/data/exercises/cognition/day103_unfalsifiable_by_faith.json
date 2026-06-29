@@ -16,7 +16,7 @@
       "id": 1,
       "mechanic": "recognize",
       "claim": "A researcher presents a well-designed study showing chicken protein is safe and beneficial for most adults. A follower of the Taybat system responds: 'That's just a study — this system is backed by Allah's words.' What has happened to the testability of the diet claim?",
-      "claimAr": "باحث بيقدّم دراسة مصمَّمة جيداً بتُظهِر إن بروتين الدجاج آمن ومفيد لمعظم البالغين. تابع لنظام الطيبات يردّ: «دي مجرد دراسة — النظام ده مدعوم بكلام الله». إيه اللي حصل لقابلية الادعاء الغذائي للاختبار؟",
+      "claimAr": "باحث بيقدّم دراسة مصمَّمة جيداً بتُظهِر إن بروتين الدجاج آمن ومفيد لمعظم البالغين. تابع لنظام دايت يردّ: «دي مجرد دراسة — النظام ده مدعوم بكلام الله». إيه اللي حصل لقابلية الادعاء الغذائي للاختبار؟",
       "options": [
         "The claim is now stronger because it has religious support",
         "The religious framing has made the dietary claim unfalsifiable — any evidence is reframed as an attack on faith, not a test of a nutritional hypothesis",
@@ -52,7 +52,7 @@
       "id": 3,
       "mechanic": "self_explain",
       "claim": "The Taybat system said: if you follow the plan and don't recover, you didn't follow it correctly. If you do recover, the plan is proven. Which logical structure is this?",
-      "claimAr": "نظام الطيبات قال: لو اتّبعت الخطة وما اتعافتش، إنت ما اتّبعتهاش صح. لو اتعافت، الخطة اتثبتت. أنهي بنية منطقية دي؟",
+      "claimAr": "نظام دايت قال: لو اتّبعت الخطة وما اتعافتش، إنت ما اتّبعتهاش صح. لو اتعافت، الخطة اتثبتت. أنهي بنية منطقية دي؟",
       "options": [
         "A valid scientific hypothesis with controls",
         "An unfalsifiable structure: success confirms the system, failure is blamed on the patient — no result can ever refute the claim",

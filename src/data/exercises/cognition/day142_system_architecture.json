@@ -6,7 +6,7 @@
   "title": "Layer 2 — The System: Reading the Diet's Architecture",
   "titleAr": "الطبقة الثانية — النظام: قراءة معمار الحمية",
   "description": "The full Taybat case, layer by layer. Today you apply your logic and science tools to the diet's internal design: the binary 'pure vs poison' frame, the toxin-free 'detox' claim, and the unfalsifiable safety valve.",
-  "descriptionAr": "حالة الطيبات كاملة، طبقة بطبقة. النهاردة بتطبّق أدوات المنطق والعلم على تصميم الحمية الداخلي: إطار «طاهر ضد سام» الثنائي، وادعاء «الديتوكس» بلا سُمّ، وصمام الأمان غير القابل للتفنيد.",
+  "descriptionAr": "حالة دايت كاملة، طبقة بطبقة. النهاردة بتطبّق أدوات المنطق والعلم على تصميم الحمية الداخلي: إطار «طاهر ضد سام» الثنائي، وادعاء «الديتوكس» بلا سُمّ، وصمام الأمان غير القابل للتفنيد.",
   "type": "integration",
   "difficulty": 4,
   "estimatedMinutes": 16,
@@ -15,8 +15,8 @@
     {
       "id": 1,
       "mechanic": "recognize",
-      "claim": "The viral Taybat diet («نظام الطيبات») split all food into «طيبات» (pure, allowed) and «خبائث» (foul, forbidden) — no gradations, no dose, no individual biology. Chicken, milk, eggs, and raw vegetables were declared unconditionally toxic. Which design red flag is this?",
-      "claimAr": "نظام الطيبات قسّم كل الطعام لـ«طيبات» (طاهر، مسموح) و«خبائث» (خبيث، محرّم) — لا تدرّج ولا جرعة ولا بيولوجيا فردية. الفراخ واللبن والبيض والخضار النيئة أُعلِنت سامة بإطلاق. أنهي علامة خطر تصميمية دي؟",
+      "claim": "The viral Taybat diet («نظام دايت») split all food into «طيبات» (pure, allowed) and «خبائث» (foul, forbidden) — no gradations, no dose, no individual biology. Chicken, milk, eggs, and raw vegetables were declared unconditionally toxic. Which design red flag is this?",
+      "claimAr": "نظام دايت قسّم كل الطعام لـ«طيبات» (طاهر، مسموح) و«خبائث» (خبيث، محرّم) — لا تدرّج ولا جرعة ولا بيولوجيا فردية. الفراخ واللبن والبيض والخضار النيئة أُعلِنت سامة بإطلاق. أنهي علامة خطر تصميمية دي؟",
       "options": [
         "No real flag — it's a personal dietary choice",
         "Binary 'pure vs poison' thinking (red flag #9) — nutrition is dose, context, and individual biology, never absolutes",

@@ -16,7 +16,7 @@
       "id": 1,
       "mechanic": "recognize",
       "claim": "Your uncle forwards a message: 'A well-known doctor says the viral Taybat diet system cures diabetes because it eliminates the toxins God put in chicken and milk.' You want to respond with THREE layers. Which combination is correct?",
-      "claimAr": "عمّك بعتلك رسالة: «دكتور مشهور بيقول إن نظام الطيبات بيشفي السكري عشان بيزيل السموم اللي الله حطّها في الفراخ واللبن». عايز تردّ بـثلاث طبقات. أنهي تركيبة صح؟",
+      "claimAr": "عمّك بعتلك رسالة: «دكتور مشهور بيقول إن نظام دايت بيشفي السكري عشان بيزيل السموم اللي الله حطّها في الفراخ واللبن». عايز تردّ بـثلاث طبقات. أنهي تركيبة صح؟",
       "options": [
         "Logic: 'doctors are always right.' Science: 'there are no studies.' Religion: 'food isn't sacred.'",
         "Logic: the authority is outside his specialty (anaesthesia ≠ endocrinology). Science: no published RCT or controlled data — only testimonials. Religion: Al-Mā'idah 5:87 prohibits declaring lawful foods forbidden.",
@@ -95,7 +95,7 @@
       ],
       "correctAnswer": 1,
       "explanation": "Separation of domains is a good default — but it cannot apply when the claim has already mixed them. The viral Taybat system intentionally imported Quranic vocabulary to make food rules feel sacred and immune to questioning. Answering only scientifically leaves the false religious shield intact, and people whose identity is faith-first will remain unreached. A three-layer reply meets them where they actually are.",
-      "explanationAr": "الفصل بين المجالين قاعدة جيدة بشكل عام — لكن ما تنفعش لمّا الادعاء نفسه خلطهم. نظام الطيبات الذي انتشر استورد بقصد مفردات قرآنية عشان يخلّي قواعد الطعام تبان مقدّسة ومحصّنة من السؤال. الردّ العلمي بس بيسيب الدرع الديني الزائف قائم، والناس اللي هويتها دينية في المقام الأول هيفضلوا بعيدين. الردّ الثلاثي بيلتقي بيهم حيث هم فعلاً.",
+      "explanationAr": "الفصل بين المجالين قاعدة جيدة بشكل عام — لكن ما تنفعش لمّا الادعاء نفسه خلطهم. نظام دايت الذي انتشر استورد بقصد مفردات قرآنية عشان يخلّي قواعد الطعام تبان مقدّسة ومحصّنة من السؤال. الردّ العلمي بس بيسيب الدرع الديني الزائف قائم، والناس اللي هويتها دينية في المقام الأول هيفضلوا بعيدين. الردّ الثلاثي بيلتقي بيهم حيث هم فعلاً.",
       "sources": [
         "EAL-case-001:moh-eg-2026-05",
         "https://plato.stanford.edu/entries/science-religion/"

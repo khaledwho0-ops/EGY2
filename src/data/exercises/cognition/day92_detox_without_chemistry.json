@@ -52,8 +52,8 @@
     {
       "id": 3,
       "mechanic": "self_explain",
-      "claim": "Inside «نظام الطيبات», foods were sorted by how much 'waste' they supposedly leave, and certain foods were said to 'leave minimal waste' — never naming any toxin or mechanism. This is Red Flag #10.",
-      "claimAr": "جوّه «نظام الطيبات»، الأكل اتقسّم حسب قد إيه «فضلات» بيسيبها، واتقال إن أطعمة معيّنة «بتسيب فضلات أقل» — من غير ما يتسمّى أي سُمّ أو آلية. ده علامة الخطر رقم 10.",
+      "claim": "Inside «نظام دايت», foods were sorted by how much 'waste' they supposedly leave, and certain foods were said to 'leave minimal waste' — never naming any toxin or mechanism. This is Red Flag #10.",
+      "claimAr": "جوّه «نظام دايت»، الأكل اتقسّم حسب قد إيه «فضلات» بيسيبها، واتقال إن أطعمة معيّنة «بتسيب فضلات أقل» — من غير ما يتسمّى أي سُمّ أو آلية. ده علامة الخطر رقم 10.",
       "options": ["True — this is Red Flag #10: detox without chemistry", "False — this is a careful scientific distinction"],
       "correctAnswer": 0,
       "selfExplain": {

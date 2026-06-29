@@ -12,14 +12,14 @@ You will be told a **day range** to author. Produce one JSON file per day.
 - **No claim reaches the user without a real, resolvable source.** Every exercise item that
   asserts a fact MUST carry a `sources: [url]` array with ≥1 real public URL (peer-reviewed,
   WHO/CDC/NIH/Cochrane, a major institution, or — for the case anchor — a citation id from the
-  El-Tayyibat bibliography). Never fabricate a URL. If you cannot source a specific number,
+  diet bibliography). Never fabricate a URL. If you cannot source a specific number,
   do not state the number — teach the *reasoning* instead.
 - Prefer primary/strong sources (meta-analysis, RCT, Cochrane, WHO). arXiv = preprint, label it.
 - If unsure a fact is real, drop it. Better a smaller true exercise than a fabricated one.
 
 ## 1. NAME-FREE rule (legal)
 - NEVER print a private individual's personal name in learner-facing text.
-- Refer to the case as **«نظام الطيبات» / "the viral Taybat diet system"** and to its originator
+- Refer to the case as **«نظام دايت» / "the viral Taybat diet system"** and to its originator
   only by role: **"a board-certified anaesthesiologist."** (The system name is public & banned.)
 - No brand/deceiver personal names anywhere in display strings.
 
@@ -75,7 +75,7 @@ One file per day at `src/data/exercises/cognition/<id>.json`. Shape:
 - `type` ∈ logic | science | bias | psychology | religion-literacy | integration | reflection.
 - `difficulty` 1–5; `estimatedMinutes` 8–18; 3–6 exercises per day (a "checkpoint" day may have more).
 
-## 4. THE EL-TAYYIBAT ANCHOR (import, don't retype)
+## 4. THE diet ANCHOR (import, don't retype)
 Canonical sourced data lives in `src/data/cases/eltaybat-case-001.ts`:
 `EVIDENCE_HIERARCHY`, `RED_FLAGS` (12), `BIAS_CARDS` (16), `RELIGIOUS_SHIELD` (+2 refuting
 Quran verses 5:87, 16:116), `CONSPIRACY_PAIRS`, `TIMELINE`, `STRUCTURAL_FACTORS`, `BIBLIOGRAPHY`.
@@ -154,7 +154,7 @@ THE CURE (build exercises that *practice* these, not just name them):
 - **Watch your own desires** — notice which conclusion you *want*, then distrust that pull.
 - Thesis sentence to weave through the phase: *the fight against superstition is not a battle of
   information — it is psychological and moral self-training.*
-Use El-Tayyibat as the live example for every concept (it embodies all of them).
+Use diet as the live example for every concept (it embodies all of them).
 
 ---
 
@@ -167,23 +167,23 @@ Use El-Tayyibat as the live example for every concept (it embodies all of them).
     appeal to authority/nature/emotion, begging the question, slippery slope).
   - Wk7 (43–49): informal fallacies — ambiguity + Gish gallop, moving goalposts, cherry-pick, special
     pleading, Texas sharpshooter, Galileo gambit; + intro to the 16 biases.
-  - Wk8 (50–56): the 16 cognitive biases (El-Tayyibat-anchored) + Psychology of Belief core (cognitive
+  - Wk8 (50–56): the 16 cognitive biases (diet-anchored) + Psychology of Belief core (cognitive
     closure, motivated reasoning, ego-defense, intellectual humility, "I don't know" training,
     productive conversation / Socratic defense).
 - **Phase 2 (57–98): SCIENCE LITERACY** — Spine A (Evidence Pyramid) + Foundation F1–F4 + AP1/AP10.
   - What is science & falsifiability; scientific method (controls, blinding, pre-registration,
     replication); the **evidence hierarchy** (Dr. Ismail, days ~63–70); study designs (case report→RCT);
     statistics (mean/SD, p-value, confidence interval, sample size, base rate); confounders & biases;
-    correlation≠causation; reading research & predatory journals; the **12 red flags** (El-Tayyibat);
+    correlation≠causation; reading research & predatory journals; the **12 red flags** (diet);
     detox/"toxin" claims; the **SIFT** fact-check toolkit (Stop, Investigate source, Find better
     coverage, Trace to origin).
-- **Phase 3 (99–140): ISLAMIC / RELIGIOUS-SHIELD LITERACY** — the El-Tayyibat religious layer (INT-04).
+- **Phase 3 (99–140): ISLAMIC / RELIGIOUS-SHIELD LITERACY** — the diet religious layer (INT-04).
   Framing: *defending* Islam from those who weaponise it. The vocabulary exploit («الطيبات»/«الخبائث»);
   the two refuting verses (5:87, 16:116); the Prophet's-diet hadith fabrication (chicken & milk are in
   authenticated hadith); separating cultural practice from a medical efficacy claim (same evidence bar);
   recognising religious framing used to make a claim unfalsifiable. Keep strictly within the One-Law
   Islamic Authenticity rules (only real, attributable hadith/verses; cite source/grade).
-- **Phase 4 (141–168): INTEGRATION / CAPSTONE** — the full 14-layer El-Tayyibat case as a live
+- **Phase 4 (141–168): INTEGRATION / CAPSTONE** — the full 14-layer diet case as a live
   stress test; combine logical + scientific + religious defense; productive-conversation practice
   (motivational-interviewing style); the capstone (pick a pseudoscience claim, write an evidence-based,
   empathetic rebuttal that names the fallacy, cites strong evidence, and explains *why the belief

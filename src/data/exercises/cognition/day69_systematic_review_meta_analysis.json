@@ -32,8 +32,8 @@
     {
       "id": 2,
       "mechanic": "self_explain",
-      "claim": "The fictional quack 'Dr. K' links only the three studies that support his herb and ignores the twenty that found nothing. The «نظام الطيبات» originator did the same with anything that looked supportive. What is this move — and how does a systematic review defeat it?",
-      "claimAr": "الدجّال الخيالي «د. ك» بيحطّ روابط لتلات دراسات بس بتأيّد عشبه ويتجاهل العشرين اللي ما لقتش حاجة. وصاحب «نظام الطيبات» عمل نفس الحاجة مع أي حاجة بانت مؤيِّدة. الحركة دي إيه — والمراجعة المنهجية بتهزمها إزاي؟",
+      "claim": "The fictional quack 'Dr. K' links only the three studies that support his herb and ignores the twenty that found nothing. The «نظام دايت» originator did the same with anything that looked supportive. What is this move — and how does a systematic review defeat it?",
+      "claimAr": "الدجّال الخيالي «د. ك» بيحطّ روابط لتلات دراسات بس بتأيّد عشبه ويتجاهل العشرين اللي ما لقتش حاجة. وصاحب «نظام دايت» عمل نفس الحاجة مع أي حاجة بانت مؤيِّدة. الحركة دي إيه — والمراجعة المنهجية بتهزمها إزاي؟",
       "options": [
         "It's fair research; a systematic review does the same",
         "It's cherry-picking; a systematic review defeats it by committing in advance to include ALL qualifying studies, so you can't just keep the flattering ones"
@@ -82,8 +82,8 @@
       "id": 5,
       "mechanic": "retrieve",
       "retrievalOf": 65,
-      "claim": "Back to day 65: the «نظام الطيبات» community collected hundreds of success testimonials — essentially a very large case series. Why does a systematic review of proper controlled studies completely replace, rather than just complement, that collection of testimonials?",
-      "claimAr": "رجعنا ليوم 65: مجتمع «نظام الطيبات» جمع مئات شهادات النجاح — بشكل أساسي سلسلة حالات كبيرة جداً. ليه المراجعة المنهجية للدراسات المضبوطة الصحيحة بتحلّ محلّ مجموعة الشهادات دي بالكامل، بدل ما تكمّلها بس؟",
+      "claim": "Back to day 65: the «نظام دايت» community collected hundreds of success testimonials — essentially a very large case series. Why does a systematic review of proper controlled studies completely replace, rather than just complement, that collection of testimonials?",
+      "claimAr": "رجعنا ليوم 65: مجتمع «نظام دايت» جمع مئات شهادات النجاح — بشكل أساسي سلسلة حالات كبيرة جداً. ليه المراجعة المنهجية للدراسات المضبوطة الصحيحة بتحلّ محلّ مجموعة الشهادات دي بالكامل، بدل ما تكمّلها بس؟",
       "options": [
         "It doesn't replace them — more data is always better regardless of quality",
         "Because a systematic review pools studies that each removed a specific bias (selection, recall, placebo) that testimonials never remove — so the two are not on the same evidence ladder at all",

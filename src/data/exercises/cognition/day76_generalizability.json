@@ -34,7 +34,7 @@
     {
       "id": 2,
       "mechanic": "consider_opposite",
-      "claim": "The viral «نظام الطيبات» diet claimed its approach was universally applicable to cancer, type-1 diabetes, lupus, hypertension, and IBS — all treatable with one elimination diet.",
+      "claim": "The viral «نظام دايت» diet claimed its approach was universally applicable to cancer, type-1 diabetes, lupus, hypertension, and IBS — all treatable with one elimination diet.",
       "claimAr": "نظام «الطيبات» ادّعى إن نهجه قابل للتطبيق عالمياً على السرطان والسكري النوع الأول والذئبة والضغط والقولون — كلها قابلة للعلاج بحمية إقصاء واحدة.",
       "prompt": "What would have to be biologically true for a single elimination diet to genuinely treat all these conditions? What does knowing the mechanism of each disease tell you about whether that is possible?",
       "promptAr": "إيه اللي لازم يكون صحيحاً بيولوجياً علشان حمية إقصاء واحدة تعالج فعلاً كل الحالات دي؟ وإيه اللي معرفة آلية كل مرض بتقوله عن إمكانية ذلك؟",

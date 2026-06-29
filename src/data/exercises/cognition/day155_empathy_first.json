@@ -57,7 +57,7 @@
     {
       "id": 3,
       "mechanic": "consider_opposite",
-      "claim": "A friend who follows the viral «نظام الطيبات» diet says: \"My headaches of 15 years are gone since I started — I feel better than ever.\" You feel the pull to say 'that's just placebo, the diet did nothing.'",
+      "claim": "A friend who follows the viral «نظام دايت» diet says: \"My headaches of 15 years are gone since I started — I feel better than ever.\" You feel the pull to say 'that's just placebo, the diet did nothing.'",
       "claimAr": "صاحب بيتبع نظام «الطيبات» الانتشر بيقول: «صداعي اللي معايا 15 سنة راح من وقت ما بدأت — أحسن ما كنت في حياتي.» بتحسّ بالشدّ إنك تقول «ده مجرد تأثير وهمي، الحِمية ما عملتش حاجة».",
       "prompt": "Before debating the cause: what could explain his real relief OTHER than 'the diet cured it' — and how would acknowledging the relief first change where the conversation goes?",
       "promptAr": "قبل ما تجادل في السبب: إيه اللي ممكن يفسّر ارتياحه الحقيقي غير «الحمية شفته» — وإزاي الاعتراف بالارتياح الأول هيغيّر المحادثة هتروح فين؟",

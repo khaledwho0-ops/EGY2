@@ -16,7 +16,7 @@
       "id": 1,
       "mechanic": "recognize",
       "claim": "A Taybat diet promoter argues: \"If we allow doctors to question this dietary system, next they will control every bite you eat, then ban all traditional food, then criminalise anyone who chooses to eat naturally.\" What fallacy is this?",
-      "claimAr": "مروّج نظام الطيبات بيحتجّ: «لو سمحنا للأطباء يشكّكوا في النظام الغذائي ده، بعدين هيتحكّموا في كل لقمة بتاكلها، وبعدين هيحظروا الأكل التقليدي كله، وبعدين هيجرّموا أي حد يختار يأكل طبيعي.» أنهي مغالطة دي؟",
+      "claimAr": "مروّج نظام دايت بيحتجّ: «لو سمحنا للأطباء يشكّكوا في النظام الغذائي ده، بعدين هيتحكّموا في كل لقمة بتاكلها، وبعدين هيحظروا الأكل التقليدي كله، وبعدين هيجرّموا أي حد يختار يأكل طبيعي.» أنهي مغالطة دي؟",
       "options": [
         "A reasonable prediction based on historical trends",
         "Slippery slope: a chain of unestablished causal links — no evidence is provided that medical scrutiny leads to criminalisation of food choice",
@@ -52,7 +52,7 @@
       "id": 3,
       "mechanic": "recognize",
       "claim": "During a debate on the Taybat diet, a questioner asks: \"Where are the clinical trial results?\" The promoter answers: \"Why are you so focused on papers? What matters is the thousands of people who have been helped and the families restored. You should ask why mainstream medicine has failed so many people.\" What happened?",
-      "claimAr": "خلال نقاش حول نظام الطيبات، سائل يسأل: «فين نتائج التجارب السريرية؟» المروّج يردّ: «ليه منكّب على الأوراق؟ اللي بيهمّ هو الآلاف اللي اتساعدوا والأسر اللي رُمَّمت. المفروض تسأل ليه الطب السائد فشل مع كتير من الناس.» إيه اللي حصل؟",
+      "claimAr": "خلال نقاش حول نظام دايت، سائل يسأل: «فين نتائج التجارب السريرية؟» المروّج يردّ: «ليه منكّب على الأوراق؟ اللي بيهمّ هو الآلاف اللي اتساعدوا والأسر اللي رُمَّمت. المفروض تسأل ليه الطب السائد فشل مع كتير من الناس.» إيه اللي حصل؟",
       "options": [
         "The promoter answered the question fully",
         "Red herring: the question about clinical trials was redirected to a different, emotionally charged topic ('mainstream medicine's failures') — the original question was never answered",

@@ -37,7 +37,7 @@
       "id": 2,
       "mechanic": "consider_opposite",
       "claim": "A trusted person in your community says: 'Doctors gave my uncle medicine for 10 years and he never got better. A month on the Taybat system and he's a new person. Isn't that proof that the natural path is better than drugs?'",
-      "claimAr": "شخص موثوق في مجتمعك بيقول: «الأطباء ادّوا عمّي دواء 10 سنين وما تحسّنش. شهر على نظام الطيبات وهو زي الفل. مش ده دليل إن الطريق الطبيعي أفضل من الدواء؟»",
+      "claimAr": "شخص موثوق في مجتمعك بيقول: «الأطباء ادّوا عمّي دواء 10 سنين وما تحسّنش. شهر على نظام دايت وهو زي الفل. مش ده دليل إن الطريق الطبيعي أفضل من الدواء؟»",
       "prompt": "This story is emotionally powerful. Before accepting the conclusion, what questions would you need answered? What alternative explanations exist?",
       "promptAr": "الحكاية دي قوية عاطفياً. قبل قبول الخلاصة، أنهي أسئلة محتاج إجابة عليها؟ وأنهي تفسيرات بديلة موجودة؟",
       "modelPoints": [

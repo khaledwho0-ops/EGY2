@@ -36,8 +36,8 @@
       "id": 2,
       "mechanic": "calibrate",
       "calibrated": true,
-      "claim": "A follower argues: \"Trusted physicians have medical degrees. The «نظام الطيبات» founder had a medical degree. So he's a trustworthy guide on nutrition and cancer.\" Is this valid reasoning?",
-      "claimAr": "تابع بيقول: «الأطباء الموثوقين عندهم شهادات طب. صاحب نظام الطيبات كان عنده شهادة طب. يبقى هو مرشد موثوق في التغذية والسرطان». هل هذا استدلال صحيح؟",
+      "claim": "A follower argues: \"Trusted physicians have medical degrees. The «نظام دايت» founder had a medical degree. So he's a trustworthy guide on nutrition and cancer.\" Is this valid reasoning?",
+      "claimAr": "تابع بيقول: «الأطباء الموثوقين عندهم شهادات طب. صاحب نظام دايت كان عنده شهادة طب. يبقى هو مرشد موثوق في التغذية والسرطان». هل هذا استدلال صحيح؟",
       "options": [
         "Yes — a medical degree covers all medical topics",
         "No — undistributed middle plus authority-outside-specialty: his degree was in anaesthesia, not nutrition or oncology"

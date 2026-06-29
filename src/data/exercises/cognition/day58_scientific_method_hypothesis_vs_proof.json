@@ -53,8 +53,8 @@
     {
       "id": 3,
       "mechanic": "self_explain",
-      "claim": "The «نظام الطيبات» originator was asked by the Medical Syndicate for just three documented cases with before-and-after lab results. He produced none, saying the truth would 'be proven in the future.' Which part of the scientific method did he refuse?",
-      "claimAr": "صاحب «نظام الطيبات» طلبت منه نقابة الأطباء ثلاث حالات موثّقة بتحاليل قبل وبعد بس. ما قدّمش ولا واحدة، وقال إن الحقيقة «هتثبت في المستقبل». أنهي جزء من المنهج العلمي رفضه؟",
+      "claim": "The «نظام دايت» originator was asked by the Medical Syndicate for just three documented cases with before-and-after lab results. He produced none, saying the truth would 'be proven in the future.' Which part of the scientific method did he refuse?",
+      "claimAr": "صاحب «نظام دايت» طلبت منه نقابة الأطباء ثلاث حالات موثّقة بتحاليل قبل وبعد بس. ما قدّمش ولا واحدة، وقال إن الحقيقة «هتثبت في المستقبل». أنهي جزء من المنهج العلمي رفضه؟",
       "options": [
         "He skipped nothing — future proof is fine",
         "He refused the test itself: he had a hypothesis but would not let it face any check that could fail"

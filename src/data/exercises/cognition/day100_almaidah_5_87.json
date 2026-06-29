@@ -16,7 +16,7 @@
       "id": 1,
       "mechanic": "recognize",
       "claim": "Al-Mā'idah 5:87 states: «يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحَرِّمُوا طَيِّبَاتِ مَا أَحَلَّ اللَّهُ لَكُمْ». The viral Taybat diet declared chicken, milk, and eggs categorically forbidden. How does this verse apply?",
-      "claimAr": "المائدة ٥:٨٧ تقول: «يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحَرِّمُوا طَيِّبَاتِ مَا أَحَلَّ اللَّهُ لَكُمْ». نظام الطيبات الفيروسي أعلن تحريم الفراخ واللبن والبيض بإطلاق. الآية دي بتنطبق إزاي؟",
+      "claimAr": "المائدة ٥:٨٧ تقول: «يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحَرِّمُوا طَيِّبَاتِ مَا أَحَلَّ اللَّهُ لَكُمْ». نظام دايت الفيروسي أعلن تحريم الفراخ واللبن والبيض بإطلاق. الآية دي بتنطبق إزاي؟",
       "options": [
         "The verse is about something else entirely — diet systems are exempt",
         "The verse directly forbids prohibiting things Allah has made lawful — and chicken, milk, and eggs are lawful in the Quran and Sunnah, so declaring them haram contradicts this verse",
@@ -37,7 +37,7 @@
       "mechanic": "calibrate",
       "calibrated": true,
       "claim": "True or false: if a Muslim genuinely wants to follow the Quran in their diet, Al-Mā'idah 5:87 supports following the Taybat system's total prohibition of chicken and milk.",
-      "claimAr": "صح ولا غلط: لو مسلم عايز فعلاً يتبع القرآن في أكله، المائدة ٥:٨٧ بتدعم اتباع حظر نظام الطيبات الكامل على الفراخ واللبن.",
+      "claimAr": "صح ولا غلط: لو مسلم عايز فعلاً يتبع القرآن في أكله، المائدة ٥:٨٧ بتدعم اتباع حظر نظام دايت الكامل على الفراخ واللبن.",
       "correctAnswer": false,
       "explanation": "False — and the verse makes it the opposite. 5:87 is an explicit Quranic instruction not to prohibit what God has made lawful. Following a system that prohibits lawful foods in God's name is not Quranic compliance — it contradicts this verse. The sincerity of the intention does not protect against the fact of the contradiction. Calibration note: many sincere believers are surprised by this — the surprise itself shows why religious literacy matters for protecting sincere faith.",
       "explanationAr": "غلط — والآية تقول العكس. المائدة 5:87 تعليم قرآني صريح بعدم تحريم ما أحلّه الله. اتباع نظام يحرّم طعاماً حلالاً باسم الله ليس التزاماً قرآنياً — بل يتناقض مع هذه الآية. صدق النية لا يحمي من واقعة التناقض. ملاحظة معايرة: كتير من المؤمنين الصادقين بيتفاجأوا بده — المفاجأة نفسها بتبيّن ليه الثقافة الدينية مهمة لحماية الإيمان الصادق.",

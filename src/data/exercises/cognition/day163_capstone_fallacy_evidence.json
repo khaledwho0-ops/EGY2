@@ -15,8 +15,8 @@
     {
       "id": 1,
       "mechanic": "recognize",
-      "claim": "A promoter says: «نظام الطيبات» works. If it didn't work for you, you didn't follow it correctly. Which fallacy makes this claim permanently safe from any test?",
-      "claimAr": "مروّج بيقول: «نظام الطيبات» شغّال. لو ما نفعش معاك، إنت ما التزمتش صح. أنهي مغالطة بتخلّي الادعاء ده محمياً دايماً من أي اختبار؟",
+      "claim": "A promoter says: «نظام دايت» works. If it didn't work for you, you didn't follow it correctly. Which fallacy makes this claim permanently safe from any test?",
+      "claimAr": "مروّج بيقول: «نظام دايت» شغّال. لو ما نفعش معاك، إنت ما التزمتش صح. أنهي مغالطة بتخلّي الادعاء ده محمياً دايماً من أي اختبار؟",
       "options": [
         "False dichotomy — only two options given",
         "Unfalsifiable / 'No True Scotsman' — failure is always blamed on the follower, never on the system",

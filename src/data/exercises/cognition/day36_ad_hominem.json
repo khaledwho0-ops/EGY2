@@ -16,7 +16,7 @@
       "id": 1,
       "mechanic": "recognize",
       "claim": "A nutrition specialist publicly questions the viral Taybat diet system. A follower responds: \"Who is she to speak? She's overweight herself — her advice means nothing.\" What is wrong with this response?",
-      "claimAr": "أخصائية تغذية بتشكّك علناً في نظام الطيبات. ردّ تابع: «هي مين علشان تتكلّم؟ هي نفسها تقيلة — كلامها مالوش قيمة». إيه الغلط في الردّ ده؟",
+      "claimAr": "أخصائية تغذية بتشكّك علناً في نظام دايت. ردّ تابع: «هي مين علشان تتكلّم؟ هي نفسها تقيلة — كلامها مالوش قيمة». إيه الغلط في الردّ ده؟",
       "options": [
         "Nothing — her weight does undermine her credibility",
         "It is an ad hominem: the specialist's personal appearance does not affect whether her evidence is correct or wrong",
@@ -25,7 +25,7 @@
       ],
       "correctAnswer": 1,
       "explanation": "This is a textbook ad hominem: instead of answering 'is the evidence she cited real?', the response attacks who she is. Her weight says nothing about whether the Taybat system's claims hold up to scrutiny. Good evidence remains good evidence regardless of who presents it. The move works because it shifts your attention away from the actual argument.",
-      "explanationAr": "ده مثال كتابي على الشخصنة: بدل ما يردّ على «هل الدليل اللي ذكرته حقيقي؟»، الردّ بيهاجم مَن هي. وزنها ما بيقولش حاجة عن صحة أو خطأ ادعاءات نظام الطيبات. الدليل الكويس يفضل كويساً مهما كان اللي قدّمه. الحركة بتشتغل لأنها بتحوّل انتباهك من الحجة الأصلية.",
+      "explanationAr": "ده مثال كتابي على الشخصنة: بدل ما يردّ على «هل الدليل اللي ذكرته حقيقي؟»، الردّ بيهاجم مَن هي. وزنها ما بيقولش حاجة عن صحة أو خطأ ادعاءات نظام دايت. الدليل الكويس يفضل كويساً مهما كان اللي قدّمه. الحركة بتشتغل لأنها بتحوّل انتباهك من الحجة الأصلية.",
       "sources": [
         "https://plato.stanford.edu/entries/fallacies/"
       ],

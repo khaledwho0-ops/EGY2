@@ -37,7 +37,7 @@
       "mechanic": "calibrate",
       "calibrated": true,
       "claim": "A promoter of the viral Taybat diet system says: \"Thousands of families have saved themselves from toxic medicine — if you truly love your children, you'll choose the pure path.\" Does this contain any logical argument at all?",
-      "claimAr": "مروّج نظام الطيبات بيقول: «آلاف الأسر خلّصت نفسها من الدواء السام — لو بتحبّ أولادك حقاً، هتختار المسار الطاهر.» هل ده يحتوي أي حجة منطقية؟",
+      "claimAr": "مروّج نظام دايت بيقول: «آلاف الأسر خلّصت نفسها من الدواء السام — لو بتحبّ أولادك حقاً، هتختار المسار الطاهر.» هل ده يحتوي أي حجة منطقية؟",
       "options": [
         "Yes — it references thousands of families as evidence",
         "No — it uses fear, guilt, and bandwagon instead of data; none of these establish whether the diet is safe or effective"
@@ -55,7 +55,7 @@
       "id": 3,
       "mechanic": "self_explain",
       "claim": "A friend argues: \"The Taybat diet must be healthy — it's called the 'Taybat' system, which means pure and good, so it clearly promotes what is pure and good.\" This is begging the question (circular reasoning).",
-      "claimAr": "صديق بيحتجّ: «نظام الطيبات لازم يكون صحي — اسمه نظام الطيبات، يعني طاهر وجيّد، يبقى بوضوح بيروّج للطاهر والجيّد.» ده مصادرة المطلوب (التفكير الدائري).",
+      "claimAr": "صديق بيحتجّ: «نظام دايت لازم يكون صحي — اسمه نظام دايت، يعني طاهر وجيّد، يبقى بوضوح بيروّج للطاهر والجيّد.» ده مصادرة المطلوب (التفكير الدائري).",
       "options": [
         "True — the name confirms its goodness",
         "False — the name was chosen by the promoter and does not independently verify the diet's properties"

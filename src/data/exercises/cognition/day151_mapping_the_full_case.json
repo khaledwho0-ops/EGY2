@@ -6,7 +6,7 @@
   "title": "Mapping the Full Case — All 14 Layers at Once",
   "titleAr": "رسم خريطة الحالة الكاملة — 14 طبقة دفعة واحدة",
   "description": "The viral Taybat diet system is our capstone case because it is simultaneously a logic failure, a science failure, a religious-vocabulary exploit, and a social-psychology trap. Today you navigate all layers together.",
-  "descriptionAr": "نظام الطيبات هو حالتنا الختامية لأنه في آنٍ واحد فشل منطقي وفشل علمي واستغلال للمفردات الدينية وفخ سيكولوجي اجتماعي. النهارده بتتنقّل في كل الطبقات مع بعض.",
+  "descriptionAr": "نظام دايت هو حالتنا الختامية لأنه في آنٍ واحد فشل منطقي وفشل علمي واستغلال للمفردات الدينية وفخ سيكولوجي اجتماعي. النهارده بتتنقّل في كل الطبقات مع بعض.",
   "type": "integration",
   "difficulty": 5,
   "estimatedMinutes": 18,
@@ -16,7 +16,7 @@
       "id": 1,
       "mechanic": "recognize",
       "claim": "A friend says: 'The Taybat system is just a diet — at worst it doesn't work. Why are people making it a big deal?' Which single fact best answers the scale of the harm?",
-      "claimAr": "صاحبك بيقول: «نظام الطيبات مجرد حمية — في الأسوأ ما ينفعش. ليه الناس بتكبّر الموضوع؟» أنهي حقيقة واحدة بتردّ على حجم الضرر أحسن؟",
+      "claimAr": "صاحبك بيقول: «نظام دايت مجرد حمية — في الأسوأ ما ينفعش. ليه الناس بتكبّر الموضوع؟» أنهي حقيقة واحدة بتردّ على حجم الضرر أحسن؟",
       "options": [
         "It wasn't very popular",
         "By early May 2026, 230+ victims were documented — deaths, disability, ICU admissions — after followers stopped insulin, corticosteroids, and cancer treatment on the system's implied guidance",
@@ -25,7 +25,7 @@
       ],
       "correctAnswer": 1,
       "explanation": "The viral Taybat system crossed from dietary advice into clinical danger when Red Flag #8 operated: followers stopped insulin for type-1 diabetes, corticosteroids for lupus, and chemotherapy. No diet is a validated replacement for tested pharmacology in those conditions. The 230+ figure is a media aggregate lower bound — the Medical Syndicate confirmed the expulsion and clinic closure after its own investigation.",
-      "explanationAr": "نظام الطيبات الذي انتشر عبر الحدود من نصيحة غذائية لخطر سريري لمّا عملت علامة الخطر 8: الأتباع وقّفوا الأنسولين لسكري النوع الأول والكورتيزون للذئبة والكيموثيرابي. لا حمية هي بديل مُثبَّت للعلاج الدوائي المُختبَر في هذه الحالات. رقم 230+ هو حدٌّ أدنى مُجمَّع من الإعلام — نقابة الأطباء أكّدت الشطب وإغلاق العيادة بعد تحقيقها الخاص.",
+      "explanationAr": "نظام دايت الذي انتشر عبر الحدود من نصيحة غذائية لخطر سريري لمّا عملت علامة الخطر 8: الأتباع وقّفوا الأنسولين لسكري النوع الأول والكورتيزون للذئبة والكيموثيرابي. لا حمية هي بديل مُثبَّت للعلاج الدوائي المُختبَر في هذه الحالات. رقم 230+ هو حدٌّ أدنى مُجمَّع من الإعلام — نقابة الأطباء أكّدت الشطب وإغلاق العيادة بعد تحقيقها الخاص.",
       "sources": [
         "EAL-case-001:ems-2026-03",
         "EAL-case-001:moh-eg-2026-05",
@@ -59,7 +59,7 @@
       "id": 3,
       "mechanic": "consider_opposite",
       "claim": "It feels intuitive that the Egyptian Medical Syndicate's investigation was driven by commercial rivalry — doctors protecting their income from the Taybat system's competition.",
-      "claimAr": "بيبان بديهي إن تحقيق نقابة الأطباء المصرية كان مدفوعاً بالتنافس التجاري — أطباء بيحموا دخلهم من منافسة نظام الطيبات.",
+      "claimAr": "بيبان بديهي إن تحقيق نقابة الأطباء المصرية كان مدفوعاً بالتنافس التجاري — أطباء بيحموا دخلهم من منافسة نظام دايت.",
       "prompt": "Consider the opposite: what would we expect to SEE if the Syndicate had no commercial motive? What facts would the 'protecting profits' story have to explain away?",
       "promptAr": "فكّر في العكس: إيه اللي كنّا هنتوقع نشوفه لو النقابة مالهاش دافع تجاري؟ وإيه الوقائع اللي قصة «حماية الأرباح» لازم تتهرّب من تفسيرها؟",
       "modelPoints": [

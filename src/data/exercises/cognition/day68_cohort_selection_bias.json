@@ -67,8 +67,8 @@
     {
       "id": 4,
       "mechanic": "consider_opposite",
-      "claim": "A wellness influencer says: 'A long study followed thousands of people who eat like «نظام الطيبات» followers and they lived longer — proof the diet works.'",
-      "claimAr": "مؤثّر عافية بيقول: «دراسة طويلة تابعت آلاف الناس اللي بياكلوا زي أتباع نظام الطيبات وعاشوا أطول — دليل إن الحمية بتنفع».",
+      "claim": "A wellness influencer says: 'A long study followed thousands of people who eat like «نظام دايت» followers and they lived longer — proof the diet works.'",
+      "claimAr": "مؤثّر عافية بيقول: «دراسة طويلة تابعت آلاف الناس اللي بياكلوا زي أتباع نظام دايت وعاشوا أطول — دليل إن الحمية بتنفع».",
       "prompt": "What would disprove this claim? What other explanations could account for the longer life of people who follow strict 'clean eating' diets, even if the specific banned-food rules are irrelevant?",
       "promptAr": "إيه اللي يكذّب الادعاء ده؟ إيه التفسيرات التانية اللي ممكن تفسّر طول عمر اللي بيتّبعوا حميات «الأكل النظيف» الصارمة، حتى لو القواعد المحدّدة للأكل الممنوع غير ذات صلة؟",
       "modelPoints": [

@@ -77,7 +77,7 @@
       "id": 4,
       "mechanic": "consider_opposite",
       "claim": "The viral Taybat diet used the spiritual concept of bodily 'purity' to frame insulin as 'pollution' and certain vegetables as 'toxins.' A defender says this framing was harmless because it was motivated by genuine religious concern for purity.",
-      "claimAr": "نظام الطيبات المنتشر استخدم مفهوم «الطهارة» الروحية للجسم علشان يُأطّر الأنسولين كـ«تلوّث» وبعض الخضار كـ«سموم». مدافع بيقول التأطير ده كان غير ضار لأنه كان مدفوعاً بقلق ديني حقيقي على الطهارة.",
+      "claimAr": "نظام دايت المنتشر استخدم مفهوم «الطهارة» الروحية للجسم علشان يُأطّر الأنسولين كـ«تلوّث» وبعض الخضار كـ«سموم». مدافع بيقول التأطير ده كان غير ضار لأنه كان مدفوعاً بقلق ديني حقيقي على الطهارة.",
       "prompt": "What would you need to find to show this framing WAS harmful — beyond the individual dietary choice? What community-level and public-health harms follow when whole networks learn to process medical decisions through a spiritual purity lens?",
       "promptAr": "إيه اللي لازم تلاقيه علشان تُثبت إن التأطير ده كان ضاراً — بما يتعدّى الاختيار الغذائي الفردي؟ وإيه الأضرار على مستوى المجتمع والصحة العامة اللي بتجي لمّا شبكات كاملة تتعلّم معالجة القرارات الطبية من خلال عدسة الطهارة الروحية؟",
       "modelPoints": [

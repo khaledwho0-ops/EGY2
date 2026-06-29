@@ -67,8 +67,8 @@
     {
       "id": 4,
       "mechanic": "consider_opposite",
-      "claim": "An online poll on the «نظام الطيبات» fan page asks: 'Did the diet make you feel better?' 90% say yes. This looks like overwhelming evidence the diet works.",
-      "claimAr": "استطلاع أونلاين على صفحة مُعجبي «نظام الطيبات» بيسأل: «الحمية خلّتك تحسّ أحسن؟» 90% قالوا أيوة. ده بيبان دليل ساحق إن الحمية بتنفع.",
+      "claim": "An online poll on the «نظام دايت» fan page asks: 'Did the diet make you feel better?' 90% say yes. This looks like overwhelming evidence the diet works.",
+      "claimAr": "استطلاع أونلاين على صفحة مُعجبي «نظام دايت» بيسأل: «الحمية خلّتك تحسّ أحسن؟» 90% قالوا أيوة. ده بيبان دليل ساحق إن الحمية بتنفع.",
       "prompt": "What would have to be true if this 90% result is misleading? What are all the ways the sampling itself could produce this number without the diet actually working?",
       "promptAr": "لو نتيجة الـ90% دي مضلِّلة، إيه اللي لازم يكون صح؟ إيه كل الطرق اللي العيّنة نفسها ممكن تنتج بيها الرقم ده من غير ما الحمية فعلاً تنفع؟",
       "modelPoints": [

@@ -67,8 +67,8 @@
     {
       "id": 4,
       "mechanic": "consider_opposite",
-      "claim": "After hearing «نظام الطيبات» claims, followers were asked to 'remember' how they felt before and after quitting chicken and milk. Most 'recalled' feeling much worse before — which felt like strong evidence the diet worked.",
-      "claimAr": "بعد ما سمعوا ادعاءات «نظام الطيبات»، اتطلب من الأتباع إنهم «يفتكروا» حسّوا إزاي قبل وبعد ما بطّلوا فراخ ولبن. أغلبهم «افتكر» إنه كان أسوأ بكتير قبل — وده حسّه دليل قوي إن الحمية نفعت.",
+      "claim": "After hearing «نظام دايت» claims, followers were asked to 'remember' how they felt before and after quitting chicken and milk. Most 'recalled' feeling much worse before — which felt like strong evidence the diet worked.",
+      "claimAr": "بعد ما سمعوا ادعاءات «نظام دايت»، اتطلب من الأتباع إنهم «يفتكروا» حسّوا إزاي قبل وبعد ما بطّلوا فراخ ولبن. أغلبهم «افتكر» إنه كان أسوأ بكتير قبل — وده حسّه دليل قوي إن الحمية نفعت.",
       "prompt": "What would disprove the idea that this retrospective recall proves the diet worked? What alternative explanations exist for why followers 'remembered' feeling worse before?",
       "promptAr": "إيه اللي يكذّب فكرة إن التذكّر بأثر رجعي ده بيثبت إن الحمية نفعت؟ إيه التفسيرات البديلة الموجودة لإيه يكون الأتباع «افتكروا» إنهم كانوا أسوأ قبل؟",
       "modelPoints": [

@@ -16,7 +16,7 @@
       "id": 1,
       "mechanic": "recognize",
       "claim": "A promoter of the viral Taybat diet says: \"You either believe in natural healing, or you believe in pumping your body full of chemicals. There is no middle ground.\" What is the logical problem here?",
-      "claimAr": "مروّج نظام الطيبات بيقول: «إمّا تؤمن بالشفاء الطبيعي، أو تؤمن بحشو جسمك بالكيماويات. مفيش أرضية وسط.» إيه المشكلة المنطقية هنا؟",
+      "claimAr": "مروّج نظام دايت بيقول: «إمّا تؤمن بالشفاء الطبيعي، أو تؤمن بحشو جسمك بالكيماويات. مفيش أرضية وسط.» إيه المشكلة المنطقية هنا؟",
       "options": [
         "The argument is balanced and covers all possibilities",
         "False dichotomy: it ignores a vast middle ground — evidence-based medicine that also uses plant-derived compounds, diet, lifestyle, and personalised care",
@@ -75,7 +75,7 @@
       "id": 4,
       "mechanic": "decompose",
       "claim": "Map this argument from a Taybat promoter: \"The viral diet system classified all foods as either pure (طيبات) or foul (خبائث). Since chicken and pure greens are طيبات and have fed civilisations, and since processed foods are خبائث that have made people sick, the classification is correct and scientifically sound.\"",
-      "claimAr": "فكّك الحُجّة دي من مروّج نظام الطيبات: «النظام صنّف كل الأطعمة إمّا طيبات أو خبائث. وبما إن الدجاج والخضار الطاهرة طيبات وأطعمت الحضارات، وبما إن الأطعمة المُصنَّعة خبائث وأمرضت الناس، يبقى التصنيف صح وعلمياً سليم».",
+      "claimAr": "فكّك الحُجّة دي من مروّج نظام دايت: «النظام صنّف كل الأطعمة إمّا طيبات أو خبائث. وبما إن الدجاج والخضار الطاهرة طيبات وأطعمت الحضارات، وبما إن الأطعمة المُصنَّعة خبائث وأمرضت الناس، يبقى التصنيف صح وعلمياً سليم».",
       "parts": [
         { "text": "The pure/foul food classification is correct and scientifically sound.", "textAr": "تصنيف الأطعمة طيبات/خبائث صح وعلمياً سليم.", "role": "conclusion" },
         { "text": "Chicken and pure greens are طيبات and have fed civilisations.", "textAr": "الدجاج والخضار الطاهرة طيبات وأطعمت الحضارات.", "role": "premise" },
@@ -95,7 +95,7 @@
       "id": 5,
       "mechanic": "consider_opposite",
       "claim": "A friend under pressure says: \"I have to either start the full Taybat system or do absolutely nothing about my health.\" It feels like an honest description of his situation.",
-      "claimAr": "صديق تحت ضغط بيقول: «لازم إمّا أبدأ نظام الطيبات كامل أو ما أعملش أي حاجة لصحّتي». بيحسّ زي وصف صادق لوضعه.",
+      "claimAr": "صديق تحت ضغط بيقول: «لازم إمّا أبدأ نظام دايت كامل أو ما أعملش أي حاجة لصحّتي». بيحسّ زي وصف صادق لوضعه.",
       "prompt": "What real options does this framing erase? What would you ask him to help him see the middle ground — without making him feel foolish?",
       "promptAr": "إيه الخيارات الحقيقية اللي الصياغة دي بتمحيها؟ وإيه اللي هتسأله علشان يساعده يشوف الأرضية الوسط — من غير ما تخلّيه يحسّ بغباء؟",
       "modelPoints": [

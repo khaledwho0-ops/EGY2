@@ -15,7 +15,7 @@
     {
       "id": 1,
       "mechanic": "recognize",
-      "claim": "A follower reasons: \"Either the «نظام الطيبات» diet improved my mother OR her insulin did. The diet clearly improved her — so the insulin was useless and she can stop it.\" Where's the trap?",
+      "claim": "A follower reasons: \"Either the «نظام دايت» diet improved my mother OR her insulin did. The diet clearly improved her — so the insulin was useless and she can stop it.\" Where's the trap?",
       "claimAr": "تابع بيقول: «يا حمية الطيبات اللي حسّنت أمي يا الأنسولين. الحمية واضح إنها حسّنتها — يبقى الأنسولين كان ملوش لازمة وتقدر توقفه». الفخّ فين؟",
       "options": [
         "No trap — if one helped, the other did nothing",

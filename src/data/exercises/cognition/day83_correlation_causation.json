@@ -35,7 +35,7 @@
       "id": 2,
       "mechanic": "calibrate",
       "calibrated": true,
-      "claim": "Followers of the viral «نظام الطيبات» diet noticed: 'I stopped eating chicken, and within a week my joint pain improved.' This is good evidence that chicken causes joint pain. True or false?",
+      "claim": "Followers of the viral «نظام دايت» diet noticed: 'I stopped eating chicken, and within a week my joint pain improved.' This is good evidence that chicken causes joint pain. True or false?",
       "claimAr": "أتباع نظام «الطيبات» لاحظوا: «بطّلت آكل فراخ، وفي خلال أسبوع آلام مفاصلي تحسّنت.» ده دليل كويس إن الفراخ بيسبّب آلام المفاصل. صح ولا غلط؟",
       "correctAnswer": false,
       "myth_en": "A personal before/after is proof of cause.",

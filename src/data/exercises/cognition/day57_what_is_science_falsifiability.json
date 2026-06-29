@@ -34,8 +34,8 @@
     {
       "id": 2,
       "mechanic": "self_explain",
-      "claim": "In the «نظام الطيبات» community, when a follower got sicker, it was always blamed on 'not following the system perfectly' — never on the system itself. True or false: this makes the system's claims stronger.",
-      "claimAr": "في مجتمع «نظام الطيبات»، لمّا تابع كان بيزيد مرضه، الذنب دايماً كان على «إنه مش متبع النظام صح» — مش على النظام نفسه أبداً. صح ولا غلط: ده بيخلّي ادعاءات النظام أقوى.",
+      "claim": "In the «نظام دايت» community, when a follower got sicker, it was always blamed on 'not following the system perfectly' — never on the system itself. True or false: this makes the system's claims stronger.",
+      "claimAr": "في مجتمع «نظام دايت»، لمّا تابع كان بيزيد مرضه، الذنب دايماً كان على «إنه مش متبع النظام صح» — مش على النظام نفسه أبداً. صح ولا غلط: ده بيخلّي ادعاءات النظام أقوى.",
       "options": [
         "True — explaining every failure is comprehensive",
         "False — this is the textbook unfalsifiability move, and it removes the claim from science"

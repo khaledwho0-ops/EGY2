@@ -25,8 +25,8 @@
         "Did a doctor confirm the cure? Is the food available in my area? Is it expensive?"
       ],
       "correctAnswer": 1,
-      "explanation": "These three questions apply three different tools: (1) verification of the claim — documentation, not just testimony; (2) the confounders question — was chemo already doing the work?; (3) survivorship bias — the people who followed and were harmed are silent. Forwarding a story like this without these checks reached the most vulnerable families in the «نظام الطيبات» case and contributed to documented deaths.",
-      "explanationAr": "الأسئلة الثلاثة بتطبّق ثلاث أدوات مختلفة: (1) التحقق من الادعاء — توثيق لا مجرد شهادة؛ (2) سؤال العوامل المُربِكة — هل الكيمياء كانت شغّالة أصلاً؟؛ (3) انحياز الناجين — الناس اللي اتّبعوا وتأذّوا صامتون. تحويل قصة زي دي بدون هذه الفحوصات وصل لأكثر العائلات هشاشة في حالة «نظام الطيبات» وساهم في وفيات موثّقة.",
+      "explanation": "These three questions apply three different tools: (1) verification of the claim — documentation, not just testimony; (2) the confounders question — was chemo already doing the work?; (3) survivorship bias — the people who followed and were harmed are silent. Forwarding a story like this without these checks reached the most vulnerable families in the «نظام دايت» case and contributed to documented deaths.",
+      "explanationAr": "الأسئلة الثلاثة بتطبّق ثلاث أدوات مختلفة: (1) التحقق من الادعاء — توثيق لا مجرد شهادة؛ (2) سؤال العوامل المُربِكة — هل الكيمياء كانت شغّالة أصلاً؟؛ (3) انحياز الناجين — الناس اللي اتّبعوا وتأذّوا صامتون. تحويل قصة زي دي بدون هذه الفحوصات وصل لأكثر العائلات هشاشة في حالة «نظام دايت» وساهم في وفيات موثّقة.",
       "sources": [
         "EAL-case-001:moh-eg-2026-05",
         "https://www.cancer.gov/about-cancer/treatment/types/chemotherapy"

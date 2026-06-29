@@ -16,7 +16,7 @@
  *   • a LOW diagonal lie-phrase marquee tape (bone/white, ≥18px,
  *     high-contrast ribbon) with clearance so the wordmark is never
  *     clipped and the Enter pill is never crowded,
- *   • a bottom-right small line + finished BOXED «نظام الطيبات» +
+ *   • a bottom-right small line + finished BOXED «نظام دايت» +
  *     a violet "Enter the Library / ادخل المكتبة" pill that smooth-
  *     scrolls to the next section.
  *

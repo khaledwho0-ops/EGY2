@@ -35,7 +35,7 @@
     {
       "id": 2,
       "mechanic": "self_explain",
-      "claim": "A study testing whether the viral «نظام الطيبات» diet reduces blood glucose gets p = 0.04. The only correct conclusion the p-value alone can support is: 'the result is unlikely to be pure coincidence at this sample size and measurement method.'",
+      "claim": "A study testing whether the viral «نظام دايت» diet reduces blood glucose gets p = 0.04. The only correct conclusion the p-value alone can support is: 'the result is unlikely to be pure coincidence at this sample size and measurement method.'",
       "claimAr": "دراسة بتختبر إذا كان نظام «الطيبات» بيقلّل سكر الدم حصلت على p = 0.04. الاستنتاج الوحيد الصحيح اللي قيمة p بمفردها تقدر تدعمه هو: «النتيجة من المرجّح إنها مش ناتجة عن الصدفة البحتة في ظل حجم العيّنة ومنهج القياس ده».",
       "options": [
         "The diet definitely lowers blood glucose",

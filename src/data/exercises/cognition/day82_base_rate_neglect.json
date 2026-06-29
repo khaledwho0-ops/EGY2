@@ -57,7 +57,7 @@
     {
       "id": 3,
       "mechanic": "consider_opposite",
-      "claim": "Followers of the viral «نظام الطيبات» diet argued: 'Many people in our community improved after following the system — this shows the diet works for most people who try it.'",
+      "claim": "Followers of the viral «نظام دايت» diet argued: 'Many people in our community improved after following the system — this shows the diet works for most people who try it.'",
       "claimAr": "أتباع نظام «الطيبات» جادلوا: «ناس كتير في مجتمعنا تحسّنوا بعد اتّباع النظام — ده بيوضح إن الحِمية شغّالة مع معظم الناس اللي بتجرّبها.»",
       "prompt": "What base-rate question are they skipping — and if we answered it, what would it reveal about the diet's actual contribution?",
       "promptAr": "أنهي سؤال عن المعدل الأساسي بيتخطّوه — ولو أجبنا عليه، إيه اللي هيكشفه عن الإسهام الحقيقي للحِمية؟",

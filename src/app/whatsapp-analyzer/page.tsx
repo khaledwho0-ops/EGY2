@@ -10,6 +10,7 @@ import {
 import { PageNavigation } from '@/components/shared/page-navigation';
 import { PageAIChatbot } from '@/components/shared/page-ai-chatbot';
 import AnalysisProgress, { STAGE_SETS } from '@/components/AnalysisProgress';
+import { useRTL } from '@/components/shared/rtl-provider';
 
 type Lang = 'en' | 'ar';
 
@@ -22,12 +23,13 @@ interface AnalysisResult {
 }
 
 export default function WhatsAppAnalyzerPage() {
-  const [lang, setLang] = useState<Lang>('en');
+  const { isRTL, toggleDirection } = useRTL();
+  const lang: Lang = isRTL ? 'ar' : 'en';
   const [text, setText] = useState('');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [result, setResult] = useState<AnalysisResult | null>(null);
 
-  const isRtl = lang === 'ar';
+  const isRtl = isRTL;
 
   const translations = {
     title: { en: 'WhatsApp Analyzer', ar: 'محلل واتساب' },
@@ -45,7 +47,7 @@ export default function WhatsAppAnalyzerPage() {
   };
 
   const toggleLanguage = () => {
-    setLang(prev => prev === 'en' ? 'ar' : 'en');
+    toggleDirection();
   };
 
   const analyzeText = async (e: React.FormEvent) => {
@@ -98,40 +100,41 @@ export default function WhatsAppAnalyzerPage() {
   };
 
   const getScoreColor = (score: number) => {
-    if (score < 30) return 'text-emerald-400';
-    if (score < 70) return 'text-yellow-400';
-    return 'text-red-500';
+    if (score < 30) return 'var(--accent-emerald)';
+    if (score < 70) return 'var(--accent-amber)';
+    return 'var(--accent-red)';
   };
 
   const getScoreBg = (score: number) => {
-    if (score < 30) return 'bg-emerald-500';
-    if (score < 70) return 'bg-yellow-400';
-    return 'bg-red-500';
+    if (score < 30) return 'var(--accent-emerald)';
+    if (score < 70) return 'var(--accent-amber)';
+    return 'var(--accent-red)';
   };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-950 via-[#0a1128] to-[#0f172a] text-slate-200 p-6 md:p-12 font-sans ${isRtl ? 'rtl' : 'ltr'}`} dir={isRtl ? 'rtl' : 'ltr'}>
+    <div className={`min-h-screen p-6 md:p-12 font-sans ${isRtl ? 'rtl' : 'ltr'}`} dir={isRtl ? 'rtl' : 'ltr'} style={{ background: 'var(--bg-page)', color: 'var(--text-secondary)' }}>
       <div className="max-w-6xl mx-auto space-y-12">
-        
+
         {/* Header */}
-        <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-6 border-b border-blue-900/30">
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-6 border-b" style={{ borderColor: 'var(--border-primary)' }}>
           <div className="space-y-3">
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white flex items-center gap-4">
-              <div className="relative p-3 bg-green-500/10 rounded-2xl border border-green-500/20">
-                <MessageCircle className="w-8 h-8 text-green-400" />
-                <div className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
+            <h1 className="text-4xl md:text-5xl font-black tracking-tight flex items-center gap-4" style={{ color: 'var(--text-primary)' }}>
+              <div className="relative p-3 rounded-2xl border" style={{ backgroundColor: 'var(--accent-mentalhealth-surface)', borderColor: 'var(--border-secondary)' }}>
+                <MessageCircle className="w-8 h-8" style={{ color: 'var(--accent-emerald)' }} />
+                <div className="absolute top-0 right-0 w-3 h-3 rounded-full animate-ping" style={{ background: 'var(--accent-red)' }}></div>
               </div>
-              <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+              <span style={{ color: 'var(--accent-emerald)' }}>
                 {translations.title[lang]}
               </span>
             </h1>
-            <p className="text-blue-200/60 text-lg max-w-2xl">
+            <p className="text-lg max-w-2xl" style={{ color: 'var(--text-muted)' }}>
               {translations.subtitle[lang]}
             </p>
           </div>
-          <button 
+          <button
             onClick={toggleLanguage}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900/50 border border-slate-700 hover:bg-slate-800 transition-colors text-slate-300"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl border transition-colors"
+            style={{ background: 'var(--bg-elevated)', borderColor: 'var(--border-secondary)', color: 'var(--text-secondary)' }}
           >
             <Globe className="w-5 h-5" />
             <span className="font-medium">{lang === 'en' ? 'عربي' : 'English'}</span>
@@ -144,21 +147,24 @@ export default function WhatsAppAnalyzerPage() {
           <div className="space-y-6">
             <form onSubmit={analyzeText} className="space-y-4">
               <div className="relative">
-                <div className="absolute top-4 left-4 text-emerald-500/50">
+                <div className={`absolute top-4 ${isRtl ? 'right-4' : 'left-4'}`} style={{ color: 'var(--accent-emerald)', opacity: 0.5 }}>
                   <FileText className="w-6 h-6" />
                 </div>
                 <textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   placeholder={translations.placeholder[lang]}
-                  className="w-full h-[400px] bg-[#0b132b]/80 border border-emerald-900/30 rounded-3xl p-6 pl-14 text-lg text-slate-200 focus:outline-none focus:border-emerald-500/50 focus:ring-4 focus:ring-emerald-500/10 transition-all resize-none shadow-2xl placeholder-slate-600"
+                  dir={isRtl ? 'rtl' : 'ltr'}
+                  className={`w-full h-[400px] border rounded-3xl p-6 ${isRtl ? 'pr-14' : 'pl-14'} text-lg focus:outline-none transition-all resize-none shadow-2xl`}
+                  style={{ background: 'var(--bg-card)', borderColor: 'var(--border-secondary)', color: 'var(--text-primary)' }}
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={isAnalyzing || !text.trim()}
-                className="w-full py-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-lg transition-all active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(16,185,129,0.2)]"
+                className="w-full py-5 rounded-2xl font-bold text-lg transition-all active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center gap-3 shadow-[0_0_30px_var(--accent-mentalhealth-glow)]"
+                style={{ background: 'var(--accent-emerald)', color: 'var(--bg-page)' }}
               >
                 {isAnalyzing ? (
                   <>
@@ -176,14 +182,14 @@ export default function WhatsAppAnalyzerPage() {
           </div>
 
           {/* Results Area */}
-          <div className="bg-[#0b132b]/50 border border-slate-800/50 rounded-3xl p-8 backdrop-blur-xl shadow-2xl relative overflow-hidden min-h-[500px]">
+          <div className="border rounded-3xl p-8 backdrop-blur-xl shadow-2xl relative overflow-hidden min-h-[500px]" style={{ background: 'var(--bg-card)', borderColor: 'var(--border-primary)' }}>
             {isAnalyzing ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center space-y-8 bg-[#0b132b]/80 z-10">
+              <div className="absolute inset-0 flex flex-col items-center justify-center space-y-8 z-10" style={{ background: 'var(--bg-card)' }}>
                 <div className="relative w-24 h-24">
-                  <div className="absolute inset-0 border-t-4 border-emerald-500 rounded-full animate-spin"></div>
-                  <div className="absolute inset-2 border-r-4 border-teal-500 rounded-full animate-[spin_2s_reverse_infinite]"></div>
-                  <div className="absolute inset-4 border-b-4 border-blue-500 rounded-full animate-[spin_3s_linear_infinite]"></div>
-                  <Bot className="absolute inset-0 m-auto w-8 h-8 text-emerald-400 animate-pulse" />
+                  <div className="absolute inset-0 border-t-4 rounded-full animate-spin" style={{ borderTopColor: 'var(--accent-emerald)' }}></div>
+                  <div className="absolute inset-2 border-r-4 rounded-full animate-[spin_2s_reverse_infinite]" style={{ borderRightColor: 'var(--accent-emerald)' }}></div>
+                  <div className="absolute inset-4 border-b-4 rounded-full animate-[spin_3s_linear_infinite]" style={{ borderBottomColor: 'var(--accent-blue)' }}></div>
+                  <Bot className="absolute inset-0 m-auto w-8 h-8 animate-pulse" style={{ color: 'var(--accent-emerald)' }} />
                 </div>
                 <div className="w-full px-6 max-w-md">
                   <AnalysisProgress
@@ -202,15 +208,15 @@ export default function WhatsAppAnalyzerPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="space-y-8"
               >
-                <div className="flex items-center justify-between border-b border-slate-800 pb-6">
-                  <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                    <ShieldAlert className="w-7 h-7 text-emerald-500" />
+                <div className="flex items-center justify-between border-b pb-6" style={{ borderColor: 'var(--border-primary)' }}>
+                  <h2 className="text-2xl font-bold flex items-center gap-3" style={{ color: 'var(--text-primary)' }}>
+                    <ShieldAlert className="w-7 h-7" style={{ color: 'var(--accent-emerald)' }} />
                     {translations.resultsTitle[lang]}
                   </h2>
-                  <div className="text-right">
-                    <p className="text-sm text-slate-400 mb-1">{translations.threatScore[lang]}</p>
-                    <div className="flex items-center gap-3 justify-end">
-                      <span className={`text-4xl font-black ${getScoreColor(result.score)}`}>
+                  <div className={isRtl ? 'text-left' : 'text-right'}>
+                    <p className="text-sm mb-1" style={{ color: 'var(--text-muted)' }}>{translations.threatScore[lang]}</p>
+                    <div className={`flex items-center gap-3 ${isRtl ? 'justify-start' : 'justify-end'}`}>
+                      <span className="text-4xl font-black" style={{ color: getScoreColor(result.score) }}>
                         {result.score}%
                       </span>
                     </div>
@@ -218,26 +224,27 @@ export default function WhatsAppAnalyzerPage() {
                 </div>
 
                 {/* Meter */}
-                <div className="h-3 w-full bg-slate-900 rounded-full overflow-hidden">
-                  <motion.div 
+                <div className="h-3 w-full rounded-full overflow-hidden" style={{ background: 'var(--bg-elevated)' }}>
+                  <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${result.score}%` }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className={`h-full ${getScoreBg(result.score)}`}
+                    className="h-full"
+                    style={{ background: getScoreBg(result.score) }}
                   ></motion.div>
                 </div>
 
                 <div className="space-y-6">
                   {/* Bot Patterns */}
-                  <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-5 hover:border-slate-700 transition-colors">
-                    <h3 className="text-lg font-bold text-slate-300 flex items-center gap-2 mb-4">
-                      <Bot className="w-5 h-5 text-blue-400" />
+                  <div className="border rounded-2xl p-5 transition-colors" style={{ background: 'var(--bg-elevated)', borderColor: 'var(--border-primary)' }}>
+                    <h3 className="text-lg font-bold flex items-center gap-2 mb-4" style={{ color: 'var(--text-secondary)' }}>
+                      <Bot className="w-5 h-5" style={{ color: 'var(--accent-blue)' }} />
                       {translations.botPatterns[lang]}
                     </h3>
                     <ul className="space-y-3">
                       {result.botPatterns.map((pattern, i) => (
-                        <li key={i} className="flex items-start gap-3 text-slate-400">
-                          <ChevronRight className="w-5 h-5 text-blue-500 shrink-0" />
+                        <li key={i} className="flex items-start gap-3" style={{ color: 'var(--text-muted)' }}>
+                          <ChevronRight className={`w-5 h-5 shrink-0 ${isRtl ? 'rotate-180' : ''}`} style={{ color: 'var(--accent-blue)' }} />
                           <span>{pattern}</span>
                         </li>
                       ))}
@@ -245,15 +252,15 @@ export default function WhatsAppAnalyzerPage() {
                   </div>
 
                   {/* Emotional Framing */}
-                  <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-5 hover:border-slate-700 transition-colors">
-                    <h3 className="text-lg font-bold text-slate-300 flex items-center gap-2 mb-4">
-                      <HeartPulse className="w-5 h-5 text-red-400" />
+                  <div className="border rounded-2xl p-5 transition-colors" style={{ background: 'var(--bg-elevated)', borderColor: 'var(--border-primary)' }}>
+                    <h3 className="text-lg font-bold flex items-center gap-2 mb-4" style={{ color: 'var(--text-secondary)' }}>
+                      <HeartPulse className="w-5 h-5" style={{ color: 'var(--accent-red)' }} />
                       {translations.emotional[lang]}
                     </h3>
                     <ul className="space-y-3">
                       {result.emotionalFraming.map((pattern, i) => (
-                        <li key={i} className="flex items-start gap-3 text-slate-400">
-                          <ChevronRight className="w-5 h-5 text-red-500 shrink-0" />
+                        <li key={i} className="flex items-start gap-3" style={{ color: 'var(--text-muted)' }}>
+                          <ChevronRight className={`w-5 h-5 shrink-0 ${isRtl ? 'rotate-180' : ''}`} style={{ color: 'var(--accent-red)' }} />
                           <span>{pattern}</span>
                         </li>
                       ))}
@@ -261,15 +268,15 @@ export default function WhatsAppAnalyzerPage() {
                   </div>
 
                   {/* Urgency */}
-                  <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-5 hover:border-slate-700 transition-colors">
-                    <h3 className="text-lg font-bold text-slate-300 flex items-center gap-2 mb-4">
-                      <AlertTriangle className="w-5 h-5 text-yellow-400" />
+                  <div className="border rounded-2xl p-5 transition-colors" style={{ background: 'var(--bg-elevated)', borderColor: 'var(--border-primary)' }}>
+                    <h3 className="text-lg font-bold flex items-center gap-2 mb-4" style={{ color: 'var(--text-secondary)' }}>
+                      <AlertTriangle className="w-5 h-5" style={{ color: 'var(--accent-amber)' }} />
                       {translations.urgency[lang]}
                     </h3>
                     <ul className="space-y-3">
                       {result.urgencyIndicators.map((pattern, i) => (
-                        <li key={i} className="flex items-start gap-3 text-slate-400">
-                          <ChevronRight className="w-5 h-5 text-yellow-500 shrink-0" />
+                        <li key={i} className="flex items-start gap-3" style={{ color: 'var(--text-muted)' }}>
+                          <ChevronRight className={`w-5 h-5 shrink-0 ${isRtl ? 'rotate-180' : ''}`} style={{ color: 'var(--accent-amber)' }} />
                           <span>{pattern}</span>
                         </li>
                       ))}
@@ -277,20 +284,20 @@ export default function WhatsAppAnalyzerPage() {
                   </div>
                 </div>
 
-                <div className={`p-4 rounded-xl border ${result.score > 50 ? 'bg-red-500/10 border-red-500/20 text-red-400' : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'} flex items-start gap-3`}>
+                <div className="p-4 rounded-xl border flex items-start gap-3" style={result.score > 50 ? { background: 'var(--accent-deepreal-surface)', borderColor: 'var(--accent-red)', color: 'var(--accent-red)' } : { background: 'var(--accent-mentalhealth-surface)', borderColor: 'var(--accent-emerald)', color: 'var(--accent-emerald)' }}>
                   {result.score > 50 ? <AlertTriangle className="w-6 h-6 shrink-0 mt-0.5" /> : <CheckCircle2 className="w-6 h-6 shrink-0 mt-0.5" />}
                   <p className="font-medium leading-relaxed">{result.summary[lang]}</p>
                 </div>
 
               </motion.div>
             ) : (
-              <div className="h-full flex flex-col items-center justify-center text-slate-600 space-y-6 opacity-60">
+              <div className="h-full flex flex-col items-center justify-center space-y-6 opacity-60" style={{ color: 'var(--text-muted)' }}>
                 <div className="relative">
                   <Bot className="w-24 h-24" />
-                  <Search className="w-10 h-10 absolute -bottom-2 -right-2 bg-[#0b132b] rounded-full p-1" />
+                  <Search className="w-10 h-10 absolute -bottom-2 -right-2 rounded-full p-1" style={{ background: 'var(--bg-card)' }} />
                 </div>
                 <p className="text-xl font-medium max-w-xs text-center">
-                  Waiting for message payload to begin structural analysis.
+                  {isRtl ? 'في انتظار نص الرسالة عشان نبدأ التحليل البنيوي.' : 'Waiting for message payload to begin structural analysis.'}
                 </p>
               </div>
             )}

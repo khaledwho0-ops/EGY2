@@ -13,6 +13,15 @@
  * Bilingual: every user-facing string has an Arabic (Egyptian) twin.
  */
 
+import { P1 } from "./page-guides-parts/p1";
+import { P2 } from "./page-guides-parts/p2";
+import { P3 } from "./page-guides-parts/p3";
+import { P4 } from "./page-guides-parts/p4";
+import { P5 } from "./page-guides-parts/p5";
+import { P6 } from "./page-guides-parts/p6";
+import { P7 } from "./page-guides-parts/p7";
+import { P8 } from "./page-guides-parts/p8";
+
 export interface GuideScenario {
   /** A ready-to-paste example input for this page's tool. */
   paste: string;
@@ -91,6 +100,10 @@ export const PAGE_GUIDES: Record<string, PageGuide> = {
     chatbotContext: 'You are the assistant on the Cognition Curriculum page. It is a 140-day bilingual course across 4 phases using 8 evidence-based mechanics (recognize, calibrate, self-explain, consider-the-opposite, inoculate, decompose, retrieve, transfer). Help the user pick where to start and explain a mechanic.',
   },
 };
+
+// Merge the per-route guides authored by the fill workflow (123 routes across 8 part-files).
+// Inline entries above take precedence (the workflow skipped any route already keyed here).
+Object.assign(PAGE_GUIDES, P1, P2, P3, P4, P5, P6, P7, P8);
 
 /** Lookup that tolerates trailing slashes. */
 export function getPageGuide(pathname: string): PageGuide | undefined {

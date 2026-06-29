@@ -65,7 +65,13 @@ async function check(claim, x, y) {
     const badgeColor = verified ? "#3fcb6b" : "#ff9f43";
     const sources = (j.sources || [])
       .slice(0, 3)
-      .map((s) => `<a href="${s.url}" target="_blank" rel="noopener" style="color:#22d3ee;display:block;font-size:11px;margin-top:3px;word-break:break-all">${s.url}</a>`)
+      .map((s) => {
+        const u = safeUrl(s && s.url);
+        if (!u) return "";
+        const e = escapeHtml(u);
+        return `<a href="${e}" target="_blank" rel="noopener noreferrer" style="color:#22d3ee;display:block;font-size:11px;margin-top:3px;word-break:break-all">${e}</a>`;
+      })
+      .filter(Boolean)
       .join("");
     box.querySelector(".eal-body").innerHTML =
       `<div style="font-weight:700;color:${badgeColor};margin-bottom:6px">${badge}</div>` +
@@ -95,5 +101,17 @@ function makeBox(x, y, html) {
 }
 
 function escapeHtml(s) {
-  return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  return String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+// Only allow absolute http(s) URLs — blocks javascript:/data: schemes and
+// attribute-breakout payloads from an untrusted source URL in the API response.
+function safeUrl(u) {
+  if (typeof u !== "string") return "";
+  try {
+    const p = new URL(u);
+    return p.protocol === "http:" || p.protocol === "https:" ? u : "";
+  } catch {
+    return "";
+  }
 }

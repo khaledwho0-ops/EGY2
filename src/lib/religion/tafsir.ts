@@ -9,9 +9,8 @@ export async function loadCommentaries(surah: string, ayatRange: number[], autho
     ].filter(c => authorities.includes(c.authority));
   }
   
-  // Fallback for others that would hit a real database in full production
-  return authorities.map(a => ({
-    authority: a,
-    text: `Classical commentary overview provided by ${a}.`
-  }));
+  // No verified commentary on file for this verse. Never fabricate a "classical
+  // commentary overview" — fail loud with an empty result so callers show an
+  // honest "no commentary available" state instead of invented text.
+  return [];
 }

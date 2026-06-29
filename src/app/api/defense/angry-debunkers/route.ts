@@ -45,11 +45,10 @@ const QuickSchema = z.object({
 const DeepSchema = z.object({
   god_system_7_layer_audit: GodSystemAuditSchema,
   patient_zero_tracing: z.object({
-    origin_year: z.string().describe('The approximate year this myth first emerged'),
-    origin_platform: z.string().describe('The platform or context where this myth originated'),
+    origin_year: z.string().describe('Emit a year ONLY if it is traceable to a retrieved source in the evidence above. If no retrieved source establishes the year, return exactly "Unknown — not in retrieved evidence". Never guess a year from memory.'),
+    origin_platform: z.string().describe('Emit a platform/context ONLY if it is traceable to a retrieved source in the evidence above. If no retrieved source establishes it, return exactly "Unknown — not in retrieved evidence". Never guess from memory.'),
     transmission_vector: z.string().describe('HOW the lie spread specifically into Egyptian/Arab context'),
     why_trending_now: z.string().describe('Why this myth is circulating right now in 2025/2026 Egypt'),
-    named_instigator: z.string().optional().describe('The primary spreader if identifiable'),
   }),
   layer_aware_analysis: LayerAwareAnalysisSchema,
 });
@@ -275,7 +274,7 @@ ${groundingText}
 
 MISSIONS:
 1. GOD-SYSTEM 7-LAYER AUDIT: Score each of the 7 audit layers with brutal honesty.
-2. PATIENT ZERO TRACING: Trace origin year, platform, transmission vector, why trending now, named instigator.
+2. PATIENT ZERO TRACING: Trace transmission vector and why-trending-now. For origin year and origin platform, emit a value ONLY if it is traceable to a retrieved source above — otherwise return exactly "Unknown — not in retrieved evidence". Do NOT name any individual person as the instigator.
 3. 8-LAYER DECEPTION DETECTION: Identify which of the 8 Layers of Deception:
    Layer 1: THE ABSOLUTE FABRICATION (الكذب المطلق)
    Layer 2: THE BIASED LENS (العدسة المنحازة)

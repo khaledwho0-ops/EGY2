@@ -4,10 +4,11 @@ import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
 import { generateObject, generateText } from "ai";
 
 /**
- * ██████╗  MEGA-ROTATOR v8 — GEMINI-FIRST ██████╗
+ * ██████╗  MEGA-ROTATOR v9 — GLM-FIRST (when configured), else GEMINI-FIRST ██████╗
  *
- * Priority order (fast & reliable first, slow last) — per the directive
- * "Gemini, then Groq, and NVIDIA is the last":
+ * Priority order (fast & reliable first, slow last):
+ *   ⓪ GLM (via Cloudflare) — LEAD when GLM_CF_BASE_URL is set; one slot per account
+ *                            token (GLM_CF_KEYS), auto-rotating to the next account on quota.
  *   ① Gemini   (up to 7 keys) — fast, best structured output
  *   ② Groq     (up to 5 keys) — very fast, good JSON
  *   ③ OpenRouter (2) · ④ Cerebras (2) · ⑤ Together (1) · ⑥ SambaNova (1)
@@ -32,6 +33,43 @@ function env(name: string): string | undefined {
 
 function buildSlots(): ProviderSlot[] {
   const slots: ProviderSlot[] = [];
+
+  // ⓪ GLM (via Cloudflare) — LEAD priority when configured (user's primary free engine).
+  //    Account-rotation built in: each token below becomes its own slot, so the existing
+  //    rotate()+cooldown logic automatically switches to the next account on 429/quota —
+  //    i.e. "as soon as one account's quota is spent, the next is used" with no code change.
+  //    Configure via env (any/all may be set):
+  //      GLM_CF_BASE_URL — OpenAI-compatible base URL of the GLM-via-Cloudflare endpoint.
+  //                        If it contains "{ACCOUNT_ID}", an entry may be "accountId:token"
+  //                        and the id is substituted per account (Workers-AI-style per-account URLs).
+  //      GLM_CF_MODEL    — model id (default "glm-4.6"; set to your GLM 5.2 id when live).
+  //      GLM_CF_KEYS     — comma-separated tokens (or "accountId:token" entries), one per account.
+  //      GLM_CF_KEY / _2 / _3 — single-key convenience.
+  //    Reliability note: rotating many free accounts can trip provider abuse-detection / ToS,
+  //    so keep at least one stable provider (Gemini/Groq below) configured as a fallback.
+  const glmBaseTmpl = env("GLM_CF_BASE_URL");
+  if (glmBaseTmpl) {
+    const glmModel = env("GLM_CF_MODEL") || "glm-4.6";
+    const glmEntries = [
+      ...(env("GLM_CF_KEYS")?.split(",").map((s) => s.trim()).filter(Boolean) ?? []),
+      env("GLM_CF_KEY"), env("GLM_CF_KEY_2"), env("GLM_CF_KEY_3"),
+    ].filter(Boolean) as string[];
+    for (const entry of glmEntries) {
+      // "accountId:token" only when the base URL is per-account; otherwise the whole entry is the token.
+      const perAccount = glmBaseTmpl.includes("{ACCOUNT_ID}") && entry.includes(":");
+      const accountId = perAccount ? entry.slice(0, entry.indexOf(":")) : "";
+      const token = perAccount ? entry.slice(entry.indexOf(":") + 1) : entry;
+      const baseURL = glmBaseTmpl.replace("{ACCOUNT_ID}", accountId);
+      slots.push({
+        provider: "GLM-CF",
+        build: () => createOpenAICompatible({
+          name: "glm-cloudflare",
+          baseURL,
+          headers: { Authorization: `Bearer ${token}` },
+        })(glmModel),
+      });
+    }
+  }
 
   // ① GEMINI — lead priority (fast + best structured output)
   const gemKeys = [

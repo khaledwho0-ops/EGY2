@@ -18,14 +18,41 @@ export default function MaqasidPage() {
   const [mounted, setMounted] = useState(false);
   const [activeMaqsad, setActiveMaqsad] = useState(0);
   const [testClaim, setTestClaim] = useState("");
-  const [analysisResult, setAnalysisResult] = useState<string | null>(null);
+  const [analysis, setAnalysis] = useState<{ verdict: string; verdictAr: string; reasoning: string; reasoningAr: string; caveats: string[] } | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  const runAnalysis = () => {
+  const runAnalysis = async () => {
     if (!testClaim.trim()) return;
-    const m = MAQASID[activeMaqsad];
-    setAnalysisResult(`Analysis: "${testClaim.slice(0, 80)}..." — Evaluated against ${m.full} (${m.nameAr}).\n\n✅ Compatible: The claim does not directly violate ${m.name}.\n⚠️ Caution: Further scholarly review recommended. Cross-reference with Dar Al-Ifta and Al-Azhar rulings.\n\n📚 Scholarly basis: Al-Shatibi, Al-Muwafaqat (d. 790 AH); Al-Ghazali, Al-Mustasfa (d. 505 AH).`);
+    setLoading(true);
+    setError(null);
+    setAnalysis(null);
+    try {
+      const res = await fetch("/api/islamic/maqasid", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ claim: testClaim, maqsadId: MAQASID[activeMaqsad].id }),
+      });
+      const json = await res.json();
+      const r = json?.results?.[0];
+      if (!res.ok || !r) {
+        setError(json?.error || t({ en: "Reasoning unavailable right now. Please try again.", ar: "الاستدلال غير متاح حاليًا. حاول مرة أخرى." }));
+        return;
+      }
+      setAnalysis({
+        verdict: r.verdict ?? "Inconclusive",
+        verdictAr: r.verdictAr ?? "غير حاسم",
+        reasoning: r.reasoning ?? "",
+        reasoningAr: r.reasoningAr ?? "",
+        caveats: Array.isArray(r.caveats) ? r.caveats : [],
+      });
+    } catch {
+      setError(t({ en: "Network error. Please try again.", ar: "خطأ في الاتصال. حاول مرة أخرى." }));
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -81,11 +108,27 @@ export default function MaqasidPage() {
             placeholder={a ? "اكتب الادعاء أو الحكم هنا..." : "Enter a claim or ruling to test..."}
             style={{ width: "100%", padding: 14, borderRadius: 12, border: "1px solid var(--border-primary)", background: "var(--bg-secondary)", color: "var(--text-primary)", fontSize: 14, resize: "vertical", minHeight: 80, fontFamily: ff }}
           />
-          <button onClick={runAnalysis} className="btn-primary" style={{ marginTop: 12, padding: "10px 24px", fontSize: 14 }}>
-            {t({ en: `Analyze against ${MAQASID[activeMaqsad].name}`, ar: `حلل ضد ${MAQASID[activeMaqsad].nameAr}`, arEG: `حلل ضد ${MAQASID[activeMaqsad].nameAr}` })}
+          <button onClick={runAnalysis} disabled={loading || !testClaim.trim()} className="btn-primary" style={{ marginTop: 12, padding: "10px 24px", fontSize: 14, opacity: loading || !testClaim.trim() ? 0.6 : 1 }}>
+            {loading ? t({ en: "Reasoning...", ar: "جاري الاستدلال...", arEG: "بنحلل..." }) : t({ en: `Analyze against ${MAQASID[activeMaqsad].name}`, ar: `حلل ضد ${MAQASID[activeMaqsad].nameAr}`, arEG: `حلل ضد ${MAQASID[activeMaqsad].nameAr}` })}
           </button>
-          {analysisResult && (
-            <div style={{ marginTop: 16, padding: 16, borderRadius: 12, background: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.15)", fontSize: 13, lineHeight: 1.8, whiteSpace: "pre-line", color: "var(--text-secondary)", fontFamily: ff }}>{analysisResult}</div>
+          {error && (
+            <div style={{ marginTop: 16, padding: 16, borderRadius: 12, background: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.2)", fontSize: 13, color: "#EF4444", fontFamily: ff }}>{error}</div>
+          )}
+          {analysis && (
+            <div style={{ marginTop: 16, padding: 16, borderRadius: 12, background: "rgba(99,102,241,0.05)", border: "1px solid rgba(99,102,241,0.15)", fontSize: 13, lineHeight: 1.8, color: "var(--text-secondary)", fontFamily: ff }}>
+              <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 8, color: "var(--text-primary)" }}>
+                {t({ en: "Verdict", ar: "الحكم", arEG: "الحكم" })}: {a ? analysis.verdictAr : analysis.verdict}
+              </div>
+              <p style={{ margin: "0 0 12px" }}>{a ? (analysis.reasoningAr || analysis.reasoning) : analysis.reasoning}</p>
+              {analysis.caveats.length > 0 && (
+                <ul style={{ margin: "0 0 12px", paddingInlineStart: 20 }}>
+                  {analysis.caveats.map((c, i) => <li key={i}>{c}</li>)}
+                </ul>
+              )}
+              <div style={{ marginTop: 8, paddingTop: 8, borderTop: "1px solid var(--border-primary)", fontSize: 12, color: "var(--text-muted)", fontStyle: "italic" }}>
+                {t({ en: "⚖️ AI reasoning, not a fatwa. For official rulings consult Dar Al-Ifta or Al-Azhar.", ar: "⚖️ اجتهاد بالذكاء وليس فتوى. للأحكام الرسمية راجع دار الإفتاء أو الأزهر.", arEG: "⚖️ اجتهاد بالذكاء مش فتوى. للأحكام الرسمية ارجع لدار الإفتاء أو الأزهر." })}
+              </div>
+            </div>
           )}
         </div>
 

@@ -131,6 +131,7 @@ export async function runForensicAnalysis(payload: ForensicRequestPayload): Prom
 
     const response = await fetch(`${FORENSIC_BASE_URL.replace(/\/$/, "")}/${payload.type}`, {
       method: "POST",
+      signal: AbortSignal.timeout(15000),
       headers: FORENSIC_TOKEN ? { Authorization: `Bearer ${FORENSIC_TOKEN}` } : undefined,
       body: formData,
     });

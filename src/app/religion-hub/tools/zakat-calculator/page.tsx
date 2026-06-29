@@ -17,59 +17,64 @@ export default function ZakatCalculatorPage() {
   const [businessInventory, setBusinessInventory] = useState<number | "">("");
   const [businessCash, setBusinessCash] = useState<number | "">("");
   const [businessDebts, setBusinessDebts] = useState<number | "">("");
-  
-  // Market prices (mocked for demo, realistically fetched)
-  const GOLD_PRICE_24K_EGP = 3800; // EGP per gram
-  const SILVER_PRICE_EGP = 45; // EGP per gram
-  
-  // Nisab calculations (AAOIFI standards)
-  const nisabGold = 85 * GOLD_PRICE_24K_EGP;
-  const nisabSilver = 595 * SILVER_PRICE_EGP;
-  // Usually cash nisab is based on gold or silver. AAOIFI often allows either; conservative approach uses silver.
-  const cashNisab = nisabSilver;
+
+  // Market prices are NOT auto-fetched. The user must enter today's gram price
+  // (in EGP) from a trusted source — no stale/hardcoded constants are used.
+  const [goldPriceInput, setGoldPriceInput] = useState<number | "">("");
+  const [silverPriceInput, setSilverPriceInput] = useState<number | "">("");
+
+  const goldPrice24K = Number(goldPriceInput) || 0; // EGP per gram (24K)
+  const silverPrice = Number(silverPriceInput) || 0; // EGP per gram
+  const hasGoldPrice = goldPrice24K > 0;
+  const hasSilverPrice = silverPrice > 0;
+
+  // Nisab calculations (AAOIFI standards) — only meaningful once a price is entered.
+  // Cash nisab follows the silver standard (conservative). If no silver price is
+  // entered, cash zakat cannot be computed and is disabled with an honest notice.
+  const cashNisab = hasSilverPrice ? 595 * silverPrice : null;
 
   const calculateZakat = () => {
     let zakatTotal = 0;
     let isEligible = false;
-    let details = [];
+    const details: { type: string; amount: number }[] = [];
 
-    // Cash Zakat
+    // Cash Zakat — needs the silver-based nisab, which needs a silver price.
     const cash = Number(cashAmount) || 0;
-    if (cash >= cashNisab) {
+    if (cashNisab !== null && cash >= cashNisab) {
       zakatTotal += cash * 0.025;
       isEligible = true;
       details.push({ type: "Cash", amount: cash * 0.025 });
     }
 
-    // Gold Zakat
+    // Gold Zakat — needs the entered gold price.
     const gold = Number(goldGrams) || 0;
     let gold24Equivalent = gold;
     if (goldPurity === 21) gold24Equivalent = gold * (21 / 24);
     if (goldPurity === 18) gold24Equivalent = gold * (18 / 24);
-    
-    if (gold24Equivalent >= 85) {
-      const goldValue = gold24Equivalent * GOLD_PRICE_24K_EGP;
+
+    if (hasGoldPrice && gold24Equivalent >= 85) {
+      const goldValue = gold24Equivalent * goldPrice24K;
       zakatTotal += goldValue * 0.025;
       isEligible = true;
       details.push({ type: "Gold", amount: goldValue * 0.025 });
     }
 
-    // Silver Zakat
+    // Silver Zakat — needs the entered silver price.
     const silver = Number(silverGrams) || 0;
-    if (silver >= 595) {
-      const silverValue = silver * SILVER_PRICE_EGP;
+    if (hasSilverPrice && silver >= 595) {
+      const silverValue = silver * silverPrice;
       zakatTotal += silverValue * 0.025;
       isEligible = true;
       details.push({ type: "Silver", amount: silverValue * 0.025 });
     }
 
-    // Business Zakat (Inventory + Cash - Debts)
+    // Business Zakat (Inventory + Cash - Debts) — uses the silver-based cash nisab.
     const inventory = Number(businessInventory) || 0;
     const bCash = Number(businessCash) || 0;
     const debts = Number(businessDebts) || 0;
     const netBusinessAssets = inventory + bCash - debts;
-    
-    if (netBusinessAssets >= cashNisab) {
+
+    if (cashNisab !== null && netBusinessAssets >= cashNisab) {
       zakatTotal += netBusinessAssets * 0.025;
       isEligible = true;
       details.push({ type: "Business", amount: netBusinessAssets * 0.025 });
@@ -177,8 +182,29 @@ export default function ZakatCalculatorPage() {
                     exit={{ opacity: 0, y: -10 }}
                     className="space-y-8"
                   >
+                    <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl flex gap-3 text-amber-700 dark:text-amber-300">
+                      <AlertCircle className="w-6 h-6 shrink-0" />
+                      <p className="text-sm">
+                        {isRTL
+                          ? "أدخل سعر جرام الذهب/الفضة اليوم (لا تُجلب الأسعار تلقائيًا). بدون السعر لا يمكن حساب زكاة الذهب أو الفضة."
+                          : "Enter today's gold/silver gram price (prices not auto-fetched). Without a price, gold/silver zakat cannot be calculated."}
+                      </p>
+                    </div>
+
                     <div className="space-y-4">
                       <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200">{isRTL ? "الذهب" : "Gold"}</h3>
+                      <div>
+                        <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+                          {isRTL ? "سعر جرام الذهب عيار 24 اليوم (ج.م)" : "Today's 24K Gold Price per Gram (EGP)"}
+                        </label>
+                        <input
+                          type="number"
+                          value={goldPriceInput}
+                          onChange={(e) => setGoldPriceInput(e.target.value ? Number(e.target.value) : "")}
+                          placeholder={isRTL ? "أدخل السعر" : "Enter price"}
+                          className="w-full p-4 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                        />
+                      </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
@@ -213,9 +239,21 @@ export default function ZakatCalculatorPage() {
                       <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200">{isRTL ? "الفضة" : "Silver"}</h3>
                       <div>
                         <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+                          {isRTL ? "سعر جرام الفضة اليوم (ج.م)" : "Today's Silver Price per Gram (EGP)"}
+                        </label>
+                        <input
+                          type="number"
+                          value={silverPriceInput}
+                          onChange={(e) => setSilverPriceInput(e.target.value ? Number(e.target.value) : "")}
+                          placeholder={isRTL ? "أدخل السعر" : "Enter price"}
+                          className="w-full p-4 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                           {isRTL ? "الوزن (جرام)" : "Weight (Grams)"}
                         </label>
-                        <input 
+                        <input
                           type="number"
                           value={silverGrams}
                           onChange={(e) => setSilverGrams(e.target.value ? Number(e.target.value) : "")}
@@ -295,6 +333,17 @@ export default function ZakatCalculatorPage() {
                   <span className="text-2xl ml-2 font-normal opacity-70">EGP</span>
                 </div>
               </div>
+
+              {((goldGrams && !hasGoldPrice) || (silverGrams && !hasSilverPrice) || ((cashAmount || businessInventory || businessCash) && !hasSilverPrice)) ? (
+                <div className="bg-amber-500/20 border border-amber-500/50 p-4 rounded-xl flex items-start gap-3 mt-6">
+                  <AlertCircle className="w-5 h-5 shrink-0 text-amber-200 mt-0.5" />
+                  <p className="text-sm text-amber-50 leading-relaxed">
+                    {isRTL
+                      ? "أدخل سعر جرام الذهب/الفضة اليوم لحساب النصاب والزكاة. الأسعار لا تُجلب تلقائيًا."
+                      : "Enter today's gold/silver gram price to compute Nisab and Zakat. Prices are not auto-fetched."}
+                  </p>
+                </div>
+              ) : null}
 
               {results.details.length > 0 && (
                 <div className="pt-6 border-t border-emerald-500/50 space-y-3">

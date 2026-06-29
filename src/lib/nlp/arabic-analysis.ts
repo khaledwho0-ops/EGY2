@@ -126,6 +126,7 @@ export async function analyzeArabicText(text: string): Promise<ArabicAnalysisRes
   try {
     const response = await fetch(ARABIC_BACKEND_URL, {
       method: "POST",
+      signal: AbortSignal.timeout(8000),
       headers: {
         "Content-Type": "application/json",
         ...(ARABIC_BACKEND_TOKEN ? { Authorization: `Bearer ${ARABIC_BACKEND_TOKEN}` } : {}),

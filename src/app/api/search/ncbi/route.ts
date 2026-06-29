@@ -22,7 +22,7 @@ export async function GET(request: Request) {
       1000 * 60 * 30,
       async () => {
         const esearchUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=6&sort=relevance&term=${encodeURIComponent(query)}`;
-        const esearchRes = await fetch(esearchUrl, { next: { revalidate: 1800 } });
+        const esearchRes = await fetch(esearchUrl, { next: { revalidate: 1800 }, signal: AbortSignal.timeout(8000) });
 
         if (!esearchRes.ok) {
           throw new Error(`NCBI ESearch error: ${esearchRes.status}`);
@@ -36,7 +36,7 @@ export async function GET(request: Request) {
         }
 
         const esummaryUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=${ids.join(",")}`;
-        const esummaryRes = await fetch(esummaryUrl, { next: { revalidate: 1800 } });
+        const esummaryRes = await fetch(esummaryUrl, { next: { revalidate: 1800 }, signal: AbortSignal.timeout(8000) });
 
         if (!esummaryRes.ok) {
           throw new Error(`NCBI ESummary error: ${esummaryRes.status}`);

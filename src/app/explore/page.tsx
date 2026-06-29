@@ -262,7 +262,6 @@ const CATEGORIES: Category[] = [
 
 const STATS = [
   { value: `${CATEGORIES.reduce((n, c) => n + c.tools.length, 0)}`, label: 'Tools & Pages' },
-  { value: '86', label: 'API Routes' },
   { value: `${CATEGORIES.length}`, label: 'Categories' },
   { value: '140-day', label: 'Cognition Course' },
 ];

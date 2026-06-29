@@ -189,7 +189,7 @@ const DECEPTION_POSTS = [
       scienceEn: 'Original study (NEJM 2019): Conducted on mice (N=42 mice only) — NOT humans. Conclusion: "may slow" some tumor progression — does not kill cells. Harvard never said 100%. Major CONSORT violation: sample size inadequate for generalization. Bio link sells a supplement for 750 EGP.',
       islamic: '"لا ضرر ولا ضرار" (ابن ماجه ٢٣٤٠). ترك العلاج الطبي للسرطان لصالح وصفة غير مثبتة يتناقض مع مبدأ "تداووا" (أبو داود ٣٨٥٥) الذي يأمر بطلب الطب المناسب لكل داء.',
       islamicSource: 'أبو داود ٣٨٥٥ + ابن ماجه ٢٣٤٠',
-      whatsapp: '⚠️ تشويه علمي: الدراسة على ٤٢ فأراً فقط — لا على بشر. هارفارد لم تقل ٩ هكذا. لا تترك علاج السرطان. قال ﷺ: "تداووا فإن الله لم يضع داءً إلا وضع له دواءً".',
+      whatsapp: '⚠️ تشويه علمي: الدراسة على ٤٢ فأراً فقط — لا على بشر. هارفارد لم تقل ١٠٠٪. لا تترك علاج السرطان. قال ﷺ: "تداووا فإن الله لم يضع داءً إلا وضع له دواءً".',
     }
   }
 ];
@@ -257,8 +257,8 @@ export default function LiveDeceptionPage() {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 24 }}>
             <div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '5px 14px', borderRadius: 20, background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', marginBottom: 12 }}>
-                <Radio size={12} style={{ color: '#ef4444', animation: 'pulse 1.5s infinite' }} />
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2px', color: '#ef4444', textTransform: 'uppercase' }}>LIVE X-RAY SCANNER</span>
+                <Microscope size={12} style={{ color: '#ef4444' }} />
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '2px', color: '#ef4444', textTransform: 'uppercase' }}>X-RAY SCANNER</span>
               </div>
               <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 900, margin: 0, lineHeight: 1.1 }}>
                 <span style={{ background: 'linear-gradient(135deg, #ef4444, #f97316)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
@@ -266,7 +266,7 @@ export default function LiveDeceptionPage() {
                 </span>
               </h1>
               <p style={{ color: '#64748b', margin: '10px 0 0', fontSize: 15, maxWidth: 550 }}>
-                {t({ en: 'Real Egyptian social media posts scanned through 6 forensic manipulation layers — with full scientific and Islamic counter-evidence', ar: 'منشورات مصرية حقيقية تم فحصها عبر ٦ طبقات تشريح — مع ردود علمية وإسلامية كاملة' })}
+                {t({ en: 'Illustrative composite scenarios — not real accounts. Egyptian-style posts scanned through 6 forensic manipulation layers, with full scientific and Islamic counter-evidence', ar: 'أمثلة تمثيلية مركّبة لأغراض تعليمية — ليست حسابات حقيقية. منشورات بأسلوب مصري تُفحَص عبر ٦ طبقات تشريح، مع ردود علمية وإسلامية كاملة' })}
               </p>
             </div>
 
@@ -363,7 +363,7 @@ export default function LiveDeceptionPage() {
                   </p>
 
                   {/* Engagement Stats */}
-                  <div style={{ display: 'flex', gap: 20, marginBottom: 16 }}>
+                  <div style={{ display: 'flex', gap: 20, marginBottom: 16, alignItems: 'center', flexWrap: 'wrap' }}>
                     {[
                       { icon: <Heart size={15} />, val: post.likes.toLocaleString(), color: '#ef4444' },
                       { icon: <Repeat2 size={15} />, val: post.shares.toLocaleString(), color: '#10b981' },
@@ -374,6 +374,9 @@ export default function LiveDeceptionPage() {
                         {s.val}
                       </div>
                     ))}
+                    <span style={{ padding: '2px 8px', borderRadius: 8, background: 'rgba(148,163,184,0.12)', border: '1px solid rgba(148,163,184,0.25)', fontSize: 10, color: '#94a3b8', fontWeight: 600 }}>
+                      {t({ en: 'illustrative', ar: 'مثال توضيحي' })}
+                    </span>
                     {(xrayMode || isInoculated) && (
                       <div style={{ marginInlineStart: 'auto', display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#64748b' }}>
                         📍 {t({ en: 'Origin:', ar: 'المصدر:' })} <span style={{ color: ls.color }}>{post.origin}</span>

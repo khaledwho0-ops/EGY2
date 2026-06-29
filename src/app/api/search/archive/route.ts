@@ -22,7 +22,7 @@ export async function GET(request: Request) {
       1000 * 60 * 30,
       async () => {
         const url = `https://archive.org/advancedsearch.php?q=${encodeURIComponent(query)}&fl[]=identifier&fl[]=title&fl[]=creator&fl[]=date&rows=6&page=1&output=json`;
-        const res = await fetch(url, { next: { revalidate: 1800 } });
+        const res = await fetch(url, { next: { revalidate: 1800 }, signal: AbortSignal.timeout(8000) });
 
         if (!res.ok) {
           throw new Error(`Internet Archive search error: ${res.status}`);

@@ -38,6 +38,7 @@ export async function POST(req: Request) {
     // We use Llama 3.3 for this because it has flawless native tool-calling capabilities.
     const { text: osintContext } = await generateText({
       model: aiProvider(swarmModel),
+      abortSignal: AbortSignal.timeout(25000),
       system: `You are the "OSINT Threat Hunter." Your objective is to brutally fact-check the provided text.
       Use the webSearch tool to autonomously query the live internet for recent news, fact-checks, or context about the threat.
       If it is a known hoax, debunk it with sources. If it is real, provide context. Output a strict, highly technical summary of your findings.`,
@@ -71,6 +72,7 @@ export async function POST(req: Request) {
     // Synchronously generate a psychological analysis, factoring in the OSINT context.
     const { text: deepseekAnalysis } = await generateText({
       model: aiProvider(swarmModel),
+      abortSignal: AbortSignal.timeout(25000),
       system: `You are the "Red Team Psychologist." Your objective is to brutally and precisely analyze the provided text.
       Identify the specific psychological manipulation tactics, dark patterns, and cognitive biases weaponized within it.
       Output a strict, highly technical, short bulleted list of these tactics. Do not provide conversational filler.`,
@@ -81,6 +83,7 @@ export async function POST(req: Request) {
     // Stream the final counter-narrative directly to the client.
     const result = streamText({
       model: aiProvider(swarmModel),
+      abortSignal: AbortSignal.timeout(25000),
       system: `You are the "Trauma-Informed Theologian." Your objective is to read a threat, the OSINT fact-check, and the Red Team Psychologist's analysis.
       Generate a final, grounded counter-narrative to neutralize the threat.
       Deconstruct the psychological manipulation with philosophical and theological clarity. Provide an ontological anchor to stabilize the reader.

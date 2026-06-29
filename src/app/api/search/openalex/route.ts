@@ -27,6 +27,7 @@ export async function GET(request: Request) {
             "User-Agent": "EgyptianAwarenessLibrary/1.0 (research routing; mailto:admin@egyptianawareness.local)",
           },
           next: { revalidate: 1800 },
+          signal: AbortSignal.timeout(8000),
         });
 
         if (!res.ok) {

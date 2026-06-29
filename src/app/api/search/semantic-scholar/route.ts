@@ -35,6 +35,7 @@ export async function GET(request: Request) {
             "User-Agent": "EgyptianAwarenessLibrary/1.0 (research-platform)",
           },
           next: { revalidate: 1800 },
+          signal: AbortSignal.timeout(8000),
         });
 
         if (!res.ok) throw new Error(`Semantic Scholar API error: ${res.status}`);

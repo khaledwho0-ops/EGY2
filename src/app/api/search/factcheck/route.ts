@@ -27,7 +27,7 @@ export async function GET(request: Request) {
       1000 * 60 * 30,
       async () => {
         const apiUrl = `https://factchecktools.googleapis.com/v1alpha1/claims:search?query=${encodeURIComponent(query)}&key=${apiKey}`;
-        const res = await fetch(apiUrl, { next: { revalidate: 1800 } });
+        const res = await fetch(apiUrl, { next: { revalidate: 1800 }, signal: AbortSignal.timeout(8000) });
 
         if (!res.ok) {
           throw new Error(`Google Fact Check API error: ${res.status}`);

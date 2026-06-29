@@ -226,17 +226,29 @@ export default function QuranContextPage() {
                   <h3 style={{ margin: 0, fontSize: "1.3rem" }}>
                     {t({ en: "Scholarly Context & Tafsir", ar: "السياق العلمي والتفسير" })}
                   </h3>
-                  <span style={{ marginLeft: "auto", padding: "4px 10px", backgroundColor: "rgba(100,200,100,0.1)", color: "var(--accent-success)", borderRadius: 20, fontSize: "0.8rem", fontWeight: 600 }}>
-                    <CheckCircle size={14} style={{ display: "inline", verticalAlign: "middle", marginRight: 4 }} />
-                    {t({ en: "Verified Source: Tafsir Al-Jalalayn", ar: "مصدر موثوق: تفسير الجلالين" })}
-                  </span>
+                  {results.tafsirJalalayn && results.tafsirJalalayn !== "Tafsir not available." ? (
+                    <span style={{ marginLeft: "auto", padding: "4px 10px", backgroundColor: "rgba(100,200,100,0.1)", color: "var(--accent-success)", borderRadius: 20, fontSize: "0.8rem", fontWeight: 600 }}>
+                      <CheckCircle size={14} style={{ display: "inline", verticalAlign: "middle", marginRight: 4 }} />
+                      {t({ en: "Verified Source: Tafsir Al-Jalalayn", ar: "مصدر موثوق: تفسير الجلالين" })}
+                    </span>
+                  ) : (
+                    <span style={{ marginLeft: "auto", padding: "4px 10px", backgroundColor: "var(--bg-secondary)", color: "var(--text-muted)", borderRadius: 20, fontSize: "0.8rem", fontWeight: 600 }}>
+                      {t({ en: "Tafsir unavailable for this verse", ar: "لا يتوفر تفسير لهذه الآية" })}
+                    </span>
+                  )}
                 </div>
 
-                <div style={{ direction: "rtl", textAlign: "right" }}>
-                  <p style={{ fontSize: "1.2rem", lineHeight: 2, color: "var(--text-base)", fontFamily: "serif" }}>
-                    {results.tafsirJalalayn}
+                {results.tafsirJalalayn && results.tafsirJalalayn !== "Tafsir not available." ? (
+                  <div style={{ direction: "rtl", textAlign: "right" }}>
+                    <p style={{ fontSize: "1.2rem", lineHeight: 2, color: "var(--text-base)", fontFamily: "serif" }}>
+                      {results.tafsirJalalayn}
+                    </p>
+                  </div>
+                ) : (
+                  <p style={{ fontSize: "1rem", color: "var(--text-muted)", fontStyle: "italic", margin: 0 }}>
+                    {t({ en: "Tafsir unavailable for this verse from the connected source.", ar: "لا يتوفر تفسير لهذه الآية من المصدر المتصل." })}
                   </p>
-                </div>
+                )}
               </div>
 
               <div style={{ padding: 24, backgroundColor: results.abrogationInfo ? "rgba(239, 68, 68, 0.08)" : "rgba(255,150,50,0.05)", border: results.abrogationInfo ? "1px solid rgba(239, 68, 68, 0.3)" : "1px solid rgba(255,150,50,0.2)", borderRadius: "var(--radius-md)" }}>

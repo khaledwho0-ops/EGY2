@@ -291,9 +291,9 @@ export default function MensShieldPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
             {[
               { stat: "75%", desc: { en: "of Egyptian suicides are male (WHO EMRO 2022)", ar: "من حالات الانتحار في مصر ذكور (WHO EMRO 2022)" }, color: "#EF4444" },
-              { stat: "83%", desc: { en: "of men won't seek mental health help (GHSQ adapted, Egyptian sample)", ar: "من الرجال لن يطلبوا مساعدة نفسية (GHSQ، عينة مصرية)" }, color: "#F59E0B" },
+              { stat: "83%", desc: { en: "of men won't seek mental health help — illustrative, not a measured Egyptian figure", ar: "من الرجال لن يطلبوا مساعدة نفسية — رقم توضيحي تقديري وليس قياساً مصرياً موثّقاً" }, color: "#F59E0B" },
               { stat: "3.5x", desc: { en: "higher substance abuse in Egyptian males vs females (UNODC 2023)", ar: "أعلى في تعاطي المواد عند الرجال مقارنة بالنساء (UNODC 2023)" }, color: "#8B5CF6" },
-              { stat: "67%", desc: { en: "of Egyptian men report 'work is my only identity' — risk factor for burnout (ILO 2023)", ar: "من الرجال المصريين يعتبرون 'الشغل هويتي الوحيدة' — عامل خطر للإرهاق (ILO 2023)" }, color: "#EC4899" },
+              { stat: "67%", desc: { en: "report 'work is my only identity' — illustrative example of a burnout risk factor, not a measured figure", ar: "يعتبرون 'الشغل هويتي الوحيدة' — مثال توضيحي تقديري لعامل خطر للإرهاق وليس رقماً موثّقاً" }, color: "#EC4899" },
             ].map((s, i) => (
               <div key={i} style={{ padding: 16, backgroundColor: "var(--bg-base)", borderRadius: "var(--radius-md)", border: "1px solid var(--border)", textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", fontWeight: 900, color: s.color }}>{s.stat}</div>

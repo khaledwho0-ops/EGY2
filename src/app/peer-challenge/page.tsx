@@ -37,6 +37,46 @@ const CHALLENGE_POOL: ChallengeQuestion[] = [
   { id: "c10", text: "Cairo has more than 22 million residents in the greater metro area", textAr: "القاهرة الكبرى فيها أكثر من ٢٢ مليون نسمة", isReal: true, difficulty: "medium", explanation: "Greater Cairo is one of the largest metro areas in the world.", explanationAr: "القاهرة الكبرى واحدة من أكبر المناطق الحضرية في العالم.", points: 200 },
 ];
 
+// Deterministic shuffle so every device that enters the same room code
+// gets the identical question order (the room code is the shared seed).
+// Without a seed, each device shuffled independently and "everyone plays
+// the same questions" was false. mulberry32 PRNG + xmur3 string hash.
+function xmur3(str: string): () => number {
+  let h = 1779033703 ^ str.length;
+  for (let i = 0; i < str.length; i++) {
+    h = Math.imul(h ^ str.charCodeAt(i), 3432918353);
+    h = (h << 13) | (h >>> 19);
+  }
+  return () => {
+    h = Math.imul(h ^ (h >>> 16), 2246822507);
+    h = Math.imul(h ^ (h >>> 13), 3266489909);
+    h ^= h >>> 16;
+    return h >>> 0;
+  };
+}
+
+function mulberry32(seed: number): () => number {
+  let a = seed;
+  return () => {
+    a |= 0;
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+// Seeded Fisher-Yates: same seed string => same ordering on every device.
+function seededShuffle<T>(items: T[], seed: string): T[] {
+  const rng = mulberry32(xmur3(seed)());
+  const arr = [...items];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 type GamePhase = "setup" | "playing" | "results";
 
 interface PlayerResult {
@@ -84,7 +124,13 @@ export default function PeerChallenge() {
   function startChallenge() {
     let pool = [...CHALLENGE_POOL];
     if (difficulty !== "all") pool = pool.filter(q => q.difficulty === difficulty);
-    const shuffled = pool.sort(() => Math.random() - 0.5).slice(0, questionCount);
+    // If in a room, seed the shuffle from the room code + shared settings so
+    // every device with the same code gets the identical question order.
+    // Solo play (no room code) stays randomized per device.
+    const ordered = roomCode
+      ? seededShuffle(pool, `${roomCode}|${difficulty}|${questionCount}`)
+      : pool.sort(() => Math.random() - 0.5);
+    const shuffled = ordered.slice(0, questionCount);
     setQuestions(shuffled);
     setCurrentQ(0);
     setScore(0);

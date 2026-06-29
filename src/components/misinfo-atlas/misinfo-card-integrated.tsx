@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { DefenseScannerOverlay } from '@/components/science/defense-scanner-overlay';
-import { Share2, Bookmark, AlertOctagon } from 'lucide-react';
+import { Share2, Bookmark, BookmarkCheck, AlertOctagon } from 'lucide-react';
 
 interface MisinfoCardIntegratedProps {
   title: string;
@@ -12,7 +12,57 @@ interface MisinfoCardIntegratedProps {
   contentId: string;
 }
 
+const BOOKMARK_STORAGE_KEY = 'eal:misinfo-bookmarks';
+
 export function MisinfoCardIntegrated({ title, excerpt, sourceUrl, imageUrl, contentId }: MisinfoCardIntegratedProps) {
+  const [isBookmarked, setIsBookmarked] = React.useState(false);
+
+  // Hydrate bookmark state from localStorage after mount (avoids SSR mismatch)
+  React.useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(BOOKMARK_STORAGE_KEY);
+      const ids: string[] = raw ? JSON.parse(raw) : [];
+      setIsBookmarked(Array.isArray(ids) && ids.includes(contentId));
+    } catch {
+      /* localStorage unavailable or corrupt — leave unbookmarked */
+    }
+  }, [contentId]);
+
+  const handleShare = async () => {
+    const shareData = { title, text: excerpt, url: sourceUrl };
+    try {
+      if (typeof navigator !== 'undefined' && navigator.share) {
+        await navigator.share(shareData);
+        return;
+      }
+      if (typeof navigator !== 'undefined' && navigator.clipboard) {
+        await navigator.clipboard.writeText(sourceUrl);
+        // bilingual confirmation: Egyptian-aware Arabic + English
+        window.alert('تم نسخ رابط المصدر | Source link copied');
+      }
+    } catch {
+      /* user cancelled share sheet or clipboard blocked — no-op */
+    }
+  };
+
+  const handleBookmark = () => {
+    try {
+      const raw = window.localStorage.getItem(BOOKMARK_STORAGE_KEY);
+      const ids: string[] = raw ? JSON.parse(raw) : [];
+      const set = new Set(Array.isArray(ids) ? ids : []);
+      if (set.has(contentId)) {
+        set.delete(contentId);
+        setIsBookmarked(false);
+      } else {
+        set.add(contentId);
+        setIsBookmarked(true);
+      }
+      window.localStorage.setItem(BOOKMARK_STORAGE_KEY, JSON.stringify([...set]));
+    } catch {
+      /* localStorage unavailable — bookmark not persisted */
+    }
+  };
+
   return (
     <div className="flex flex-col bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
       
@@ -58,8 +108,25 @@ export function MisinfoCardIntegrated({ title, excerpt, sourceUrl, imageUrl, con
       </div>
 
       <div className="bg-slate-950 px-5 py-3 flex justify-between items-center text-slate-500">
-        <button className="hover:text-white transition-colors"><Share2 className="w-4 h-4" /></button>
-        <button className="hover:text-white transition-colors"><Bookmark className="w-4 h-4" /></button>
+        <button
+          type="button"
+          onClick={handleShare}
+          aria-label="مشاركة المصدر | Share source"
+          title="مشاركة المصدر | Share source"
+          className="hover:text-white transition-colors"
+        >
+          <Share2 className="w-4 h-4" />
+        </button>
+        <button
+          type="button"
+          onClick={handleBookmark}
+          aria-pressed={isBookmarked}
+          aria-label={isBookmarked ? 'إزالة من المحفوظات | Remove bookmark' : 'حفظ | Bookmark'}
+          title={isBookmarked ? 'إزالة من المحفوظات | Remove bookmark' : 'حفظ | Bookmark'}
+          className={isBookmarked ? 'text-amber-400 hover:text-amber-300 transition-colors' : 'hover:text-white transition-colors'}
+        >
+          {isBookmarked ? <BookmarkCheck className="w-4 h-4" /> : <Bookmark className="w-4 h-4" />}
+        </button>
       </div>
 
     </div>

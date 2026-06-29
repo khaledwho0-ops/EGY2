@@ -21,6 +21,7 @@ export async function GET(request: Request) {
           const res = await fetch(`${EXTERNAL_API_URL}?search=patient.drug.medicinalproduct:"${encodeURIComponent(query)}"&limit=10`, {
             headers: { "User-Agent": "EgyptianAwarenessLibrary/1.0" },
             next: { revalidate: 86400 },
+            signal: AbortSignal.timeout(8000),
           });
 
           if (res.ok) {

@@ -8,7 +8,8 @@ export async function GET(req: Request) {
     // Fetch live Google Trends RSS feed for specified geo
     const res = await fetch(`https://trends.google.com/trending/rss?geo=${geo}`, {
       // Revalidate every 5 minutes
-      next: { revalidate: 300 }
+      next: { revalidate: 300 },
+      signal: AbortSignal.timeout(8000),
     });
     
     if (!res.ok) {

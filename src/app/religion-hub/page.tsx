@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRTL } from "@/components/shared/rtl-provider";
 import { PageNavigation } from '@/components/shared/page-navigation';
 import { PageAIChatbot } from '@/components/shared/page-ai-chatbot';
+import { islamicFallacies } from '@/data/curriculum/100-islamic-fallacies';
 
 const TOOLS = [
   { emoji: "🔍", name: "Hadith Checker", nameAr: "مدقق الأحاديث", desc: "Verify hadith authenticity via Fawazahmed0 API. Cross-reference with Bukhari, Muslim, Tirmidhi, and 5 more collections.", descAr: "تحقق من صحة الأحاديث عبر واجهة Fawazahmed0. مرجعية مع البخاري ومسلم والترمذي و5 مجموعات أخرى.", href: "/religion-hub/tools/hadith-check", color: "#10B981" },
@@ -37,11 +38,10 @@ export default function ReligionHubPage() {
           </p>
         </div>
         {/* Stats */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, marginBottom: 32 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginBottom: 32 }}>
           {[
             { v: "9", l: "Tools", lAr: "أدوات", c: "#10B981" },
-            { v: "100", l: "Islamic Fallacies", lAr: "مغالطة إسلامية", c: "#F59E0B" },
-            { v: "50", l: "Fundamentals", lAr: "أساسيات", c: "#6366f1" },
+            { v: String(islamicFallacies.length), l: "Islamic Fallacies", lAr: "مغالطة إسلامية", c: "#F59E0B" },
             { v: "8", l: "Hadith Collections", lAr: "مجموعات أحاديث", c: "#EC4899" },
           ].map((s, i) => (
             <div key={i} className="glass-card" style={{ padding: 16, textAlign: "center" }}>

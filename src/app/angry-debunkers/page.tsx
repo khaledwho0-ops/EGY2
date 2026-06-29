@@ -5,7 +5,7 @@ import { motion, AnimatePresence, type Variants } from "framer-motion";
 import {
   Loader2, ShieldAlert, Share2, CheckCircle2, ScanSearch, Send, Bot,
   Shield, Fingerprint, Zap, Link as LinkIcon, Paperclip, X, FileText,
-  Clock, Globe, AlertTriangle, User, Layers, Swords, Star,
+  Clock, Globe, AlertTriangle, Layers, Swords, Star,
   HelpCircle, ChevronRight, ChevronLeft, Sparkles, Target, Brain, BrainCircuit, History, Crosshair
 } from "lucide-react";
 
@@ -1543,6 +1543,16 @@ export default function AngryDebunkersWarRoom() {
                                 <div className="text-[10px] font-black uppercase tracking-[0.18em]" style={{ color: C.amber }}>Patient Zero Trace</div>
                               </div>
 
+                              {/* One-Law: this trace is AI inference, not a sourced forensic fact */}
+                              <div className="rounded-xl px-4 py-3 mb-5" style={{ background: `${C.danger}10`, border: `1px solid ${C.danger}30` }}>
+                                <p className="text-[12px] font-bold leading-[1.5] break-words" style={{ color: C.danger }} dir="rtl">
+                                  ⚠ استنتاج بالذكاء الاصطناعي — غير موثّق
+                                </p>
+                                <p className="text-[11px] font-semibold leading-[1.5] break-words mt-0.5" style={{ color: `${C.textPrimary}cc` }}>
+                                  AI inference — not a sourced fact. Treat year/platform as hypotheses unless a cited source confirms them.
+                                </p>
+                              </div>
+
                               <div className="space-y-5 relative z-10">
                                 {[
                                   { icon: <Clock size={14} />, label: "Origin Year", val: result.data?.patient_zero_tracing?.origin_year },
@@ -1566,18 +1576,6 @@ export default function AngryDebunkersWarRoom() {
                                     {result.data?.patient_zero_tracing?.why_trending_now || 'Analysis not available'}
                                   </p>
                                 </div>
-
-                                {result.data?.patient_zero_tracing?.named_instigator && (
-                                  <div className="flex gap-4 items-start min-w-0 pt-1">
-                                    <div className="p-2 rounded-lg shrink-0" style={{ background: `${C.danger}15`, border: `1px solid ${C.danger}20` }}>
-                                      <User size={14} style={{ color: C.danger }} />
-                                    </div>
-                                    <div className="min-w-0 flex-1">
-                                      <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-1" style={{ color: C.danger }}>Named Instigator</div>
-                                      <p className="text-[14px] font-bold leading-[1.5] break-words" style={{ color: C.textPrimary }}>{result.data?.patient_zero_tracing?.named_instigator}</p>
-                                    </div>
-                                  </div>
-                                )}
                               </div>
                             </div>
                           </div>

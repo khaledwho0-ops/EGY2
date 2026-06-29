@@ -75,7 +75,7 @@ export function LiveSwarmDebate() {
             <div className="text-green-500/70 mb-4 animate-pulse space-y-2">
               <div className="flex items-center gap-2">
                 <Cpu className="w-4 h-4 animate-spin" />
-                <span>[DEEPSEEK-R1] Executing Red Team Psychological Analysis...</span>
+                <span>Red Team Psychological Analysis...</span>
               </div>
             </div>
           )}
@@ -85,7 +85,7 @@ export function LiveSwarmDebate() {
             <div className="whitespace-pre-wrap leading-relaxed">
               <div className="text-green-600 mb-2 border-b border-green-900/50 pb-2 uppercase text-xs tracking-wider flex items-center gap-2">
                 <Activity className="w-4 h-4" />
-                [LLAMA-3.3-70B] Generating Counter-Narrative
+                Generating Counter-Narrative...
               </div>
               <div className="text-green-400 text-sm">
                 {completion}

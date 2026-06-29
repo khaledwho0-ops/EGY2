@@ -25,6 +25,7 @@ export async function GET(request: Request) {
           const res = await fetch(`${BASE_URL}/qibla/${lat}/${lon}`, {
             headers: { "User-Agent": "EgyptianAwarenessLibrary/1.0" },
             next: { revalidate: 3600 },
+            signal: AbortSignal.timeout(8000),
           });
           if (!res.ok) throw new Error(`AlAdhan Qibla API error: ${res.status}`);
           const data = await res.json();
@@ -40,6 +41,7 @@ export async function GET(request: Request) {
           const res = await fetch(`${BASE_URL}${endpoint}?latitude=${lat}&longitude=${lon}&method=5`, {
             headers: { "User-Agent": "EgyptianAwarenessLibrary/1.0" },
             next: { revalidate: 3600 },
+            signal: AbortSignal.timeout(8000),
           });
           if (!res.ok) throw new Error(`AlAdhan Timings API error: ${res.status}`);
           const data = await res.json();

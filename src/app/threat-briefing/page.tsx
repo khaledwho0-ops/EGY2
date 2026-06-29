@@ -116,16 +116,8 @@ export default function ThreatBriefing() {
       }
     } catch { /* */ }
 
-    // If no live results, use curated data
-    if (allThreats.length === 0) {
-      allThreats.push(
-        { title: "Unverified health claims circulating on Egyptian WhatsApp groups", source: "Local Reports", threatLevel: "high", category: "Health", timestamp: new Date().toISOString() },
-        { title: "Fabricated quotes attributed to religious scholars spreading on Facebook", source: "IslamWeb Watch", threatLevel: "high", category: "Religion", timestamp: new Date().toISOString() },
-        { title: "Misleading economic statistics shared without context", source: "Fact Check Egypt", threatLevel: "medium", category: "Economy", timestamp: new Date().toISOString() },
-        { title: "Old disaster footage reshared as 'breaking news' from Egypt", source: "AFP Fact Check", threatLevel: "medium", category: "Politics", timestamp: new Date().toISOString() },
-        { title: "AI-generated images of Egyptian landmarks going viral", source: "Digital Forensics", threatLevel: "low", category: "Science", timestamp: new Date().toISOString() },
-      );
-    }
+    // If no live results, DO NOT fabricate fallback items. Show a fail-loud empty
+    // state instead (One-Law: never present invented threats with fake source labels).
 
     const highCount = allThreats.filter(t => t.threatLevel === "high").length;
     const overallLevel = highCount > 2 ? "high" : highCount > 0 ? "medium" : "low";
@@ -183,6 +175,29 @@ export default function ThreatBriefing() {
               Google Fact Check API • ClaimBuster AI • NLP Sentiment
             </div>
           </div>
+        ) : briefing && briefing.threats.length === 0 ? (
+          <>
+            {/* Fail-loud empty state — no live data, no fabricated threats, no threat-level banner */}
+            <div className="glass-card" style={{
+              padding: 28, marginBottom: 20, textAlign: "center",
+              borderTop: "4px solid var(--text-muted)",
+            }}>
+              <AlertTriangle size={32} style={{ color: "var(--text-muted)", marginBottom: 12 }} />
+              <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 6, fontFamily: ff }}>
+                {t({ en: "[⚠ UNVERIFIED] No live data right now", ar: "[⚠ غير موثّق] لا توجد بيانات حية الآن", arEG: "[⚠ غير موثّق] لا توجد بيانات حية دلوقتي" })}
+              </div>
+              <div style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.6, fontFamily: ff }}>
+                {t({ en: "The live fact-check feeds returned no results. We do not show invented threats. Try refreshing.", ar: "لم تُرجع مصادر التحقق الحية أي نتائج. لا نعرض تهديدات مختلَقة. حاول التحديث.", arEG: "مصادر التحقق الحية ماجابتش أي نتايج. مابنعرضش تهديدات مختلَقة. جرّب تحدّث." })}
+              </div>
+              <button onClick={fetchBriefing} style={{
+                marginTop: 14, padding: "8px 18px", borderRadius: 12, fontSize: 13,
+                background: "var(--bg-secondary)", border: "1px solid var(--border-primary)",
+                cursor: "pointer", color: "var(--text-secondary)",
+              }}>
+                <RefreshCw size={12} style={{ marginRight: 4 }} /> {t({ en: "Refresh", ar: "تحديث", arEG: "تحديث" })}
+              </button>
+            </div>
+          </>
         ) : briefing && (
           <>
             {/* Threat Level Banner */}

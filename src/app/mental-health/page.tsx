@@ -22,9 +22,9 @@ const timelineData = [
 ];
 
 const crisisResources = [
-  { name: 'Egyptian Mental Health Hotline', nameAr: 'خط نجدة الصحة النفسية', phone: '08008880700', desc: 'Free 24/7 crisis support', icon: '🆘', color: '#ef4444' },
-  { name: 'Behman Hospital Helpline', nameAr: 'خط مساعدة مستشفى بهمان', phone: '02-25212013', desc: 'Psychiatric emergency services', icon: '🏥', color: '#f59e0b' },
-  { name: 'Befrienders Egypt', nameAr: 'منظمة المصاحبة مصر', phone: '762 2381 (02)', desc: 'Emotional support and suicide prevention', icon: '💚', color: '#10b981' },
+  { name: 'MoHP Mental Health & Addiction Hotline', nameAr: 'خط الصحة النفسية والإدمان (وزارة الصحة)', phone: '08008880700', desc: 'Free 24/7 crisis support', icon: '🆘', color: '#ef4444' },
+  { name: 'Behman Hospital Helpline', nameAr: 'خط مساعدة مستشفى بهمان', phone: '02-25218888', desc: 'Psychiatric emergency services', icon: '🏥', color: '#f59e0b' },
+  { name: 'Abbasseya Mental Health Hospital (direct)', nameAr: 'مستشفى العباسية للصحة النفسية (مباشر)', phone: '01154898506', desc: 'Emotional support and crisis intervention', icon: '💚', color: '#10b981' },
 ];
 
 export default function MentalHealthPage() {

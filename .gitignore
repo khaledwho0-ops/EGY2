@@ -82,3 +82,8 @@ dev_server.log
 start-*.log
 .runtime/
 
+
+# Playwright record-everything artifacts (videos/reports — large, local only)
+playwright-report-record/
+test-results-record/
+EAL_full_test_recording.mp4

@@ -33,6 +33,7 @@ async function callGemini(messages: AIMessage[]): Promise<AIResponse> {
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`,
     {
       method: "POST",
+      signal: AbortSignal.timeout(12000),
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         contents: [{ parts: [{ text: prompt }] }],
@@ -56,6 +57,7 @@ async function callGroq(messages: AIMessage[]): Promise<AIResponse> {
   const start = Date.now();
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
+    signal: AbortSignal.timeout(12000),
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       model: "llama-3.3-70b-versatile",
@@ -84,6 +86,7 @@ async function callGitHub(messages: AIMessage[]): Promise<AIResponse> {
   const start = Date.now();
   const res = await fetch("https://models.inference.ai.azure.com/chat/completions", {
     method: "POST",
+    signal: AbortSignal.timeout(12000),
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({ model: "gpt-4o-mini", messages, max_tokens: 2048 }),
   });
@@ -111,6 +114,7 @@ async function callHuggingFace(messages: AIMessage[]): Promise<AIResponse> {
     "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3",
     {
       method: "POST",
+      signal: AbortSignal.timeout(12000),
       headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
       body: JSON.stringify({ inputs: prompt, parameters: { max_new_tokens: 512 } }),
     }
@@ -137,6 +141,7 @@ export async function analyzeSentiment(text: string): Promise<{ label: string; s
       "https://api-inference.huggingface.co/models/cardiffnlp/twitter-roberta-base-sentiment-latest",
       {
         method: "POST",
+        signal: AbortSignal.timeout(12000),
         headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
         body: JSON.stringify({ inputs: text }),
       }
@@ -162,6 +167,7 @@ export async function translateText(text: string, direction: "en-ar" | "ar-en"):
   try {
     const res = await fetch(`https://api-inference.huggingface.co/models/${model}`, {
       method: "POST",
+      signal: AbortSignal.timeout(12000),
       headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
       body: JSON.stringify({ inputs: text }),
     });

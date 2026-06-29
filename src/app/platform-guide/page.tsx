@@ -193,7 +193,7 @@ const SECTIONS: Section[] = [
         linkLabel: 'Religion Hub →',
       },
     ],
-    proTip: 'The Sectarian Detector catches manipulation in 95% of viral Islamic content — always use it first before sharing.',
+    proTip: 'Run the Sectarian Detector first on any viral Islamic content — it flags common manipulation patterns before you share.',
   },
   {
     id: 's5',
@@ -240,7 +240,7 @@ const SECTIONS: Section[] = [
         linkLabel: 'C2PA Verifier →',
       },
     ],
-    proTip: 'Always start with reverse image search before anything else — it solves 60% of cases immediately and saves significant time.',
+    proTip: 'Always start with reverse image search before anything else — it often resolves a case immediately and saves significant time.',
   },
   {
     id: 's6',

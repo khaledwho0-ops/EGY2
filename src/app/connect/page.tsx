@@ -1,13 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRTL } from "@/components/shared/rtl-provider";
 import { Users, Trophy, Target, Award, Star, Activity, Plus, ShieldAlert } from "lucide-react";
 import { PageNavigation } from '@/components/shared/page-navigation';
+import { getCurrentUser, type UserProfile } from "@/lib/auth";
+
+// XP needed per level (simple linear curve: level = floor(xp / 1000) + 1)
+const XP_PER_LEVEL = 1000;
 
 export default function ConnectPage() {
   const { isRTL, t } = useRTL();
+
+  const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
+  const [userLoaded, setUserLoaded] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    getCurrentUser()
+      .then((u) => { if (active) { setUserProfile(u); setUserLoaded(true); } })
+      .catch(() => { if (active) setUserLoaded(true); });
+    return () => { active = false; };
+  }, []);
+
+  const xp = userProfile?.progress?.xp ?? null;
+  const levelText = xp === null ? "—" : `${t({ en: "Level", ar: "المستوى" })} ${Math.floor(xp / XP_PER_LEVEL) + 1}`;
+  const xpText = xp === null ? "—" : xp.toLocaleString();
 
   return (
     <div style={{ paddingTop: "var(--navbar-height)", minHeight: "100vh", backgroundColor: "var(--bg-base)", direction: isRTL ? "rtl" : "ltr" }}>
@@ -37,13 +56,13 @@ export default function ConnectPage() {
             {/* User Stats Card */}
             <div style={{ display: "flex", gap: 32, padding: 24, backgroundColor: "var(--bg-base)", borderRadius: "var(--radius-lg)", border: "1px solid var(--border)" }}>
               <div style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "2rem", fontWeight: 700, color: "var(--accent-primary)", marginBottom: 4 }}>Level 4</div>
-                <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Current Rank</div>
+                <div style={{ fontSize: "2rem", fontWeight: 700, color: "var(--accent-primary)", marginBottom: 4 }}>{userLoaded ? levelText : "…"}</div>
+                <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase" }}>{t({ en: "Current Rank", ar: "المرتبة الحالية" })}</div>
               </div>
               <div style={{ width: 1, backgroundColor: "var(--border)" }}></div>
               <div style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "2rem", fontWeight: 700, color: "var(--text-base)", marginBottom: 4 }}>4,250</div>
-                <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Total XP</div>
+                <div style={{ fontSize: "2rem", fontWeight: 700, color: "var(--text-base)", marginBottom: 4 }}>{userLoaded ? xpText : "…"}</div>
+                <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase" }}>{t({ en: "Total XP", ar: "إجمالي نقاط الخبرة" })}</div>
               </div>
             </div>
           </div>
@@ -59,9 +78,14 @@ export default function ConnectPage() {
               <Target size={24} style={{ color: "var(--accent-warning)" }} />
               {t({ en: "Active Peer Challenges", ar: "التحديات النشطة للأقران" })}
             </h2>
-            <button style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 16px", backgroundColor: "var(--accent-primary)", color: "var(--bg-base)", border: "none", borderRadius: "var(--radius-full)", fontWeight: 600, cursor: "pointer" }}>
+            <Link href="/peer-challenge" style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 16px", backgroundColor: "var(--accent-primary)", color: "var(--bg-base)", border: "none", borderRadius: "var(--radius-full)", fontWeight: 600, cursor: "pointer", textDecoration: "none" }}>
               <Plus size={16} /> {t({ en: "Create Challenge", ar: "إنشاء تحدي" })}
-            </button>
+            </Link>
+          </div>
+
+          {/* Illustrative-example banner: the cards below are sample data, not live community activity */}
+          <div style={{ padding: "10px 16px", backgroundColor: "rgba(212,168,67,0.12)", border: "1px solid rgba(212,168,67,0.4)", borderRadius: "var(--radius-md)", fontSize: "0.85rem", color: "var(--text-muted)" }}>
+            {t({ en: "Illustrative example — sample challenges, not live community data.", ar: "مثال توضيحي — تحديات تجريبية، وليست بيانات حقيقية من المجتمع." })}
           </div>
 
           {[
@@ -84,9 +108,9 @@ export default function ConnectPage() {
                   </span>
                 </div>
               </div>
-              <button style={{ padding: "12px 24px", backgroundColor: "var(--text-base)", color: "var(--bg-base)", border: "none", borderRadius: "var(--radius-md)", fontWeight: 600, cursor: "pointer" }}>
-                Accept
-              </button>
+              <Link href="/peer-challenge" style={{ padding: "12px 24px", backgroundColor: "var(--text-base)", color: "var(--bg-base)", border: "none", borderRadius: "var(--radius-md)", fontWeight: 600, cursor: "pointer", textDecoration: "none" }}>
+                {t({ en: "Accept", ar: "قبول" })}
+              </Link>
             </div>
           ))}
         </div>
@@ -95,28 +119,33 @@ export default function ConnectPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
           
           <div style={{ backgroundColor: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", padding: 24 }}>
-            <h2 style={{ fontSize: "1.3rem", margin: "0 0 24px 0", display: "flex", alignItems: "center", gap: 12 }}>
+            <h2 style={{ fontSize: "1.3rem", margin: "0 0 12px 0", display: "flex", alignItems: "center", gap: 12 }}>
               <Trophy size={20} style={{ color: "#d4a843" }} />
               {t({ en: "Top Debunkers (Weekly)", ar: "أفضل المفندين (أسبوعياً)" })}
             </h2>
-            
+
+            {/* Illustrative-example banner: ranks below are sample data, not a real leaderboard */}
+            <div style={{ padding: "8px 12px", marginBottom: 20, backgroundColor: "rgba(212,168,67,0.12)", border: "1px solid rgba(212,168,67,0.4)", borderRadius: "var(--radius-md)", fontSize: "0.8rem", color: "var(--text-muted)" }}>
+              {t({ en: "Illustrative example — not a live leaderboard.", ar: "مثال توضيحي — وليست لوحة متصدرين حقيقية." })}
+            </div>
+
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               {[
-                { rank: 1, name: "Youssef H.", score: "12,400" },
-                { rank: 2, name: "Salma N.", score: "11,250" },
-                { rank: 3, name: "Karim W.", score: "9,800" },
-                { rank: 14, name: "You", score: "4,250" }
-              ].map((user, idx) => (
-                <div key={idx} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingBottom: 16, borderBottom: idx !== 3 ? "1px solid var(--border)" : "none" }}>
+                { rank: 1, name: t({ en: "Sample player A", ar: "لاعب تجريبي أ" }), score: "12,400", isYou: false },
+                { rank: 2, name: t({ en: "Sample player B", ar: "لاعب تجريبي ب" }), score: "11,250", isYou: false },
+                { rank: 3, name: t({ en: "Sample player C", ar: "لاعب تجريبي ج" }), score: "9,800", isYou: false },
+                { rank: null, name: t({ en: "You", ar: "أنت" }), score: userLoaded ? xpText : "…", isYou: true }
+              ].map((user, idx, arr) => (
+                <div key={idx} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingBottom: 16, borderBottom: idx !== arr.length - 1 ? "1px solid var(--border)" : "none" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-                    <div style={{ 
+                    <div style={{
                       width: 28, height: 28, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.85rem", fontWeight: 700,
                       backgroundColor: user.rank === 1 ? "#d4a843" : user.rank === 2 ? "#c0c0c0" : user.rank === 3 ? "#cd7f32" : "var(--bg-base)",
-                      color: user.rank <= 3 ? "#000" : "var(--text-muted)"
+                      color: (user.rank ?? 99) <= 3 ? "#000" : "var(--text-muted)"
                     }}>
-                      {user.rank}
+                      {user.rank ?? "—"}
                     </div>
-                    <span style={{ fontWeight: user.name === "You" ? 700 : 500, color: user.name === "You" ? "var(--accent-primary)" : "var(--text-base)" }}>
+                    <span style={{ fontWeight: user.isYou ? 700 : 500, color: user.isYou ? "var(--accent-primary)" : "var(--text-base)" }}>
                       {user.name}
                     </span>
                   </div>

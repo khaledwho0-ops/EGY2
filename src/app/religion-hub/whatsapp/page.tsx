@@ -16,50 +16,70 @@ export default function WhatsAppCheckerPage() {
   const ff = a ? "'Noto Kufi Arabic', sans-serif" : "inherit";
   const [mounted, setMounted] = useState(false);
   const [message, setMessage] = useState("");
-  const [result, setResult] = useState<{ type: string; verdict: string; details: string; response: string } | null>(null);
+  const [result, setResult] = useState<{ type: string; verdict: string; details: string; tools?: { label: string; labelAr: string; href: string }[] } | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  const analyzeMessage = () => {
+  const dedicatedTools = [
+    { label: "Fatwa Context tool", labelAr: "أداة سياق الفتوى", href: "/religion-hub/tools/fatwa-context" },
+    { label: "Sectarian Detector tool", labelAr: "أداة كاشف الطائفية", href: "/religion-hub/tools/sectarian-detector" },
+    { label: "Quran Context tool", labelAr: "أداة سياق القرآن", href: "/religion-hub/tools/quran-context" },
+  ];
+
+  const analyzeMessage = async () => {
     if (!message.trim()) return;
     setIsAnalyzing(true);
-    setTimeout(() => {
-      const hasArabic = /[\u0600-\u06FF]/.test(message);
-      const hasHadith = /حديث|قال النبي|صلى الله عليه وسلم|رواه|الرسول/i.test(message) || /hadith|prophet said|narrated/i.test(message);
-      const hasFatwa = /حرام|حلال|فتوى|الشيخ|fatwa|haram|halal/i.test(message);
-      const hasSectarian = /كفر|شرك|بدعة|طائفة|kufr|shirk|bidah/i.test(message);
+    setError(null);
+    setResult(null);
 
-      let type = "fabricated", verdict = "⚠️ Unverified", details = "", response = "";
+    const hasHadith = /حديث|قال النبي|صلى الله عليه وسلم|رواه|الرسول/i.test(message) || /hadith|prophet said|narrated/i.test(message);
+
+    try {
       if (hasHadith) {
-        type = "hadith"; verdict = "⚠️ Requires Verification";
-        details = "This message contains a hadith attribution. Before sharing:\n1. Check isnad (chain of narration) on Dorar.net or IslamWeb\n2. Search in Sahih al-Bukhari and Sahih Muslim databases\n3. Verify the exact wording matches the original Arabic\n4. Check if the hadith is sahih, hasan, da'if, or mawdu' (fabricated)";
-        response = hasArabic
-          ? "جزاك الله خيراً على الحرص. قبل ما نشارك الحديث ده، أنا بحثت ولقيت إنه محتاج تحقق. الأفضل نرجع لموقع الدرر السنية أو إسلام ويب للتأكد من صحته. 🤲"
-          : "JazakAllahu khairan for sharing. Before forwarding, I checked and this hadith needs verification. Let's check Dorar.net or IslamWeb to confirm its authenticity. 🤲";
-      } else if (hasFatwa) {
-        type = "fatwa"; verdict = "⚖️ Context Required";
-        details = "This message contains a fatwa or religious ruling. Fatwas are context-dependent:\n1. Check the source institution (Dar Al-Ifta? Al-Azhar? Unknown?)\n2. Verify the scholar's credentials\n3. Consider the original question/context\n4. Cross-reference with other reputable sources";
-        response = hasArabic
-          ? "الفتوى دي محتاجة سياقها. الفتاوى بتتغير حسب الزمان والمكان والحال. الأفضل نرجع لدار الإفتاء المصرية أو الأزهر الشريف للتأكد. ⚖️"
-          : "This fatwa needs its context. Fatwas vary by time, place, and circumstance. Let's verify with Dar Al-Ifta or Al-Azhar. ⚖️";
-      } else if (hasSectarian) {
-        type = "sectarian"; verdict = "🚨 Sectarian Alert";
-        details = "This message contains potentially sectarian language:\n1. Takfir (declaring someone a non-believer) is extremely serious in Islam\n2. Inter-sectarian accusations often serve political rather than religious purposes\n3. The Prophet ﷺ warned against declaring Muslims as kafir\n4. This content may be designed to divide the ummah";
-        response = hasArabic
-          ? "الرسالة دي فيها محتوى طائفي. النبي ﷺ حذرنا من التكفير والتفريق. الأفضل ما نشاركهاش ونرجع لعلماء معتمدين. 🤝"
-          : "This message contains sectarian content. The Prophet ﷺ warned against takfir and division. Better not to share it and consult verified scholars. 🤝";
-      } else {
-        details = "This message contains a religious claim that cannot be immediately verified.\n1. Check if it has a source attribution (scholar, book, hadith)\n2. Search the exact text online for fact-checking\n3. If it says 'forwarded as received' — that's a red flag\n4. When in doubt, don't forward";
-        response = hasArabic
-          ? "الرسالة دي مش مؤكدة. القاعدة: لو مش متأكد، ما تشاركش. خلينا نتحقق الأول من مصادر موثوقة. 📚"
-          : "This message is unverified. Rule: if unsure, don't share. Let's verify with trusted sources first. 📚";
+        const res = await fetch("/api/defense/hadith-check", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ hadithText: message }),
+        });
+        const json = await res.json();
+        if (!res.ok || !json?.analysis) {
+          setError(json?.error || t({ en: "Verification unavailable right now. Please try again.", ar: "التحقق غير متاح حاليًا. حاول مرة أخرى." }));
+          return;
+        }
+        const an = json.analysis;
+        const grade = an.classification ?? "UNVERIFIABLE";
+        const arGrade = an.arabicClassification ?? "";
+        const detailParts = [
+          a ? (an.arabicExplanation || an.textAnalysis || "") : (an.textAnalysis || an.explanation || ""),
+          an.sourceBook ? `${a ? "المصدر: " : "Source: "}${an.sourceBook}${an.hadithNumber && an.hadithNumber !== "Unknown" ? ` (${an.hadithNumber})` : ""}` : "",
+          an.recommendation ? `${a ? "التوصية: " : "Recommendation: "}${an.recommendation}` : "",
+        ].filter(Boolean);
+        setResult({
+          type: "hadith",
+          verdict: `${grade}${arGrade ? ` / ${arGrade}` : ""}`,
+          details: detailParts.join("\n\n") || (a ? "تعذّر التحقق من هذا النص." : "Could not verify this text."),
+        });
+        return;
       }
 
-      setResult({ type, verdict, details, response });
+      // Non-hadith content: never fabricate a verdict — route to dedicated tools.
+      setResult({
+        type: "other",
+        verdict: a ? "استخدم الأداة المخصّصة" : "Use the dedicated tool",
+        details: a
+          ? "لا نُصدر حكمًا تلقائيًا على الفتاوى أو المحتوى الطائفي هنا حتى لا نختلق نتيجة. استخدم الأداة المخصّصة بمصدرها الموثّق:"
+          : "We don't auto-judge fatwas or sectarian content here, to avoid fabricating a result. Use the dedicated, source-backed tool:",
+        tools: dedicatedTools,
+      });
+    } catch {
+      setError(t({ en: "Network error. Please try again.", ar: "خطأ في الاتصال. حاول مرة أخرى." }));
+    } finally {
       setIsAnalyzing(false);
-    }, 1200);
+    }
   };
+
 
   return (
     <div style={{ paddingTop: "var(--navbar-height)", minHeight: "100vh", direction: a ? "rtl" : "ltr" }}>
@@ -99,6 +119,11 @@ export default function WhatsAppCheckerPage() {
           </button>
         </div>
 
+        {/* Error */}
+        {error && (
+          <div className="glass-card" style={{ padding: 16, marginBottom: 24, borderLeft: "4px solid #EF4444", fontSize: 13, color: "#EF4444", fontFamily: ff }}>{error}</div>
+        )}
+
         {/* Results */}
         {result && (
           <div className="glass-card" style={{ padding: 24, marginBottom: 24 }}>
@@ -106,14 +131,21 @@ export default function WhatsAppCheckerPage() {
               <span style={{ fontSize: 18 }}>{ANALYSIS_TYPES.find(t => t.id === result.type)?.emoji || "⚠️"}</span>
               <span style={{ fontWeight: 700, fontSize: 16, color: ANALYSIS_TYPES.find(t => t.id === result.type)?.color || "#F59E0B" }}>{result.verdict}</span>
             </div>
-            <p style={{ fontSize: 13, lineHeight: 1.8, color: "var(--text-secondary)", whiteSpace: "pre-line", marginBottom: 20, fontFamily: ff }}>{result.details}</p>
-            <div style={{ padding: 16, borderRadius: 12, background: "rgba(37,211,102,0.06)", border: "1px solid rgba(37,211,102,0.15)" }}>
-              <strong style={{ fontSize: 13, color: "#25D366", fontFamily: ff }}>{t({ en: "📋 Suggested Response (copy & send back):", ar: "📋 رد مقترح (انسخ وابعته):", arEG: "📋 رد مقترح (انسخ وابعته):" })}</strong>
-              <p style={{ fontSize: 14, lineHeight: 1.8, margin: "8px 0 0", fontFamily: ff, color: "var(--text-primary)" }}>{result.response}</p>
-              <button onClick={() => navigator.clipboard.writeText(result.response)} style={{ marginTop: 10, padding: "8px 16px", borderRadius: 8, border: "1px solid rgba(37,211,102,0.3)", background: "rgba(37,211,102,0.1)", color: "#25D366", fontSize: 12, cursor: "pointer", fontWeight: 600 }}>
-                {t({ en: "📋 Copy Response", ar: "📋 انسخ الرد", arEG: "📋 انسخ الرد" })}
-              </button>
-            </div>
+            <p style={{ fontSize: 13, lineHeight: 1.8, color: "var(--text-secondary)", whiteSpace: "pre-line", marginBottom: result.tools ? 16 : 0, fontFamily: ff }}>{result.details}</p>
+            {result.tools && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                {result.tools.map((tool) => (
+                  <Link key={tool.href} href={tool.href} className="glass-card no-underline" style={{ padding: "10px 14px", fontSize: 13, fontWeight: 600, color: "var(--text-primary)", fontFamily: ff }}>
+                    → {a ? tool.labelAr : tool.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+            {result.type === "hadith" && (
+              <div style={{ marginTop: 16, paddingTop: 12, borderTop: "1px solid var(--border-primary)", fontSize: 12, color: "var(--text-muted)", fontStyle: "italic", fontFamily: ff }}>
+                {t({ en: "Source: AI hadith-check engine (Al-Azhar/Dar al-Ifta-aligned). Verify critical rulings with certified scholars.", ar: "المصدر: محرك تدقيق الأحاديث بالذكاء (متوافق مع الأزهر/دار الإفتاء). تحقق من الأحكام المهمة مع علماء معتمدين." })}
+              </div>
+            )}
           </div>
         )}
 

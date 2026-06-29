@@ -52,6 +52,14 @@ const ACCESS_COLORS: Record<string, { bg: string; fg: string }> = {
   unknown: { bg: "rgba(107,114,128,0.1)", fg: "#6b7280" },
 };
 
+// ── CEBM evidence-tier badge colour (BRAINS Layer C) ──────────────────
+function tierColor(level: number | null): { bg: string; fg: string } {
+  if (level === 1 || level === 2) return { bg: "rgba(16,185,129,0.12)", fg: "#10b981" }; // strongest
+  if (level === 3) return { bg: "rgba(59,130,246,0.12)", fg: "#3b82f6" };
+  if (level === 4) return { bg: "rgba(245,158,11,0.12)", fg: "#f59e0b" };
+  return { bg: "rgba(107,114,128,0.12)", fg: "#9ca3af" }; // L5 or undetected
+}
+
 // ── Grouping helper ───────────────────────────────────────────────────
 function groupBySource(results: NormalizedAPIResponse[]): Map<string, NormalizedAPIResponse[]> {
   const map = new Map<string, NormalizedAPIResponse[]>();
@@ -76,6 +84,8 @@ function ResultCard({
   const [expanded, setExpanded] = useState(false);
   const trustMeta = TRUST_COLORS[result.trustBand] ?? TRUST_COLORS["C"];
   const accessMeta = result.accessTier ? ACCESS_COLORS[result.accessTier] ?? ACCESS_COLORS["unknown"] : null;
+  const tier = result.evidenceTier;
+  const tierMeta = tier ? tierColor(tier.cebmLevel) : null;
 
   return (
     <div
@@ -137,6 +147,28 @@ function ResultCard({
               }}
             >
               {result.accessTier}
+            </span>
+          )}
+          {tier && tierMeta && tier.design !== "Design not detected" && (
+            <span
+              title={
+                isRTL
+                  ? "تصميم الدراسة مُكتشَف آليًا من العنوان/الملخص (مستويات CEBM 2011) — مؤشّر وليس تقييمًا نقديًا رسميًا."
+                  : "Study design auto-detected from the title/abstract (Oxford CEBM 2011 levels) — a hint, not a formal critical appraisal."
+              }
+              style={{
+                fontSize: "11px",
+                fontWeight: 700,
+                padding: "2px 8px",
+                borderRadius: 12,
+                background: tierMeta.bg,
+                color: tierMeta.fg,
+                whiteSpace: "nowrap",
+                cursor: "help",
+              }}
+            >
+              {tier.cebmLevel ? `CEBM L${tier.cebmLevel} · ` : ""}
+              {isRTL ? tier.designAr : tier.design}
             </span>
           )}
         </div>

@@ -32,6 +32,15 @@ export const NormalizedAPIResponseSchema = z.object({
   accessTier: z.enum(["free", "mixed", "paid", "unknown"]).optional(),
   openAccess: z.boolean().optional(),
   accessNotes: z.string().optional(),
+  // Heuristic study-design + Oxford CEBM-2011 level, auto-detected from the
+  // title/abstract (BRAINS Layer C). A transparent hint, NOT a formal appraisal.
+  evidenceTier: z
+    .object({
+      cebmLevel: z.number().nullable(),
+      design: z.string(),
+      designAr: z.string(),
+    })
+    .optional(),
 });
 export type NormalizedAPIResponse = z.infer<typeof NormalizedAPIResponseSchema>;
 

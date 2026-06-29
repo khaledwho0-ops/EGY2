@@ -12,6 +12,12 @@
 import { createHash } from "crypto";
 import type { NormalizedAPIResponse } from "@/types";
 import { rerankBy } from "@/lib/ai/cohere-rerank";
+import { classifyEvidenceTier } from "./evidence-tier";
+
+/** Attach the heuristic CEBM/design tier (BRAINS Layer C) to a result. */
+function withEvidenceTier(r: NormalizedAPIResponse): NormalizedAPIResponse {
+  return { ...r, evidenceTier: classifyEvidenceTier(r.title, r.summary) };
+}
 
 function resultId(prefix: string, seed: string) {
   return `${prefix}-${createHash("sha1").update(seed).digest("hex").slice(0, 12)}`;
@@ -242,9 +248,9 @@ export async function aggregateEvidence(
   const merged = sortEvidence([...openAlex, ...semanticScholar, ...europePMC, ...doaj, ...arxiv, ...core, ...(includePaid ? crossref : [])]);
   const freeFirst = merged.filter((item) => item.accessTier === "free" && item.openAccess);
 
-  if (opts.rerank === false) return freeFirst.slice(0, max);
+  if (opts.rerank === false) return freeFirst.slice(0, max).map(withEvidenceTier);
 
   // Cohere semantic rerank (multilingual EN/AR); fails safe to trust order.
   const ranked = await rerankBy(query, freeFirst, (item) => `${item.title}. ${item.summary}`, { topN: max });
-  return ranked.slice(0, max);
+  return ranked.slice(0, max).map(withEvidenceTier);
 }

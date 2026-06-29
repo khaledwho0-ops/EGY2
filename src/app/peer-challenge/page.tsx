@@ -203,11 +203,11 @@ export default function PeerChallenge() {
         <div className="container" style={{ padding: "var(--space-xl) var(--space-lg)", maxWidth: 700, textAlign: "center" }}>
           <div style={{
             width: 80, height: 80, borderRadius: "50%",
-            background: "linear-gradient(135deg, rgba(139,92,246,0.15), rgba(236,72,153,0.15))",
-            border: "2px solid rgba(139,92,246,0.3)", display: "flex", alignItems: "center", justifyContent: "center",
+            background: "linear-gradient(135deg, var(--accent-religionhub-surface), var(--accent-religionhub-surface))",
+            border: "2px solid var(--accent-religionhub-glow)", display: "flex", alignItems: "center", justifyContent: "center",
             margin: "0 auto 20px",
           }}>
-            <Users size={36} style={{ color: "#8B5CF6" }} />
+            <Users size={36} style={{ color: "var(--accent-religionhub)" }} />
           </div>
           <h1 style={{ fontSize: 28, marginBottom: 8, fontFamily: ff }}>
             {t({ en: "Peer", ar: "تحدي", arEG: "تحدي" })} <span className="text-gradient">{t({ en: "Challenge", ar: "الأقران", arEG: "الأقران" })}</span>
@@ -226,8 +226,8 @@ export default function PeerChallenge() {
                 <div style={{
                   padding: "12px 28px", fontSize: 28, fontWeight: 800,
                   fontFamily: "'Clash Display', monospace", letterSpacing: "0.2em",
-                  background: "var(--bg-primary)", borderRadius: 12,
-                  border: "2px solid rgba(139,92,246,0.3)", color: "#8B5CF6",
+                  background: "var(--bg-elevated)", borderRadius: 12,
+                  border: "2px solid var(--accent-religionhub-glow)", color: "var(--accent-religionhub)",
                 }}>
                   {roomCode}
                 </div>
@@ -236,13 +236,13 @@ export default function PeerChallenge() {
                   className="glass-card"
                   style={{ padding: "10px 14px", cursor: "pointer", border: "1px solid var(--border-primary)" }}
                 >
-                  {copied ? <Check size={16} style={{ color: "#10B981" }} /> : <Copy size={16} />}
+                  {copied ? <Check size={16} style={{ color: "var(--accent-mentalhealth)" }} /> : <Copy size={16} />}
                 </button>
               </div>
             ) : (
               <button onClick={generateRoom} className="glass-card" style={{
                 padding: "10px 20px", fontSize: 13, cursor: "pointer",
-                border: "1px solid rgba(139,92,246,0.3)", color: "#8B5CF6",
+                border: "1px solid var(--accent-religionhub-glow)", color: "var(--accent-religionhub)",
               }}>
                 {t({ en: "Generate Room Code", ar: "أنشئ كود الغرفة", arEG: "أنشئ كود الغرفة" })}
               </button>
@@ -301,7 +301,7 @@ export default function PeerChallenge() {
           {leaderboard.length > 0 && (
             <div className="glass-card" style={{ padding: 20, marginTop: 28 }}>
               <h3 style={{ fontSize: 16, marginBottom: 12, display: "flex", alignItems: "center", gap: 8, justifyContent: "center", fontFamily: ff }}>
-                <Trophy size={18} style={{ color: "#F59E0B" }} />
+                <Trophy size={18} style={{ color: "var(--accent-deepreal)" }} />
                 {t({ en: "Leaderboard", ar: "لوحة المتصدرين", arEG: "لوحة المتصدرين" })}
               </h3>
               {leaderboard.slice(0, 5).map((p, i) => (
@@ -310,14 +310,14 @@ export default function PeerChallenge() {
                   padding: "8px 12px", borderBottom: "1px solid var(--border-primary)",
                 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <span style={{ fontSize: 16, fontWeight: 700, color: i === 0 ? "#F59E0B" : i === 1 ? "#94A3B8" : i === 2 ? "#B45309" : "var(--text-muted)" }}>
+                    <span style={{ fontSize: 16, fontWeight: 700, color: i === 0 ? "var(--accent-deepreal)" : i === 1 ? "#94A3B8" : i === 2 ? "#B45309" : "var(--text-muted)" }}>
                       #{i + 1}
                     </span>
                     <span style={{ fontSize: 13, fontWeight: 500 }}>{p.name}</span>
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 12, color: "var(--text-muted)" }}>
                     <span>{p.correct}/{p.total}</span>
-                    <span style={{ fontWeight: 700, color: "#F59E0B" }}>{p.score} pts</span>
+                    <span style={{ fontWeight: 700, color: "var(--accent-deepreal)" }}>{p.score} {t({ en: "pts", ar: "نقطة", arEG: "نقطة" })}</span>
                   </div>
                 </div>
               ))}
@@ -339,20 +339,20 @@ export default function PeerChallenge() {
             <span style={{ fontSize: 12, color: "var(--text-caption)" }}>
               {currentQ + 1}/{questions.length}
             </span>
-            {roomCode && <span style={{ fontSize: 11, color: "#8B5CF6", fontFamily: "monospace" }}>Room: {roomCode}</span>}
-            <span style={{ fontSize: 14, fontWeight: 700, color: "#F59E0B" }}>{score} pts</span>
+            {roomCode && <span style={{ fontSize: 11, color: "var(--accent-religionhub)", fontFamily: "monospace" }}>{t({ en: "Room", ar: "غرفة", arEG: "أوضة" })}: {roomCode}</span>}
+            <span style={{ fontSize: 14, fontWeight: 700, color: "var(--accent-deepreal)" }}>{score} {t({ en: "pts", ar: "نقطة", arEG: "نقطة" })}</span>
           </div>
           <div style={{ width: "100%", height: 4, borderRadius: 2, background: "var(--bg-secondary)", marginBottom: 24 }}>
-            <div style={{ width: `${((currentQ + (showAnswer ? 1 : 0)) / questions.length) * 100}%`, height: "100%", borderRadius: 2, background: "#8B5CF6", transition: "width 0.3s" }} />
+            <div style={{ width: `${((currentQ + (showAnswer ? 1 : 0)) / questions.length) * 100}%`, height: "100%", borderRadius: 2, background: "var(--accent-religionhub)", transition: "width 0.3s" }} />
           </div>
 
           {/* Difficulty badge */}
           <div style={{
             display: "inline-block", padding: "3px 12px", borderRadius: 12, fontSize: 11, fontWeight: 700, marginBottom: 12,
-            background: q.difficulty === "hard" ? "rgba(239,68,68,0.1)" : q.difficulty === "medium" ? "rgba(245,158,11,0.1)" : "rgba(16,185,129,0.1)",
-            color: q.difficulty === "hard" ? "#EF4444" : q.difficulty === "medium" ? "#F59E0B" : "#10B981",
+            background: q.difficulty === "hard" ? "rgba(239,68,68,0.1)" : q.difficulty === "medium" ? "var(--accent-deepreal-surface)" : "var(--accent-mentalhealth-surface)",
+            color: q.difficulty === "hard" ? "var(--accent-red)" : q.difficulty === "medium" ? "var(--accent-deepreal)" : "var(--accent-mentalhealth)",
           }}>
-            {q.difficulty.toUpperCase()} • {q.points} pts
+            {q.difficulty.toUpperCase()} • {q.points} {t({ en: "pts", ar: "نقطة", arEG: "نقطة" })}
           </div>
 
           {/* Question */}
@@ -366,23 +366,23 @@ export default function PeerChallenge() {
             <div style={{ display: "flex", gap: 16, justifyContent: "center" }}>
               <button onClick={() => answerQuestion(true)} className="glass-card" style={{
                 padding: "16px 40px", fontSize: 16, fontWeight: 700, cursor: "pointer",
-                border: "2px solid rgba(16,185,129,0.3)", color: "#10B981", fontFamily: ff,
+                border: "2px solid var(--accent-mentalhealth-glow)", color: "var(--accent-mentalhealth)", fontFamily: ff,
               }}>
                 ✅ {t({ en: "REAL", ar: "حقيقي", arEG: "حقيقي" })}
               </button>
               <button onClick={() => answerQuestion(false)} className="glass-card" style={{
                 padding: "16px 40px", fontSize: 16, fontWeight: 700, cursor: "pointer",
-                border: "2px solid rgba(239,68,68,0.3)", color: "#EF4444", fontFamily: ff,
+                border: "2px solid var(--accent-red)", color: "var(--accent-red)", fontFamily: ff,
               }}>
                 ❌ {t({ en: "FAKE", ar: "مزيف", arEG: "مزيف" })}
               </button>
             </div>
           ) : (
             <div>
-              <div className="glass-card" style={{ padding: 20, marginBottom: 16, textAlign: "left", direction: dir }}>
-                <div style={{ fontSize: 14, fontWeight: 700, color: q.isReal ? "#10B981" : "#EF4444", marginBottom: 6 }}>
-                  {q.isReal ? "✅ REAL" : "❌ FAKE"}
-                  {q.technique && <span style={{ marginLeft: 8, fontSize: 11, color: "#F59E0B" }}>({q.technique})</span>}
+              <div className="glass-card" style={{ padding: 20, marginBottom: 16, textAlign: a ? "right" : "left", direction: dir }}>
+                <div style={{ fontSize: 14, fontWeight: 700, color: q.isReal ? "var(--accent-mentalhealth)" : "var(--accent-red)", marginBottom: 6 }}>
+                  {q.isReal ? `✅ ${t({ en: "REAL", ar: "حقيقي", arEG: "حقيقي" })}` : `❌ ${t({ en: "FAKE", ar: "مزيف", arEG: "مزيف" })}`}
+                  {q.technique && <span style={{ marginLeft: 8, fontSize: 11, color: "var(--accent-deepreal)" }}>({q.technique})</span>}
                 </div>
                 <p style={{ fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.6, margin: 0, fontFamily: ff }}>
                   {a ? q.explanationAr : q.explanation}
@@ -406,23 +406,23 @@ export default function PeerChallenge() {
   return (
     <div style={{ paddingTop: "var(--navbar-height)", minHeight: "100vh", direction: dir }}>
       <div className="container" style={{ padding: "var(--space-xl) var(--space-lg)", maxWidth: 700, textAlign: "center" }}>
-        <Trophy size={48} style={{ color: "#F59E0B", marginBottom: 16 }} />
+        <Trophy size={48} style={{ color: "var(--accent-deepreal)", marginBottom: 16 }} />
         <h1 style={{ fontSize: 28, marginBottom: 8, fontFamily: ff }}>
           {t({ en: "Challenge", ar: "نتائج", arEG: "نتائج" })} <span className="text-gradient">{t({ en: "Complete!", ar: "التحدي!", arEG: "التحدي!" })}</span>
         </h1>
 
         <div className="grid gap-3" style={{ gridTemplateColumns: "repeat(3, 1fr)", margin: "24px 0" }}>
-          <div className="glass-card" style={{ padding: 20, borderTop: "3px solid #F59E0B" }}>
-            <div style={{ fontSize: 32, fontWeight: 800, fontFamily: "'Clash Display', sans-serif", color: "#F59E0B" }}>{score}</div>
-            <div style={{ fontSize: 11, color: "var(--text-caption)" }}>Points</div>
+          <div className="glass-card" style={{ padding: 20, borderTop: "3px solid var(--accent-deepreal)" }}>
+            <div style={{ fontSize: 32, fontWeight: 800, fontFamily: "'Clash Display', sans-serif", color: "var(--accent-deepreal)" }}>{score}</div>
+            <div style={{ fontSize: 11, color: "var(--text-caption)" }}>{t({ en: "Points", ar: "النقاط", arEG: "النقط" })}</div>
           </div>
-          <div className="glass-card" style={{ padding: 20, borderTop: "3px solid #10B981" }}>
-            <div style={{ fontSize: 32, fontWeight: 800, fontFamily: "'Clash Display', sans-serif", color: "#10B981" }}>{accuracy}%</div>
-            <div style={{ fontSize: 11, color: "var(--text-caption)" }}>Accuracy</div>
+          <div className="glass-card" style={{ padding: 20, borderTop: "3px solid var(--accent-mentalhealth)" }}>
+            <div style={{ fontSize: 32, fontWeight: 800, fontFamily: "'Clash Display', sans-serif", color: "var(--accent-mentalhealth)" }}>{accuracy}%</div>
+            <div style={{ fontSize: 11, color: "var(--text-caption)" }}>{t({ en: "Accuracy", ar: "الدقة", arEG: "الدقة" })}</div>
           </div>
-          <div className="glass-card" style={{ padding: 20, borderTop: "3px solid #3B82F6" }}>
-            <div style={{ fontSize: 32, fontWeight: 800, fontFamily: "'Clash Display', sans-serif", color: "#3B82F6" }}>{avgTime.toFixed(1)}s</div>
-            <div style={{ fontSize: 11, color: "var(--text-caption)" }}>Avg Time</div>
+          <div className="glass-card" style={{ padding: 20, borderTop: "3px solid var(--accent-blue)" }}>
+            <div style={{ fontSize: 32, fontWeight: 800, fontFamily: "'Clash Display', sans-serif", color: "var(--accent-blue)" }}>{avgTime.toFixed(1)}s</div>
+            <div style={{ fontSize: 11, color: "var(--text-caption)" }}>{t({ en: "Avg Time", ar: "متوسط الوقت", arEG: "متوسط الوقت" })}</div>
           </div>
         </div>
 

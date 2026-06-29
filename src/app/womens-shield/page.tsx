@@ -107,7 +107,7 @@ export default function WomensShieldPage() {
   };
 
   return (
-    <div style={{ paddingTop: "var(--navbar-height)", minHeight: "100vh", backgroundColor: "var(--bg-base)", direction: isRTL ? "rtl" : "ltr" }}>
+    <div style={{ paddingTop: "var(--navbar-height)", minHeight: "100vh", backgroundColor: "var(--bg-page)", color: "var(--text-primary)", direction: isRTL ? "rtl" : "ltr" }}>
       
       {/* HEADER */}
       <div className="container" style={{ padding: "var(--space-xl) var(--space-lg)", paddingBottom: "var(--space-md)" }}>
@@ -118,12 +118,12 @@ export default function WomensShieldPage() {
         </nav>
 
         <div style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: 32 }}>
-          <div style={{ padding: 20, backgroundColor: "rgba(255,100,150,0.1)", borderRadius: "var(--radius-xl)" }}>
-            <Heart size={44} style={{ color: "#EC4899" }} />
+          <div style={{ padding: 20, backgroundColor: "var(--accent-red-surface, rgba(239,68,68,0.1))", borderRadius: "var(--radius-xl)" }}>
+            <Heart size={44} style={{ color: "var(--accent-red)" }} />
           </div>
           <div>
             <h1 style={{ fontSize: "var(--font-h2)", margin: 0, lineHeight: 1.1 }}>
-              <span className="text-gradient" style={{ backgroundImage: "linear-gradient(to right, #EC4899, #F43F5E)" }}>
+              <span className="text-gradient" style={{ backgroundImage: "linear-gradient(to right, var(--accent-red), var(--accent-deepreal))" }}>
                 {t({ en: "Women's Psychographic Shield", ar: "درع الحماية النفسية للمرأة" })}
               </span>
             </h1>
@@ -142,9 +142,9 @@ export default function WomensShieldPage() {
         {/* LEFT COLUMN: LINGUISTIC ANALYZER */}
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           
-          <div style={{ backgroundColor: "var(--bg-card)", padding: 32, borderRadius: "var(--radius-lg)", border: "1px solid var(--border)", boxShadow: "0 4px 20px rgba(0,0,0,0.05)" }}>
+          <div style={{ backgroundColor: "var(--bg-card)", padding: 32, borderRadius: "var(--radius-lg)", border: "1px solid var(--border-primary)", boxShadow: "0 4px 20px rgba(0,0,0,0.05)" }}>
             <h3 style={{ margin: "0 0 16px 0", fontSize: "1.3rem", display: "flex", alignItems: "center", gap: 10 }}>
-              <MessageSquare size={22} style={{ color: "#EC4899" }} />
+              <MessageSquare size={22} style={{ color: "var(--accent-red)" }} />
               {t({ en: "Manipulation Checker", ar: "كاشف التلاعب اللغوي" })}
             </h3>
             
@@ -162,16 +162,16 @@ export default function WomensShieldPage() {
                 placeholder={t({ en: "Type or paste message snippet here...", ar: "اكتبي أو الصقي نص الرسالة هنا..." })}
                 rows={6}
                 style={{
-                  width: "100%", padding: 16, fontSize: "1rem", backgroundColor: "var(--bg-base)",
-                  border: "2px solid var(--border)", borderRadius: "var(--radius-md)", color: "var(--text-base)",
+                  width: "100%", padding: 16, fontSize: "1rem", backgroundColor: "var(--bg-elevated)",
+                  border: "2px solid var(--border-primary)", borderRadius: "var(--radius-md)", color: "var(--text-primary)",
                   marginBottom: 16, resize: "vertical", fontFamily: "sans-serif"
                 }}
               />
-              <button 
+              <button
                 type="submit"
                 disabled={isAnalyzing || !text.trim()}
                 style={{
-                  width: "100%", padding: "14px 28px", backgroundColor: "#EC4899", color: "#fff", border: "none",
+                  width: "100%", padding: "14px 28px", backgroundColor: "var(--accent-red)", color: "var(--text-inverse)", border: "none",
                   borderRadius: "var(--radius-md)", fontWeight: 600, fontSize: "1.05rem",
                   cursor: (isAnalyzing || !text.trim()) ? "not-allowed" : "pointer", opacity: (isAnalyzing || !text.trim()) ? 0.7 : 1,
                   display: "flex", alignItems: "center", justifyContent: "center", gap: 8
@@ -185,11 +185,11 @@ export default function WomensShieldPage() {
 
           {/* Analysis Results Display */}
           {analysisResult && (
-            <div style={{ padding: 32, backgroundColor: "var(--bg-card)", borderRadius: "var(--radius-lg)", border: "1px solid var(--border)" }}>
+            <div style={{ padding: 32, backgroundColor: "var(--bg-card)", borderRadius: "var(--radius-lg)", border: "1px solid var(--border-primary)" }}>
               <h3 style={{ margin: "0 0 20px 0", fontSize: "1.25rem" }}>{t({ en: "Scan Diagnostics", ar: "نتائج الفحص والتشخيص" })}</h3>
-              
+
               {analysisResult.length === 0 ? (
-                <div style={{ display: "flex", alignItems: "center", gap: 12, padding: 16, backgroundColor: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.2)", borderRadius: "var(--radius-md)", color: "#10B981" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, padding: 16, backgroundColor: "var(--accent-mentalhealth-surface)", border: "1px solid var(--accent-mentalhealth-glow)", borderRadius: "var(--radius-md)", color: "var(--accent-emerald)" }}>
                   <CheckCircle size={24} />
                   <p style={{ margin: 0, fontWeight: 500 }}>
                     {t({ en: "No high-risk manipulation patterns identified in the vocabulary scan.", ar: "لم يتم تحديد أي أنماط تلاعب عالية الخطورة في الفحص المفرداتي." })}
@@ -198,12 +198,12 @@ export default function WomensShieldPage() {
               ) : (
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   {analysisResult.map((res, i) => (
-                    <div key={i} style={{ padding: 20, backgroundColor: "var(--bg-base)", borderRadius: "var(--radius-md)", border: `1px solid ${res.severity === 'High' ? 'rgba(239,68,68,0.2)' : 'rgba(245,158,11,0.2)'}` }}>
+                    <div key={i} style={{ padding: 20, backgroundColor: "var(--bg-elevated)", borderRadius: "var(--radius-md)", border: `1px solid ${res.severity === 'High' ? 'var(--accent-red-glow, rgba(239,68,68,0.2))' : 'var(--accent-deepreal-glow)'}` }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-                        <h4 style={{ margin: 0, fontSize: "1.1rem", fontWeight: 700, color: res.severity === 'High' ? "#EF4444" : "#F59E0B" }}>
+                        <h4 style={{ margin: 0, fontSize: "1.1rem", fontWeight: 700, color: res.severity === 'High' ? "var(--accent-red)" : "var(--accent-amber)" }}>
                           {res.name}
                         </h4>
-                        <span style={{ fontSize: "0.8rem", padding: "2px 8px", backgroundColor: res.severity === 'High' ? "rgba(239,68,68,0.1)" : "rgba(245,158,11,0.1)", color: res.severity === 'High' ? "#EF4444" : "#F59E0B", borderRadius: 4, fontWeight: 700 }}>
+                        <span style={{ fontSize: "0.8rem", padding: "2px 8px", backgroundColor: res.severity === 'High' ? "var(--accent-red-surface, rgba(239,68,68,0.1))" : "var(--accent-deepreal-surface)", color: res.severity === 'High' ? "var(--accent-red)" : "var(--accent-amber)", borderRadius: 4, fontWeight: 700 }}>
                           {res.severity}
                         </span>
                       </div>
@@ -227,9 +227,9 @@ export default function WomensShieldPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           
           {/* Emergency support card */}
-          <div style={{ backgroundColor: "var(--bg-card)", padding: 32, borderRadius: "var(--radius-lg)", border: "1px solid var(--border)" }}>
+          <div style={{ backgroundColor: "var(--bg-card)", padding: 32, borderRadius: "var(--radius-lg)", border: "1px solid var(--border-primary)" }}>
             <h3 style={{ margin: "0 0 20px 0", fontSize: "1.3rem", display: "flex", alignItems: "center", gap: 10 }}>
-              <PhoneCall size={22} style={{ color: "#EC4899" }} />
+              <PhoneCall size={22} style={{ color: "var(--accent-red)" }} />
               {t({ en: "National Support & Hotlines", ar: "خطوط الدعم الوطنية والمساندة" })}
             </h3>
 
@@ -239,10 +239,10 @@ export default function WomensShieldPage() {
                 { name: { en: "Mental Health Hotline (Ministry of Health)", ar: "الخط الساخن للصحة النفسية (وزارة الصحة)" }, phone: "08008880700", desc: { en: "Psychological support and trauma therapy services.", ar: "الدعم النفسي المجاني وعلاج الصدمات." } },
                 { name: { en: "Cyber Crime Unit", ar: "إدارة مكافحة جرائم الإنترنت" }, phone: "108", desc: { en: "Official reporting line for online threats, extortion, and harassment.", ar: "البلاغات الرسمية عن الابتزاز الإلكتروني والتهديدات الرقمية." } }
               ].map((hotline, idx) => (
-                <div key={idx} style={{ paddingBottom: 16, borderBottom: idx !== 2 ? "1px solid var(--border)" : "none" }}>
+                <div key={idx} style={{ paddingBottom: 16, borderBottom: idx !== 2 ? "1px solid var(--border-primary)" : "none" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 6 }}>
-                    <span style={{ fontWeight: 700, fontSize: "1.05rem", color: "var(--text-base)" }}>{t(hotline.name)}</span>
-                    <a href={`tel:${hotline.phone}`} style={{ color: "#EC4899", fontFamily: "monospace", fontSize: "1.2rem", fontWeight: 700, textDecoration: "none" }}>
+                    <span style={{ fontWeight: 700, fontSize: "1.05rem", color: "var(--text-primary)" }}>{t(hotline.name)}</span>
+                    <a href={`tel:${hotline.phone}`} style={{ color: "var(--accent-red)", fontFamily: "monospace", fontSize: "1.2rem", fontWeight: 700, textDecoration: "none" }}>
                       {hotline.phone}
                     </a>
                   </div>
@@ -253,9 +253,9 @@ export default function WomensShieldPage() {
           </div>
 
           {/* Digital Safety Card */}
-          <div style={{ backgroundColor: "var(--bg-card)", padding: 32, borderRadius: "var(--radius-lg)", border: "1px solid var(--border)" }}>
+          <div style={{ backgroundColor: "var(--bg-card)", padding: 32, borderRadius: "var(--radius-lg)", border: "1px solid var(--border-primary)" }}>
             <h3 style={{ margin: "0 0 20px 0", fontSize: "1.2rem", display: "flex", alignItems: "center", gap: 10 }}>
-              <Key size={20} style={{ color: "#EC4899" }} />
+              <Key size={20} style={{ color: "var(--accent-red)" }} />
               {t({ en: "Digital Safety Shield Protocols", ar: "بروتوكولات الأمان الرقمي" })}
             </h3>
 
@@ -296,9 +296,9 @@ export default function WomensShieldPage() {
 
       {/* Islamic & Legal Rights Section */}
       <div className="container" style={{ padding: "0 var(--space-lg) var(--space-xl)" }}>
-        <div style={{ backgroundColor: "var(--bg-card)", padding: 32, borderRadius: "var(--radius-lg)", border: "1px solid var(--border)", marginBottom: 24, borderLeft: "4px solid #10b981" }}>
+        <div style={{ backgroundColor: "var(--bg-card)", padding: 32, borderRadius: "var(--radius-lg)", border: "1px solid var(--border-primary)", marginBottom: 24, borderLeft: "4px solid var(--accent-emerald)" }}>
           <h3 style={{ margin: "0 0 16px 0", fontSize: "1.2rem", display: "flex", alignItems: "center", gap: 10 }}>
-            <Landmark size={20} style={{ color: "#10b981" }} />
+            <Landmark size={20} style={{ color: "var(--accent-emerald)" }} />
             {t({ en: "Your Islamic & Legal Rights — Real Egyptian Scenarios", ar: "حقوقكِ الشرعية والقانونية — سيناريوهات مصرية حقيقية" })}
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -308,35 +308,35 @@ export default function WomensShieldPage() {
                 islamic: { en: 'Qiwamah (guardianship) is NOT ownership — it means responsibility to provide. All 4 Sunni madhabs agree: a wife has full financial independence and her own legal personality. Prophet ﷺ consulted Umm Salamah at Hudaybiyyah and followed her advice.', ar: 'القوامة ليست ملكية — بل مسؤولية الإنفاق. المذاهب الأربعة تتفق: للزوجة ذمة مالية مستقلة وشخصية قانونية كاملة. النبي ﷺ استشار أم سلمة في الحديبية وعمل بمشورتها.' },
                 legal: { en: 'Egyptian Personal Status Law: Wife retains full property rights and can work without husband\'s permission (Constitutional Court ruling 2000).', ar: 'قانون الأحوال الشخصية: للزوجة حقوقها المالية الكاملة ويمكنها العمل دون إذن الزوج (حكم المحكمة الدستورية ٢٠٠٠).' },
                 source: 'صحيح البخاري ٢٧٣١ + المذاهب الأربعة',
-                color: '#10b981'
+                color: 'var(--accent-emerald)'
               },
               {
                 scenario: { en: '"If you leave the house, I\'ll divorce you"', ar: '"لو طلعتي من البيت هبعتلك الهجر"' },
                 islamic: { en: 'Using divorce as a threat is condemned: "The most hated permissible thing to Allah is divorce" (Abu Dawud 2178). Emotional coercion violates the Quranic principle of ma\'ruf (kind treatment, An-Nisa:19).', ar: 'استخدام الطلاق كتهديد مذموم: "أبغض الحلال إلى الله الطلاق" (أبو داود ٢١٧٨). الإكراه العاطفي يتناقض مع مبدأ المعاشرة بالمعروف (النساء:١٩).' },
                 legal: { en: 'Article 11 of Egyptian PSL: Obedience (Ta\'a) has limits — it cannot restrict freedom of movement unreasonably. NCW Hotline: 15115.', ar: 'المادة ١١ من قانون الأحوال الشخصية: الطاعة لها حدود — لا يجوز تقييد حرية التنقل بشكل غير معقول. خط المجلس القومي: ١٥١١٥.' },
                 source: 'أبو داود ٢١٧٨ + النساء:١٩ + المادة ١١ ق.أ.ش.',
-                color: '#ef4444'
+                color: 'var(--accent-red)'
               },
               {
                 scenario: { en: '"You\'re crazy, you always think wrong"', ar: '"أنتِ مجنونة ودايماً هتفكري غلط"' },
                 islamic: { en: 'This is Gaslighting — making someone doubt their own reality. Islam prohibits verbal abuse: "Cursing a believer is like killing them" (Bukhari 6047). Prophet ﷺ never insulted his wives.', ar: 'هذا التلاعب العقلي (الغازلايتنغ) — يجعلكِ تشكين في إدراككِ. الإسلام يحرم الإيذاء اللفظي: "سباب المسلم فسوق" (البخاري ٦٠٤٧). النبي ﷺ لم يسب زوجاته قط.' },
                 legal: { en: 'Gaslighting is a recognized form of emotional abuse. Documented in coercive control research (Stark 2007, Sweet 2019). Can be grounds for divorce (Darar) under Egyptian PSL.', ar: 'التلاعب العقلي شكل معترف به من الإيذاء العاطفي. موثق في أبحاث السيطرة القسرية (Stark 2007). يمكن أن يكون سبباً للطلاق للضرر بموجب قانون الأحوال الشخصية.' },
                 source: 'البخاري ٦٠٤٧ + Stark 2007 + Sweet 2019',
-                color: '#f59e0b'
+                color: 'var(--accent-amber)'
               },
               {
                 scenario: { en: '"God said women are deficient in mind and religion"', ar: '"ربنا قال المرأة ناقصة عقل ودين"' },
                 islamic: { en: 'CONTEXT: This hadith (Bukhari 304) refers ONLY to specific testimony rules in financial contracts — NOT general intellect. Khadijah was the first to believe in Islam and the Prophet\'s chief advisor. Aisha narrated 2,210 hadiths — more than most male scholars.', ar: 'السياق: هذا الحديث (البخاري ٣٠٤) يشير فقط إلى قواعد الشهادة في العقود المالية — وليس العقل العام. خديجة أول من آمن بالإسلام. وعائشة روت ٢,٢١٠ حديثاً — أكثر من معظم العلماء الرجال.' },
                 legal: { en: 'Egyptian Constitution Art. 11: The state ensures equality of women and men in all civil, political, economic, social, and cultural rights.', ar: 'المادة ١١ من الدستور المصري: تلتزم الدولة بتحقيق المساواة بين الرجل والمرأة في جميع الحقوق المدنية والسياسية والاقتصادية والاجتماعية والثقافية.' },
                 source: 'البخاري ٣٠٤ (سياقه الصحيح) + المادة ١١ الدستور',
-                color: '#8b5cf6'
+                color: 'var(--accent-indigo)'
               },
             ].map((item, i) => (
-              <div key={i} style={{ padding: 16, backgroundColor: "var(--bg-base)", borderRadius: "var(--radius-md)", border: "1px solid var(--border)", borderLeft: `4px solid ${item.color}` }}>
+              <div key={i} style={{ padding: 16, backgroundColor: "var(--bg-elevated)", borderRadius: "var(--radius-md)", border: "1px solid var(--border-primary)", borderLeft: `4px solid ${item.color}` }}>
                 <div style={{ fontWeight: 700, color: item.color, marginBottom: 8, fontSize: "0.95rem" }}>⚠️ {t(item.scenario)}</div>
                 <div style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: 6 }}>🕌 <strong>{t({ en: 'Islamic:', ar: 'إسلامياً:' })}</strong> {t(item.islamic)}</div>
                 <div style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: 6 }}>⚖️ <strong>{t({ en: 'Legal:', ar: 'قانونياً:' })}</strong> {t(item.legal)}</div>
-                <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", padding: "4px 8px", backgroundColor: "rgba(99,102,241,0.06)", borderRadius: 4, display: "inline-block" }}>📖 {item.source}</div>
+                <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", padding: "4px 8px", backgroundColor: "var(--accent-religionhub-surface)", borderRadius: 4, display: "inline-block" }}>📖 {item.source}</div>
               </div>
             ))}
           </div>

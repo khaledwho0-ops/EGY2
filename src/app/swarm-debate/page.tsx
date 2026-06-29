@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRTL } from '@/components/shared/rtl-provider';
 import { PageNavigation } from '@/components/shared/page-navigation';
 import { PageAIChatbot } from '@/components/shared/page-ai-chatbot';
 import ToolGuide from '@/components/ToolGuide';
@@ -153,7 +154,8 @@ const T = {
   archLabel:    { en: 'Archetype:',                         ar: 'النموذج:' },
   counterLabel: { en: 'Counter strategy:',                  ar: 'استراتيجية الرد:' },
   styleLabel:   { en: 'Tactic:',                            ar: 'الأسلوب:' },
-  langToggle:   { en: 'عربي',                               ar: 'English' },
+  retryBtn:     { en: 'Retry',                              ar: 'أعد المحاولة' },
+  backToExplore:{ en: '← Back to Explore',                  ar: '→ العودة للاستكشاف' },
 };
 
 const RULES: { en: string; ar: string }[] = [
@@ -166,8 +168,9 @@ const RULES: { en: string; ar: string }[] = [
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function SwarmDebatePage() {
-  const [lang, setLang] = useState<Lang>('en');
-  const isRtl = lang === 'ar';
+  const { isRTL } = useRTL();
+  const isRtl = isRTL;
+  const lang: Lang = isRTL ? 'ar' : 'en';
 
   const [topic, setTopic] = useState('');
   const [activeArchIdx, setActiveArchIdx] = useState(0);
@@ -308,7 +311,7 @@ export default function SwarmDebatePage() {
       <main
         dir={isRtl ? 'rtl' : 'ltr'}
         style={{
-          minHeight: '100vh', background: '#020617', color: '#e2e8f0',
+          minHeight: '100vh', background: 'var(--bg-page)', color: 'var(--text-primary)',
           fontFamily: isRtl ? 'Cairo, sans-serif' : 'Inter, sans-serif',
           padding: '40px 24px 80px',
         }}
@@ -317,20 +320,6 @@ export default function SwarmDebatePage() {
 
           {/* ── Header ─────────────────────────────────────────────── */}
           <header style={{ textAlign: 'center', marginBottom: 40, animation: 'debateFadeIn 0.5s ease-out' }}>
-            {/* lang toggle */}
-            <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 16 }}>
-              <button
-                onClick={() => setLang(l => l === 'en' ? 'ar' : 'en')}
-                style={{
-                  padding: '6px 18px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.12)',
-                  background: 'rgba(255,255,255,0.05)', color: '#94a3b8', cursor: 'pointer',
-                  fontSize: '0.85rem', fontWeight: 700,
-                }}
-              >
-                {t('langToggle')}
-              </button>
-            </div>
-
             <div style={{
               display: 'inline-flex', width: 72, height: 72, borderRadius: 20, fontSize: 36,
               alignItems: 'center', justifyContent: 'center', marginBottom: 14,
@@ -346,7 +335,7 @@ export default function SwarmDebatePage() {
               {t('title')}
             </h1>
 
-            <p style={{ color: '#64748b', maxWidth: 600, margin: '10px auto 0', lineHeight: 1.7, fontSize: '1rem' }}>
+            <p style={{ color: 'var(--text-muted)', maxWidth: 600, margin: '10px auto 0', lineHeight: 1.7, fontSize: '1rem' }}>
               {t('subtitle')}
             </p>
           </header>
@@ -377,12 +366,12 @@ export default function SwarmDebatePage() {
 
               {/* Claim input */}
               <div style={{
-                background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)', borderRadius: 20,
-                border: '1px solid rgba(239,68,68,0.2)', padding: 28, marginBottom: 28,
+                background: 'var(--bg-card)', backdropFilter: 'blur(12px)', borderRadius: 20,
+                border: '1px solid var(--border-primary)', padding: 28, marginBottom: 28,
                 animation: 'debateFadeIn 0.5s ease-out 0.15s both',
               }}>
                 <label style={{
-                  display: 'block', fontSize: '0.8rem', color: '#94a3b8', fontWeight: 700,
+                  display: 'block', fontSize: '0.8rem', color: 'var(--text-secondary)', fontWeight: 700,
                   marginBottom: 10, textTransform: 'uppercase', letterSpacing: 1,
                 }}>
                   {t('enterClaim')}
@@ -393,8 +382,8 @@ export default function SwarmDebatePage() {
                   placeholder={t('placeholder')}
                   rows={3}
                   style={{
-                    width: '100%', padding: 12, borderRadius: 10, border: '1px solid rgba(255,255,255,0.1)',
-                    background: 'rgba(0,0,0,0.3)', color: '#e2e8f0', fontSize: '0.95rem',
+                    width: '100%', padding: 12, borderRadius: 10, border: '1px solid var(--border-secondary)',
+                    background: 'var(--bg-elevated)', color: 'var(--text-primary)', fontSize: '0.95rem',
                     outline: 'none', resize: 'vertical', boxSizing: 'border-box',
                     fontFamily: isRtl ? 'Cairo, sans-serif' : 'Inter, sans-serif',
                     direction: isRtl ? 'rtl' : 'ltr',
@@ -406,8 +395,8 @@ export default function SwarmDebatePage() {
                   style={{
                     marginTop: 14, padding: '12px 32px', borderRadius: 10, border: 'none',
                     fontWeight: 800, fontSize: '0.95rem',
-                    background: topic.trim() ? 'linear-gradient(135deg, #ef4444, #f97316)' : 'rgba(255,255,255,0.06)',
-                    color: topic.trim() ? '#fff' : '#475569',
+                    background: topic.trim() ? 'linear-gradient(135deg, #ef4444, #f97316)' : 'var(--bg-secondary)',
+                    color: topic.trim() ? '#fff' : 'var(--text-caption)',
                     cursor: topic.trim() ? 'pointer' : 'not-allowed',
                     boxShadow: topic.trim() ? '0 0 20px rgba(239,68,68,0.3)' : 'none',
                     transition: 'all 0.25s',
@@ -427,8 +416,8 @@ export default function SwarmDebatePage() {
                     style={{
                       padding: '20px 16px', borderRadius: 18, cursor: 'pointer',
                       textAlign: isRtl ? 'right' : 'center',
-                      background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
-                      border: `1px solid ${activeArchIdx === i ? a.color + '60' : 'rgba(255,255,255,0.06)'}`,
+                      background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
+                      border: `1px solid ${activeArchIdx === i ? a.color + '60' : 'var(--border-primary)'}`,
                       boxShadow: activeArchIdx === i ? `0 0 18px ${a.color}25` : 'none',
                       animation: `debateFadeIn 0.5s ease-out ${0.2 + i * 0.08}s both`,
                     }}
@@ -438,10 +427,10 @@ export default function SwarmDebatePage() {
                     <div style={{ fontSize: '0.9rem', fontWeight: 800, color: a.color, marginBottom: 2 }}>{a.name[lang]}</div>
                     {activeArchIdx === i && (
                       <div style={{ marginTop: 10, textAlign: isRtl ? 'right' : 'left' }}>
-                        <p style={{ fontSize: '0.72rem', color: '#94a3b8', lineHeight: 1.5, marginBottom: 6 }}>
-                          <strong style={{ color: '#e2e8f0' }}>{t('styleLabel')}</strong> {a.style[lang]}
+                        <p style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: 6 }}>
+                          <strong style={{ color: 'var(--text-primary)' }}>{t('styleLabel')}</strong> {a.style[lang]}
                         </p>
-                        <p style={{ fontSize: '0.72rem', color: '#10b981', lineHeight: 1.5 }}>
+                        <p style={{ fontSize: '0.72rem', color: 'var(--accent-emerald)', lineHeight: 1.5 }}>
                           <strong>{t('counterLabel')}</strong> {a.counter[lang]}
                         </p>
                       </div>
@@ -462,16 +451,16 @@ export default function SwarmDebatePage() {
                 <div style={{
                   display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                   flexWrap: 'wrap', gap: 12, padding: '14px 20px', borderRadius: 14,
-                  background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
-                  border: '1px solid rgba(255,255,255,0.06)', marginBottom: 20,
+                  background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
+                  border: '1px solid var(--border-primary)', marginBottom: 20,
                 }}>
                   <div>
-                    <span style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>{t('roundLabel')}</span>
-                    <div style={{ fontSize: '1.4rem', fontWeight: 900, color: '#f59e0b' }}>{round}</div>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase' }}>{t('roundLabel')}</span>
+                    <div style={{ fontSize: '1.4rem', fontWeight: 900, color: 'var(--accent-amber)' }}>{round}</div>
                   </div>
                   <div style={{ flex: 1, maxWidth: 340 }}>
-                    <span style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 600 }}>{t('debateTopic')}</span>
-                    <div style={{ fontSize: '0.8rem', color: '#cbd5e1', marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 600 }}>{t('debateTopic')}</span>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: 2, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                       {topic.slice(0, 80)}{topic.length > 80 ? '…' : ''}
                     </div>
                   </div>
@@ -479,7 +468,7 @@ export default function SwarmDebatePage() {
                     onClick={endSession}
                     style={{
                       padding: '7px 18px', borderRadius: 8, border: '1px solid rgba(239,68,68,0.3)',
-                      background: 'rgba(239,68,68,0.08)', color: '#ef4444', cursor: 'pointer',
+                      background: 'rgba(239,68,68,0.08)', color: 'var(--accent-red)', cursor: 'pointer',
                       fontWeight: 700, fontSize: '0.78rem',
                     }}
                   >
@@ -489,11 +478,11 @@ export default function SwarmDebatePage() {
 
                 {/* Current claim / rebuttal panel */}
                 <div style={{
-                  background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)', borderRadius: 18,
+                  background: 'var(--bg-card)', backdropFilter: 'blur(12px)', borderRadius: 18,
                   border: '1px solid rgba(239,68,68,0.15)', padding: 28, marginBottom: 24,
                 }}>
                   {loading && (
-                    <div style={{ textAlign: 'center', padding: '36px 0', color: '#94a3b8' }}>
+                    <div style={{ textAlign: 'center', padding: '36px 0', color: 'var(--text-secondary)' }}>
                       <div style={{
                         width: 36, height: 36, borderRadius: '50%', margin: '0 auto 14px',
                         border: '3px solid rgba(239,68,68,0.2)', borderTopColor: '#ef4444',
@@ -511,7 +500,7 @@ export default function SwarmDebatePage() {
                       fontSize: '0.9rem', lineHeight: 1.6,
                     }}>
                       {t('error')}
-                      <div style={{ fontSize: '0.75rem', color: '#ef4444', marginTop: 6 }}>{error}</div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--accent-red)', marginTop: 6 }}>{error}</div>
                       <button
                         onClick={() => requestNextClaim(messages)}
                         style={{
@@ -519,7 +508,7 @@ export default function SwarmDebatePage() {
                           background: 'rgba(239,68,68,0.2)', color: '#fca5a5', cursor: 'pointer', fontWeight: 700,
                         }}
                       >
-                        Retry / أعد المحاولة
+                        {t('retryBtn')}
                       </button>
                     </div>
                   )}
@@ -528,13 +517,13 @@ export default function SwarmDebatePage() {
                     <>
                       {/* AI claim box */}
                       <div style={{ marginBottom: 20 }}>
-                        <span style={{ fontSize: '0.75rem', color: '#ef4444', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8 }}>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--accent-red)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8 }}>
                           {t('aiClaim')}
                         </span>
                         <div style={{
                           marginTop: 8, padding: 16, borderRadius: 12,
                           background: 'rgba(239,68,68,0.07)', border: '1px solid rgba(239,68,68,0.2)',
-                          color: '#fcd9d9', fontSize: '0.95rem', lineHeight: 1.7,
+                          color: 'var(--text-primary)', fontSize: '0.95rem', lineHeight: 1.7,
                           direction: 'ltr', // AI responds in the topic language; let natural direction handle it
                         }}>
                           {currentClaim.text}
@@ -543,7 +532,7 @@ export default function SwarmDebatePage() {
 
                       {/* Rebuttal input */}
                       <div>
-                        <label style={{ fontSize: '0.75rem', color: '#10b981', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8 }}>
+                        <label style={{ fontSize: '0.75rem', color: 'var(--accent-emerald)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.8 }}>
                           {t('yourRebuttal')}
                         </label>
                         <textarea
@@ -553,8 +542,8 @@ export default function SwarmDebatePage() {
                           rows={4}
                           style={{
                             width: '100%', marginTop: 8, padding: 12, borderRadius: 10,
-                            border: '1px solid rgba(16,185,129,0.2)', background: 'rgba(0,0,0,0.3)',
-                            color: '#e2e8f0', fontSize: '0.95rem', outline: 'none',
+                            border: '1px solid rgba(16,185,129,0.2)', background: 'var(--bg-elevated)',
+                            color: 'var(--text-primary)', fontSize: '0.95rem', outline: 'none',
                             resize: 'vertical', boxSizing: 'border-box',
                             fontFamily: isRtl ? 'Cairo, sans-serif' : 'Inter, sans-serif',
                             direction: isRtl ? 'rtl' : 'ltr',
@@ -566,8 +555,8 @@ export default function SwarmDebatePage() {
                           style={{
                             marginTop: 12, padding: '11px 28px', borderRadius: 10, border: 'none',
                             fontWeight: 800, fontSize: '0.9rem',
-                            background: rebuttal.trim() ? 'linear-gradient(135deg, #10b981, #059669)' : 'rgba(255,255,255,0.05)',
-                            color: rebuttal.trim() ? '#fff' : '#475569',
+                            background: rebuttal.trim() ? 'linear-gradient(135deg, #10b981, #059669)' : 'var(--bg-secondary)',
+                            color: rebuttal.trim() ? '#fff' : 'var(--text-caption)',
                             cursor: rebuttal.trim() ? 'pointer' : 'not-allowed',
                             transition: 'all 0.2s',
                           }}
@@ -586,36 +575,36 @@ export default function SwarmDebatePage() {
                       <div
                         key={i}
                         style={{
-                          background: 'rgba(15,23,42,0.7)', borderRadius: 14,
-                          border: '1px solid rgba(255,255,255,0.05)', padding: 18, marginBottom: 14,
+                          background: 'var(--bg-card)', borderRadius: 14,
+                          border: '1px solid var(--border-subtle)', padding: 18, marginBottom: 14,
                           opacity: i === 0 ? 1 : 0.65,
                         }}
                       >
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, flexWrap: 'wrap', gap: 8 }}>
-                          <span style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>
+                          <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase' }}>
                             {t('roundLabel')} {roundLog.length - i}
                           </span>
                           <span style={{
                             padding: '3px 10px', borderRadius: 6,
                             background: r.userNamedFallacy ? 'rgba(16,185,129,0.15)' : 'rgba(239,68,68,0.1)',
-                            color: r.userNamedFallacy ? '#10b981' : '#ef4444',
+                            color: r.userNamedFallacy ? 'var(--accent-emerald)' : 'var(--accent-red)',
                             fontSize: '0.7rem', fontWeight: 800,
                           }}>
                             {r.userNamedFallacy ? t('namedIt') : t('missedIt')}
                           </span>
                         </div>
 
-                        <div style={{ fontSize: '0.78rem', color: '#64748b', marginBottom: 4 }}>
-                          <strong style={{ color: '#f59e0b' }}>{t('fallacyWas')}</strong> {r.fallacyUsed}
-                          {r.fallacyDescription ? <span style={{ color: '#475569' }}> — {r.fallacyDescription}</span> : null}
+                        <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: 4 }}>
+                          <strong style={{ color: 'var(--accent-amber)' }}>{t('fallacyWas')}</strong> {r.fallacyUsed}
+                          {r.fallacyDescription ? <span style={{ color: 'var(--text-caption)' }}> — {r.fallacyDescription}</span> : null}
                         </div>
 
-                        <div style={{ fontSize: '0.78rem', color: '#94a3b8', marginTop: 6, borderTop: '1px solid rgba(255,255,255,0.04)', paddingTop: 8 }}>
-                          <strong style={{ color: '#ef4444', fontSize: '0.7rem' }}>{t('aiClaim')}</strong>{' '}
+                        <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', marginTop: 6, borderTop: '1px solid var(--border-subtle)', paddingTop: 8 }}>
+                          <strong style={{ color: 'var(--accent-red)', fontSize: '0.7rem' }}>{t('aiClaim')}</strong>{' '}
                           <span style={{ fontStyle: 'italic' }}>{r.aiClaim.slice(0, 120)}{r.aiClaim.length > 120 ? '…' : ''}</span>
                         </div>
-                        <div style={{ fontSize: '0.78rem', color: '#94a3b8', marginTop: 4 }}>
-                          <strong style={{ color: '#10b981', fontSize: '0.7rem' }}>{t('yourRebuttal')}</strong>{' '}
+                        <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', marginTop: 4 }}>
+                          <strong style={{ color: 'var(--accent-emerald)', fontSize: '0.7rem' }}>{t('yourRebuttal')}</strong>{' '}
                           {r.userRebuttal.slice(0, 120)}{r.userRebuttal.length > 120 ? '…' : ''}
                         </div>
                       </div>
@@ -627,32 +616,32 @@ export default function SwarmDebatePage() {
               {/* Sidebar: rules + active archetype */}
               <div>
                 <div style={{
-                  background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)', borderRadius: 18,
-                  border: '1px solid rgba(255,255,255,0.06)', padding: 22, marginBottom: 18,
+                  background: 'var(--bg-card)', backdropFilter: 'blur(12px)', borderRadius: 18,
+                  border: '1px solid var(--border-primary)', padding: 22, marginBottom: 18,
                   position: 'sticky', top: 24,
                 }}>
-                  <h3 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: 4 }}>📋 {t('rulesTitle')}</h3>
-                  <div style={{ height: 1, background: 'rgba(255,255,255,0.06)', marginBottom: 14 }} />
+                  <h3 style={{ fontSize: '0.95rem', fontWeight: 800, marginBottom: 4, color: 'var(--text-primary)' }}>📋 {t('rulesTitle')}</h3>
+                  <div style={{ height: 1, background: 'var(--border-primary)', marginBottom: 14 }} />
                   {RULES.map((rule, i) => (
-                    <div key={i} style={{ display: 'flex', gap: 8, padding: '7px 0', borderBottom: '1px solid rgba(255,255,255,0.03)' }}>
-                      <span style={{ color: '#f59e0b', fontSize: '0.75rem', marginTop: 1 }}>›</span>
-                      <span style={{ fontSize: '0.75rem', color: '#94a3b8', lineHeight: 1.5 }}>{rule[lang]}</span>
+                    <div key={i} style={{ display: 'flex', gap: 8, padding: '7px 0', borderBottom: '1px solid var(--border-subtle)' }}>
+                      <span style={{ color: 'var(--accent-amber)', fontSize: '0.75rem', marginTop: 1 }}>›</span>
+                      <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{rule[lang]}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Archetype selector (in-session) */}
                 <div style={{
-                  background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)', borderRadius: 18,
+                  background: 'var(--bg-card)', backdropFilter: 'blur(12px)', borderRadius: 18,
                   border: `1px solid ${arch.color}30`, padding: 20,
                 }}>
-                  <span style={{ fontSize: '0.65rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>{t('archLabel')}</span>
+                  <span style={{ fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase' }}>{t('archLabel')}</span>
                   <div style={{ fontSize: 36, textAlign: 'center', margin: '8px 0' }}>{arch.emoji}</div>
                   <div style={{ fontSize: '0.9rem', fontWeight: 800, color: arch.color, textAlign: 'center', marginBottom: 10 }}>{arch.name[lang]}</div>
-                  <p style={{ fontSize: '0.72rem', color: '#94a3b8', lineHeight: 1.5, marginBottom: 8 }}>
-                    <strong style={{ color: '#e2e8f0' }}>{t('styleLabel')}</strong> {arch.style[lang]}
+                  <p style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: 8 }}>
+                    <strong style={{ color: 'var(--text-primary)' }}>{t('styleLabel')}</strong> {arch.style[lang]}
                   </p>
-                  <p style={{ fontSize: '0.72rem', color: '#10b981', lineHeight: 1.5 }}>
+                  <p style={{ fontSize: '0.72rem', color: 'var(--accent-emerald)', lineHeight: 1.5 }}>
                     <strong>{t('counterLabel')}</strong> {arch.counter[lang]}
                   </p>
                   {/* Quick-switch archetypes */}
@@ -663,8 +652,8 @@ export default function SwarmDebatePage() {
                         onClick={() => setActiveArchIdx(i)}
                         title={a.name[lang]}
                         style={{
-                          fontSize: 18, background: activeArchIdx === i ? `${a.color}25` : 'rgba(255,255,255,0.04)',
-                          border: `1px solid ${activeArchIdx === i ? a.color + '50' : 'rgba(255,255,255,0.06)'}`,
+                          fontSize: 18, background: activeArchIdx === i ? `${a.color}25` : 'var(--bg-secondary)',
+                          border: `1px solid ${activeArchIdx === i ? a.color + '50' : 'var(--border-primary)'}`,
                           borderRadius: 8, padding: '4px 7px', cursor: 'pointer',
                         }}
                       >
@@ -679,8 +668,8 @@ export default function SwarmDebatePage() {
 
           {/* ── Back link ─────────────────────────────────────────── */}
           <div style={{ textAlign: 'center', marginTop: 48 }}>
-            <Link href="/explore" style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
-              ← Back to Explore
+            <Link href="/explore" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+              {t('backToExplore')}
             </Link>
             <PageNavigation currentPath="/swarm-debate" />
           </div>

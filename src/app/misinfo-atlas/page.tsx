@@ -650,7 +650,7 @@ export default function MisinfoGlobePage() {
   }, [isLiveMode, liveIndex, liveDelay, activeNodes]);
 
   return (
-    <div className="w-full h-screen bg-[#020205] overflow-hidden relative selection:bg-red-500/30" style={{ direction: isRTL ? 'rtl' : 'ltr', fontFamily: isRTL ? "'Noto Kufi Arabic', sans-serif" : "'Inter', sans-serif" }}>
+    <div className="w-full h-screen overflow-hidden relative selection:bg-red-500/30" style={{ background: "var(--bg-page)", direction: isRTL ? 'rtl' : 'ltr', fontFamily: isRTL ? "'Noto Kufi Arabic', sans-serif" : "'Inter', sans-serif" }}>
       {/* ════════════════════════════════════════════════════════════════
           0. INTRO NARRATIVE — "How to read this Atlas"
           A dismissible briefing that frames the whole experience: what the
@@ -659,7 +659,7 @@ export default function MisinfoGlobePage() {
           Fully bilingual (EN + Egyptian Arabic), RTL-aware.
           ════════════════════════════════════════════════════════════════ */}
       {showIntro && (
-        <div className="absolute inset-0 z-[70] overflow-y-auto bg-[#04040a]/95 backdrop-blur-xl animate-in fade-in duration-500">
+        <div className="absolute inset-0 z-[70] overflow-y-auto backdrop-blur-xl animate-in fade-in duration-500" style={{ background: "color-mix(in srgb, var(--bg-page) 95%, transparent)" }}>
           <div className="min-h-full w-full flex items-start justify-center px-5 py-16 sm:py-20">
             <div className="w-full max-w-3xl">
               {/* Header */}
@@ -672,14 +672,15 @@ export default function MisinfoGlobePage() {
                     <div className="text-[10px] font-mono uppercase tracking-[0.3em] mb-1" style={{ color: "var(--accent-cta)" }}>
                       {t({ en: "Field Briefing", ar: "إحاطة ميدانية", arEG: "إحاطة ميدانية" })}
                     </div>
-                    <h1 className="text-3xl sm:text-4xl font-bold tracking-wide text-white leading-tight" style={!isRTL ? { fontFamily: "'Clash Display', sans-serif" } : {}}>
+                    <h1 className="text-3xl sm:text-4xl font-bold tracking-wide leading-tight" style={{ color: "var(--text-primary)", ...(!isRTL ? { fontFamily: "'Clash Display', sans-serif" } : {}) }}>
                       {t({ en: "How to read the Atlas", ar: "كيف تقرأ الأطلس", arEG: "إزاي تقرا الأطلس" })}
                     </h1>
                   </div>
                 </div>
                 <button
                   onClick={() => setShowIntro(false)}
-                  className="text-slate-500 hover:text-white transition-colors shrink-0 p-1"
+                  className="hover:opacity-100 transition-opacity shrink-0 p-1"
+                  style={{ color: "var(--text-muted)" }}
                   aria-label="close"
                 >
                   <X size={22} />
@@ -688,14 +689,14 @@ export default function MisinfoGlobePage() {
 
               {/* Why it matters */}
               <div className="glass-card-v2 p-6 mb-6 leading-relaxed">
-                <p className="text-base text-slate-200 mb-3">
+                <p className="text-base mb-3" style={{ color: "var(--text-secondary)" }}>
                   {t({
                     en: "This is a map of how lies travel. Each glowing node is a real, documented deception — from the Trojan Horse to engineered bank-run panics — placed where it was unleashed and tagged with how much damage it caused.",
                     ar: "هذه خريطة لكيفية انتقال الأكاذيب. كل عقدة مضيئة هي خداع حقيقي موثّق — من حصان طروادة إلى حالات الذعر المصطنع لسحب الأموال — موضوعة حيث انطلقت ومُصنّفة بحجم الضرر الذي سبّبته.",
                     arEG: "دي خريطة بتوريك إزاي الكذبة بتمشي. كل عقدة منوّرة دي خداع حقيقي وموثّق — من حصان طروادة لحد حالات الذعر المصطنع لسحب الفلوس — متحطّة في المكان اللي انطلقت منه ومتسمّاة بحجم الضرر اللي عملته.",
                   })}
                 </p>
-                <p className="text-sm text-slate-400">
+                <p className="text-sm" style={{ color: "var(--text-muted)" }}>
                   {t({
                     en: "Why it matters: the same playbook from 1184 BC still runs today on your phone. Learn to recognise the pattern once, and you can spot it everywhere. Click any node to walk through its anatomy — or hit Run Scenario to let the auto-pilot play an era for you.",
                     ar: "لماذا يهم: نفس الأسلوب من عام 1184 قبل الميلاد ما زال يعمل اليوم على هاتفك. تعلّم النمط مرة، تكتشفه في كل مكان. اضغط أي عقدة لتتبع تشريحها — أو اضغط «تشغيل السيناريو» ليعرض الطيار الآلي حقبة كاملة.",
@@ -707,7 +708,7 @@ export default function MisinfoGlobePage() {
               {/* 8-Layer taxonomy */}
               <div className="flex items-center gap-2 mb-4">
                 <Layers size={16} style={{ color: "var(--accent-cta)" }} />
-                <h2 className="text-sm font-bold uppercase tracking-[0.25em] text-slate-200">
+                <h2 className="text-sm font-bold uppercase tracking-[0.25em]" style={{ color: "var(--text-secondary)" }}>
                   {t({ en: "The 8 Layers of Deception", ar: "طبقات الخداع الثماني", arEG: "طبقات الخداع التمنية" })}
                 </h2>
               </div>
@@ -715,18 +716,18 @@ export default function MisinfoGlobePage() {
                 {DECEPTION_LAYERS.map((layer) => (
                   <div
                     key={layer.n}
-                    className="rounded-xl p-4 border bg-white/[0.02] hover:bg-white/[0.04] transition-colors"
-                    style={{ borderColor: "color-mix(in srgb, " + layer.color + " 35%, transparent)" }}
+                    className="rounded-xl p-4 border transition-colors"
+                    style={{ background: "color-mix(in srgb, var(--bg-card) 40%, transparent)", borderColor: "color-mix(in srgb, " + layer.color + " 35%, transparent)" }}
                   >
                     <div className="flex items-center gap-2.5 mb-2">
                       <span className="w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold font-mono shrink-0" style={{ background: "color-mix(in srgb, " + layer.color + " 22%, transparent)", color: layer.color }}>
                         {layer.n}
                       </span>
-                      <span className="text-sm font-bold text-white leading-tight">
+                      <span className="text-sm font-bold leading-tight" style={{ color: "var(--text-primary)" }}>
                         {t({ en: layer.en, ar: layer.ar })}
                       </span>
                     </div>
-                    <p className="text-xs text-slate-400 leading-relaxed mb-2">
+                    <p className="text-xs leading-relaxed mb-2" style={{ color: "var(--text-muted)" }}>
                       {t({ en: layer.essenceEn, ar: layer.essenceAr })}
                     </p>
                     <p className="text-[11px] leading-relaxed flex items-start gap-1.5" style={{ color: layer.color }}>
@@ -740,19 +741,19 @@ export default function MisinfoGlobePage() {
               {/* Threat-level legend */}
               <div className="flex items-center gap-2 mb-4">
                 <Activity size={16} style={{ color: "var(--accent-cta)" }} />
-                <h2 className="text-sm font-bold uppercase tracking-[0.25em] text-slate-200">
+                <h2 className="text-sm font-bold uppercase tracking-[0.25em]" style={{ color: "var(--text-secondary)" }}>
                   {t({ en: "Reading the Threat Levels", ar: "قراءة مستويات الخطر", arEG: "إزاي تقرا مستويات الخطر" })}
                 </h2>
               </div>
               <div className="space-y-2.5 mb-10">
                 {THREAT_LEVELS.map((lvl) => (
-                  <div key={lvl.key} className="flex items-start gap-3 rounded-lg p-3 bg-white/[0.02] border border-white/5">
+                  <div key={lvl.key} className="flex items-start gap-3 rounded-lg p-3" style={{ background: "color-mix(in srgb, var(--bg-card) 40%, transparent)", border: "1px solid var(--border-subtle)" }}>
                     <span className="mt-1 w-3 h-3 rounded-full shrink-0" style={{ background: lvl.color, boxShadow: `0 0 10px ${lvl.color}` }} />
                     <div>
                       <span className="text-sm font-bold" style={{ color: lvl.color }}>
                         {t({ en: lvl.en, ar: lvl.ar })}
                       </span>
-                      <span className="text-xs text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">
+                      <span className="text-xs ml-2 rtl:ml-0 rtl:mr-2" style={{ color: "var(--text-muted)" }}>
                         {t({ en: lvl.descEn, ar: lvl.descAr })}
                       </span>
                     </div>
@@ -777,7 +778,8 @@ export default function MisinfoGlobePage() {
       {!showIntro && (
         <button
           onClick={() => setShowIntro(true)}
-          className="absolute bottom-6 right-6 rtl:right-auto rtl:left-6 z-[55] glass-card px-3 py-2 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors"
+          className="absolute bottom-6 right-6 rtl:right-auto rtl:left-6 z-[55] glass-card px-3 py-2 flex items-center gap-2 text-xs transition-colors"
+          style={{ color: "var(--text-secondary)" }}
           title={t({ en: "How to read the Atlas", ar: "كيف تقرأ الأطلس", arEG: "إزاي تقرا الأطلس" })}
         >
           <BookOpen size={14} />
@@ -788,11 +790,11 @@ export default function MisinfoGlobePage() {
       {/* 1. TOP OVERLAYS */}
       <div className="absolute top-[78px] left-8 z-50 pointer-events-auto">
         <div className="flex gap-4">
-          <Link href="/angry-debunkers" className="flex items-center gap-2 px-5 py-2.5 rounded-2xl font-bold text-white transition-all duration-300 hover:-translate-y-0.5" style={{ background: "linear-gradient(135deg, var(--accent-cta), color-mix(in srgb, var(--accent-cta) 60%, #160009))", boxShadow: "0 10px 30px var(--accent-cta-glow)" }}>
+          <Link href="/angry-debunkers" className="flex items-center gap-2 px-5 py-2.5 rounded-2xl font-bold transition-all duration-300 hover:-translate-y-0.5" style={{ color: "var(--text-inverse)", background: "linear-gradient(135deg, var(--accent-cta), color-mix(in srgb, var(--accent-cta) 60%, #160009))", boxShadow: "0 10px 30px var(--accent-cta-glow)" }}>
             <ShieldAlert size={16} />
             {t({ en: "Launch Angry Debunkers", ar: "إطلاق كاشف التزييف", arEG: "شغل كاشف التزييف" })}
           </Link>
-          <Link href="/six-layers" className="glass-card px-4 py-2 text-sm text-slate-300 hover:text-white flex items-center gap-2">
+          <Link href="/six-layers" className="glass-card px-4 py-2 text-sm flex items-center gap-2" style={{ color: "var(--text-secondary)" }}>
             ← {t({ en: "Return to Matrix", ar: "العودة للمصفوفة", arEG: "ارجع للمصفوفة" })}
           </Link>
         </div>
@@ -800,13 +802,13 @@ export default function MisinfoGlobePage() {
 
       <div className={`absolute top-[78px] z-50 pointer-events-auto flex items-center gap-3 transition-all duration-500 ${showScanners ? (isRTL ? 'left-[436px]' : 'right-[436px]') : (isRTL ? 'left-8' : 'right-8')}`}>
         <div className="glass-card flex items-center p-1 rounded-lg mr-4">
-          <button onClick={() => setViewMode('sphere')} className={`p-2 rounded transition-colors ${viewMode === 'sphere' ? 'bg-red-500/20 text-red-400' : 'text-slate-400 hover:text-white'}`} title="Geospatial Sphere">
+          <button onClick={() => setViewMode('sphere')} className="p-2 rounded transition-colors" style={{ background: viewMode === 'sphere' ? "color-mix(in srgb, var(--accent-cta) 20%, transparent)" : "transparent", color: viewMode === 'sphere' ? "var(--accent-cta)" : "var(--text-muted)" }} title={t({ en: "Geospatial Sphere", ar: "الكرة الجغرافية", arEG: "الكرة الجغرافية" })}>
             <Globe size={18} />
           </button>
-          <button onClick={() => setViewMode('echo')} className={`p-2 rounded transition-colors ${viewMode === 'echo' ? 'bg-red-500/20 text-red-400' : 'text-slate-400 hover:text-white'}`} title="Echo Chambers">
+          <button onClick={() => setViewMode('echo')} className="p-2 rounded transition-colors" style={{ background: viewMode === 'echo' ? "color-mix(in srgb, var(--accent-cta) 20%, transparent)" : "transparent", color: viewMode === 'echo' ? "var(--accent-cta)" : "var(--text-muted)" }} title={t({ en: "Echo Chambers", ar: "غرف الصدى", arEG: "غرف الصدى" })}>
             <Grid size={18} />
           </button>
-          <button onClick={() => setViewMode('pyramid')} className={`p-2 rounded transition-colors ${viewMode === 'pyramid' ? 'bg-red-500/20 text-red-400' : 'text-slate-400 hover:text-white'}`} title="Outrage Pyramid">
+          <button onClick={() => setViewMode('pyramid')} className="p-2 rounded transition-colors" style={{ background: viewMode === 'pyramid' ? "color-mix(in srgb, var(--accent-cta) 20%, transparent)" : "transparent", color: viewMode === 'pyramid' ? "var(--accent-cta)" : "var(--text-muted)" }} title={t({ en: "Outrage Pyramid", ar: "هرم الغضب", arEG: "هرم الغضب" })}>
             <Database size={18} />
           </button>
         </div>
@@ -823,7 +825,8 @@ export default function MisinfoGlobePage() {
               setIsLiveMode(true);
             }
           }}
-          className={`glass-card px-4 py-2 flex items-center gap-2 text-sm transition-colors ${isLiveMode ? 'text-red-500 border-red-500 shadow-[0_0_15px_rgba(220,38,38,0.5)]' : 'text-slate-300 hover:text-white'}`}
+          className="glass-card px-4 py-2 flex items-center gap-2 text-sm transition-colors"
+          style={isLiveMode ? { color: "var(--accent-red)", borderColor: "var(--accent-red)", boxShadow: "0 0 15px color-mix(in srgb, var(--accent-red) 50%, transparent)" } : { color: "var(--text-secondary)" }}
         >
           {isLiveMode ? <Square size={16} /> : <Play size={16} />}
           {t({ en: "Run Scenario", ar: "تشغيل السيناريو", arEG: "شغل السيناريو" })}
@@ -831,7 +834,8 @@ export default function MisinfoGlobePage() {
 
         <button 
           onClick={() => setShowScanners(!showScanners)}
-          className="glass-card px-4 py-2 flex items-center gap-2 text-sm text-slate-300 hover:text-white"
+          className="glass-card px-4 py-2 flex items-center gap-2 text-sm"
+          style={{ color: "var(--text-secondary)" }}
         >
           {showScanners ? <EyeOff size={16} /> : <Eye size={16} />}
           {showScanners 
@@ -843,9 +847,9 @@ export default function MisinfoGlobePage() {
 
       {/* 2. RIGHT SIDEBAR: LIVE THREAT FEED */}
       <div style={{ background: "color-mix(in srgb, var(--bg-card) 82%, transparent)", borderColor: "var(--border-primary)", backdropFilter: "blur(24px)" }} className={`absolute top-0 ${isRTL ? 'left-0 border-r' : 'right-0 border-l'} h-full w-[400px] max-w-[92vw] p-5 overflow-y-auto overflow-x-hidden z-40 flex flex-col gap-5 shadow-2xl transition-transform duration-500 ease-in-out ${showScanners ? 'translate-x-0' : isRTL ? '-translate-x-full' : 'translate-x-full'}`}>
-        <div className="flex items-center gap-3 mb-1 mt-20 border-b border-slate-800 pb-4">
-          <div className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse shadow-[0_0_10px_rgba(255,0,0,0.8)]" />
-          <h2 className="text-xl font-bold text-slate-100 tracking-widest uppercase" style={!isRTL ? { fontFamily: "'Clash Display', sans-serif" } : {}}>
+        <div className="flex items-center gap-3 mb-1 mt-20 pb-4" style={{ borderBottom: "1px solid var(--border-primary)" }}>
+          <div className="w-2.5 h-2.5 rounded-full animate-pulse" style={{ background: "var(--accent-red)", boxShadow: "0 0 10px color-mix(in srgb, var(--accent-red) 80%, transparent)" }} />
+          <h2 className="text-xl font-bold tracking-widest uppercase" style={{ color: "var(--text-primary)", ...(!isRTL ? { fontFamily: "'Clash Display', sans-serif" } : {}) }}>
             {t({ en: "Live Threat Feed", ar: "رادار التهديدات المباشر", arEG: "رادار التهديدات المباشر" })}
           </h2>
         </div>
@@ -854,17 +858,17 @@ export default function MisinfoGlobePage() {
             pulled from /api/kill-list (the verified backbone), each carrying a
             resolvable source. No fabricated posts. */}
         <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-widest -mt-2 mb-1">
-          <span className="flex items-center gap-1.5 text-emerald-400">
+          <span className="flex items-center gap-1.5" style={{ color: "var(--accent-emerald)" }}>
             <Database size={11} /> {t({ en: "Verified backbone", ar: "قاعدة بيانات موثقة", arEG: "قاعدة بيانات موثقة" })}
           </span>
-          <span className="text-slate-500">
+          <span style={{ color: "var(--text-muted)" }}>
             {threatsLoading ? '…' : `${liveThreats.length}`} {t({ en: "real cases", ar: "حالة حقيقية", arEG: "حالة حقيقية" })}
           </span>
         </div>
 
         {threatsLoading && (
-          <div className="flex flex-col items-center justify-center gap-3 py-12 text-slate-400">
-            <Loader2 size={28} className="animate-spin text-red-400" />
+          <div className="flex flex-col items-center justify-center gap-3 py-12" style={{ color: "var(--text-muted)" }}>
+            <Loader2 size={28} className="animate-spin" style={{ color: "var(--accent-red)" }} />
             <span className="text-xs uppercase tracking-widest font-mono">
               {t({ en: "Loading verified cases…", ar: "جارٍ تحميل الحالات الموثقة…", arEG: "بنحمّل الحالات الموثقة…" })}
             </span>
@@ -872,9 +876,9 @@ export default function MisinfoGlobePage() {
         )}
 
         {threatsError && !threatsLoading && (
-          <div className="text-xs text-red-300 bg-red-500/10 border border-red-500/20 rounded-lg p-3 leading-relaxed">
+          <div className="text-xs rounded-lg p-3 leading-relaxed" style={{ color: "var(--accent-red)", background: "color-mix(in srgb, var(--accent-red) 10%, transparent)", border: "1px solid color-mix(in srgb, var(--accent-red) 20%, transparent)" }}>
             {t({ en: "Could not reach the verified case archive.", ar: "تعذّر الوصول إلى أرشيف الحالات الموثقة.", arEG: "مقدرناش نوصل لأرشيف الحالات الموثقة." })}
-            <span className="block text-red-500/70 font-mono mt-1">/api/kill-list — {threatsError}</span>
+            <span className="block font-mono mt-1" style={{ color: "color-mix(in srgb, var(--accent-red) 70%, transparent)" }}>/api/kill-list — {threatsError}</span>
           </div>
         )}
 
@@ -900,42 +904,43 @@ export default function MisinfoGlobePage() {
       {/* 3. STORYTELLING BRIEFING PANEL */}
       {selectedNode && (
         <div className={`absolute top-1/2 ${isRTL ? 'right-[10%]' : 'left-[10%]'} transform -translate-y-1/2 z-50 w-[460px] glass-card-v2 p-8 shadow-[0_0_80px_rgba(220,38,38,0.15)] animate-in slide-in-from-${isRTL ? 'right' : 'left'}-10 duration-500`}>
-          <button 
+          <button
             onClick={handleCloseModal}
-            className="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors"
+            className="absolute top-4 right-4 transition-colors"
+            style={{ color: "var(--text-muted)" }}
           >
             ✕
           </button>
-          
+
           <div className="flex items-center gap-3 mb-6">
-            <Crosshair className="text-red-500 w-6 h-6 animate-pulse" />
-            <h2 className="text-2xl font-bold text-white tracking-widest uppercase text-gradient-crimson" style={!isRTL ? { fontFamily: "'Clash Display', sans-serif" } : {}}>
+            <Crosshair className="w-6 h-6 animate-pulse" style={{ color: "var(--accent-red)" }} />
+            <h2 className="text-2xl font-bold tracking-widest uppercase text-gradient-crimson" style={{ color: "var(--text-primary)", ...(!isRTL ? { fontFamily: "'Clash Display', sans-serif" } : {}) }}>
               {language.startsWith('ar') ? selectedNode.nameAr : selectedNode.name}
             </h2>
           </div>
           
           <div className="space-y-6">
-            <div className="flex justify-between items-start border-b border-slate-800 pb-4">
+            <div className="flex justify-between items-start pb-4" style={{ borderBottom: "1px solid var(--border-primary)" }}>
               <div>
-                <div className="text-[10px] text-red-500 uppercase tracking-widest mb-1.5">{t({ en: "Infection Rate", ar: "معدل العدوى", arEG: "معدل الانتشار" })}</div>
-                <div className="text-xs text-white/90 bg-red-500/10 inline-block px-3 py-1 rounded border border-red-500/20">{selectedNode.infectionRate}</div>
+                <div className="text-[10px] uppercase tracking-widest mb-1.5" style={{ color: "var(--accent-red)" }}>{t({ en: "Infection Rate", ar: "معدل العدوى", arEG: "معدل الانتشار" })}</div>
+                <div className="text-xs inline-block px-3 py-1 rounded" style={{ color: "var(--text-primary)", background: "color-mix(in srgb, var(--accent-red) 10%, transparent)", border: "1px solid color-mix(in srgb, var(--accent-red) 20%, transparent)" }}>{selectedNode.infectionRate}</div>
               </div>
               <div className="text-right">
-                <div className="text-[10px] text-slate-500 uppercase tracking-widest mb-1.5">{t({ en: "Temporal Log", ar: "السجل الزمني", arEG: "السجل الزمني" })}</div>
-                <div className="text-xs text-slate-300 font-mono bg-slate-800 inline-block px-3 py-1 rounded border border-slate-700">
+                <div className="text-[10px] uppercase tracking-widest mb-1.5" style={{ color: "var(--text-muted)" }}>{t({ en: "Temporal Log", ar: "السجل الزمني", arEG: "السجل الزمني" })}</div>
+                <div className="text-xs font-mono inline-block px-3 py-1 rounded" style={{ color: "var(--text-secondary)", background: "var(--bg-secondary)", border: "1px solid var(--border-secondary)" }}>
                   {language.startsWith('ar') ? selectedNode.dateAr : selectedNode.date}
                 </div>
               </div>
             </div>
             
             <div className="relative pl-6 space-y-6">
-              <div className="absolute left-2 top-2 bottom-2 w-0.5 bg-slate-800 rounded-full" />
-              
+              <div className="absolute left-2 top-2 bottom-2 w-0.5 rounded-full" style={{ background: "var(--border-secondary)" }} />
+
               {/* Step 1: Vector */}
               <div className={`relative transition-opacity duration-500 ${briefingStep >= 1 ? 'opacity-100' : 'opacity-30'}`}>
-                <div className={`absolute -left-[29px] top-1.5 w-3 h-3 rounded-full ${briefingStep >= 1 ? 'bg-red-500 shadow-[0_0_10px_rgba(255,0,0,0.8)]' : 'bg-slate-700'}`} />
-                <div className="text-[10px] text-red-500 uppercase tracking-widest mb-1">{t({ en: "Primary Vectors", ar: "المتجهات الأساسية", arEG: "المتجهات الأساسية" })}</div>
-                <div className="text-sm text-slate-300 leading-relaxed">
+                <div className="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full" style={briefingStep >= 1 ? { background: "var(--accent-red)", boxShadow: "0 0 10px color-mix(in srgb, var(--accent-red) 80%, transparent)" } : { background: "var(--border-secondary)" }} />
+                <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: "var(--accent-red)" }}>{t({ en: "Primary Vectors", ar: "المتجهات الأساسية", arEG: "المتجهات الأساسية" })}</div>
+                <div className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
                   {language.startsWith('ar') ? selectedNode.casesAr : selectedNode.cases}
                 </div>
               </div>
@@ -943,9 +948,9 @@ export default function MisinfoGlobePage() {
               {/* Step 2: Analysis */}
               {briefingStep >= 2 && (
                 <div className="relative animate-in slide-in-from-left-4 fade-in duration-500">
-                  <div className="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.8)]" />
-                  <div className="text-[10px] text-amber-500 uppercase tracking-widest mb-1">{t({ en: "OSINT Analysis", ar: "تحليل المصادر المفتوحة", arEG: "تحليل المصادر المفتوحة" })}</div>
-                  <div className="text-sm text-slate-300 leading-relaxed font-mono bg-slate-900/50 p-3 rounded-lg border border-slate-800">
+                  <div className="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full" style={{ background: "var(--accent-amber)", boxShadow: "0 0 10px color-mix(in srgb, var(--accent-amber) 80%, transparent)" }} />
+                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: "var(--accent-amber)" }}>{t({ en: "OSINT Analysis", ar: "تحليل المصادر المفتوحة", arEG: "تحليل المصادر المفتوحة" })}</div>
+                  <div className="text-sm leading-relaxed font-mono p-3 rounded-lg" style={{ color: "var(--text-secondary)", background: "color-mix(in srgb, var(--bg-secondary) 50%, transparent)", border: "1px solid var(--border-primary)" }}>
                     {language.startsWith('ar') ? selectedNode.explanationAr : selectedNode.explanation}
                   </div>
                 </div>
@@ -954,9 +959,9 @@ export default function MisinfoGlobePage() {
               {/* Step 3: Impact */}
               {briefingStep >= 3 && (
                 <div className="relative animate-in slide-in-from-left-4 fade-in duration-500">
-                  <div className="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full bg-violet-500 shadow-[0_0_10px_rgba(139,92,246,0.8)]" />
-                  <div className="text-[10px] text-violet-400 uppercase tracking-widest mb-1">{t({ en: "Estimated Devastation", ar: "الدمار المقدر", arEG: "حجم الكارثة" })}</div>
-                  <div className="text-lg font-bold text-white tracking-wider text-gradient-violet">
+                  <div className="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full" style={{ background: "var(--accent-purple)", boxShadow: "0 0 10px color-mix(in srgb, var(--accent-purple) 80%, transparent)" }} />
+                  <div className="text-[10px] uppercase tracking-widest mb-1" style={{ color: "var(--accent-purple)" }}>{t({ en: "Estimated Devastation", ar: "الدمار المقدر", arEG: "حجم الكارثة" })}</div>
+                  <div className="text-lg font-bold tracking-wider text-gradient-violet" style={{ color: "var(--text-primary)" }}>
                     {language.startsWith('ar') ? selectedNode.estimatedLossAr : selectedNode.estimatedLoss}
                   </div>
                 </div>
@@ -978,44 +983,45 @@ export default function MisinfoGlobePage() {
 
       {/* LIVE MODE CONTROL BAR */}
       {isLiveMode && (
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-50 glass-card-v2 p-4 px-10 flex items-center gap-8 shadow-[0_0_50px_rgba(220,38,38,0.3)] border-red-500/50 animate-in slide-in-from-bottom-10">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-50 glass-card-v2 p-4 px-10 flex items-center gap-8 animate-in slide-in-from-bottom-10" style={{ boxShadow: "0 0 50px color-mix(in srgb, var(--accent-red) 30%, transparent)", borderColor: "color-mix(in srgb, var(--accent-red) 50%, transparent)" }}>
           <div className="flex items-center gap-3">
-            <div className="w-3 h-3 rounded-full bg-red-500 animate-pulse shadow-[0_0_15px_rgba(255,0,0,0.8)]" />
-            <span className="text-red-500 font-bold uppercase tracking-widest text-sm" style={!isRTL ? { fontFamily: "'Clash Display', sans-serif" } : {}}>
+            <div className="w-3 h-3 rounded-full animate-pulse" style={{ background: "var(--accent-red)", boxShadow: "0 0 15px color-mix(in srgb, var(--accent-red) 80%, transparent)" }} />
+            <span className="font-bold uppercase tracking-widest text-sm" style={{ color: "var(--accent-red)", ...(!isRTL ? { fontFamily: "'Clash Display', sans-serif" } : {}) }}>
               {t({ en: "Scenario Auto-Pilot", ar: "الطيار الآلي للسيناريو", arEG: "الطيار الآلي" })}
             </span>
           </div>
 
           {/* Live progress — proof the auto-pilot is actually walking the nodes */}
-          <div className="flex items-center gap-3 border-l border-white/10 pl-8">
-            <Activity size={16} className="text-red-400 animate-pulse" />
-            <span className="text-xs font-mono text-white">
+          <div className="flex items-center gap-3 pl-8" style={{ borderLeft: "1px solid var(--border-secondary)" }}>
+            <Activity size={16} className="animate-pulse" style={{ color: "var(--accent-red)" }} />
+            <span className="text-xs font-mono" style={{ color: "var(--text-primary)" }}>
               {activeNodes.length > 0 ? ((liveIndex % activeNodes.length) + 1) : 0}
-              <span className="text-slate-500"> / {activeNodes.length}</span>
+              <span style={{ color: "var(--text-muted)" }}> / {activeNodes.length}</span>
             </span>
-            <span className="text-[10px] text-slate-400 uppercase tracking-widest truncate max-w-[180px]">
+            <span className="text-[10px] uppercase tracking-widest truncate max-w-[180px]" style={{ color: "var(--text-muted)" }}>
               {selectedNode ? (language.startsWith('ar') ? selectedNode.nameAr : selectedNode.name) : '—'}
             </span>
           </div>
 
-          <div className="flex items-center gap-4 border-l border-white/10 pl-8">
-            <Timer size={18} className="text-slate-400" />
-            <span className="text-xs text-slate-400 font-mono uppercase tracking-widest">
+          <div className="flex items-center gap-4 pl-8" style={{ borderLeft: "1px solid var(--border-secondary)" }}>
+            <Timer size={18} style={{ color: "var(--text-muted)" }} />
+            <span className="text-xs font-mono uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>
               {t({ en: "Delay", ar: "التأخير", arEG: "وقت التأخير" })}
             </span>
-            <input 
-              type="range" 
-              min="3000" 
-              max="15000" 
-              step="1000" 
-              value={liveDelay} 
-              onChange={(e) => setLiveDelay(Number(e.target.value))} 
-              className="w-48 accent-red-500"
+            <input
+              type="range"
+              min="3000"
+              max="15000"
+              step="1000"
+              value={liveDelay}
+              onChange={(e) => setLiveDelay(Number(e.target.value))}
+              className="w-48"
+              style={{ accentColor: "var(--accent-red)" }}
             />
-            <span className="text-sm text-white font-mono w-12 font-bold">{liveDelay / 1000}s</span>
+            <span className="text-sm font-mono w-12 font-bold" style={{ color: "var(--text-primary)" }}>{liveDelay / 1000}s</span>
           </div>
-          
-          <button onClick={() => setIsLiveMode(false)} className="text-xs text-slate-400 hover:text-white uppercase tracking-widest border border-white/10 px-6 py-2 rounded bg-white/5 hover:bg-white/10 transition-colors ml-4">
+
+          <button onClick={() => setIsLiveMode(false)} className="text-xs uppercase tracking-widest px-6 py-2 rounded transition-colors ml-4" style={{ color: "var(--text-muted)", border: "1px solid var(--border-secondary)", background: "color-mix(in srgb, var(--text-primary) 5%, transparent)" }}>
             {t({ en: "Stop Tracking", ar: "إيقاف التتبع", arEG: "وقف التتبع" })}
           </button>
         </div>
@@ -1036,10 +1042,10 @@ export default function MisinfoGlobePage() {
               </div>
             </div>
             <div className="text-right">
-              <div className="text-[10px] font-mono text-slate-500 uppercase mb-1">
+              <div className="text-[10px] font-mono uppercase mb-1" style={{ color: "var(--text-muted)" }}>
                 {t({ en: "Active Nodes", ar: "العقد النشطة", arEG: "العقد النشطة" })}
               </div>
-              <div className="text-lg text-white font-bold font-mono">
+              <div className="text-lg font-bold font-mono" style={{ color: "var(--text-primary)" }}>
                 {activeNodes.length}
               </div>
             </div>

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { PageNavigation } from '@/components/shared/page-navigation';
+import { useRTL } from '@/components/shared/rtl-provider';
 
 const enginesData = [
   {
@@ -167,20 +168,21 @@ const enginesData = [
   },
 ];
 
-function statusMeta(status?: string) {
+function statusMeta(status?: string, isRTL = false) {
   switch (status) {
     case 'operational':
-      return { label: 'Operational', color: '#10b981' };
+      return { label: isRTL ? 'شغّال' : 'Operational', color: '#10b981' };
     case 'partial':
-      return { label: 'Partial', color: '#f59e0b' };
+      return { label: isRTL ? 'جزئي' : 'Partial', color: '#f59e0b' };
     case 'prototype':
-      return { label: 'Prototype', color: '#a855f7' };
+      return { label: isRTL ? 'نموذج أولي' : 'Prototype', color: '#a855f7' };
     default:
-      return { label: 'In progress', color: '#64748b' };
+      return { label: isRTL ? 'قيد التنفيذ' : 'In progress', color: '#64748b' };
   }
 }
 
 export default function EnginesGuidePage() {
+  const { isRTL } = useRTL();
   const [expanded, setExpanded] = useState<number | null>(0);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -200,7 +202,7 @@ export default function EnginesGuidePage() {
         .eg-usecase:hover { background: rgba(255,255,255,0.04) !important; }
         .eg-metric:hover { transform: scale(1.05); }
       `}</style>
-      <main style={{ minHeight: '100vh', background: '#020617', color: '#e2e8f0', fontFamily: 'Inter, sans-serif', padding: '40px 24px 80px' }}>
+      <main dir={isRTL ? 'rtl' : 'ltr'} style={{ minHeight: '100vh', background: 'var(--bg-page)', color: 'var(--text-primary)', fontFamily: 'Inter, sans-serif', padding: '40px 24px 80px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           {/* Header */}
           <header style={{ textAlign: 'center', marginBottom: 40, animation: 'egFadeIn 0.6s ease-out' }}>
@@ -211,15 +213,15 @@ export default function EnginesGuidePage() {
               boxShadow: '0 0 40px rgba(59,130,246,0.4)',
             }}>🗺️</div>
             <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, margin: '0 0 8px', background: 'linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              AI Engines Guide
+              {isRTL ? 'دليل محركات الذكاء الاصطناعي' : 'AI Engines Guide'}
             </h1>
-            <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '1.2rem', color: '#94a3b8', direction: 'rtl', fontWeight: 700 }}>
-              دليل محركات الذكاء الاصطناعي
+            <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '1.2rem', color: 'var(--text-secondary)', direction: isRTL ? 'ltr' : 'rtl', fontWeight: 700 }}>
+              {isRTL ? 'AI Engines Guide' : 'دليل محركات الذكاء الاصطناعي'}
             </p>
-            <p style={{ color: '#64748b', maxWidth: 650, margin: '12px auto 0', lineHeight: 1.7 }}>
-              Reference guide to the platform&apos;s AI verification engines and tools, each aimed at a
-              specific dimension of misinformation defense. Status labels mark what is operational today
-              versus prototype. Accuracy figures are not independently benchmarked.
+            <p style={{ color: 'var(--text-muted)', maxWidth: 650, margin: '12px auto 0', lineHeight: 1.7 }}>
+              {isRTL
+                ? 'دليل مرجعي لمحركات وأدوات التحقق بالذكاء الاصطناعي في المنصة، كل واحد بيركّز على بُعد معيّن من أبعاد مكافحة التضليل. علامات الحالة بتوضّح إيه اللي شغّال دلوقتي وإيه اللي لسه نموذج أولي. أرقام الدقة مش متقاسة بشكل مستقل.'
+                : "Reference guide to the platform's AI verification engines and tools, each aimed at a specific dimension of misinformation defense. Status labels mark what is operational today versus prototype. Accuracy figures are not independently benchmarked."}
             </p>
           </header>
 
@@ -230,11 +232,12 @@ export default function EnginesGuidePage() {
             <input
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search engines by name or purpose..."
+              placeholder={isRTL ? 'دوّر على المحركات بالاسم أو الغرض...' : 'Search engines by name or purpose...'}
               style={{
-                width: '100%', padding: '14px 20px', borderRadius: 14, border: '1px solid rgba(255,255,255,0.1)',
-                background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)', color: '#e2e8f0',
+                width: '100%', padding: '14px 20px', borderRadius: 14, border: '1px solid var(--border-primary)',
+                background: 'var(--bg-card)', backdropFilter: 'blur(12px)', color: 'var(--text-primary)',
                 fontFamily: 'Inter, sans-serif', fontSize: '0.95rem', outline: 'none', boxSizing: 'border-box',
+                textAlign: isRTL ? 'right' : 'left',
               }}
             />
           </div>
@@ -246,8 +249,8 @@ export default function EnginesGuidePage() {
               return (
                 <div key={i} className="eg-accordion" style={{
                   borderRadius: 20, overflow: 'hidden',
-                  background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
-                  border: `1px solid ${isOpen ? e.color + '40' : 'rgba(255,255,255,0.06)'}`,
+                  background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
+                  border: `1px solid ${isOpen ? e.color + '40' : 'var(--border-subtle)'}`,
                   transition: 'all 0.3s ease',
                   animation: `egFadeIn 0.5s ease-out ${0.1 * i}s both`,
                 }}>
@@ -256,42 +259,42 @@ export default function EnginesGuidePage() {
                     onClick={() => setExpanded(isOpen ? null : i)}
                     style={{
                       width: '100%', padding: '20px 28px', background: 'none', border: 'none', cursor: 'pointer',
-                      display: 'flex', alignItems: 'center', gap: 16, color: '#e2e8f0', textAlign: 'left',
+                      display: 'flex', alignItems: 'center', gap: 16, color: 'var(--text-primary)', textAlign: isRTL ? 'right' : 'left',
                       fontFamily: 'Inter, sans-serif',
                     }}
                   >
                     <span style={{ fontSize: 32, flexShrink: 0 }}>{e.icon}</span>
                     <div style={{ flex: 1 }}>
-                      <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: e.color, margin: 0 }}>{e.name}</h3>
-                      <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '0.8rem', color: '#94a3b8', direction: 'rtl', margin: 0, fontWeight: 600 }}>{e.nameAr}</p>
+                      <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: e.color, margin: 0 }}>{isRTL ? e.nameAr : e.name}</h3>
+                      <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '0.8rem', color: 'var(--text-secondary)', direction: isRTL ? 'ltr' : 'rtl', margin: 0, fontWeight: 600 }}>{isRTL ? e.name : e.nameAr}</p>
                     </div>
                     <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexShrink: 0 }}>
                       <span style={{ padding: '4px 10px', borderRadius: 6, background: `${statusMeta(e.status).color}18`, color: statusMeta(e.status).color, fontSize: '0.7rem', fontWeight: 800 }}>
-                        {statusMeta(e.status).label}
+                        {statusMeta(e.status, isRTL).label}
                       </span>
-                      <span style={{ fontSize: '1.2rem', color: '#64748b', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s', display: 'inline-block' }}>▼</span>
+                      <span style={{ fontSize: '1.2rem', color: 'var(--text-muted)', transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s', display: 'inline-block' }}>▼</span>
                     </div>
                   </button>
 
                   {/* Expandable Content */}
                   {isOpen && (
                     <div style={{ padding: '0 28px 28px', animation: 'egFadeIn 0.4s ease-out' }}>
-                      <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 20 }}>
+                      <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: 20 }}>
                         {/* Purpose */}
-                        <p style={{ fontSize: '0.9rem', color: '#94a3b8', lineHeight: 1.7, marginBottom: 20 }}>{e.purpose}</p>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 20 }}>{e.purpose}</p>
 
                         {/* Metrics */}
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 12, marginBottom: 20 }}>
                           {[
-                            { label: 'Validation', value: e.accuracy },
-                            { label: 'Latency', value: e.latency },
-                            { label: 'Models', value: e.models },
+                            { label: isRTL ? 'التحقّق' : 'Validation', value: e.accuracy },
+                            { label: isRTL ? 'زمن الاستجابة' : 'Latency', value: e.latency },
+                            { label: isRTL ? 'النماذج' : 'Models', value: e.models },
                           ].map((m, j) => (
                             <div key={j} className="eg-metric" style={{
-                              padding: '12px 16px', borderRadius: 12, background: 'rgba(0,0,0,0.2)',
-                              border: '1px solid rgba(255,255,255,0.04)', transition: 'transform 0.2s', cursor: 'default',
+                              padding: '12px 16px', borderRadius: 12, background: 'var(--bg-elevated)',
+                              border: '1px solid var(--border-subtle)', transition: 'transform 0.2s', cursor: 'default',
                             }}>
-                              <div style={{ fontSize: '0.65rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase', marginBottom: 4 }}>{m.label}</div>
+                              <div style={{ fontSize: '0.65rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', marginBottom: 4 }}>{m.label}</div>
                               <div style={{ fontSize: '0.85rem', fontWeight: 700, color: e.color }}>{m.value}</div>
                             </div>
                           ))}
@@ -300,32 +303,32 @@ export default function EnginesGuidePage() {
                         {/* Input/Output */}
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 20 }}>
                           <div>
-                            <div style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase', marginBottom: 6 }}>📥 Input</div>
-                            <p style={{ fontSize: '0.8rem', color: '#94a3b8', lineHeight: 1.5, margin: 0 }}>{e.input}</p>
+                            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', marginBottom: 6 }}>{isRTL ? '📥 المدخلات' : '📥 Input'}</div>
+                            <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.5, margin: 0 }}>{e.input}</p>
                           </div>
                           <div>
-                            <div style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase', marginBottom: 6 }}>📤 Output</div>
-                            <p style={{ fontSize: '0.8rem', color: '#94a3b8', lineHeight: 1.5, margin: 0 }}>{e.output}</p>
+                            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', marginBottom: 6 }}>{isRTL ? '📤 المخرجات' : '📤 Output'}</div>
+                            <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.5, margin: 0 }}>{e.output}</p>
                           </div>
                         </div>
 
                         {/* Use Cases */}
                         <div>
-                          <div style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 700, textTransform: 'uppercase', marginBottom: 8 }}>🎯 Use Cases</div>
+                          <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', marginBottom: 8 }}>{isRTL ? '🎯 حالات الاستخدام' : '🎯 Use Cases'}</div>
                           {e.useCases.map((uc, j) => (
                             <div key={j} className="eg-usecase" style={{
                               display: 'flex', gap: 8, padding: '8px 12px', borderRadius: 8,
                               transition: 'background 0.2s', marginBottom: 4,
                             }}>
                               <span style={{ color: e.color, flexShrink: 0 }}>→</span>
-                              <span style={{ fontSize: '0.8rem', color: '#94a3b8', lineHeight: 1.5 }}>{uc}</span>
+                              <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{uc}</span>
                             </div>
                           ))}
                         </div>
 
                         {/* Route Link */}
                         {e.route && (
-                          <div style={{ marginTop: 22, paddingTop: 18, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+                          <div style={{ marginTop: 22, paddingTop: 18, borderTop: '1px solid var(--border-subtle)' }}>
                             <Link
                               href={e.route}
                               style={{
@@ -335,11 +338,11 @@ export default function EnginesGuidePage() {
                                 color: e.color, fontSize: '0.85rem', fontWeight: 700,
                               }}
                             >
-                              Open this engine
-                              <span style={{ fontFamily: 'Cairo, sans-serif', color: '#94a3b8', fontWeight: 600 }}>· افتح المحرك</span>
+                              {isRTL ? 'افتح المحرك' : 'Open this engine'}
+                              <span style={{ fontFamily: 'Cairo, sans-serif', color: 'var(--text-secondary)', fontWeight: 600 }}>{isRTL ? '· Open this engine' : '· افتح المحرك'}</span>
                               <span aria-hidden>→</span>
                             </Link>
-                            <span style={{ marginInlineStart: 10, fontSize: '0.72rem', color: '#64748b' }}>{e.route}</span>
+                            <span style={{ marginInlineStart: 10, fontSize: '0.72rem', color: 'var(--text-muted)' }}>{e.route}</span>
                           </div>
                         )}
                       </div>
@@ -356,26 +359,26 @@ export default function EnginesGuidePage() {
             marginTop: 40, animation: 'egFadeIn 0.6s ease-out 0.8s both',
           }}>
             {[
-              { label: 'Engines & Tools', value: String(enginesData.length), icon: '⚡' },
-              { label: 'Operational Now', value: String(enginesData.filter(e => e.status === 'operational').length), icon: '✅' },
-              { label: 'Primary Model', value: 'Gemini 2.0 Flash', icon: '🤖' },
-              { label: 'Metrics', value: 'Not benchmarked', icon: '🔬' },
+              { label: isRTL ? 'المحركات والأدوات' : 'Engines & Tools', value: String(enginesData.length), icon: '⚡' },
+              { label: isRTL ? 'شغّال دلوقتي' : 'Operational Now', value: String(enginesData.filter(e => e.status === 'operational').length), icon: '✅' },
+              { label: isRTL ? 'النموذج الأساسي' : 'Primary Model', value: 'Gemini 2.0 Flash', icon: '🤖' },
+              { label: isRTL ? 'المقاييس' : 'Metrics', value: isRTL ? 'مش متقاسة' : 'Not benchmarked', icon: '🔬' },
             ].map((s, i) => (
               <div key={i} style={{
-                padding: 20, borderRadius: 16, textAlign: 'center', background: 'rgba(15,23,42,0.6)',
-                border: '1px solid rgba(255,255,255,0.06)', backdropFilter: 'blur(12px)',
+                padding: 20, borderRadius: 16, textAlign: 'center', background: 'var(--bg-card)',
+                border: '1px solid var(--border-subtle)', backdropFilter: 'blur(12px)',
               }}>
                 <div style={{ fontSize: 24, marginBottom: 8 }}>{s.icon}</div>
                 <div style={{ fontSize: 'clamp(0.95rem, 2.4vw, 1.4rem)', lineHeight: 1.2, fontWeight: 900, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{s.value}</div>
-                <div style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 600 }}>{s.label}</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>{s.label}</div>
               </div>
             ))}
           </div>
 
           {/* Back Link */}
           <div style={{ textAlign: 'center', marginTop: 48 }}>
-            <Link href="/explore" style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
-              ← Back to Explore
+            <Link href="/explore" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+              {isRTL ? 'الرجوع للاستكشاف →' : '← Back to Explore'}
             </Link>
             <PageNavigation currentPath="/engines-guide" />
           </div>

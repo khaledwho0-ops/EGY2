@@ -179,14 +179,14 @@ export default function ForensicC2PAPage() {
     s === "critical" ? "#ef4444" : s === "high" ? "#f97316" : "#f59e0b";
 
   return (
-    <div style={{ minHeight: "100vh", background: "#050510", color: "#e0e0e0", fontFamily: "'Inter', sans-serif" }} dir={isRTL ? "rtl" : "ltr"}>
+    <div style={{ minHeight: "100vh", background: "var(--bg-page)", color: "var(--text-primary)", fontFamily: "'Inter', sans-serif" }} dir={isRTL ? "rtl" : "ltr"}>
 
       {/* ── Ambient Glow ─────────────────────────── */}
       <div style={{ position: "fixed", inset: 0, background: "radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.06) 0%, transparent 50%)", pointerEvents: "none", zIndex: 0 }} />
 
       {/* ── Navigation ───────────────────────────── */}
       <nav style={{ position: "relative", zIndex: 10, padding: "1.5rem 2rem" }}>
-        <Link href="/deepreal" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "rgba(255,255,255,0.5)", textDecoration: "none", fontSize: "0.875rem", fontWeight: 500, transition: "color 0.3s" }}>
+        <Link href="/deepreal" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "var(--text-muted)", textDecoration: "none", fontSize: "0.875rem", fontWeight: 500, transition: "color 0.3s" }}>
           <ArrowLeft size={16} /> {t({ en: "Back to DeepReal", ar: "العودة إلى ديب ريل" })}
         </Link>
       </nav>
@@ -194,13 +194,13 @@ export default function ForensicC2PAPage() {
       {/* ── Header ────────────────────────────────── */}
       <header style={{ position: "relative", zIndex: 10, textAlign: "center", padding: "1rem 2rem 2rem", maxWidth: 800, margin: "0 auto" }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "5px 14px", borderRadius: 20, background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.3)", marginBottom: 16 }}>
-          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "2px", color: "#3b82f6", textTransform: "uppercase" }}>🛡️ {t({ en: "Digital Forensics", ar: "الطب الشرعي الرقمي" })}</span>
+          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "2px", color: "var(--accent-blue)", textTransform: "uppercase" }}>🛡️ {t({ en: "Digital Forensics", ar: "الطب الشرعي الرقمي" })}</span>
         </div>
         <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>🛡️</div>
-        <h1 style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", fontWeight: 800, margin: "0 0 0.75rem", background: "linear-gradient(135deg, #fff 30%, #3b82f6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+        <h1 style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", fontWeight: 800, margin: "0 0 0.75rem", background: "linear-gradient(135deg, var(--text-primary) 30%, var(--accent-blue))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
           {t({ en: "Provenance Verifier", ar: "مُحقِّق مصدر المحتوى" })}
         </h1>
-        <p style={{ fontSize: "1rem", lineHeight: 1.7, color: "rgba(255,255,255,0.5)", maxWidth: 650, margin: "0 auto" }}>
+        <p style={{ fontSize: "1rem", lineHeight: 1.7, color: "var(--text-secondary)", maxWidth: 650, margin: "0 auto" }}>
           {t({
             en: "Verify Content Credentials using the C2PA standard. Check digital signatures, provenance chains, AI generation disclosure, and JUMBF manifests to establish who created content, when, and how it was modified.",
             ar: "تحقق من بيانات اعتماد المحتوى باستخدام معيار C2PA. افحص التوقيعات الرقمية، وسلاسل المصدر، وإفصاح التوليد بالذكاء الاصطناعي، وبيانات JUMBF لمعرفة من أنشأ المحتوى ومتى وكيف تم تعديله."
@@ -222,9 +222,9 @@ export default function ForensicC2PAPage() {
             style={{
               padding: "10px 18px", borderRadius: 12, fontSize: "0.85rem", fontWeight: 600,
               cursor: "pointer", transition: "all 0.3s", border: "1px solid",
-              background: activeTab === tab.key ? "rgba(59,130,246,0.15)" : "rgba(255,255,255,0.03)",
-              borderColor: activeTab === tab.key ? "rgba(59,130,246,0.4)" : "rgba(255,255,255,0.08)",
-              color: activeTab === tab.key ? "#3b82f6" : "rgba(255,255,255,0.5)",
+              background: activeTab === tab.key ? "rgba(59,130,246,0.15)" : "var(--bg-card)",
+              borderColor: activeTab === tab.key ? "rgba(59,130,246,0.4)" : "var(--border-primary)",
+              color: activeTab === tab.key ? "var(--accent-blue)" : "var(--text-muted)",
             }}
           >
             {t(tab.label)}
@@ -239,11 +239,11 @@ export default function ForensicC2PAPage() {
         {activeTab === "tool" && (
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             {/* Input Card */}
-            <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(59,130,246,0.15)", borderRadius: 16, padding: 28, backdropFilter: "blur(8px)" }}>
-              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#3b82f6", margin: "0 0 8px", display: "flex", alignItems: "center", gap: 8 }}>
+            <div style={{ background: "var(--bg-card)", border: "1px solid rgba(59,130,246,0.15)", borderRadius: 16, padding: 28, backdropFilter: "blur(8px)" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--accent-blue)", margin: "0 0 8px", display: "flex", alignItems: "center", gap: 8 }}>
                 <FileSearch size={20} /> {t({ en: "Analyze Content Credentials", ar: "تحليل بيانات اعتماد المحتوى" })}
               </h3>
-              <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.4)", margin: "0 0 16px", lineHeight: 1.6 }}>
+              <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", margin: "0 0 16px", lineHeight: 1.6 }}>
                 {t({
                   en: "Enter a public image URL to check for C2PA manifests, digital signatures, and provenance data. Supports JPEG, PNG, WebP, and AVIF formats.",
                   ar: "أدخل رابط صورة عامة للتحقق من بيانات C2PA والتوقيعات الرقمية وبيانات المصدر. يدعم تنسيقات JPEG وPNG وWebP وAVIF."
@@ -256,7 +256,7 @@ export default function ForensicC2PAPage() {
                 placeholder={t({ en: "https://example.com/image.jpg", ar: "https://example.com/image.jpg" })}
                 style={{
                   width: "100%", padding: 14, borderRadius: 10,
-                  background: "rgba(0,0,0,0.3)", color: "#3b82f6",
+                  background: "var(--bg-elevated)", color: "var(--accent-blue)",
                   border: "1px solid rgba(59,130,246,0.2)", outline: "none",
                   fontSize: "0.9rem", fontFamily: "monospace", boxSizing: "border-box",
                   marginBottom: 12, transition: "border-color 0.3s"
@@ -268,7 +268,7 @@ export default function ForensicC2PAPage() {
                 style={{
                   width: "100%", padding: 14, borderRadius: 10,
                   background: loading || !url.trim() ? "rgba(59,130,246,0.1)" : "linear-gradient(135deg, rgba(59,130,246,0.25), rgba(59,130,246,0.1))",
-                  color: "#3b82f6", fontWeight: 700, fontSize: "0.95rem",
+                  color: "var(--accent-blue)", fontWeight: 700, fontSize: "0.95rem",
                   border: "1px solid rgba(59,130,246,0.3)",
                   cursor: loading || !url.trim() ? "not-allowed" : "pointer",
                   opacity: loading || !url.trim() ? 0.5 : 1,
@@ -277,7 +277,7 @@ export default function ForensicC2PAPage() {
                 }}
               >
                 {loading ? (
-                  <div style={{ width: 18, height: 18, border: "2px solid rgba(59,130,246,0.3)", borderTopColor: "#3b82f6", borderRadius: "50%", animation: "c2pa-spin 0.8s linear infinite" }} />
+                  <div style={{ width: 18, height: 18, border: "2px solid rgba(59,130,246,0.3)", borderTopColor: "var(--accent-blue)", borderRadius: "50%", animation: "c2pa-spin 0.8s linear infinite" }} />
                 ) : (
                   <ShieldCheck size={18} />
                 )}
@@ -293,15 +293,15 @@ export default function ForensicC2PAPage() {
                 borderRadius: 16, padding: 24,
                 animation: "c2pa-fadeUp 0.5s ease-out"
               }}>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: 16, display: "flex", alignItems: "center", gap: 8, color: result.error ? "#ef4444" : "#3b82f6" }}>
+                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: 16, display: "flex", alignItems: "center", gap: 8, color: result.error ? "var(--accent-red)" : "var(--accent-blue)" }}>
                   {result.error ? <AlertTriangle size={20} /> : <Shield size={20} />}
                   {t({ en: "C2PA Analysis Report", ar: "تقرير تحليل C2PA" })}
                 </h3>
                 <pre style={{
-                  background: "rgba(0,0,0,0.3)", padding: 16, borderRadius: 10,
+                  background: "var(--bg-elevated)", padding: 16, borderRadius: 10,
                   overflowX: "auto", fontSize: "0.8rem", lineHeight: 1.6,
-                  color: result.error ? "#ef4444" : "#93c5fd",
-                  border: "1px solid rgba(255,255,255,0.06)"
+                  color: result.error ? "var(--accent-red)" : "var(--accent-blue)",
+                  border: "1px solid var(--border-subtle)"
                 }}>
                   {JSON.stringify(result, null, 2)}
                 </pre>
@@ -310,18 +310,18 @@ export default function ForensicC2PAPage() {
 
             {/* Red Flags Reference */}
             <div style={{ background: "rgba(239,68,68,0.04)", border: "1px solid rgba(239,68,68,0.15)", borderRadius: 16, padding: 24 }}>
-              <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#ef4444", margin: "0 0 16px", display: "flex", alignItems: "center", gap: 8 }}>
+              <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--accent-red)", margin: "0 0 16px", display: "flex", alignItems: "center", gap: 8 }}>
                 <AlertTriangle size={18} /> {t({ en: "Red Flags to Watch For", ar: "علامات الخطر للمراقبة" })}
               </h3>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 {RED_FLAGS.map((rf, i) => (
                   <div key={i} style={{
                     display: "flex", alignItems: "center", gap: 10, padding: "8px 12px",
-                    borderRadius: 8, background: "rgba(0,0,0,0.2)",
+                    borderRadius: 8, background: "var(--bg-elevated)",
                     borderLeft: `3px solid ${severityColor(rf.severity)}`
                   }}>
                     <XCircle size={14} color={severityColor(rf.severity)} />
-                    <span style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.7)" }}>{t(rf.flag)}</span>
+                    <span style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>{t(rf.flag)}</span>
                     <span style={{
                       marginLeft: "auto", fontSize: "0.65rem", fontWeight: 700,
                       padding: "2px 8px", borderRadius: 4, textTransform: "uppercase",
@@ -338,10 +338,10 @@ export default function ForensicC2PAPage() {
         {activeTab === "education" && (
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             <div style={{ background: "rgba(59,130,246,0.05)", border: "1px solid rgba(59,130,246,0.15)", borderRadius: 16, padding: 24 }}>
-              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#3b82f6", margin: "0 0 8px" }}>
+              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--accent-blue)", margin: "0 0 8px" }}>
                 {t({ en: "What is C2PA?", ar: "ما هو C2PA؟" })}
               </h3>
-              <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.8, margin: 0 }}>
+              <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 1.8, margin: 0 }}>
                 {t({
                   en: "C2PA (Coalition for Content Provenance and Authenticity) is an open technical standard created by Adobe, Microsoft, Intel, BBC, and others. It embeds tamper-evident metadata inside media files that cryptographically proves: (1) WHO created or edited the content, (2) WHEN each edit was made, (3) WHAT tools were used, (4) WHETHER AI was involved in creation. Think of it as a digital passport for media — unforgeable, transparent, and machine-verifiable.",
                   ar: "C2PA (تحالف مصداقية ومصدر المحتوى) هو معيار تقني مفتوح أنشأته Adobe وMicrosoft وIntel وBBC وغيرهم. يدمج بيانات وصفية مقاومة للعبث داخل ملفات الوسائط تثبت تشفيرياً: (1) من أنشأ أو عدّل المحتوى، (2) متى تم كل تعديل، (3) ما الأدوات المُستخدمة، (4) هل شارك الذكاء الاصطناعي في الإنشاء. فكر فيه كجواز سفر رقمي للوسائط — غير قابل للتزوير، شفاف، وقابل للتحقق آلياً."
@@ -359,18 +359,18 @@ export default function ForensicC2PAPage() {
                 <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: layer.color, margin: "0 0 8px", display: "flex", alignItems: "center", gap: 8 }}>
                   <span style={{ fontSize: "1.3rem" }}>{layer.icon}</span> {t(layer.title)}
                 </h4>
-                <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.8, margin: 0 }}>
+                <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 1.8, margin: 0 }}>
                   {t(layer.desc)}
                 </p>
               </div>
             ))}
 
             {/* Islamic Context */}
-            <div style={{ background: "rgba(212,168,67,0.06)", border: "1px solid rgba(212,168,67,0.2)", borderRadius: 16, padding: 24, borderLeft: "4px solid #d4a843" }}>
-              <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#d4a843", margin: "0 0 12px" }}>
+            <div style={{ background: "rgba(212,168,67,0.06)", border: "1px solid rgba(212,168,67,0.2)", borderRadius: 16, padding: 24, borderLeft: "4px solid var(--accent-amber)" }}>
+              <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--accent-amber)", margin: "0 0 12px" }}>
                 🕌 {t({ en: "Islamic Framework: Verification is a Divine Command", ar: "الإطار الإسلامي: التثبت أمر إلهي" })}
               </h4>
-              <div style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.9 }}>
+              <div style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 1.9 }}>
                 <p style={{ margin: "0 0 12px" }}>
                   {t({
                     en: "Quran 49:6 — \"O you who believe, if a sinful person brings you news, verify it, lest you harm people in ignorance.\" (يا أيها الذين آمنوا إن جاءكم فاسق بنبأ فتبينوا). C2PA is the technological realization of this Quranic command — it provides the mechanism to VERIFY before ACTING.",
@@ -397,7 +397,7 @@ export default function ForensicC2PAPage() {
         {/* ─── TAB: CASES ─────────────────────── */}
         {activeTab === "cases" && (
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.4)", lineHeight: 1.6, textAlign: "center", margin: "0 0 8px" }}>
+            <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", lineHeight: 1.6, textAlign: "center", margin: "0 0 8px" }}>
               {t({
                 en: "سيناريوهات توضيحية / Illustrative scenarios showing how C2PA analysis applies to Egyptian misinformation patterns. Names, reference numbers, and specific institutions are illustrative only.",
                 ar: "سيناريوهات توضيحية تبيّن كيف يُطبَّق تحليل C2PA على أنماط المعلومات المضللة في مصر. الأسماء وأرقام المراجع والجهات المُستشهد بها للتوضيح فقط."
@@ -405,7 +405,7 @@ export default function ForensicC2PAPage() {
             </p>
             {CASE_STUDIES.map((cs, i) => (
               <div key={i} style={{
-                background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)",
+                background: "var(--bg-card)", border: "1px solid var(--border-primary)",
                 borderRadius: 16, overflow: "hidden", transition: "all 0.3s",
                 borderLeft: `4px solid ${cs.verdictColor}`
               }}>
@@ -419,7 +419,7 @@ export default function ForensicC2PAPage() {
                   }}
                 >
                   <div>
-                    <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", margin: "0 0 4px" }}>{t(cs.title)}</h4>
+                    <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 4px" }}>{t(cs.title)}</h4>
                     <span style={{
                       fontSize: "0.75rem", fontWeight: 700, padding: "2px 10px",
                       borderRadius: 6, background: `${cs.verdictColor}15`, color: cs.verdictColor
@@ -428,13 +428,13 @@ export default function ForensicC2PAPage() {
                     </span>
                   </div>
                   <ChevronRight size={18} style={{
-                    color: "rgba(255,255,255,0.3)", transition: "transform 0.3s",
+                    color: "var(--text-muted)", transition: "transform 0.3s",
                     transform: expandedCase === i ? "rotate(90deg)" : "rotate(0deg)"
                   }} />
                 </button>
                 {expandedCase === i && (
                   <div style={{ padding: "0 20px 20px", animation: "c2pa-fadeUp 0.3s ease-out" }}>
-                    <p style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.8, margin: "0 0 12px" }}>
+                    <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.8, margin: "0 0 12px" }}>
                       {t(cs.desc)}
                     </p>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -442,7 +442,7 @@ export default function ForensicC2PAPage() {
                         <span key={j} style={{
                           fontSize: "0.7rem", fontWeight: 600, padding: "4px 10px",
                           borderRadius: 6, background: "rgba(59,130,246,0.1)",
-                          border: "1px solid rgba(59,130,246,0.2)", color: "#60a5fa"
+                          border: "1px solid rgba(59,130,246,0.2)", color: "var(--accent-blue)"
                         }}>
                           {tech}
                         </span>
@@ -458,26 +458,26 @@ export default function ForensicC2PAPage() {
         {/* ─── TAB: CHECKLIST ────────────────── */}
         {activeTab === "checklist" && (
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#10b981", textAlign: "center", margin: "0 0 8px" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--accent-emerald)", textAlign: "center", margin: "0 0 8px" }}>
               {t({ en: "6-Point C2PA Verification Protocol", ar: "بروتوكول التحقق من C2PA — ٦ نقاط" })}
             </h3>
             {CHECKLIST_ITEMS.map((item, i) => (
               <div key={i} style={{
-                background: "rgba(255,255,255,0.03)", border: "1px solid rgba(16,185,129,0.12)",
+                background: "var(--bg-card)", border: "1px solid rgba(16,185,129,0.12)",
                 borderRadius: 14, padding: 20
               }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
                   <span style={{ fontSize: "1.5rem" }}>{item.icon}</span>
                   <div>
-                    <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "rgba(255,255,255,0.3)", textTransform: "uppercase" }}>
+                    <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase" }}>
                       {t({ en: `Step ${i + 1}`, ar: `الخطوة ${i + 1}` })}
                     </span>
-                    <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#10b981", margin: 0 }}>
+                    <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--accent-emerald)", margin: 0 }}>
                       {t(item.check)}
                     </h4>
                   </div>
                 </div>
-                <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.7, margin: 0, paddingLeft: isRTL ? 0 : 44, paddingRight: isRTL ? 44 : 0 }}>
+                <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.7, margin: 0, paddingLeft: isRTL ? 0 : 44, paddingRight: isRTL ? 44 : 0 }}>
                   {t(item.detail)}
                 </p>
               </div>
@@ -485,7 +485,7 @@ export default function ForensicC2PAPage() {
 
             {/* External Tools */}
             <div style={{ background: "rgba(139,92,246,0.06)", border: "1px solid rgba(139,92,246,0.15)", borderRadius: 14, padding: 20 }}>
-              <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#8b5cf6", margin: "0 0 12px" }}>
+              <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--accent-indigo)", margin: "0 0 12px" }}>
                 🔧 {t({ en: "Free C2PA Verification Tools", ar: "أدوات تحقق C2PA مجانية" })}
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -497,14 +497,14 @@ export default function ForensicC2PAPage() {
                 ].map((tool, i) => (
                   <a key={i} href={tool.url} target="_blank" rel="noopener" style={{
                     display: "flex", justifyContent: "space-between", alignItems: "center",
-                    padding: "10px 14px", borderRadius: 8, background: "rgba(0,0,0,0.2)",
+                    padding: "10px 14px", borderRadius: 8, background: "var(--bg-elevated)",
                     textDecoration: "none", color: "inherit", transition: "background 0.2s"
                   }}>
                     <div>
-                      <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#8b5cf6" }}>{tool.name}</span>
-                      <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.4)", display: "block" }}>{t(tool.desc)}</span>
+                      <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--accent-indigo)" }}>{tool.name}</span>
+                      <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", display: "block" }}>{t(tool.desc)}</span>
                     </div>
-                    <Globe size={14} color="rgba(255,255,255,0.3)" />
+                    <Globe size={14} color="var(--text-muted)" />
                   </a>
                 ))}
               </div>

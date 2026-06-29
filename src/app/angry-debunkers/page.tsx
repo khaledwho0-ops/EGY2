@@ -14,6 +14,7 @@ import ThreatMap from "@/components/hunter/ThreatMap";
 import AnalysisProgress, { STAGE_SETS } from "@/components/AnalysisProgress";
 import { PageNavigation } from '@/components/shared/page-navigation';
 import { PageAIChatbot } from '@/components/shared/page-ai-chatbot';
+import { useRTL } from "@/components/shared/rtl-provider";
 import { buildSystemPrompt } from '@/lib/standard';
 
 export type HistorySession = {
@@ -30,38 +31,48 @@ export type HistorySession = {
                   × Crimson Violet × Amethyst Geode
                   × Steel Azure × Espresso Peony × Icy Gunmetal)
 ───────────────────────────────────────────────────────── */
+/* ── THEME-AWARE TOKENS ──
+   Every colour now reads from the global theme (globals.css :root / [data-theme]).
+   This makes the page honour the navbar THEME switch instead of hardcoding hex.
+   `mix(base, hh)` reproduces the old `${C.x}<alpha>` blends via color-mix so the
+   alpha-layered design survives while the underlying hue follows the active theme. */
 const C = {
   // Backgrounds
-  bg: "#05010A",              // Carbon void
-  surface: "#110818",         // Espresso-dark surface
-  surfaceHigh: "#1A0F24",     // Lifted glass panel
-  border: "rgba(255,255,255,0.06)",
-  borderFocus: "rgba(200,50,120,0.6)",
+  bg: "var(--bg-page)",
+  surface: "var(--bg-secondary)",
+  surfaceHigh: "var(--bg-elevated)",
+  border: "var(--border-primary)",
+  borderFocus: "var(--accent-red)",
 
-  // Primary — Bloodline / Core Wine → Raspberry
-  primary: "#C2185B",         // Bloodline crimson
-  primaryGlow: "rgba(194,24,91,0.35)",
-  primaryDeep: "#6B0F1A",     // Core Wine deep
+  // Primary — Bloodline / Core Wine → Raspberry → theme red accent
+  primary: "var(--accent-red)",
+  primaryGlow: "var(--accent-deepreal-glow)",
+  primaryDeep: "var(--accent-red)",
 
-  // Secondary — Amethyst Geode / Crimson Violet
-  violet: "#7B1FA2",
-  violetGlow: "rgba(123,31,162,0.3)",
+  // Secondary — Amethyst Geode / Crimson Violet → theme purple accent
+  violet: "var(--accent-purple)",
+  violetGlow: "var(--accent-religionhub-glow)",
 
-  // Accent — Steel Azure / Icy Gunmetal
-  azure: "#1976D2",
-  ice: "#80DEEA",
-  iceGlow: "rgba(128,222,234,0.25)",
+  // Accent — Steel Azure / Icy Gunmetal → theme blue accent
+  azure: "var(--accent-blue)",
+  ice: "var(--accent-blue)",
+  iceGlow: "var(--accent-deepreal-glow)",
 
   // Status
-  success: "#26A69A",         // Teal – truth
-  danger: "#E53935",          // High alert
-  amber: "#FF8F00",           // Patient Zero
+  success: "var(--accent-emerald)",
+  danger: "var(--accent-red)",
+  amber: "var(--accent-amber)",
 
   // Typography
-  textPrimary: "#F5EEF8",
-  textMuted: "#9E8FA8",
-  textSubtle: "#5C4A6B",
+  textPrimary: "var(--text-primary)",
+  textMuted: "var(--text-muted)",
+  textSubtle: "var(--text-caption)",
 };
+
+/* Convert a 2-hex alpha suffix (e.g. "20", "cc") into a color-mix over transparent,
+   so theme `var()` colours can render at partial opacity. */
+const mix = (base: string, hh: string) =>
+  `color-mix(in srgb, ${base} ${Math.round((parseInt(hh, 16) / 255) * 100)}%, transparent)`;
 
 const GOD_SYSTEM_LAYERS = [
   "1. Stripping Emotion...",
@@ -129,19 +140,19 @@ function GlowCard({ children, className, accent = C.primary, style }: any) {
       whileHover={{ y: -2, transition: { duration: 0.2 } }}
       className={`relative rounded-[22px] overflow-hidden ${className}`}
       style={{
-        background: `linear-gradient(145deg, ${C.surfaceHigh}, ${C.surface}ee)`,
-        border: `1px solid ${accent}20`,
-        boxShadow: `0 0 0 1px ${C.border}, 0 8px 32px rgba(0,0,0,0.5), 0 0 80px ${accent}08, inset 0 1px 0 rgba(255,255,255,0.06)`,
+        background: `linear-gradient(145deg, ${C.surfaceHigh}, ${mix(C.surface,'ee')})`,
+        border: `1px solid ${mix(accent,'20')}`,
+        boxShadow: `0 0 0 1px ${C.border}, 0 8px 32px rgba(0,0,0,0.5), 0 0 80px ${mix(accent,'08')}, inset 0 1px 0 rgba(255,255,255,0.06)`,
         backdropFilter: 'blur(20px)',
         ...style,
       }}
     >
       {/* Top edge shimmer */}
       <div className="absolute top-0 left-0 right-0 h-[1px]"
-        style={{ background: `linear-gradient(90deg, transparent 10%, ${accent}40, transparent 90%)` }} />
+        style={{ background: `linear-gradient(90deg, transparent 10%, ${mix(accent,'40')}, transparent 90%)` }} />
       {/* Subtle ambient glow */}
       <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full pointer-events-none"
-        style={{ background: `radial-gradient(circle, ${accent}08, transparent 70%)` }} />
+        style={{ background: `radial-gradient(circle, ${mix(accent,'08')}, transparent 70%)` }} />
       {children}
     </motion.div>
   );
@@ -149,6 +160,7 @@ function GlowCard({ children, className, accent = C.primary, style }: any) {
 
 /* ── History Modal ── */
 function HistoryModal({ history, onClose, onLoad }: { history: HistorySession[], onClose: () => void, onLoad: (h: HistorySession) => void }) {
+  const { isRTL } = useRTL();
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6" style={{ background: 'rgba(5, 1, 10, 0.85)', backdropFilter: 'blur(10px)' }}>
       <motion.div
@@ -157,12 +169,12 @@ function HistoryModal({ history, onClose, onLoad }: { history: HistorySession[],
         style={{ background: C.surface, border: `1px solid ${C.border}`, boxShadow: `0 0 60px rgba(0,0,0,0.5)` }}
       >
         <div className="p-5 flex justify-between items-center" style={{ borderBottom: `1px solid ${C.border}` }}>
-          <h3 className="text-xl font-bold flex items-center gap-2" style={{ color: C.textPrimary }}><History size={20} /> Session History</h3>
+          <h3 className="text-xl font-bold flex items-center gap-2" style={{ color: C.textPrimary }}><History size={20} /> {isRTL ? 'سجل الجلسات' : 'Session History'}</h3>
           <button onClick={onClose} className="p-2 rounded-full hover:bg-white/5 transition-colors"><X size={20} style={{ color: C.textMuted }} /></button>
         </div>
         <div className="flex-1 overflow-y-auto custom-scrollbar p-5 flex flex-col gap-3">
           {history.length === 0 ? (
-            <div className="text-center p-10 text-sm" style={{ color: C.textMuted }}>No saved sessions yet.</div>
+            <div className="text-center p-10 text-sm" style={{ color: C.textMuted }}>{isRTL ? 'لا توجد جلسات محفوظة بعد.' : 'No saved sessions yet.'}</div>
           ) : (
             history.map((h) => (
               <button
@@ -173,7 +185,7 @@ function HistoryModal({ history, onClose, onLoad }: { history: HistorySession[],
                 dir="auto"
               >
                 <div className="flex justify-between items-center w-full">
-                  <span className="text-xs font-bold px-2 py-1 rounded" style={{ background: `${C.primary}20`, color: C.primary }}>
+                  <span className="text-xs font-bold px-2 py-1 rounded" style={{ background: `${mix(C.primary,'20')}`, color: C.primary }}>
                     {new Date(h.timestamp).toLocaleDateString()}
                   </span>
                   {h.result?.data?.verdict && (
@@ -196,6 +208,7 @@ function HistoryModal({ history, onClose, onLoad }: { history: HistorySession[],
    MAIN COMPONENT
 ═══════════════════════════════════════════════════════════ */
 export default function AngryDebunkersWarRoom() {
+  const { isRTL } = useRTL();
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState<"IDLE" | "SCANNING" | "SYNTHESIZING" | "COMPLETE">("IDLE");
   const [result, setResult] = useState<any>(null);
@@ -480,7 +493,7 @@ export default function AngryDebunkersWarRoom() {
       className="min-h-screen w-full overflow-x-hidden relative flex flex-col items-center"
       style={{
         ...fBase,
-        background: `radial-gradient(ellipse 80% 50% at 50% -10%, ${C.primaryDeep}55 0%, transparent 70%), ${C.bg}`,
+        background: `radial-gradient(ellipse 80% 50% at 50% -10%, ${mix(C.primaryDeep,'55')} 0%, transparent 70%), ${C.bg}`,
         paddingTop: "7vh",
         paddingBottom: "140px",
         color: C.textPrimary,
@@ -541,8 +554,8 @@ export default function AngryDebunkersWarRoom() {
             transition={{ delay: 0.3, type: "spring" }}
             className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full"
             style={{
-              background: `linear-gradient(135deg, ${C.primaryDeep}80, ${C.violet}60)`,
-              border: `1px solid ${C.primary}40`,
+              background: `linear-gradient(135deg, ${mix(C.primaryDeep,'80')}, ${mix(C.violet,'60')})`,
+              border: `1px solid ${mix(C.primary,'40')}`,
               backdropFilter: "blur(20px)",
               boxShadow: `0 0 24px ${C.primaryGlow}`,
             }}
@@ -551,7 +564,7 @@ export default function AngryDebunkersWarRoom() {
               <ShieldAlert size={16} style={{ color: C.primary }} />
             </motion.div>
             <span className="text-sm font-bold tracking-widest uppercase" style={{ color: C.ice }}>
-              Global Threat Defense Network
+              {isRTL ? "شبكة الدفاع ضد التهديدات العالمية" : "Global Threat Defense Network"}
             </span>
           </motion.div>
 
@@ -565,7 +578,7 @@ export default function AngryDebunkersWarRoom() {
                 filter: `drop-shadow(0 0 40px ${C.primaryGlow})`,
               }}
             >
-              Claim Debunker
+              {isRTL ? "مُفنِّد الادعاءات" : "Claim Debunker"}
             </h1>
             {/* Underline shimmer */}
             <motion.div
@@ -579,7 +592,7 @@ export default function AngryDebunkersWarRoom() {
           <h2
             className="text-2xl sm:text-3xl md:text-4xl font-bold"
             dir="rtl"
-            style={{ ...fArabic, color: `${C.textPrimary}90` }}
+            style={{ ...fArabic, color: `${mix(C.textPrimary,'90')}` }}
           >
             مُفنِّد الادعاءات{" "}
             <span style={{ color: `${C.textSubtle}`, margin: "0 16px", fontWeight: 300 }}>|</span>
@@ -593,12 +606,12 @@ export default function AngryDebunkersWarRoom() {
             onClick={() => { setShowGuide(true); setGuideStep(0); }}
             className="absolute top-4 right-4 sm:top-6 sm:right-6 p-3 rounded-full z-20 cursor-pointer"
             style={{
-              background: `${C.violet}25`,
-              border: `1px solid ${C.violet}35`,
+              background: `${mix(C.violet,'25')}`,
+              border: `1px solid ${mix(C.violet,'35')}`,
               color: C.violet,
               backdropFilter: 'blur(12px)',
             }}
-            title="How to use The Angry Debunkers"
+            title={isRTL ? "كيفية استخدام المُفنِّدون الغاضبون" : "How to use The Angry Debunkers"}
           >
             <HelpCircle size={20} />
           </motion.button>
@@ -610,12 +623,12 @@ export default function AngryDebunkersWarRoom() {
             onClick={() => setShowHistory(true)}
             className="absolute top-4 right-[60px] sm:top-6 sm:right-[72px] p-3 rounded-full z-20 cursor-pointer"
             style={{
-              background: `${C.azure}25`,
-              border: `1px solid ${C.azure}35`,
+              background: `${mix(C.azure,'25')}`,
+              border: `1px solid ${mix(C.azure,'35')}`,
               color: C.azure,
               backdropFilter: 'blur(12px)',
             }}
-            title="View Chat History"
+            title={isRTL ? "عرض سجل المحادثات" : "View Chat History"}
           >
             <History size={20} />
           </motion.button>
@@ -627,13 +640,13 @@ export default function AngryDebunkersWarRoom() {
             onClick={() => setIsHunterMode(!isHunterMode)}
             className="absolute top-4 right-[110px] sm:top-6 sm:right-[120px] p-3 rounded-full z-20 cursor-pointer"
             style={{
-              background: isHunterMode ? `${C.danger}40` : `${C.danger}15`,
-              border: `1px solid ${C.danger}35`,
+              background: isHunterMode ? `${mix(C.danger,'40')}` : `${mix(C.danger,'15')}`,
+              border: `1px solid ${mix(C.danger,'35')}`,
               color: isHunterMode ? '#fff' : C.danger,
-              boxShadow: isHunterMode ? `0 0 20px ${C.danger}40` : 'none',
+              boxShadow: isHunterMode ? `0 0 20px ${mix(C.danger,'40')}` : 'none',
               backdropFilter: 'blur(12px)',
             }}
-            title="Toggle HUNTER Mode"
+            title={isRTL ? "تفعيل وضع الصيّاد" : "Toggle HUNTER Mode"}
           >
             <Crosshair size={20} />
           </motion.button>
@@ -655,10 +668,10 @@ export default function AngryDebunkersWarRoom() {
                 style={{
                   borderRadius: "36px",
                   background: isFocused
-                    ? `linear-gradient(160deg, ${C.surfaceHigh} 0%, #180D22 100%)`
-                    : `linear-gradient(160deg, ${C.surface} 0%, #0F0515 100%)`,
+                    ? `linear-gradient(160deg, ${C.surfaceHigh} 0%, ${C.surface} 100%)`
+                    : `linear-gradient(160deg, ${C.surface} 0%, ${C.bg} 100%)`,
                   border: isFocused
-                    ? `1px solid ${C.primary}70`
+                    ? `1px solid ${mix(C.primary,'70')}`
                     : `1px solid ${C.border}`,
                   backdropFilter: "blur(60px)",
                   WebkitBackdropFilter: "blur(60px)",
@@ -673,7 +686,7 @@ export default function AngryDebunkersWarRoom() {
                     <motion.div
                       initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                       className="absolute top-0 left-0 right-0 h-px z-10"
-                      style={{ background: `linear-gradient(90deg, transparent 0%, ${C.primary}90 30%, ${C.violet}90 70%, transparent 100%)` }}
+                      style={{ background: `linear-gradient(90deg, transparent 0%, ${mix(C.primary,'90')} 30%, ${mix(C.violet,'90')} 70%, transparent 100%)` }}
                     />
                   )}
                 </AnimatePresence>
@@ -684,14 +697,14 @@ export default function AngryDebunkersWarRoom() {
                     <motion.div
                       initial={{ opacity: 0, y: -8, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
                       className="absolute top-5 left-6 z-30 flex items-center gap-2 px-4 py-2 rounded-full"
-                      style={{ background: `${C.azure}25`, border: `1px solid ${C.azure}50`, backdropFilter: "blur(12px)" }}
+                      style={{ background: `${mix(C.azure,'25')}`, border: `1px solid ${mix(C.azure,'50')}`, backdropFilter: "blur(12px)" }}
                     >
                       <motion.div animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 1.2, repeat: Infinity }}>
                         <div className="w-2 h-2 rounded-full" style={{ background: C.ice, boxShadow: `0 0 6px ${C.ice}` }} />
                       </motion.div>
                       <Globe size={13} style={{ color: C.ice }} />
                       <span className="text-[11px] font-bold tracking-widest uppercase" style={{ color: C.ice }}>
-                        Target Locked · Link Extraction Ready
+                        {isRTL ? "تم تثبيت الهدف · جاهز لاستخراج الرابط" : "Target Locked · Link Extraction Ready"}
                       </span>
                     </motion.div>
                   )}
@@ -703,7 +716,7 @@ export default function AngryDebunkersWarRoom() {
                     <motion.div
                       initial={{ opacity: 0, y: -8, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
                       className="absolute top-5 left-6 z-30 flex items-center gap-2 px-4 py-2 rounded-full"
-                      style={{ background: `${C.amber}20`, border: `1px solid ${C.amber}40` }}
+                      style={{ background: `${mix(C.amber,'20')}`, border: `1px solid ${mix(C.amber,'40')}` }}
                     >
                       <FileText size={13} style={{ color: C.amber }} />
                       <span className="text-[11px] font-bold tracking-widest truncate max-w-[180px]" style={{ color: C.amber }}>{pdfFile.name}</span>
@@ -722,7 +735,9 @@ export default function AngryDebunkersWarRoom() {
                     className="absolute inset-0 flex items-center px-14 pointer-events-none text-xl sm:text-2xl font-medium"
                     style={{ color: C.textSubtle, ...fBase }}
                   >
-                    {pdfFile ? "Document loaded — add context or launch directly..." : "Paste the rumor, URL, medical myth, or fabrication..."}
+                    {pdfFile
+                      ? (isRTL ? "تم تحميل المستند — أضف سياقًا أو ابدأ مباشرةً..." : "Document loaded — add context or launch directly...")
+                      : (isRTL ? "الصق الشائعة أو الرابط أو الخرافة الطبية أو التلفيق..." : "Paste the rumor, URL, medical myth, or fabrication...")}
                   </motion.div>
 
                   <textarea
@@ -751,7 +766,7 @@ export default function AngryDebunkersWarRoom() {
                 <div
                   className="flex flex-col sm:flex-row justify-between items-center gap-5 px-8 sm:px-10 py-5 sm:py-6"
                   style={{
-                    background: `linear-gradient(135deg, ${C.surface}CC 0%, rgba(10,3,20,0.9) 100%)`,
+                    background: `linear-gradient(135deg, ${mix(C.surface,'CC')} 0%, var(--bg-page) 100%)`,
                     borderTop: `1px solid ${C.border}`,
                     backdropFilter: "blur(40px)",
                   }}
@@ -765,7 +780,7 @@ export default function AngryDebunkersWarRoom() {
                         className="w-2 h-2 rounded-full"
                         style={{ background: C.success, boxShadow: `0 0 8px ${C.success}` }}
                       />
-                      <span style={{ color: C.textSubtle }}>Live:</span>
+                      <span style={{ color: C.textSubtle }}>{isRTL ? "مباشر:" : "Live:"}</span>
                       <span style={{ color: C.textPrimary }}>OpenAlex · EuropePMC · AlQuran</span>
                     </div>
 
@@ -777,7 +792,7 @@ export default function AngryDebunkersWarRoom() {
                       style={{ background: `${C.surfaceHigh}`, border: `1px solid ${C.border}`, color: C.textMuted }}
                     >
                       <Paperclip size={14} />
-                      <span>Attach PDF</span>
+                      <span>{isRTL ? "إرفاق PDF" : "Attach PDF"}</span>
                     </RippleButton>
                   </div>
 
@@ -792,7 +807,7 @@ export default function AngryDebunkersWarRoom() {
                         color: C.textMuted,
                       }}
                     >
-                      Clear Console
+                      {isRTL ? "مسح اللوحة" : "Clear Console"}
                     </RippleButton>
                   ) : (
                     <RippleButton
@@ -812,9 +827,9 @@ export default function AngryDebunkersWarRoom() {
                       }}
                     >
                       {status === "IDLE" ? (
-                        <><span>Launch Strike Teams</span><Zap size={20} className="fill-current" /></>
+                        <><span>{isRTL ? "أطلق فرق الضرب" : "Launch Strike Teams"}</span><Zap size={20} className="fill-current" /></>
                       ) : (
-                        <><Loader2 className="animate-spin w-5 h-5" /><span>Executing...</span></>
+                        <><Loader2 className="animate-spin w-5 h-5" /><span>{isRTL ? "جارٍ التنفيذ..." : "Executing..."}</span></>
                       )}
                     </RippleButton>
                   )}
@@ -830,17 +845,24 @@ export default function AngryDebunkersWarRoom() {
                 transition={{ delay: 0.5 }}
                 className="w-full flex overflow-x-auto sm:flex-wrap sm:justify-center gap-3 sm:gap-4 pb-4 sm:pb-0 hide-scrollbar"
               >
-                {[
-                  "Vaccines contain microchips to track citizens.",
-                  "A new Hadith claims the world ends next Friday.",
-                  "Drinking boiled garlic cures all viruses.",
-                ].map((ex, i) => (
+                {(isRTL
+                  ? [
+                      "اللقاحات فيها شرائح إلكترونية لتتبّع المواطنين.",
+                      "حديث جديد بيقول إن الدنيا هتنتهي الجمعة الجاية.",
+                      "شرب الثوم المغلي بيعالج كل الفيروسات.",
+                    ]
+                  : [
+                      "Vaccines contain microchips to track citizens.",
+                      "A new Hadith claims the world ends next Friday.",
+                      "Drinking boiled garlic cures all viruses.",
+                    ]
+                ).map((ex, i) => (
                   <RippleButton
                     key={i}
                     onClick={() => setQuery(ex)}
                     className="group flex items-center gap-3 px-5 py-3.5 rounded-2xl flex-shrink-0 transition-all duration-300 text-sm font-medium"
                     style={{
-                      background: `linear-gradient(135deg, ${C.surface}DD, ${C.surfaceHigh}BB)`,
+                      background: `linear-gradient(135deg, ${mix(C.surface,'DD')}, ${mix(C.surfaceHigh,'BB')})`,
                       border: `1px solid ${C.border}`,
                       color: C.textMuted,
                       backdropFilter: "blur(20px)",
@@ -868,7 +890,7 @@ export default function AngryDebunkersWarRoom() {
                   className="w-full p-10 sm:p-16 flex flex-col items-center gap-10 rounded-[36px]"
                   style={{
                     background: `linear-gradient(160deg, ${C.surface} 0%, ${C.bg} 100%)`,
-                    border: `1px solid ${C.primary}30`,
+                    border: `1px solid ${mix(C.primary,'30')}`,
                     boxShadow: `0 0 80px ${C.primaryGlow}, 0 0 40px ${C.violetGlow}`,
                   }}
                 >
@@ -876,21 +898,21 @@ export default function AngryDebunkersWarRoom() {
                   <div className="relative w-36 h-36 sm:w-48 sm:h-48 flex items-center justify-center">
                     <motion.div animate={{ rotate: 360 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                       className="absolute inset-0 rounded-full"
-                      style={{ border: `2px dashed ${C.primary}50` }} />
+                      style={{ border: `2px dashed ${mix(C.primary,'50')}` }} />
                     <motion.div animate={{ rotate: -360 }} transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                       className="absolute inset-4 rounded-full"
-                      style={{ border: `1px solid ${C.violet}40` }} />
+                      style={{ border: `1px solid ${mix(C.violet,'40')}` }} />
                     <motion.div animate={{ rotate: 360 }} transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
                       className="absolute inset-8 rounded-full"
-                      style={{ border: `1px dashed ${C.azure}30` }} />
+                      style={{ border: `1px dashed ${mix(C.azure,'30')}` }} />
                     <ScanSearch className="w-10 h-10 sm:w-14 sm:h-14" style={{ color: C.primary }} />
                   </div>
 
                   {isUrlInput && (
                     <div className="flex items-center gap-3 px-6 py-3 rounded-full"
-                      style={{ background: `${C.azure}15`, border: `1px solid ${C.azure}30` }}>
+                      style={{ background: `${mix(C.azure,'15')}`, border: `1px solid ${mix(C.azure,'30')}` }}>
                       <Globe size={15} style={{ color: C.ice }} />
-                      <span className="text-sm font-semibold" style={{ color: C.ice }}>Extracting content via Jina Reader...</span>
+                      <span className="text-sm font-semibold" style={{ color: C.ice }}>{isRTL ? "جارٍ استخراج المحتوى عبر Jina Reader..." : "Extracting content via Jina Reader..."}</span>
                     </div>
                   )}
 
@@ -920,8 +942,8 @@ export default function AngryDebunkersWarRoom() {
                   {/* Fallback: show raw error if type is unexpected */}
                   {result.type !== "SYNTHESIS_COMPLETE" && (
                     <div className="w-full p-8 rounded-[28px] text-center text-sm"
-                      style={{ background: C.surfaceHigh, border: `1px solid ${C.danger}40`, color: C.danger }}>
-                      {result.error || result.message || "Unexpected response. Check API key in .env.local."}
+                      style={{ background: C.surfaceHigh, border: `1px solid ${mix(C.danger,'40')}`, color: C.danger }}>
+                      {result.error || result.message || (isRTL ? "استجابة غير متوقعة. تحقّق من مفتاح الـ API في ملف ‎.env.local‎." : "Unexpected response. Check API key in .env.local.")}
                     </div>
                   )}
 
@@ -938,14 +960,14 @@ export default function AngryDebunkersWarRoom() {
                       <motion.div variants={pop}>
                         <GlowCard accent={C.azure} className="p-5">
                           <div className="flex items-start gap-4">
-                            <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${C.azure}20`, border: `1px solid ${C.azure}30` }}>
+                            <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${mix(C.azure,'20')}`, border: `1px solid ${mix(C.azure,'30')}` }}>
                               <Globe size={18} style={{ color: C.ice }} />
                             </div>
                             <div className="text-left min-w-0">
-                              <div className="text-[10px] font-black uppercase tracking-widest mb-1.5" style={{ color: C.ice }}>Source Extracted</div>
-                              <p className="text-sm font-bold truncate" style={{ color: C.textPrimary }}>{result.data?.extractedTitle || 'Unknown source'}</p>
+                              <div className="text-[10px] font-black uppercase tracking-widest mb-1.5" style={{ color: C.ice }}>{isRTL ? "المصدر المُستخرَج" : "Source Extracted"}</div>
+                              <p className="text-sm font-bold truncate" style={{ color: C.textPrimary }}>{result.data?.extractedTitle || (isRTL ? 'مصدر غير معروف' : 'Unknown source')}</p>
                               <a href={result.data?.sourceUrl} target="_blank" rel="noopener noreferrer"
-                                className="text-[11px] truncate block mt-1 hover:underline transition-all" style={{ color: `${C.azure}90` }}>
+                                className="text-[11px] truncate block mt-1 hover:underline transition-all" style={{ color: `${mix(C.azure,'90')}` }}>
                                 {result.data?.sourceUrl}
                               </a>
                             </div>
@@ -958,22 +980,22 @@ export default function AngryDebunkersWarRoom() {
                     {result.data?.verdict && (
                       <motion.div variants={pop}>
                         <div className="rounded-[22px] p-5 sm:p-6 text-center" style={{
-                          background: result.data?.verdict === 'DEBUNKED' ? `${C.danger}12`
-                            : result.data?.verdict === 'TRUE' ? `${C.success}12`
-                            : `${C.amber}12`,
-                          border: `1px solid ${result.data?.verdict === 'DEBUNKED' ? C.danger
-                            : result.data?.verdict === 'TRUE' ? C.success : C.amber}30`,
+                          background: result.data?.verdict === 'DEBUNKED' ? `${mix(C.danger,'12')}`
+                            : result.data?.verdict === 'TRUE' ? `${mix(C.success,'12')}`
+                            : `${mix(C.amber,'12')}`,
+                          border: `1px solid ${mix(result.data?.verdict === 'DEBUNKED' ? C.danger
+                            : result.data?.verdict === 'TRUE' ? C.success : C.amber, '30')}`,
                         }}>
                           <div className="text-[10px] font-black uppercase tracking-[0.2em] mb-2" style={{
                             color: result.data?.verdict === 'DEBUNKED' ? C.danger
                               : result.data?.verdict === 'TRUE' ? C.success : C.amber
-                          }}>Verdict / الحكم</div>
+                          }}>{isRTL ? 'الحكم' : 'Verdict'}</div>
                           <div className="text-2xl sm:text-3xl font-black mb-3" style={{
                             color: result.data?.verdict === 'DEBUNKED' ? C.danger
                               : result.data?.verdict === 'TRUE' ? C.success : C.amber
                           }}>{result.data?.verdict}</div>
-                          <p className="text-[13px] leading-[1.7] mb-2" style={{ color: `${C.textPrimary}cc` }}>{result.data?.verdict_explanation_en || 'Analysis complete.'}</p>
-                          <p className="text-[13px] leading-[1.8]" dir="rtl" style={{ color: `${C.textPrimary}99`, ...fArabic }}>{result.data?.verdict_explanation_ar || ''}</p>
+                          <p className="text-[13px] leading-[1.7] mb-2" style={{ color: `${mix(C.textPrimary,'cc')}` }}>{result.data?.verdict_explanation_en || (isRTL ? 'اكتمل التحليل.' : 'Analysis complete.')}</p>
+                          <p className="text-[13px] leading-[1.8]" dir="rtl" style={{ color: `${mix(C.textPrimary,'99')}`, ...fArabic }}>{result.data?.verdict_explanation_ar || ''}</p>
                         </div>
                       </motion.div>
                     )}
@@ -984,34 +1006,34 @@ export default function AngryDebunkersWarRoom() {
                         <div className="rounded-[22px] p-5 text-left" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}>
                           <div className="flex flex-wrap items-center gap-3 justify-between">
                             <div className="flex items-center gap-2">
-                              <span className="text-[9px] font-black uppercase tracking-[0.15em]" style={{ color: C.textMuted }}>Confidence (derived)</span>
+                              <span className="text-[9px] font-black uppercase tracking-[0.15em]" style={{ color: C.textMuted }}>{isRTL ? 'الثقة (مُشتقّة)' : 'Confidence (derived)'}</span>
                               <span className="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider"
-                                style={{ background: `${confColor}18`, border: `1px solid ${confColor}40`, color: confColor }}>
-                                {confLabel || 'UNVERIFIED'} · {confScore}%
+                                style={{ background: `${mix(confColor,'18')}`, border: `1px solid ${mix(confColor,'40')}`, color: confColor }}>
+                                {(confLabel || (isRTL ? 'غير مُتحقَّق' : 'UNVERIFIED'))} · {confScore}%
                               </span>
                             </div>
                             {result.data?.consensus && (
                               <div className="flex items-center gap-2">
-                                <span className="text-[9px] font-black uppercase tracking-[0.15em]" style={{ color: C.textMuted }}>Cross-Model</span>
+                                <span className="text-[9px] font-black uppercase tracking-[0.15em]" style={{ color: C.textMuted }}>{isRTL ? 'مقارنة النماذج' : 'Cross-Model'}</span>
                                 <span className="px-3 py-1 rounded-full text-[11px] font-bold"
                                   style={{
-                                    background: result.data.consensus.agreement ? `${C.success}15` : `${C.amber}15`,
-                                    border: `1px solid ${result.data.consensus.agreement ? C.success : C.amber}40`,
+                                    background: result.data.consensus.agreement ? `${mix(C.success,'15')}` : `${mix(C.amber,'15')}`,
+                                    border: `1px solid ${mix(result.data.consensus.agreement ? C.success : C.amber,'40')}`,
                                     color: result.data.consensus.agreement ? C.success : C.amber,
                                   }}>
-                                  {result.data.consensus.agreement ? 'Consensus ✓' : `Contested — 2nd: ${result.data.consensus.secondOpinionVerdict || '—'}`}
+                                  {result.data.consensus.agreement ? (isRTL ? 'توافق ✓' : 'Consensus ✓') : `${isRTL ? 'متنازَع — الرأي الثاني' : 'Contested — 2nd'}: ${result.data.consensus.secondOpinionVerdict || '—'}`}
                                 </span>
                               </div>
                             )}
                           </div>
 
                           {result.data?.deception_layer && (
-                            <div className="mt-4 p-3 rounded-xl" style={{ background: `${C.violet}10`, border: `1px solid ${C.violet}25` }}>
+                            <div className="mt-4 p-3 rounded-xl" style={{ background: `${mix(C.violet,'10')}`, border: `1px solid ${mix(C.violet,'25')}` }}>
                               <div className="text-[10px] font-black uppercase tracking-widest mb-1" style={{ color: C.violet }}>
-                                Deception Layer {result.data.deception_layer.number}: {result.data.deception_layer.name} · {result.data.deception_layer.nameAr}
+                                {isRTL ? 'طبقة الخداع' : 'Deception Layer'} {result.data.deception_layer.number}: {result.data.deception_layer.name} · {result.data.deception_layer.nameAr}
                               </div>
-                              <div className="text-[12px] leading-[1.6]" style={{ color: `${C.textPrimary}cc` }}>
-                                🛡️ Defense: {result.data.deception_layer.defense}
+                              <div className="text-[12px] leading-[1.6]" style={{ color: `${mix(C.textPrimary,'cc')}` }}>
+                                🛡️ {isRTL ? 'الدفاع' : 'Defense'}: {result.data.deception_layer.defense}
                               </div>
                             </div>
                           )}
@@ -1019,7 +1041,7 @@ export default function AngryDebunkersWarRoom() {
                           {Array.isArray(result.data?.sources) && result.data.sources.length > 0 && (
                             <div className="mt-4">
                               <div className="text-[10px] font-black uppercase tracking-widest mb-2" style={{ color: C.textMuted }}>
-                                Evidence — relevance-checked ({result.data.relevantCount ?? result.data.sources.length}/{result.data.sources.length} relevant)
+                                {isRTL ? 'الأدلة — مفحوصة الصلة' : 'Evidence — relevance-checked'} ({result.data.relevantCount ?? result.data.sources.length}/{result.data.sources.length} {isRTL ? 'ذات صلة' : 'relevant'})
                               </div>
                               <div className="flex flex-col gap-2.5">
                                 {result.data.sources.map((s: any, i: number) => {
@@ -1031,7 +1053,7 @@ export default function AngryDebunkersWarRoom() {
                                   return (
                                     <div key={i} className="flex items-start gap-2 text-[12px]" style={{ opacity: irrelevant ? 0.5 : 1 }}>
                                       <span className="px-2 py-0.5 rounded-md font-black shrink-0"
-                                        style={{ background: `${tColor}18`, border: `1px solid ${tColor}40`, color: tColor }}>
+                                        style={{ background: `${mix(tColor,'18')}`, border: `1px solid ${mix(tColor,'40')}`, color: tColor }}>
                                         {s.tier}
                                       </span>
                                       <div className="min-w-0">
@@ -1042,12 +1064,12 @@ export default function AngryDebunkersWarRoom() {
                                             <span className="font-bold" style={{ color: C.textPrimary }}>{s.title}</span>
                                           )}
                                           <span className="px-1.5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider shrink-0"
-                                            style={{ background: `${sColor}18`, border: `1px solid ${sColor}40`, color: sColor }}>
-                                            {irrelevant ? 'not relevant' : stance}
+                                            style={{ background: `${mix(sColor,'18')}`, border: `1px solid ${mix(sColor,'40')}`, color: sColor }}>
+                                            {irrelevant ? (isRTL ? 'غير ذي صلة' : 'not relevant') : stance}
                                           </span>
                                         </div>
-                                        {s.why && <p className="text-[11px] mt-1 italic" style={{ color: `${C.textPrimary}aa` }}>↳ {s.why}</p>}
-                                        {s.snippet && <p className="text-[11px] mt-0.5" style={{ color: `${C.textPrimary}66` }}>{String(s.snippet).slice(0, 140)}</p>}
+                                        {s.why && <p className="text-[11px] mt-1 italic" style={{ color: `${mix(C.textPrimary,'aa')}` }}>↳ {s.why}</p>}
+                                        {s.snippet && <p className="text-[11px] mt-0.5" style={{ color: `${mix(C.textPrimary,'66')}` }}>{String(s.snippet).slice(0, 140)}</p>}
                                       </div>
                                     </div>
                                   );
@@ -1057,11 +1079,11 @@ export default function AngryDebunkersWarRoom() {
                           )}
 
                           {result.data?.critique?.unsupportedClaims?.length > 0 && (
-                            <div className="mt-4 p-3 rounded-xl" style={{ background: `${C.amber}10`, border: `1px solid ${C.amber}30` }}>
+                            <div className="mt-4 p-3 rounded-xl" style={{ background: `${mix(C.amber,'10')}`, border: `1px solid ${mix(C.amber,'30')}` }}>
                               <div className="text-[10px] font-black uppercase tracking-widest mb-1" style={{ color: C.amber }}>
-                                ⚠ Grounding audit flagged {result.data.critique.unsupportedClaims.length} unsupported claim(s)
+                                ⚠ {isRTL ? `دقّق الإسناد ورصد ${result.data.critique.unsupportedClaims.length} ادعاء غير مدعوم` : `Grounding audit flagged ${result.data.critique.unsupportedClaims.length} unsupported claim(s)`}
                               </div>
-                              <ul className="text-[11px] leading-[1.6] list-disc pl-4" style={{ color: `${C.textPrimary}aa` }}>
+                              <ul className="text-[11px] leading-[1.6] list-disc pl-4" style={{ color: `${mix(C.textPrimary,'aa')}` }}>
                                 {result.data.critique.unsupportedClaims.slice(0, 3).map((c: string, i: number) => <li key={i}>{c}</li>)}
                               </ul>
                             </div>
@@ -1101,7 +1123,7 @@ export default function AngryDebunkersWarRoom() {
                             </svg>
                           </div>
                           <div className="text-left min-w-0">
-                            <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-0.5" style={{ color: C.textMuted }}>Confidence</div>
+                            <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-0.5" style={{ color: C.textMuted }}>{isRTL ? 'الثقة' : 'Confidence'}</div>
                             <div className="text-2xl font-black leading-none" style={{ color: C.textPrimary }}>
                               {confScore}<span className="text-sm font-semibold" style={{ color: C.textMuted }}>%</span>
                             </div>
@@ -1110,26 +1132,26 @@ export default function AngryDebunkersWarRoom() {
 
                         {/* Card 2: Science Violation Status */}
                         <GlowCard accent={C.danger} className="p-4 sm:p-5 flex items-center gap-4">
-                          <div className="p-2 rounded-xl shrink-0" style={{ background: `${C.danger}15`, border: `1px solid ${C.danger}25` }}>
+                          <div className="p-2 rounded-xl shrink-0" style={{ background: `${mix(C.danger,'15')}`, border: `1px solid ${mix(C.danger,'25')}` }}>
                             <Shield size={18} style={{ color: C.danger }} />
                           </div>
                           <div className="text-left min-w-0">
-                            <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-0.5" style={{ color: C.textMuted }}>Science Violation</div>
+                            <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-0.5" style={{ color: C.textMuted }}>{isRTL ? 'مخالفة علمية' : 'Science Violation'}</div>
                             <p className="text-[13px] font-bold leading-snug truncate" style={{ color: C.textPrimary }}>
-                              {result.data?.negative_science_violation || result.data?.logical_fallacy_detected || 'Not detected'}
+                              {result.data?.negative_science_violation || result.data?.logical_fallacy_detected || (isRTL ? 'لم تُكتشف' : 'Not detected')}
                             </p>
                           </div>
                         </GlowCard>
 
                         {/* Card 3: Egyptian Vector Hit */}
                         <GlowCard accent={C.success} className="p-4 sm:p-5 flex items-center gap-4">
-                          <div className="p-2 rounded-xl shrink-0" style={{ background: `${C.success}15`, border: `1px solid ${C.success}25` }}>
+                          <div className="p-2 rounded-xl shrink-0" style={{ background: `${mix(C.success,'15')}`, border: `1px solid ${mix(C.success,'25')}` }}>
                             <Fingerprint size={18} style={{ color: C.success }} />
                           </div>
                           <div className="text-left min-w-0">
-                            <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-0.5" style={{ color: C.textMuted }}>Egyptian Vector</div>
+                            <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-0.5" style={{ color: C.textMuted }}>{isRTL ? 'المسار المصري' : 'Egyptian Vector'}</div>
                             <p className="text-[13px] font-bold leading-snug truncate" style={{ color: C.textPrimary }}>
-                              {result.data?.egyptian_vector_hit || result.data?.egyptian_contextual_mapping || 'Not applicable'}
+                              {result.data?.egyptian_vector_hit || result.data?.egyptian_contextual_mapping || (isRTL ? 'غير منطبق' : 'Not applicable')}
                             </p>
                           </div>
                         </GlowCard>
@@ -1145,54 +1167,54 @@ export default function AngryDebunkersWarRoom() {
                           </div>
                           
                           <div className="flex items-center gap-3 mb-6">
-                            <div className="p-2.5 rounded-xl" style={{ background: `${C.violet}15`, border: `1px solid ${C.violet}30` }}>
+                            <div className="p-2.5 rounded-xl" style={{ background: `${mix(C.violet,'15')}`, border: `1px solid ${mix(C.violet,'30')}` }}>
                               <BrainCircuit size={20} style={{ color: C.violet }} />
                             </div>
                             <div>
-                              <div className="text-[10px] font-black uppercase tracking-[0.2em]" style={{ color: C.violet }}>COVO Orchestration Engine</div>
-                              <div className="text-xl font-bold" style={{ color: C.textPrimary }}>Judgment Log</div>
+                              <div className="text-[10px] font-black uppercase tracking-[0.2em]" style={{ color: C.violet }}>{isRTL ? 'محرك التنسيق COVO' : 'COVO Orchestration Engine'}</div>
+                              <div className="text-xl font-bold" style={{ color: C.textPrimary }}>{isRTL ? 'سجل الحُكم' : 'Judgment Log'}</div>
                             </div>
                           </div>
 
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <div className="p-4 rounded-[16px]" style={{ background: `rgba(255,255,255,0.02)`, border: `1px solid ${C.border}` }}>
-                              <div className="text-[10px] font-black uppercase tracking-wider mb-2" style={{ color: C.azure }}>Domain</div>
+                            <div className="p-4 rounded-[16px]" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}>
+                              <div className="text-[10px] font-black uppercase tracking-wider mb-2" style={{ color: C.azure }}>{isRTL ? 'المجال' : 'Domain'}</div>
                               <div className="text-lg font-bold capitalize" style={{ color: C.textPrimary }}>{result.data.covoAnalysis.domain}</div>
                             </div>
                             
-                            <div className="p-4 rounded-[16px]" style={{ background: `rgba(255,255,255,0.02)`, border: `1px solid ${C.border}` }}>
-                              <div className="text-[10px] font-black uppercase tracking-wider mb-2" style={{ color: C.danger }}>Manipulation Risk</div>
+                            <div className="p-4 rounded-[16px]" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}>
+                              <div className="text-[10px] font-black uppercase tracking-wider mb-2" style={{ color: C.danger }}>{isRTL ? 'خطر التلاعب' : 'Manipulation Risk'}</div>
                               <div className="text-lg font-bold" style={{ color: C.danger }}>
                                 {Math.round(result.data.covoAnalysis.emotional_intent_score?.total_manipulation_risk * 100 || 0)}%
                               </div>
                             </div>
 
-                            <div className="p-4 rounded-[16px] sm:col-span-2" style={{ background: `rgba(255,255,255,0.02)`, border: `1px solid ${C.border}` }}>
-                              <div className="text-[10px] font-black uppercase tracking-wider mb-2" style={{ color: C.amber }}>Detected Logical Fallacies & Biases</div>
+                            <div className="p-4 rounded-[16px] sm:col-span-2" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}>
+                              <div className="text-[10px] font-black uppercase tracking-wider mb-2" style={{ color: C.amber }}>{isRTL ? 'المغالطات المنطقية والتحيّزات المُكتشَفة' : 'Detected Logical Fallacies & Biases'}</div>
                               {result.data.covoAnalysis.detected_fallacies?.length > 0 || result.data.covoAnalysis.detected_biases?.length > 0 ? (
                                 <div className="flex flex-wrap gap-2">
                                   {result.data.covoAnalysis.detected_fallacies?.map((f: any, i: number) => (
-                                    <span key={`f-${i}`} className="px-2.5 py-1 text-xs font-bold rounded-md" style={{ background: `${C.amber}15`, color: C.amber }}>
+                                    <span key={`f-${i}`} className="px-2.5 py-1 text-xs font-bold rounded-md" style={{ background: `${mix(C.amber,'15')}`, color: C.amber }}>
                                       {f.name}
                                     </span>
                                   ))}
                                   {result.data.covoAnalysis.detected_biases?.map((b: any, i: number) => (
-                                    <span key={`b-${i}`} className="px-2.5 py-1 text-xs font-bold rounded-md" style={{ background: `${C.danger}15`, color: C.danger }}>
+                                    <span key={`b-${i}`} className="px-2.5 py-1 text-xs font-bold rounded-md" style={{ background: `${mix(C.danger,'15')}`, color: C.danger }}>
                                       {b.name}
                                     </span>
                                   ))}
                                 </div>
                               ) : (
-                                <div className="text-sm font-medium" style={{ color: C.textMuted }}>None detected</div>
+                                <div className="text-sm font-medium" style={{ color: C.textMuted }}>{isRTL ? 'لا شيء مُكتشَف' : 'None detected'}</div>
                               )}
                             </div>
                           </div>
                           
                           {result.data.covoAnalysis.socratic_intervention && (
-                             <div className="mt-4 p-4 rounded-[16px]" style={{ background: `${C.danger}10`, border: `1px solid ${C.danger}30` }}>
+                             <div className="mt-4 p-4 rounded-[16px]" style={{ background: `${mix(C.danger,'10')}`, border: `1px solid ${mix(C.danger,'30')}` }}>
                                <div className="flex gap-3">
                                  <AlertTriangle size={18} style={{ color: C.danger }} className="shrink-0 mt-0.5" />
-                                 <p className="text-sm font-semibold leading-relaxed" style={{ color: `${C.textPrimary}e6` }}>
+                                 <p className="text-sm font-semibold leading-relaxed" style={{ color: `${mix(C.textPrimary,'e6')}` }}>
                                    {result.data.covoAnalysis.socratic_intervention}
                                  </p>
                                </div>
@@ -1210,10 +1232,10 @@ export default function AngryDebunkersWarRoom() {
                         </div>
 
                         <h2 className="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-4" style={{ ...fBase, color: C.textPrimary }}>
-                          <div className="p-3 rounded-2xl" style={{ background: `${C.violet}20`, border: `1px solid ${C.violet}30` }}>
+                          <div className="p-3 rounded-2xl" style={{ background: `${mix(C.violet,'20')}`, border: `1px solid ${mix(C.violet,'30')}` }}>
                             <CheckCircle2 size={26} style={{ color: C.violet }} />
                           </div>
-                          Truth Sandwich Protocol
+                          {isRTL ? 'بروتوكول ساندويتش الحقيقة' : 'Truth Sandwich Protocol'}
                         </h2>
 
                         <div className="space-y-4 relative z-10">
@@ -1222,13 +1244,13 @@ export default function AngryDebunkersWarRoom() {
                             initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
                             className="p-5 sm:p-6 rounded-[20px]"
-                            style={{ background: `${C.success}12`, border: `1px solid ${C.success}25` }}
+                            style={{ background: `${mix(C.success,'12')}`, border: `1px solid ${mix(C.success,'25')}` }}
                           >
                             <span className="text-[10px] font-black uppercase tracking-widest block mb-3" style={{ color: C.success }}>✅ FACT / الحقيقة</span>
                             <p className="text-base sm:text-lg font-bold leading-relaxed mb-2" dir="rtl" style={{ color: C.textPrimary, ...fArabic }}>
-                              {result.data?.truth_sandwich?.fact_1_ar || result.data?.truth_sandwich?.fact_1 || 'Analysis not available'}
+                              {result.data?.truth_sandwich?.fact_1_ar || result.data?.truth_sandwich?.fact_1 || (isRTL ? 'التحليل غير متاح' : 'Analysis not available')}
                             </p>
-                            <p className="text-[13px] leading-[1.7]" style={{ color: `${C.textPrimary}aa` }}>
+                            <p className="text-[13px] leading-[1.7]" style={{ color: `${mix(C.textPrimary,'aa')}` }}>
                               {result.data?.truth_sandwich?.fact_1_en || ''}
                             </p>
                           </motion.div>
@@ -1238,13 +1260,13 @@ export default function AngryDebunkersWarRoom() {
                             initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.35, type: "spring", stiffness: 120 }}
                             className="p-5 sm:p-6 rounded-[20px]"
-                            style={{ background: `${C.danger}10`, border: `1px solid ${C.danger}25` }}
+                            style={{ background: `${mix(C.danger,'10')}`, border: `1px solid ${mix(C.danger,'25')}` }}
                           >
                             <span className="text-[10px] font-black uppercase tracking-widest block mb-3" style={{ color: C.danger }}>❌ MYTH / الخرافة</span>
-                            <p className="text-base sm:text-lg font-medium leading-relaxed line-through mb-2" dir="rtl" style={{ color: `${C.textPrimary}50`, textDecorationColor: C.danger, textDecorationThickness: "2px", ...fArabic }}>
-                              {result.data?.truth_sandwich?.myth_ar || result.data?.truth_sandwich?.myth || 'Analysis not available'}
+                            <p className="text-base sm:text-lg font-medium leading-relaxed line-through mb-2" dir="rtl" style={{ color: `${mix(C.textPrimary,'50')}`, textDecorationColor: C.danger, textDecorationThickness: "2px", ...fArabic }}>
+                              {result.data?.truth_sandwich?.myth_ar || result.data?.truth_sandwich?.myth || (isRTL ? 'التحليل غير متاح' : 'Analysis not available')}
                             </p>
-                            <p className="text-[13px] leading-[1.7] line-through" style={{ color: `${C.textPrimary}40`, textDecorationColor: `${C.danger}60` }}>
+                            <p className="text-[13px] leading-[1.7] line-through" style={{ color: `${mix(C.textPrimary,'40')}`, textDecorationColor: `${mix(C.danger,'60')}` }}>
                               {result.data?.truth_sandwich?.myth_en || ''}
                             </p>
                           </motion.div>
@@ -1254,13 +1276,13 @@ export default function AngryDebunkersWarRoom() {
                             initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.5, type: "spring", stiffness: 120 }}
                             className="p-5 sm:p-6 rounded-[20px]"
-                            style={{ background: `${C.success}12`, border: `1px solid ${C.success}25` }}
+                            style={{ background: `${mix(C.success,'12')}`, border: `1px solid ${mix(C.success,'25')}` }}
                           >
                             <span className="text-[10px] font-black uppercase tracking-widest block mb-3" style={{ color: C.success }}>✅ FACT / التأكيد</span>
                             <p className="text-base sm:text-lg font-bold leading-relaxed mb-2" dir="rtl" style={{ color: C.textPrimary, ...fArabic }}>
-                              {result.data?.truth_sandwich?.fact_2_ar || result.data?.truth_sandwich?.fact_2 || 'Analysis not available'}
+                              {result.data?.truth_sandwich?.fact_2_ar || result.data?.truth_sandwich?.fact_2 || (isRTL ? 'التحليل غير متاح' : 'Analysis not available')}
                             </p>
-                            <p className="text-[13px] leading-[1.7]" style={{ color: `${C.textPrimary}aa` }}>
+                            <p className="text-[13px] leading-[1.7]" style={{ color: `${mix(C.textPrimary,'aa')}` }}>
                               {result.data?.truth_sandwich?.fact_2_en || ''}
                             </p>
                           </motion.div>
@@ -1271,46 +1293,46 @@ export default function AngryDebunkersWarRoom() {
                     {/* ═══ 5. RELIGIOUS CONTEXT (when Islamic claim detected) ═══ */}
                     {result.data?.is_religious_claim && result.data?.religious_context && (
                       <motion.div variants={pop}>
-                        <GlowCard accent="#d4a843" className="p-0 overflow-hidden">
+                        <GlowCard accent="var(--accent-amber)" className="p-0 overflow-hidden">
                           <div className="flex">
                             <div className="w-[5px] shrink-0 rounded-l-[22px]"
-                              style={{ background: `linear-gradient(180deg, #d4a843, #10b981)` }} />
+                              style={{ background: `linear-gradient(180deg, var(--accent-amber), var(--accent-emerald))` }} />
                             <div className="flex-1 p-6 sm:p-7">
                               <div className="flex items-center gap-3 mb-5">
-                                <div className="p-2.5 rounded-xl" style={{ background: '#d4a84318', border: '1px solid #d4a84328' }}>
+                                <div className="p-2.5 rounded-xl" style={{ background: 'color-mix(in srgb, var(--accent-amber) 9%, transparent)', border: '1px solid color-mix(in srgb, var(--accent-amber) 16%, transparent)' }}>
                                   <span className="text-lg">🕌</span>
                                 </div>
                                 <div>
-                                  <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: '#d4a843cc' }}>Islamic Verification / التحقق الإسلامي</div>
-                                  <div className="text-[15px] font-bold" style={{ color: C.textPrimary }}>Religious Scholarly Analysis</div>
+                                  <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: 'color-mix(in srgb, var(--accent-amber) 80%, transparent)' }}>Islamic Verification / التحقق الإسلامي</div>
+                                  <div className="text-[15px] font-bold" style={{ color: C.textPrimary }}>{isRTL ? 'تحليل علمي شرعي' : 'Religious Scholarly Analysis'}</div>
                                 </div>
                               </div>
                               <div className="space-y-3">
                                 {result.data?.religious_context?.hadith_status && (
-                                  <div className="rounded-xl p-4" style={{ background: 'rgba(255,255,255,0.02)', border: `1px solid ${C.border}` }}>
-                                    <div className="text-[9px] font-black uppercase tracking-wider mb-1" style={{ color: '#d4a843' }}>Hadith Status</div>
+                                  <div className="rounded-xl p-4" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}>
+                                    <div className="text-[9px] font-black uppercase tracking-wider mb-1" style={{ color: 'var(--accent-amber)' }}>{isRTL ? 'حالة الحديث' : 'Hadith Status'}</div>
                                     <p className="text-[14px] font-bold" style={{ color: C.textPrimary }}>{result.data?.religious_context?.hadith_status}</p>
                                   </div>
                                 )}
                                 {result.data?.religious_context?.correct_interpretation && (
-                                  <div className="rounded-xl p-4" style={{ background: 'rgba(255,255,255,0.02)', border: `1px solid ${C.border}` }}>
-                                    <div className="text-[9px] font-black uppercase tracking-wider mb-1" style={{ color: '#10b981' }}>Correct Interpretation</div>
-                                    <p className="text-[13px] leading-[1.7]" style={{ color: `${C.textPrimary}cc` }}>{result.data?.religious_context?.correct_interpretation}</p>
+                                  <div className="rounded-xl p-4" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}>
+                                    <div className="text-[9px] font-black uppercase tracking-wider mb-1" style={{ color: 'var(--accent-emerald)' }}>{isRTL ? 'التفسير الصحيح' : 'Correct Interpretation'}</div>
+                                    <p className="text-[13px] leading-[1.7]" style={{ color: `${mix(C.textPrimary,'cc')}` }}>{result.data?.religious_context?.correct_interpretation}</p>
                                   </div>
                                 )}
                                 {result.data?.religious_context?.scholars_cited && (
-                                  <div className="rounded-xl p-4" style={{ background: 'rgba(255,255,255,0.02)', border: `1px solid ${C.border}` }}>
-                                    <div className="text-[9px] font-black uppercase tracking-wider mb-1" style={{ color: C.azure }}>Scholars Cited</div>
-                                    <p className="text-[13px] leading-[1.7]" style={{ color: `${C.textPrimary}cc` }}>{result.data?.religious_context?.scholars_cited}</p>
+                                  <div className="rounded-xl p-4" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}>
+                                    <div className="text-[9px] font-black uppercase tracking-wider mb-1" style={{ color: C.azure }}>{isRTL ? 'العلماء المُستشهَد بهم' : 'Scholars Cited'}</div>
+                                    <p className="text-[13px] leading-[1.7]" style={{ color: `${mix(C.textPrimary,'cc')}` }}>{result.data?.religious_context?.scholars_cited}</p>
                                   </div>
                                 )}
                               </div>
                               <div className="flex flex-wrap gap-2 mt-4">
-                                <a href="/religion-hub/tools/hadith-check" className="px-4 py-2 rounded-xl text-[11px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: '#d4a84318', border: '1px solid #d4a84330', color: '#d4a843' }}>
-                                  📜 Deep Hadith Check
+                                <a href="/religion-hub/tools/hadith-check" className="px-4 py-2 rounded-xl text-[11px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: 'color-mix(in srgb, var(--accent-amber) 9%, transparent)', border: '1px solid color-mix(in srgb, var(--accent-amber) 19%, transparent)', color: 'var(--accent-amber)' }}>
+                                  📜 {isRTL ? 'فحص حديث متعمّق' : 'Deep Hadith Check'}
                                 </a>
-                                <a href="/religion-hub/tools" className="px-4 py-2 rounded-xl text-[11px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: 'rgba(255,255,255,0.04)', border: `1px solid ${C.border}`, color: C.textMuted }}>
-                                  All Religious Tools →
+                                <a href="/religion-hub/tools" className="px-4 py-2 rounded-xl text-[11px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}`, color: C.textMuted }}>
+                                  {isRTL ? 'كل الأدوات الدينية ←' : 'All Religious Tools →'}
                                 </a>
                               </div>
                             </div>
@@ -1330,36 +1352,43 @@ export default function AngryDebunkersWarRoom() {
                             <Bot className="text-white" size={20} />
                           </div>
                           <div className="text-left">
-                            <h3 className="font-bold text-base" style={{ color: C.textPrimary, ...fBase }}>AI Interrogation</h3>
+                            <h3 className="font-bold text-base" style={{ color: C.textPrimary, ...fBase }}>{isRTL ? 'استجواب الذكاء الاصطناعي' : 'AI Interrogation'}</h3>
                             <p className="text-xs font-medium mt-0.5" style={{ color: C.textMuted }}>
-                              {result.data?.isUrlInput ? `Analyzing: ${result.data?.extractedTitle || 'source'}` : "Debate the evidence directly."}
+                              {result.data?.isUrlInput ? `${isRTL ? 'يحلّل' : 'Analyzing'}: ${result.data?.extractedTitle || (isRTL ? 'مصدر' : 'source')}` : (isRTL ? "ناقش الأدلة مباشرةً." : "Debate the evidence directly.")}
                             </p>
                           </div>
                           {/* Live dot */}
                           <div className="ml-auto flex items-center gap-2">
                             <motion.div animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1.5, repeat: Infinity }}
                               className="w-2 h-2 rounded-full" style={{ background: C.success }} />
-                            <span className="text-[11px] font-semibold" style={{ color: C.success }}>LIVE</span>
+                            <span className="text-[11px] font-semibold" style={{ color: C.success }}>{isRTL ? 'مباشر' : 'LIVE'}</span>
                           </div>
                         </div>
 
                         {/* Messages */}
                         <div className="flex-1 overflow-y-auto p-6 sm:p-8 flex flex-col gap-5 custom-scrollbar"
-                          style={{ background: `linear-gradient(180deg, ${C.bg}90 0%, ${C.surface}60 100%)` }}>
+                          style={{ background: `linear-gradient(180deg, ${mix(C.bg,'90')} 0%, ${mix(C.surface,'60')} 100%)` }}>
                           {messages.length === 0 && (
                             <div className="flex flex-col items-center gap-5 mt-6">
                               <div className="text-center text-sm font-medium" style={{ color: C.textSubtle }}>
                                 {result.data?.patient_zero_tracing
-                                  ? "Ask me about the origin of this lie. I have the forensic trace."
-                                  : "System Online. Awaiting input."}
+                                  ? (isRTL ? "اسألني عن أصل هذه الكذبة. عندي التتبّع الجنائي." : "Ask me about the origin of this lie. I have the forensic trace.")
+                                  : (isRTL ? "النظام متصل. في انتظار المُدخلات." : "System Online. Awaiting input.")}
                               </div>
                               {/* Suggested question chips */}
                               <div className="flex flex-wrap justify-center gap-2 max-w-lg">
-                                {[
-                                  "What's the strongest evidence against this claim?",
-                                  "Who benefits from spreading this?",
-                                  "Is there any truth hidden in this claim?",
-                                ].map((q, qi) => (
+                                {(isRTL
+                                  ? [
+                                      "إيه أقوى دليل ضد الادعاء ده؟",
+                                      "مين المستفيد من نشر ده؟",
+                                      "في أي حقيقة مخبّية في الادعاء ده؟",
+                                    ]
+                                  : [
+                                      "What's the strongest evidence against this claim?",
+                                      "Who benefits from spreading this?",
+                                      "Is there any truth hidden in this claim?",
+                                    ]
+                                ).map((q, qi) => (
                                   <motion.button
                                     key={qi}
                                     initial={{ opacity: 0, y: 10 }}
@@ -1368,8 +1397,8 @@ export default function AngryDebunkersWarRoom() {
                                     onClick={() => { setInput(q); }}
                                     className="px-4 py-2 rounded-full text-[12px] font-medium transition-all hover:scale-105 cursor-pointer"
                                     style={{
-                                      background: `${C.azure}12`,
-                                      border: `1px solid ${C.azure}25`,
+                                      background: `${mix(C.azure,'12')}`,
+                                      border: `1px solid ${mix(C.azure,'25')}`,
                                       color: C.ice,
                                     }}
                                   >
@@ -1428,7 +1457,7 @@ export default function AngryDebunkersWarRoom() {
                             <input
                               value={input}
                               onChange={e => setInput(e.target.value)}
-                              placeholder="Ask about the evidence, origin, or instigator..."
+                              placeholder={isRTL ? "اسأل عن الأدلة أو الأصل أو المُحرِّض..." : "Ask about the evidence, origin, or instigator..."}
                               className="flex-1 rounded-full pl-6 pr-16 py-4 text-base font-medium focus:outline-none transition-all"
                               dir="auto"
                               style={{
@@ -1468,16 +1497,16 @@ export default function AngryDebunkersWarRoom() {
                           disabled={deepLoading}
                           className="px-8 py-4 rounded-2xl text-[14px] font-bold uppercase tracking-wider flex items-center gap-3 cursor-pointer"
                           style={{
-                            background: deepLoading ? `${C.violet}10` : `linear-gradient(135deg, ${C.primary}30, ${C.violet}30)`,
-                            border: `1px solid ${deepLoading ? C.violet : C.primary}30`,
+                            background: deepLoading ? `${mix(C.violet,'10')}` : `linear-gradient(135deg, ${mix(C.primary,'30')}, ${mix(C.violet,'30')})`,
+                            border: `1px solid ${mix(deepLoading ? C.violet : C.primary,'30')}`,
                             color: deepLoading ? C.textMuted : C.textPrimary,
                             boxShadow: deepLoading ? 'none' : `0 4px 24px ${C.primaryGlow}`,
                           }}
                         >
                           {deepLoading ? (
-                            <><Loader2 size={18} className="animate-spin" /> Analyzing deeper... (uses 1 more API call)</>
+                            <><Loader2 size={18} className="animate-spin" /> {isRTL ? 'تحليل أعمق... (يستهلك استدعاء API إضافي)' : 'Analyzing deeper... (uses 1 more API call)'}</>
                           ) : (
-                            <><Layers size={18} /> 🔍 Go Deeper — Full Forensic Analysis</>
+                            <><Layers size={18} /> 🔍 {isRTL ? 'تعمّق أكثر — تحليل جنائي كامل' : 'Go Deeper — Full Forensic Analysis'}</>
                           )}
                         </motion.button>
                       </motion.div>
@@ -1493,13 +1522,13 @@ export default function AngryDebunkersWarRoom() {
                           <div className="w-[5px] shrink-0 rounded-l-[22px]"
                             style={{ background: `linear-gradient(180deg, ${C.primary}, ${C.danger})` }} />
                           <div className="flex items-center gap-4 p-5 sm:p-6 min-w-0">
-                            <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${C.danger}15`, border: `1px solid ${C.danger}25` }}>
+                            <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${mix(C.danger,'15')}`, border: `1px solid ${mix(C.danger,'25')}` }}>
                               <Shield size={20} style={{ color: C.danger }} />
                             </div>
                             <div className="text-left min-w-0">
-                              <div className="text-[9px] font-black uppercase tracking-[0.18em] mb-1.5" style={{ color: `${C.danger}cc` }}>Science Violation</div>
+                              <div className="text-[9px] font-black uppercase tracking-[0.18em] mb-1.5" style={{ color: `${mix(C.danger,'cc')}` }}>{isRTL ? 'مخالفة علمية' : 'Science Violation'}</div>
                               <p className="text-[15px] font-bold leading-snug break-words" style={{ color: C.textPrimary }}>
-                                {result.data?.negative_science_violation || result.data?.logical_fallacy_detected || 'No violation detected'}
+                                {result.data?.negative_science_violation || result.data?.logical_fallacy_detected || (isRTL ? 'لم تُكتشف مخالفة' : 'No violation detected')}
                               </p>
                             </div>
                           </div>
@@ -1514,13 +1543,13 @@ export default function AngryDebunkersWarRoom() {
                           <div className="w-[5px] shrink-0 rounded-l-[22px]"
                             style={{ background: `linear-gradient(180deg, ${C.success}, ${C.azure})` }} />
                           <div className="flex items-center gap-4 p-5 sm:p-6 min-w-0">
-                            <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${C.success}15`, border: `1px solid ${C.success}25` }}>
+                            <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${mix(C.success,'15')}`, border: `1px solid ${mix(C.success,'25')}` }}>
                               <Fingerprint size={20} style={{ color: C.success }} />
                             </div>
                             <div className="text-left min-w-0">
-                              <div className="text-[9px] font-black uppercase tracking-[0.18em] mb-1.5" style={{ color: `${C.success}cc` }}>Egyptian Vector Hit</div>
+                              <div className="text-[9px] font-black uppercase tracking-[0.18em] mb-1.5" style={{ color: `${mix(C.success,'cc')}` }}>{isRTL ? 'إصابة المسار المصري' : 'Egyptian Vector Hit'}</div>
                               <p className="text-[15px] font-bold leading-snug break-words" style={{ color: C.textPrimary }}>
-                                {result.data?.egyptian_vector_hit || result.data?.egyptian_contextual_mapping || 'Not applicable'}
+                                {result.data?.egyptian_vector_hit || result.data?.egyptian_contextual_mapping || (isRTL ? 'غير منطبق' : 'Not applicable')}
                               </p>
                             </div>
                           </div>
@@ -1537,50 +1566,50 @@ export default function AngryDebunkersWarRoom() {
                               style={{ background: `linear-gradient(180deg, ${C.amber}, ${C.primary})` }} />
                             <div className="flex-1 p-6 sm:p-7">
                               <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${C.amber}15`, border: `1px solid ${C.amber}25` }}>
+                                <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${mix(C.amber,'15')}`, border: `1px solid ${mix(C.amber,'25')}` }}>
                                   <AlertTriangle size={18} style={{ color: C.amber }} />
                                 </div>
-                                <div className="text-[10px] font-black uppercase tracking-[0.18em]" style={{ color: C.amber }}>Patient Zero Trace</div>
+                                <div className="text-[10px] font-black uppercase tracking-[0.18em]" style={{ color: C.amber }}>{isRTL ? 'تتبّع المريض صفر' : 'Patient Zero Trace'}</div>
                               </div>
 
                               {/* One-Law: this trace is AI inference, not a sourced forensic fact */}
-                              <div className="rounded-xl px-4 py-3 mb-5" style={{ background: `${C.danger}10`, border: `1px solid ${C.danger}30` }}>
+                              <div className="rounded-xl px-4 py-3 mb-5" style={{ background: `${mix(C.danger,'10')}`, border: `1px solid ${mix(C.danger,'30')}` }}>
                                 <p className="text-[12px] font-bold leading-[1.5] break-words" style={{ color: C.danger }} dir="rtl">
                                   ⚠ استنتاج بالذكاء الاصطناعي — غير موثّق
                                 </p>
-                                <p className="text-[11px] font-semibold leading-[1.5] break-words mt-0.5" style={{ color: `${C.textPrimary}cc` }}>
-                                  AI inference — not a sourced fact. Treat year/platform as hypotheses unless a cited source confirms them.
+                                <p className="text-[11px] font-semibold leading-[1.5] break-words mt-0.5" style={{ color: `${mix(C.textPrimary,'cc')}` }}>
+                                  {isRTL ? "استنتاج بالذكاء الاصطناعي — وليس حقيقة موثّقة. عامل السنة/المنصة كفرضيات ما لم يؤكّدها مصدر مذكور." : "AI inference — not a sourced fact. Treat year/platform as hypotheses unless a cited source confirms them."}
                                 </p>
                               </div>
 
                               <div className="space-y-5 relative z-10">
                                 {[
-                                  { icon: <Clock size={14} />, label: "Origin Year", val: result.data?.patient_zero_tracing?.origin_year },
-                                  { icon: <Globe size={14} />, label: "Origin Platform", val: result.data?.patient_zero_tracing?.origin_platform },
-                                  { icon: <LinkIcon size={14} />, label: "Transmission Vector", val: result.data?.patient_zero_tracing?.transmission_vector },
+                                  { icon: <Clock size={14} />, label: isRTL ? "سنة المنشأ" : "Origin Year", val: result.data?.patient_zero_tracing?.origin_year },
+                                  { icon: <Globe size={14} />, label: isRTL ? "منصة المنشأ" : "Origin Platform", val: result.data?.patient_zero_tracing?.origin_platform },
+                                  { icon: <LinkIcon size={14} />, label: isRTL ? "ناقل الانتشار" : "Transmission Vector", val: result.data?.patient_zero_tracing?.transmission_vector },
                                 ].map(({ icon, label, val }) => (
                                   <div key={label} className="flex gap-4 items-start min-w-0">
                                     <span className="mt-1 shrink-0 opacity-60" style={{ color: C.amber }}>{icon}</span>
                                     <div className="min-w-0 flex-1">
-                                      <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-1" style={{ color: `${C.amber}90` }}>{label}</div>
-                                      <p className="text-[14px] font-semibold leading-[1.6] break-words" style={{ color: C.textPrimary }}>{val || 'Unknown'}</p>
+                                      <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-1" style={{ color: `${mix(C.amber,'90')}` }}>{label}</div>
+                                      <p className="text-[14px] font-semibold leading-[1.6] break-words" style={{ color: C.textPrimary }}>{val || (isRTL ? 'غير معروف' : 'Unknown')}</p>
                                     </div>
                                   </div>
                                 ))}
 
                                 <div className="rounded-2xl p-5 mt-2"
-                                  style={{ background: `${C.amber}08`, border: `1px solid ${C.amber}15` }}>
-                                  <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-2" style={{ color: C.amber }}>Why Trending Now</div>
+                                  style={{ background: `${mix(C.amber,'08')}`, border: `1px solid ${mix(C.amber,'15')}` }}>
+                                  <div className="text-[9px] font-black uppercase tracking-[0.15em] mb-2" style={{ color: C.amber }}>{isRTL ? 'لماذا ينتشر الآن' : 'Why Trending Now'}</div>
                                   <p className="text-[14px] font-medium leading-[1.7] break-words"
-                                    style={{ color: `${C.textPrimary}dd` }}>
-                                    {result.data?.patient_zero_tracing?.why_trending_now || 'Analysis not available'}
+                                    style={{ color: `${mix(C.textPrimary,'dd')}` }}>
+                                    {result.data?.patient_zero_tracing?.why_trending_now || (isRTL ? 'التحليل غير متاح' : 'Analysis not available')}
                                   </p>
                                 </div>
                               </div>
                             </div>
                           </div>
                           {/* ── THREAT MAP ── */}
-                          <div className="w-full border-t" style={{ borderColor: `${C.amber}30` }}>
+                          <div className="w-full border-t" style={{ borderColor: `${mix(C.amber,'30')}` }}>
                             <ThreatMap claim={result.data?.extractedTitle || query} />
                           </div>
                         </GlowCard>
@@ -1596,13 +1625,13 @@ export default function AngryDebunkersWarRoom() {
                               style={{ background: `linear-gradient(180deg, ${C.violet}, ${C.primary}, ${C.amber})` }} />
                             <div className="flex-1 p-6 sm:p-7">
                               <div className="flex items-center gap-3 mb-5">
-                                <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${C.violet}18`, border: `1px solid ${C.violet}28` }}>
+                                <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${mix(C.violet,'18')}`, border: `1px solid ${mix(C.violet,'28')}` }}>
                                   <Layers size={18} style={{ color: C.violet }} />
                                 </div>
                                 <div>
-                                  <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: `${C.violet}cc` }}>8-Layer Deception Detection</div>
+                                  <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: `${mix(C.violet,'cc')}` }}>{isRTL ? 'كشف الخداع بثماني طبقات' : '8-Layer Deception Detection'}</div>
                                   <div className="text-[17px] font-black mt-0.5" style={{ color: C.textPrimary }}>
-                                    Layer {result.data?.layer_aware_analysis?.deception_layer?.detected_layer}: {result.data?.layer_aware_analysis?.deception_layer?.layer_name || 'Unknown'}
+                                    {isRTL ? 'الطبقة' : 'Layer'} {result.data?.layer_aware_analysis?.deception_layer?.detected_layer}: {result.data?.layer_aware_analysis?.deception_layer?.layer_name || (isRTL ? 'غير معروفة' : 'Unknown')}
                                   </div>
                                 </div>
                               </div>
@@ -1612,34 +1641,34 @@ export default function AngryDebunkersWarRoom() {
                               </div>
 
                               <div className="rounded-2xl p-4 mb-5"
-                                style={{ background: `${C.violet}08`, border: `1px solid ${C.violet}15` }}>
-                                <p className="text-[13px] font-medium leading-[1.7]" style={{ color: `${C.textPrimary}dd` }}>
-                                  {result.data?.layer_aware_analysis?.deception_layer?.layer_explanation || 'Analysis not available'}
+                                style={{ background: `${mix(C.violet,'08')}`, border: `1px solid ${mix(C.violet,'15')}` }}>
+                                <p className="text-[13px] font-medium leading-[1.7]" style={{ color: `${mix(C.textPrimary,'dd')}` }}>
+                                  {result.data?.layer_aware_analysis?.deception_layer?.layer_explanation || (isRTL ? 'التحليل غير متاح' : 'Analysis not available')}
                                 </p>
                               </div>
 
                               <div className="flex items-center gap-2 mb-4">
                                 <Swords size={15} style={{ color: C.amber }} />
-                                <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: C.amber }}>Counter-Weapons Deployed</div>
+                                <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: C.amber }}>{isRTL ? 'الأسلحة المضادة المنشورة' : 'Counter-Weapons Deployed'}</div>
                               </div>
 
                               <div className="space-y-3">
                                 {(result.data?.layer_aware_analysis?.counter_weapons || []).map((w: any, i: number) => (
                                   <div key={i} className="rounded-xl p-4 flex items-start gap-3"
-                                    style={{ background: `rgba(255,255,255,0.02)`, border: `1px solid ${C.border}` }}>
+                                    style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}>
                                     <div className="shrink-0 mt-0.5">
                                       <Swords size={14} style={{ color: C.ice }} />
                                     </div>
                                     <div className="flex-1 min-w-0">
                                       <div className="flex items-center gap-2 mb-1">
-                                        <span className="text-[13px] font-bold" style={{ color: C.textPrimary }}>{w?.weapon_name || 'Unknown'}</span>
+                                        <span className="text-[13px] font-bold" style={{ color: C.textPrimary }}>{w?.weapon_name || (isRTL ? 'غير معروف' : 'Unknown')}</span>
                                         <span className="text-[11px] font-medium" dir="rtl" style={{ color: C.textMuted, fontFamily: "'IBM Plex Sans Arabic', sans-serif" }}>{w?.weapon_name_ar || ''}</span>
                                       </div>
-                                      <p className="text-[12px] leading-[1.6] break-words" style={{ color: `${C.textPrimary}bb` }}>{w?.result || ''}</p>
+                                      <p className="text-[12px] leading-[1.6] break-words" style={{ color: `${mix(C.textPrimary,'bb')}` }}>{w?.result || ''}</p>
                                       <div className="flex items-center gap-1 mt-2">
                                         {Array.from({ length: 5 }).map((_, s) => (
                                           <Star key={s} size={12} fill={s < (w?.effectiveness || 0) ? C.amber : 'transparent'}
-                                            style={{ color: s < (w?.effectiveness || 0) ? C.amber : `${C.textMuted}40` }} />
+                                            style={{ color: s < (w?.effectiveness || 0) ? C.amber : `${mix(C.textMuted,'40')}` }} />
                                         ))}
                                         <span className="text-[10px] font-bold ml-1" style={{ color: C.textMuted }}>{w?.effectiveness || 0}/5</span>
                                       </div>
@@ -1650,9 +1679,9 @@ export default function AngryDebunkersWarRoom() {
 
                               <a href={`/layers/${result.data?.layer_aware_analysis?.deception_layer?.detected_layer || 1}/fight`}
                                 className="mt-5 inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl transition-all hover:scale-105"
-                                style={{ background: `${C.violet}20`, color: C.violet, border: `1px solid ${C.violet}30` }}>
+                                style={{ background: `${mix(C.violet,'20')}`, color: C.violet, border: `1px solid ${mix(C.violet,'30')}` }}>
                                 <Swords size={14} />
-                                Fight This Layer
+                                {isRTL ? 'حارب هذه الطبقة' : 'Fight This Layer'}
                               </a>
                             </div>
                           </div>
@@ -1665,12 +1694,12 @@ export default function AngryDebunkersWarRoom() {
                       <motion.div variants={pop}>
                         <GlowCard accent={C.violet} className="p-6 sm:p-8">
                           <div className="flex items-center gap-3 mb-6">
-                            <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${C.violet}18`, border: `1px solid ${C.violet}28` }}>
+                            <div className="p-2.5 rounded-xl shrink-0" style={{ background: `${mix(C.violet,'18')}`, border: `1px solid ${mix(C.violet,'28')}` }}>
                               <Brain size={18} style={{ color: C.violet }} />
                             </div>
                             <div>
-                              <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: `${C.violet}cc` }}>God-System Audit</div>
-                              <div className="text-[15px] font-bold" style={{ color: C.textPrimary }}>Verification Layer Scores</div>
+                              <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: `${mix(C.violet,'cc')}` }}>{isRTL ? 'تدقيق نظام-الإله' : 'God-System Audit'}</div>
+                              <div className="text-[15px] font-bold" style={{ color: C.textPrimary }}>{isRTL ? 'درجات طبقات التحقق' : 'Verification Layer Scores'}</div>
                             </div>
                           </div>
                           <div className="space-y-4">
@@ -1713,12 +1742,12 @@ export default function AngryDebunkersWarRoom() {
                           <div className="flex-1 p-6 sm:p-7">
                             <div className="flex items-center justify-between mb-4">
                               <div className="flex items-center gap-3">
-                                <div className="p-2.5 rounded-xl" style={{ background: `${C.azure}18`, border: `1px solid ${C.azure}28` }}>
+                                <div className="p-2.5 rounded-xl" style={{ background: `${mix(C.azure,'18')}`, border: `1px solid ${mix(C.azure,'28')}` }}>
                                   <Bot size={18} style={{ color: C.azure }} />
                                 </div>
                                 <div>
-                                  <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: `${C.azure}cc` }}>AI Agents Investigation</div>
-                                  <div className="text-[15px] font-bold" style={{ color: C.textPrimary }}>5 Autonomous Agents</div>
+                                  <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: `${mix(C.azure,'cc')}` }}>{isRTL ? 'تحقيق وكلاء الذكاء الاصطناعي' : 'AI Agents Investigation'}</div>
+                                  <div className="text-[15px] font-bold" style={{ color: C.textPrimary }}>{isRTL ? '٥ وكلاء مستقلّين' : '5 Autonomous Agents'}</div>
                                 </div>
                               </div>
                               {!agentResults && (
@@ -1729,12 +1758,12 @@ export default function AngryDebunkersWarRoom() {
                                   disabled={agentLoading}
                                   className="px-5 py-2.5 rounded-xl text-[12px] font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer"
                                   style={{
-                                    background: agentLoading ? `${C.azure}10` : `linear-gradient(135deg, ${C.azure}, ${C.violet})`,
+                                    background: agentLoading ? `${mix(C.azure,'10')}` : `linear-gradient(135deg, ${C.azure}, ${C.violet})`,
                                     color: 'white',
-                                    boxShadow: agentLoading ? 'none' : `0 4px 16px ${C.azure}30`,
+                                    boxShadow: agentLoading ? 'none' : `0 4px 16px ${mix(C.azure,'30')}`,
                                   }}
                                 >
-                                  {agentLoading ? <><Loader2 size={14} className="animate-spin" /> Investigating...</> : <><Swords size={14} /> Investigate Deeper</>}
+                                  {agentLoading ? <><Loader2 size={14} className="animate-spin" /> {isRTL ? 'جارٍ التحقيق...' : 'Investigating...'}</> : <><Swords size={14} /> {isRTL ? 'تحقيق أعمق' : 'Investigate Deeper'}</>}
                                 </motion.button>
                               )}
                             </div>
@@ -1750,7 +1779,7 @@ export default function AngryDebunkersWarRoom() {
                                       animate={{ opacity: 1, x: 0 }}
                                       transition={{ delay: i * 0.15 }}
                                       className="rounded-xl p-4 flex items-start gap-3"
-                                      style={{ background: `rgba(255,255,255,0.02)`, border: `1px solid ${C.border}` }}
+                                      style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}
                                     >
                                       <span className="text-xl shrink-0">{name.slice(0, 2)}</span>
                                       <div className="flex-1 min-w-0">
@@ -1760,17 +1789,17 @@ export default function AngryDebunkersWarRoom() {
                                             <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}>
                                               <Loader2 size={12} style={{ color: C.azure }} />
                                             </motion.div>
-                                            <span className="text-[11px]" style={{ color: C.textMuted }}>Analyzing...</span>
+                                            <span className="text-[11px]" style={{ color: C.textMuted }}>{isRTL ? 'جارٍ التحليل...' : 'Analyzing...'}</span>
                                           </div>
                                         ) : agentData ? (
                                           <>
-                                            <p className="text-[12px] leading-[1.6] break-words" style={{ color: `${C.textPrimary}bb` }}>{agentData?.findings || ''}</p>
+                                            <p className="text-[12px] leading-[1.6] break-words" style={{ color: `${mix(C.textPrimary,'bb')}` }}>{agentData?.findings || ''}</p>
                                             <div className="flex items-center gap-3 mt-2">
-                                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: `${(agentData?.confidence ?? 0) > 70 ? C.success : C.amber}20`, color: (agentData?.confidence ?? 0) > 70 ? C.success : C.amber }}>
-                                                {agentData?.confidence ?? 0}% confidence
+                                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: `${mix((agentData?.confidence ?? 0) > 70 ? C.success : C.amber, '20')}`, color: (agentData?.confidence ?? 0) > 70 ? C.success : C.amber }}>
+                                                {agentData?.confidence ?? 0}% {isRTL ? 'ثقة' : 'confidence'}
                                               </span>
                                               {(agentData?.sources?.length ?? 0) > 0 && (
-                                                <span className="text-[10px]" style={{ color: C.textMuted }}>{agentData?.sources?.length} sources</span>
+                                                <span className="text-[10px]" style={{ color: C.textMuted }}>{agentData?.sources?.length} {isRTL ? 'مصادر' : 'sources'}</span>
                                               )}
                                             </div>
                                           </>
@@ -1785,9 +1814,9 @@ export default function AngryDebunkersWarRoom() {
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     className="rounded-xl p-4 mt-3 text-center"
-                                    style={{ background: `linear-gradient(135deg, ${C.primary}15, ${C.violet}15)`, border: `1px solid ${C.primary}25` }}
+                                    style={{ background: `linear-gradient(135deg, ${mix(C.primary,'15')}, ${mix(C.violet,'15')})`, border: `1px solid ${mix(C.primary,'25')}` }}
                                   >
-                                    <div className="text-[9px] font-black uppercase tracking-[0.2em] mb-1" style={{ color: C.primary }}>Final Agent Verdict</div>
+                                    <div className="text-[9px] font-black uppercase tracking-[0.2em] mb-1" style={{ color: C.primary }}>{isRTL ? 'الحكم النهائي للوكلاء' : 'Final Agent Verdict'}</div>
                                     <p className="text-[13px] font-bold leading-[1.6]" style={{ color: C.textPrimary }}>{agentResults?.overallVerdict}</p>
                                   </motion.div>
                                 )}
@@ -1795,7 +1824,7 @@ export default function AngryDebunkersWarRoom() {
                             )}
 
                             <a href="/ai-agents" className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider transition-all hover:opacity-80" style={{ color: C.azure }}>
-                              <Globe size={12} /> Open Full Agents Dashboard →
+                              <Globe size={12} /> {isRTL ? 'افتح لوحة الوكلاء الكاملة ←' : 'Open Full Agents Dashboard →'}
                             </a>
                           </div>
                         </div>
@@ -1807,35 +1836,35 @@ export default function AngryDebunkersWarRoom() {
                       `${result.data?.egyptian_vector_hit || ''} ${query}`
                     ) && (
                       <motion.div variants={pop}>
-                        <GlowCard accent="#d4a843" className="p-0 overflow-hidden">
+                        <GlowCard accent="var(--accent-amber)" className="p-0 overflow-hidden">
                           <div className="flex">
                             <div className="w-[5px] shrink-0 rounded-l-[22px]"
-                              style={{ background: `linear-gradient(180deg, #d4a843, #10b981)` }} />
+                              style={{ background: `linear-gradient(180deg, var(--accent-amber), var(--accent-emerald))` }} />
                             <div className="flex-1 p-6 sm:p-7">
                               <div className="flex items-center gap-3 mb-4">
-                                <div className="p-2.5 rounded-xl" style={{ background: `#d4a84318`, border: `1px solid #d4a84328` }}>
+                                <div className="p-2.5 rounded-xl" style={{ background: `color-mix(in srgb, var(--accent-amber) 9%, transparent)`, border: `1px solid color-mix(in srgb, var(--accent-amber) 16%, transparent)` }}>
                                   <span className="text-lg">🕌</span>
                                 </div>
                                 <div>
-                                  <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: '#d4a843cc' }}>Islamic Content Detected</div>
-                                  <div className="text-[15px] font-bold" style={{ color: C.textPrimary }}>Religious Verification Available</div>
+                                  <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: 'color-mix(in srgb, var(--accent-amber) 80%, transparent)' }}>{isRTL ? 'تم رصد محتوى إسلامي' : 'Islamic Content Detected'}</div>
+                                  <div className="text-[15px] font-bold" style={{ color: C.textPrimary }}>{isRTL ? 'التحقق الديني متاح' : 'Religious Verification Available'}</div>
                                 </div>
                               </div>
-                              <p className="text-[13px] leading-[1.7] mb-4" style={{ color: `${C.textPrimary}bb` }}>
-                                This claim involves Islamic/religious content. Use our specialized tools for deeper verification:
+                              <p className="text-[13px] leading-[1.7] mb-4" style={{ color: `${mix(C.textPrimary,'bb')}` }}>
+                                {isRTL ? 'هذا الادعاء يتضمّن محتوى إسلاميًا/دينيًا. استخدم أدواتنا المتخصصة لتحقق أعمق:' : 'This claim involves Islamic/religious content. Use our specialized tools for deeper verification:'}
                               </p>
                               <div className="flex flex-wrap gap-2">
-                                <a href="/religion-hub/tools/hadith-check" className="px-4 py-2.5 rounded-xl text-[12px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: '#d4a84318', border: '1px solid #d4a84330', color: '#d4a843' }}>
-                                  📜 Hadith Checker
+                                <a href="/religion-hub/tools/hadith-check" className="px-4 py-2.5 rounded-xl text-[12px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: 'color-mix(in srgb, var(--accent-amber) 9%, transparent)', border: '1px solid color-mix(in srgb, var(--accent-amber) 19%, transparent)', color: 'var(--accent-amber)' }}>
+                                  📜 {isRTL ? 'فاحص الحديث' : 'Hadith Checker'}
                                 </a>
-                                <a href="/religion-hub/tools/fatwa-context" className="px-4 py-2.5 rounded-xl text-[12px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: '#10b98118', border: '1px solid #10b98130', color: '#10b981' }}>
-                                  ⚖️ Fatwa Analyzer
+                                <a href="/religion-hub/tools/fatwa-context" className="px-4 py-2.5 rounded-xl text-[12px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: 'color-mix(in srgb, var(--accent-emerald) 9%, transparent)', border: '1px solid color-mix(in srgb, var(--accent-emerald) 19%, transparent)', color: 'var(--accent-emerald)' }}>
+                                  ⚖️ {isRTL ? 'محلّل الفتوى' : 'Fatwa Analyzer'}
                                 </a>
-                                <a href="/religion-hub/tools/quran-context" className="px-4 py-2.5 rounded-xl text-[12px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: '#3b82f618', border: '1px solid #3b82f630', color: '#3b82f6' }}>
-                                  📖 Quran Context
+                                <a href="/religion-hub/tools/quran-context" className="px-4 py-2.5 rounded-xl text-[12px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: 'color-mix(in srgb, var(--accent-blue) 9%, transparent)', border: '1px solid color-mix(in srgb, var(--accent-blue) 19%, transparent)', color: 'var(--accent-blue)' }}>
+                                  📖 {isRTL ? 'سياق القرآن' : 'Quran Context'}
                                 </a>
-                                <a href="/religion-hub/tools" className="px-4 py-2.5 rounded-xl text-[12px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: 'rgba(255,255,255,0.04)', border: `1px solid ${C.border}`, color: C.textMuted }}>
-                                  All Tools →
+                                <a href="/religion-hub/tools" className="px-4 py-2.5 rounded-xl text-[12px] font-bold flex items-center gap-2 transition-all hover:scale-105" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}`, color: C.textMuted }}>
+                                  {isRTL ? 'كل الأدوات ←' : 'All Tools →'}
                                 </a>
                               </div>
                             </div>
@@ -1853,12 +1882,12 @@ export default function AngryDebunkersWarRoom() {
                           <div className="flex-1 p-6 sm:p-7">
                             <div className="flex items-center justify-between mb-4">
                               <div className="flex items-center gap-3">
-                                <div className="p-2.5 rounded-xl" style={{ background: `${C.success}18`, border: `1px solid ${C.success}28` }}>
+                                <div className="p-2.5 rounded-xl" style={{ background: `${mix(C.success,'18')}`, border: `1px solid ${mix(C.success,'28')}` }}>
                                   <Globe size={18} style={{ color: C.success }} />
                                 </div>
                                 <div>
-                                  <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: `${C.success}cc` }}>Verified By Global Alliance</div>
-                                  <div className="text-[15px] font-bold" style={{ color: C.textPrimary }}>Trusted Fact-Checking Organizations</div>
+                                  <div className="text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: `${mix(C.success,'cc')}` }}>{isRTL ? 'مُتحقَّق عبر التحالف العالمي' : 'Verified By Global Alliance'}</div>
+                                  <div className="text-[15px] font-bold" style={{ color: C.textPrimary }}>{isRTL ? 'منظمات تدقيق حقائق موثوقة' : 'Trusted Fact-Checking Organizations'}</div>
                                 </div>
                               </div>
                             </div>
@@ -1871,7 +1900,7 @@ export default function AngryDebunkersWarRoom() {
                                 { name: 'Africa Check', flag: '🌍', type: 'Africa-wide' },
                                 { name: 'Bellingcat', flag: '🌍', type: 'OSINT' },
                               ].map((org, i) => (
-                                <div key={i} className="rounded-lg p-3 flex items-center gap-2" style={{ background: 'rgba(255,255,255,0.02)', border: `1px solid ${C.border}` }}>
+                                <div key={i} className="rounded-lg p-3 flex items-center gap-2" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}>
                                   <span className="text-lg">{org.flag}</span>
                                   <div>
                                     <div className="text-[11px] font-bold" style={{ color: C.textPrimary }}>{org.name}</div>
@@ -1881,7 +1910,7 @@ export default function AngryDebunkersWarRoom() {
                               ))}
                             </div>
                             <a href="/global-alliance" className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider transition-all hover:opacity-80" style={{ color: C.success }}>
-                              <Globe size={12} /> Explore All 55+ Organizations →
+                              <Globe size={12} /> {isRTL ? 'استكشف كل المنظمات (٥٥+) ←' : 'Explore All 55+ Organizations →'}
                             </a>
                           </div>
                         </div>
@@ -1895,7 +1924,7 @@ export default function AngryDebunkersWarRoom() {
                           const url = new URL(window.location.href);
                           url.searchParams.set("q", btoa(encodeURIComponent(query)));
                           navigator.clipboard.writeText(url.toString());
-                          alert("Viral Counter-Attack Link Copied!");
+                          alert(isRTL ? "تم نسخ رابط الهجوم المضاد الفيروسي!" : "Viral Counter-Attack Link Copied!");
                         }}
                         className="w-full flex items-center justify-center gap-3 py-5 px-6 rounded-[22px] text-sm font-bold transition-all"
                         style={{
@@ -1904,7 +1933,7 @@ export default function AngryDebunkersWarRoom() {
                           color: C.textMuted,
                         }}
                       >
-                        <Share2 size={18} /><span>Copy Viral Defense Link</span>
+                        <Share2 size={18} /><span>{isRTL ? 'انسخ رابط الدفاع الفيروسي' : 'Copy Viral Defense Link'}</span>
                       </RippleButton>
                     </motion.div>
                     </>)}
@@ -1935,15 +1964,15 @@ export default function AngryDebunkersWarRoom() {
               onClick={e => e.stopPropagation()}
             >
               <div className="p-6 flex justify-between items-center" style={{ borderBottom: `1px solid ${C.border}` }}>
-                <h3 className="text-xl font-bold" style={{ color: C.textPrimary }}>Session History</h3>
+                <h3 className="text-xl font-bold" style={{ color: C.textPrimary }}>{isRTL ? 'سجل الجلسات' : 'Session History'}</h3>
                 <button onClick={() => setShowHistory(false)}><X size={18} style={{ color: C.textMuted }} /></button>
               </div>
               <div className="p-4 flex flex-col gap-3">
                 {history.length === 0 ? (
-                  <div className="text-center p-8" style={{ color: C.textMuted }}>No history yet.</div>
+                  <div className="text-center p-8" style={{ color: C.textMuted }}>{isRTL ? 'لا يوجد سجل بعد.' : 'No history yet.'}</div>
                 ) : (
                   <>
-                    <button onClick={() => { setHistory([]); localStorage.removeItem("angry-debunkers-history"); }} className="text-xs text-red-400 hover:underline self-end mb-2">Clear All</button>
+                    <button onClick={() => { setHistory([]); localStorage.removeItem("angry-debunkers-history"); }} className="text-xs text-red-400 hover:underline self-end mb-2">{isRTL ? 'مسح الكل' : 'Clear All'}</button>
                     {history.map(h => (
                       <div key={h.id} onClick={() => {
                         setQuery(h.query);
@@ -1955,8 +1984,8 @@ export default function AngryDebunkersWarRoom() {
                         setShowHistory(false);
                       }} className="p-4 rounded-xl cursor-pointer hover:opacity-80 transition-opacity" style={{ background: C.surfaceHigh, border: `1px solid ${C.border}` }}>
                         <div className="text-xs mb-1" style={{ color: C.textSubtle }}>{new Date(h.timestamp).toLocaleString()}</div>
-                        <div className="text-sm font-bold line-clamp-2" style={{ color: C.textPrimary }}>{h.query || "No query text"}</div>
-                        <div className="text-xs mt-2" style={{ color: C.textMuted }}>{h.messages?.length || 0} Chat Messages</div>
+                        <div className="text-sm font-bold line-clamp-2" style={{ color: C.textPrimary }}>{h.query || (isRTL ? "لا يوجد نص استعلام" : "No query text")}</div>
+                        <div className="text-xs mt-2" style={{ color: C.textMuted }}>{h.messages?.length || 0} {isRTL ? 'رسالة محادثة' : 'Chat Messages'}</div>
                       </div>
                     ))}
                   </>
@@ -1988,26 +2017,26 @@ export default function AngryDebunkersWarRoom() {
               className="relative w-full max-w-lg rounded-[28px] overflow-hidden"
               style={{
                 background: `linear-gradient(160deg, ${C.surfaceHigh}, ${C.surface})`,
-                border: `1px solid ${GUIDE_SLIDES[guideStep].color}30`,
-                boxShadow: `0 0 0 1px ${C.border}, 0 24px 80px rgba(0,0,0,0.7), 0 0 120px ${GUIDE_SLIDES[guideStep].color}15`,
+                border: `1px solid ${mix(GUIDE_SLIDES[guideStep].color,'30')}`,
+                boxShadow: `0 0 0 1px ${C.border}, 0 24px 80px rgba(0,0,0,0.7), 0 0 120px ${mix(GUIDE_SLIDES[guideStep].color,'15')}`,
               }}
             >
               {/* Top shimmer */}
               <div className="absolute top-0 left-0 right-0 h-[1px]"
-                style={{ background: `linear-gradient(90deg, transparent 10%, ${GUIDE_SLIDES[guideStep].color}50, transparent 90%)` }} />
+                style={{ background: `linear-gradient(90deg, transparent 10%, ${mix(GUIDE_SLIDES[guideStep].color,'50')}, transparent 90%)` }} />
 
               {/* Close button */}
               <button
                 onClick={dismissGuide}
                 className="absolute top-4 right-4 p-2 rounded-full z-20 transition-colors cursor-pointer"
-                style={{ background: `rgba(255,255,255,0.06)`, color: C.textMuted }}
+                style={{ background: C.surfaceHigh, color: C.textMuted }}
               >
                 <X size={18} />
               </button>
 
               {/* Step counter */}
               <div className="absolute top-5 left-5 text-[10px] font-black uppercase tracking-[0.2em] z-10"
-                style={{ color: `${GUIDE_SLIDES[guideStep].color}90` }}>
+                style={{ color: `${mix(GUIDE_SLIDES[guideStep].color,'90')}` }}>
                 {guideStep + 1} / {GUIDE_SLIDES.length}
               </div>
 
@@ -2021,10 +2050,10 @@ export default function AngryDebunkersWarRoom() {
                   transition={{ type: "spring", damping: 15 }}
                   className="w-20 h-20 rounded-[22px] flex items-center justify-center mb-6"
                   style={{
-                    background: `${GUIDE_SLIDES[guideStep].color}15`,
-                    border: `1px solid ${GUIDE_SLIDES[guideStep].color}30`,
+                    background: `${mix(GUIDE_SLIDES[guideStep].color,'15')}`,
+                    border: `1px solid ${mix(GUIDE_SLIDES[guideStep].color,'30')}`,
                     color: GUIDE_SLIDES[guideStep].color,
-                    boxShadow: `0 0 40px ${GUIDE_SLIDES[guideStep].color}20`,
+                    boxShadow: `0 0 40px ${mix(GUIDE_SLIDES[guideStep].color,'20')}`,
                   }}
                 >
                   {GUIDE_SLIDES[guideStep].icon}
@@ -2062,7 +2091,7 @@ export default function AngryDebunkersWarRoom() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                   className="text-[14px] leading-[1.8] mb-3 max-w-md"
-                  style={{ color: `${C.textPrimary}cc` }}
+                  style={{ color: `${mix(C.textPrimary,'cc')}` }}
                 >
                   {GUIDE_SLIDES[guideStep].body}
                 </motion.p>
@@ -2075,7 +2104,7 @@ export default function AngryDebunkersWarRoom() {
                   transition={{ delay: 0.25 }}
                   className="text-[13px] leading-[1.9] mb-8 max-w-md"
                   dir="rtl"
-                  style={{ color: `${C.textPrimary}88`, fontFamily: "'IBM Plex Sans Arabic', sans-serif" }}
+                  style={{ color: `${mix(C.textPrimary,'88')}`, fontFamily: "'IBM Plex Sans Arabic', sans-serif" }}
                 >
                   {GUIDE_SLIDES[guideStep].bodyAr}
                 </motion.p>
@@ -2090,7 +2119,7 @@ export default function AngryDebunkersWarRoom() {
                       animate={{
                         width: i === guideStep ? 28 : 8,
                         height: 8,
-                        background: i === guideStep ? GUIDE_SLIDES[guideStep].color : `${C.textMuted}30`,
+                        background: i === guideStep ? GUIDE_SLIDES[guideStep].color : `${mix(C.textMuted,'30')}`,
                       }}
                       transition={{ type: "spring", stiffness: 300, damping: 25 }}
                     />
@@ -2105,10 +2134,10 @@ export default function AngryDebunkersWarRoom() {
                       animate={{ opacity: 1 }}
                       onClick={() => setGuideStep(s => s - 1)}
                       className="flex-1 py-3 rounded-xl text-[13px] font-bold flex items-center justify-center gap-2 transition-all cursor-pointer"
-                      style={{ background: `rgba(255,255,255,0.04)`, border: `1px solid ${C.border}`, color: C.textMuted }}
+                      style={{ background: C.surfaceHigh, border: `1px solid ${C.border}`, color: C.textMuted }}
                     >
                       <ChevronLeft size={16} />
-                      Back
+                      {isRTL ? 'رجوع' : 'Back'}
                     </motion.button>
                   )}
 
@@ -2126,13 +2155,13 @@ export default function AngryDebunkersWarRoom() {
                     style={{
                       background: `linear-gradient(135deg, ${GUIDE_SLIDES[guideStep].color}, ${C.violet})`,
                       color: 'white',
-                      boxShadow: `0 4px 20px ${GUIDE_SLIDES[guideStep].color}40`,
+                      boxShadow: `0 4px 20px ${mix(GUIDE_SLIDES[guideStep].color,'40')}`,
                     }}
                   >
                     {guideStep < GUIDE_SLIDES.length - 1 ? (
-                      <>Next <ChevronRight size={16} /></>
+                      <>{isRTL ? 'التالي' : 'Next'} <ChevronRight size={16} /></>
                     ) : (
-                      <>Start Fighting! <Swords size={16} /></>
+                      <>{isRTL ? 'ابدأ القتال!' : 'Start Fighting!'} <Swords size={16} /></>
                     )}
                   </motion.button>
                 </div>
@@ -2142,9 +2171,9 @@ export default function AngryDebunkersWarRoom() {
                   <button
                     onClick={dismissGuide}
                     className="mt-4 text-[11px] font-medium cursor-pointer transition-colors"
-                    style={{ color: `${C.textMuted}80` }}
+                    style={{ color: `${mix(C.textMuted,'80')}` }}
                   >
-                    Skip tutorial
+                    {isRTL ? 'تخطّي الشرح' : 'Skip tutorial'}
                   </button>
                 )}
               </div>

@@ -143,7 +143,7 @@ export default function DepressionProgramPage() {
       <div className="container" style={{ padding: "var(--space-xl) var(--space-lg)", maxWidth: 1000 }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 32 }}>
-          <div style={{ width: 80, height: 80, borderRadius: "50%", background: "linear-gradient(135deg, rgba(20,184,166,0.15), rgba(16,185,129,0.15))", border: "2px solid rgba(20,184,166,0.3)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px", fontSize: 36 }}>🌧️</div>
+          <div style={{ width: 80, height: 80, borderRadius: "50%", background: "linear-gradient(135deg, color-mix(in srgb, var(--accent-cta) 15%, transparent), color-mix(in srgb, var(--accent-mentalhealth) 15%, transparent))", border: "2px solid color-mix(in srgb, var(--accent-cta) 30%, transparent)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px", fontSize: 36 }}>🌧️</div>
           <h1 style={{ fontSize: 28, marginBottom: 8, fontFamily: ff }}>
             {t({ en: "Depression Support Program", ar: "برنامج دعم الاكتئاب", arEG: "برنامج دعم الاكتئاب" })}
           </h1>
@@ -153,12 +153,12 @@ export default function DepressionProgramPage() {
         </div>
 
         {/* Crisis Banner */}
-        <div style={{ padding: 16, borderRadius: 12, background: "rgba(239,68,68,0.08)", border: "1px solid rgba(239,68,68,0.2)", marginBottom: 24, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
+        <div style={{ padding: 16, borderRadius: 12, background: "color-mix(in srgb, var(--accent-red) 8%, transparent)", border: "1px solid color-mix(in srgb, var(--accent-red) 20%, transparent)", marginBottom: 24, display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
           <span style={{ fontSize: 20 }}>🆘</span>
           <span style={{ fontSize: 13, fontFamily: ff, color: "var(--text-secondary)" }}>
             {t({ en: "Crisis? Call Egyptian Mental Health Hotline:", ar: "أزمة؟ اتصل بخط الصحة النفسية:", arEG: "في أزمة؟ اتصل بخط الصحة النفسية:" })}
           </span>
-          <a href="tel:08008880700" style={{ fontWeight: 900, color: "#EF4444", fontSize: 18, fontFamily: "monospace" }}>📞 08008880700</a>
+          <a href="tel:08008880700" style={{ fontWeight: 900, color: "var(--accent-red)", fontSize: 18, fontFamily: "monospace" }}>📞 08008880700</a>
           <span style={{ fontSize: 11, color: "var(--text-muted)" }}>{t({ en: "(Free, 24/7)", ar: "(مجاني، 24/7)", arEG: "(مجاني، 24 ساعة)" })}</span>
         </div>
 
@@ -192,7 +192,7 @@ export default function DepressionProgramPage() {
         {/* Tab Navigation */}
         <div style={{ display: "flex", gap: 8, marginBottom: 24, justifyContent: "center" }}>
           {([["program", "📅 14-Day Program", "📅 برنامج 14 يوم"], ["myths", "🔬 Myth Busting", "🔬 تفنيد الخرافات"], ["assessment", "📋 PHQ-9 Assessment", "📋 تقييم PHQ-9"]] as const).map(([id, en, ar]) => (
-            <button key={id} onClick={() => setActiveTab(id)} className="glass-card" style={{ padding: "10px 20px", fontSize: 13, cursor: "pointer", border: activeTab === id ? "2px solid var(--accent-cta)" : "1px solid var(--border-primary)", background: activeTab === id ? "rgba(20,184,166,0.08)" : "var(--bg-secondary)", color: activeTab === id ? "var(--accent-cta)" : "var(--text-secondary)", fontWeight: activeTab === id ? 700 : 400, fontFamily: ff }}>
+            <button key={id} onClick={() => setActiveTab(id)} className="glass-card" style={{ padding: "10px 20px", fontSize: 13, cursor: "pointer", border: activeTab === id ? "2px solid var(--accent-cta)" : "1px solid var(--border-primary)", background: activeTab === id ? "color-mix(in srgb, var(--accent-cta) 8%, transparent)" : "var(--bg-secondary)", color: activeTab === id ? "var(--accent-cta)" : "var(--text-secondary)", fontWeight: activeTab === id ? 700 : 400, fontFamily: ff }}>
               {a ? ar : en}
             </button>
           ))}
@@ -204,8 +204,8 @@ export default function DepressionProgramPage() {
             {/* Day Selector Grid */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: 8, marginBottom: 24 }}>
               {DAYS.map((d, i) => (
-                <button key={i} onClick={() => { setActiveDay(i); setExerciseStarted(prev => ({ ...prev })); }} className="glass-card" style={{ padding: "10px 4px", textAlign: "center", cursor: "pointer", border: activeDay === i ? "2px solid var(--accent-cta)" : "1px solid var(--border-primary)", background: exerciseStarted[i] ? "rgba(20,184,166,0.1)" : activeDay === i ? "rgba(20,184,166,0.05)" : "var(--bg-secondary)" }}>
-                  <div style={{ fontSize: 16, fontWeight: 900, color: exerciseStarted[i] ? "#10B981" : activeDay === i ? "var(--accent-cta)" : "var(--text-muted)" }}>{exerciseStarted[i] ? "✓" : d.day}</div>
+                <button key={i} onClick={() => { setActiveDay(i); setExerciseStarted(prev => ({ ...prev })); }} className="glass-card" style={{ padding: "10px 4px", textAlign: "center", cursor: "pointer", border: activeDay === i ? "2px solid var(--accent-cta)" : "1px solid var(--border-primary)", background: exerciseStarted[i] ? "color-mix(in srgb, var(--accent-cta) 10%, transparent)" : activeDay === i ? "color-mix(in srgb, var(--accent-cta) 5%, transparent)" : "var(--bg-secondary)" }}>
+                  <div style={{ fontSize: 16, fontWeight: 900, color: exerciseStarted[i] ? "var(--accent-emerald)" : activeDay === i ? "var(--accent-cta)" : "var(--text-muted)" }}>{exerciseStarted[i] ? "✓" : d.day}</div>
                   <div style={{ fontSize: 9, color: "var(--text-muted)", marginTop: 2, fontFamily: ff }}>{a ? d.titleAr.slice(0, 15) : d.title.slice(0, 12)}</div>
                 </button>
               ))}
@@ -217,7 +217,7 @@ export default function DepressionProgramPage() {
               return (
                 <div className="glass-card" style={{ padding: 24, borderLeft: "4px solid var(--accent-cta)" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-                    <div style={{ width: 48, height: 48, borderRadius: 12, background: "rgba(20,184,166,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <div style={{ width: 48, height: 48, borderRadius: 12, background: "color-mix(in srgb, var(--accent-cta) 10%, transparent)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <span style={{ fontSize: 11, fontWeight: 700, color: "var(--accent-cta)", textTransform: "uppercase" }}>{d.type}</span>
                     </div>
                     <div>
@@ -266,7 +266,7 @@ export default function DepressionProgramPage() {
                     <button onClick={() => setActiveDay(Math.max(0, activeDay - 1))} disabled={activeDay === 0} style={{ padding: "8px 16px", borderRadius: 8, border: "1px solid var(--border-primary)", background: "var(--bg-secondary)", color: "var(--text-secondary)", fontSize: 13, cursor: activeDay === 0 ? "default" : "pointer", opacity: activeDay === 0 ? 0.4 : 1, fontFamily: ff }}>
                       {t({ en: "← Previous Day", ar: "← اليوم السابق", arEG: "← اليوم اللي فات" })}
                     </button>
-                    <button onClick={() => setActiveDay(Math.min(13, activeDay + 1))} disabled={activeDay === 13} style={{ padding: "8px 16px", borderRadius: 8, border: "none", background: "rgba(20,184,166,0.15)", color: "var(--accent-cta)", fontSize: 13, cursor: activeDay === 13 ? "default" : "pointer", opacity: activeDay === 13 ? 0.4 : 1, fontWeight: 600, fontFamily: ff }}>
+                    <button onClick={() => setActiveDay(Math.min(13, activeDay + 1))} disabled={activeDay === 13} style={{ padding: "8px 16px", borderRadius: 8, border: "none", background: "color-mix(in srgb, var(--accent-cta) 15%, transparent)", color: "var(--accent-cta)", fontSize: 13, cursor: activeDay === 13 ? "default" : "pointer", opacity: activeDay === 13 ? 0.4 : 1, fontWeight: 600, fontFamily: ff }}>
                       {t({ en: "Next Day →", ar: "اليوم التالي →", arEG: "اليوم الجاي →" })}
                     </button>
                   </div>
@@ -281,11 +281,11 @@ export default function DepressionProgramPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <h2 style={{ fontSize: 18, marginBottom: 8, fontFamily: ff }}>{t({ en: "🔬 5 Egyptian Depression Myths — Scientifically Destroyed", ar: "🔬 5 خرافات مصرية عن الاكتئاب — مدمرة علمياً", arEG: "🔬 5 خرافات مصرية عن الاكتئاب — متفندة علمياً" })}</h2>
             {MYTHS.map((m, i) => (
-              <div key={i} className="glass-card" style={{ padding: 0, overflow: "hidden", cursor: "pointer", borderLeft: "4px solid #EF4444" }} onClick={() => setExpandedMyth(expandedMyth === i ? null : i)}>
+              <div key={i} className="glass-card" style={{ padding: 0, overflow: "hidden", cursor: "pointer", borderLeft: "4px solid var(--accent-red)" }} onClick={() => setExpandedMyth(expandedMyth === i ? null : i)}>
                 <div style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: 12 }}>
                   <span style={{ fontSize: 20 }}>❌</span>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontWeight: 700, fontSize: 15, fontFamily: ff, color: "#EF4444" }}>{a ? m.mythAr : m.myth}</div>
+                    <div style={{ fontWeight: 700, fontSize: 15, fontFamily: ff, color: "var(--accent-red)" }}>{a ? m.mythAr : m.myth}</div>
                   </div>
                   <span style={{ fontSize: 16, transition: "transform 0.2s", transform: expandedMyth === i ? "rotate(180deg)" : "none", color: "var(--text-muted)" }}>▼</span>
                 </div>
@@ -297,12 +297,12 @@ export default function DepressionProgramPage() {
                         <p style={{ fontSize: 14, lineHeight: 1.8, margin: 0, fontFamily: ff, color: "var(--text-secondary)" }}>{a ? m.truthAr : m.truth}</p>
                       </div>
                       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, fontSize: 12 }}>
-                        <div style={{ padding: 10, borderRadius: 8, background: "rgba(99,102,241,0.06)", border: "1px solid rgba(99,102,241,0.15)" }}>
-                          <strong style={{ color: "#6366f1" }}>📚 {t({ en: "Source:", ar: "المصدر:", arEG: "المصدر:" })}</strong>
+                        <div style={{ padding: 10, borderRadius: 8, background: "color-mix(in srgb, var(--accent-indigo) 6%, transparent)", border: "1px solid color-mix(in srgb, var(--accent-indigo) 15%, transparent)" }}>
+                          <strong style={{ color: "var(--accent-indigo)" }}>📚 {t({ en: "Source:", ar: "المصدر:", arEG: "المصدر:" })}</strong>
                           <div style={{ color: "var(--text-muted)", marginTop: 4 }}>{m.source}</div>
                         </div>
-                        <div style={{ padding: 10, borderRadius: 8, background: "rgba(245,158,11,0.06)", border: "1px solid rgba(245,158,11,0.15)" }}>
-                          <strong style={{ color: "#F59E0B" }}>🎯 {t({ en: "Fallacy Detected:", ar: "المغالطة:", arEG: "المغالطة:" })}</strong>
+                        <div style={{ padding: 10, borderRadius: 8, background: "color-mix(in srgb, var(--accent-amber) 6%, transparent)", border: "1px solid color-mix(in srgb, var(--accent-amber) 15%, transparent)" }}>
+                          <strong style={{ color: "var(--accent-amber)" }}>🎯 {t({ en: "Fallacy Detected:", ar: "المغالطة:", arEG: "المغالطة:" })}</strong>
                           <div style={{ color: "var(--text-muted)", marginTop: 4 }}>{m.fallacy}</div>
                         </div>
                       </div>
@@ -325,14 +325,14 @@ export default function DepressionProgramPage() {
               {t({ en: "Over the last 2 weeks, how often have you been bothered by:", ar: "خلال آخر أسبوعين، كم مرة أزعجك:", arEG: "خلال آخر أسبوعين، كام مرة ضايقك:" })}
             </p>
             {PHQ9.map((q, qi) => (
-              <div key={qi} style={{ marginBottom: 16, padding: 16, borderRadius: 10, background: phqAnswers[qi] >= 0 ? "rgba(20,184,166,0.04)" : "var(--bg-secondary)", border: `1px solid ${phqAnswers[qi] >= 0 ? "rgba(20,184,166,0.15)" : "var(--border-primary)"}` }}>
-                <div style={{ fontSize: 14, marginBottom: 10, fontFamily: ff, color: qi === 8 ? "#EF4444" : "var(--text-primary)" }}>
+              <div key={qi} style={{ marginBottom: 16, padding: 16, borderRadius: 10, background: phqAnswers[qi] >= 0 ? "color-mix(in srgb, var(--accent-cta) 4%, transparent)" : "var(--bg-secondary)", border: `1px solid ${phqAnswers[qi] >= 0 ? "color-mix(in srgb, var(--accent-cta) 15%, transparent)" : "var(--border-primary)"}` }}>
+                <div style={{ fontSize: 14, marginBottom: 10, fontFamily: ff, color: qi === 8 ? "var(--accent-red)" : "var(--text-primary)" }}>
                   {qi + 1}. {a ? q.qAr : q.q}
-                  {qi === 8 && <span style={{ fontSize: 11, marginInlineStart: 8, color: "#EF4444" }}>⚠️</span>}
+                  {qi === 8 && <span style={{ fontSize: 11, marginInlineStart: 8, color: "var(--accent-red)" }}>⚠️</span>}
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 6 }}>
                   {OPTS.map(opt => (
-                    <button key={opt.v} onClick={() => { const n = [...phqAnswers]; n[qi] = opt.v; setPhqAnswers(n); if (n.every(a => a >= 0)) setPhqDone(true); }} style={{ padding: "8px 4px", borderRadius: 8, border: `1px solid ${phqAnswers[qi] === opt.v ? "var(--accent-cta)" : "var(--border-primary)"}`, background: phqAnswers[qi] === opt.v ? "rgba(20,184,166,0.12)" : "transparent", color: phqAnswers[qi] === opt.v ? "var(--accent-cta)" : "var(--text-muted)", fontSize: 11, cursor: "pointer", fontFamily: ff, transition: "all 0.2s" }}>
+                    <button key={opt.v} onClick={() => { const n = [...phqAnswers]; n[qi] = opt.v; setPhqAnswers(n); if (n.every(a => a >= 0)) setPhqDone(true); }} style={{ padding: "8px 4px", borderRadius: 8, border: `1px solid ${phqAnswers[qi] === opt.v ? "var(--accent-cta)" : "var(--border-primary)"}`, background: phqAnswers[qi] === opt.v ? "color-mix(in srgb, var(--accent-cta) 12%, transparent)" : "transparent", color: phqAnswers[qi] === opt.v ? "var(--accent-cta)" : "var(--text-muted)", fontSize: 11, cursor: "pointer", fontFamily: ff, transition: "all 0.2s" }}>
                       {a ? opt.lAr : opt.l}
                     </button>
                   ))}
@@ -341,10 +341,10 @@ export default function DepressionProgramPage() {
             ))}
             {/* ⛑ Item-9 crisis safety gate — fires on ANY self-harm answer, regardless of total score */}
             {crisisFlag && (
-              <div style={{ padding: 20, borderRadius: 16, background: "rgba(220,38,38,0.1)", border: "2px solid rgba(220,38,38,0.45)", marginTop: 16 }}>
+              <div style={{ padding: 20, borderRadius: 16, background: "color-mix(in srgb, var(--accent-red) 10%, transparent)", border: "2px solid color-mix(in srgb, var(--accent-red) 45%, transparent)", marginTop: 16 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
                   <span style={{ fontSize: 24 }}>🆘</span>
-                  <strong style={{ fontSize: 16, color: "#DC2626", fontFamily: ff }}>
+                  <strong style={{ fontSize: 16, color: "var(--accent-red)", fontFamily: ff }}>
                     {t({ en: "You're not alone — please reach out today", ar: "لست وحدك — تواصل اليوم من فضلك", arEG: "إنت مش لوحدك — اتواصل النهاردة من فضلك" })}
                   </strong>
                 </div>
@@ -353,9 +353,9 @@ export default function DepressionProgramPage() {
                 </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   {CRISIS.map((c) => (
-                    <a key={c.tel} href={`tel:${c.tel}`} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, padding: "10px 14px", borderRadius: 10, background: "var(--bg-secondary)", border: "1px solid rgba(220,38,38,0.25)", textDecoration: "none", flexWrap: "wrap" }}>
+                    <a key={c.tel} href={`tel:${c.tel}`} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, padding: "10px 14px", borderRadius: 10, background: "var(--bg-secondary)", border: "1px solid color-mix(in srgb, var(--accent-red) 25%, transparent)", textDecoration: "none", flexWrap: "wrap" }}>
                       <span style={{ fontSize: 12.5, color: "var(--text-secondary)", fontFamily: ff }}>{a ? c.labelAr : c.label}{c.note ? ` · ${a ? c.noteAr : c.note}` : ""}</span>
-                      <span style={{ fontWeight: 900, color: "#DC2626", fontFamily: "monospace", fontSize: 16 }}>📞 {c.tel}</span>
+                      <span style={{ fontWeight: 900, color: "var(--accent-red)", fontFamily: "monospace", fontSize: 16 }}>📞 {c.tel}</span>
                     </a>
                   ))}
                 </div>
@@ -369,7 +369,7 @@ export default function DepressionProgramPage() {
                   <div style={{ fontSize: 20, fontWeight: 700, color: s.color, fontFamily: ff }}>{a ? s.labelAr : s.label}</div>
                   <p style={{ fontSize: 14, color: "var(--text-secondary)", marginTop: 8, fontFamily: ff }}>{a ? s.actionAr : s.action}</p>
                   {phqScore >= 10 && (
-                    <a href="tel:08008880700" style={{ display: "inline-block", marginTop: 12, padding: "12px 24px", borderRadius: 10, background: "#EF4444", color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
+                    <a href="tel:08008880700" style={{ display: "inline-block", marginTop: 12, padding: "12px 24px", borderRadius: 10, background: "var(--accent-red)", color: "#fff", fontWeight: 700, fontSize: 14, textDecoration: "none" }}>
                       📞 {t({ en: "Call Helpline Now", ar: "اتصل بخط المساعدة الآن", arEG: "اتصل بخط المساعدة دلوقتي" })}
                     </a>
                   )}

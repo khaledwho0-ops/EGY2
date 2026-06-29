@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { PageNavigation } from '@/components/shared/page-navigation';
 import ScenarioResponsePlayer, { type ScenarioExercise } from '@/components/exercises/ScenarioResponsePlayer';
+import { useRTL } from '@/components/shared/rtl-provider';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface MHCard {
@@ -92,11 +93,11 @@ const MH_CARDS: MHCard[] = [
 ];
 
 const PHASE_LINKS = [
-  { href: '/fallacy-engine', label: 'Fallacy Engine', labelAr: 'محرك المغالطات', icon: '⚙️', desc: 'Identify logical fallacies in real-time' },
-  { href: '/bias-detector', label: 'Bias Detector', labelAr: 'كاشف التحيز', icon: '🔬', desc: 'Detect cognitive biases in arguments' },
-  { href: '/bias-fingerprint', label: 'Bias Fingerprint', labelAr: 'بصمة التحيز', icon: '🖐️', desc: 'Your personal cognitive bias profile' },
-  { href: '/cognitive-lab', label: 'Cognitive Lab', labelAr: 'مختبر الإدراك', icon: '🧪', desc: 'Interactive cognitive immunity experiments' },
-  { href: '/reaction-test', label: 'Reaction Test', labelAr: 'اختبار ردود الفعل', icon: '⚡', desc: 'Test your cognitive reaction speed' },
+  { href: '/fallacy-engine', label: 'Fallacy Engine', labelAr: 'محرك المغالطات', icon: '⚙️', desc: 'Identify logical fallacies in real-time', descAr: 'اكتشف المغالطات المنطقية في الوقت الفعلي' },
+  { href: '/bias-detector', label: 'Bias Detector', labelAr: 'كاشف التحيز', icon: '🔬', desc: 'Detect cognitive biases in arguments', descAr: 'اكشف التحيزات المعرفية في الحجج' },
+  { href: '/bias-fingerprint', label: 'Bias Fingerprint', labelAr: 'بصمة التحيز', icon: '🖐️', desc: 'Your personal cognitive bias profile', descAr: 'ملفك الشخصي للتحيزات المعرفية' },
+  { href: '/cognitive-lab', label: 'Cognitive Lab', labelAr: 'مختبر الإدراك', icon: '🧪', desc: 'Interactive cognitive immunity experiments', descAr: 'تجارب تفاعلية للمناعة المعرفية' },
+  { href: '/reaction-test', label: 'Reaction Test', labelAr: 'اختبار ردود الفعل', icon: '⚡', desc: 'Test your cognitive reaction speed', descAr: 'اختبر سرعة ردود فعلك المعرفية' },
 ];
 
 // ── Mini Exercise Player ──────────────────────────────────────────────────────
@@ -109,6 +110,7 @@ function MiniPlayer({
   type?: string;
   onDone: () => void;
 }) {
+  const { isRTL } = useRTL();
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [score, setScore] = useState(0);
@@ -165,35 +167,35 @@ function MiniPlayer({
 
   return (
     <div style={{
-      background: 'rgba(10,10,30,0.9)',
-      border: '1px solid rgba(139,92,246,0.3)',
+      background: 'var(--bg-card)',
+      border: '1px solid var(--border-primary)',
       borderRadius: 14, padding: 20, marginTop: 12,
     }}>
       {/* progress */}
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12 }}>
-        <span style={{ color: '#64748b', fontSize: 12 }}>{idx + 1}/{exercises.length}</span>
-        <span style={{ color: '#8b5cf6', fontSize: 12, fontWeight: 700 }}>Score {score}</span>
+        <span style={{ color: 'var(--text-muted)', fontSize: 12 }}>{idx + 1}/{exercises.length}</span>
+        <span style={{ color: 'var(--accent-religionhub)', fontSize: 12, fontWeight: 700 }}>{isRTL ? `النتيجة ${score}` : `Score ${score}`}</span>
       </div>
-      <div style={{ height: 3, background: 'rgba(255,255,255,0.07)', borderRadius: 2, marginBottom: 16 }}>
-        <div style={{ height: '100%', width: `${(idx / exercises.length) * 100}%`, background: '#8b5cf6', borderRadius: 2, transition: 'width 0.3s' }} />
+      <div style={{ height: 3, background: 'var(--border-subtle)', borderRadius: 2, marginBottom: 16 }}>
+        <div style={{ height: '100%', width: `${(idx / exercises.length) * 100}%`, background: 'var(--accent-religionhub)', borderRadius: 2, transition: 'width 0.3s' }} />
       </div>
 
       {/* prompt */}
       {(ex.myth_ar) && (
-        <p style={{ color: '#f1f5f9', fontWeight: 700, fontSize: 16, direction: 'rtl', marginBottom: 6 }}>
+        <p style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: 16, direction: 'rtl', marginBottom: 6 }}>
           {ex.myth_ar}
         </p>
       )}
-      <p style={{ color: '#e2e8f0', fontSize: 14, lineHeight: 1.6, marginBottom: 14 }}>{prompt}</p>
+      <p style={{ color: 'var(--text-primary)', fontSize: 14, lineHeight: 1.6, marginBottom: 14 }}>{prompt}</p>
       {(ex.claimAr || ex.promptAr) && (
-        <p style={{ color: '#64748b', fontSize: 12, direction: 'rtl', marginBottom: 14 }}>
+        <p style={{ color: 'var(--text-muted)', fontSize: 12, direction: 'rtl', marginBottom: 14 }}>
           {ex.claimAr ?? ex.promptAr}
         </p>
       )}
 
       {/* differentiation: question + options derived from the answer codes */}
       {isDifferentiation && questionText && (
-        <p style={{ color: '#c4b5fd', fontSize: 13.5, fontWeight: 600, marginBottom: 12 }}>{questionText}</p>
+        <p style={{ color: 'var(--accent-religionhub)', fontSize: 13.5, fontWeight: 600, marginBottom: 12 }}>{questionText}</p>
       )}
       {isDifferentiation && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -201,11 +203,11 @@ function MiniPlayer({
             const isCorrect = ex.answer === code;
             return (
               <button key={code} onClick={() => handleDiff(code)} style={{
-                padding: '11px 14px', borderRadius: 9, fontSize: 13, textAlign: 'left',
+                padding: '11px 14px', borderRadius: 9, fontSize: 13, textAlign: isRTL ? 'right' : 'left',
                 cursor: answered ? 'default' : 'pointer',
-                background: !answered ? 'rgba(255,255,255,0.04)' : isCorrect ? 'rgba(34,197,94,0.18)' : selectedCode === code ? 'rgba(239,68,68,0.12)' : 'rgba(255,255,255,0.02)',
-                border: !answered ? '1px solid rgba(255,255,255,0.09)' : isCorrect ? '1px solid #22c55e' : selectedCode === code ? '1px solid rgba(239,68,68,0.4)' : '1px solid rgba(255,255,255,0.05)',
-                color: '#e2e8f0',
+                background: !answered ? 'var(--bg-elevated)' : isCorrect ? 'rgba(34,197,94,0.18)' : selectedCode === code ? 'rgba(239,68,68,0.12)' : 'var(--bg-secondary)',
+                border: !answered ? '1px solid var(--border-primary)' : isCorrect ? '1px solid var(--accent-emerald)' : selectedCode === code ? '1px solid var(--accent-red)' : '1px solid var(--border-subtle)',
+                color: 'var(--text-primary)',
               }}>{humanize(code)}</button>
             );
           })}
@@ -219,11 +221,11 @@ function MiniPlayer({
             const isCorrect = ex.correctAnswer === i;
             return (
               <button key={i} onClick={() => handleOption(i)} style={{
-                padding: '11px 14px', borderRadius: 9, fontSize: 13, textAlign: 'left',
+                padding: '11px 14px', borderRadius: 9, fontSize: 13, textAlign: isRTL ? 'right' : 'left',
                 cursor: answered ? 'default' : 'pointer',
-                background: !answered ? 'rgba(255,255,255,0.04)' : isCorrect ? 'rgba(34,197,94,0.18)' : 'rgba(255,255,255,0.02)',
-                border: !answered ? '1px solid rgba(255,255,255,0.09)' : isCorrect ? '1px solid #22c55e' : '1px solid rgba(255,255,255,0.05)',
-                color: '#e2e8f0',
+                background: !answered ? 'var(--bg-elevated)' : isCorrect ? 'rgba(34,197,94,0.18)' : 'var(--bg-secondary)',
+                border: !answered ? '1px solid var(--border-primary)' : isCorrect ? '1px solid var(--accent-emerald)' : '1px solid var(--border-subtle)',
+                color: 'var(--text-primary)',
               }}>{opt}</button>
             );
           })}
@@ -233,13 +235,13 @@ function MiniPlayer({
       {/* myth bust */}
       {isMythBust && (
         <div style={{ display: 'flex', gap: 10 }}>
-          {[{ l: '✓ True', v: true, c: '#22c55e' }, { l: '✗ False', v: false, c: '#ef4444' }].map(({ l, v, c }) => (
+          {[{ l: isRTL ? '✓ صح' : '✓ True', v: true, c: '#22c55e' }, { l: isRTL ? '✗ غلط' : '✗ False', v: false, c: '#ef4444' }].map(({ l, v, c }) => (
             <button key={String(v)} onClick={() => handleBool(v)} style={{
               flex: 1, padding: '12px', borderRadius: 9, fontWeight: 700, fontSize: 14,
               cursor: answered ? 'default' : 'pointer',
               color: c,
-              background: answered && ex.correctAnswer === v ? `${c}22` : 'rgba(255,255,255,0.04)',
-              border: answered && ex.correctAnswer === v ? `2px solid ${c}` : '1px solid rgba(255,255,255,0.1)',
+              background: answered && ex.correctAnswer === v ? `${c}22` : 'var(--bg-elevated)',
+              border: answered && ex.correctAnswer === v ? `2px solid ${c}` : '1px solid var(--border-primary)',
             }}>{l}</button>
           ))}
         </div>
@@ -247,19 +249,19 @@ function MiniPlayer({
 
       {/* explanation */}
       {answered && explanation && (
-        <div style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: 10, padding: 12, marginTop: 12 }}>
-          <p style={{ color: '#10b981', fontWeight: 700, fontSize: 12, margin: '0 0 4px' }}>💡 Explanation</p>
-          <p style={{ color: '#94a3b8', fontSize: 12, margin: 0, lineHeight: 1.6 }}>{explanation}</p>
+        <div style={{ background: 'var(--accent-mentalhealth-surface)', border: '1px solid var(--border-subtle)', borderRadius: 10, padding: 12, marginTop: 12 }}>
+          <p style={{ color: 'var(--accent-emerald)', fontWeight: 700, fontSize: 12, margin: '0 0 4px' }}>💡 {isRTL ? 'الشرح' : 'Explanation'}</p>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 12, margin: 0, lineHeight: 1.6 }}>{explanation}</p>
           {(ex.explanationAr ?? ex.explanation_ar) && (
-            <p style={{ color: '#64748b', fontSize: 11, marginTop: 6, direction: 'rtl', lineHeight: 1.5 }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: 11, marginTop: 6, direction: 'rtl', lineHeight: 1.5 }}>
               {ex.explanationAr ?? ex.explanation_ar}
             </p>
           )}
           {Array.isArray(ex.references) && ex.references.length > 0 && (
-            <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px solid rgba(16,185,129,0.15)' }}>
-              <p style={{ color: '#10b981', fontSize: 10, fontWeight: 700, margin: '0 0 3px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Sources</p>
+            <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px solid var(--border-subtle)' }}>
+              <p style={{ color: 'var(--accent-emerald)', fontSize: 10, fontWeight: 700, margin: '0 0 3px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{isRTL ? 'المصادر' : 'Sources'}</p>
               {ex.references.map((r, i) => (
-                <p key={i} style={{ color: '#5b7c8d', fontSize: 10.5, margin: '0 0 2px', lineHeight: 1.4 }}>• {r}</p>
+                <p key={i} style={{ color: 'var(--text-muted)', fontSize: 10.5, margin: '0 0 2px', lineHeight: 1.4 }}>• {r}</p>
               ))}
             </div>
           )}
@@ -268,10 +270,10 @@ function MiniPlayer({
 
       {/* key differentiators (differentiation items) */}
       {answered && keyDiffs.length > 0 && (
-        <div style={{ marginTop: 10, background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.2)', borderRadius: 10, padding: 12 }}>
-          <p style={{ color: '#a78bfa', fontWeight: 700, fontSize: 12, margin: '0 0 6px' }}>🔑 Key differentiators</p>
+        <div style={{ marginTop: 10, background: 'var(--accent-religionhub-surface)', border: '1px solid var(--border-subtle)', borderRadius: 10, padding: 12 }}>
+          <p style={{ color: 'var(--accent-religionhub)', fontWeight: 700, fontSize: 12, margin: '0 0 6px' }}>🔑 {isRTL ? 'الفروق الأساسية' : 'Key differentiators'}</p>
           <ul style={{ margin: 0, paddingInlineStart: 18 }}>
-            {keyDiffs.map((k, i) => <li key={i} style={{ color: '#cbd5e1', fontSize: 12, lineHeight: 1.6, marginBottom: 3 }}>{k}</li>)}
+            {keyDiffs.map((k, i) => <li key={i} style={{ color: 'var(--text-secondary)', fontSize: 12, lineHeight: 1.6, marginBottom: 3 }}>{k}</li>)}
           </ul>
         </div>
       )}
@@ -280,9 +282,9 @@ function MiniPlayer({
       {(answered || (isTruth && !hasNothing)) && (
         <button onClick={next} style={{
           marginTop: 12, width: '100%', padding: '12px', borderRadius: 9, border: 'none',
-          background: 'linear-gradient(135deg,#8b5cf6,#6366f1)',
-          color: '#fff', fontWeight: 700, cursor: 'pointer',
-        }}>{isLast ? '🎉 Complete' : 'Next →'}</button>
+          background: 'linear-gradient(135deg,var(--accent-religionhub),var(--accent-indigo))',
+          color: 'var(--text-inverse)', fontWeight: 700, cursor: 'pointer',
+        }}>{isLast ? (isRTL ? '🎉 تم' : '🎉 Complete') : (isRTL ? 'التالي ←' : 'Next →')}</button>
       )}
     </div>
   );
@@ -290,6 +292,7 @@ function MiniPlayer({
 
 // ── MH Card ───────────────────────────────────────────────────────────────────
 function MentalHealthCard({ card }: { card: MHCard }) {
+  const { isRTL } = useRTL();
   const [data, setData] = useState<DayData | null>(null);
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
@@ -312,7 +315,7 @@ function MentalHealthCard({ card }: { card: MHCard }) {
 
   return (
     <div style={{
-      background: 'rgba(10,10,30,0.8)',
+      background: 'var(--bg-card)',
       border: `1px solid ${card.color}30`,
       borderRadius: 14,
       overflow: 'hidden',
@@ -324,13 +327,13 @@ function MentalHealthCard({ card }: { card: MHCard }) {
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, marginBottom: 10 }}>
           <span style={{ fontSize: 26 }}>{card.icon}</span>
           <div style={{ flex: 1 }}>
-            <h3 style={{ color: '#f1f5f9', fontWeight: 700, fontSize: 15, margin: '0 0 2px' }}>{card.label}</h3>
-            <p style={{ color: '#64748b', fontSize: 12, direction: 'rtl', margin: 0 }}>{card.labelAr}</p>
+            <h3 style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: 15, margin: '0 0 2px' }}>{isRTL ? card.labelAr : card.label}</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: 12, direction: 'rtl', margin: 0 }}>{card.labelAr}</p>
           </div>
         </div>
 
         {data && (
-          <p style={{ color: '#475569', fontSize: 12, margin: '0 0 12px', lineHeight: 1.5 }}>
+          <p style={{ color: 'var(--text-muted)', fontSize: 12, margin: '0 0 12px', lineHeight: 1.5 }}>
             {data.description?.slice(0, 120)}…
           </p>
         )}
@@ -340,12 +343,12 @@ function MentalHealthCard({ card }: { card: MHCard }) {
             onClick={loadAndOpen}
             style={{
               flex: 1, padding: '9px', borderRadius: 8, border: 'none',
-              background: open ? `${card.color}22` : 'rgba(255,255,255,0.05)',
-              color: open ? card.color : '#94a3b8',
+              background: open ? `${card.color}22` : 'var(--bg-elevated)',
+              color: open ? card.color : 'var(--text-secondary)',
               fontWeight: 700, fontSize: 13, cursor: 'pointer',
             }}
           >
-            {loading ? '⏳ Loading…' : open ? '▲ Collapse' : '▼ View Details'}
+            {loading ? (isRTL ? '⏳ بيحمّل…' : '⏳ Loading…') : open ? (isRTL ? '▲ اطوي' : '▲ Collapse') : (isRTL ? '▼ شوف التفاصيل' : '▼ View Details')}
           </button>
           {open && !playing && !done && (
             <button
@@ -353,10 +356,10 @@ function MentalHealthCard({ card }: { card: MHCard }) {
               style={{
                 padding: '9px 14px', borderRadius: 8, border: 'none',
                 background: card.color,
-                color: '#fff', fontWeight: 700, fontSize: 13, cursor: 'pointer',
+                color: 'var(--text-inverse)', fontWeight: 700, fontSize: 13, cursor: 'pointer',
               }}
             >
-              ▶ Start
+              {isRTL ? '▶ ابدأ' : '▶ Start'}
             </button>
           )}
         </div>
@@ -364,14 +367,14 @@ function MentalHealthCard({ card }: { card: MHCard }) {
         {/* Expanded */}
         {open && data && (
           <div style={{ marginTop: 12 }}>
-            <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 10, padding: 12, marginBottom: 10 }}>
+            <div style={{ background: 'var(--bg-secondary)', borderRadius: 10, padding: 12, marginBottom: 10 }}>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 6 }}>
-                <span style={{ color: '#64748b', fontSize: 11 }}>⏱ {data.estimatedMinutes ?? '?'} min</span>
-                <span style={{ color: '#64748b', fontSize: 11 }}>
+                <span style={{ color: 'var(--text-muted)', fontSize: 11 }}>⏱ {data.estimatedMinutes ?? '?'} {isRTL ? 'دقيقة' : 'min'}</span>
+                <span style={{ color: 'var(--text-muted)', fontSize: 11 }}>
                   {Array.from({ length: 5 }, (_, i) => (
                     <span key={i} style={{
                       display: 'inline-block', width: 7, height: 7, borderRadius: '50%',
-                      background: i < (data.difficulty ?? 2) ? card.color : 'rgba(255,255,255,0.12)',
+                      background: i < (data.difficulty ?? 2) ? card.color : 'var(--border-secondary)',
                       marginRight: 2,
                     }} />
                   ))}
@@ -380,10 +383,10 @@ function MentalHealthCard({ card }: { card: MHCard }) {
                   background: `${card.color}22`, color: card.color,
                   padding: '1px 7px', borderRadius: 20, fontSize: 10,
                 }}>
-                  {(data.exercises as ExerciseItem[])?.length ?? 0} exercises
+                  {(data.exercises as ExerciseItem[])?.length ?? 0} {isRTL ? 'تمرين' : 'exercises'}
                 </span>
               </div>
-              <p style={{ color: '#475569', fontSize: 12, margin: 0, lineHeight: 1.5 }}>
+              <p style={{ color: 'var(--text-muted)', fontSize: 12, margin: 0, lineHeight: 1.5 }}>
                 {data.descriptionAr}
               </p>
             </div>
@@ -409,9 +412,9 @@ function MentalHealthCard({ card }: { card: MHCard }) {
               )
             )}
             {done && (
-              <div style={{ background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.3)', borderRadius: 10, padding: 14, textAlign: 'center' }}>
+              <div style={{ background: 'var(--accent-mentalhealth-surface)', border: '1px solid var(--border-subtle)', borderRadius: 10, padding: 14, textAlign: 'center' }}>
                 <span style={{ fontSize: 28 }}>🏆</span>
-                <p style={{ color: '#10b981', fontWeight: 700, margin: '6px 0 0' }}>Exercise Complete!</p>
+                <p style={{ color: 'var(--accent-emerald)', fontWeight: 700, margin: '6px 0 0' }}>{isRTL ? 'خلّصت التمرين!' : 'Exercise Complete!'}</p>
               </div>
             )}
           </div>
@@ -423,40 +426,41 @@ function MentalHealthCard({ card }: { card: MHCard }) {
 
 // ── MIST-20 Assessment Panel ──────────────────────────────────────────────────
 function MIST20Panel() {
+  const { isRTL } = useRTL();
   return (
     <div style={{
-      background: 'linear-gradient(135deg,rgba(99,102,241,0.12),rgba(139,92,246,0.08))',
-      border: '1px solid rgba(99,102,241,0.3)',
+      background: 'var(--bg-card)',
+      border: '1px solid var(--border-primary)',
       borderRadius: 16, padding: 22, marginBottom: 28,
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
         <span style={{ fontSize: 28 }}>🎓</span>
         <div>
-          <h2 style={{ color: '#f1f5f9', fontWeight: 800, fontSize: 17, margin: 0 }}>
-            Phase Entrance Test: MIST-20
+          <h2 style={{ color: 'var(--text-primary)', fontWeight: 800, fontSize: 17, margin: 0 }}>
+            {isRTL ? 'اختبار دخول المرحلة: MIST-20' : 'Phase Entrance Test: MIST-20'}
           </h2>
-          <p style={{ color: '#64748b', fontSize: 12, margin: '2px 0 0' }}>
-            Misinformation Susceptibility Test — Required before Phase 1 content
+          <p style={{ color: 'var(--text-muted)', fontSize: 12, margin: '2px 0 0' }}>
+            {isRTL ? 'اختبار القابلية للتضليل — مطلوب قبل محتوى المرحلة الأولى' : 'Misinformation Susceptibility Test — Required before Phase 1 content'}
           </p>
         </div>
       </div>
-      <p style={{ color: '#94a3b8', fontSize: 13, lineHeight: 1.65, margin: '0 0 14px' }}>
-        The MIST-20 is a validated 20-item instrument measuring individual susceptibility to misinformation.
-        It presents true and false news headlines and measures your accuracy in distinguishing them.
-        Your score establishes a baseline for tracking your cognitive immunity growth through Phase 1.
+      <p style={{ color: 'var(--text-secondary)', fontSize: 13, lineHeight: 1.65, margin: '0 0 14px' }}>
+        {isRTL
+          ? 'الـ MIST-20 أداة موثّقة من 20 بند بتقيس مدى قابليتك الشخصية للتضليل. بتعرض عليك عناوين أخبار حقيقية وكاذبة وبتقيس دقتك في التفرقة بينهم. درجتك بتحدّد خط الأساس لتتبّع نمو مناعتك المعرفية خلال المرحلة الأولى.'
+          : 'The MIST-20 is a validated 20-item instrument measuring individual susceptibility to misinformation. It presents true and false news headlines and measures your accuracy in distinguishing them. Your score establishes a baseline for tracking your cognitive immunity growth through Phase 1.'}
       </p>
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-        <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 10, padding: '10px 14px', flex: 1, minWidth: 140 }}>
-          <p style={{ color: '#6366f1', fontWeight: 700, fontSize: 12, margin: '0 0 2px' }}>20 Items</p>
-          <p style={{ color: '#475569', fontSize: 11, margin: 0 }}>Headlines to evaluate</p>
+        <div style={{ background: 'var(--bg-elevated)', borderRadius: 10, padding: '10px 14px', flex: 1, minWidth: 140 }}>
+          <p style={{ color: 'var(--accent-indigo)', fontWeight: 700, fontSize: 12, margin: '0 0 2px' }}>{isRTL ? '20 بند' : '20 Items'}</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: 11, margin: 0 }}>{isRTL ? 'عناوين للتقييم' : 'Headlines to evaluate'}</p>
         </div>
-        <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 10, padding: '10px 14px', flex: 1, minWidth: 140 }}>
-          <p style={{ color: '#8b5cf6', fontWeight: 700, fontSize: 12, margin: '0 0 2px' }}>~10 min</p>
-          <p style={{ color: '#475569', fontSize: 11, margin: 0 }}>Estimated time</p>
+        <div style={{ background: 'var(--bg-elevated)', borderRadius: 10, padding: '10px 14px', flex: 1, minWidth: 140 }}>
+          <p style={{ color: 'var(--accent-religionhub)', fontWeight: 700, fontSize: 12, margin: '0 0 2px' }}>{isRTL ? '~10 دقائق' : '~10 min'}</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: 11, margin: 0 }}>{isRTL ? 'الوقت المتوقع' : 'Estimated time'}</p>
         </div>
-        <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 10, padding: '10px 14px', flex: 1, minWidth: 140 }}>
-          <p style={{ color: '#ec4899', fontWeight: 700, fontSize: 12, margin: '0 0 2px' }}>Validated</p>
-          <p style={{ color: '#475569', fontSize: 11, margin: 0 }}>Peer-reviewed instrument</p>
+        <div style={{ background: 'var(--bg-elevated)', borderRadius: 10, padding: '10px 14px', flex: 1, minWidth: 140 }}>
+          <p style={{ color: 'var(--accent-red)', fontWeight: 700, fontSize: 12, margin: '0 0 2px' }}>{isRTL ? 'موثّق' : 'Validated'}</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: 11, margin: 0 }}>{isRTL ? 'أداة محكّمة علمياً' : 'Peer-reviewed instrument'}</p>
         </div>
       </div>
       <Link
@@ -464,11 +468,11 @@ function MIST20Panel() {
         style={{
           display: 'inline-flex', alignItems: 'center', gap: 8,
           marginTop: 16, padding: '11px 20px', borderRadius: 10,
-          background: 'linear-gradient(135deg,#6366f1,#8b5cf6)',
-          color: '#fff', fontWeight: 700, fontSize: 14, textDecoration: 'none',
+          background: 'linear-gradient(135deg,var(--accent-indigo),var(--accent-religionhub))',
+          color: 'var(--text-inverse)', fontWeight: 700, fontSize: 14, textDecoration: 'none',
         }}
       >
-        Take MIST-20 Now →
+        {isRTL ? 'ابدأ MIST-20 دلوقتي ←' : 'Take MIST-20 Now →'}
       </Link>
       <PageNavigation currentPath="/curriculum/phase1" />
     </div>
@@ -477,39 +481,39 @@ function MIST20Panel() {
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 export default function Phase1Page() {
+  const { isRTL } = useRTL();
   return (
-    <main style={{ minHeight: '100vh', background: '#040816', padding: '48px 16px' }}>
+    <main dir={isRTL ? 'rtl' : 'ltr'} style={{ minHeight: '100vh', background: 'var(--bg-page)', padding: '48px 16px' }}>
       <div style={{ maxWidth: 960, margin: '0 auto' }}>
 
         {/* Header */}
-        <div style={{ marginBottom: 36, borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: 24 }}>
+        <div style={{ marginBottom: 36, borderBottom: '1px solid var(--border-subtle)', paddingBottom: 24 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
             <span style={{
-              background: 'rgba(139,92,246,0.2)', color: '#a78bfa',
+              background: 'var(--accent-religionhub-surface)', color: 'var(--accent-religionhub)',
               padding: '3px 12px', borderRadius: 20, fontSize: 11, fontWeight: 700,
             }}>
-              PHASE 1 — WEEKS 5–8
+              {isRTL ? 'المرحلة 1 — الأسابيع 5–8' : 'PHASE 1 — WEEKS 5–8'}
             </span>
           </div>
           <h1 style={{
             fontSize: 'clamp(28px, 5vw, 42px)',
             fontWeight: 900,
-            background: 'linear-gradient(135deg,#8b5cf6,#6366f1,#06b6d4)',
+            background: 'linear-gradient(135deg,var(--accent-religionhub),var(--accent-indigo),var(--accent-blue))',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             margin: '8px 0',
             lineHeight: 1.15,
           }}>
-            Cognitive Immunity
+            {isRTL ? 'المناعة المعرفية' : 'Cognitive Immunity'}
           </h1>
-          <p style={{ color: '#94a3b8', fontSize: 16, direction: 'rtl', margin: '0 0 8px' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 16, direction: 'rtl', margin: '0 0 8px' }}>
             المناعة المعرفية
           </p>
-          <p style={{ color: '#64748b', fontSize: 14, lineHeight: 1.7, maxWidth: 680 }}>
-            Phase 1 builds your cognitive immune system against manipulation. You will master
-            logical fallacy detection, cognitive bias recognition, emotional regulation under
-            information stress, and mental health literacy — all grounded in Egyptian social
-            and cultural contexts.
+          <p style={{ color: 'var(--text-muted)', fontSize: 14, lineHeight: 1.7, maxWidth: 680 }}>
+            {isRTL
+              ? 'المرحلة الأولى بتبني جهازك المناعي المعرفي ضد التلاعب. هتتقن كشف المغالطات المنطقية، والتعرّف على التحيزات المعرفية، وتنظيم المشاعر تحت ضغط المعلومات، وثقافة الصحة النفسية — كلها متجذّرة في السياق الاجتماعي والثقافي المصري.'
+              : 'Phase 1 builds your cognitive immune system against manipulation. You will master logical fallacy detection, cognitive bias recognition, emotional regulation under information stress, and mental health literacy — all grounded in Egyptian social and cultural contexts.'}
           </p>
         </div>
 
@@ -518,8 +522,8 @@ export default function Phase1Page() {
 
         {/* Phase Tools */}
         <section style={{ marginBottom: 36 }}>
-          <h2 style={{ color: '#f1f5f9', fontWeight: 800, fontSize: 18, margin: '0 0 16px' }}>
-            🛠️ Phase 1 Tools & Experiences
+          <h2 style={{ color: 'var(--text-primary)', fontWeight: 800, fontSize: 18, margin: '0 0 16px' }}>
+            🛠️ {isRTL ? 'أدوات وتجارب المرحلة الأولى' : 'Phase 1 Tools & Experiences'}
           </h2>
           <div style={{
             display: 'grid',
@@ -529,16 +533,16 @@ export default function Phase1Page() {
             {PHASE_LINKS.map((link) => (
               <Link key={link.href} href={link.href} style={{ textDecoration: 'none' }}>
                 <div style={{
-                  background: 'rgba(10,10,30,0.8)',
-                  border: '1px solid rgba(255,255,255,0.07)',
+                  background: 'var(--bg-card)',
+                  border: '1px solid var(--border-primary)',
                   borderRadius: 12, padding: '16px',
                   transition: 'border-color 0.2s, transform 0.15s',
                   cursor: 'pointer',
                 }}>
                   <div style={{ fontSize: 24, marginBottom: 8 }}>{link.icon}</div>
-                  <p style={{ color: '#f1f5f9', fontWeight: 700, margin: '0 0 2px', fontSize: 14 }}>{link.label}</p>
-                  <p style={{ color: '#64748b', fontSize: 11, direction: 'rtl', margin: '0 0 6px' }}>{link.labelAr}</p>
-                  <p style={{ color: '#475569', fontSize: 12, margin: 0 }}>{link.desc}</p>
+                  <p style={{ color: 'var(--text-primary)', fontWeight: 700, margin: '0 0 2px', fontSize: 14 }}>{isRTL ? link.labelAr : link.label}</p>
+                  <p style={{ color: 'var(--text-muted)', fontSize: 11, direction: 'rtl', margin: '0 0 6px' }}>{link.labelAr}</p>
+                  <p style={{ color: 'var(--text-muted)', fontSize: 12, margin: 0 }}>{isRTL ? link.descAr : link.desc}</p>
                 </div>
               </Link>
             ))}
@@ -548,10 +552,10 @@ export default function Phase1Page() {
         {/* Mental Health Exercises */}
         <section>
           <div style={{ marginBottom: 16 }}>
-            <h2 style={{ color: '#f1f5f9', fontWeight: 800, fontSize: 18, margin: '0 0 4px' }}>
-              🧠 Mental Health Literacy Exercises
+            <h2 style={{ color: 'var(--text-primary)', fontWeight: 800, fontSize: 18, margin: '0 0 4px' }}>
+              🧠 {isRTL ? 'تمارين ثقافة الصحة النفسية' : 'Mental Health Literacy Exercises'}
             </h2>
-            <p style={{ color: '#64748b', fontSize: 12, margin: 0, direction: 'rtl' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: 12, margin: 0, direction: 'rtl' }}>
               تمارين ثقافة الصحة النفسية
             </p>
           </div>
@@ -569,24 +573,24 @@ export default function Phase1Page() {
         {/* Navigation */}
         <div style={{
           display: 'flex', justifyContent: 'space-between', marginTop: 40,
-          borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 24,
+          borderTop: '1px solid var(--border-subtle)', paddingTop: 24,
           flexWrap: 'wrap', gap: 12,
         }}>
           <Link href="/curriculum/phase0" style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '10px 18px', borderRadius: 10,
-            border: '1px solid rgba(255,255,255,0.1)',
-            color: '#94a3b8', textDecoration: 'none', fontSize: 13,
+            border: '1px solid var(--border-secondary)',
+            color: 'var(--text-secondary)', textDecoration: 'none', fontSize: 13,
           }}>
-            ← Phase 0: Calibration
+            {isRTL ? 'المرحلة 0: المعايرة →' : '← Phase 0: Calibration'}
           </Link>
           <Link href="/curriculum/phase2" style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '10px 18px', borderRadius: 10,
-            background: 'linear-gradient(135deg,#6366f1,#8b5cf6)',
-            color: '#fff', textDecoration: 'none', fontSize: 13, fontWeight: 700,
+            background: 'linear-gradient(135deg,var(--accent-indigo),var(--accent-religionhub))',
+            color: 'var(--text-inverse)', textDecoration: 'none', fontSize: 13, fontWeight: 700,
           }}>
-            Phase 2: Science → 
+            {isRTL ? '← المرحلة 2: العلوم' : 'Phase 2: Science → '}
           </Link>
         </div>
 

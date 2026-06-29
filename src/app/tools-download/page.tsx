@@ -56,7 +56,7 @@ export default function ToolsDownloadPage() {
   };
 
   return (
-    <div style={{ paddingTop: "var(--navbar-height)", minHeight: "100vh", backgroundColor: "var(--bg-base)", direction: isRTL ? "rtl" : "ltr" }}>
+    <div style={{ paddingTop: "var(--navbar-height)", minHeight: "100vh", backgroundColor: "var(--bg-page)", color: "var(--text-primary)", direction: isRTL ? "rtl" : "ltr" }}>
       <div className="container" style={{ padding: "var(--space-xl) var(--space-lg)" }}>
         <nav style={{ marginBottom: 24 }}>
           <Link href="/dashboard" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "var(--text-muted)", textDecoration: "none", fontSize: "0.9rem" }}>
@@ -65,7 +65,7 @@ export default function ToolsDownloadPage() {
         </nav>
 
         <div style={{ textAlign: "center", maxWidth: 800, margin: "0 auto 48px auto" }}>
-          <Terminal size={48} style={{ color: "var(--accent-primary)", marginBottom: 16 }} />
+          <Terminal size={48} style={{ color: "var(--accent-blue)", marginBottom: 16 }} />
           <h1 style={{ fontSize: "2.5rem", marginBottom: 16 }}>{t({ en: "Offline Verification Tools", ar: "أدوات التحقق دون اتصال" })}</h1>
           <p style={{ fontSize: "1.2rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
             {t({ 
@@ -77,24 +77,24 @@ export default function ToolsDownloadPage() {
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, maxWidth: 1000, margin: "0 auto" }}>
           {SCRIPTS.map(script => (
-            <div key={script.id} style={{ backgroundColor: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", padding: 24, display: "flex", flexDirection: "column" }}>
+            <div key={script.id} style={{ backgroundColor: "var(--bg-card)", border: "1px solid var(--border-primary)", borderRadius: "var(--radius-lg)", padding: 24, display: "flex", flexDirection: "column" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-                <div style={{ padding: 12, backgroundColor: "rgba(100,200,255,0.1)", borderRadius: "var(--radius-md)" }}>
-                  <FileCode size={24} style={{ color: "var(--accent-primary)" }} />
+                <div style={{ padding: 12, backgroundColor: "var(--bg-elevated)", borderRadius: "var(--radius-md)" }}>
+                  <FileCode size={24} style={{ color: "var(--accent-blue)" }} />
                 </div>
                 <h3 style={{ margin: 0, fontSize: "1.2rem" }}>{script.name}</h3>
               </div>
               <p style={{ color: "var(--text-muted)", flex: 1, marginBottom: 24, lineHeight: 1.5 }}>
                 {script.desc[isRTL ? 'ar' : 'en']}
               </p>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid var(--border)", paddingTop: 16 }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid var(--border-primary)", paddingTop: 16 }}>
                 <span style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>{script.size}</span>
-                <button 
+                <button
                   onClick={() => handleDownload(script.id, script.url, script.name)}
-                  style={{ 
+                  style={{
                     display: "flex", alignItems: "center", gap: 8, padding: "8px 16px",
-                    backgroundColor: downloaded.includes(script.id) ? "rgba(100,200,100,0.1)" : "var(--accent-primary)",
-                    color: downloaded.includes(script.id) ? "var(--accent-success)" : "var(--bg-base)",
+                    backgroundColor: downloaded.includes(script.id) ? "var(--accent-mentalhealth-surface)" : "var(--accent-blue)",
+                    color: downloaded.includes(script.id) ? "var(--color-success)" : "var(--text-inverse)",
                     border: "none", borderRadius: "var(--radius-full)", cursor: "pointer", fontWeight: 600
                   }}
                 >
@@ -109,12 +109,12 @@ export default function ToolsDownloadPage() {
           ))}
         </div>
 
-        <div style={{ marginTop: 64, padding: 32, backgroundColor: "var(--bg-card)", borderRadius: "var(--radius-lg)", border: "1px dashed var(--border)", textAlign: "center", maxWidth: 800, margin: "64px auto 0" }}>
+        <div style={{ marginTop: 64, padding: 32, backgroundColor: "var(--bg-card)", borderRadius: "var(--radius-lg)", border: "1px dashed var(--border-primary)", textAlign: "center", maxWidth: 800, margin: "64px auto 0" }}>
           <h3 style={{ margin: "0 0 16px 0", fontSize: "1.5rem" }}>{t({ en: "Requirements", ar: "المتطلبات" })}</h3>
           <p style={{ color: "var(--text-muted)", marginBottom: 12 }}>
             {t({ en: "You will need Python 3.9+ and pip installed.", ar: "ستحتاج إلى تثبيت Python 3.9+ و pip." })}
           </p>
-          <pre style={{ backgroundColor: "#000", padding: 12, borderRadius: 8, color: "#0f0", display: "inline-block" }}>
+          <pre dir="ltr" style={{ backgroundColor: "var(--bg-elevated)", border: "1px solid var(--border-primary)", padding: 12, borderRadius: 8, color: "var(--color-success)", display: "inline-block" }}>
             pip install requests tweepy Pillow PyPDF2
           </pre>
         </div>

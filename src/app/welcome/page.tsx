@@ -3,14 +3,15 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { PageNavigation } from "@/components/shared/page-navigation";
+import { useRTL } from "@/components/shared/rtl-provider";
 
 
 const highlights = [
-  { icon: '📚', title: 'Curriculum', titleAr: 'المنهج', desc: '144-day structured awareness curriculum covering misinformation defense, mental health literacy, and religious reasoning — built on WHO, UNESCO, and Al-Azhar guidelines.', color: '#3b82f6' },
-  { icon: '🛡️', title: 'Defense Tools', titleAr: 'أدوات الدفاع', desc: 'Real-time fact-checking with SIFT methodology, FLICC fallacy detection, deepfake forensics, and cognitive bias interception across 8 AI verification engines.', color: '#10b981' },
-  { icon: '🕌', title: 'Islamic Hub', titleAr: 'المركز الإسلامي', desc: 'Authentic Quranic tafsīr from Ibn Kathīr, Al-Tabari, and Al-Qurtubi with Maqāṣid al-Sharīʿah reasoning and hadith cross-referencing via Sunnah.com API.', color: '#f59e0b' },
-  { icon: '🔬', title: 'Science Engine', titleAr: 'المحرك العلمي', desc: 'PubMed-powered claim verification, WHO mhGAP mental health protocols, and evidence-based debunking with confidence scoring and source credibility metrics.', color: '#8b5cf6' },
-  { icon: '🤖', title: 'AI Power', titleAr: 'قوة الذكاء الاصطناعي', desc: 'Multi-model orchestration via Gemini 2.5, Groq Llama, and local ONNX — powering SOVO, Swarm Debate, and Blackbox Forensic Audit with <50ms latency.', color: '#ef4444' },
+  { icon: '📚', title: 'Curriculum', titleAr: 'المنهج', desc: '144-day structured awareness curriculum covering misinformation defense, mental health literacy, and religious reasoning — built on WHO, UNESCO, and Al-Azhar guidelines.', descAr: 'منهج توعية منظّم على مدى 144 يوم بيغطي الدفاع ضد التضليل، والثقافة النفسية، والاستدلال الديني — مبني على إرشادات منظمة الصحة العالمية واليونسكو والأزهر.', color: '#3b82f6' },
+  { icon: '🛡️', title: 'Defense Tools', titleAr: 'أدوات الدفاع', desc: 'Real-time fact-checking with SIFT methodology, FLICC fallacy detection, deepfake forensics, and cognitive bias interception across 8 AI verification engines.', descAr: 'تحقق فوري من الحقائق بمنهجية SIFT، وكشف المغالطات FLICC، وتحليل التزييف العميق، واعتراض الانحيازات الإدراكية عبر 8 محركات ذكاء اصطناعي للتحقق.', color: '#10b981' },
+  { icon: '🕌', title: 'Islamic Hub', titleAr: 'المركز الإسلامي', desc: 'Authentic Quranic tafsīr from Ibn Kathīr, Al-Tabari, and Al-Qurtubi with Maqāṣid al-Sharīʿah reasoning and hadith cross-referencing via Sunnah.com API.', descAr: 'تفسير قرآني موثّق من ابن كثير والطبري والقرطبي مع الاستدلال بمقاصد الشريعة وتقاطع مرجعي للأحاديث عبر واجهة Sunnah.com.', color: '#f59e0b' },
+  { icon: '🔬', title: 'Science Engine', titleAr: 'المحرك العلمي', desc: 'PubMed-powered claim verification, WHO mhGAP mental health protocols, and evidence-based debunking with confidence scoring and source credibility metrics.', descAr: 'تحقق من الادعاءات مدعوم بـ PubMed، وبروتوكولات الصحة النفسية mhGAP من منظمة الصحة العالمية، وتفنيد قائم على الأدلة مع تقييم للثقة ومقاييس لمصداقية المصادر.', color: '#8b5cf6' },
+  { icon: '🤖', title: 'AI Power', titleAr: 'قوة الذكاء الاصطناعي', desc: 'Multi-model orchestration via Gemini 2.5, Groq Llama, and local ONNX — powering SOVO, Swarm Debate, and Blackbox Forensic Audit with <50ms latency.', descAr: 'تنسيق متعدد النماذج عبر Gemini 2.5 وGroq Llama وONNX المحلي — يشغّل SOVO ومناظرة السرب والتدقيق الجنائي Blackbox بزمن استجابة أقل من 50 مللي ثانية.', color: '#ef4444' },
 ];
 
 const stats = [
@@ -21,6 +22,7 @@ const stats = [
 ];
 
 export default function WelcomePage() {
+  const { isRTL } = useRTL();
   const [mounted, setMounted] = useState(false);
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
@@ -38,7 +40,7 @@ export default function WelcomePage() {
         .welcome-card-hover:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
         .welcome-stat-hover:hover { transform: scale(1.08); background: rgba(59,130,246,0.15); }
       `}</style>
-      <main style={{ minHeight: '100vh', background: '#020617', color: '#e2e8f0', fontFamily: 'Inter, sans-serif', overflow: 'hidden' }}>
+      <main dir={isRTL ? 'rtl' : 'ltr'} style={{ minHeight: '100vh', background: 'var(--bg-page)', color: 'var(--text-primary)', fontFamily: 'Inter, sans-serif', overflow: 'hidden' }}>
         {/* Floating particles */}
         <div style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
           {mounted && Array.from({ length: 20 }).map((_, i) => (
@@ -79,17 +81,17 @@ export default function WelcomePage() {
             Egyptian Awareness Library
           </h1>
 
-          <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: 'clamp(1.2rem, 3vw, 1.8rem)', color: '#94a3b8', direction: 'rtl', marginBottom: 8, fontWeight: 700 }}>
+          <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: 'clamp(1.2rem, 3vw, 1.8rem)', color: 'var(--text-secondary)', direction: 'rtl', marginBottom: 8, fontWeight: 700 }}>
             المكتبة المصرية للتوعية
           </p>
-          <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: 'clamp(0.9rem, 2vw, 1.1rem)', color: '#64748b', direction: 'rtl', marginBottom: 32 }}>
+          <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: 'clamp(0.9rem, 2vw, 1.1rem)', color: 'var(--text-muted)', direction: 'rtl', marginBottom: 32 }}>
             أهلاً وسهلاً — منصة الدفاع المعرفي الأولى في مصر
           </p>
 
-          <p style={{ maxWidth: 700, fontSize: '1.1rem', color: '#94a3b8', lineHeight: 1.8, marginBottom: 40 }}>
-            The first cognitive defense platform built for Egypt. Combining AI-powered fact-checking,
-            WHO-aligned mental health tools, and authentic Islamic scholarship to combat misinformation
-            across Arabic-speaking communities.
+          <p style={{ maxWidth: 700, fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: 40, direction: isRTL ? 'rtl' : 'ltr' }}>
+            {isRTL
+              ? 'أول منصة دفاع معرفي اتبنت مخصوص لمصر. بتجمع بين التحقق من الحقائق المدعوم بالذكاء الاصطناعي، وأدوات الصحة النفسية المتوافقة مع منظمة الصحة العالمية، والعلم الشرعي الموثّق — عشان نواجه التضليل في المجتمعات الناطقة بالعربية.'
+              : 'The first cognitive defense platform built for Egypt. Combining AI-powered fact-checking, WHO-aligned mental health tools, and authentic Islamic scholarship to combat misinformation across Arabic-speaking communities.'}
           </p>
 
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -99,14 +101,14 @@ export default function WelcomePage() {
               animation: 'welcomePulseGlow 2s ease-in-out infinite', transition: 'transform 0.2s',
               display: 'inline-block',
             }}>
-              Get Started →
+              {isRTL ? 'ابدأ دلوقتي ←' : 'Get Started →'}
             </Link>
             <Link href="/explore" style={{
               padding: '16px 40px', borderRadius: 12, fontWeight: 600, fontSize: '1.1rem', textDecoration: 'none',
-              background: 'rgba(255,255,255,0.05)', color: '#e2e8f0', border: '1px solid rgba(255,255,255,0.1)',
+              background: 'var(--bg-card)', color: 'var(--text-primary)', border: '1px solid var(--border-primary)',
               transition: 'all 0.3s', display: 'inline-block',
             }}>
-              Explore Platform
+              {isRTL ? 'استكشف المنصة' : 'Explore Platform'}
             </Link>
           </div>
         </section>
@@ -120,12 +122,11 @@ export default function WelcomePage() {
           {stats.map((s, i) => (
             <div key={i} className="welcome-stat-hover" style={{
               padding: '20px 32px', borderRadius: 16, textAlign: 'center', cursor: 'default',
-              background: 'rgba(15,23,42,0.6)', border: '1px solid rgba(255,255,255,0.08)',
+              background: 'var(--bg-card)', border: '1px solid var(--border-primary)',
               backdropFilter: 'blur(12px)', transition: 'all 0.3s ease', minWidth: 140,
             }}>
               <div style={{ fontSize: '2rem', fontWeight: 900, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{s.value}</div>
-              <div style={{ fontSize: '0.85rem', color: '#94a3b8', fontWeight: 600, marginTop: 4 }}>{s.label}</div>
-              <div style={{ fontFamily: 'Cairo, sans-serif', fontSize: '0.75rem', color: '#64748b', direction: 'rtl' }}>{s.labelAr}</div>
+              <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: 600, marginTop: 4 }}>{isRTL ? s.labelAr : s.label}</div>
             </div>
           ))}
         </section>
@@ -135,11 +136,11 @@ export default function WelcomePage() {
           maxWidth: 1200, margin: '0 auto', padding: '0 24px 80px',
           position: 'relative', zIndex: 1,
         }}>
-          <h2 style={{ textAlign: 'center', fontSize: '2rem', fontWeight: 800, marginBottom: 8 }}>
-            Platform Highlights
+          <h2 style={{ textAlign: 'center', fontSize: '2rem', fontWeight: 800, marginBottom: 8, color: 'var(--text-primary)' }}>
+            {isRTL ? 'أبرز مميزات المنصة' : 'Platform Highlights'}
           </h2>
-          <p style={{ textAlign: 'center', fontFamily: 'Cairo, sans-serif', fontSize: '1.1rem', color: '#64748b', direction: 'rtl', marginBottom: 48 }}>
-            أبرز مميزات المنصة
+          <p style={{ textAlign: 'center', fontFamily: 'Cairo, sans-serif', fontSize: '1.1rem', color: 'var(--text-muted)', direction: 'rtl', marginBottom: 48 }}>
+            {isRTL ? 'كل اللي بتقدمه المكتبة في مكان واحد' : 'أبرز مميزات المنصة'}
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }}>
@@ -150,8 +151,8 @@ export default function WelcomePage() {
                 onMouseLeave={() => setActiveCard(null)}
                 style={{
                   padding: 32, borderRadius: 20, cursor: 'default',
-                  background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
-                  border: `1px solid ${activeCard === i ? h.color + '60' : 'rgba(255,255,255,0.06)'}`,
+                  background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
+                  border: `1px solid ${activeCard === i ? h.color + '60' : 'var(--border-subtle)'}`,
                   transition: 'all 0.4s ease',
                   animation: mounted ? `welcomeFadeUp 0.8s ease-out ${0.5 + i * 0.15}s both` : 'none',
                   boxShadow: activeCard === i ? `0 0 30px ${h.color}20` : 'none',
@@ -160,9 +161,8 @@ export default function WelcomePage() {
                 <div style={{ fontSize: 48, marginBottom: 16, filter: activeCard === i ? 'drop-shadow(0 0 12px ' + h.color + ')' : 'none', transition: 'filter 0.3s' }}>{h.icon}
         <PageNavigation currentPath="/welcome" />
       </div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: 4, color: h.color }}>{h.title}</h3>
-                <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '0.95rem', color: '#94a3b8', direction: 'rtl', marginBottom: 12, fontWeight: 600 }}>{h.titleAr}</p>
-                <p style={{ fontSize: '0.9rem', color: '#64748b', lineHeight: 1.7 }}>{h.desc}</p>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: 4, color: h.color }}>{isRTL ? h.titleAr : h.title}</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.7, direction: isRTL ? 'rtl' : 'ltr', fontFamily: isRTL ? 'Cairo, sans-serif' : 'Inter, sans-serif' }}>{isRTL ? h.descAr : h.desc}</p>
               </div>
             ))}
           </div>
@@ -173,18 +173,18 @@ export default function WelcomePage() {
           textAlign: 'center', padding: '60px 24px 80px', position: 'relative', zIndex: 1,
           background: 'linear-gradient(to top, rgba(59,130,246,0.05), transparent)',
         }}>
-          <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '1.3rem', color: '#94a3b8', direction: 'rtl', marginBottom: 12, fontWeight: 700 }}>
+          <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '1.3rem', color: 'var(--text-secondary)', direction: 'rtl', marginBottom: 12, fontWeight: 700 }}>
             ابدأ رحلتك في الدفاع المعرفي
           </p>
-          <p style={{ fontSize: '1rem', color: '#64748b', marginBottom: 32 }}>
-            Start your cognitive defense journey today
+          <p style={{ fontSize: '1rem', color: 'var(--text-muted)', marginBottom: 32, direction: isRTL ? 'rtl' : 'ltr', fontFamily: isRTL ? 'Cairo, sans-serif' : 'Inter, sans-serif' }}>
+            {isRTL ? 'ابدأ رحلتك في الدفاع المعرفي النهارده' : 'Start your cognitive defense journey today'}
           </p>
           <Link href="/explore" style={{
             padding: '14px 36px', borderRadius: 12, fontWeight: 700, fontSize: '1rem', textDecoration: 'none',
-            background: 'rgba(15,23,42,0.8)', color: '#e2e8f0', border: '1px solid rgba(255,255,255,0.1)',
+            background: 'var(--bg-card)', color: 'var(--text-primary)', border: '1px solid var(--border-primary)',
             backdropFilter: 'blur(12px)', transition: 'all 0.3s', display: 'inline-block',
           }}>
-            ← Back to Explore
+            {isRTL ? '→ رجوع للاستكشاف' : '← Back to Explore'}
           </Link>
         </section>
       </main>

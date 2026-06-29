@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { PageNavigation } from '@/components/shared/page-navigation';
+import { useRTL } from "@/components/shared/rtl-provider";
 
 export const dynamic = "force-dynamic";
 
@@ -73,28 +74,29 @@ const PLATFORM_STATS = [
 ];
 
 export default function Phase4Page() {
+  const { isRTL } = useRTL();
   const [expandedWeek, setExpandedWeek] = useState<number | null>(21);
 
   return (
-    <div style={{ minHeight: "100vh", background: "#020617", color: "#e2e8f0", fontFamily: "system-ui, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "var(--bg-page)", color: "var(--text-primary)", fontFamily: "system-ui, sans-serif" }}>
       {/* Hero — Epic Capstone Theme */}
-      <div style={{ background: "linear-gradient(135deg, #1a0a00 0%, #3d1a00 30%, #020617 70%)", padding: "80px 40px", textAlign: "center", position: "relative", overflow: "hidden" }}>
+      <div style={{ background: "linear-gradient(135deg, #1a0a00 0%, #3d1a00 30%, var(--bg-page) 70%)", padding: "80px 40px", textAlign: "center", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: "20px", left: "50%", transform: "translateX(-50%)", width: "600px", height: "300px", background: "radial-gradient(ellipse, rgba(251,191,36,0.15), transparent)", borderRadius: "50%", pointerEvents: "none" }} />
-        <div style={{ display: "inline-block", background: "rgba(251,191,36,0.15)", border: "1px solid rgba(251,191,36,0.3)", borderRadius: "999px", padding: "6px 20px", fontSize: "12px", color: "#fbbf24", marginBottom: "20px" }}>
-          🏆 Weeks 21-24 • FINAL PHASE
+        <div style={{ display: "inline-block", background: "rgba(251,191,36,0.15)", border: "1px solid rgba(251,191,36,0.3)", borderRadius: "999px", padding: "6px 20px", fontSize: "12px", color: "var(--accent-amber)", marginBottom: "20px" }}>
+          {isRTL ? "🏆 الأسابيع ٢١-٢٤ • المرحلة الأخيرة" : "🏆 Weeks 21-24 • FINAL PHASE"}
         </div>
         <h1 style={{ fontSize: "clamp(36px,6vw,72px)", fontWeight: 900, marginBottom: "16px", background: "linear-gradient(135deg, #fbbf24, #f59e0b, #ef4444)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-          Phase 4: Capstone
+          {isRTL ? "المرحلة الرابعة: مشروع التخرج" : "Phase 4: Capstone"}
         </h1>
-        <p style={{ fontSize: "28px", color: "#fbbf24", fontFamily: "Cairo, sans-serif", marginBottom: "8px" }}>المرحلة الرابعة: مشروع التخرج والسيادة</p>
-        <p style={{ fontSize: "18px", color: "#94a3b8", maxWidth: "700px", margin: "0 auto", lineHeight: 1.7 }}>
-          You've built the knowledge. Now prove the mastery.
-          Face the Sovereign Boss-Fight, conduct live operations, defend your community,
-          and earn your Cognitive Immunity Certificate.
+        <p style={{ fontSize: "28px", color: "var(--accent-amber)", fontFamily: "Cairo, sans-serif", marginBottom: "8px" }}>المرحلة الرابعة: مشروع التخرج والسيادة</p>
+        <p style={{ fontSize: "18px", color: "var(--text-muted)", maxWidth: "700px", margin: "0 auto", lineHeight: 1.7, direction: isRTL ? "rtl" : "ltr" }}>
+          {isRTL
+            ? "بنيت المعرفة، دلوقتي أثبت الإتقان. واجه معركة السيادة، نفّذ عمليات حيّة، دافع عن مجتمعك، واكسب شهادة المناعة المعرفية."
+            : "You've built the knowledge. Now prove the mastery. Face the Sovereign Boss-Fight, conduct live operations, defend your community, and earn your Cognitive Immunity Certificate."}
         </p>
         <div style={{ marginTop: "40px", display: "flex", justifyContent: "center" }}>
-          <Link href="/competition-demo" style={{ display: "inline-flex", alignItems: "center", gap: "12px", background: "linear-gradient(135deg, #fbbf24, #f59e0b)", borderRadius: "999px", padding: "16px 40px", color: "#020617", fontWeight: 800, fontSize: "18px", textDecoration: "none" }}>
-            ⚡ See Live Platform Demo
+          <Link href="/competition-demo" style={{ display: "inline-flex", alignItems: "center", gap: "12px", background: "linear-gradient(135deg, #fbbf24, #f59e0b)", borderRadius: "999px", padding: "16px 40px", color: "var(--text-inverse)", fontWeight: 800, fontSize: "18px", textDecoration: "none" }}>
+            {isRTL ? "⚡ شوف العرض الحيّ للمنصة" : "⚡ See Live Platform Demo"}
           </Link>
         </div>
       </div>
@@ -103,14 +105,15 @@ export default function Phase4Page() {
 
         {/* Phase Overview — Why This Phase Matters */}
         <div style={{ background: "rgba(251,191,36,0.06)", border: "1px solid rgba(251,191,36,0.2)", borderRadius: "16px", padding: "32px", marginBottom: "60px" }}>
-          <h2 style={{ color: "#fbbf24", marginBottom: "16px", fontSize: "22px" }}>🎯 Why This Phase Matters</h2>
-          <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "16px" }}>
-            Phases 1 through 3 taught you the tools and the methods. Phase 4 is where you stop studying and start defending.
-            Knowledge that is never applied fades; skills that are tested under pressure stay. The four capstone challenges
-            below move you from learner to operator: a timed adversarial test, a live OSINT investigation, a real
-            community-defense mission, and a final psychometric assessment.
+          <h2 style={{ color: "var(--accent-amber)", marginBottom: "16px", fontSize: "22px", direction: isRTL ? "rtl" : "ltr" }}>
+            {isRTL ? "🎯 ليه المرحلة دي مهمة" : "🎯 Why This Phase Matters"}
+          </h2>
+          <p style={{ color: "var(--text-muted)", lineHeight: 1.8, marginBottom: "16px", direction: isRTL ? "rtl" : "ltr", textAlign: isRTL ? "right" : "left" }}>
+            {isRTL
+              ? "المراحل من الأولى للتالتة علّمتك الأدوات والمناهج. المرحلة الرابعة هي اللي بتبطّل فيها الدراسة وتبدأ الدفاع. المعرفة اللي ما بتتطبّقش بتضيع، والمهارات اللي بتتختبر تحت ضغط بتفضل. التحديات الأربعة تحت بتنقلك من متعلّم لمشغّل ميداني: اختبار مُوقَّت ضد ذكاء خصمي، تحقيق استخباراتي حيّ، مهمة دفاع مجتمعي حقيقية، وتقييم نفسي نهائي."
+              : "Phases 1 through 3 taught you the tools and the methods. Phase 4 is where you stop studying and start defending. Knowledge that is never applied fades; skills that are tested under pressure stay. The four capstone challenges below move you from learner to operator: a timed adversarial test, a live OSINT investigation, a real community-defense mission, and a final psychometric assessment."}
           </p>
-          <p style={{ color: "#fbbf24", fontFamily: "Cairo, sans-serif", fontSize: "16px", lineHeight: 1.9, direction: "rtl", textAlign: "right" }}>
+          <p style={{ color: "var(--accent-amber)", fontFamily: "Cairo, sans-serif", fontSize: "16px", lineHeight: 1.9, direction: "rtl", textAlign: "right" }}>
             المرحلة الرابعة هي مرحلة التطبيق. تعلّمت الأدوات والمناهج في المراحل السابقة، والآن تُثبت إتقانك عبر أربعة تحديات
             نهائية: اختبار مُوقَّت ضد ذكاء اصطناعي خصمي، تحقيق استخباراتي مفتوح المصدر، مهمة دفاع مجتمعي حقيقية، ثم التقييم
             النفسي النهائي للحصول على شهادة المناعة المعرفية.
@@ -119,14 +122,20 @@ export default function Phase4Page() {
 
         {/* Platform Stats — What You've Learned To Use */}
         <div style={{ marginBottom: "60px" }}>
-          <h2 style={{ fontSize: "28px", fontWeight: 800, marginBottom: "12px", color: "#f1f5f9" }}>🏗️ The Arsenal You've Built</h2>
-          <p style={{ color: "#64748b", marginBottom: "32px" }}>By Phase 4 you can operate every tool in the platform — the full civic-defense toolkit, end to end.</p>
+          <h2 style={{ fontSize: "28px", fontWeight: 800, marginBottom: "12px", color: "var(--text-primary)", direction: isRTL ? "rtl" : "ltr" }}>
+            {isRTL ? "🏗️ الترسانة اللي بنيتها" : "🏗️ The Arsenal You've Built"}
+          </h2>
+          <p style={{ color: "var(--text-caption)", marginBottom: "32px", direction: isRTL ? "rtl" : "ltr", textAlign: isRTL ? "right" : "left" }}>
+            {isRTL
+              ? "مع المرحلة الرابعة بتقدر تشغّل كل أداة في المنصة — مجموعة الدفاع المدني كاملة من الأول للآخر."
+              : "By Phase 4 you can operate every tool in the platform — the full civic-defense toolkit, end to end."}
+          </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: "16px" }}>
             {PLATFORM_STATS.map((stat) => (
               <div key={stat.label} style={{ background: `${stat.color}11`, border: `1px solid ${stat.color}33`, borderRadius: "16px", padding: "24px", textAlign: "center" }}>
                 <div style={{ fontSize: "32px", marginBottom: "8px" }}>{stat.icon}</div>
                 <div style={{ fontSize: "36px", fontWeight: 900, color: stat.color, marginBottom: "4px" }}>{stat.value}</div>
-                <div style={{ fontSize: "13px", color: "#94a3b8" }}>{stat.label}</div>
+                <div style={{ fontSize: "13px", color: "var(--text-muted)" }}>{isRTL ? stat.labelAr : stat.label}</div>
                 <div style={{ fontSize: "12px", color: stat.color, fontFamily: "Cairo, sans-serif" }}>{stat.labelAr}</div>
               </div>
             ))}
@@ -134,21 +143,23 @@ export default function Phase4Page() {
         </div>
 
         {/* Capstone Challenges */}
-        <h2 style={{ fontSize: "28px", fontWeight: 800, marginBottom: "32px", color: "#f1f5f9" }}>⚔️ The 4 Capstone Challenges</h2>
+        <h2 style={{ fontSize: "28px", fontWeight: 800, marginBottom: "32px", color: "var(--text-primary)", direction: isRTL ? "rtl" : "ltr" }}>
+          {isRTL ? "⚔️ التحديات الأربعة النهائية" : "⚔️ The 4 Capstone Challenges"}
+        </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "60px" }}>
           {CAPSTONE_CHALLENGES.map((challenge) => (
-            <div key={challenge.week} style={{ background: "rgba(15,23,42,0.8)", border: `1px solid ${expandedWeek === challenge.week ? challenge.color : "rgba(148,163,184,0.1)"}`, borderRadius: "16px", overflow: "hidden", transition: "border-color 0.3s" }}>
+            <div key={challenge.week} style={{ background: "var(--bg-card)", border: `1px solid ${expandedWeek === challenge.week ? challenge.color : "var(--border-primary)"}`, borderRadius: "16px", overflow: "hidden", transition: "border-color 0.3s" }}>
               <button
                 onClick={() => setExpandedWeek(expandedWeek === challenge.week ? null : challenge.week)}
-                style={{ width: "100%", background: "none", border: "none", padding: "24px", cursor: "pointer", display: "flex", alignItems: "center", gap: "20px", textAlign: "left" }}
+                style={{ width: "100%", background: "none", border: "none", padding: "24px", cursor: "pointer", display: "flex", alignItems: "center", gap: "20px", textAlign: isRTL ? "right" : "left", flexDirection: isRTL ? "row-reverse" : "row" }}
               >
                 <div style={{ background: `${challenge.color}22`, border: `1px solid ${challenge.color}44`, borderRadius: "12px", padding: "12px", fontSize: "28px" }}>{challenge.icon}</div>
                 <div style={{ flex: 1 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "4px" }}>
-                    <span style={{ background: `${challenge.color}22`, color: challenge.color, borderRadius: "999px", padding: "2px 12px", fontSize: "12px", fontWeight: 700 }}>Week {challenge.week}</span>
-                    <span style={{ background: "rgba(239,68,68,0.15)", color: "#ef4444", borderRadius: "999px", padding: "2px 10px", fontSize: "11px" }}>{challenge.difficulty}</span>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "4px", flexDirection: isRTL ? "row-reverse" : "row" }}>
+                    <span style={{ background: `${challenge.color}22`, color: challenge.color, borderRadius: "999px", padding: "2px 12px", fontSize: "12px", fontWeight: 700 }}>{isRTL ? `أسبوع ${challenge.week}` : `Week ${challenge.week}`}</span>
+                    <span style={{ background: "rgba(239,68,68,0.15)", color: "var(--accent-red)", borderRadius: "999px", padding: "2px 10px", fontSize: "11px" }}>{isRTL ? (challenge.difficulty === "Expert" ? "خبير" : "متقدّم") : challenge.difficulty}</span>
                   </div>
-                  <h3 style={{ color: "#f1f5f9", fontSize: "18px", fontWeight: 700, marginBottom: "2px" }}>{challenge.title}</h3>
+                  <h3 style={{ color: "var(--text-primary)", fontSize: "18px", fontWeight: 700, marginBottom: "2px" }}>{isRTL ? challenge.titleAr : challenge.title}</h3>
                   <p style={{ color: challenge.color, fontSize: "14px", fontFamily: "Cairo, sans-serif" }}>{challenge.titleAr}</p>
                 </div>
                 <div style={{ background: `${challenge.color}22`, borderRadius: "999px", padding: "6px 16px", color: challenge.color, fontSize: "12px", fontWeight: 700 }}>
@@ -157,15 +168,15 @@ export default function Phase4Page() {
               </button>
 
               {expandedWeek === challenge.week && (
-                <div style={{ padding: "0 24px 24px" }}>
-                  <p style={{ color: "#94a3b8", marginBottom: "16px", lineHeight: 1.7 }}>{challenge.description}</p>
+                <div style={{ padding: "0 24px 24px", direction: isRTL ? "rtl" : "ltr" }}>
+                  <p style={{ color: "var(--text-muted)", marginBottom: "16px", lineHeight: 1.7, textAlign: isRTL ? "right" : "left" }}>{challenge.description}</p>
                   <div style={{ background: `${challenge.color}11`, border: `1px solid ${challenge.color}22`, borderRadius: "12px", padding: "20px", marginBottom: "20px" }}>
-                    <h4 style={{ color: challenge.color, marginBottom: "8px", fontSize: "14px" }}>📋 The Challenge:</h4>
-                    <p style={{ color: "#e2e8f0", fontSize: "14px", lineHeight: 1.7 }}>{challenge.challenge}</p>
+                    <h4 style={{ color: challenge.color, marginBottom: "8px", fontSize: "14px" }}>{isRTL ? "📋 التحدي:" : "📋 The Challenge:"}</h4>
+                    <p style={{ color: "var(--text-primary)", fontSize: "14px", lineHeight: 1.7, textAlign: isRTL ? "right" : "left" }}>{challenge.challenge}</p>
                   </div>
                   <div style={{ background: "rgba(251,191,36,0.05)", border: "1px solid rgba(251,191,36,0.2)", borderRadius: "12px", padding: "16px", marginBottom: "20px" }}>
-                    <span style={{ color: "#fbbf24", fontWeight: 700, fontSize: "14px" }}>🏅 Milestone: </span>
-                    <span style={{ color: "#fbbf24", fontSize: "14px" }}>{challenge.milestone}</span>
+                    <span style={{ color: "var(--accent-amber)", fontWeight: 700, fontSize: "14px" }}>{isRTL ? "🏅 المحطة: " : "🏅 Milestone: "}</span>
+                    <span style={{ color: "var(--accent-amber)", fontSize: "14px" }}>{challenge.milestone}</span>
                   </div>
                   <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                     {challenge.tools.map((path, idx) => (
@@ -183,36 +194,39 @@ export default function Phase4Page() {
         {/* Final Certificate CTA */}
         <div style={{ background: "linear-gradient(135deg, rgba(251,191,36,0.1), rgba(239,68,68,0.05))", border: "2px solid rgba(251,191,36,0.3)", borderRadius: "24px", padding: "60px 40px", textAlign: "center", marginBottom: "60px" }}>
           <div style={{ fontSize: "64px", marginBottom: "20px" }}>🏆</div>
-          <h2 style={{ fontSize: "36px", fontWeight: 900, color: "#fbbf24", marginBottom: "12px" }}>The Sovereign Certificate</h2>
-          <p style={{ color: "#f1f5f9", fontFamily: "Cairo, sans-serif", fontSize: "22px", marginBottom: "16px" }}>شهادة الإنسان السيادي</p>
-          <p style={{ color: "#94a3b8", maxWidth: "600px", margin: "0 auto 40px", lineHeight: 1.8 }}>
-            Completing all 4 phases generates a verifiable certificate that records your progress through the program.
-            It includes your MIST-20 assessment score, your completion record, and the specialization badges you unlocked.
+          <h2 style={{ fontSize: "36px", fontWeight: 900, color: "var(--accent-amber)", marginBottom: "12px" }}>
+            {isRTL ? "شهادة الإنسان السيادي" : "The Sovereign Certificate"}
+          </h2>
+          <p style={{ color: "var(--text-primary)", fontFamily: "Cairo, sans-serif", fontSize: "22px", marginBottom: "16px" }}>شهادة الإنسان السيادي</p>
+          <p style={{ color: "var(--text-muted)", maxWidth: "600px", margin: "0 auto 40px", lineHeight: 1.8, direction: isRTL ? "rtl" : "ltr" }}>
+            {isRTL
+              ? "بإتمام المراحل الأربع بتتولّد شهادة قابلة للتحقق بتسجّل تقدّمك في البرنامج. بتشمل درجتك في اختبار MIST-20، وسجلّ إكمالك، وشارات التخصص اللي فتحتها."
+              : "Completing all 4 phases generates a verifiable certificate that records your progress through the program. It includes your MIST-20 assessment score, your completion record, and the specialization badges you unlocked."}
           </p>
-          <p style={{ color: "#94a3b8", fontFamily: "Cairo, sans-serif", fontSize: "16px", maxWidth: "600px", margin: "0 auto 40px", lineHeight: 1.9, direction: "rtl", textAlign: "center" }}>
+          <p style={{ color: "var(--text-muted)", fontFamily: "Cairo, sans-serif", fontSize: "16px", maxWidth: "600px", margin: "0 auto 40px", lineHeight: 1.9, direction: "rtl", textAlign: "center" }}>
             بإتمام المراحل الأربع تحصل على شهادة قابلة للتحقق تسجّل تقدّمك في البرنامج، وتشمل درجتك في اختبار MIST-20 وسجلّ
             إكمالك وشارات التخصص التي فتحتها.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap" }}>
-            <Link href="/certificate" style={{ display: "inline-flex", alignItems: "center", gap: "12px", background: "linear-gradient(135deg, #fbbf24, #f59e0b)", borderRadius: "999px", padding: "16px 40px", color: "#020617", fontWeight: 800, fontSize: "18px", textDecoration: "none" }}>
-              🏆 View Certificate
+            <Link href="/certificate" style={{ display: "inline-flex", alignItems: "center", gap: "12px", background: "linear-gradient(135deg, #fbbf24, #f59e0b)", borderRadius: "999px", padding: "16px 40px", color: "var(--text-inverse)", fontWeight: 800, fontSize: "18px", textDecoration: "none" }}>
+              {isRTL ? "🏆 اعرض الشهادة" : "🏆 View Certificate"}
             </Link>
-            <Link href="/assessment" style={{ display: "inline-flex", alignItems: "center", gap: "12px", background: "rgba(251,191,36,0.1)", border: "2px solid rgba(251,191,36,0.3)", borderRadius: "999px", padding: "16px 40px", color: "#fbbf24", fontWeight: 700, fontSize: "18px", textDecoration: "none" }}>
-              📝 Take Final Assessment
+            <Link href="/assessment" style={{ display: "inline-flex", alignItems: "center", gap: "12px", background: "rgba(251,191,36,0.1)", border: "2px solid rgba(251,191,36,0.3)", borderRadius: "999px", padding: "16px 40px", color: "var(--accent-amber)", fontWeight: 700, fontSize: "18px", textDecoration: "none" }}>
+              {isRTL ? "📝 ابدأ التقييم النهائي" : "📝 Take Final Assessment"}
             </Link>
           </div>
         </div>
 
         {/* Navigation */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "32px", background: "rgba(15,23,42,0.6)", borderRadius: "16px", border: "1px solid rgba(148,163,184,0.1)" }}>
-          <Link href="/curriculum/phase3" style={{ display: "flex", alignItems: "center", gap: "12px", color: "#94a3b8", textDecoration: "none", fontSize: "16px" }}>
-            ← Phase 3: Islamic Defense
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "32px", background: "var(--bg-card)", borderRadius: "16px", border: "1px solid var(--border-primary)", flexDirection: isRTL ? "row-reverse" : "row" }}>
+          <Link href="/curriculum/phase3" style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-muted)", textDecoration: "none", fontSize: "16px" }}>
+            {isRTL ? "→ المرحلة 3: الدفاع الإسلامي" : "← Phase 3: Islamic Defense"}
           </Link>
-          <Link href="/curriculum/phase0" style={{ color: "#fbbf24", textDecoration: "none", fontSize: "14px" }}>
-            📍 Back to Phase 0
+          <Link href="/curriculum/phase0" style={{ color: "var(--accent-amber)", textDecoration: "none", fontSize: "14px" }}>
+            {isRTL ? "📍 رجوع للمرحلة 0" : "📍 Back to Phase 0"}
           </Link>
-          <Link href="/explore" style={{ display: "flex", alignItems: "center", gap: "12px", color: "#fbbf24", textDecoration: "none", fontSize: "16px", fontWeight: 700 }}>
-            🌐 Explore All Pages →
+          <Link href="/explore" style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--accent-amber)", textDecoration: "none", fontSize: "16px", fontWeight: 700 }}>
+            {isRTL ? "🌐 استكشف كل الصفحات ←" : "🌐 Explore All Pages →"}
           </Link>
         </div>
       </div>

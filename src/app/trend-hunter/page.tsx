@@ -133,7 +133,7 @@ export default function TrendHunterPage() {
   }, [archive]);
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(180deg, #020408 0%, #050a10 100%)', color: '#e2e8f0', direction: isRtl ? 'rtl' : 'ltr' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--bg-page)', color: 'var(--text-primary)', direction: isRtl ? 'rtl' : 'ltr' }}>
       {/* Animated Radar Background */}
       <div style={{ position: 'fixed', inset: 0, pointerEvents: 'none', overflow: 'hidden', zIndex: 0 }}>
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }}>
@@ -148,9 +148,9 @@ export default function TrendHunterPage() {
 
         {/* ── HEADER ── */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 32, textAlign: 'center' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px', borderRadius: 20, background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.25)', marginBottom: 20 }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', boxShadow: '0 0 8px #f59e0b', display: 'inline-block', animation: 'pulse 2s infinite' }} />
-            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#f59e0b' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px', borderRadius: 20, background: 'var(--accent-deepreal-surface)', border: '1px solid var(--accent-deepreal-glow)', marginBottom: 20 }}>
+            <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--accent-deepreal)', boxShadow: '0 0 8px var(--accent-deepreal)', display: 'inline-block', animation: 'pulse 2s infinite' }} />
+            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--accent-deepreal)' }}>
               {isRtl ? 'تريندات مصر المباشرة + الأرشيف' : 'LIVE EGYPT TRENDS + ARCHIVE'}
             </span>
           </div>
@@ -159,16 +159,16 @@ export default function TrendHunterPage() {
               TREND HUNTER
             </span>
             <br />
-            <span style={{ fontSize: '0.55em', color: '#94a3b8', WebkitTextFillColor: '#94a3b8' }}>صيّاد التريند</span>
+            <span style={{ fontSize: '0.55em', color: 'var(--text-secondary)', WebkitTextFillColor: 'var(--text-secondary)' }}>صيّاد التريند</span>
           </h1>
-          <p style={{ color: '#64748b', fontSize: 16, maxWidth: 640, margin: '0 auto 16px', lineHeight: 1.6 }}>
+          <p style={{ color: 'var(--text-muted)', fontSize: 16, maxWidth: 640, margin: '0 auto 16px', lineHeight: 1.6 }}>
             {isRtl
               ? 'طبقتان من البيانات الحقيقية: تريندات جوجل المباشرة الآن في مصر، وأرشيف موثّق لادعاءات تم تفنيدها بمصادر رسمية.'
               : "Two layers of real data: what Egypt is searching right now on Google Trends, plus a documented archive of claims debunked by official sources."}
           </p>
 
           {/* Differentiation note vs /live-deception */}
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 16px', borderRadius: 12, background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', fontSize: 13, color: '#a5b4fc', maxWidth: 720 }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 16px', borderRadius: 12, background: 'var(--accent-religionhub-surface)', border: '1px solid var(--accent-religionhub-glow)', fontSize: 13, color: 'var(--accent-indigo)', maxWidth: 720 }}>
             <Info size={15} style={{ flexShrink: 0 }} />
             <span>
               {isRtl
@@ -181,14 +181,14 @@ export default function TrendHunterPage() {
         {/* ════════════════════ LAYER 1: LIVE GOOGLE TRENDS ════════════════════ */}
         <section style={{ marginBottom: 56 }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 8 }}>
-            <h2 style={{ display: 'flex', alignItems: 'center', gap: 10, margin: 0, fontSize: 20, fontWeight: 800, color: '#f1f5f9' }}>
-              <TrendingUp size={22} style={{ color: '#f59e0b' }} />
+            <h2 style={{ display: 'flex', alignItems: 'center', gap: 10, margin: 0, fontSize: 20, fontWeight: 800, color: 'var(--text-primary)' }}>
+              <TrendingUp size={22} style={{ color: 'var(--accent-deepreal)' }} />
               {isRtl ? 'الطبقة الأولى: تريندات مصر الآن' : 'Layer 1 — Egypt Trending Now'}
             </h2>
             <button
               onClick={loadTrends}
               disabled={trendsLoading}
-              style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '7px 14px', borderRadius: 10, background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.25)', color: '#f59e0b', fontSize: 13, fontWeight: 600, cursor: trendsLoading ? 'wait' : 'pointer' }}
+              style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '7px 14px', borderRadius: 10, background: 'var(--accent-deepreal-surface)', border: '1px solid var(--accent-deepreal-glow)', color: 'var(--accent-deepreal)', fontSize: 13, fontWeight: 600, cursor: trendsLoading ? 'wait' : 'pointer' }}
             >
               <RefreshCw size={14} style={{ animation: trendsLoading ? 'spin 1s linear infinite' : 'none' }} />
               {isRtl ? 'تحديث' : 'Refresh'}
@@ -196,27 +196,27 @@ export default function TrendHunterPage() {
           </div>
 
           {/* Honest live-source label */}
-          <p style={{ fontSize: 13, color: '#64748b', margin: '0 0 20px', lineHeight: 1.6, display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' }}>
+          <p style={{ fontSize: 13, color: 'var(--text-muted)', margin: '0 0 20px', lineHeight: 1.6, display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' }}>
             <Clock size={14} />
             {isRtl
               ? 'مصدر مباشر: Google Trends RSS (geo=EG)، يُحدَّث كل ~5 دقائق. هذه تريندات اللحظة الحالية فقط — وليست سجلاً لسنة كاملة (للتاريخ راجع الأرشيف بالأسفل).'
               : 'Live source: Google Trends RSS (geo=EG), refreshed ~every 5 min. These are current-moment trends only — NOT a full-year history (see the archive below for history).'}
             {fetchedAt && (
-              <span style={{ color: '#475569' }}>
+              <span style={{ color: 'var(--text-caption)' }}>
                 · {isRtl ? 'آخر جلب' : 'fetched'} {fetchedAt.toLocaleTimeString(isRtl ? 'ar-EG' : 'en-GB')}
               </span>
             )}
           </p>
 
           {trendsLoading && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: 24, color: '#94a3b8', fontSize: 14 }}>
-              <Radar size={18} style={{ color: '#f59e0b', animation: 'spin 1.4s linear infinite' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: 24, color: 'var(--text-secondary)', fontSize: 14 }}>
+              <Radar size={18} style={{ color: 'var(--accent-deepreal)', animation: 'spin 1.4s linear infinite' }} />
               {isRtl ? 'جارٍ مسح تريندات جوجل المباشرة...' : 'Scanning live Google Trends...'}
             </div>
           )}
 
           {trendsError && !trendsLoading && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: 16, borderRadius: 12, background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.2)', color: '#fca5a5', fontSize: 14 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: 16, borderRadius: 12, background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.2)', color: 'var(--accent-red)', fontSize: 14 }}>
               <AlertTriangle size={16} /> {trendsError}
             </div>
           )}
@@ -232,20 +232,20 @@ export default function TrendHunterPage() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: Math.min(i * 0.04, 0.4) }}
-                    style={{ padding: 18, borderRadius: 16, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(245,158,11,0.15)', display: 'flex', flexDirection: 'column', gap: 12 }}
+                    style={{ padding: 18, borderRadius: 16, background: 'var(--bg-card)', border: '1px solid var(--accent-deepreal-glow)', display: 'flex', flexDirection: 'column', gap: 12 }}
                   >
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-                      <span style={{ fontSize: 13, fontWeight: 800, color: '#f59e0b', background: 'rgba(245,158,11,0.1)', borderRadius: 8, padding: '2px 9px', flexShrink: 0 }}>
+                      <span style={{ fontSize: 13, fontWeight: 800, color: 'var(--accent-deepreal)', background: 'var(--accent-deepreal-surface)', borderRadius: 8, padding: '2px 9px', flexShrink: 0 }}>
                         #{i + 1}
                       </span>
-                      <span style={{ fontSize: 15, fontWeight: 600, color: '#f1f5f9', lineHeight: 1.4, wordBreak: 'break-word' }}>
+                      <span style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', lineHeight: 1.4, wordBreak: 'break-word' }}>
                         {trend.title}
                       </span>
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', fontSize: 12, color: '#64748b' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', fontSize: 12, color: 'var(--text-muted)' }}>
                       {trend.traffic && trend.traffic !== 'Unknown' && (
-                        <span style={{ display: 'flex', alignItems: 'center', gap: 4, color: '#fbbf24', fontWeight: 600 }}>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: 4, color: 'var(--accent-deepreal)', fontWeight: 600 }}>
                           <Flame size={13} /> {trend.traffic} {isRtl ? 'بحث' : 'searches'}
                         </span>
                       )}
@@ -259,11 +259,11 @@ export default function TrendHunterPage() {
                     {/* Trackable links per live trend */}
                     <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 'auto' }}>
                       <a href={trendsUrl} target="_blank" rel="noopener noreferrer"
-                        style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '6px 12px', borderRadius: 9, background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.25)', color: '#f59e0b', fontSize: 12, fontWeight: 600, textDecoration: 'none' }}>
+                        style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '6px 12px', borderRadius: 9, background: 'var(--accent-deepreal-surface)', border: '1px solid var(--accent-deepreal-glow)', color: 'var(--accent-deepreal)', fontSize: 12, fontWeight: 600, textDecoration: 'none' }}>
                         <TrendingUp size={13} /> {isRtl ? 'تتبّع على جوجل تريندز' : 'Track on Trends'}
                       </a>
                       <a href={searchUrl} target="_blank" rel="noopener noreferrer"
-                        style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '6px 12px', borderRadius: 9, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', color: '#94a3b8', fontSize: 12, fontWeight: 600, textDecoration: 'none' }}>
+                        style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '6px 12px', borderRadius: 9, background: 'var(--bg-elevated)', border: '1px solid var(--border-primary)', color: 'var(--text-secondary)', fontSize: 12, fontWeight: 600, textDecoration: 'none' }}>
                         <Search size={13} /> {isRtl ? 'بحث' : 'Search'} <ExternalLink size={11} />
                       </a>
                     </div>
@@ -271,7 +271,7 @@ export default function TrendHunterPage() {
                 );
               })}
               {trends.length === 0 && (
-                <div style={{ gridColumn: '1 / -1', padding: 24, color: '#64748b', fontSize: 14 }}>
+                <div style={{ gridColumn: '1 / -1', padding: 24, color: 'var(--text-muted)', fontSize: 14 }}>
                   {isRtl ? 'لا توجد تريندات متاحة في هذه اللحظة. جرّب التحديث.' : 'No trends available at this moment. Try refreshing.'}
                 </div>
               )}
@@ -281,22 +281,22 @@ export default function TrendHunterPage() {
 
         {/* ════════════════════ LAYER 2: DOCUMENTED MISINFO ARCHIVE ════════════════════ */}
         <section>
-          <h2 style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 8px', fontSize: 20, fontWeight: 800, color: '#f1f5f9' }}>
-            <Archive size={22} style={{ color: '#a78bfa' }} />
+          <h2 style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 8px', fontSize: 20, fontWeight: 800, color: 'var(--text-primary)' }}>
+            <Archive size={22} style={{ color: 'var(--accent-religionhub)' }} />
             {isRtl ? 'الطبقة الثانية: أرشيف الادعاءات الموثّقة' : 'Layer 2 — Documented Misinfo Archive'}
           </h2>
-          <p style={{ fontSize: 13, color: '#64748b', margin: '0 0 20px', lineHeight: 1.6, display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' }}>
+          <p style={{ fontSize: 13, color: 'var(--text-muted)', margin: '0 0 20px', lineHeight: 1.6, display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' }}>
             <BookOpen size={14} />
             {isRtl
               ? 'الطبقة التاريخية: ادعاءات مُفنَّدة موثّقة بمصدر رسمي وتاريخ لكل منها'
               : 'The historical layer: debunked claims, each carrying an official source and a date'}
             {archiveSpan && (
-              <span style={{ color: '#a78bfa', fontWeight: 600 }}>
+              <span style={{ color: 'var(--accent-religionhub)', fontWeight: 600 }}>
                 · {isRtl ? `يمتد عبر ${archiveSpan}` : `spanning ${archiveSpan}`}
               </span>
             )}
             {archive.length > 0 && (
-              <span style={{ color: '#475569' }}>· {archive.length} {isRtl ? 'حالة' : 'cases'}</span>
+              <span style={{ color: 'var(--text-caption)' }}>· {archive.length} {isRtl ? 'حالة' : 'cases'}</span>
             )}
           </p>
 
@@ -305,7 +305,7 @@ export default function TrendHunterPage() {
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 24 }}>
               {categories.map((cat) => (
                 <button key={cat} onClick={() => setArchiveFilter(cat)}
-                  style={{ padding: '7px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, cursor: 'pointer', background: archiveFilter === cat ? 'rgba(167,139,250,0.2)' : 'rgba(255,255,255,0.04)', border: archiveFilter === cat ? '1px solid rgba(167,139,250,0.5)' : '1px solid rgba(255,255,255,0.08)', color: archiveFilter === cat ? '#a78bfa' : '#94a3b8' }}>
+                  style={{ padding: '7px 16px', borderRadius: 20, fontSize: 13, fontWeight: 600, cursor: 'pointer', background: archiveFilter === cat ? 'var(--accent-religionhub-surface)' : 'var(--bg-elevated)', border: archiveFilter === cat ? '1px solid var(--accent-religionhub-glow)' : '1px solid var(--border-primary)', color: archiveFilter === cat ? 'var(--accent-religionhub)' : 'var(--text-secondary)' }}>
                   {cat === 'all' ? (isRtl ? 'الكل' : 'All') : cat}
                 </button>
               ))}
@@ -313,14 +313,14 @@ export default function TrendHunterPage() {
           )}
 
           {archiveLoading && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: 24, color: '#94a3b8', fontSize: 14 }}>
-              <Radar size={18} style={{ color: '#a78bfa', animation: 'spin 1.4s linear infinite' }} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: 24, color: 'var(--text-secondary)', fontSize: 14 }}>
+              <Radar size={18} style={{ color: 'var(--accent-religionhub)', animation: 'spin 1.4s linear infinite' }} />
               {isRtl ? 'جارٍ تحميل الأرشيف الموثّق...' : 'Loading documented archive...'}
             </div>
           )}
 
           {archiveError && !archiveLoading && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: 16, borderRadius: 12, background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.2)', color: '#fca5a5', fontSize: 14 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: 16, borderRadius: 12, background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.2)', color: 'var(--accent-red)', fontSize: 14 }}>
               <AlertTriangle size={16} /> {archiveError}
             </div>
           )}
@@ -332,31 +332,31 @@ export default function TrendHunterPage() {
                 const isExpanded = expandedId === claim.id;
                 return (
                   <motion.div key={claim.id} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: Math.min(idx * 0.05, 0.4) }}
-                    style={{ borderRadius: 18, background: 'rgba(255,255,255,0.03)', border: `1px solid ${ts.border}`, overflow: 'hidden' }}>
+                    style={{ borderRadius: 18, background: 'var(--bg-card)', border: `1px solid ${ts.border}`, overflow: 'hidden' }}>
                     <div style={{ padding: '20px 24px' }}>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 12, alignItems: 'center' }}>
                         <span style={{ padding: '3px 10px', borderRadius: 12, fontSize: 11, fontWeight: 700, letterSpacing: '0.5px', background: ts.bg, border: `1px solid ${ts.border}`, color: ts.text }}>
                           {isRtl ? THREAT_LABEL_AR[claim.threatLevel] : claim.threatLevel.toUpperCase()}
                         </span>
-                        <span style={{ padding: '3px 10px', borderRadius: 12, fontSize: 11, fontWeight: 600, background: 'rgba(167,139,250,0.12)', border: '1px solid rgba(167,139,250,0.25)', color: '#a78bfa' }}>
+                        <span style={{ padding: '3px 10px', borderRadius: 12, fontSize: 11, fontWeight: 600, background: 'var(--accent-religionhub-surface)', border: '1px solid var(--accent-religionhub-glow)', color: 'var(--accent-religionhub)' }}>
                           {claim.category}
                         </span>
-                        <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: '#64748b' }}>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)' }}>
                           <Clock size={12} /> {formatDate(claim.date, isRtl)}
                         </span>
                       </div>
 
-                      <h3 style={{ margin: '0 0 8px', fontSize: 'clamp(15px, 2vw, 18px)', fontWeight: 700, lineHeight: 1.4, color: '#f1f5f9' }}>
+                      <h3 style={{ margin: '0 0 8px', fontSize: 'clamp(15px, 2vw, 18px)', fontWeight: 700, lineHeight: 1.4, color: 'var(--text-primary)' }}>
                         {isRtl ? claim.title.ar : claim.title.en}
                       </h3>
-                      <p style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.7, color: '#94a3b8' }}>
-                        <span style={{ color: '#ef4444', fontWeight: 700 }}>✗ {isRtl ? 'الادعاء:' : 'Claim:'} </span>
+                      <p style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.7, color: 'var(--text-secondary)' }}>
+                        <span style={{ color: 'var(--accent-red)', fontWeight: 700 }}>✗ {isRtl ? 'الادعاء:' : 'Claim:'} </span>
                         {isRtl ? claim.claim.ar : claim.claim.en}
                       </p>
 
                       <button
                         onClick={() => setExpandedId(isExpanded ? null : claim.id)}
-                        style={{ padding: '8px 16px', borderRadius: 10, background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)', color: '#34d399', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 600 }}
+                        style={{ padding: '8px 16px', borderRadius: 10, background: 'var(--accent-mentalhealth-surface)', border: '1px solid var(--accent-mentalhealth-glow)', color: 'var(--accent-mentalhealth)', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, fontWeight: 600 }}
                       >
                         {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                         {isRtl ? 'الحقيقة والمصدر' : 'The Fact & Source'}
@@ -366,25 +366,25 @@ export default function TrendHunterPage() {
                     <AnimatePresence>
                       {isExpanded && (
                         <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }}
-                          style={{ borderTop: '1px solid rgba(255,255,255,0.06)', overflow: 'hidden' }}>
+                          style={{ borderTop: '1px solid var(--border-subtle)', overflow: 'hidden' }}>
                           <div style={{ padding: 24, display: 'flex', flexDirection: 'column', gap: 14 }}>
-                            <div style={{ padding: 18, borderRadius: 14, background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)' }}>
+                            <div style={{ padding: 18, borderRadius: 14, background: 'var(--accent-mentalhealth-surface)', border: '1px solid var(--accent-mentalhealth-glow)' }}>
                               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-                                <BookOpen size={17} style={{ color: '#10b981' }} />
-                                <span style={{ fontWeight: 700, fontSize: 14, color: '#10b981' }}>{isRtl ? 'الحقيقة' : 'The Fact'}</span>
+                                <BookOpen size={17} style={{ color: 'var(--accent-mentalhealth)' }} />
+                                <span style={{ fontWeight: 700, fontSize: 14, color: 'var(--accent-mentalhealth)' }}>{isRtl ? 'الحقيقة' : 'The Fact'}</span>
                               </div>
-                              <p style={{ fontSize: 14, color: '#cbd5e1', lineHeight: 1.8, margin: 0 }}>
+                              <p style={{ fontSize: 14, color: 'var(--text-primary)', lineHeight: 1.8, margin: 0 }}>
                                 {isRtl ? claim.fact.ar : claim.fact.en}
                               </p>
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#94a3b8', flexWrap: 'wrap' }}>
-                              <span style={{ padding: '5px 12px', borderRadius: 9, background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.25)', color: '#60a5fa', fontWeight: 600 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--text-secondary)', flexWrap: 'wrap' }}>
+                              <span style={{ padding: '5px 12px', borderRadius: 9, background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.25)', color: 'var(--accent-blue)', fontWeight: 600 }}>
                                 {isRtl ? 'المصدر:' : 'Source:'} {claim.source}
                               </span>
                               <a
                                 href={`https://www.google.com/search?q=${encodeURIComponent((isRtl ? claim.title.en : claim.title.en) + ' ' + claim.source)}`}
                                 target="_blank" rel="noopener noreferrer"
-                                style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 9, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', color: '#94a3b8', fontSize: 12, fontWeight: 600, textDecoration: 'none' }}
+                                style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: 9, background: 'var(--bg-elevated)', border: '1px solid var(--border-primary)', color: 'var(--text-secondary)', fontSize: 12, fontWeight: 600, textDecoration: 'none' }}
                               >
                                 <Search size={12} /> {isRtl ? 'تحقّق من المصدر' : 'Verify source'} <ExternalLink size={11} />
                               </a>
@@ -397,7 +397,7 @@ export default function TrendHunterPage() {
                 );
               })}
               {filteredArchive.length === 0 && archive.length > 0 && (
-                <div style={{ padding: 24, color: '#64748b', fontSize: 14 }}>
+                <div style={{ padding: 24, color: 'var(--text-muted)', fontSize: 14 }}>
                   {isRtl ? 'لا توجد حالات في هذا التصنيف.' : 'No cases in this category.'}
                 </div>
               )}

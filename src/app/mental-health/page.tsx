@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { PageNavigation } from '@/components/shared/page-navigation';
 import { PageAIChatbot } from '@/components/shared/page-ai-chatbot';
+import { useRTL } from '@/components/shared/rtl-provider';
 
 const timelineData = [
   { day: 1, title: 'Understanding Your Baseline', titleAr: 'فهم حالتك الأساسية', desc: 'PHQ-9 self-assessment and mood baseline tracking using WHO-validated scales.', icon: '📊' },
@@ -22,22 +23,23 @@ const timelineData = [
 ];
 
 const crisisResources = [
-  { name: 'MoHP Mental Health & Addiction Hotline', nameAr: 'خط الصحة النفسية والإدمان (وزارة الصحة)', phone: '08008880700', desc: 'Free 24/7 crisis support', icon: '🆘', color: '#ef4444' },
-  { name: 'Behman Hospital Helpline', nameAr: 'خط مساعدة مستشفى بهمان', phone: '02-25218888', desc: 'Psychiatric emergency services', icon: '🏥', color: '#f59e0b' },
-  { name: 'Abbasseya Mental Health Hospital (direct)', nameAr: 'مستشفى العباسية للصحة النفسية (مباشر)', phone: '01154898506', desc: 'Emotional support and crisis intervention', icon: '💚', color: '#10b981' },
+  { name: 'MoHP Mental Health & Addiction Hotline', nameAr: 'خط الصحة النفسية والإدمان (وزارة الصحة)', phone: '08008880700', desc: 'Free 24/7 crisis support', descAr: 'دعم مجاني للأزمات على مدار الساعة', icon: '🆘', color: '#ef4444' },
+  { name: 'Behman Hospital Helpline', nameAr: 'خط مساعدة مستشفى بهمان', phone: '02-25218888', desc: 'Psychiatric emergency services', descAr: 'خدمات الطوارئ النفسية', icon: '🏥', color: '#f59e0b' },
+  { name: 'Abbasseya Mental Health Hospital (direct)', nameAr: 'مستشفى العباسية للصحة النفسية (مباشر)', phone: '01154898506', desc: 'Emotional support and crisis intervention', descAr: 'دعم نفسي وتدخّل وقت الأزمات', icon: '💚', color: '#10b981' },
 ];
 
 export default function MentalHealthPage() {
+  const { isRTL } = useRTL();
   const [activeDay, setActiveDay] = useState(0);
   const [assessmentStarted, setAssessmentStarted] = useState(false);
   const [phqScore, setPhqScore] = useState<number | null>(null);
 
   const phqQuestions = [
-    'Little interest or pleasure in doing things',
-    'Feeling down, depressed, or hopeless',
-    'Trouble falling or staying asleep',
-    'Feeling tired or having little energy',
-    'Poor appetite or overeating',
+    { en: 'Little interest or pleasure in doing things', ar: 'قلة الاهتمام أو المتعة في عمل الأشياء' },
+    { en: 'Feeling down, depressed, or hopeless', ar: 'الإحساس بالإحباط أو الاكتئاب أو فقدان الأمل' },
+    { en: 'Trouble falling or staying asleep', ar: 'صعوبة في النوم أو الاستمرار فيه' },
+    { en: 'Feeling tired or having little energy', ar: 'الإحساس بالتعب أو قلة الطاقة' },
+    { en: 'Poor appetite or overeating', ar: 'ضعف الشهية أو الإفراط في الأكل' },
   ];
 
   const [answers, setAnswers] = useState<number[]>(new Array(5).fill(-1));
@@ -52,10 +54,10 @@ export default function MentalHealthPage() {
   };
 
   const getScoreLabel = (score: number) => {
-    if (score <= 4) return { label: 'Minimal', color: '#10b981' };
-    if (score <= 9) return { label: 'Mild', color: '#f59e0b' };
-    if (score <= 14) return { label: 'Moderate', color: '#f97316' };
-    return { label: 'Severe — Please seek help', color: '#ef4444' };
+    if (score <= 4) return { label: isRTL ? 'بسيط' : 'Minimal', color: '#10b981' };
+    if (score <= 9) return { label: isRTL ? 'خفيف' : 'Mild', color: '#f59e0b' };
+    if (score <= 14) return { label: isRTL ? 'متوسط' : 'Moderate', color: '#f97316' };
+    return { label: isRTL ? 'شديد — من فضلك اطلب المساعدة' : 'Severe — Please seek help', color: '#ef4444' };
   };
 
   return (
@@ -69,49 +71,49 @@ export default function MentalHealthPage() {
         .mh-timeline-dot:hover { transform: scale(1.4) !important; }
         .mh-crisis-card:hover { transform: translateY(-4px) !important; }
         .mh-link-card:hover { transform: translateY(-4px) !important; box-shadow: 0 12px 40px rgba(0,0,0,0.3) !important; }
-        .phq-opt:hover { background: rgba(20,184,166,0.15) !important; }
+        .phq-opt:hover { background: var(--accent-mentalhealth-surface) !important; }
       `}</style>
-      <div style={{
-        minHeight: '100vh', background: '#020617', fontFamily: "'Inter', sans-serif",
-        color: '#e2e8f0', position: 'relative', overflow: 'hidden',
+      <div dir={isRTL ? 'rtl' : 'ltr'} style={{
+        minHeight: '100vh', background: 'var(--bg-page)', fontFamily: "'Inter', sans-serif",
+        color: 'var(--text-primary)', position: 'relative', overflow: 'hidden',
       }}>
         {/* Teal ambient glow */}
-        <div style={{ position: 'fixed', top: '-150px', right: '-150px', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(20,184,166,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
-        <div style={{ position: 'fixed', bottom: '-150px', left: '-150px', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(16,185,129,0.05) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'fixed', top: '-150px', right: '-150px', width: '500px', height: '500px', background: 'radial-gradient(circle, var(--accent-mentalhealth-glow) 0%, transparent 70%)', opacity: 0.35, pointerEvents: 'none' }} />
+        <div style={{ position: 'fixed', bottom: '-150px', left: '-150px', width: '500px', height: '500px', background: 'radial-gradient(circle, var(--accent-mentalhealth-glow) 0%, transparent 70%)', opacity: 0.25, pointerEvents: 'none' }} />
 
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 24px', position: 'relative', zIndex: 2 }}>
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '48px', animation: 'fadeInUp 0.5s ease' }}>
             <div style={{ display: 'inline-block', animation: 'heartbeat 2s infinite', fontSize: '48px', marginBottom: '12px' }}>💚</div>
-            <div style={{ padding: '5px 16px', borderRadius: '16px', marginBottom: '16px', background: 'rgba(20,184,166,0.15)', border: '1px solid rgba(20,184,166,0.3)', fontSize: '12px', fontWeight: 600, color: '#2dd4bf', letterSpacing: '2px', textTransform: 'uppercase', display: 'inline-block' }}>
-              Engine 02 — The Understanding Engine
+            <div style={{ padding: '5px 16px', borderRadius: '16px', marginBottom: '16px', background: 'var(--accent-mentalhealth-surface)', border: '1px solid var(--accent-mentalhealth)', fontSize: '12px', fontWeight: 600, color: 'var(--accent-mentalhealth)', letterSpacing: '2px', textTransform: 'uppercase', display: 'inline-block' }}>
+              {isRTL ? 'المحرك ٠٢ — محرك الفهم' : 'Engine 02 — The Understanding Engine'}
             </div>
-            <h1 style={{ fontSize: '48px', fontWeight: 900, margin: '0 0 8px 0', background: 'linear-gradient(135deg, #14b8a6, #10b981, #34d399)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Mental Health Hub
+            <h1 style={{ fontSize: '48px', fontWeight: 900, margin: '0 0 8px 0', color: 'var(--accent-mentalhealth)' }}>
+              {isRTL ? 'مركز الصحة النفسية' : 'Mental Health Hub'}
             </h1>
-            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '22px', color: '#94a3b8', direction: 'rtl' as const, margin: '0 0 8px 0' }}>
+            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '22px', color: 'var(--text-secondary)', direction: 'rtl' as const, margin: '0 0 8px 0' }}>
               مركز الصحة النفسية — لأن صحتك النفسية أولوية
             </p>
-            <p style={{ color: '#64748b', fontSize: '14px', maxWidth: '550px', margin: '0 auto' }}>
-              Evidence-based mental health support rooted in WHO guidelines, adapted for Egyptian cultural context. You are not alone.
+            <p style={{ color: 'var(--text-muted)', fontSize: '14px', maxWidth: '550px', margin: '0 auto' }}>
+              {isRTL ? 'دعم نفسي قائم على الأدلة ومتجذّر في إرشادات منظمة الصحة العالمية، ومُكيَّف مع السياق الثقافي المصري. إنت مش لوحدك.' : 'Evidence-based mental health support rooted in WHO guidelines, adapted for Egyptian cultural context. You are not alone.'}
             </p>
-            <Link href="/explore" style={{ display: 'inline-block', marginTop: '12px', color: '#2dd4bf', fontSize: '14px', textDecoration: 'none' }}>← Back to Explore</Link>
+            <Link href="/explore" style={{ display: 'inline-block', marginTop: '12px', color: 'var(--accent-mentalhealth)', fontSize: '14px', textDecoration: 'none' }}>{isRTL ? 'الرجوع إلى الاستكشاف →' : '← Back to Explore'}</Link>
           </div>
 
           {/* Stigma-Breaking Message (Arabic) */}
           <div style={{
-            background: 'rgba(20,184,166,0.08)', backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(20,184,166,0.2)', borderRadius: '16px',
+            background: 'var(--accent-mentalhealth-surface)', backdropFilter: 'blur(12px)',
+            border: '1px solid var(--accent-mentalhealth)', borderRadius: '16px',
             padding: '28px', marginBottom: '40px', textAlign: 'center',
             animation: 'fadeInUp 0.6s ease',
           }}>
-            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '24px', fontWeight: 700, color: '#2dd4bf', direction: 'rtl' as const, margin: '0 0 8px 0', lineHeight: 1.8 }}>
+            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '24px', fontWeight: 700, color: 'var(--accent-mentalhealth)', direction: 'rtl' as const, margin: '0 0 8px 0', lineHeight: 1.8 }}>
               الاعتراف بالألم النفسي ليس ضعفًا — بل هو أول خطوة نحو القوة الحقيقية
             </p>
-            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '15px', color: '#94a3b8', direction: 'rtl' as const, margin: '0 0 8px 0' }}>
+            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '15px', color: 'var(--text-secondary)', direction: 'rtl' as const, margin: '0 0 8px 0' }}>
               في مصر، يعاني واحد من كل أربعة أشخاص من اضطراب نفسي خلال حياتهم (منظمة الصحة العالمية، ٢٠٢٣). لست وحدك.
             </p>
-            <p style={{ fontSize: '14px', color: '#64748b', fontStyle: 'italic' }}>
+            <p style={{ fontSize: '14px', color: 'var(--text-muted)', fontStyle: 'italic' }}>
               &ldquo;Acknowledging mental pain is not weakness — it is the first step toward true strength.&rdquo;
             </p>
           </div>
@@ -119,20 +121,20 @@ export default function MentalHealthPage() {
           {/* Quick Links */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '40px' }}>
             {[
-              { href: '/mental-health/depression', icon: '🌧️', title: 'Depression Program', titleAr: 'برنامج الاكتئاب', desc: '14-day structured CBT-based intervention', color: '#14b8a6' },
-              { href: '/drug-checker', icon: '💊', title: 'Drug Interaction Checker', titleAr: 'فاحص تفاعل الأدوية', desc: 'Check psychiatric medication interactions', color: '#10b981' },
+              { href: '/mental-health/depression', icon: '🌧️', title: 'Depression Program', titleAr: 'برنامج الاكتئاب', desc: '14-day structured CBT-based intervention', descAr: 'برنامج منظّم لمدة ١٤ يومًا قائم على العلاج السلوكي المعرفي', color: '#14b8a6' },
+              { href: '/drug-checker', icon: '💊', title: 'Drug Interaction Checker', titleAr: 'فاحص تفاعل الأدوية', desc: 'Check psychiatric medication interactions', descAr: 'افحص تفاعلات أدوية الأمراض النفسية', color: '#10b981' },
             ].map(card => (
               <Link key={card.href} href={card.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="mh-link-card" style={{
-                  background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
+                  background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
                   border: `1px solid ${card.color}30`, borderRadius: '16px', padding: '24px',
                   transition: 'all 0.3s', cursor: 'pointer',
                 }}>
                   <div style={{ fontSize: '36px', marginBottom: '12px' }}>{card.icon}</div>
-                  <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f1f5f9', margin: '0 0 4px 0' }}>{card.title}</h3>
+                  <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--text-primary)', margin: '0 0 4px 0' }}>{isRTL ? card.titleAr : card.title}</h3>
                   <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '14px', color: card.color, direction: 'rtl' as const, margin: '0 0 8px 0' }}>{card.titleAr}</p>
-                  <p style={{ fontSize: '13px', color: '#94a3b8', margin: 0 }}>{card.desc}</p>
-                  <div style={{ marginTop: '12px', fontSize: '13px', color: card.color, fontWeight: 600 }}>Open →</div>
+                  <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0 }}>{isRTL ? card.descAr : card.desc}</p>
+                  <div style={{ marginTop: '12px', fontSize: '13px', color: card.color, fontWeight: 600 }}>{isRTL ? 'افتح →' : 'Open →'}</div>
                 </div>
               </Link>
             ))}
@@ -140,15 +142,15 @@ export default function MentalHealthPage() {
 
           {/* Crisis Resources */}
           <div style={{
-            background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(239,68,68,0.2)', borderRadius: '16px',
+            background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
+            border: '1px solid var(--accent-red)', borderRadius: '16px',
             padding: '28px', marginBottom: '40px', animation: 'fadeInUp 0.7s ease',
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
               <span style={{ fontSize: '24px', animation: 'breathe 3s infinite' }}>🆘</span>
               <div>
-                <h2 style={{ fontSize: '20px', fontWeight: 700, margin: 0, color: '#f1f5f9' }}>Crisis Resources — Egypt</h2>
-                <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '14px', color: '#94a3b8', margin: 0, direction: 'rtl' as const }}>موارد الأزمات — مصر</p>
+                <h2 style={{ fontSize: '20px', fontWeight: 700, margin: 0, color: 'var(--text-primary)' }}>{isRTL ? 'موارد الأزمات — مصر' : 'Crisis Resources — Egypt'}</h2>
+                <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '14px', color: 'var(--text-secondary)', margin: 0, direction: 'rtl' as const }}>موارد الأزمات — مصر</p>
               </div>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
@@ -161,14 +163,14 @@ export default function MentalHealthPage() {
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
                     <span style={{ fontSize: '24px' }}>{r.icon}</span>
                     <div>
-                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#f1f5f9' }}>{r.name}</div>
-                      <div style={{ fontFamily: "'Cairo', sans-serif", fontSize: '12px', color: '#94a3b8', direction: 'rtl' as const }}>{r.nameAr}</div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-primary)' }}>{isRTL ? r.nameAr : r.name}</div>
+                      <div style={{ fontFamily: "'Cairo', sans-serif", fontSize: '12px', color: 'var(--text-secondary)', direction: 'rtl' as const }}>{r.nameAr}</div>
                     </div>
                   </div>
                   <div style={{ fontSize: '22px', fontWeight: 900, color: r.color, fontFamily: 'monospace', marginBottom: '4px' }}>
                     📞 {r.phone}
                   </div>
-                  <div style={{ fontSize: '12px', color: '#64748b' }}>{r.desc}</div>
+                  <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{isRTL ? r.descAr : r.desc}</div>
                 </div>
               ))}
             </div>
@@ -176,16 +178,16 @@ export default function MentalHealthPage() {
 
           {/* 14-Day Timeline */}
           <div style={{
-            background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(20,184,166,0.2)', borderRadius: '16px',
+            background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
+            border: '1px solid var(--accent-mentalhealth)', borderRadius: '16px',
             padding: '28px', marginBottom: '40px', animation: 'fadeInUp 0.8s ease',
           }}>
-            <h2 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 4px 0', color: '#f1f5f9' }}>📅 14-Day Wellness Program</h2>
-            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '14px', color: '#64748b', margin: '0 0 24px 0', direction: 'rtl' as const }}>برنامج العافية لمدة ١٤ يومًا</p>
-            
+            <h2 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 4px 0', color: 'var(--text-primary)' }}>{isRTL ? '📅 برنامج العافية لمدة ١٤ يومًا' : '📅 14-Day Wellness Program'}</h2>
+            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '14px', color: 'var(--text-muted)', margin: '0 0 24px 0', direction: 'rtl' as const }}>برنامج العافية لمدة ١٤ يومًا</p>
+
             {/* Timeline dots */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', position: 'relative' }}>
-              <div style={{ position: 'absolute', top: '50%', left: '12px', right: '12px', height: '2px', background: 'rgba(20,184,166,0.2)', transform: 'translateY(-50%)' }} />
+              <div style={{ position: 'absolute', top: '50%', left: '12px', right: '12px', height: '2px', background: 'var(--border-secondary)', transform: 'translateY(-50%)' }} />
               {timelineData.map((d, i) => (
                 <div
                   key={i}
@@ -193,10 +195,10 @@ export default function MentalHealthPage() {
                   onClick={() => setActiveDay(i)}
                   style={{
                     width: '28px', height: '28px', borderRadius: '50%', cursor: 'pointer',
-                    background: activeDay === i ? '#14b8a6' : i < activeDay ? 'rgba(20,184,166,0.4)' : 'rgba(30,41,59,0.8)',
-                    border: `2px solid ${activeDay === i ? '#2dd4bf' : 'rgba(20,184,166,0.3)'}`,
+                    background: activeDay === i ? 'var(--accent-mentalhealth)' : i < activeDay ? 'var(--accent-mentalhealth-surface)' : 'var(--bg-elevated)',
+                    border: `2px solid ${activeDay === i ? 'var(--accent-mentalhealth)' : 'var(--border-secondary)'}`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '10px', fontWeight: 700, color: activeDay === i ? '#020617' : '#94a3b8',
+                    fontSize: '10px', fontWeight: 700, color: activeDay === i ? 'var(--text-inverse)' : 'var(--text-secondary)',
                     position: 'relative', zIndex: 2, transition: 'all 0.2s',
                   }}
                 >
@@ -208,38 +210,38 @@ export default function MentalHealthPage() {
             {/* Active Day Content */}
             <div style={{
               padding: '24px', borderRadius: '12px',
-              background: 'rgba(20,184,166,0.06)', border: '1px solid rgba(20,184,166,0.15)',
+              background: 'var(--accent-mentalhealth-surface)', border: '1px solid var(--accent-mentalhealth)',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
                 <span style={{ fontSize: '32px' }}>{timelineData[activeDay].icon}</span>
                 <div>
-                  <div style={{ fontSize: '12px', color: '#2dd4bf', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>
-                    Day {timelineData[activeDay].day} of 14
+                  <div style={{ fontSize: '12px', color: 'var(--accent-mentalhealth)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>
+                    {isRTL ? `اليوم ${timelineData[activeDay].day} من ١٤` : `Day ${timelineData[activeDay].day} of 14`}
                   </div>
-                  <div style={{ fontSize: '20px', fontWeight: 700, color: '#f1f5f9' }}>{timelineData[activeDay].title}</div>
-                  <div style={{ fontFamily: "'Cairo', sans-serif", fontSize: '15px', color: '#2dd4bf', direction: 'rtl' as const }}>{timelineData[activeDay].titleAr}</div>
+                  <div style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-primary)' }}>{isRTL ? timelineData[activeDay].titleAr : timelineData[activeDay].title}</div>
+                  <div style={{ fontFamily: "'Cairo', sans-serif", fontSize: '15px', color: 'var(--accent-mentalhealth)', direction: 'rtl' as const }}>{timelineData[activeDay].titleAr}</div>
                 </div>
               </div>
-              <p style={{ fontSize: '14px', color: '#94a3b8', lineHeight: 1.7, margin: '0 0 16px 0' }}>{timelineData[activeDay].desc}</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: 1.7, margin: '0 0 16px 0' }}>{timelineData[activeDay].desc}</p>
               
               {/* ACTION BUTTONS — Previously missing, causing "no way to enter" */}
               <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '16px' }}>
                 <Link href="/mental-health/depression" style={{
                   display: 'inline-flex', alignItems: 'center', gap: '8px',
                   padding: '12px 24px', borderRadius: '12px', border: 'none',
-                  background: 'linear-gradient(135deg, #14b8a6, #10b981)',
-                  color: '#fff', fontSize: '14px', fontWeight: 700, textDecoration: 'none',
+                  background: 'var(--accent-mentalhealth)',
+                  color: 'var(--text-inverse)', fontSize: '14px', fontWeight: 700, textDecoration: 'none',
                   transition: 'all 0.3s',
                 }}>
-                  ▶ Start This Day
+                  {isRTL ? '▶ ابدأ هذا اليوم' : '▶ Start This Day'}
                 </Link>
                 <Link href="/mental-health/depression" style={{
                   display: 'inline-flex', alignItems: 'center', gap: '8px',
                   padding: '12px 24px', borderRadius: '12px',
-                  border: '1px solid rgba(20,184,166,0.3)', background: 'transparent',
-                  color: '#2dd4bf', fontSize: '13px', fontWeight: 600, textDecoration: 'none',
+                  border: '1px solid var(--accent-mentalhealth)', background: 'transparent',
+                  color: 'var(--accent-mentalhealth)', fontSize: '13px', fontWeight: 600, textDecoration: 'none',
                 }}>
-                  📋 Full Depression Program →
+                  {isRTL ? '📋 برنامج الاكتئاب الكامل →' : '📋 Full Depression Program →'}
                 </Link>
               </div>
 
@@ -250,22 +252,22 @@ export default function MentalHealthPage() {
                   disabled={activeDay === 0}
                   style={{
                     padding: '8px 16px', borderRadius: '8px', cursor: activeDay === 0 ? 'default' : 'pointer',
-                    border: '1px solid rgba(100,116,139,0.2)', background: 'transparent',
-                    color: '#94a3b8', fontSize: '13px', opacity: activeDay === 0 ? 0.4 : 1,
+                    border: '1px solid var(--border-secondary)', background: 'transparent',
+                    color: 'var(--text-secondary)', fontSize: '13px', opacity: activeDay === 0 ? 0.4 : 1,
                   }}
                 >
-                  ← Previous Day
+                  {isRTL ? 'اليوم السابق →' : '← Previous Day'}
                 </button>
                 <button
                   onClick={() => setActiveDay(Math.min(13, activeDay + 1))}
                   disabled={activeDay === 13}
                   style={{
                     padding: '8px 16px', borderRadius: '8px', cursor: activeDay === 13 ? 'default' : 'pointer',
-                    border: 'none', background: 'rgba(20,184,166,0.15)',
-                    color: '#2dd4bf', fontSize: '13px', fontWeight: 600, opacity: activeDay === 13 ? 0.4 : 1,
+                    border: 'none', background: 'var(--accent-mentalhealth-surface)',
+                    color: 'var(--accent-mentalhealth)', fontSize: '13px', fontWeight: 600, opacity: activeDay === 13 ? 0.4 : 1,
                   }}
                 >
-                  Next Day →
+                  {isRTL ? '← اليوم التالي' : 'Next Day →'}
                 </button>
               </div>
             </div>
@@ -273,14 +275,14 @@ export default function MentalHealthPage() {
 
           {/* Self-Assessment */}
           <div style={{
-            background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(20,184,166,0.2)', borderRadius: '16px',
+            background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
+            border: '1px solid var(--accent-mentalhealth)', borderRadius: '16px',
             padding: '28px', animation: 'fadeInUp 0.9s ease',
           }}>
-            <h2 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 4px 0', color: '#f1f5f9' }}>📋 Quick Self-Assessment (PHQ-5)</h2>
-            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '14px', color: '#64748b', margin: '0 0 8px 0', direction: 'rtl' as const }}>تقييم ذاتي سريع</p>
-            <p style={{ fontSize: '13px', color: '#94a3b8', marginBottom: '20px' }}>
-              Based on the Patient Health Questionnaire (Kroenke, Spitzer & Williams, 2001). This is a screening tool, not a diagnosis.
+            <h2 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 4px 0', color: 'var(--text-primary)' }}>{isRTL ? '📋 تقييم ذاتي سريع (PHQ-5)' : '📋 Quick Self-Assessment (PHQ-5)'}</h2>
+            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '14px', color: 'var(--text-muted)', margin: '0 0 8px 0', direction: 'rtl' as const }}>تقييم ذاتي سريع</p>
+            <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '20px' }}>
+              {isRTL ? 'مبني على استبيان صحة المريض (Kroenke, Spitzer & Williams, 2001). ده أداة فحص مبدئي، مش تشخيص.' : 'Based on the Patient Health Questionnaire (Kroenke, Spitzer & Williams, 2001). This is a screening tool, not a diagnosis.'}
             </p>
 
             {!assessmentStarted ? (
@@ -289,38 +291,38 @@ export default function MentalHealthPage() {
                   onClick={() => setAssessmentStarted(true)}
                   style={{
                     padding: '14px 36px', borderRadius: '12px', border: 'none',
-                    background: 'linear-gradient(135deg, #14b8a6, #10b981)',
-                    color: '#fff', fontSize: '16px', fontWeight: 700, cursor: 'pointer',
+                    background: 'var(--accent-mentalhealth)',
+                    color: 'var(--text-inverse)', fontSize: '16px', fontWeight: 700, cursor: 'pointer',
                     transition: 'all 0.3s',
                   }}
                 >
-                  🩺 Begin Self-Assessment
+                  {isRTL ? '🩺 ابدأ التقييم الذاتي' : '🩺 Begin Self-Assessment'}
                 </button>
-                <p style={{ fontSize: '12px', color: '#64748b', marginTop: '12px' }}>Takes approximately 2 minutes • Completely private</p>
+                <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '12px' }}>{isRTL ? 'بياخد حوالي دقيقتين • خاص تمامًا' : 'Takes approximately 2 minutes • Completely private'}</p>
               </div>
             ) : (
               <div>
-                <p style={{ fontSize: '13px', color: '#64748b', marginBottom: '16px' }}>
-                  Over the last 2 weeks, how often have you been bothered by the following? (0 = Not at all, 3 = Nearly every day)
+                <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '16px' }}>
+                  {isRTL ? 'خلال الأسبوعين الماضيين، قد إيه ضايقتك الحاجات دي؟ (٠ = إطلاقًا، ٣ = تقريبًا كل يوم)' : 'Over the last 2 weeks, how often have you been bothered by the following? (0 = Not at all, 3 = Nearly every day)'}
                 </p>
                 {phqQuestions.map((q, qi) => (
                   <div key={qi} style={{ marginBottom: '16px' }}>
-                    <div style={{ fontSize: '14px', color: '#e2e8f0', marginBottom: '8px' }}>{qi + 1}. {q}</div>
+                    <div style={{ fontSize: '14px', color: 'var(--text-primary)', marginBottom: '8px' }}>{qi + 1}. {isRTL ? q.ar : q.en}</div>
                     <div style={{ display: 'flex', gap: '8px' }}>
-                      {[{ v: 0, l: 'Not at all' }, { v: 1, l: 'Several days' }, { v: 2, l: 'More than half' }, { v: 3, l: 'Nearly every day' }].map(opt => (
+                      {[{ v: 0, l: 'Not at all', lAr: 'إطلاقًا' }, { v: 1, l: 'Several days', lAr: 'عدة أيام' }, { v: 2, l: 'More than half', lAr: 'أكتر من النص' }, { v: 3, l: 'Nearly every day', lAr: 'تقريبًا كل يوم' }].map(opt => (
                         <button
                           key={opt.v}
                           className="phq-opt"
                           onClick={() => handleAnswer(qi, opt.v)}
                           style={{
                             flex: 1, padding: '8px 4px', borderRadius: '8px',
-                            border: `1px solid ${answers[qi] === opt.v ? '#14b8a6' : 'rgba(100,116,139,0.2)'}`,
-                            background: answers[qi] === opt.v ? 'rgba(20,184,166,0.15)' : 'transparent',
-                            color: answers[qi] === opt.v ? '#2dd4bf' : '#94a3b8',
+                            border: `1px solid ${answers[qi] === opt.v ? 'var(--accent-mentalhealth)' : 'var(--border-secondary)'}`,
+                            background: answers[qi] === opt.v ? 'var(--accent-mentalhealth-surface)' : 'transparent',
+                            color: answers[qi] === opt.v ? 'var(--accent-mentalhealth)' : 'var(--text-secondary)',
                             fontSize: '11px', cursor: 'pointer', transition: 'all 0.2s',
                           }}
                         >
-                          {opt.l}
+                          {isRTL ? opt.lAr : opt.l}
                         </button>
                       ))}
                     </div>
@@ -335,8 +337,8 @@ export default function MentalHealthPage() {
                   }}>
                     <div style={{ fontSize: '36px', fontWeight: 900, color: getScoreLabel(phqScore).color }}>{phqScore}/15</div>
                     <div style={{ fontSize: '16px', fontWeight: 700, color: getScoreLabel(phqScore).color }}>{getScoreLabel(phqScore).label}</div>
-                    <p style={{ fontSize: '12px', color: '#64748b', marginTop: '8px' }}>
-                      This is a screening tool only. For a professional assessment, contact the Egyptian Mental Health Hotline: 08008880700
+                    <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '8px' }}>
+                      {isRTL ? 'ده أداة فحص مبدئي بس. للتقييم المتخصص، اتصل بخط الصحة النفسية المصري: 08008880700' : 'This is a screening tool only. For a professional assessment, contact the Egyptian Mental Health Hotline: 08008880700'}
                     </p>
                   </div>
                 )}

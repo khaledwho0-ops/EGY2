@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { PageNavigation } from '@/components/shared/page-navigation';
+import { useRTL } from '@/components/shared/rtl-provider';
 
 const questions = [
   {
@@ -78,6 +79,7 @@ const questions = [
 ];
 
 export default function DefenseTestPage() {
+  const { isRTL } = useRTL();
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
@@ -140,25 +142,25 @@ export default function DefenseTestPage() {
         @keyframes dtFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes dtPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
         @keyframes dtShake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
-        .dt-option:hover { transform: translateX(4px); background: rgba(255,255,255,0.06) !important; }
-        .dt-option-correct { border-color: #10b981 !important; background: rgba(16,185,129,0.1) !important; }
-        .dt-option-wrong { border-color: #ef4444 !important; background: rgba(239,68,68,0.1) !important; animation: dtShake 0.4s ease-out; }
+        .dt-option:hover { transform: translateX(4px); background: var(--bg-secondary) !important; }
+        .dt-option-correct { border-color: var(--accent-emerald) !important; background: var(--accent-mentalhealth-surface) !important; }
+        .dt-option-wrong { border-color: var(--accent-red) !important; background: rgba(239,68,68,0.1) !important; animation: dtShake 0.4s ease-out; }
       `}</style>
-      <main style={{ minHeight: '100vh', background: '#020617', color: '#e2e8f0', fontFamily: 'Inter, sans-serif', padding: '40px 24px 80px' }}>
+      <main dir={isRTL ? 'rtl' : 'ltr'} style={{ minHeight: '100vh', background: 'var(--bg-page)', color: 'var(--text-primary)', fontFamily: 'Inter, sans-serif', padding: '40px 24px 80px' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           {/* Header */}
           <header style={{ textAlign: 'center', marginBottom: 40, animation: 'dtFadeIn 0.6s ease-out' }}>
             <div style={{
               display: 'inline-flex', width: 80, height: 80, borderRadius: 24, fontSize: 40,
               alignItems: 'center', justifyContent: 'center', marginBottom: 16,
-              background: 'linear-gradient(135deg, #ef4444, #f59e0b)',
+              background: 'linear-gradient(135deg, var(--accent-red), var(--accent-amber))',
               boxShadow: '0 0 40px rgba(239,68,68,0.4)',
             }}>🛡️</div>
-            <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 900, margin: '0 0 8px', background: 'linear-gradient(135deg, #ef4444, #f59e0b, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Defense Readiness Test
+            <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 900, margin: '0 0 8px', background: 'linear-gradient(135deg, var(--accent-red), var(--accent-amber), var(--accent-emerald))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              {isRTL ? 'اختبار الجاهزية الدفاعية' : 'Defense Readiness Test'}
             </h1>
-            <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '1.1rem', color: '#94a3b8', direction: 'rtl', fontWeight: 700 }}>
-              اختبار الجاهزية الدفاعية
+            <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '1.1rem', color: 'var(--text-muted)', direction: isRTL ? 'ltr' : 'rtl', fontWeight: 700 }}>
+              {isRTL ? 'Defense Readiness Test' : 'اختبار الجاهزية الدفاعية'}
             </p>
           </header>
 
@@ -167,11 +169,11 @@ export default function DefenseTestPage() {
               {/* Progress Bar */}
               <div style={{ marginBottom: 24, animation: 'dtFadeIn 0.4s ease-out' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-                  <span style={{ fontSize: '0.8rem', color: '#94a3b8', fontWeight: 700 }}>Question {currentQ + 1} / {questions.length}</span>
-                  <span style={{ fontSize: '0.8rem', color: '#94a3b8', fontWeight: 700 }}>Score: {score}/{currentQ + (answered ? 1 : 0)}</span>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 700 }}>{isRTL ? 'سؤال' : 'Question'} {currentQ + 1} / {questions.length}</span>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 700 }}>{isRTL ? 'النتيجة' : 'Score'}: {score}/{currentQ + (answered ? 1 : 0)}</span>
                 </div>
-                <div style={{ height: 8, borderRadius: 4, background: 'rgba(255,255,255,0.06)' }}>
-                  <div style={{ height: '100%', borderRadius: 4, width: `${((currentQ + (answered ? 1 : 0)) / questions.length) * 100}%`, background: 'linear-gradient(90deg, #3b82f6, #8b5cf6)', transition: 'width 0.5s' }} />
+                <div style={{ height: 8, borderRadius: 4, background: 'var(--bg-secondary)' }}>
+                  <div style={{ height: '100%', borderRadius: 4, width: `${((currentQ + (answered ? 1 : 0)) / questions.length) * 100}%`, background: 'linear-gradient(90deg, var(--accent-blue), var(--accent-indigo))', transition: 'width 0.5s' }} />
                 </div>
               </div>
 
@@ -182,9 +184,9 @@ export default function DefenseTestPage() {
                 <div style={{
                   width: 64, height: 64, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
                   background: timer <= 10 ? 'rgba(239,68,68,0.15)' : 'rgba(59,130,246,0.15)',
-                  border: `2px solid ${timer <= 10 ? '#ef4444' : timer <= 20 ? '#f59e0b' : '#3b82f6'}`,
+                  border: `2px solid ${timer <= 10 ? 'var(--accent-red)' : timer <= 20 ? 'var(--accent-amber)' : 'var(--accent-blue)'}`,
                   fontSize: '1.3rem', fontWeight: 900,
-                  color: timer <= 10 ? '#ef4444' : timer <= 20 ? '#f59e0b' : '#3b82f6',
+                  color: timer <= 10 ? 'var(--accent-red)' : timer <= 20 ? 'var(--accent-amber)' : 'var(--accent-blue)',
                   animation: timer <= 5 && !answered ? 'dtPulse 0.5s ease-in-out infinite' : 'none',
                   transition: 'all 0.3s',
                 }}>
@@ -194,12 +196,12 @@ export default function DefenseTestPage() {
 
               {/* Question Card */}
               <div style={{
-                background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)', borderRadius: 20,
-                border: '1px solid rgba(255,255,255,0.06)', padding: 32, marginBottom: 24,
+                background: 'var(--bg-card)', backdropFilter: 'blur(12px)', borderRadius: 20,
+                border: '1px solid var(--border-primary)', padding: 32, marginBottom: 24,
                 animation: 'dtFadeIn 0.5s ease-out',
               }}>
-                <h2 style={{ fontSize: '1.15rem', fontWeight: 700, lineHeight: 1.6, marginBottom: 8 }}>{q.q}</h2>
-                <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '0.9rem', color: '#94a3b8', direction: 'rtl', lineHeight: 1.7 }}>{q.qAr}</p>
+                <h2 style={{ fontSize: '1.15rem', fontWeight: 700, lineHeight: 1.6, marginBottom: 8, fontFamily: isRTL ? 'Cairo, sans-serif' : 'Inter, sans-serif', direction: isRTL ? 'rtl' : 'ltr', textAlign: isRTL ? 'right' : 'left' }}>{isRTL ? q.qAr : q.q}</h2>
+                <p style={{ fontFamily: isRTL ? 'Inter, sans-serif' : 'Cairo, sans-serif', fontSize: '0.9rem', color: 'var(--text-muted)', direction: isRTL ? 'ltr' : 'rtl', lineHeight: 1.7, textAlign: isRTL ? 'left' : 'right' }}>{isRTL ? q.q : q.qAr}</p>
               </div>
 
               {/* Options */}
@@ -215,16 +217,16 @@ export default function DefenseTestPage() {
                       onClick={() => selectAnswer(i)}
                       disabled={answered}
                       style={{
-                        padding: '16px 20px', borderRadius: 14, textAlign: 'left', cursor: answered ? 'default' : 'pointer',
-                        background: 'rgba(15,23,42,0.6)', border: '1px solid rgba(255,255,255,0.08)',
-                        color: '#e2e8f0', fontSize: '0.9rem', fontWeight: 600, transition: 'all 0.3s',
+                        padding: '16px 20px', borderRadius: 14, textAlign: isRTL ? 'right' : 'left', cursor: answered ? 'default' : 'pointer',
+                        background: 'var(--bg-elevated)', border: '1px solid var(--border-primary)',
+                        color: 'var(--text-primary)', fontSize: '0.9rem', fontWeight: 600, transition: 'all 0.3s',
                         display: 'flex', alignItems: 'center', gap: 12, fontFamily: 'Inter, sans-serif',
                       }}
                     >
                       <span style={{
                         width: 32, height: 32, borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        background: answered && i === q.correct ? 'rgba(16,185,129,0.2)' : answered && i === selected ? 'rgba(239,68,68,0.2)' : 'rgba(255,255,255,0.06)',
-                        color: answered && i === q.correct ? '#10b981' : answered && i === selected ? '#ef4444' : '#94a3b8',
+                        background: answered && i === q.correct ? 'var(--accent-mentalhealth-surface)' : answered && i === selected ? 'rgba(239,68,68,0.2)' : 'var(--bg-secondary)',
+                        color: answered && i === q.correct ? 'var(--accent-emerald)' : answered && i === selected ? 'var(--accent-red)' : 'var(--text-muted)',
                         fontWeight: 800, fontSize: '0.8rem', flexShrink: 0,
                       }}>
                         {answered && i === q.correct ? '✓' : answered && i === selected ? '✗' : String.fromCharCode(65 + i)}
@@ -242,10 +244,10 @@ export default function DefenseTestPage() {
                   border: `1px solid ${selected === q.correct ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'}`,
                   borderRadius: 16, padding: 24, marginBottom: 24, animation: 'dtFadeIn 0.4s ease-out',
                 }}>
-                  <div style={{ fontSize: '0.85rem', fontWeight: 800, color: selected === q.correct ? '#10b981' : '#ef4444', marginBottom: 8 }}>
-                    {selected === q.correct ? '✅ Correct!' : selected === null ? '⏰ Time\'s up!' : '❌ Incorrect'}
+                  <div style={{ fontSize: '0.85rem', fontWeight: 800, color: selected === q.correct ? 'var(--accent-emerald)' : 'var(--accent-red)', marginBottom: 8 }}>
+                    {selected === q.correct ? (isRTL ? '✅ إجابة صح!' : '✅ Correct!') : selected === null ? (isRTL ? '⏰ خلص الوقت!' : '⏰ Time\'s up!') : (isRTL ? '❌ إجابة غلط' : '❌ Incorrect')}
                   </div>
-                  <p style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: 1.7 }}>{q.explanation}</p>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.7 }}>{q.explanation}</p>
                 </div>
               )}
 
@@ -254,10 +256,10 @@ export default function DefenseTestPage() {
                 <div style={{ textAlign: 'center' }}>
                   <button onClick={nextQuestion} style={{
                     padding: '14px 40px', borderRadius: 12, border: 'none', fontWeight: 800, fontSize: '1rem',
-                    background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: '#fff', cursor: 'pointer',
+                    background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-indigo))', color: '#fff', cursor: 'pointer',
                     boxShadow: '0 0 20px rgba(59,130,246,0.3)', transition: 'all 0.3s',
                   }}>
-                    {currentQ + 1 >= questions.length ? '🏁 See Results' : 'Next Question →'}
+                    {currentQ + 1 >= questions.length ? (isRTL ? '🏁 شوف النتيجة' : '🏁 See Results') : (isRTL ? 'السؤال اللي بعده ←' : 'Next Question →')}
                   </button>
                 </div>
               )}
@@ -265,50 +267,54 @@ export default function DefenseTestPage() {
           ) : (
             /* Final Score Card */
             <div style={{
-              background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)', borderRadius: 24,
-              border: '1px solid rgba(255,255,255,0.06)', padding: 48, textAlign: 'center',
+              background: 'var(--bg-card)', backdropFilter: 'blur(12px)', borderRadius: 24,
+              border: '1px solid var(--border-primary)', padding: 48, textAlign: 'center',
               animation: 'dtFadeIn 0.6s ease-out',
             }}>
               <div style={{ fontSize: 64, marginBottom: 16 }}>{pct >= 80 ? '🏆' : pct >= 60 ? '🛡️' : pct >= 40 ? '📚' : '⚠️'}</div>
-              <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: 8, background: pct >= 80 ? 'linear-gradient(135deg, #10b981, #06b6d4)' : pct >= 60 ? 'linear-gradient(135deg, #3b82f6, #8b5cf6)' : 'linear-gradient(135deg, #f59e0b, #ef4444)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: 8, background: pct >= 80 ? 'linear-gradient(135deg, var(--accent-emerald), var(--accent-blue))' : pct >= 60 ? 'linear-gradient(135deg, var(--accent-blue), var(--accent-indigo))' : 'linear-gradient(135deg, var(--accent-amber), var(--accent-red))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 {score} / {questions.length}
               </h2>
-              <p style={{ fontSize: '1.3rem', fontWeight: 800, color: pct >= 80 ? '#10b981' : pct >= 60 ? '#3b82f6' : pct >= 40 ? '#f59e0b' : '#ef4444', marginBottom: 8 }}>
-                {pct >= 80 ? 'Cognitive Fortress — Elite Defender!' : pct >= 60 ? 'Solid Defense — Keep Sharpening!' : pct >= 40 ? 'Developing — More Training Needed' : 'Vulnerable — Start the Curriculum!'}
+              <p style={{ fontSize: '1.3rem', fontWeight: 800, color: pct >= 80 ? 'var(--accent-emerald)' : pct >= 60 ? 'var(--accent-blue)' : pct >= 40 ? 'var(--accent-amber)' : 'var(--accent-red)', marginBottom: 8 }}>
+                {isRTL
+                  ? (pct >= 80 ? 'حصن معرفي — مدافع من النخبة!' : pct >= 60 ? 'دفاع قوي — كمّل شحذ مهاراتك!' : pct >= 40 ? 'لسه بتطوّر — محتاج تدريب أكتر' : 'معرّض للخطر — ابدأ المنهج!')
+                  : (pct >= 80 ? 'Cognitive Fortress — Elite Defender!' : pct >= 60 ? 'Solid Defense — Keep Sharpening!' : pct >= 40 ? 'Developing — More Training Needed' : 'Vulnerable — Start the Curriculum!')}
               </p>
-              <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '1rem', color: '#94a3b8', direction: 'rtl', marginBottom: 32 }}>
-                {pct >= 80 ? 'حصن معرفي — مدافع نخبوي!' : pct >= 60 ? 'دفاع قوي — استمر في التطوير!' : pct >= 40 ? 'قيد التطوير — تحتاج المزيد من التدريب' : 'معرض للخطر — ابدأ المنهج!'}
+              <p style={{ fontFamily: isRTL ? 'Inter, sans-serif' : 'Cairo, sans-serif', fontSize: '1rem', color: 'var(--text-muted)', direction: isRTL ? 'ltr' : 'rtl', marginBottom: 32 }}>
+                {isRTL
+                  ? (pct >= 80 ? 'Cognitive Fortress — Elite Defender!' : pct >= 60 ? 'Solid Defense — Keep Sharpening!' : pct >= 40 ? 'Developing — More Training Needed' : 'Vulnerable — Start the Curriculum!')
+                  : (pct >= 80 ? 'حصن معرفي — مدافع نخبوي!' : pct >= 60 ? 'دفاع قوي — استمر في التطوير!' : pct >= 40 ? 'قيد التطوير — تحتاج المزيد من التدريب' : 'معرض للخطر — ابدأ المنهج!')}
               </p>
 
               {/* Score Breakdown */}
               <div style={{ display: 'flex', justifyContent: 'center', gap: 20, marginBottom: 32, flexWrap: 'wrap' }}>
                 <div style={{ padding: '12px 20px', borderRadius: 12, background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)' }}>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#10b981' }}>{score}</div>
-                  <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Correct</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--accent-emerald)' }}>{score}</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-caption)' }}>{isRTL ? 'صح' : 'Correct'}</div>
                 </div>
                 <div style={{ padding: '12px 20px', borderRadius: 12, background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)' }}>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#ef4444' }}>{questions.length - score}</div>
-                  <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Incorrect</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--accent-red)' }}>{questions.length - score}</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-caption)' }}>{isRTL ? 'غلط' : 'Incorrect'}</div>
                 </div>
                 <div style={{ padding: '12px 20px', borderRadius: 12, background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.2)' }}>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#3b82f6' }}>{pct}%</div>
-                  <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Score</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--accent-blue)' }}>{pct}%</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-caption)' }}>{isRTL ? 'النتيجة' : 'Score'}</div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
                 <button onClick={restart} style={{
                   padding: '14px 32px', borderRadius: 12, border: 'none', fontWeight: 800, fontSize: '0.95rem',
-                  background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: '#fff', cursor: 'pointer',
+                  background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-indigo))', color: '#fff', cursor: 'pointer',
                 }}>
-                  🔄 Retake Test
+                  {isRTL ? '🔄 أعِد الاختبار' : '🔄 Retake Test'}
                 </button>
                 <Link href="/explore" style={{
                   padding: '14px 32px', borderRadius: 12, fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none',
-                  background: 'rgba(255,255,255,0.05)', color: '#e2e8f0', border: '1px solid rgba(255,255,255,0.1)',
+                  background: 'var(--bg-elevated)', color: 'var(--text-primary)', border: '1px solid var(--border-primary)',
                   display: 'inline-block',
                 }}>
-                  📚 Explore More
+                  {isRTL ? '📚 استكشف أكتر' : '📚 Explore More'}
                 </Link>
               </div>
             </div>
@@ -316,8 +322,8 @@ export default function DefenseTestPage() {
 
           {/* Back Link */}
           <div style={{ textAlign: 'center', marginTop: 48 }}>
-            <Link href="/explore" style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
-              ← Back to Explore
+            <Link href="/explore" style={{ color: 'var(--text-caption)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+              {isRTL ? 'الرجوع للاستكشاف →' : '← Back to Explore'}
             </Link>
           </div>
 

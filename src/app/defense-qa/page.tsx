@@ -3,20 +3,22 @@ import { useState } from "react";
 import { ChevronDown, HelpCircle, BookOpen, Monitor, Sparkles, Award, ExternalLink, Shield, HeartPulse, Star } from "lucide-react";
 import { QA_ITEMS, THEORIES, VISUAL_MAP, UNIQUE_POINTS } from "@/data/defense-qa";
 import { PageNavigation } from '@/components/shared/page-navigation';
+import { useRTL } from "@/components/shared/rtl-provider";
 
 export default function DefenseQAPage() {
+  const { isRTL } = useRTL();
   const [openQ, setOpenQ] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<"qa"|"script"|"theories"|"map">("qa");
 
   const tabs = [
-    { id: "qa" as const, label: "الأسئلة والإجابات", icon: <HelpCircle size={16}/> },
-    { id: "script" as const, label: "سكريبت العرض", icon: <BookOpen size={16}/> },
-    { id: "theories" as const, label: "النظريات الثمانية", icon: <Sparkles size={16}/> },
-    { id: "map" as const, label: "خريطة العرض المرئي", icon: <Monitor size={16}/> },
+    { id: "qa" as const, label: isRTL ? "الأسئلة والإجابات" : "Q&A", icon: <HelpCircle size={16}/> },
+    { id: "script" as const, label: isRTL ? "سكريبت العرض" : "Presentation Script", icon: <BookOpen size={16}/> },
+    { id: "theories" as const, label: isRTL ? "النظريات الثمانية" : "The Eight Theories", icon: <Sparkles size={16}/> },
+    { id: "map" as const, label: isRTL ? "خريطة العرض المرئي" : "Visual Presentation Map", icon: <Monitor size={16}/> },
   ];
 
   return (
-    <div style={{ background: "var(--bg-primary)", minHeight: "100vh", direction: "rtl", fontFamily: "'Noto Kufi Arabic','Cairo',sans-serif" }}>
+    <div style={{ background: "var(--bg-page)", minHeight: "100vh", direction: isRTL ? "rtl" : "ltr", fontFamily: "'Noto Kufi Arabic','Cairo',sans-serif" }}>
       {/* Hero */}
       <section style={{ padding: "120px 0 60px", textAlign: "center", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: "30%", left: "20%", width: 400, height: 400, background: "var(--hero-orb-1)", pointerEvents: "none" }}/>
@@ -24,20 +26,22 @@ export default function DefenseQAPage() {
         <div className="container relative" style={{ zIndex: 1 }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 16px", borderRadius: 999, background: "var(--bg-secondary)", border: "1px solid var(--border-primary)", fontSize: 13, color: "var(--text-secondary)", marginBottom: 24 }}>
             <Award size={14} style={{ color: "var(--accent-cta)" }}/>
-            4 أجزاء | عربي كامل | تعليمات المقدّم مدمجة
+            {isRTL ? "4 أجزاء | عربي كامل | تعليمات المقدّم مدمجة" : "4 parts | Fully Arabic | Presenter notes included"}
           </div>
           <h1 className="text-display" style={{ marginBottom: 16 }}>
-            دفاع المشروع — <span className="text-gradient">الدليل الكامل</span>
+            {isRTL ? <>دفاع المشروع — <span className="text-gradient">الدليل الكامل</span></> : <>Project Defense — <span className="text-gradient">The Complete Guide</span></>}
           </h1>
           <p style={{ fontSize: 18, color: "var(--text-muted)", maxWidth: 600, margin: "0 auto 32px", lineHeight: 1.8 }}>
-            كل اللي محتاجه عشان تقدّم المشروع بثقة — الأسئلة المتوقعة، السكريبت الكامل، النظريات، وخريطة العرض
+            {isRTL
+              ? "كل اللي محتاجه عشان تقدّم المشروع بثقة — الأسئلة المتوقعة، السكريبت الكامل، النظريات، وخريطة العرض"
+              : "Everything you need to present the project with confidence — expected questions, the full script, the theories, and the presentation map"}
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="https://egyptian-awareness-library.vercel.app" target="_blank" rel="noopener" className="btn-secondary" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13 }}>
-              <ExternalLink size={14}/> النسخة المستقرة
+              <ExternalLink size={14}/> {isRTL ? "النسخة المستقرة" : "Stable Version"}
             </a>
             <a href="https://eal-v2-latest.vercel.app" target="_blank" rel="noopener" className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13 }}>
-              <ExternalLink size={14}/> النسخة V2 المحدّثة
+              <ExternalLink size={14}/> {isRTL ? "النسخة V2 المحدّثة" : "Updated V2 Version"}
             </a>
           </div>
         </div>
@@ -50,7 +54,7 @@ export default function DefenseQAPage() {
             <button key={t.id} onClick={() => setActiveTab(t.id)} style={{
               display: "flex", alignItems: "center", gap: 6, padding: "10px 20px", borderRadius: 10,
               background: activeTab === t.id ? "var(--accent-cta)" : "var(--bg-secondary)",
-              color: activeTab === t.id ? "#fff" : "var(--text-secondary)",
+              color: activeTab === t.id ? "var(--text-inverse)" : "var(--text-secondary)",
               border: activeTab === t.id ? "none" : "1px solid var(--border-primary)",
               cursor: "pointer", fontSize: 14, fontWeight: 600, transition: "all 0.2s"
             }}>
@@ -66,7 +70,7 @@ export default function DefenseQAPage() {
         {activeTab === "qa" && (
           <div>
             <h2 style={{ fontSize: 24, marginBottom: 24, textAlign: "center" }}>
-              <span className="text-gradient">الأسئلة المتوقعة</span> وإجاباتها
+              {isRTL ? <><span className="text-gradient">الأسئلة المتوقعة</span> وإجاباتها</> : <><span className="text-gradient">Expected Questions</span> & Answers</>}
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {QA_ITEMS.map((item, i) => (
@@ -74,11 +78,11 @@ export default function DefenseQAPage() {
                   <button onClick={() => setOpenQ(openQ === i ? null : i)} style={{
                     width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between",
                     padding: "18px 24px", background: "transparent", border: "none", cursor: "pointer",
-                    color: "var(--text-primary)", fontSize: 16, fontWeight: 700, textAlign: "right",
+                    color: "var(--text-primary)", fontSize: 16, fontWeight: 700, textAlign: isRTL ? "right" : "left",
                     fontFamily: "inherit", gap: 12
                   }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                      <span style={{ width: 32, height: 32, borderRadius: 8, background: openQ === i ? "var(--accent-cta)" : "var(--bg-elevated)", color: openQ === i ? "#fff" : "var(--text-caption)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, flexShrink: 0 }}>
+                      <span style={{ width: 32, height: 32, borderRadius: 8, background: openQ === i ? "var(--accent-cta)" : "var(--bg-elevated)", color: openQ === i ? "var(--text-inverse)" : "var(--text-caption)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, flexShrink: 0 }}>
                         {i + 1}
                       </span>
                       {item.q}
@@ -86,7 +90,7 @@ export default function DefenseQAPage() {
                     <ChevronDown size={18} style={{ color: "var(--text-muted)", transition: "transform 0.3s", transform: openQ === i ? "rotate(180deg)" : "rotate(0)", flexShrink: 0 }}/>
                   </button>
                   {openQ === i && (
-                    <div style={{ padding: "0 24px 20px 24px", paddingRight: 68, fontSize: 15, lineHeight: 1.9, color: "var(--text-secondary)", borderTop: "1px solid var(--border-primary)", animation: "chatMsgFadeIn 0.3s ease" }}>
+                    <div style={{ padding: isRTL ? "0 24px 20px 24px" : "0 24px 20px 24px", paddingRight: isRTL ? 68 : 24, paddingLeft: isRTL ? 24 : 68, fontSize: 15, lineHeight: 1.9, color: "var(--text-secondary)", borderTop: "1px solid var(--border-primary)", animation: "chatMsgFadeIn 0.3s ease" }}>
                       <div style={{ paddingTop: 16 }}>{item.a}</div>
                     </div>
                   )}
@@ -100,26 +104,26 @@ export default function DefenseQAPage() {
         {activeTab === "script" && (
           <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
             <h2 style={{ fontSize: 24, textAlign: "center" }}>
-              سكريبت العرض — <span className="text-gradient">4 أجزاء</span>
+              {isRTL ? <>سكريبت العرض — <span className="text-gradient">4 أجزاء</span></> : <>Presentation Script — <span className="text-gradient">4 Parts</span></>}
             </h2>
 
             {/* Part 1 */}
-            <div className="glass-card" style={{ padding: 32, borderTop: "3px solid #EF4444" }}>
+            <div className="glass-card" style={{ padding: 32, borderTop: "3px solid var(--accent-red)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
                 <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(239,68,68,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <Shield size={20} style={{ color: "#EF4444" }}/>
+                  <Shield size={20} style={{ color: "var(--accent-red)" }}/>
                 </div>
                 <div>
-                  <h3 style={{ fontSize: 20, margin: 0 }}>📍 الجزء الأول: المشكلة</h3>
-                  <span style={{ fontSize: 12, color: "var(--text-caption)" }}>⏱️ 5–7 دقائق | 🔒 الشاشة مقفولة</span>
+                  <h3 style={{ fontSize: 20, margin: 0 }}>{isRTL ? "📍 الجزء الأول: المشكلة" : "📍 Part One: The Problem"}</h3>
+                  <span style={{ fontSize: 12, color: "var(--text-caption)" }}>{isRTL ? "⏱️ 5–7 دقائق | 🔒 الشاشة مقفولة" : "⏱️ 5–7 minutes | 🔒 Screen locked"}</span>
                 </div>
               </div>
               <div style={{ fontSize: 15, lineHeight: 2.2, color: "var(--text-secondary)" }}>
-                <p style={{ fontWeight: 700, fontSize: 17, color: "var(--text-primary)", marginBottom: 8 }}>الافتتاحية:</p>
-                <p style={{ background: "var(--bg-elevated)", padding: 16, borderRadius: 10, borderRight: "3px solid #EF4444" }}>
+                <p style={{ fontWeight: 700, fontSize: 17, color: "var(--text-primary)", marginBottom: 8 }}>{isRTL ? "الافتتاحية:" : "The opening:"}</p>
+                <p style={{ background: "var(--bg-elevated)", padding: 16, borderRadius: 10, borderRight: "3px solid var(--accent-red)" }}>
                   &quot;سؤال بسيط: مين فيكم شاف بوست أو فيديو في آخر أسبوع وكان مش متأكد هل ده حقيقي ولا فيك؟&quot;
                 </p>
-                <p style={{ fontWeight: 700, fontSize: 17, color: "var(--text-primary)", margin: "20px 0 8px" }}>الأرقام المصرية:</p>
+                <p style={{ fontWeight: 700, fontSize: 17, color: "var(--text-primary)", margin: "20px 0 8px" }}>{isRTL ? "الأرقام المصرية:" : "The Egyptian numbers:"}</p>
                 <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 12 }}>
                   <li style={{ background: "var(--bg-elevated)", padding: 14, borderRadius: 10 }}>🌐 <strong>89%</strong> من الشباب المصري أونلاين — من كل 10 واحد، 9 بيتعرضوا لمعلومات كل يوم</li>
                   <li style={{ background: "var(--bg-elevated)", padding: 14, borderRadius: 10 }}>📊 التضليل بيكلّف العالم <strong>78 مليار دولار</strong> سنوياً</li>
@@ -133,22 +137,22 @@ export default function DefenseQAPage() {
             </div>
 
             {/* Part 2 */}
-            <div className="glass-card" style={{ padding: 32, borderTop: "3px solid #3B82F6" }}>
+            <div className="glass-card" style={{ padding: 32, borderTop: "3px solid var(--accent-blue)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
                 <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(59,130,246,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <Monitor size={20} style={{ color: "#3B82F6" }}/>
+                  <Monitor size={20} style={{ color: "var(--accent-blue)" }}/>
                 </div>
                 <div>
-                  <h3 style={{ fontSize: 20, margin: 0 }}>📍 الجزء الثاني: الحل</h3>
-                  <span style={{ fontSize: 12, color: "var(--text-caption)" }}>⏱️ 7 دقائق | 🖥️ الشاشة مفتوحة</span>
+                  <h3 style={{ fontSize: 20, margin: 0 }}>{isRTL ? "📍 الجزء الثاني: الحل" : "📍 Part Two: The Solution"}</h3>
+                  <span style={{ fontSize: 12, color: "var(--text-caption)" }}>{isRTL ? "⏱️ 7 دقائق | 🖥️ الشاشة مفتوحة" : "⏱️ 7 minutes | 🖥️ Screen open"}</span>
                 </div>
               </div>
               <div style={{ fontSize: 15, lineHeight: 2.2, color: "var(--text-secondary)" }}>
                 <div style={{ display: "grid", gap: 12 }}>
                   {[
-                    { icon: <Shield size={18}/>, title: "🛡️ DeepReal — محرك التحقق", color: "#F59E0B", desc: "SIFT: قف → مين المصدر → مصادر تانية → المصدر الأصلي. 14 تمرين عملي بسيناريوهات مصرية." },
-                    { icon: <HeartPulse size={18}/>, title: "💚 الصحة النفسية — محرك التثبيت", color: "#10B981", desc: "تعليمي 100%. تسمية المشاعر، التفريق بين التوتر والاكتئاب، تخطي الوصمة. مبني على COM-B." },
-                    { icon: <Star size={18}/>, title: "✨ المحور الديني — محرك الاعتدال", color: "#8B5CF6", desc: "التفريق بين الإيمان الصحي والمُستغَل. أنماط الإكراه الديني. المنصة لا تُصدر فتاوى." },
+                    { icon: <Shield size={18}/>, title: "🛡️ DeepReal — محرك التحقق", color: "var(--accent-amber)", desc: "SIFT: قف → مين المصدر → مصادر تانية → المصدر الأصلي. 14 تمرين عملي بسيناريوهات مصرية." },
+                    { icon: <HeartPulse size={18}/>, title: "💚 الصحة النفسية — محرك التثبيت", color: "var(--accent-emerald)", desc: "تعليمي 100%. تسمية المشاعر، التفريق بين التوتر والاكتئاب، تخطي الوصمة. مبني على COM-B." },
+                    { icon: <Star size={18}/>, title: "✨ المحور الديني — محرك الاعتدال", color: "var(--accent-religionhub)", desc: "التفريق بين الإيمان الصحي والمُستغَل. أنماط الإكراه الديني. المنصة لا تُصدر فتاوى." },
                   ].map((eng, i) => (
                     <div key={i} style={{ background: "var(--bg-elevated)", padding: 20, borderRadius: 12, borderRight: `3px solid ${eng.color}` }}>
                       <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 6, color: eng.color }}>{eng.title}</div>
@@ -165,14 +169,14 @@ export default function DefenseQAPage() {
             </div>
 
             {/* Part 3 */}
-            <div className="glass-card" style={{ padding: 32, borderTop: "3px solid #10B981" }}>
+            <div className="glass-card" style={{ padding: 32, borderTop: "3px solid var(--accent-emerald)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
                 <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(16,185,129,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <Sparkles size={20} style={{ color: "#10B981" }}/>
+                  <Sparkles size={20} style={{ color: "var(--accent-emerald)" }}/>
                 </div>
                 <div>
-                  <h3 style={{ fontSize: 20, margin: 0 }}>📍 الجزء الثالث: الذكاء الاصطناعي</h3>
-                  <span style={{ fontSize: 12, color: "var(--text-caption)" }}>⏱️ 5–7 دقائق | 🖥️ عروض حية</span>
+                  <h3 style={{ fontSize: 20, margin: 0 }}>{isRTL ? "📍 الجزء الثالث: الذكاء الاصطناعي" : "📍 Part Three: Artificial Intelligence"}</h3>
+                  <span style={{ fontSize: 12, color: "var(--text-caption)" }}>{isRTL ? "⏱️ 5–7 دقائق | 🖥️ عروض حية" : "⏱️ 5–7 minutes | 🖥️ Live demos"}</span>
                 </div>
               </div>
               <div style={{ display: "grid", gap: 10, fontSize: 15, lineHeight: 2 }}>
@@ -185,29 +189,29 @@ export default function DefenseQAPage() {
                   { title: "🤖 مساعد AI مدمج", desc: "مبني على Gemini — كل إجابة مربوطة بالمصادر. Verified AI" },
                 ].map((ai, i) => (
                   <div key={i} style={{ background: "var(--bg-elevated)", padding: 16, borderRadius: 10 }}>
-                    <strong style={{ color: "#10B981" }}>{ai.title}</strong><br/>{ai.desc}
+                    <strong style={{ color: "var(--accent-emerald)" }}>{ai.title}</strong><br/>{ai.desc}
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Part 4 */}
-            <div className="glass-card" style={{ padding: 32, borderTop: "3px solid #8B5CF6" }}>
+            <div className="glass-card" style={{ padding: 32, borderTop: "3px solid var(--accent-religionhub)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
                 <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(139,92,246,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <Award size={20} style={{ color: "#8B5CF6" }}/>
+                  <Award size={20} style={{ color: "var(--accent-religionhub)" }}/>
                 </div>
                 <div>
-                  <h3 style={{ fontSize: 20, margin: 0 }}>📍 الجزء الرابع: التفرّد والختام</h3>
-                  <span style={{ fontSize: 12, color: "var(--text-caption)" }}>⏱️ 5 دقائق | 🔒 الشاشة مقفولة</span>
+                  <h3 style={{ fontSize: 20, margin: 0 }}>{isRTL ? "📍 الجزء الرابع: التفرّد والختام" : "📍 Part Four: Uniqueness & Closing"}</h3>
+                  <span style={{ fontSize: 12, color: "var(--text-caption)" }}>{isRTL ? "⏱️ 5 دقائق | 🔒 الشاشة مقفولة" : "⏱️ 5 minutes | 🔒 Screen locked"}</span>
                 </div>
               </div>
               <div style={{ fontSize: 15, lineHeight: 2 }}>
-                <p style={{ fontWeight: 700, marginBottom: 12, color: "var(--text-primary)" }}>8 حاجات محدش عملها قبل كده:</p>
+                <p style={{ fontWeight: 700, marginBottom: 12, color: "var(--text-primary)" }}>{isRTL ? "8 حاجات محدش عملها قبل كده:" : "8 things no one has done before:"}</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   {UNIQUE_POINTS.map((p, i) => (
                     <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", background: "var(--bg-elevated)", padding: 14, borderRadius: 10 }}>
-                      <span style={{ width: 28, height: 28, borderRadius: 8, background: "#8B5CF6", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, flexShrink: 0 }}>{i+1}</span>
+                      <span style={{ width: 28, height: 28, borderRadius: 8, background: "var(--accent-religionhub)", color: "var(--text-inverse)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, flexShrink: 0 }}>{i+1}</span>
                       <span style={{ color: "var(--text-secondary)" }}>{p}</span>
                     </div>
                   ))}
@@ -230,17 +234,17 @@ export default function DefenseQAPage() {
         {activeTab === "theories" && (
           <div>
             <h2 style={{ fontSize: 24, marginBottom: 24, textAlign: "center" }}>
-              النظريات <span className="text-gradient">الثمانية</span> — مرجع سريع
+              {isRTL ? <>النظريات <span className="text-gradient">الثمانية</span> — مرجع سريع</> : <>The <span className="text-gradient">Eight</span> Theories — Quick Reference</>}
             </h2>
             <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))" }}>
               {THEORIES.map(t => (
                 <div key={t.num} className="glass-card" style={{ padding: 20 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
-                    <span style={{ width: 32, height: 32, borderRadius: 8, background: "var(--accent-cta)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: 14 }}>{t.num}</span>
+                    <span style={{ width: 32, height: 32, borderRadius: 8, background: "var(--accent-cta)", color: "var(--text-inverse)", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: 14 }}>{t.num}</span>
                     <span style={{ fontWeight: 700, fontSize: 16 }}>{t.name}</span>
                   </div>
                   <div style={{ fontSize: 13, color: "var(--text-secondary)", display: "flex", flexDirection: "column", gap: 6 }}>
-                    <div><strong>أين مُطبّقة:</strong> {t.where}</div>
+                    <div><strong>{isRTL ? "أين مُطبّقة:" : "Where applied:"}</strong> {t.where}</div>
                     <div style={{ fontFamily: "monospace", fontSize: 11, color: "var(--text-caption)", background: "var(--bg-elevated)", padding: "6px 10px", borderRadius: 6 }}>{t.ref}</div>
                   </div>
                 </div>
@@ -253,13 +257,13 @@ export default function DefenseQAPage() {
         {activeTab === "map" && (
           <div>
             <h2 style={{ fontSize: 24, marginBottom: 24, textAlign: "center" }}>
-              خريطة العرض <span className="text-gradient">المرئي</span>
+              {isRTL ? <>خريطة العرض <span className="text-gradient">المرئي</span></> : <>Visual <span className="text-gradient">Presentation</span> Map</>}
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {VISUAL_MAP.map((v, i) => (
                 <div key={i} className="glass-card" style={{ padding: "16px 20px", display: "grid", gridTemplateColumns: "1fr 1fr 1.5fr", gap: 16, alignItems: "center" }}>
                   <span style={{ fontWeight: 700, fontSize: 14 }}>{v.time}</span>
-                  <span style={{ fontSize: 13, color: v.screen.includes("مقفولة") ? "#EF4444" : "#10B981", fontWeight: 600 }}>{v.screen}</span>
+                  <span style={{ fontSize: 13, color: v.screen.includes("مقفولة") ? "var(--accent-red)" : "var(--accent-emerald)", fontWeight: 600 }}>{v.screen}</span>
                   <span style={{ fontSize: 13, color: "var(--text-muted)" }}>{v.reason}</span>
                 </div>
               ))}

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { PageNavigation } from '@/components/shared/page-navigation';
+import { useRTL } from '@/components/shared/rtl-provider';
 
 const decks = [
   {
@@ -68,6 +69,7 @@ const decks = [
 ];
 
 export default function PresentationPage() {
+  const { isRTL } = useRTL();
   const [selectedDeck, setSelectedDeck] = useState<number | null>(null);
   const [downloadingIdx, setDownloadingIdx] = useState<number | null>(null);
 
@@ -85,9 +87,9 @@ export default function PresentationPage() {
         @keyframes presShimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
         .pres-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
         .pres-dl-btn:hover { filter: brightness(1.2); transform: scale(1.03); }
-        .pres-topic:hover { background: rgba(255,255,255,0.08) !important; }
+        .pres-topic:hover { background: var(--bg-secondary) !important; }
       `}</style>
-      <main style={{ minHeight: '100vh', background: '#020617', color: '#e2e8f0', fontFamily: 'Inter, sans-serif', padding: '40px 24px 80px' }}>
+      <main dir={isRTL ? 'rtl' : 'ltr'} style={{ minHeight: '100vh', background: 'var(--bg-page)', color: 'var(--text-primary)', fontFamily: 'Inter, sans-serif', padding: '40px 24px 80px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           {/* Header */}
           <header style={{ textAlign: 'center', marginBottom: 48, animation: 'presFadeIn 0.6s ease-out' }}>
@@ -97,15 +99,16 @@ export default function PresentationPage() {
               background: 'linear-gradient(135deg, #f59e0b, #ef4444)',
               boxShadow: '0 0 40px rgba(245,158,11,0.4)',
             }}>📑</div>
-            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, margin: '0 0 8px', background: 'linear-gradient(135deg, #f59e0b, #ef4444, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Presentation Center
+            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, margin: '0 0 8px', background: 'linear-gradient(135deg, var(--accent-amber), var(--accent-red), var(--accent-indigo))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              {isRTL ? 'مركز العروض التقديمية' : 'Presentation Center'}
             </h1>
-            <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '1.2rem', color: '#94a3b8', direction: 'rtl', fontWeight: 700 }}>
-              مركز العروض التقديمية
+            <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '1.2rem', color: 'var(--text-secondary)', direction: isRTL ? 'ltr' : 'rtl', fontWeight: 700 }}>
+              {isRTL ? 'Presentation Center' : 'مركز العروض التقديمية'}
             </p>
-            <p style={{ color: '#64748b', maxWidth: 650, margin: '12px auto 0', lineHeight: 1.7 }}>
-              Download competition-ready presentation decks covering every aspect of the Egyptian Awareness Library —
-              from technical architecture to social impact assessment.
+            <p style={{ color: 'var(--text-muted)', maxWidth: 650, margin: '12px auto 0', lineHeight: 1.7 }}>
+              {isRTL
+                ? 'حمّل عروض تقديمية جاهزة للمسابقة بتغطي كل جانب من المكتبة المصرية للوعي — من البنية التقنية لتقييم الأثر الاجتماعي.'
+                : 'Download competition-ready presentation decks covering every aspect of the Egyptian Awareness Library — from technical architecture to social impact assessment.'}
             </p>
           </header>
 
@@ -118,8 +121,8 @@ export default function PresentationPage() {
                 onClick={() => setSelectedDeck(selectedDeck === i ? null : i)}
                 style={{
                   borderRadius: 20, overflow: 'hidden', cursor: 'pointer',
-                  background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
-                  border: `1px solid ${selectedDeck === i ? d.color + '50' : 'rgba(255,255,255,0.06)'}`,
+                  background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
+                  border: `1px solid ${selectedDeck === i ? d.color + '50' : 'var(--border-primary)'}`,
                   transition: 'all 0.3s ease',
                   animation: `presFadeIn 0.6s ease-out ${0.2 + i * 0.1}s both`,
                 }}
@@ -131,8 +134,8 @@ export default function PresentationPage() {
                   borderBottom: `1px solid ${d.color}20`, position: 'relative',
                 }}>
                   <div style={{ fontSize: 56, marginBottom: 8 }}>{d.icon}</div>
-                  <div style={{ display: 'flex', gap: 12, fontSize: '0.75rem', color: '#94a3b8' }}>
-                    <span>📄 {d.slides} slides</span>
+                  <div style={{ display: 'flex', gap: 12, fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                    <span>📄 {d.slides} {isRTL ? 'شريحة' : 'slides'}</span>
                     <span>⏱️ {d.duration}</span>
                     <span>💾 {d.size}</span>
                   </div>
@@ -146,19 +149,19 @@ export default function PresentationPage() {
 
                 {/* Content */}
                 <div style={{ padding: 24 }}>
-                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: d.color, marginBottom: 4 }}>{d.title}</h3>
-                  <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '0.85rem', color: '#94a3b8', direction: 'rtl', fontWeight: 600, marginBottom: 12 }}>{d.titleAr}</p>
-                  <p style={{ fontSize: '0.8rem', color: '#64748b', lineHeight: 1.6, marginBottom: 16 }}>{d.desc}</p>
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: d.color, marginBottom: 4 }}>{isRTL ? d.titleAr : d.title}</h3>
+                  <p style={{ fontFamily: 'Cairo, sans-serif', fontSize: '0.85rem', color: 'var(--text-muted)', direction: isRTL ? 'ltr' : 'rtl', fontWeight: 600, marginBottom: 12 }}>{isRTL ? d.title : d.titleAr}</p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: 16 }}>{d.desc}</p>
 
                   {/* Topics */}
                   {selectedDeck === i && (
                     <div style={{ marginBottom: 16, animation: 'presFadeIn 0.3s ease-out' }}>
-                      <div style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: 700, marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1 }}>Key Topics</div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 700, marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1 }}>{isRTL ? 'أهم المحاور' : 'Key Topics'}</div>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                         {d.topics.map((t, j) => (
                           <span key={j} className="pres-topic" style={{
-                            padding: '4px 10px', borderRadius: 6, background: 'rgba(255,255,255,0.05)',
-                            fontSize: '0.7rem', color: '#94a3b8', transition: 'background 0.2s',
+                            padding: '4px 10px', borderRadius: 6, background: 'var(--bg-secondary)',
+                            fontSize: '0.7rem', color: 'var(--text-muted)', transition: 'background 0.2s',
                           }}>{t}</span>
                         ))}
                       </div>
@@ -179,7 +182,9 @@ export default function PresentationPage() {
                       color: '#fff', cursor: 'pointer', transition: 'all 0.3s',
                     }}
                   >
-                    {downloadingIdx === i ? '⏳ Preparing Download...' : `📥 Download ${d.format}`}
+                    {downloadingIdx === i
+                      ? (isRTL ? '⏳ بنجهّز التحميل...' : '⏳ Preparing Download...')
+                      : (isRTL ? `📥 تحميل ${d.format}` : `📥 Download ${d.format}`)}
                   </button>
                 </div>
               </div>
@@ -188,8 +193,8 @@ export default function PresentationPage() {
 
           {/* Back Link */}
           <div style={{ textAlign: 'center', marginTop: 48 }}>
-            <Link href="/explore" style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
-              ← Back to Explore
+            <Link href="/explore" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+              {isRTL ? 'الرجوع للاستكشاف →' : '← Back to Explore'}
             </Link>
             <PageNavigation currentPath="/presentation" />
           </div>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { SCIENCE_EXERCISES, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '@/data/exercises/science/index';
 import { PageNavigation } from '@/components/shared/page-navigation';
 import ToolGuide from '@/components/ToolGuide';
+import { useRTL } from '@/components/shared/rtl-provider';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface StatConcept {
@@ -50,7 +51,7 @@ function DiffDots({ difficulty, size = 7 }: { difficulty: number; size?: number 
       {Array.from({ length: 5 }, (_, i) => (
         <span key={i} style={{
           display: 'inline-block', width: size, height: size, borderRadius: '50%',
-          background: i < difficulty ? DIFFICULTY_COLORS[difficulty] : 'rgba(255,255,255,0.12)',
+          background: i < difficulty ? DIFFICULTY_COLORS[difficulty] : 'var(--border-secondary)',
           marginRight: 2,
         }} />
       ))}
@@ -66,6 +67,7 @@ function SciencePlayer({
   exercises: ExerciseItem[];
   onDone: () => void;
 }) {
+  const { isRTL } = useRTL();
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [selected, setSelected] = useState<number | null>(null);
@@ -91,18 +93,18 @@ function SciencePlayer({
   }
 
   return (
-    <div style={{ marginTop: 14, padding: 16, background: 'rgba(0,0,0,0.4)', borderRadius: 12, border: '1px solid rgba(234,179,8,0.2)' }}>
+    <div dir={isRTL ? 'rtl' : 'ltr'} style={{ marginTop: 14, padding: 16, background: 'var(--bg-elevated)', borderRadius: 12, border: '1px solid var(--border-primary)' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 10 }}>
-        <span style={{ color: '#64748b', fontSize: 12 }}>{idx + 1}/{exercises.length}</span>
-        <span style={{ color: '#eab308', fontSize: 12, fontWeight: 700 }}>Score {score}</span>
+        <span style={{ color: 'var(--text-muted)', fontSize: 12 }}>{idx + 1}/{exercises.length}</span>
+        <span style={{ color: 'var(--accent-amber)', fontSize: 12, fontWeight: 700 }}>{isRTL ? 'النتيجة' : 'Score'} {score}</span>
       </div>
-      <div style={{ height: 3, background: 'rgba(255,255,255,0.07)', borderRadius: 2, marginBottom: 14 }}>
-        <div style={{ height: '100%', width: `${(idx / exercises.length) * 100}%`, background: '#eab308', borderRadius: 2, transition: 'width 0.3s' }} />
+      <div style={{ height: 3, background: 'var(--border-subtle)', borderRadius: 2, marginBottom: 14 }}>
+        <div style={{ height: '100%', width: `${(idx / exercises.length) * 100}%`, background: 'var(--accent-amber)', borderRadius: 2, transition: 'width 0.3s' }} />
       </div>
 
-      <p style={{ color: '#e2e8f0', fontSize: 14, lineHeight: 1.6, marginBottom: 12 }}>{ex.prompt}</p>
+      <p style={{ color: 'var(--text-primary)', fontSize: 14, lineHeight: 1.6, marginBottom: 12 }}>{ex.prompt}</p>
       {ex.promptAr && (
-        <p style={{ color: '#64748b', fontSize: 12, direction: 'rtl', marginBottom: 12 }}>{ex.promptAr}</p>
+        <p style={{ color: 'var(--text-muted)', fontSize: 12, direction: 'rtl', marginBottom: 12 }}>{ex.promptAr}</p>
       )}
 
       {hasOptions && (
@@ -111,11 +113,11 @@ function SciencePlayer({
             const isCorrect = ex.correctAnswer === i;
             return (
               <button key={i} onClick={() => pick(i)} style={{
-                padding: '11px 14px', borderRadius: 9, fontSize: 13, textAlign: 'left',
+                padding: '11px 14px', borderRadius: 9, fontSize: 13, textAlign: isRTL ? 'right' : 'left',
                 cursor: answered ? 'default' : 'pointer',
-                background: !answered ? 'rgba(255,255,255,0.04)' : isCorrect ? 'rgba(34,197,94,0.18)' : selected === i ? 'rgba(239,68,68,0.12)' : 'rgba(255,255,255,0.02)',
-                border: !answered ? '1px solid rgba(255,255,255,0.08)' : isCorrect ? '1px solid #22c55e' : selected === i ? '1px solid rgba(239,68,68,0.4)' : '1px solid rgba(255,255,255,0.04)',
-                color: '#e2e8f0',
+                background: !answered ? 'var(--bg-secondary)' : isCorrect ? 'rgba(34,197,94,0.18)' : selected === i ? 'rgba(239,68,68,0.12)' : 'var(--bg-secondary)',
+                border: !answered ? '1px solid var(--border-primary)' : isCorrect ? '1px solid var(--accent-emerald)' : selected === i ? '1px solid rgba(239,68,68,0.4)' : '1px solid var(--border-subtle)',
+                color: 'var(--text-primary)',
               }}>{opt}</button>
             );
           })}
@@ -123,9 +125,9 @@ function SciencePlayer({
       )}
 
       {answered && ex.explanation && (
-        <div style={{ background: 'rgba(16,185,129,0.07)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: 9, padding: 12, marginTop: 12 }}>
-          <p style={{ color: '#10b981', fontWeight: 700, fontSize: 12, margin: '0 0 4px' }}>💡 Explanation</p>
-          <p style={{ color: '#94a3b8', fontSize: 12, margin: 0, lineHeight: 1.6 }}>{ex.explanation}</p>
+        <div style={{ background: 'var(--accent-mentalhealth-surface)', border: '1px solid var(--border-primary)', borderRadius: 9, padding: 12, marginTop: 12 }}>
+          <p style={{ color: 'var(--accent-emerald)', fontWeight: 700, fontSize: 12, margin: '0 0 4px' }}>💡 {isRTL ? 'الشرح' : 'Explanation'}</p>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 12, margin: 0, lineHeight: 1.6 }}>{ex.explanation}</p>
         </div>
       )}
 
@@ -134,7 +136,7 @@ function SciencePlayer({
           marginTop: 12, width: '100%', padding: '11px', borderRadius: 9, border: 'none',
           background: 'linear-gradient(135deg,#eab308,#f97316)',
           color: '#000', fontWeight: 700, cursor: 'pointer', fontSize: 14,
-        }}>{isLast ? '🎉 Complete' : 'Next →'}</button>
+        }}>{isLast ? (isRTL ? '🎉 تم' : '🎉 Complete') : (isRTL ? 'التالي ←' : 'Next →')}</button>
       )}
     </div>
   );
@@ -150,6 +152,7 @@ function ScienceCard({
   isCompleted: boolean;
   onComplete: (id: string) => void;
 }) {
+  const { isRTL } = useRTL();
   const [data, setData] = useState<ScienceData | null>(null);
   const [loading, setLoading] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -173,9 +176,9 @@ function ScienceCard({
   }
 
   return (
-    <div style={{
-      background: done ? 'rgba(16,185,129,0.06)' : 'rgba(10,10,25,0.85)',
-      border: done ? '1px solid rgba(16,185,129,0.25)' : '1px solid rgba(255,255,255,0.07)',
+    <div dir={isRTL ? 'rtl' : 'ltr'} style={{
+      background: done ? 'var(--accent-mentalhealth-surface)' : 'var(--bg-card)',
+      border: done ? '1px solid var(--accent-mentalhealth-glow)' : '1px solid var(--border-primary)',
       borderRadius: 13,
       overflow: 'hidden',
       transition: 'border-color 0.2s',
@@ -183,16 +186,16 @@ function ScienceCard({
       flexDirection: 'column',
     }}>
       {/* Top color bar */}
-      <div style={{ height: 3, background: done ? '#10b981' : diffColor }} />
+      <div style={{ height: 3, background: done ? 'var(--accent-emerald)' : diffColor }} />
 
       <div style={{ padding: '16px 16px 14px', flex: 1, display: 'flex', flexDirection: 'column' }}>
         {/* Day + difficulty badge */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
           <span style={{
-            background: 'rgba(255,255,255,0.06)',
-            color: '#64748b', padding: '2px 9px', borderRadius: 20, fontSize: 10, fontWeight: 700,
+            background: 'var(--bg-secondary)',
+            color: 'var(--text-muted)', padding: '2px 9px', borderRadius: 20, fontSize: 10, fontWeight: 700,
           }}>
-            Day {meta.day}
+            {isRTL ? 'يوم' : 'Day'} {meta.day}
           </span>
           <span style={{
             background: `${diffColor}22`, color: diffColor,
@@ -205,19 +208,19 @@ function ScienceCard({
         {/* Concept name if loaded */}
         {data?.statisticalConcept?.name ? (
           <>
-            <h3 style={{ color: '#f1f5f9', fontWeight: 700, fontSize: 14, margin: '0 0 2px', lineHeight: 1.3 }}>
+            <h3 style={{ color: 'var(--text-primary)', fontWeight: 700, fontSize: 14, margin: '0 0 2px', lineHeight: 1.3 }}>
               {data.statisticalConcept.name}
             </h3>
-            <p style={{ color: '#64748b', fontSize: 11, direction: 'rtl', margin: '0 0 8px' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: 11, direction: 'rtl', margin: '0 0 8px' }}>
               {data.statisticalConcept.nameAr}
             </p>
-            <p style={{ color: '#475569', fontSize: 12, lineHeight: 1.5, flex: 1, margin: '0 0 10px' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: 12, lineHeight: 1.5, flex: 1, margin: '0 0 10px' }}>
               {data.statisticalConcept.definition?.slice(0, 120)}…
             </p>
           </>
         ) : (
           <div style={{ flex: 1, marginBottom: 10 }}>
-            <h3 style={{ color: '#94a3b8', fontWeight: 700, fontSize: 14, margin: '0 0 6px' }}>
+            <h3 style={{ color: 'var(--text-secondary)', fontWeight: 700, fontSize: 14, margin: '0 0 6px' }}>
               {meta.id.replace(/_/g, ' ')}
             </h3>
             <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
@@ -228,8 +231,8 @@ function ScienceCard({
 
         {/* Action */}
         {done ? (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#10b981', fontSize: 12, fontWeight: 700 }}>
-            ✅ Completed
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--accent-emerald)', fontSize: 12, fontWeight: 700 }}>
+            ✅ {isRTL ? 'مكتمل' : 'Completed'}
           </div>
         ) : playing && data ? (
           <SciencePlayer
@@ -246,12 +249,12 @@ function ScienceCard({
             disabled={loading}
             style={{
               padding: '9px', borderRadius: 9, border: 'none',
-              background: loading ? 'rgba(255,255,255,0.05)' : `linear-gradient(135deg,${diffColor},${diffColor}bb)`,
-              color: loading ? '#64748b' : '#000',
+              background: loading ? 'var(--bg-secondary)' : `linear-gradient(135deg,${diffColor},${diffColor}bb)`,
+              color: loading ? 'var(--text-muted)' : '#000',
               fontWeight: 700, fontSize: 13, cursor: loading ? 'default' : 'pointer',
             }}
           >
-            {loading ? '⏳ Loading…' : '▶ Start Exercise'}
+            {loading ? (isRTL ? '⏳ جاري التحميل…' : '⏳ Loading…') : (isRTL ? '▶ ابدأ التمرين' : '▶ Start Exercise')}
           </button>
         )}
       </div>
@@ -262,6 +265,7 @@ function ScienceCard({
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 export default function Phase2Page() {
+  const { isRTL } = useRTL();
   const [filter, setFilter] = useState<FilterMode>('all');
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const exercisesRef = useRef<HTMLDivElement | null>(null);
@@ -303,24 +307,24 @@ export default function Phase2Page() {
 
   const completionPct = Math.round((completed.size / SCIENCE_EXERCISES.length) * 100);
 
-  const FILTER_TABS: { key: FilterMode; label: string; color: string }[] = [
-    { key: 'all', label: 'All (33)', color: '#94a3b8' },
-    { key: 'beginner', label: 'Beginner', color: '#22c55e' },
-    { key: 'intermediate', label: 'Intermediate', color: '#eab308' },
-    { key: 'advanced', label: 'Advanced', color: '#f97316' },
+  const FILTER_TABS: { key: FilterMode; label: string; labelAr: string; color: string }[] = [
+    { key: 'all', label: 'All (33)', labelAr: 'الكل (33)', color: '#94a3b8' },
+    { key: 'beginner', label: 'Beginner', labelAr: 'مبتدئ', color: '#22c55e' },
+    { key: 'intermediate', label: 'Intermediate', labelAr: 'متوسط', color: '#eab308' },
+    { key: 'advanced', label: 'Advanced', labelAr: 'متقدم', color: '#f97316' },
   ];
 
   return (
-    <main style={{ minHeight: '100vh', background: '#040816', padding: '48px 16px' }}>
+    <main dir={isRTL ? 'rtl' : 'ltr'} style={{ minHeight: '100vh', background: 'var(--bg-page)', color: 'var(--text-primary)', padding: '48px 16px' }}>
       <div style={{ maxWidth: 1140, margin: '0 auto' }}>
 
         {/* Header */}
-        <div style={{ marginBottom: 32, borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: 24 }}>
+        <div style={{ marginBottom: 32, borderBottom: '1px solid var(--border-subtle)', paddingBottom: 24 }}>
           <span style={{
-            background: 'rgba(234,179,8,0.15)', color: '#fde047',
+            background: 'var(--accent-deepreal-surface)', color: 'var(--accent-amber)',
             padding: '3px 12px', borderRadius: 20, fontSize: 11, fontWeight: 700,
           }}>
-            PHASE 2 — WEEKS 9–16
+            {isRTL ? 'المرحلة 2 — الأسابيع 9–16' : 'PHASE 2 — WEEKS 9–16'}
           </span>
           <h1 style={{
             fontSize: 'clamp(26px, 5vw, 40px)', fontWeight: 900, margin: '10px 0 4px',
@@ -328,20 +332,21 @@ export default function Phase2Page() {
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
             lineHeight: 1.15,
           }}>
-            Statistical &amp; Scientific Literacy
+            {isRTL ? 'الثقافة الإحصائية والعلمية' : 'Statistical & Scientific Literacy'}
           </h1>
-          <p style={{ color: '#94a3b8', fontSize: 15, direction: 'rtl', margin: '0 0 8px' }}>
-            الثقافة الإحصائية والعلمية
+          <p style={{ color: 'var(--text-secondary)', fontSize: 15, direction: isRTL ? 'ltr' : 'rtl', margin: '0 0 8px' }}>
+            {isRTL ? 'Statistical & Scientific Literacy' : 'الثقافة الإحصائية والعلمية'}
           </p>
-          <p style={{ color: '#64748b', fontSize: 13, lineHeight: 1.7, maxWidth: 700 }}>
-            33 research-integrity exercises spanning p-hacking, publication bias, Bayesian reasoning,
-            causal inference, and confounding — all with real-world case studies and Egyptian context.
+          <p style={{ color: 'var(--text-muted)', fontSize: 13, lineHeight: 1.7, maxWidth: 700 }}>
+            {isRTL
+              ? '33 تمرينًا في نزاهة البحث العلمي تغطي التلاعب بالقيمة الاحتمالية، وانحياز النشر، والاستدلال البايزي، والاستدلال السببي، والمتغيرات المربكة — كلها بدراسات حالة واقعية وسياق مصري.'
+              : '33 research-integrity exercises spanning p-hacking, publication bias, Bayesian reasoning, causal inference, and confounding — all with real-world case studies and Egyptian context.'}
           </p>
         </div>
 
         {/* How to use this phase — ToolGuide */}
         <ToolGuide
-          lang="en"
+          lang={isRTL ? 'ar' : 'en'}
           accent="#eab308"
           titleEn="How to use Phase 2 (and who it's for)"
           titleAr="كيفية استخدام المرحلة الثانية (ولمن هي)"
@@ -399,14 +404,14 @@ export default function Phase2Page() {
         {/* Progress + link to /science */}
         <div style={{
           display: 'flex', gap: 16, alignItems: 'center',
-          background: 'rgba(234,179,8,0.07)',
-          border: '1px solid rgba(234,179,8,0.2)',
+          background: 'var(--accent-deepreal-surface)',
+          border: '1px solid var(--border-primary)',
           borderRadius: 14, padding: '14px 20px', marginBottom: 28,
           flexWrap: 'wrap',
         }}>
           <div style={{ flex: 1, minWidth: 200 }}>
-            <p style={{ color: '#94a3b8', fontSize: 12, margin: '0 0 6px' }}>Progress</p>
-            <div style={{ height: 6, background: 'rgba(255,255,255,0.07)', borderRadius: 3, marginBottom: 4, maxWidth: 340 }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: 12, margin: '0 0 6px' }}>{isRTL ? 'التقدّم' : 'Progress'}</p>
+            <div style={{ height: 6, background: 'var(--border-subtle)', borderRadius: 3, marginBottom: 4, maxWidth: 340 }}>
               <div style={{
                 height: '100%', borderRadius: 3,
                 width: `${completionPct}%`,
@@ -414,8 +419,10 @@ export default function Phase2Page() {
                 transition: 'width 0.5s',
               }} />
             </div>
-            <p style={{ color: '#eab308', fontWeight: 700, fontSize: 13, margin: 0 }}>
-              {completed.size}/33 exercises complete ({completionPct}%)
+            <p style={{ color: 'var(--accent-amber)', fontWeight: 700, fontSize: 13, margin: 0 }}>
+              {isRTL
+                ? `اكتمل ${completed.size}/33 تمرينًا (${completionPct}%)`
+                : `${completed.size}/33 exercises complete (${completionPct}%)`}
             </p>
           </div>
           <Link href="/science" style={{
@@ -424,7 +431,7 @@ export default function Phase2Page() {
             background: 'linear-gradient(135deg,#eab308,#f97316)',
             color: '#000', textDecoration: 'none', fontWeight: 700, fontSize: 13,
           }}>
-            🔬 Open Science Hub →
+            {isRTL ? '🔬 افتح مركز العلوم ←' : '🔬 Open Science Hub →'}
           </Link>
         </div>
 
@@ -436,15 +443,15 @@ export default function Phase2Page() {
               onClick={() => setFilter(tab.key)}
               style={{
                 padding: '7px 16px', borderRadius: 20, border: 'none',
-                background: filter === tab.key ? `${tab.color}25` : 'rgba(255,255,255,0.04)',
-                color: filter === tab.key ? tab.color : '#64748b',
+                background: filter === tab.key ? `${tab.color}25` : 'var(--bg-secondary)',
+                color: filter === tab.key ? tab.color : 'var(--text-muted)',
                 fontWeight: filter === tab.key ? 700 : 400,
                 fontSize: 13, cursor: 'pointer',
                 outline: filter === tab.key ? `2px solid ${tab.color}60` : 'none',
                 transition: 'all 0.2s',
               }}
             >
-              {tab.label}
+              {isRTL ? tab.labelAr : tab.label}
             </button>
           ))}
         </div>
@@ -455,27 +462,30 @@ export default function Phase2Page() {
           .map((group) => {
             const groupItems = filtered.filter((ex) => getDiffGroup(ex.difficulty) === group);
             if (groupItems.length === 0) return null;
-            const labels: Record<string, { label: string; color: string; icon: string }> = {
-              beginner: { label: 'Beginner (Difficulty 1–2)', color: '#22c55e', icon: '🟢' },
-              intermediate: { label: 'Intermediate (Difficulty 3)', color: '#eab308', icon: '🟡' },
-              advanced: { label: 'Advanced (Difficulty 4–5)', color: '#f97316', icon: '🔴' },
+            const labels: Record<string, { label: string; labelAr: string; color: string; icon: string }> = {
+              beginner: { label: 'Beginner (Difficulty 1–2)', labelAr: 'مبتدئ (الصعوبة 1–2)', color: '#22c55e', icon: '🟢' },
+              intermediate: { label: 'Intermediate (Difficulty 3)', labelAr: 'متوسط (الصعوبة 3)', color: '#eab308', icon: '🟡' },
+              advanced: { label: 'Advanced (Difficulty 4–5)', labelAr: 'متقدم (الصعوبة 4–5)', color: '#f97316', icon: '🔴' },
             };
-            const { label, color, icon } = labels[group];
+            const { label, labelAr, color, icon } = labels[group];
             return (
               <section key={group} style={{ marginBottom: 36 }}>
                 <div style={{
                   display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16,
-                  borderLeft: `3px solid ${color}`, paddingLeft: 12,
+                  [isRTL ? 'borderRight' : 'borderLeft']: `3px solid ${color}`,
+                  [isRTL ? 'paddingRight' : 'paddingLeft']: 12,
                 }}>
                   <span style={{ fontSize: 18 }}>{icon}</span>
-                  <h2 style={{ color: '#f1f5f9', fontWeight: 800, fontSize: 16, margin: 0 }}>
-                    {label}
+                  <h2 style={{ color: 'var(--text-primary)', fontWeight: 800, fontSize: 16, margin: 0 }}>
+                    {isRTL ? labelAr : label}
                   </h2>
                   <span style={{
                     background: `${color}20`, color, padding: '2px 9px',
-                    borderRadius: 20, fontSize: 11, fontWeight: 700, marginLeft: 'auto',
+                    borderRadius: 20, fontSize: 11, fontWeight: 700, [isRTL ? 'marginRight' : 'marginLeft']: 'auto',
                   }}>
-                    {groupItems.filter((ex) => completed.has(ex.id)).length}/{groupItems.length} done
+                    {isRTL
+                      ? `${groupItems.filter((ex) => completed.has(ex.id)).length}/${groupItems.length} مكتمل`
+                      : `${groupItems.filter((ex) => completed.has(ex.id)).length}/${groupItems.length} done`}
                   </span>
                 </div>
                 <div style={{
@@ -499,16 +509,16 @@ export default function Phase2Page() {
         {/* Navigation */}
         <div style={{
           display: 'flex', justifyContent: 'space-between', marginTop: 32,
-          borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 24,
+          borderTop: '1px solid var(--border-subtle)', paddingTop: 24,
           flexWrap: 'wrap', gap: 12,
         }}>
           <Link href="/curriculum/phase1" style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '10px 18px', borderRadius: 10,
-            border: '1px solid rgba(255,255,255,0.1)',
-            color: '#94a3b8', textDecoration: 'none', fontSize: 13,
+            border: '1px solid var(--border-primary)',
+            color: 'var(--text-secondary)', textDecoration: 'none', fontSize: 13,
           }}>
-            ← Phase 1: Cognitive Immunity
+            {isRTL ? 'المرحلة 1: المناعة المعرفية ←' : '← Phase 1: Cognitive Immunity'}
           </Link>
           <Link href="/science" style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
@@ -516,7 +526,7 @@ export default function Phase2Page() {
             background: 'linear-gradient(135deg,#eab308,#f97316)',
             color: '#000', textDecoration: 'none', fontSize: 13, fontWeight: 700,
           }}>
-            Full Science Hub →
+            {isRTL ? 'مركز العلوم الكامل ←' : 'Full Science Hub →'}
           </Link>
         </div>
 

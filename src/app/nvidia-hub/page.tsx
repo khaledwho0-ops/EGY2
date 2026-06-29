@@ -188,8 +188,12 @@ export default function NvidiaHubPage() {
 
   return (
     <div
-      style={{ direction: isRTL ? "rtl" : "ltr" }}
-      className="min-h-screen bg-[#0a0a0f] text-white pt-28 pb-20 overflow-hidden"
+      style={{
+        direction: isRTL ? "rtl" : "ltr",
+        background: "var(--bg-page)",
+        color: "var(--text-primary)",
+      }}
+      className="min-h-screen pt-28 pb-20 overflow-hidden"
     >
       {/* ── animated bg gradient ── */}
       <div className="fixed inset-0 pointer-events-none z-0">
@@ -253,7 +257,7 @@ export default function NvidiaHubPage() {
           <motion.p
             variants={itemVariants}
             className="text-lg sm:text-xl max-w-2xl mx-auto"
-            style={{ color: "rgba(255,255,255,0.55)" }}
+            style={{ color: "var(--text-secondary)" }}
           >
             {t({
               en: "EAL runs Gemini-first. NVIDIA NIM is a deliberate showcase — content safety, deepfake detection, and the resilient last-resort slot in our provider rotator.",
@@ -266,12 +270,12 @@ export default function NvidiaHubPage() {
             <span
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs"
               style={{
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                color: "rgba(255,255,255,0.5)",
+                background: "var(--bg-elevated)",
+                border: "1px solid var(--border-primary)",
+                color: "var(--text-muted)",
               }}
             >
-              <AlertTriangle size={13} style={{ color: "#fbbf24" }} />
+              <AlertTriangle size={13} style={{ color: "var(--accent-amber)" }} />
               {t({
                 en: "Honest scope: NVIDIA does not power every EAL tool. See its real roles below.",
                 ar: "نطاق صادق: NVIDIA لا تُشغّل كل أدوات EAL. شاهد أدوارها الحقيقية بالأسفل.",
@@ -297,7 +301,7 @@ export default function NvidiaHubPage() {
           <motion.p
             variants={itemVariants}
             className="text-center mb-12 text-sm"
-            style={{ color: "rgba(255,255,255,0.45)" }}
+            style={{ color: "var(--text-muted)" }}
           >
             {t({
               en: "Accurate roles for each NVIDIA NIM model on the platform — no overclaiming.",
@@ -320,10 +324,10 @@ export default function NvidiaHubPage() {
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   className="group relative rounded-2xl p-6 cursor-default"
                   style={{
-                    background: "rgba(255,255,255,0.04)",
+                    background: "var(--bg-card)",
                     backdropFilter: "blur(24px)",
                     WebkitBackdropFilter: "blur(24px)",
-                    border: "1px solid rgba(255,255,255,0.08)",
+                    border: "1px solid var(--border-primary)",
                   }}
                 >
                   {/* hover glow */}
@@ -347,7 +351,10 @@ export default function NvidiaHubPage() {
                     </div>
 
                     {/* name + provider + role */}
-                    <h3 className="text-lg font-bold text-white mb-2">
+                    <h3
+                      className="text-lg font-bold mb-2"
+                      style={{ color: "var(--text-primary)" }}
+                    >
                       {model.name}
                     </h3>
                     <div className="flex flex-wrap items-center gap-2 mb-3">
@@ -363,8 +370,8 @@ export default function NvidiaHubPage() {
                       <span
                         className="inline-block text-xs font-medium px-2 py-0.5 rounded-full"
                         style={{
-                          background: "rgba(255,255,255,0.06)",
-                          color: "rgba(255,255,255,0.6)",
+                          background: "var(--bg-elevated)",
+                          color: "var(--text-secondary)",
                         }}
                       >
                         {t(model.role)}
@@ -374,7 +381,7 @@ export default function NvidiaHubPage() {
                     {/* description */}
                     <p
                       className="text-sm leading-relaxed"
-                      style={{ color: "rgba(255,255,255,0.55)" }}
+                      style={{ color: "var(--text-secondary)" }}
                     >
                       {t(model.description)}
                     </p>
@@ -402,7 +409,7 @@ export default function NvidiaHubPage() {
           <motion.p
             variants={itemVariants}
             className="text-center mb-10 text-sm"
-            style={{ color: "rgba(255,255,255,0.45)" }}
+            style={{ color: "var(--text-muted)" }}
           >
             {t({
               en: "A real call to /api/nvidia/content-safety (Nemotron-3.5). If the NVIDIA key is unset it fails open and returns 'allow'.",
@@ -414,10 +421,10 @@ export default function NvidiaHubPage() {
             variants={itemVariants}
             className="max-w-2xl mx-auto rounded-2xl p-6 sm:p-8"
             style={{
-              background: "rgba(255,255,255,0.03)",
+              background: "var(--bg-card)",
               backdropFilter: "blur(24px)",
               WebkitBackdropFilter: "blur(24px)",
-              border: "1px solid rgba(255,255,255,0.08)",
+              border: "1px solid var(--border-primary)",
             }}
           >
             <textarea
@@ -432,14 +439,14 @@ export default function NvidiaHubPage() {
               })}
               className="w-full rounded-xl p-4 text-sm resize-y outline-none transition-colors"
               style={{
-                background: "rgba(0,0,0,0.3)",
-                border: "1px solid rgba(255,255,255,0.12)",
-                color: "white",
+                background: "var(--bg-page)",
+                border: "1px solid var(--border-secondary)",
+                color: "var(--text-primary)",
               }}
             />
 
             <div className="mt-4 flex items-center justify-between gap-3 flex-wrap">
-              <span className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
+              <span className="text-xs" style={{ color: "var(--text-muted)" }}>
                 {scanText.length}/10000
               </span>
               <button
@@ -477,7 +484,7 @@ export default function NvidiaHubPage() {
                 style={{
                   background: "rgba(255,51,102,0.08)",
                   border: "1px solid rgba(255,51,102,0.3)",
-                  color: "#ff8aa3",
+                  color: "var(--accent-red)",
                 }}
               >
                 <AlertTriangle size={16} className="mt-0.5 flex-shrink-0" />
@@ -520,8 +527,8 @@ export default function NvidiaHubPage() {
                   <span
                     className="text-xs px-2 py-0.5 rounded-full"
                     style={{
-                      background: "rgba(255,255,255,0.08)",
-                      color: "rgba(255,255,255,0.6)",
+                      background: "var(--bg-elevated)",
+                      color: "var(--text-secondary)",
                     }}
                   >
                     {t({ en: "action: ", ar: "الإجراء: " })}
@@ -549,14 +556,14 @@ export default function NvidiaHubPage() {
                 {scanResult.reasoning && (
                   <p
                     className="text-sm leading-relaxed"
-                    style={{ color: "rgba(255,255,255,0.6)" }}
+                    style={{ color: "var(--text-secondary)" }}
                   >
                     {scanResult.reasoning}
                   </p>
                 )}
                 <p
                   className="text-xs mt-2"
-                  style={{ color: "rgba(255,255,255,0.35)" }}
+                  style={{ color: "var(--text-muted)" }}
                 >
                   {t({ en: "confidence: ", ar: "الثقة: " })}
                   {Math.round((scanResult.confidence ?? 0) * 100)}%
@@ -586,7 +593,7 @@ export default function NvidiaHubPage() {
           <motion.p
             variants={itemVariants}
             className="text-center mb-12 text-sm"
-            style={{ color: "rgba(255,255,255,0.45)" }}
+            style={{ color: "var(--text-muted)" }}
           >
             {t({
               en: "Gemini leads; NVIDIA's 550B is the last-resort slot. Content Safety can pre-screen input.",
@@ -598,10 +605,10 @@ export default function NvidiaHubPage() {
             variants={itemVariants}
             className="relative rounded-2xl p-6 sm:p-8 overflow-x-auto"
             style={{
-              background: "rgba(255,255,255,0.03)",
+              background: "var(--bg-card)",
               backdropFilter: "blur(24px)",
               WebkitBackdropFilter: "blur(24px)",
-              border: "1px solid rgba(255,255,255,0.08)",
+              border: "1px solid var(--border-primary)",
             }}
           >
             {/* flow */}
@@ -623,7 +630,7 @@ export default function NvidiaHubPage() {
                     <ChevronRight
                       size={18}
                       style={{
-                        color: "rgba(255,255,255,0.25)",
+                        color: "var(--text-caption)",
                         flexShrink: 0,
                         transform: isRTL ? "rotate(180deg)" : undefined,
                       }}
@@ -647,10 +654,10 @@ export default function NvidiaHubPage() {
             variants={itemVariants}
             className="rounded-2xl p-6 sm:p-8"
             style={{
-              background: "rgba(255,255,255,0.03)",
+              background: "var(--bg-card)",
               backdropFilter: "blur(24px)",
               WebkitBackdropFilter: "blur(24px)",
-              border: "1px solid rgba(255,255,255,0.08)",
+              border: "1px solid var(--border-primary)",
             }}
           >
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -673,7 +680,7 @@ export default function NvidiaHubPage() {
                     </div>
                     <div
                       className="text-xs sm:text-sm font-medium"
-                      style={{ color: "rgba(255,255,255,0.5)" }}
+                      style={{ color: "var(--text-muted)" }}
                     >
                       {t(stat.label)}
                     </div>
@@ -710,10 +717,10 @@ export default function NvidiaHubPage() {
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   className="group relative rounded-2xl p-6 cursor-default"
                   style={{
-                    background: "rgba(255,255,255,0.04)",
+                    background: "var(--bg-card)",
                     backdropFilter: "blur(24px)",
                     WebkitBackdropFilter: "blur(24px)",
-                    border: "1px solid rgba(255,255,255,0.08)",
+                    border: "1px solid var(--border-primary)",
                   }}
                 >
                   {/* hover glow */}
@@ -735,13 +742,16 @@ export default function NvidiaHubPage() {
                       <Icon size={24} style={{ color: benefit.accent }} />
                     </div>
 
-                    <h3 className="text-lg font-bold text-white mb-2">
+                    <h3
+                      className="text-lg font-bold mb-2"
+                      style={{ color: "var(--text-primary)" }}
+                    >
                       {t(benefit.title)}
                     </h3>
 
                     <p
                       className="text-sm leading-relaxed"
-                      style={{ color: "rgba(255,255,255,0.55)" }}
+                      style={{ color: "var(--text-secondary)" }}
                     >
                       {t(benefit.description)}
                     </p>
@@ -762,7 +772,7 @@ export default function NvidiaHubPage() {
         >
           <p
             className="text-sm flex items-center justify-center gap-2"
-            style={{ color: "rgba(255,255,255,0.3)" }}
+            style={{ color: "var(--text-muted)" }}
           >
             <span
               className="inline-block w-2 h-2 rounded-full"

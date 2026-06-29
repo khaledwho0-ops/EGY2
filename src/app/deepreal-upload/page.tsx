@@ -3,6 +3,7 @@ import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { PageNavigation } from '@/components/shared/page-navigation';
 import { PageAIChatbot } from '@/components/shared/page-ai-chatbot';
+import { useRTL } from '@/components/shared/rtl-provider';
 
 const supportedFormats = [
   { ext: 'JPG', icon: '🖼️', desc: 'JPEG Images', color: '#3b82f6' },
@@ -23,6 +24,7 @@ interface QueuedFile {
 }
 
 export default function DeepRealUploadPage() {
+  const { isRTL } = useRTL();
   const [dragActive, setDragActive] = useState(false);
   const [queue, setQueue] = useState<QueuedFile[]>([]);
   const [borderPhase, setBorderPhase] = useState(0);
@@ -103,16 +105,16 @@ export default function DeepRealUploadPage() {
   }, [analyzeFile]);
 
   const getStatusColor = (status: string) => {
-    if (status === 'complete') return '#10b981';
-    if (status === 'analyzing') return '#3b82f6';
-    if (status === 'error') return '#ef4444';
-    return '#64748b';
+    if (status === 'complete') return 'var(--accent-emerald)';
+    if (status === 'analyzing') return 'var(--accent-blue)';
+    if (status === 'error') return 'var(--accent-red)';
+    return 'var(--text-muted)';
   };
 
   const getResultColor = (result?: string) => {
-    if (result === 'Authentic') return '#10b981';
-    if (result === 'Manipulated' || result === 'AI-Generated') return '#ef4444';
-    return '#f59e0b';
+    if (result === 'Authentic') return 'var(--accent-emerald)';
+    if (result === 'Manipulated' || result === 'AI-Generated') return 'var(--accent-red)';
+    return 'var(--accent-amber)';
   };
 
   return (
@@ -126,9 +128,9 @@ export default function DeepRealUploadPage() {
         .upload-format:hover { transform: translateY(-4px) !important; box-shadow: 0 8px 30px rgba(0,0,0,0.3) !important; }
         .queue-item:hover { background: rgba(59,130,246,0.06) !important; }
       `}</style>
-      <div style={{
-        minHeight: '100vh', background: '#020617', fontFamily: "'Inter', sans-serif",
-        color: '#e2e8f0', position: 'relative', overflow: 'hidden',
+      <div dir={isRTL ? 'rtl' : 'ltr'} style={{
+        minHeight: '100vh', background: 'var(--bg-page)', fontFamily: "'Inter', sans-serif",
+        color: 'var(--text-primary)', position: 'relative', overflow: 'hidden',
       }}>
         {/* Background effects */}
         <div style={{ position: 'fixed', top: '10%', left: '5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(59,130,246,0.05) 0%, transparent 70%)', pointerEvents: 'none' }} />
@@ -139,19 +141,21 @@ export default function DeepRealUploadPage() {
           <input ref={fileInputRef} type="file" multiple accept="image/*,video/*,audio/*,.pdf" onChange={handleFileInput} style={{ display: 'none' }} />
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '48px', animation: 'fadeInUp 0.5s ease' }}>
-            <div style={{ display: 'inline-block', padding: '5px 16px', borderRadius: '16px', marginBottom: '16px', background: 'rgba(59,130,246,0.15)', border: '1px solid rgba(59,130,246,0.3)', fontSize: '12px', fontWeight: 600, color: '#60a5fa', letterSpacing: '2px', textTransform: 'uppercase' }}>
-              Direct Media Upload
+            <div style={{ display: 'inline-block', padding: '5px 16px', borderRadius: '16px', marginBottom: '16px', background: 'var(--accent-deepreal-surface)', border: '1px solid var(--border-secondary)', fontSize: '12px', fontWeight: 600, color: 'var(--accent-blue)', letterSpacing: '2px', textTransform: 'uppercase' }}>
+              {isRTL ? 'رفع وسائط مباشر' : 'Direct Media Upload'}
             </div>
             <h1 style={{ fontSize: '46px', fontWeight: 900, margin: '0 0 8px 0', background: 'linear-gradient(135deg, #3b82f6, #06b6d4, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Media Upload Analyzer
+              {isRTL ? 'محلل رفع الوسائط' : 'Media Upload Analyzer'}
             </h1>
-            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '20px', color: '#94a3b8', direction: 'rtl' as const, margin: '0 0 8px 0' }}>
+            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '20px', color: 'var(--text-secondary)', direction: 'rtl' as const, margin: '0 0 8px 0' }}>
               ارفع ملفاتك للتحقق الفوري
             </p>
-            <p style={{ color: '#64748b', fontSize: '14px', maxWidth: '500px', margin: '0 auto' }}>
-              Drag and drop any media file for instant deepfake analysis through our 6-layer forensic pipeline.
+            <p style={{ color: 'var(--text-muted)', fontSize: '14px', maxWidth: '500px', margin: '0 auto' }}>
+              {isRTL
+                ? 'اسحب وأفلت أي ملف وسائط للتحليل الفوري للتزييف العميق عبر خط المعالجة الجنائي المكوّن من ٦ طبقات.'
+                : 'Drag and drop any media file for instant deepfake analysis through our 6-layer forensic pipeline.'}
             </p>
-            <Link href="/explore" style={{ display: 'inline-block', marginTop: '12px', color: '#60a5fa', fontSize: '14px', textDecoration: 'none' }}>← Back to Explore</Link>
+            <Link href="/explore" style={{ display: 'inline-block', marginTop: '12px', color: 'var(--accent-blue)', fontSize: '14px', textDecoration: 'none' }}>{isRTL ? 'العودة إلى استكشاف ←' : '← Back to Explore'}</Link>
           </div>
 
           {/* Main Drop Zone */}
@@ -171,27 +175,29 @@ export default function DeepRealUploadPage() {
           >
             <div style={{
               borderRadius: '18px', padding: '80px 40px', textAlign: 'center',
-              background: dragActive ? 'rgba(15,23,42,0.9)' : '#020617',
+              background: dragActive ? 'var(--bg-elevated)' : 'var(--bg-page)',
               transition: 'all 0.3s',
             }}>
               <div style={{ fontSize: '64px', marginBottom: '20px', animation: 'float 3s ease infinite' }}>
                 {dragActive ? '📥' : '☁️'}
               </div>
-              <h2 style={{ fontSize: '26px', fontWeight: 800, margin: '0 0 8px 0', color: '#f1f5f9' }}>
-                {dragActive ? 'Release to Upload' : 'Drop Files Here'}
+              <h2 style={{ fontSize: '26px', fontWeight: 800, margin: '0 0 8px 0', color: 'var(--text-primary)' }}>
+                {dragActive
+                  ? (isRTL ? 'أفلِت للرفع' : 'Release to Upload')
+                  : (isRTL ? 'أفلِت الملفات هنا' : 'Drop Files Here')}
               </h2>
-              <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '18px', color: '#94a3b8', direction: 'rtl' as const, margin: '0 0 16px 0' }}>
+              <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '18px', color: 'var(--text-secondary)', direction: 'rtl' as const, margin: '0 0 16px 0' }}>
                 أو انقر لاختيار الملفات
               </p>
-              <p style={{ color: '#64748b', fontSize: '14px', marginBottom: '4px' }}>
-                or click anywhere in this zone to select files
+              <p style={{ color: 'var(--text-muted)', fontSize: '14px', marginBottom: '4px' }}>
+                {isRTL ? 'أو انقر في أي مكان داخل هذه المنطقة لاختيار الملفات' : 'or click anywhere in this zone to select files'}
               </p>
               <div style={{
                 display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 16px',
-                borderRadius: '8px', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)',
+                borderRadius: '8px', background: 'var(--accent-deepreal-surface)', border: '1px solid var(--border-secondary)',
                 marginTop: '12px',
               }}>
-                <span style={{ color: '#ef4444', fontSize: '13px', fontWeight: 600 }}>⚠️ Maximum file size: 50 MB</span>
+                <span style={{ color: 'var(--accent-red)', fontSize: '13px', fontWeight: 600 }}>{isRTL ? '⚠️ الحد الأقصى لحجم الملف: ٥٠ ميجابايت' : '⚠️ Maximum file size: 50 MB'}</span>
               </div>
             </div>
           </div>
@@ -200,31 +206,33 @@ export default function DeepRealUploadPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px', marginBottom: '32px', animation: 'fadeInUp 0.7s ease' }}>
             {supportedFormats.map(fmt => (
               <div key={fmt.ext} className="upload-format" style={{
-                background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
+                background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
                 border: `1px solid ${fmt.color}30`, borderRadius: '12px', padding: '20px 12px',
                 textAlign: 'center', transition: 'all 0.3s',
               }}>
                 <div style={{ fontSize: '28px', marginBottom: '8px' }}>{fmt.icon}</div>
                 <div style={{ fontSize: '16px', fontWeight: 800, color: fmt.color }}>.{fmt.ext}</div>
-                <div style={{ fontSize: '11px', color: '#64748b', marginTop: '4px' }}>{fmt.desc}</div>
+                <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '4px' }}>{fmt.desc}</div>
               </div>
             ))}
           </div>
 
           {/* Analysis Queue */}
           <div style={{
-            background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(59,130,246,0.15)', borderRadius: '16px',
+            background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
+            border: '1px solid var(--border-primary)', borderRadius: '16px',
             padding: '28px', animation: 'fadeInUp 0.8s ease',
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
               <div>
-                <h3 style={{ fontSize: '18px', fontWeight: 700, margin: '0 0 4px 0', color: '#f1f5f9' }}>📋 Analysis Queue</h3>
-                <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '13px', color: '#64748b', margin: 0, direction: 'rtl' as const }}>قائمة انتظار التحليل</p>
+                <h3 style={{ fontSize: '18px', fontWeight: 700, margin: '0 0 4px 0', color: 'var(--text-primary)' }}>{isRTL ? '📋 قائمة انتظار التحليل' : '📋 Analysis Queue'}</h3>
+                <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '13px', color: 'var(--text-muted)', margin: 0, direction: 'rtl' as const }}>قائمة انتظار التحليل</p>
               </div>
               {queue.length > 0 && (
-                <span style={{ fontSize: '12px', color: '#64748b', padding: '4px 12px', background: 'rgba(59,130,246,0.1)', borderRadius: '8px' }}>
-                  {queue.filter(f => f.status === 'complete').length}/{queue.length} complete
+                <span style={{ fontSize: '12px', color: 'var(--text-muted)', padding: '4px 12px', background: 'var(--accent-deepreal-surface)', borderRadius: '8px' }}>
+                  {isRTL
+                    ? `${queue.filter(f => f.status === 'complete').length}/${queue.length} مكتمل`
+                    : `${queue.filter(f => f.status === 'complete').length}/${queue.length} complete`}
                 </span>
               )}
             </div>
@@ -232,8 +240,8 @@ export default function DeepRealUploadPage() {
             {queue.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '40px 0' }}>
                 <div style={{ fontSize: '40px', marginBottom: '12px', opacity: 0.3 }}>📭</div>
-                <div style={{ color: '#64748b', fontSize: '14px' }}>No files in queue — upload files to begin analysis</div>
-                <div style={{ fontFamily: "'Cairo', sans-serif", color: '#475569', fontSize: '13px', marginTop: '4px', direction: 'rtl' as const }}>لا توجد ملفات — ارفع ملفات لبدء التحليل</div>
+                <div style={{ color: 'var(--text-muted)', fontSize: '14px' }}>{isRTL ? 'لا توجد ملفات في القائمة — ارفع ملفات لبدء التحليل' : 'No files in queue — upload files to begin analysis'}</div>
+                <div style={{ fontFamily: "'Cairo', sans-serif", color: 'var(--text-caption)', fontSize: '13px', marginTop: '4px', direction: 'rtl' as const }}>لا توجد ملفات — ارفع ملفات لبدء التحليل</div>
               </div>
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -241,22 +249,22 @@ export default function DeepRealUploadPage() {
                   <div key={i} className="queue-item" style={{
                     display: 'flex', alignItems: 'center', gap: '16px',
                     padding: '14px 16px', borderRadius: '10px',
-                    border: '1px solid rgba(100,116,139,0.1)', transition: 'background 0.2s',
+                    border: '1px solid var(--border-subtle)', transition: 'background 0.2s',
                   }}>
                     <div style={{ fontSize: '24px' }}>
                       {file.status === 'complete' ? '✅' : file.status === 'analyzing' ? '⏳' : '📄'}
                     </div>
                     <div style={{ flex: 1 }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-                        <span style={{ fontSize: '14px', fontWeight: 600, color: '#e2e8f0' }}>{file.name}</span>
-                        <span style={{ fontSize: '12px', color: '#64748b' }}>{file.size}</span>
+                        <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-primary)' }}>{file.name}</span>
+                        <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{file.size}</span>
                       </div>
                       {/* Progress bar */}
-                      <div style={{ height: '4px', background: 'rgba(30,41,59,0.8)', borderRadius: '2px', overflow: 'hidden' }}>
+                      <div style={{ height: '4px', background: 'var(--bg-secondary)', borderRadius: '2px', overflow: 'hidden' }}>
                         <div style={{
                           width: `${file.progress}%`, height: '100%', borderRadius: '2px',
                           background: file.status === 'complete'
-                            ? (file.result === 'Authentic' ? '#10b981' : file.result === 'Inconclusive' ? '#f59e0b' : '#ef4444')
+                            ? (file.result === 'Authentic' ? 'var(--accent-emerald)' : file.result === 'Inconclusive' ? 'var(--accent-amber)' : 'var(--accent-red)')
                             : 'linear-gradient(90deg, #3b82f6, #8b5cf6)',
                           backgroundSize: file.status === 'analyzing' ? '200% 100%' : '100% 100%',
                           animation: file.status === 'analyzing' ? 'shimmer 1.5s infinite' : 'none',
@@ -265,13 +273,17 @@ export default function DeepRealUploadPage() {
                       </div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4px' }}>
                         <span style={{ fontSize: '11px', color: getStatusColor(file.status), fontWeight: 600, textTransform: 'uppercase' }}>
-                          {file.status === 'analyzing' ? '⟳ Analyzing...' : file.status}
+                          {file.status === 'analyzing'
+                            ? (isRTL ? '⟳ جارٍ التحليل...' : '⟳ Analyzing...')
+                            : file.status === 'complete' ? (isRTL ? 'مكتمل' : 'complete')
+                            : file.status === 'error' ? (isRTL ? 'خطأ' : 'error')
+                            : (isRTL ? 'في الانتظار' : 'queued')}
                         </span>
                         {file.result && (
                           <Link href="/deepreal-forensics" style={{
                             fontSize: '11px', color: getResultColor(file.result), fontWeight: 700, textDecoration: 'none',
                           }}>
-                            {file.result} ({file.confidence}%) — View Details →
+                            {file.result} ({file.confidence}%){isRTL ? ' — عرض التفاصيل ←' : ' — View Details →'}
                           </Link>
                         )}
                       </div>

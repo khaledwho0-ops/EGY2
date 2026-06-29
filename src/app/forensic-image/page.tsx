@@ -212,14 +212,14 @@ export default function ForensicImagePage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#050510", color: "#e0e0e0", fontFamily: "'Inter', sans-serif" }} dir={isRTL ? "rtl" : "ltr"}>
+    <div style={{ minHeight: "100vh", background: "var(--bg-page)", color: "var(--text-primary)", fontFamily: "'Inter', sans-serif" }} dir={isRTL ? "rtl" : "ltr"}>
 
       {/* Ambient */}
       <div style={{ position: "fixed", inset: 0, background: "radial-gradient(ellipse at 50% 0%, rgba(16,185,129,0.06) 0%, transparent 50%)", pointerEvents: "none", zIndex: 0 }} />
 
       {/* Nav */}
       <nav style={{ position: "relative", zIndex: 10, padding: "1.5rem 2rem" }}>
-        <Link href="/deepreal" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "rgba(255,255,255,0.5)", textDecoration: "none", fontSize: "0.875rem", fontWeight: 500 }}>
+        <Link href="/deepreal" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "var(--text-muted)", textDecoration: "none", fontSize: "0.875rem", fontWeight: 500 }}>
           <ArrowLeft size={16} /> {t({ en: "Back to DeepReal", ar: "العودة إلى ديب ريل" })}
         </Link>
       </nav>
@@ -227,13 +227,13 @@ export default function ForensicImagePage() {
       {/* Header */}
       <header style={{ position: "relative", zIndex: 10, textAlign: "center", padding: "1rem 2rem 2rem", maxWidth: 800, margin: "0 auto" }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "5px 14px", borderRadius: 20, background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.3)", marginBottom: 16 }}>
-          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "2px", color: "#10b981", textTransform: "uppercase" }}>👁️ {t({ en: "Image Forensics", ar: "الطب الشرعي للصور" })}</span>
+          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "2px", color: "var(--accent-emerald)", textTransform: "uppercase" }}>👁️ {t({ en: "Image Forensics", ar: "الطب الشرعي للصور" })}</span>
         </div>
         <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>👁️</div>
-        <h1 style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", fontWeight: 800, margin: "0 0 0.75rem", background: "linear-gradient(135deg, #fff 30%, #10b981)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+        <h1 style={{ fontSize: "clamp(1.6rem, 4vw, 2.4rem)", fontWeight: 800, margin: "0 0 0.75rem", color: "var(--text-primary)" }}>
           {t({ en: "Image Forensics", ar: "الطب الشرعي للصور" })}
         </h1>
-        <p style={{ fontSize: "1rem", lineHeight: 1.7, color: "rgba(255,255,255,0.5)", maxWidth: 650, margin: "0 auto" }}>
+        <p style={{ fontSize: "1rem", lineHeight: 1.7, color: "var(--text-muted)", maxWidth: 650, margin: "0 auto" }}>
           {t({
             en: "Detect deepfakes, AI-generated images, Photoshop manipulation, and decontextualized media using 6 forensic techniques: ELA, EXIF, Clone Detection, Frequency Domain, rPPG, and Reverse Image Search.",
             ar: "اكشف التزييف العميق والصور المولّدة بالذكاء الاصطناعي والتلاعب بالفوتوشوب والوسائط المنزوعة السياق باستخدام 6 تقنيات جنائية: ELA، EXIF، كشف النسخ، النطاق الترددي، rPPG، والبحث العكسي."
@@ -252,9 +252,9 @@ export default function ForensicImagePage() {
           <button key={tab.key} onClick={() => setActiveTab(tab.key)} style={{
             padding: "10px 18px", borderRadius: 12, fontSize: "0.85rem", fontWeight: 600,
             cursor: "pointer", transition: "all 0.3s", border: "1px solid",
-            background: activeTab === tab.key ? "rgba(16,185,129,0.15)" : "rgba(255,255,255,0.03)",
-            borderColor: activeTab === tab.key ? "rgba(16,185,129,0.4)" : "rgba(255,255,255,0.08)",
-            color: activeTab === tab.key ? "#10b981" : "rgba(255,255,255,0.5)",
+            background: activeTab === tab.key ? "rgba(16,185,129,0.15)" : "var(--bg-card)",
+            borderColor: activeTab === tab.key ? "rgba(16,185,129,0.4)" : "var(--border-primary)",
+            color: activeTab === tab.key ? "var(--accent-emerald)" : "var(--text-muted)",
           }}>
             {t(tab.label)}
           </button>
@@ -267,11 +267,11 @@ export default function ForensicImagePage() {
         {/* TAB: TOOL */}
         {activeTab === "tool" && (
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-            <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(16,185,129,0.15)", borderRadius: 16, padding: 28, backdropFilter: "blur(8px)" }}>
-              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#10b981", margin: "0 0 8px", display: "flex", alignItems: "center", gap: 8 }}>
+            <div style={{ background: "var(--bg-card)", border: "1px solid rgba(16,185,129,0.15)", borderRadius: 16, padding: 28, backdropFilter: "blur(8px)" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--accent-emerald)", margin: "0 0 8px", display: "flex", alignItems: "center", gap: 8 }}>
                 <Eye size={20} /> {t({ en: "Analyze Image Authenticity", ar: "تحليل أصالة الصورة" })}
               </h3>
-              <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.4)", margin: "0 0 16px", lineHeight: 1.6 }}>
+              <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", margin: "0 0 16px", lineHeight: 1.6 }}>
                 {t({
                   en: "Enter a public image URL for multi-layer forensic analysis including ELA, EXIF extraction, AI-generation detection, and manipulation scoring.",
                   ar: "أدخل رابط صورة عامة لتحليل جنائي متعدد الطبقات يشمل ELA واستخراج EXIF وكشف التوليد بالذكاء الاصطناعي وتسجيل التلاعب."
@@ -280,21 +280,21 @@ export default function ForensicImagePage() {
               <input type="text" value={url} onChange={(e) => setUrl(e.target.value)}
                 placeholder={t({ en: "https://example.com/suspicious-image.jpg", ar: "https://example.com/suspicious-image.jpg" })}
                 style={{
-                  width: "100%", padding: 14, borderRadius: 10, background: "rgba(0,0,0,0.3)",
-                  color: "#10b981", border: "1px solid rgba(16,185,129,0.2)", outline: "none",
+                  width: "100%", padding: 14, borderRadius: 10, background: "var(--bg-elevated)",
+                  color: "var(--accent-emerald)", border: "1px solid rgba(16,185,129,0.2)", outline: "none",
                   fontSize: "0.9rem", fontFamily: "monospace", boxSizing: "border-box", marginBottom: 12
                 }}
               />
               <button onClick={handleAnalyze} disabled={loading || !url.trim()} style={{
                 width: "100%", padding: 14, borderRadius: 10,
                 background: loading || !url.trim() ? "rgba(16,185,129,0.1)" : "linear-gradient(135deg, rgba(16,185,129,0.25), rgba(16,185,129,0.1))",
-                color: "#10b981", fontWeight: 700, fontSize: "0.95rem",
+                color: "var(--accent-emerald)", fontWeight: 700, fontSize: "0.95rem",
                 border: "1px solid rgba(16,185,129,0.3)",
                 cursor: loading || !url.trim() ? "not-allowed" : "pointer",
                 opacity: loading || !url.trim() ? 0.5 : 1,
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8
               }}>
-                {loading ? <div style={{ width: 18, height: 18, border: "2px solid rgba(16,185,129,0.3)", borderTopColor: "#10b981", borderRadius: "50%", animation: "fi-spin 0.8s linear infinite" }} /> : <Sparkles size={18} />}
+                {loading ? <div style={{ width: 18, height: 18, border: "2px solid rgba(16,185,129,0.3)", borderTopColor: "var(--accent-emerald)", borderRadius: "50%", animation: "fi-spin 0.8s linear infinite" }} /> : <Sparkles size={18} />}
                 {t({ en: "Analyze Image", ar: "تحليل الصورة" })}
               </button>
             </div>
@@ -305,15 +305,15 @@ export default function ForensicImagePage() {
                 border: `1px solid ${result.error ? "rgba(239,68,68,0.2)" : "rgba(16,185,129,0.2)"}`,
                 borderRadius: 16, padding: 24
               }}>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: 16, display: "flex", alignItems: "center", gap: 8, color: result.error ? "#ef4444" : "#10b981" }}>
+                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: 16, display: "flex", alignItems: "center", gap: 8, color: result.error ? "var(--accent-red)" : "var(--accent-emerald)" }}>
                   {result.error ? <AlertTriangle size={20} /> : <Shield size={20} />}
                   {t({ en: "Forensic Report", ar: "التقرير الجنائي" })}
                 </h3>
                 <pre style={{
-                  background: "rgba(0,0,0,0.3)", padding: 16, borderRadius: 10,
+                  background: "var(--bg-elevated)", padding: 16, borderRadius: 10,
                   overflowX: "auto", fontSize: "0.8rem", lineHeight: 1.6,
-                  color: result.error ? "#ef4444" : "#6ee7b7",
-                  border: "1px solid rgba(255,255,255,0.06)"
+                  color: result.error ? "var(--accent-red)" : "var(--accent-emerald)",
+                  border: "1px solid var(--border-subtle)"
                 }}>
                   {JSON.stringify(result, null, 2)}
                 </pre>
@@ -322,7 +322,7 @@ export default function ForensicImagePage() {
 
             {/* Quick Tools */}
             <div style={{ background: "rgba(6,182,212,0.06)", border: "1px solid rgba(6,182,212,0.15)", borderRadius: 14, padding: 20 }}>
-              <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#06b6d4", margin: "0 0 12px" }}>
+              <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--accent-blue)", margin: "0 0 12px" }}>
                 🔧 {t({ en: "Free Forensic Tools", ar: "أدوات جنائية مجانية" })}
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -335,14 +335,14 @@ export default function ForensicImagePage() {
                 ].map((tool, i) => (
                   <a key={i} href={tool.url} target="_blank" rel="noopener" style={{
                     display: "flex", justifyContent: "space-between", alignItems: "center",
-                    padding: "10px 14px", borderRadius: 8, background: "rgba(0,0,0,0.2)",
+                    padding: "10px 14px", borderRadius: 8, background: "var(--bg-elevated)",
                     textDecoration: "none", color: "inherit"
                   }}>
                     <div>
-                      <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#06b6d4" }}>{tool.name}</span>
-                      <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.4)", display: "block" }}>{t(tool.desc)}</span>
+                      <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--accent-blue)" }}>{tool.name}</span>
+                      <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", display: "block" }}>{t(tool.desc)}</span>
                     </div>
-                    <Globe size={14} color="rgba(255,255,255,0.3)" />
+                    <Globe size={14} color="var(--text-caption)" />
                   </a>
                 ))}
               </div>
@@ -353,12 +353,12 @@ export default function ForensicImagePage() {
         {/* TAB: TECHNIQUES */}
         {activeTab === "techniques" && (
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.4)", textAlign: "center", margin: "0 0 8px" }}>
+            <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", textAlign: "center", margin: "0 0 8px" }}>
               {t({ en: "Deep-dive into each forensic technique — how it works, what it catches, and its limitations.", ar: "تعمق في كل تقنية جنائية — كيف تعمل، ماذا تكشف، وما حدودها." })}
             </p>
             {TECHNIQUES.map((tech, i) => (
               <div key={i} style={{
-                background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)",
+                background: "var(--bg-card)", border: "1px solid var(--border-primary)",
                 borderRadius: 16, overflow: "hidden", borderLeft: `4px solid ${tech.color}`
               }}>
                 <button onClick={() => setExpandedTech(expandedTech === i ? null : i)} style={{
@@ -372,25 +372,25 @@ export default function ForensicImagePage() {
                     <h4 style={{ fontSize: "1rem", fontWeight: 700, color: tech.color, margin: 0 }}>{t(tech.title)}</h4>
                   </div>
                   <ChevronRight size={18} style={{
-                    color: "rgba(255,255,255,0.3)", transition: "transform 0.3s",
+                    color: "var(--text-caption)", transition: "transform 0.3s",
                     transform: expandedTech === i ? "rotate(90deg)" : "rotate(0deg)"
                   }} />
                 </button>
                 {expandedTech === i && (
                   <div style={{ padding: "0 20px 20px", animation: "fi-fadeUp 0.3s ease-out" }}>
                     <div style={{ marginBottom: 12 }}>
-                      <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#10b981", textTransform: "uppercase", letterSpacing: 1 }}>
+                      <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "var(--accent-emerald)", textTransform: "uppercase", letterSpacing: 1 }}>
                         {t({ en: "HOW IT WORKS", ar: "كيف يعمل" })}
                       </span>
-                      <p style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.8, margin: "4px 0 0" }}>
+                      <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.8, margin: "4px 0 0" }}>
                         {t(tech.howItWorks)}
                       </p>
                     </div>
                     <div style={{ padding: "10px 14px", borderRadius: 8, background: "rgba(249,115,22,0.06)", border: "1px solid rgba(249,115,22,0.15)" }}>
-                      <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#f97316", textTransform: "uppercase", letterSpacing: 1 }}>
+                      <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "var(--accent-amber)", textTransform: "uppercase", letterSpacing: 1 }}>
                         ⚠️ {t({ en: "LIMITATIONS", ar: "القيود" })}
                       </span>
-                      <p style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.7, margin: "4px 0 0" }}>
+                      <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", lineHeight: 1.7, margin: "4px 0 0" }}>
                         {t(tech.limitations)}
                       </p>
                     </div>
@@ -400,11 +400,11 @@ export default function ForensicImagePage() {
             ))}
 
             {/* Islamic Context */}
-            <div style={{ background: "rgba(212,168,67,0.06)", border: "1px solid rgba(212,168,67,0.2)", borderRadius: 16, padding: 24, borderLeft: "4px solid #d4a843" }}>
-              <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#d4a843", margin: "0 0 12px" }}>
+            <div style={{ background: "rgba(212,168,67,0.06)", border: "1px solid rgba(212,168,67,0.2)", borderRadius: 16, padding: 24, borderLeft: "4px solid var(--accent-amber)" }}>
+              <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--accent-amber)", margin: "0 0 12px" }}>
                 🕌 {t({ en: "Islamic Duty: Image Verification Before Sharing", ar: "الواجب الإسلامي: التحقق من الصور قبل المشاركة" })}
               </h4>
-              <div style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.9 }}>
+              <div style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 1.9 }}>
                 <p style={{ margin: "0 0 10px" }}>
                   {t({
                     en: "Quran 49:6 — \"O you who believe, if a sinful person brings you NEWS, verify it\" — in the digital age, this 'news' includes images and videos. Sharing a manipulated image that harms someone's reputation violates Quran 49:12 (backbiting) and 24:4 (false accusation).",
@@ -425,12 +425,12 @@ export default function ForensicImagePage() {
         {/* TAB: CASES */}
         {activeTab === "cases" && (
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.4)", textAlign: "center", margin: "0 0 8px" }}>
+            <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", textAlign: "center", margin: "0 0 8px" }}>
               {t({ en: "Real Egyptian scenarios demonstrating forensic image analysis in action.", ar: "سيناريوهات مصرية حقيقية توضح التحليل الجنائي للصور عملياً." })}
             </p>
             {IMAGE_CASES.map((cs, i) => (
               <div key={i} style={{
-                background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)",
+                background: "var(--bg-card)", border: "1px solid var(--border-primary)",
                 borderRadius: 16, overflow: "hidden", borderLeft: `4px solid ${cs.verdictColor}`
               }}>
                 <button onClick={() => setExpandedCase(expandedCase === i ? null : i)} style={{
@@ -440,20 +440,20 @@ export default function ForensicImagePage() {
                   textAlign: isRTL ? "right" : "left"
                 }}>
                   <div>
-                    <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", margin: "0 0 4px" }}>{t(cs.title)}</h4>
+                    <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 4px" }}>{t(cs.title)}</h4>
                     <span style={{ fontSize: "0.75rem", fontWeight: 700, padding: "2px 10px", borderRadius: 6, background: `${cs.verdictColor}15`, color: cs.verdictColor }}>{t(cs.verdict)}</span>
                   </div>
                   <ChevronRight size={18} style={{
-                    color: "rgba(255,255,255,0.3)", transition: "transform 0.3s",
+                    color: "var(--text-caption)", transition: "transform 0.3s",
                     transform: expandedCase === i ? "rotate(90deg)" : "rotate(0deg)"
                   }} />
                 </button>
                 {expandedCase === i && (
                   <div style={{ padding: "0 20px 20px", animation: "fi-fadeUp 0.3s ease-out" }}>
-                    <p style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.8, margin: "0 0 12px" }}>{t(cs.desc)}</p>
+                    <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.8, margin: "0 0 12px" }}>{t(cs.desc)}</p>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                       {cs.techniques.map((tech, j) => (
-                        <span key={j} style={{ fontSize: "0.7rem", fontWeight: 600, padding: "4px 10px", borderRadius: 6, background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.2)", color: "#6ee7b7" }}>{tech}</span>
+                        <span key={j} style={{ fontSize: "0.7rem", fontWeight: 600, padding: "4px 10px", borderRadius: 6, background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.2)", color: "var(--accent-emerald)" }}>{tech}</span>
                       ))}
                     </div>
                   </div>
@@ -466,24 +466,24 @@ export default function ForensicImagePage() {
         {/* TAB: PROTOCOL */}
         {activeTab === "protocol" && (
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#10b981", textAlign: "center", margin: "0 0 8px" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--accent-emerald)", textAlign: "center", margin: "0 0 8px" }}>
               {t({ en: "6-Step Image Verification Protocol", ar: "بروتوكول التحقق من الصور — ٦ خطوات" })}
             </h3>
             {VERIFICATION_STEPS.map((item, i) => (
               <div key={i} style={{
-                background: "rgba(255,255,255,0.03)", border: `1px solid ${item.color}20`,
+                background: "var(--bg-card)", border: `1px solid ${item.color}20`,
                 borderRadius: 14, padding: 20, borderLeft: `4px solid ${item.color}`
               }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
                   <span style={{ fontSize: "1.5rem" }}>{item.icon}</span>
                   <div>
-                    <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "rgba(255,255,255,0.3)", textTransform: "uppercase" }}>
+                    <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "var(--text-caption)", textTransform: "uppercase" }}>
                       {t({ en: `Step ${i + 1}`, ar: `الخطوة ${i + 1}` })}
                     </span>
                     <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: item.color, margin: 0 }}>{t(item.step)}</h4>
                   </div>
                 </div>
-                <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.7, margin: 0, paddingLeft: isRTL ? 0 : 44, paddingRight: isRTL ? 44 : 0 }}>
+                <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.7, margin: 0, paddingLeft: isRTL ? 0 : 44, paddingRight: isRTL ? 44 : 0 }}>
                   {t(item.detail)}
                 </p>
               </div>

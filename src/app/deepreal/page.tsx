@@ -3,6 +3,7 @@ import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { PageNavigation } from '@/components/shared/page-navigation';
 import { PageAIChatbot } from '@/components/shared/page-ai-chatbot';
+import { useRTL } from '@/components/shared/rtl-provider';
 
 const toolCards = [
   {
@@ -10,6 +11,7 @@ const toolCards = [
     title: 'Image Forensics',
     titleAr: 'تحليل الصور الجنائي',
     desc: 'ELA, noise analysis, clone detection, and JPEG ghost analysis to expose pixel-level manipulation in images.',
+    descAr: 'تحليل مستوى الخطأ والضوضاء وكشف النسخ وتحليل أشباح JPEG لكشف التلاعب على مستوى البكسل في الصور.',
     href: '/forensic-image',
     color: '#3b82f6',
   },
@@ -18,6 +20,7 @@ const toolCards = [
     title: 'Video Analysis',
     titleAr: 'تحليل الفيديو',
     desc: 'Frame-by-frame deepfake detection using temporal consistency checks, lip-sync analysis, and GAN artifact scanning.',
+    descAr: 'كشف التزييف العميق إطارًا بإطار باستخدام فحص الاتساق الزمني وتحليل تزامن الشفايف ومسح آثار شبكات GAN.',
     href: '/deepreal-forensics',
     color: '#8b5cf6',
   },
@@ -26,6 +29,7 @@ const toolCards = [
     title: 'Audio Check',
     titleAr: 'فحص الصوت',
     desc: 'Voice cloning detection via spectral analysis, formant tracking, and neural vocoder artifact identification.',
+    descAr: 'كشف استنساخ الصوت عبر التحليل الطيفي وتتبّع الفورمانت وتحديد آثار المُرمِّز الصوتي العصبي.',
     href: '/deepreal-upload',
     color: '#f59e0b',
   },
@@ -34,12 +38,14 @@ const toolCards = [
     title: 'C2PA Verification',
     titleAr: 'التحقق من C2PA',
     desc: 'Content Credentials verification using the Coalition for Content Provenance and Authenticity standard.',
+    descAr: 'التحقق من بيانات اعتماد المحتوى باستخدام معيار تحالف إثبات أصل ومصداقية المحتوى.',
     href: '/forensic-c2pa',
     color: '#10b981',
   },
 ];
 
 export default function DeepRealPage() {
+  const { isRTL } = useRTL();
   const [dragActive, setDragActive] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [uploadedFiles, setUploadedFiles] = useState<string[]>([]);
@@ -88,18 +94,18 @@ export default function DeepRealPage() {
           box-shadow: 0 20px 60px rgba(0,0,0,0.4);
         }
         .dr-history-row:hover {
-          background: rgba(59,130,246,0.08) !important;
+          background: var(--bg-elevated) !important;
         }
         .dr-dropzone-active {
-          border-color: #3b82f6 !important;
-          background: rgba(59,130,246,0.08) !important;
+          border-color: var(--accent-blue) !important;
+          background: var(--accent-religionhub-surface) !important;
         }
       `}</style>
-      <div style={{
+      <div dir={isRTL ? 'rtl' : 'ltr'} style={{
         minHeight: '100vh',
-        background: '#020617',
+        background: 'var(--bg-page)',
         fontFamily: "'Inter', sans-serif",
-        color: '#e2e8f0',
+        color: 'var(--text-primary)',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -123,29 +129,31 @@ export default function DeepRealPage() {
           <div style={{ textAlign: 'center', marginBottom: '60px', animation: 'fadeInUp 0.6s ease' }}>
             <div style={{
               display: 'inline-block', padding: '6px 20px', borderRadius: '20px', marginBottom: '20px',
-              background: 'rgba(59,130,246,0.15)', border: '1px solid rgba(59,130,246,0.3)',
-              fontSize: '13px', fontWeight: 600, color: '#60a5fa', letterSpacing: '2px', textTransform: 'uppercase',
+              background: 'var(--accent-religionhub-surface)', border: '1px solid var(--border-secondary)',
+              fontSize: '13px', fontWeight: 600, color: 'var(--accent-blue)', letterSpacing: '2px', textTransform: 'uppercase',
             }}>
-              Engine 01 — Verification Command Center
+              {isRTL ? 'المحرك 01 — مركز قيادة التحقق' : 'Engine 01 — Verification Command Center'}
             </div>
             <h1 style={{
               fontSize: '52px', fontWeight: 900, margin: '0 0 8px 0', lineHeight: 1.1,
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4)',
+              background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-indigo), #06b6d4)',
               WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
             }}>
-              Forensics Dashboard
+              {isRTL ? 'لوحة التحليل الجنائي' : 'Forensics Dashboard'}
             </h1>
-            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '22px', color: '#94a3b8', margin: '8px 0 0 0', direction: 'rtl' as const }}>
+            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '22px', color: 'var(--text-secondary)', margin: '8px 0 0 0', direction: 'rtl' as const }}>
               مركز قيادة التحقق من الوسائط المتعددة
             </p>
-            <p style={{ color: '#64748b', fontSize: '15px', marginTop: '12px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
-              Powered by 6-layer forensic analysis pipeline. Detect deepfakes, verify provenance, and protect against synthetic media threats.
+            <p style={{ color: 'var(--text-muted)', fontSize: '15px', marginTop: '12px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
+              {isRTL
+                ? 'مدعوم بخط معالجة جنائي من 6 طبقات. اكشف التزييف العميق، وتحقق من أصل المحتوى، واحمِ نفسك من تهديدات الوسائط الاصطناعية.'
+                : 'Powered by 6-layer forensic analysis pipeline. Detect deepfakes, verify provenance, and protect against synthetic media threats.'}
             </p>
             <Link href="/explore" style={{
               display: 'inline-flex', alignItems: 'center', gap: '6px', marginTop: '16px',
-              color: '#60a5fa', fontSize: '14px', textDecoration: 'none',
+              color: 'var(--accent-blue)', fontSize: '14px', textDecoration: 'none',
             }}>
-              ← Back to Explore
+              {isRTL ? '→ الرجوع إلى الاستكشاف' : '← Back to Explore'}
             </Link>
           </div>
 
@@ -162,8 +170,8 @@ export default function DeepRealPage() {
                   onMouseEnter={() => setHoveredCard(i)}
                   onMouseLeave={() => setHoveredCard(null)}
                   style={{
-                    background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(12px)',
-                    border: `1px solid ${hoveredCard === i ? card.color : 'rgba(59,130,246,0.15)'}`,
+                    background: 'var(--bg-card)', backdropFilter: 'blur(12px)',
+                    border: `1px solid ${hoveredCard === i ? card.color : 'var(--border-primary)'}`,
                     borderRadius: '16px', padding: '28px',
                     transition: 'all 0.3s ease', cursor: 'pointer',
                     animation: `fadeInUp ${0.5 + i * 0.1}s ease`,
@@ -177,16 +185,16 @@ export default function DeepRealPage() {
                     opacity: hoveredCard === i ? 1 : 0, transition: 'opacity 0.3s',
                   }} />
                   <div style={{ fontSize: '40px', marginBottom: '16px' }}>{card.icon}</div>
-                  <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#f1f5f9', margin: '0 0 4px 0' }}>{card.title}</h3>
+                  <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-primary)', margin: '0 0 4px 0' }}>{isRTL ? card.titleAr : card.title}</h3>
                   <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '14px', color: card.color, margin: '0 0 12px 0', direction: 'rtl' as const }}>
                     {card.titleAr}
                   </p>
-                  <p style={{ fontSize: '13px', color: '#94a3b8', lineHeight: 1.6, margin: '0 0 16px 0' }}>{card.desc}</p>
+                  <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.6, margin: '0 0 16px 0' }}>{isRTL ? card.descAr : card.desc}</p>
                   <div style={{
                     display: 'flex', justifyContent: 'flex-end', alignItems: 'center',
-                    borderTop: '1px solid rgba(100,116,139,0.2)', paddingTop: '12px',
+                    borderTop: '1px solid var(--border-subtle)', paddingTop: '12px',
                   }}>
-                    <span style={{ fontSize: '13px', color: card.color, fontWeight: 600 }}>Launch →</span>
+                    <span style={{ fontSize: '13px', color: card.color, fontWeight: 600 }}>{isRTL ? 'تشغيل →' : 'Launch →'}</span>
                   </div>
                 </div>
               </Link>
@@ -202,38 +210,40 @@ export default function DeepRealPage() {
             onDrop={handleDrop}
             className={dragActive ? 'dr-dropzone-active' : ''}
             style={{
-              background: dragActive ? 'rgba(59,130,246,0.08)' : 'rgba(15,23,42,0.6)',
+              background: dragActive ? 'var(--accent-religionhub-surface)' : 'var(--bg-card)',
               backdropFilter: 'blur(12px)',
-              border: `2px dashed ${dragActive ? '#3b82f6' : 'rgba(100,116,139,0.3)'}`,
+              border: `2px dashed ${dragActive ? 'var(--accent-blue)' : 'var(--border-secondary)'}`,
               borderRadius: '16px', padding: '60px 40px', textAlign: 'center',
               transition: 'all 0.3s ease', cursor: 'pointer', animation: 'fadeInUp 1s ease',
             }}
           >
             <div style={{ fontSize: '48px', marginBottom: '16px' }}>{dragActive ? '📥' : '🔍'}</div>
-            <h3 style={{ fontSize: '22px', fontWeight: 700, color: '#f1f5f9', margin: '0 0 8px 0' }}>
-              {dragActive ? 'Drop to Analyze' : 'Quick Verify — Drop Media Here'}
+            <h3 style={{ fontSize: '22px', fontWeight: 700, color: 'var(--text-primary)', margin: '0 0 8px 0' }}>
+              {dragActive
+                ? (isRTL ? 'أفلت الملف للتحليل' : 'Drop to Analyze')
+                : (isRTL ? 'تحقق سريع — أفلت الوسائط هنا' : 'Quick Verify — Drop Media Here')}
             </h3>
-            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '16px', color: '#64748b', direction: 'rtl' as const, margin: '0 0 16px 0' }}>
+            <p style={{ fontFamily: "'Cairo', sans-serif", fontSize: '16px', color: 'var(--text-muted)', direction: 'rtl' as const, margin: '0 0 16px 0' }}>
               اسحب الملفات هنا للتحقق السريع
             </p>
-            <p style={{ fontSize: '13px', color: '#64748b' }}>
-              Supports JPG, PNG, MP4, WAV, PDF — Max 50MB per file
+            <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>
+              {isRTL ? 'يدعم JPG و PNG و MP4 و WAV و PDF — حد أقصى 50 ميجابايت للملف' : 'Supports JPG, PNG, MP4, WAV, PDF — Max 50MB per file'}
             </p>
             <div style={{ display: 'flex', gap: '8px', justifyContent: 'center', marginTop: '16px', flexWrap: 'wrap' }}>
               {['JPG', 'PNG', 'MP4', 'WAV', 'PDF'].map(fmt => (
                 <span key={fmt} style={{
                   padding: '4px 12px', borderRadius: '6px', fontSize: '11px', fontWeight: 600,
-                  background: 'rgba(59,130,246,0.1)', color: '#60a5fa', border: '1px solid rgba(59,130,246,0.2)',
+                  background: 'var(--accent-religionhub-surface)', color: 'var(--accent-blue)', border: '1px solid var(--border-secondary)',
                 }}>
                   .{fmt}
                 </span>
               ))}
             </div>
             {uploadedFiles.length > 0 && (
-              <div style={{ marginTop: '20px', borderTop: '1px solid rgba(100,116,139,0.2)', paddingTop: '16px' }}>
-                <div style={{ fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Queued for analysis:</div>
+              <div style={{ marginTop: '20px', borderTop: '1px solid var(--border-subtle)', paddingTop: '16px' }}>
+                <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '8px' }}>{isRTL ? 'في انتظار التحليل:' : 'Queued for analysis:'}</div>
                 {uploadedFiles.map((f, i) => (
-                  <div key={i} style={{ fontSize: '13px', color: '#60a5fa', padding: '4px 0' }}>📄 {f}</div>
+                  <div key={i} style={{ fontSize: '13px', color: 'var(--accent-blue)', padding: '4px 0' }}>📄 {f}</div>
                 ))}
               </div>
             )}

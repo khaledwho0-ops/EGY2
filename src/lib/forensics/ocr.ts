@@ -7,7 +7,12 @@
 import { createWorker, type Worker } from "tesseract.js";
 import { tmpdir } from "os";
 
-const OCR_TIMEOUT_MS = 25_000; // fail loud before Vercel's 60s wall, never hang
+// Cold-start on Vercel must download the eng+ara traineddata from the CDN into
+// /tmp. The Arabic model is large, so init can take ~30s on a cold function; we
+// give it 45s (under the route's 60s maxDuration) before failing loud. Once a
+// worker is cached in a warm instance, recognition itself is fast (~a few s).
+const OCR_INIT_TIMEOUT_MS = 45_000;
+const OCR_RECOGNIZE_TIMEOUT_MS = 20_000;
 
 function withTimeout<T>(p: Promise<T>, ms: number, label: string): Promise<T> {
   return Promise.race([
@@ -24,11 +29,12 @@ async function getWorker(): Promise<Worker> {
   if (!workerPromise) {
     // On Vercel the only writable dir is os.tmpdir() (/tmp); the default Tesseract
     // cachePath "." is the read-only deployment dir, so the traineddata write
-    // hangs → FUNCTION_INVOCATION_TIMEOUT (504). Cache to /tmp and time-box init
-    // so a stuck cold-start download rejects loudly instead of hanging.
+    // hangs → FUNCTION_INVOCATION_TIMEOUT (504). Cache to /tmp (persists within a
+    // warm instance) and time-box init so a stuck cold-start download rejects
+    // loudly with a structured 503 instead of hanging into a 504.
     workerPromise = withTimeout(
       createWorker(["eng", "ara"], 1, { cachePath: tmpdir() }),
-      OCR_TIMEOUT_MS,
+      OCR_INIT_TIMEOUT_MS,
       "worker-init",
     ).catch((e) => {
       workerPromise = null; // allow a later request to retry instead of re-awaiting a rejected promise
@@ -41,6 +47,6 @@ async function getWorker(): Promise<Worker> {
 /** Extract text from an image buffer. Returns "" if nothing readable. */
 export async function ocrImage(buffer: Buffer): Promise<string> {
   const worker = await getWorker();
-  const { data } = await withTimeout(worker.recognize(buffer), OCR_TIMEOUT_MS, "recognize");
+  const { data } = await withTimeout(worker.recognize(buffer), OCR_RECOGNIZE_TIMEOUT_MS, "recognize");
   return (data?.text || "").trim();
 }

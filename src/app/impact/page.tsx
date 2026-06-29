@@ -94,9 +94,14 @@ const FEATURE_CATEGORIES = [
 ];
 
 export default function ImpactPage() {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  // Initialise to null so the server and the first client render agree (both show the
+  // placeholder); the real clock is set on the client after mount. Initialising with
+  // `new Date()` rendered a locale time string that differed server↔client → React
+  // hydration error #418. See the screen-record suite (/impact).
+  const [currentTime, setCurrentTime] = useState<Date | null>(null);
 
   useEffect(() => {
+    setCurrentTime(new Date());
     const iv = setInterval(() => setCurrentTime(new Date()), 1000);
     return () => clearInterval(iv);
   }, []);
@@ -123,7 +128,7 @@ export default function ImpactPage() {
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full mb-6">
             <span className="w-2 h-2 bg-red-400 rounded-full animate-pulse" />
-            <span className="text-red-400 text-sm font-semibold">LIVE METRICS — {currentTime.toLocaleTimeString("ar-EG")}</span>
+            <span className="text-red-400 text-sm font-semibold">LIVE METRICS — {currentTime ? currentTime.toLocaleTimeString("ar-EG") : "—:—:—"}</span>
           </div>
           <h1 className="text-5xl sm:text-7xl font-extrabold mb-6" style={{ lineHeight: 1.1 }}>
             <span className="bg-gradient-to-r from-white via-purple-300 to-cyan-300 bg-clip-text text-transparent">

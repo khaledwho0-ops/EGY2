@@ -261,13 +261,19 @@ export async function aiGenerate(
   }
   messages.push({ role: "user", content: prompt });
 
-  // Ordered by quality → speed → availability
-  // NVIDIA NIM is PRIMARY (strongest reasoning)
+  // Ordered for RELIABILITY + SPEED first (chatbot UX).
+  // The fast, dependable free providers (Gemini, Groq) LEAD so a reply lands in
+  // ~2-5s. The NVIDIA 550B / DeepSeek models reason well but are intermittently
+  // slow: when they led, two stacked 12s timeouts pushed every fallthrough to
+  // ~25-29s, which the chat fetch experienced as "couldn't connect" (and the
+  // 550B also followed the page system-prompt poorly). They now TRAIL as
+  // reasoning fallbacks. NOTE: claim mode still tries NVIDIA first via
+  // nvidiaFirstGenerate() — that dedicated path is unaffected by this order.
   const providers = [
-    { name: "NVIDIA NIM", fn: () => callNvidia(messages) },
-    { name: "NVIDIA DeepSeek", fn: () => callNvidiaFast(messages) },
     { name: "Gemini", fn: () => callGemini(messages) },
     { name: "Groq", fn: () => callGroq(messages) },
+    { name: "NVIDIA NIM", fn: () => callNvidia(messages) },
+    { name: "NVIDIA DeepSeek", fn: () => callNvidiaFast(messages) },
     { name: "GitHub", fn: () => callGitHub(messages) },
     { name: "HuggingFace", fn: () => callHuggingFace(messages) },
   ];

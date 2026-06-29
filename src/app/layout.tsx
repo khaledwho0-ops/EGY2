@@ -6,6 +6,7 @@ import { RTLProvider } from "@/components/shared/rtl-provider";
 import { Navbar } from "@/components/shared/navbar";
 import { Footer } from "@/components/shared/footer";
 import { ExploreHub } from "@/components/shared/explore-hub";
+import { GlobalPageChatbot } from "@/components/shared/global-page-chatbot";
 import { PageGuide } from "@/components/shared/page-guide";
 import { AuthInit } from "@/components/shared/auth-init";
 import { QuarantineProvider } from "@/components/science/quarantine-provider";
@@ -147,6 +148,9 @@ export default function RootLayout({
 
             {/* Explore Hub — Full-screen page directory + live verification tools */}
             <ExploreHub />
+
+            {/* Global page-aware AI assistant — on every page; reads PAGE_GUIDES per route, One-Law-bound */}
+            <GlobalPageChatbot />
 
             {/* Offline Service Worker Registration (§23.1 Addition #8) — production only */}
             <script

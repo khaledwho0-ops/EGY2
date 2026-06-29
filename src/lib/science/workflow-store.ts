@@ -1,5 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import path from "path";
+import os from "os";
 // node:sqlite is dynamically imported in getDatabase() — it requires Node.js 22.5+
 // and is unavailable on Vercel's Node 20 runtime.
 type DatabaseSync = import("node:sqlite").DatabaseSync;
@@ -103,8 +104,15 @@ const EMPTY_STORE: WorkflowStore = {
   lastRefreshAt: null,
 };
 
-const SQLITE_PATH = path.join(process.cwd(), ".runtime", "science.db");
-const LEGACY_JSON_PATH = path.join(process.cwd(), ".runtime", "science-workflow.json");
+// process.cwd() is READ-ONLY on Vercel serverless (writes throw EROFS); only
+// os.tmpdir() (/tmp) is writable there. Route the runtime store accordingly so
+// POST writes (workflow progress, refresh) succeed instead of crashing with a
+// bare empty 500. Locally we keep the in-repo .runtime dir.
+const RUNTIME_DIR = process.env.VERCEL
+  ? path.join(os.tmpdir(), "eal-runtime")
+  : path.join(process.cwd(), ".runtime");
+const SQLITE_PATH = path.join(RUNTIME_DIR, "science.db");
+const LEGACY_JSON_PATH = path.join(RUNTIME_DIR, "science-workflow.json");
 
 let database: DatabaseSync | null = null;
 let sqliteUnavailable = false;
@@ -160,7 +168,7 @@ type SourceRow = {
 };
 
 function ensureRuntimeDir() {
-  mkdirSync(path.dirname(SQLITE_PATH), { recursive: true });
+  mkdirSync(RUNTIME_DIR, { recursive: true });
 }
 
 function getDatabase() {

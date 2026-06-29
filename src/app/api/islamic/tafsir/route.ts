@@ -3,7 +3,11 @@ import { ERR } from "@/lib/api/api-error";
 import { withSearchCache } from "@/lib/api/search-cache";
 import { nvidiaFirstGenerateJSON } from "@/lib/ai/nvidia-first";
 
-const EXTERNAL_API_URL = "https://api.quran-tafseer.com/tafseer";
+// NOTE: api.quran-tafseer.com serves the tafsir corpus over plain HTTP only — its
+// HTTPS port has no valid certificate, so https:// throws FETCH_FAILED every time.
+// Use http:// for this specific upstream. The route still fails loud (500) if the
+// host is genuinely down, so the One-Law (never fabricate tafsir) holds.
+const EXTERNAL_API_URL = "http://api.quran-tafseer.com/tafseer";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

@@ -3,7 +3,18 @@ import type { ForensicFinding } from "@/lib/ai/forensic-analysis";
 
 export async function POST(request: Request) {
   try {
-    const formData = await request.formData();
+    // This endpoint requires a multipart/form-data upload (file or url field).
+    // If the body is not multipart (e.g. JSON), formData() throws a TypeError —
+    // that is a CLIENT error, so surface a structured 400, not a generic 500.
+    let formData: FormData;
+    try {
+      formData = await request.formData();
+    } catch {
+      return NextResponse.json(
+        { error: "Send the audio as multipart/form-data with a 'file' or 'url' field." },
+        { status: 400 }
+      );
+    }
     const file = formData.get("file");
     const url = formData.get("url");
 

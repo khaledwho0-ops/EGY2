@@ -40,6 +40,15 @@ export async function POST(req: Request) {
       sources: v.admissible.slice(0, 6).map((s) => ({ url: s.url, tier: s.tier, title: s.title })),
     });
   } catch (e) {
-    return NextResponse.json({ error: (e as Error)?.message || "OCR failed" }, { status: 500 });
+    const msg = (e as Error)?.message || "OCR failed";
+    // Cold-start init/recognition timed out → fail loud with a structured 503
+    // instead of hanging into a 504. One-Law: never fabricate OCR text.
+    if (msg.startsWith("OCR_TIMEOUT")) {
+      return NextResponse.json(
+        { ok: false, error: "OCR_UNAVAILABLE", detail: "OCR engine could not initialize in time. Please try again." },
+        { status: 503 }
+      );
+    }
+    return NextResponse.json({ ok: false, error: msg }, { status: 500 });
   }
 }

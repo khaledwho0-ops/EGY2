@@ -181,6 +181,10 @@ async function callNvidia(messages: AIMessage[]): Promise<AIResponse> {
   const start = Date.now();
   const res = await fetch("https://integrate.api.nvidia.com/v1/chat/completions", {
     method: "POST",
+    // FIX (NVIDIA-550B-first hang): bound the 550B call so a slow/streaming
+    // response fails fast and aiGenerate's cascade falls through to Gemini/Groq
+    // instead of blocking the whole route until the Vercel function ceiling.
+    signal: AbortSignal.timeout(12000),
     headers: {
       Authorization: `Bearer ${key}`,
       "Content-Type": "application/json",
@@ -212,6 +216,9 @@ async function callNvidiaFast(messages: AIMessage[]): Promise<AIResponse> {
   const start = Date.now();
   const res = await fetch("https://integrate.api.nvidia.com/v1/chat/completions", {
     method: "POST",
+    // FIX (NVIDIA-550B-first hang): same bounded-timeout guard as callNvidia so a
+    // stalled NVIDIA endpoint fails fast and the cascade reaches Gemini/Groq.
+    signal: AbortSignal.timeout(12000),
     headers: {
       Authorization: `Bearer ${key}`,
       "Content-Type": "application/json",

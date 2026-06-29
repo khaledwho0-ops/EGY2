@@ -75,6 +75,27 @@ export async function POST(request: Request) {
       }
     }
 
+    // Final fallback: the platform MegaRotator (Gemini → Groq → … → NVIDIA).
+    // The single GEMINI_API_KEY read above is frequently absent on Vercel (the
+    // keys feeding the rotator are GEMINI_API_KEY_2..7 etc.), which caused a
+    // false 503 even though healthy provider slots existed. One-Law: the rotator
+    // returns 503 (fail loud, no fabrication) only if EVERY provider is down.
+    try {
+      const { rotatingGenerateText } = await import("@/lib/debunking/gemini-rotator");
+      const systemMsg = messages.find((m: any) => m.role === "system")?.content || "";
+      const userMsg = messages.find((m: any) => m.role === "user")?.content || "";
+      const { text, provider } = await rotatingGenerateText({
+        prompt: userMsg,
+        system: systemMsg || undefined,
+        temperature,
+      });
+      if (text && text.trim()) {
+        return NextResponse.json({ content: text, model: "rotator", provider });
+      }
+    } catch (rotatorErr) {
+      console.error("[NVIDIA Complete] Rotator fallback error:", rotatorErr);
+    }
+
     return NextResponse.json({ error: "No AI provider available" }, { status: 503 });
   } catch (error) {
     console.error("[NVIDIA Complete API Error]", error);

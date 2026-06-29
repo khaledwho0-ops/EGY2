@@ -3,7 +3,25 @@ import type { ForensicFinding } from "@/lib/ai/forensic-analysis";
 
 export async function POST(request: Request) {
   try {
-    const formData = await request.formData();
+    // Requires multipart/form-data ('file' or 'url'). A non-multipart body
+    // (e.g. JSON) makes formData() throw — surface a structured 415/400 instead
+    // of letting it fall through to a generic 500 crash.
+    const contentType = request.headers.get("content-type") ?? "";
+    if (!contentType.includes("multipart/form-data")) {
+      return NextResponse.json(
+        { error: "Request must be multipart/form-data with a 'file' or 'url' field." },
+        { status: 415 }
+      );
+    }
+    let formData: FormData;
+    try {
+      formData = await request.formData();
+    } catch {
+      return NextResponse.json(
+        { error: "Failed to parse multipart form data." },
+        { status: 400 }
+      );
+    }
     const file = formData.get("file");
     const url = formData.get("url");
 

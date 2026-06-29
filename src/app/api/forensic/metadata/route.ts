@@ -2,7 +2,18 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
-    const formData = await request.formData();
+    // Requires multipart/form-data ('file' or 'url'). A non-multipart body
+    // (e.g. JSON) makes formData() throw — that is a CLIENT error, so return a
+    // structured 400 instead of falling through to a generic 500.
+    let formData: FormData;
+    try {
+      formData = await request.formData();
+    } catch {
+      return NextResponse.json(
+        { error: "Expected multipart/form-data with a 'file' or 'url' field." },
+        { status: 400 }
+      );
+    }
     const file = formData.get("file");
     const url = formData.get("url");
 

@@ -17,6 +17,7 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  try {
   const body = (await request.json()) as {
     module: ModuleId;
     kind: "step" | "rule" | "scenario" | "exercise" | "myth" | "trick" | "reverse" | "guide" | "refresh";
@@ -76,4 +77,14 @@ export async function POST(request: Request) {
   });
 
   return NextResponse.json(nextState);
+  } catch (error) {
+    // Persistence can fail loud (e.g. read-only FS) — return a structured error
+    // instead of a bare empty 500. Workflow progress is user state, not a sourced
+    // claim, so the One-Law is unaffected; we fabricate nothing.
+    console.error("[science/workflow POST] error:", error);
+    return NextResponse.json(
+      { error: "Failed to persist workflow state." },
+      { status: 500 }
+    );
+  }
 }

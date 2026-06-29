@@ -23,3 +23,6 @@ export { createMCSDSConfig } from "./mc-sds";
 // Import SUS and MIST-20 for unified access
 export { createSUSConfig } from "./sus";
 // MIST-20 is already integrated into the assessment page
+
+// CMQ — Conspiracy Mentality Questionnaire (BRAINS Layer A; Bruder et al. 2013)
+export { createCMQConfig, CMQ_ARABIC_ADAPTATION_PENDING, CMQ_ARABIC_NOTICE, CMQ_BAND_LABEL } from "./cmq";

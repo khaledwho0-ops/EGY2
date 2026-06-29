@@ -25,6 +25,7 @@ import { createMHLSConfig } from "@/data/instruments/mhls";
 import { createBriefRCOPEConfig } from "@/data/instruments/brief-rcope";
 import { createGHSQConfig } from "@/data/instruments/ghsq";
 import { createMCSDSConfig } from "@/data/instruments/mc-sds";
+import { createCMQConfig } from "@/data/instruments/cmq";
 import { INSTRUMENT_READINESS } from "@/data/research/instrument-readiness";
 import { getAssessmentScienceContext } from "@/data/research/scientific-intelligence";
 import type { AssessmentConfig } from "@/components/assessment/assessment-engine";
@@ -67,6 +68,21 @@ export default function AssessmentPage() {
       description:
         "Rate 20 headlines as REAL or FAKE. Measures veracity discernment, naivete, and distrust.",
       citation: "Maertens et al. (2024)",
+    },
+    {
+      id: "cmq",
+      name: "CMQ-5",
+      fullName: "Conspiracy Mentality Questionnaire",
+      icon: <ShieldCheck size={20} />,
+      accent: "var(--accent-purple)",
+      mvp: "DeepReal",
+      items: 5,
+      time: "1-2 min",
+      alpha: "α ≈ .85",
+      phases: ["pre", "post"],
+      description:
+        "Rate 5 statements from 0% to 100% certainty. Measures generic conspiracy mentality — validated across English, German & Turkish (N=7,766). Arabic shown as a comprehension translation.",
+      citation: "Bruder et al. (2013)",
     },
     {
       id: "mhls",
@@ -151,6 +167,10 @@ export default function AssessmentPage() {
         return createMIST20Config("pre");
       case "mist20-post":
         return createMIST20Config("post");
+      case "cmq-pre":
+        return createCMQConfig("pre");
+      case "cmq-post":
+        return createCMQConfig("post");
       case "mhls-pre":
         return createMHLSConfig("pre");
       case "mhls-post":

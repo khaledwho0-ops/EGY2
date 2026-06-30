@@ -152,8 +152,17 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Run all 5 agents in parallel with NVIDIA NIM primary
-    const agentPromises = AGENT_PROFILES.map(async (agent) => {
+    // DEMO LATENCY CAP: run only the 3 strongest, most-distinct agents in
+    // parallel (Source Hunter → origin/Patient-Zero, Bias Detector →
+    // manipulation/fallacies, Arabic Linguist → Egyptian dialect & religious
+    // text). These are the first 3 profiles, so they stay POSITIONALLY ALIGNED
+    // with the calling page's fixed 5-slot label list (it indexes agents[] by
+    // position, not agentId). The page maps over a fixed array and tolerates a
+    // shorter agents[] — the remaining slots simply render empty.
+    const ACTIVE_AGENTS = AGENT_PROFILES.slice(0, 3);
+
+    // Run the active agents in parallel with NVIDIA NIM primary
+    const agentPromises = ACTIVE_AGENTS.map(async (agent) => {
       const startTime = Date.now();
       try {
         // Build agent-specific JSON prompt
@@ -165,7 +174,10 @@ export async function POST(request: NextRequest) {
         try {
           const { data: nvidiaData } = await nvidiaFirstGenerateJSON(agentPrompt, {
             systemPrompt: SYSTEM_PROMPTS[agent.id],
-            maxTokens: 1000,
+            // DEMO LATENCY CAP: trimmed from 1000 → 600. Each agent's schema is
+            // a handful of short string fields; 600 tokens is ample and shaves
+            // generation time off every parallel call.
+            maxTokens: 600,
             temperature: 0.25,
           });
           if (nvidiaData) data = nvidiaData as Record<string, unknown>;
@@ -253,9 +265,9 @@ export async function POST(request: NextRequest) {
     // on whatever the other agents found. No hang past the Vercel wall.
     const agentResults = await Promise.all(
       agentPromises.map((p, i) =>
-        withTimeout<AgentResult>(p, 40000, {
-          agentId: AGENT_PROFILES[i].id,
-          findings: 'Agent timed out (>40s). Verdict synthesised from the agents that completed in time.',
+        withTimeout<AgentResult>(p, 15000, {
+          agentId: ACTIVE_AGENTS[i].id,
+          findings: 'Agent timed out (>15s). Verdict synthesised from the agents that completed in time.',
           confidence: 0,
           sources: [],
           timestamp: Date.now(),
@@ -278,18 +290,19 @@ export async function POST(request: NextRequest) {
     let verdictProvider = 'NVIDIA NIM';
 
     try {
-      const verdictPrompt = `You are the Chief Verdict Officer of the Angry Debunkers AI system. Synthesize findings from 5 specialized agents into a FINAL verdict.\n\nClaim: "${claim.trim()}"\n\nAgent Findings:\n${combinedFindings}\n\nReturn ONLY valid JSON:\n{"verdict":"TRUE|FALSE|MISLEADING|UNVERIFIED|PARTIALLY_TRUE","explanation":"Clear 2-3 sentence verdict explanation in English","explanation_ar":"شرح الحكم بالعربية في جملتين","layers_detected":["layer1","layer2"],"manipulationScore":0.0-1.0,"recommendedAction_ar":"ماذا يجب أن يفعل القارئ؟"}`;
+      const verdictPrompt = `You are the Chief Verdict Officer of the Angry Debunkers AI system. Synthesize findings from the specialized agents into a FINAL verdict.\n\nClaim: "${claim.trim()}"\n\nAgent Findings:\n${combinedFindings}\n\nReturn ONLY valid JSON:\n{"verdict":"TRUE|FALSE|MISLEADING|UNVERIFIED|PARTIALLY_TRUE","explanation":"Clear 2-3 sentence verdict explanation in English","explanation_ar":"شرح الحكم بالعربية في جملتين","layers_detected":["layer1","layer2"],"manipulationScore":0.0-1.0,"recommendedAction_ar":"ماذا يجب أن يفعل القارئ؟"}`;
 
-      // 12s soft timeout so the verdict step can't blow the rest of the
-      // request's budget. If it does time out, the catch below falls back
-      // to Gemini, then to a deterministic confidence-weighted verdict.
+      // DEMO LATENCY CAP: verdict maxTokens trimmed 600 → 450 and soft timeout
+      // tightened 12s → 8s so the synthesis step can't blow the request budget.
+      // If it does time out, the catch below falls back to Gemini, then to a
+      // deterministic confidence-weighted verdict.
       const { data: nvidiaVerdict } = await withTimeout(
         nvidiaFirstGenerateJSON(verdictPrompt, {
-          systemPrompt: 'You are the Chief Verdict Officer synthesizing 5 AI agents. Return ONLY valid JSON.',
-          maxTokens: 600,
+          systemPrompt: 'You are the Chief Verdict Officer synthesizing the AI agents. Return ONLY valid JSON.',
+          maxTokens: 450,
           temperature: 0.1,
         }),
-        12000,
+        8000,
         { data: null }
       );
 

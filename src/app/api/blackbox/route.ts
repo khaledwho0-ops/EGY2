@@ -41,7 +41,7 @@ export async function POST(req: Request) {
     // fetch(`${origin}/api/search/evidence`), deadlocked the single-process dev
     // server. aggregateEvidence is the same retrieval (Cohere-reranked), in-process.
     const { aggregateEvidence } = await import("@/lib/evidence/aggregate");
-    const papers = await aggregateEvidence(query, { max: 6 }).catch(() => []);
+    const papers = await aggregateEvidence(query, { max: 4 }).catch(() => []);
 
     const papersContext = papers.map((p: { title?: string; sourceName?: string; summary?: string; url?: string; accessTier?: string }) =>
       `Title: ${p.title}\nJournal/Source: ${p.sourceName}\nSummary: ${p.summary}\nURL: ${p.url}\nAccess Tier: ${p.accessTier}`
@@ -72,7 +72,7 @@ Return JSON with: results (array with type/risk/desc), verdict, confidence, expl
     // ── PRIMARY: NVIDIA NIM with multi-layered anonymous analyst system prompt ──
     const { data: nvidiaData, provider } = await nvidiaFirstGenerateJSON(nvidiaUserPrompt, {
       systemPrompt: blackboxSystemPrompt,
-      maxTokens: 1500,
+      maxTokens: 900,
       temperature: 0.2,
     });
 

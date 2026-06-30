@@ -19,7 +19,15 @@ export async function GET(request: Request) {
   try {
     const apiKey = process.env.GOOGLE_FACTCHECK_API_KEY;
     if (!apiKey) {
-      return ERR.notConfigured("Google Fact Check");
+      // Optional source: when the key is absent, return an empty-but-valid
+      // result (HTTP 200) so callers don't treat this optional layer as broken.
+      // One-Law: empty is correct when unconfigured — never fabricate fact-checks.
+      return NextResponse.json({
+        ok: true,
+        configured: false,
+        results: [],
+        note: "Google Fact Check not configured",
+      });
     }
 
     const normalized = await withSearchCache(

@@ -27,44 +27,29 @@ export async function POST(req: Request) {
     // ═══ NVIDIA NIM — ADVANCED WHATSAPP ANALYSIS ═══
     const systemPrompt = `You are an expert NLP forensics engine specializing in WhatsApp rumor transmission, bot pattern detection, and Arabic disinformation analysis. Always respond with valid JSON only, no markdown.`;
 
+    // LATENCY: only request the fields the UI actually consumes. Generated
+    // output tokens dominate latency on this route, so we keep the required
+    // JSON to score + the three indicator arrays + bilingual summary. Each
+    // array is capped to ≤3 concise items to bound output length.
     const nvidiaPrompt = `Analyze this WhatsApp message for manipulation, disinformation, and emotional triggers:
 
 "${text}"
 
-Return ONLY this JSON structure:
+Return ONLY this JSON structure (max 3 short items per array, no extra keys):
 {
-  "claims": [
-    {
-      "text": "extracted claim text",
-      "rating": "verified|false|misleading|unverified",
-      "confidence": 0.0-1.0,
-      "explanation": "why this rating"
-    }
-  ],
   "score": 0-100,
   "botPatterns": ["pattern1", "pattern2"],
   "emotionalFraming": ["hook1", "hook2"],
   "urgencyIndicators": ["indicator1", "indicator2"],
-  "emotionalManipulationTriggers": [
-    {
-      "trigger": "trigger name",
-      "triggerAr": "اسم المشغل",
-      "severity": "low|medium|high",
-      "description": "how it manipulates"
-    }
-  ],
-  "arabicRebuttal": "جاهز للصق في واتساب: رد قصير ومقنع بالعربية (2-3 جمل بدون مصطلحات تقنية)",
-  "englishRebuttal": "Ready-to-paste WhatsApp rebuttal in English (2-3 sentences, no jargon)",
-  "overallVerdict": "SAFE|SUSPICIOUS|DANGEROUS",
   "summary": {
-    "en": "English diagnostic report summary (2-3 sentences)",
-    "ar": "ملخص التقرير التشخيصي بالعربية (2-3 جمل)"
+    "en": "English diagnostic summary (1-2 sentences)",
+    "ar": "ملخص تشخيصي بالعربية (جملة أو جملتان)"
   }
 }`;
 
     const { data: nvidiaResult, provider } = await nvidiaFirstGenerateJSON(nvidiaPrompt, {
       systemPrompt,
-      maxTokens: 1200,
+      maxTokens: 600,
       temperature: 0.2,
     });
 
@@ -93,6 +78,7 @@ AUDIT REQUIREMENTS:
     const { object: result } = await rotatingGenerateObject({
       schema: WhatsappSchema,
       prompt: geminiPrompt,
+      maxOutputTokens: 600,
     });
 
     return NextResponse.json({

@@ -84,16 +84,19 @@ Return ONLY this JSON structure:
   }
 }`;
 
-    // FAIL-FAST: cap the rotator call (NVIDIA-550B last slot can stall ~20s+) so the
-    // route degrades to the graceful !data path below instead of hanging to maxDuration.
+    // FAIL-FAST: cap the rotator call so the route degrades to the graceful !data
+    // path below instead of hanging. The MegaRotator already enforces a 15s internal
+    // ceiling (NVIDIA removed), so a 25s race just added dead slack — tighten to 14s
+    // to keep the whole route under the ~15s demo budget. maxTokens lowered 2000→1400:
+    // the 8-layer JSON fits comfortably and shorter generations return faster.
     const { data, provider, raw } = await Promise.race([
       nvidiaFirstGenerateJSON(userPrompt, {
         systemPrompt,
-        maxTokens: 2000,
+        maxTokens: 1400,
         temperature: 0.2,
       }),
       new Promise<{ data: null; provider: string; raw: string }>((resolve) =>
-        setTimeout(() => resolve({ data: null, provider: 'timeout', raw: '' }), 25_000)
+        setTimeout(() => resolve({ data: null, provider: 'timeout', raw: '' }), 14_000)
       ),
     ]);
 

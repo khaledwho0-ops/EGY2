@@ -126,6 +126,19 @@ function buildSlots(): ProviderSlot[] {
   // const nvidiaKeys = [env("NVIDIA_API_KEY"), env("NVIDIA_API_KEY_2"), env("NVIDIA_API_KEY_3"), env("NVIDIA_API_KEY_4"), env("NVIDIA_API_KEY_5")].filter(Boolean) as string[];
   // for (const key of nvidiaKeys) slots.push({ provider: "NVIDIA", build: () => createOpenAICompatible({ name: "nvidia-nim", baseURL: "https://integrate.api.nvidia.com/v1", headers: { Authorization: `Bearer ${key}` } })("nvidia/nemotron-3-ultra-550b-a55b") });
 
+  // ── Demo-speed ordering ──────────────────────────────────────────────
+  // Lead with the FASTEST proven providers so every rotator-backed AI endpoint
+  // (blackbox, agents, islamic/*, sovo, nlp/arabic, live-deception, …) answers
+  // in ~2-5s instead of waiting on a slow big-JSON first hop. Groq (llama-3.3-70b)
+  // is the fastest + most reliable here; Cerebras is also very fast. GLM stays
+  // near the lead (the user's preferred provider); Gemini + the rest trail as
+  // quality/quota fallbacks. Array.sort is stable, so multi-key order within a
+  // single provider is preserved.
+  const SPEED_PRIORITY: Record<string, number> = {
+    Groq: 0, Cerebras: 1, "GLM-CF": 2, Gemini: 3, SambaNova: 4, Together: 5, OpenRouter: 6,
+  };
+  slots.sort((a, b) => (SPEED_PRIORITY[a.provider] ?? 50) - (SPEED_PRIORITY[b.provider] ?? 50));
+
   return slots;
 }
 

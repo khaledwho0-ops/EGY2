@@ -115,14 +115,16 @@ function buildSlots(): ProviderSlot[] {
   const samKey = env("SAMBANOVA_API_KEY");
   if (samKey) slots.push({ provider: "SambaNova", build: () => createOpenAICompatible({ name: "sambanova", baseURL: "https://api.sambanova.ai/v1", headers: { Authorization: `Bearer ${samKey}` } })("Meta-Llama-3.3-70B-Instruct") });
 
-  // ⑦ NVIDIA NIM — LAST (Nemotron 550B is slow; only used if everything else fails)
-  const nvidiaKeys = [
-    env("NVIDIA_API_KEY"), env("NVIDIA_API_KEY_2"), env("NVIDIA_API_KEY_3"),
-    env("NVIDIA_API_KEY_4"), env("NVIDIA_API_KEY_5"),
-  ].filter(Boolean) as string[];
-  for (const key of nvidiaKeys) {
-    slots.push({ provider: "NVIDIA", build: () => createOpenAICompatible({ name: "nvidia-nim", baseURL: "https://integrate.api.nvidia.com/v1", headers: { Authorization: `Bearer ${key}` } })("nvidia/nemotron-3-ultra-550b-a55b") });
-  }
+  // ⑦ NVIDIA NIM — WIPED OUT of the rotator pool.
+  // The Nemotron-3 550B is the strongest reasoner but is FAR too slow for
+  // serverless: a single attempt can run ~50s and 504 the route (this is what
+  // broke /api/blackbox and slowed /api/agents/investigate to 52s). It is
+  // intentionally NOT a rotator slot — the fast providers above serve every call
+  // in 2-8s. (Routes that explicitly want 550B streaming can still use the direct
+  // getActiveNvidiaModel() path, which builds from env keys, not from SLOTS.)
+  // To re-enable as a true last-resort, uncomment:
+  // const nvidiaKeys = [env("NVIDIA_API_KEY"), env("NVIDIA_API_KEY_2"), env("NVIDIA_API_KEY_3"), env("NVIDIA_API_KEY_4"), env("NVIDIA_API_KEY_5")].filter(Boolean) as string[];
+  // for (const key of nvidiaKeys) slots.push({ provider: "NVIDIA", build: () => createOpenAICompatible({ name: "nvidia-nim", baseURL: "https://integrate.api.nvidia.com/v1", headers: { Authorization: `Bearer ${key}` } })("nvidia/nemotron-3-ultra-550b-a55b") });
 
   return slots;
 }
@@ -134,7 +136,7 @@ const SLOTS = buildSlots();
 // only collects page data; it never actually calls the rotator).
 // The runtime path below still fails LOUD per the One-Law when actually used.
 if (SLOTS.length > 0) {
-  console.log(`[MegaRotator v8] ✅ ${SLOTS.length} slots (Gemini-first, NVIDIA-last): ${SLOTS.map((s) => s.provider).join(", ")}`);
+  console.log(`[MegaRotator v9] ✅ ${SLOTS.length} fast slots (NVIDIA-550B removed — too slow for serverless): ${SLOTS.map((s) => s.provider).join(", ")}`);
 } else {
   console.warn("[MegaRotator v8] ⚠️ No API keys configured — calls will fail at request time with UNVERIFIED (One-Law: never fabricate). Set GEMINI_API_KEY / GROQ_API_KEY / etc. in Vercel env vars to enable AI features.");
 }
@@ -173,11 +175,11 @@ function setCooldown(idx: number, ms: number) {
 
 // ── GENERIC ROTATION CORE — shared by object + text generation ──
 // Per-attempt hard ceiling: abandon a single stalled slot instead of letting it
-// hang the whole call. Generous (28s) so legitimate slow Gemini big-JSON answers
-// survive (the platform stays Gemini-first for quality), but a truly-stuck slot —
-// e.g. the NVIDIA-550B last resort or a network stall — is dropped so the rotator
-// advances to the next slot rather than hanging 30s+.
-const ATTEMPT_TIMEOUT_MS = 28_000;
+// hang the whole call. 15s comfortably covers a legitimate slow Gemini/Groq
+// big-JSON answer (typically 3-8s) while dropping a truly-stuck slot fast so the
+// rotator advances. (Lowered from 28s now that the deliberately-slow NVIDIA-550B
+// slot is removed — there is no longer a slow slot worth waiting 28s for.)
+const ATTEMPT_TIMEOUT_MS = 15_000;
 
 async function rotate<T>(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

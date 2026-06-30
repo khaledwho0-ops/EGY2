@@ -177,7 +177,7 @@ export async function POST(request: NextRequest) {
             // DEMO LATENCY CAP: trimmed from 1000 → 600. Each agent's schema is
             // a handful of short string fields; 600 tokens is ample and shaves
             // generation time off every parallel call.
-            maxTokens: 600,
+            maxTokens: 350,
             temperature: 0.25,
           });
           if (nvidiaData) data = nvidiaData as Record<string, unknown>;
@@ -265,7 +265,7 @@ export async function POST(request: NextRequest) {
     // on whatever the other agents found. No hang past the Vercel wall.
     const agentResults = await Promise.all(
       agentPromises.map((p, i) =>
-        withTimeout<AgentResult>(p, 15000, {
+        withTimeout<AgentResult>(p, 10000, {
           agentId: ACTIVE_AGENTS[i].id,
           findings: 'Agent timed out (>15s). Verdict synthesised from the agents that completed in time.',
           confidence: 0,
@@ -299,10 +299,10 @@ export async function POST(request: NextRequest) {
       const { data: nvidiaVerdict } = await withTimeout(
         nvidiaFirstGenerateJSON(verdictPrompt, {
           systemPrompt: 'You are the Chief Verdict Officer synthesizing the AI agents. Return ONLY valid JSON.',
-          maxTokens: 450,
+          maxTokens: 300,
           temperature: 0.1,
         }),
-        8000,
+        6000,
         { data: null }
       );
 

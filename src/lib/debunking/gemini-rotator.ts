@@ -193,6 +193,12 @@ function setCooldown(idx: number, ms: number) {
 // rotator advances. (Lowered from 28s now that the deliberately-slow NVIDIA-550B
 // slot is removed — there is no longer a slow slot worth waiting 28s for.)
 const ATTEMPT_TIMEOUT_MS = 15_000;
+// Hard wall-clock cap on an ENTIRE rotate() call (across every slot attempt AND
+// the cooldown waits between them). Guarantees no rotator-backed endpoint can
+// hang past ~22s even when many slots are simultaneously cooling down under
+// load — the caller's catch/fallback then handles it fast instead of the route
+// stalling toward a 45-60s 504.
+const ROTATE_TOTAL_BUDGET_MS = 22_000;
 
 async function rotate<T>(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -202,8 +208,12 @@ async function rotate<T>(
   const errors: string[] = [];
   let attempts = 0;
   const maxAttempts = SLOTS.length * 2;
+  const startedAt = Date.now();
 
   while (attempts < maxAttempts) {
+    if (Date.now() - startedAt > ROTATE_TOTAL_BUDGET_MS) {
+      throw new Error(`[MegaRotator] total budget ${ROTATE_TOTAL_BUDGET_MS}ms exceeded. Errors: ${errors.join(" | ").slice(0, 400)}`);
+    }
     attempts++;
     let nextIdx = -1;
     let shortestWait = Infinity;
@@ -218,8 +228,9 @@ async function rotate<T>(
     if (nextIdx === -1) throw new Error("[MegaRotator] No slots available.");
 
     if (shortestWait > 0) {
-      if (shortestWait > 65_000) {
-        throw new Error(`[MegaRotator] All slots cooling down >65s. Errors: ${errors.join(" | ").slice(0, 500)}`);
+      const budgetLeft = ROTATE_TOTAL_BUDGET_MS - (Date.now() - startedAt);
+      if (shortestWait > budgetLeft) {
+        throw new Error(`[MegaRotator] all slots cooling beyond the ${Math.ceil(ROTATE_TOTAL_BUDGET_MS / 1000)}s budget. Errors: ${errors.join(" | ").slice(0, 400)}`);
       }
       console.warn(`[MegaRotator] 🔄 waiting ${Math.ceil(shortestWait / 1000)}s for ${SLOTS[nextIdx].provider}...`);
       await sleep(shortestWait);

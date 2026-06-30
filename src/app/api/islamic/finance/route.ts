@@ -1,15 +1,8 @@
 import { NextResponse } from "next/server";
-import { z } from "zod";
-import { rotatingGenerateObject } from "@/lib/debunking/gemini-rotator";
+import { nvidiaFirstGenerateJSON } from "@/lib/ai/nvidia-first";
 
 export const runtime = "nodejs";
-
-const FinanceSchema = z.object({
-  isCompliant: z.boolean().nullable().describe("true if fully compliant with AAOIFI, false if non-compliant, null if a grey/debated area."),
-  confidence: z.number().min(0).max(100).describe("Confidence score of the compliance audit (0-100)."),
-  explanation: z.string().describe("Scholarly explanation citing specific AAOIFI standards or classic Fiqh al-Muamalat principles."),
-  issues: z.array(z.string()).describe("List of specific compliance issues (e.g., presence of Riba, excessive Gharar, speculative Maysir).")
-});
+export const maxDuration = 30;
 
 export async function POST(req: Request) {
   try {
@@ -30,14 +23,31 @@ AUDIT PROTOCOL:
 4. Reference AAOIFI guidelines specifically if relevant (e.g., AAOIFI Shariah Standard on Sukuk, Murabaha, Gold, or digital assets).
 5. Address grey areas like cryptocurrencies, staking, or options trading with nuance and scholarly difference of opinion.`;
 
-    const { object: result } = await rotatingGenerateObject({
-      schema: FinanceSchema,
-      prompt,
-    });
+    // Fast TEXT path (Groq-first via the rotator) + JSON parse — NOT structured
+    // generateObject. Groq/most fast slots don't support strict json_schema mode,
+    // which forced this route onto slow structured-only providers (21s → hit the
+    // 22s rotator cap → 500). Text + parse keeps it ~5s and never 500s.
+    const jsonPrompt = `${prompt}\n\nReturn ONLY a valid JSON object (no markdown, no code fences) with EXACTLY this shape:\n{"isCompliant": true | false | null, "confidence": 0-100, "explanation": "scholarly explanation citing AAOIFI standards / Fiqh al-Muamalat", "issues": ["specific compliance issue", "..."]}`;
+    const { data } = await nvidiaFirstGenerateJSON<{ isCompliant: boolean | null; confidence: number; explanation: string; issues: string[] }>(
+      jsonPrompt,
+      { systemPrompt: "You are a certified Shariah Auditor (AAOIFI). Return ONLY valid JSON.", maxTokens: 700, temperature: 0.2 },
+    );
+
+    if (!data) {
+      // Graceful — never a 500. One-Law: empty/honest when the model can't ground it.
+      return NextResponse.json({
+        isCompliant: null,
+        confidence: 0,
+        explanation: "تعذّر إكمال تدقيق الامتثال الآن — حاول تاني. / The compliance audit could not complete right now — please try again.",
+        issues: [],
+        note: "ai_unavailable",
+        timestamp: new Date().toISOString(),
+      });
+    }
 
     return NextResponse.json({
-      ...result,
-      timestamp: new Date().toISOString()
+      ...data,
+      timestamp: new Date().toISOString(),
     });
 
   } catch (error: any) {

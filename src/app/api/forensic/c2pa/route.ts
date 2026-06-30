@@ -43,7 +43,12 @@ function findSequence(data: Uint8Array, sequence: number[], startOffset = 0): nu
 
 export async function POST(request: Request) {
   try {
-    const formData = await request.formData();
+    let formData: FormData;
+    try {
+      formData = await request.formData();
+    } catch {
+      return NextResponse.json({ error: "Send multipart/form-data with a 'file' field or a 'url'." }, { status: 415 });
+    }
     const file = formData.get("file");
     const url = formData.get("url");
 

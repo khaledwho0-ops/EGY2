@@ -61,6 +61,12 @@ export async function POST(req: Request) {
   try {
     const { messages, data } = await req.json();
 
+    // Guard: a missing/empty messages array used to crash at [...messages]
+    // ("c is not iterable" → 500). Fail with a clear 400 instead.
+    if (!Array.isArray(messages) || messages.length === 0) {
+      return NextResponse.json({ error: "messages[] is required" }, { status: 400 });
+    }
+
     // Data can contain the fact-check context from the LangGraph analysis
     const contextStr = data && data.factCheckContext ? `[SYSTEM: Here is the factual evidence gathered by the LangGraph Swarm:]\n${JSON.stringify(data.factCheckContext)}\n\n[SYSTEM: Use this evidence to aggressively defend the truth if the user argues back.]` : '';
     

@@ -11,7 +11,12 @@ export const maxDuration = 60;
  */
 export async function POST(req: Request) {
   try {
-    const formData = await req.formData();
+    let formData: FormData;
+    try {
+      formData = await req.formData();
+    } catch {
+      return NextResponse.json({ ok: false, error: "Send multipart/form-data with a 'file' field (an image)." }, { status: 415 });
+    }
     const file = formData.get("file") as File | null;
     if (!file) return NextResponse.json({ error: "No image provided (field 'file')." }, { status: 400 });
     if (file.size > 10 * 1024 * 1024) return NextResponse.json({ error: "Image exceeds 10MB." }, { status: 400 });

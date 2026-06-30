@@ -11,7 +11,12 @@ export const runtime = 'nodejs';
  * so it is reported as a signal, never an absolute verdict. No fabricated scores. */
 export async function POST(req: Request) {
   try {
-    const formData = await req.formData();
+    let formData: FormData;
+    try {
+      formData = await req.formData();
+    } catch {
+      return NextResponse.json({ error: "Send multipart/form-data with a 'file' field." }, { status: 415 });
+    }
     const file = formData.get('file') as File | null;
     if (!file) return NextResponse.json({ error: 'No file provided.' }, { status: 400 });
 

@@ -92,11 +92,15 @@ Return ONLY this JSON structure:
     const { data, provider, raw } = await Promise.race([
       nvidiaFirstGenerateJSON(userPrompt, {
         systemPrompt,
-        maxTokens: 1400,
+        // The full 8-layer JSON (bilingual fact-sandwich + fallacies array +
+        // verdict + religious context) can run long; 1400 risked truncating the
+        // tail (layer8 hashtags / religiousContext) into an unparseable blob →
+        // empty fallback. 2000 gives safe headroom while still returning fast.
+        maxTokens: 2000,
         temperature: 0.2,
       }),
       new Promise<{ data: null; provider: string; raw: string }>((resolve) =>
-        setTimeout(() => resolve({ data: null, provider: 'timeout', raw: '' }), 14_000)
+        setTimeout(() => resolve({ data: null, provider: 'timeout', raw: '' }), 20_000)
       ),
     ]);
 

@@ -269,22 +269,25 @@ async function rotate<T>(
 export async function rotatingGenerateObject(args: Record<string, any>): Promise<any> {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { modelName, ...rest } = args;
-  const { value } = await rotate(
+  const { value, provider } = await rotate(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (model) => (generateObject as any)({ ...rest, model, maxRetries: 0, abortSignal: AbortSignal.timeout(ATTEMPT_TIMEOUT_MS) }),
     (msg) => /not support|json_schema|response_format|Unsupported|structured|tool_use|function|no object generated|did not match|match schema|invalid.*json/i.test(msg),
   );
+  // Attach the answering slot's provider so callers can report it accurately
+  // (the AI SDK's generateObject result object is extensible).
+  if (value && typeof value === 'object') (value as Record<string, unknown>).provider = provider;
   return value;
 }
 
 // ── PLAIN TEXT (powers every chatbot via nvidiaFirstGenerate) ──
 export async function rotatingGenerateText(
-  args: { prompt: string; system?: string; temperature?: number },
+  args: { prompt: string; system?: string; temperature?: number; maxTokens?: number },
 ): Promise<{ text: string; provider: string; model: string }> {
-  const { prompt, system, temperature } = args;
+  const { prompt, system, temperature, maxTokens } = args;
   const { value, provider } = await rotate(async (model) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const { text } = await (generateText as any)({ model, prompt, system, temperature: temperature ?? 0.4, maxRetries: 0, abortSignal: AbortSignal.timeout(ATTEMPT_TIMEOUT_MS) });
+    const { text } = await (generateText as any)({ model, prompt, system, temperature: temperature ?? 0.4, maxOutputTokens: maxTokens ?? 1200, maxTokens: maxTokens ?? 1200, maxRetries: 0, abortSignal: AbortSignal.timeout(ATTEMPT_TIMEOUT_MS) });
     if (!text || !String(text).trim()) throw new Error("empty completion");
     return String(text);
   });

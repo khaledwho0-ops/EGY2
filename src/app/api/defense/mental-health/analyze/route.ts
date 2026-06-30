@@ -10,20 +10,23 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Provide text to analyze' }, { status: 400 });
     }
 
-    const prompt = `You are a clinical psychology API expert. Analyze the provided text for manipulative sentiment, cognitive bias, and dark persuasion patterns. 
-    Respond ONLY with a JSON object in this exact format:
+    const prompt = `You are a clinical psychology API expert fluent in Arabic (including Egyptian dialect) and English. Analyze the text below for emotional distress, manipulative sentiment, cognitive bias, and dark persuasion patterns. The text may be in Arabic — read it carefully; never claim it is empty if characters are present.
+    Respond ONLY with a JSON object in this exact format (no markdown, no code fences):
     {
       "cognitiveLoadScore": number (0-100),
       "manipulationDetected": boolean,
       "detectedBiases": ["string"],
       "darkPatterns": ["string"],
-      "analysisSummary": "string (2-3 sentences)"
+      "emotionalDistress": boolean,
+      "analysisSummary": "string (2-3 sentences, in the same language as the input)"
     }
-    
-    Text to analyze:
-    "${text}"`;
 
-    const { data } = await nvidiaFirstGenerateJSON(prompt, { temperature: 0.3 });
+    Text to analyze:
+    """
+    ${text}
+    """`;
+
+    const { data } = await nvidiaFirstGenerateJSON(prompt, { temperature: 0.3, maxTokens: 700 });
 
     return NextResponse.json({
       success: true,

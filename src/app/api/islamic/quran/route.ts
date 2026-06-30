@@ -80,8 +80,13 @@ export async function GET(request: Request) {
             break;
           }
           default: {
-            // search by keyword
-            url = `${BASE_URL}/search/${encodeURIComponent(query)}/all/en.asad`;
+            // search by keyword. AlQuran's en.asad edition only matches English
+            // text, so an Arabic query (e.g. "الرحمن") returns nothing. Route
+            // Arabic queries to the Arabic edition (ar.muyassar) which carries the
+            // verse-level Arabic text/explanation, and keep English for the rest.
+            const isArabic = /[؀-ۿ]/.test(query);
+            const searchEdition = isArabic ? "ar" : "en.asad";
+            url = `${BASE_URL}/search/${encodeURIComponent(query)}/all/${searchEdition}`;
             break;
           }
         }
@@ -92,6 +97,12 @@ export async function GET(request: Request) {
           signal: AbortSignal.timeout(8000),
         });
 
+        // AlQuran returns 404 "NOT FOUND" for a search with zero matches. That is a
+        // valid empty result, NOT an upstream failure — surface empty results instead
+        // of throwing FETCH_FAILED (which the page renders as a hard error).
+        if (res.status === 404 && type !== "ayah" && type !== "surah" && type !== "tafsir") {
+          return { type: "search", count: 0, results: [] };
+        }
         if (!res.ok) throw new Error(`AlQuran API error: ${res.status}`);
         const data = await res.json();
 

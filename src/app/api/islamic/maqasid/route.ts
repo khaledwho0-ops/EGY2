@@ -22,9 +22,15 @@ const MAQASID_NAMES: Record<string, string> = {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { claim, maqsadId } = body as { claim?: string; maqsadId?: string };
+    // Accept `claim` (original field) OR `query` (what the page/UI actually sends).
+    const { claim: claimField, query, maqsadId } = body as {
+      claim?: string;
+      query?: string;
+      maqsadId?: string;
+    };
+    const claim = (claimField ?? query ?? "").toString();
 
-    if (!claim || typeof claim !== "string" || claim.trim().length === 0) {
+    if (!claim || claim.trim().length === 0) {
       return ERR.missingQuery();
     }
 

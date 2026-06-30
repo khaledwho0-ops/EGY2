@@ -11,10 +11,51 @@ const EXTERNAL_API_URL = "http://api.quran-tafseer.com/tafseer";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const surah = searchParams.get("surah");
-  const ayah = searchParams.get("ayah");
-  const tafsir = searchParams.get("tafsir") || "1";
-  const claim = searchParams.get("claim"); // optional claim to verify against this verse
+  return buildTafsirResponse({
+    surah: searchParams.get("surah"),
+    ayah: searchParams.get("ayah"),
+    tafsir: searchParams.get("tafsir") || "1",
+    claim: searchParams.get("claim"),
+  });
+}
+
+// POST mirrors GET — accepts { surah, ayah, tafsir?, claim? } OR a combined
+// { query | verseKey: "surah:ayah" }. Without this handler a POST (e.g. from the
+// audit harness or a form) returns an empty body. Real content, same shape as GET.
+export async function POST(request: Request) {
+  let body: Record<string, unknown> = {};
+  try {
+    body = await request.json();
+  } catch {
+    /* empty/invalid body → handled by missingQuery below */
+  }
+
+  let surah = body.surah != null ? String(body.surah) : null;
+  let ayah = body.ayah != null ? String(body.ayah) : null;
+
+  // Allow a combined "1:1" form via query/verseKey.
+  const combined = (body.verseKey ?? body.query) as string | undefined;
+  if ((!surah || !ayah) && typeof combined === "string" && combined.includes(":")) {
+    const [s, a] = combined.split(":");
+    surah = surah ?? s?.trim() ?? null;
+    ayah = ayah ?? a?.trim() ?? null;
+  }
+
+  return buildTafsirResponse({
+    surah,
+    ayah,
+    tafsir: body.tafsir != null ? String(body.tafsir) : "1",
+    claim: typeof body.claim === "string" ? body.claim : null,
+  });
+}
+
+async function buildTafsirResponse(params: {
+  surah: string | null;
+  ayah: string | null;
+  tafsir: string;
+  claim: string | null;
+}) {
+  const { surah, ayah, tafsir, claim } = params;
 
   if (!surah || !ayah) {
     return ERR.missingQuery();
@@ -77,15 +118,15 @@ Return ONLY valid JSON:
       {
         systemPrompt: "You are a qualified Islamic scholar with expertise in tafsir, usul al-fiqh, and Arabic linguistics. Respond only with valid JSON.",
         temperature: 0.2,
-        maxTokens: 1200,
+        maxTokens: 1800,
       }
     );
 
     return NextResponse.json({
       results,
       scholarlyContext,
-      source: "quran-tafseer.com + NVIDIA NIM Scholarly Analysis",
-      aiProvider: "NVIDIA NIM → Gemini fallback",
+      source: "quran-tafseer.com + AI Scholarly Analysis",
+      aiProvider: "MegaRotator (Groq-first)",
       disclaimer: "Tafsir and scholarly context provided for educational reference. Consult qualified scholars for religious guidance.",
     });
   } catch (error) {

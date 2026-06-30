@@ -161,7 +161,7 @@ export async function GET(request: Request) {
     return NextResponse.json({
       results,
       scholarlyContext,
-      provider: KALIMAT_API_URL ? "kalimat + NVIDIA NIM" : "composed-quran-hadith-fallback + NVIDIA NIM",
+      provider: KALIMAT_API_URL ? "kalimat + AI synthesis" : "composed-quran-hadith + AI synthesis",
       disclaimer: "Semantic religious search is for educational verification and context discovery only. It does not replace formal tafsir, fiqh, or pastoral guidance.",
     });
   } catch (error) {

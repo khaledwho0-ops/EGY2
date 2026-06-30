@@ -18,10 +18,32 @@ export const maxDuration = 60;
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { title, abstract, doi, authors, journal, year, claims } = body;
+    let { title, abstract, authors, journal, year } = body;
+    const { doi, claims } = body;
+
+    // If only a DOI was supplied, resolve real metadata from CrossRef before auditing.
+    // Previously this 400'd, leaving the DOI-only path (the most common one) dead.
+    if (!abstract && !title && doi) {
+      try {
+        const crossref = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`, {
+          headers: { 'User-Agent': 'EgyptianAwarenessLibrary/1.0 (mailto:contact@eal.org)' },
+          signal: AbortSignal.timeout(8000),
+        });
+        if (crossref.ok) {
+          const { message } = await crossref.json();
+          title = title || message.title?.[0];
+          abstract = abstract || (message.abstract || '').replace(/<[^>]+>/g, '').trim();
+          authors = authors || message.author?.map((a: { given?: string; family?: string }) => `${a.given || ''} ${a.family || ''}`.trim());
+          journal = journal || message['container-title']?.[0];
+          year = year || message['published-print']?.['date-parts']?.[0]?.[0] || message['published-online']?.['date-parts']?.[0]?.[0];
+        }
+      } catch (e) {
+        console.warn('[Paper Auditor] CrossRef DOI resolution failed:', e);
+      }
+    }
 
     if (!abstract && !title) {
-      return NextResponse.json({ error: 'At least title or abstract is required' }, { status: 400 });
+      return NextResponse.json({ error: 'At least title, abstract, or a resolvable DOI is required' }, { status: 400 });
     }
 
     const paperInfo = `

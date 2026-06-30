@@ -38,6 +38,9 @@ export async function nvidiaFirstGenerate(
       prompt,
       system: options.systemPrompt,
       temperature: options.temperature ?? 0.3,
+      // Default 1500 (> rotator's internal 1200) so bilingual Arabic+English JSON
+      // doesn't truncate; truncation → JSON.parse fails → null data → empty/fallback.
+      maxTokens: options.maxTokens ?? 1500,
     });
     return { text, provider, model };
   } catch (e) {

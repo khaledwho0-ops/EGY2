@@ -161,80 +161,13 @@ export async function POST(request: Request) {
       manipulationScore += 10;
     }
 
-    // ─── LAYER 4: AI Vision Analysis (NVIDIA NIM → Gemini fallback) ───
-    const nvidiaKey = process.env.NVIDIA_API_KEY;
+    // ─── LAYER 4: AI Vision Analysis (Gemini multimodal — Groq-first rotator has no vision model, so Gemini Vision is the real multimodal path here) ───
+    // NOTE: NVIDIA-550B-first was removed — it was a TEXT-ONLY metadata call (never saw the image)
+    // that added an 8s+ latency tax on every upload before the real Gemini Vision path could run.
     const geminiKey = process.env.GEMINI_API_KEY;
     let aiVisionUsed = false;
 
-    // Try NVIDIA NIM first (primary provider)
-    if (nvidiaKey && buffer.byteLength < 4 * 1024 * 1024 && !aiVisionUsed) {
-      try {
-        const base64 = Buffer.from(buffer).toString("base64");
-        const mimeType = isJPEG ? "image/jpeg" : isPNG ? "image/png" : isWebP ? "image/webp" : "image/jpeg";
-
-        // FIX (Pattern A/B): NVIDIA 550B streams slowly and can hang 30s+; bound it with a hard timeout so it fails loud and the Gemini multimodal fallback path can run. Model is NOT swapped — this is a text-only metadata call and the vision fallback below stays intact.
-        const nvidiaRes = await fetch("https://integrate.api.nvidia.com/v1/chat/completions", {
-          method: "POST",
-          signal: AbortSignal.timeout(8000),
-          headers: {
-            Authorization: `Bearer ${nvidiaKey}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            model: "nvidia/nemotron-3-ultra-550b-a55b",
-            messages: [
-              {
-                role: "user",
-                content: `You are a forensic image analysis expert. An image named "${filename}" (${detectedFormat}, ${(buffer.byteLength / 1024).toFixed(1)} KB) has the following metadata:
-- Software: ${software || "none"}
-- Device: ${[make, model].filter(Boolean).join(" ") || "unknown"}
-- Date Original: ${dateOriginal || "unknown"}
-- Date Modified: ${dateModified || "unknown"}
-- Current manipulation score: ${manipulationScore}/100
-
-Analyze these metadata patterns and provide your forensic assessment.
-
-Return ONLY a JSON object (no markdown):
-{
-  "manipulationProbability": number (0-100),
-  "findings": [
-    { "category": "string", "description": "string", "severity": "info|warning|critical" }
-  ],
-  "verdict": "authentic|suspicious|likely_manipulated|ai_generated"
-}`,
-              },
-            ],
-            max_tokens: 1024,
-            temperature: 0.3,
-          }),
-        });
-
-        if (nvidiaRes.ok) {
-          const nvidiaData = await nvidiaRes.json();
-          const nvidiaText = (nvidiaData.choices?.[0]?.message?.content || "").replace(/```json|```/g, "").trim();
-          const nvidiaResult = JSON.parse(nvidiaText);
-
-          if (nvidiaResult.findings && Array.isArray(nvidiaResult.findings)) {
-            for (const f of nvidiaResult.findings) {
-              findings.push({
-                category: `[NVIDIA AI] ${f.category}`,
-                description: f.description,
-                severity: f.severity === "critical" ? "critical" : f.severity === "warning" ? "warning" : "info",
-              });
-            }
-          }
-
-          if (typeof nvidiaResult.manipulationProbability === "number") {
-            manipulationScore = Math.round((manipulationScore + nvidiaResult.manipulationProbability) / 2);
-          }
-          aiVisionUsed = true;
-        }
-      } catch (nvidiaError) {
-        console.error("[Forensic Image] NVIDIA NIM analysis failed, falling back to Gemini:", nvidiaError);
-      }
-    }
-
-    // Fallback to Gemini Vision if NVIDIA didn't work
+    // Gemini Vision — primary (and only) multimodal analysis path. Actually sees the pixels.
     if (geminiKey && buffer.byteLength < 4 * 1024 * 1024 && !aiVisionUsed) {
       try {
         const { GoogleGenerativeAI } = await import("@google/generative-ai");
@@ -290,14 +223,14 @@ Return ONLY a JSON object (no markdown):
         console.error("[Forensic Image] Gemini Vision analysis failed:", aiError);
         findings.push({
           category: "AI Vision Unavailable",
-          description: "Both NVIDIA NIM and Gemini Vision analysis failed. Results are based on metadata and file structure analysis only.",
+          description: "Gemini Vision analysis failed. Results are based on metadata and file structure analysis only.",
           severity: "info",
         });
       }
-    } else if (!geminiKey && !nvidiaKey) {
+    } else if (!geminiKey) {
       findings.push({
         category: "AI Vision Unavailable",
-        description: "No NVIDIA or Gemini API key configured. Results are based on metadata and file structure analysis only.",
+        description: "No Gemini API key configured. Results are based on metadata and file structure analysis only.",
         severity: "info",
       });
     }

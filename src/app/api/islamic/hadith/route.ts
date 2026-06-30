@@ -18,6 +18,83 @@ function normalizeText(value: unknown): string | undefined {
   return typeof value === "string" ? value.trim() || undefined : undefined;
 }
 
+// The fawazahmed0 / hadithapi English editions are searched by English substring,
+// so a pure-Arabic query (e.g. "النية") never matches. Map common Arabic Islamic
+// concept terms to the English keyword that appears in the canonical translations.
+// This is a SEARCH-KEYWORD aid only — it never fabricates a hadith or its grade;
+// every returned hadith still comes verbatim from the real upstream edition.
+const ARABIC_TO_ENGLISH_KEYWORDS: Record<string, string> = {
+  "النية": "intention",
+  "نية": "intention",
+  "الأعمال": "actions",
+  "الصلاة": "prayer",
+  "صلاة": "prayer",
+  "الزكاة": "charity",
+  "زكاة": "charity",
+  "الصدقة": "charity",
+  "الصوم": "fasting",
+  "الصيام": "fasting",
+  "الحج": "pilgrimage",
+  "الرحمة": "mercy",
+  "رحمة": "mercy",
+  "العلم": "knowledge",
+  "علم": "knowledge",
+  "الإيمان": "faith",
+  "إيمان": "faith",
+  "الصبر": "patience",
+  "صبر": "patience",
+  "المغفرة": "forgiveness",
+  "الجار": "neighbor",
+  "الأخ": "brother",
+  "الظلم": "oppression",
+  "التوبة": "repentance",
+  "الكذب": "lie",
+  "الصدق": "truth",
+  "الأمانة": "trust",
+  "الحياء": "modesty",
+  "الجنة": "paradise",
+  "النار": "hellfire",
+  "الذكر": "remembrance",
+  "الدعاء": "supplication",
+  "القرآن": "quran",
+  "السلام": "peace",
+  "المؤمن": "believer",
+  "الأم": "mother",
+  "الوالدين": "parents",
+  "الجهاد": "striving",
+  "التوحيد": "oneness",
+};
+
+const ARABIC_RE = /[؀-ۿ]/;
+
+// Strip Arabic diacritics + tatweel so "النِّيَّة" matches map key "النية".
+function stripDiacritics(s: string): string {
+  return s.replace(/[ً-ْٰـ]/g, "");
+}
+
+// Returns the list of query strings to actually run against English editions.
+// For an Arabic query, returns the mapped English keyword(s); otherwise the query itself.
+function expandQueryForEnglishSearch(rawQuery: string): string[] {
+  if (!ARABIC_RE.test(rawQuery)) return [rawQuery];
+
+  const normalized = stripDiacritics(rawQuery).trim();
+  const englishTerms = new Set<string>();
+
+  // whole-string match first
+  if (ARABIC_TO_ENGLISH_KEYWORDS[normalized]) {
+    englishTerms.add(ARABIC_TO_ENGLISH_KEYWORDS[normalized]);
+  }
+  // then per-word
+  for (const word of normalized.split(/\s+/)) {
+    const en = ARABIC_TO_ENGLISH_KEYWORDS[word] ?? ARABIC_TO_ENGLISH_KEYWORDS[`ال${word}`];
+    if (en) englishTerms.add(en);
+  }
+
+  // If nothing mapped, fall back to the raw Arabic (some editions carry Arabic text)
+  // so we never silently search an empty string.
+  return englishTerms.size > 0 ? Array.from(englishTerms) : [rawQuery];
+}
+
 function toArray<T>(value: unknown): T[] {
   return Array.isArray(value) ? (value as T[]) : [];
 }
@@ -199,29 +276,37 @@ export async function GET(request: Request) {
     return ERR.missingQuery();
   }
 
+  // Arabic queries can't substring-match English editions — map to English keywords.
+  const searchTerms = expandQueryForEnglishSearch(query);
+
   try {
     const results = await withSearchCache(
       `hadith:${collection ?? "all"}:${query.toLowerCase()}`,
       1000 * 60 * 60,
       async () => {
-        const fawazResults = await fetchFawazahmed0Provider(query, collection);
-        if (fawazResults.length > 0) {
-          return fawazResults;
+        // Try each effective search term (English mappings of an Arabic query, or
+        // the raw query) until a provider returns hits.
+        for (const term of searchTerms) {
+          const fawazResults = await fetchFawazahmed0Provider(term, collection);
+          if (fawazResults.length > 0) {
+            return fawazResults;
+          }
         }
 
-        const configuredResults = await fetchConfiguredSunnahProvider(query, collection);
+        const configuredResults = await fetchConfiguredSunnahProvider(searchTerms[0], collection);
         if (configuredResults.length > 0) {
           return configuredResults;
         }
 
-        const fallbackResults = await fetchHadithApiProvider(query, collection);
+        const fallbackResults = await fetchHadithApiProvider(searchTerms[0], collection);
         return fallbackResults;
       }
     );
 
     if (results.length === 0) {
-      // Educational fallback: curated well-known hadiths for keyword search
-      const fallbackResults = searchLocalHadithFallback(query);
+      // Educational fallback: curated well-known hadiths for keyword search.
+      // Use the English-mapped term so an Arabic query still hits the dataset.
+      const fallbackResults = searchLocalHadithFallback(searchTerms.join(" "));
       if (fallbackResults.length > 0) {
         return NextResponse.json({
           results: fallbackResults,

@@ -4,6 +4,9 @@ import { rotatingGenerateObject } from "@/lib/debunking/gemini-rotator";
 import { CovoRouter as COVORouter } from "@/lib/orchestration/covo-router";
 
 export const runtime = "nodejs";
+// Evidence aggregation (5 academic APIs, up to ~22s) + LLM synthesis needs more
+// than the 10s Hobby default — give the orchestrator the full 60s budget.
+export const maxDuration = 60;
 
 const SovoSchema = z.object({
   verdict: z.enum(['DEBUNKED', 'MISLEADING', 'PARTIALLY_TRUE', 'UNVERIFIED', 'TRUE']),
@@ -49,12 +52,15 @@ export async function POST(req: Request) {
     // Run the structural heuristic parser
     const baseAnalysis = await COVORouter.analyzeQuery(query);
 
-    // Call external evidence APIs in parallel. BUG FIX: each call is now bounded by
-    // an 8s timeout so a single slow/blocked sub-route can never hang the whole
-    // orchestrator (the old "takes too long"). On timeout we fail soft to [] and the
-    // synthesizer falls back to established scientific/scholarly consensus.
+    // Call external evidence APIs in parallel. Each call is bounded by a timeout
+    // so a single slow/blocked sub-route can never hang the whole orchestrator.
+    // BUG FIX: the old 8s cap was BELOW the evidence aggregator's real latency
+    // (it fans out to 5 academic APIs and routinely takes 12-14s), so EVERY run
+    // timed out → results:[] → citations:[] even though real Tier-A/B journal
+    // hits existed. Raised to 22s (route maxDuration is 60s — plenty of budget)
+    // so genuine sources are actually retrieved and shown.
     const evFetch = (path: string) =>
-      fetch(`${origin}${path}?q=${encodeURIComponent(query)}`, { signal: AbortSignal.timeout(8000) })
+      fetch(`${origin}${path}?q=${encodeURIComponent(query)}`, { signal: AbortSignal.timeout(22000) })
         .then(r => r.json())
         .catch(() => ({ results: [] }));
     const [evidenceData, factcheckData, hadithData] = await Promise.all([
@@ -88,31 +94,50 @@ CRITICAL RULES:
 5. Socratic Deconstruction: Give the user a clear question to expose the lie's internal contradiction.
 `;
 
-    // ══ NVIDIA NIM Primary → Gemini MegaRotator Fallback ══
+    // ══ Schema-bound rotator (Groq-first) PRIMARY → free-text JSON fallback ══
+    // PRIMARY is the Zod-validated path so the response ALWAYS matches the exact
+    // SovoSchema the page renders (truth_sandwich / scientific_audit /
+    // islamic_audit / cognitive_defense). The old free-text-JSON primary
+    // returned a DIFFERENT, looser shape ({conclusion, analysis:{...}}) that the
+    // page can't fully consume — that's why fields looked stubby/partial.
     let result: unknown = null;
-    let aiProvider = 'NVIDIA NIM';
+    let aiProvider = 'Groq';
     try {
-      const { nvidiaFirstGenerateJSON } = await import('@/lib/ai/nvidia-first');
-      const { data } = await nvidiaFirstGenerateJSON(systemPrompt, {
-        systemPrompt: "You are SOVO Nexus, the world's most advanced dual-mandate (scientific + Islamic) fact-checking AI. Return ONLY valid JSON matching the full schema.",
-        maxTokens: 2500,
-        temperature: 0.15,
-      });
-      if (data) result = data;
-    } catch { /* fall through */ }
-
-    // Gemini fallback via mega-rotator
-    if (!result) {
-      aiProvider = 'Gemini MegaRotator';
-      const { object } = await rotatingGenerateObject({ schema: SovoSchema, prompt: systemPrompt });
+      const obj = await rotatingGenerateObject({ schema: SovoSchema, prompt: systemPrompt });
+      const { provider, ...object } = obj as Record<string, unknown>;
       result = object;
+      if (typeof provider === 'string') aiProvider = provider;
+    } catch {
+      // FALLBACK: free-text JSON (handles slots without structured-output support)
+      try {
+        const { nvidiaFirstGenerateJSON } = await import('@/lib/ai/nvidia-first');
+        const { data, provider } = await nvidiaFirstGenerateJSON(systemPrompt, {
+          systemPrompt: "You are SOVO Nexus, the world's most advanced dual-mandate (scientific + Islamic) fact-checking AI. Return ONLY valid JSON matching the full schema.",
+          maxTokens: 2500,
+          temperature: 0.15,
+        });
+        if (data) {
+          result = data;
+          aiProvider = provider || 'Rotator';
+        }
+      } catch { /* result stays null → handled below */ }
     }
+
+    // Never spread null — if every provider failed, return a One-Law-safe
+    // UNVERIFIED skeleton (no fabricated sources) rather than crashing.
+    const safeResult: Record<string, unknown> = (result && typeof result === 'object')
+      ? (result as Record<string, unknown>)
+      : {
+          verdict: 'UNVERIFIED',
+          verdict_explanation_ar: 'تعذّر إكمال التحليل من مزوّدي الذكاء الاصطناعي في الوقت المتاح. يُرجى المحاولة مرة أخرى.',
+          verdict_explanation_en: 'AI synthesis could not be completed in the available time. Please try again.',
+        };
 
     return NextResponse.json({
       type: "SYNTHESIS_COMPLETE",
       aiProvider,
       data: {
-        ...(result as Record<string, unknown>),
+        ...safeResult,
         covoAnalysis: baseAnalysis,
         citations: [
           ...(evidenceData.results || []).map((w: any) => ({ title: w.title, url: w.url, type: 'science' })),

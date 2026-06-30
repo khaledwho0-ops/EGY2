@@ -161,38 +161,46 @@ export async function POST(request: NextRequest) {
     // shorter agents[] — the remaining slots simply render empty.
     const ACTIVE_AGENTS = AGENT_PROFILES.slice(0, 3);
 
-    // Run the active agents in parallel with NVIDIA NIM primary
+    // Run the active agents in parallel. PRIMARY path is the SCHEMA-BOUND
+    // rotator (Groq-first → Gemini → ...): generateObject with each agent's
+    // Zod schema forces on-topic, well-typed output. The old "free-text JSON,
+    // parse-by-hand" primary let the model drift wildly off-topic (e.g.
+    // returning a UAE-politics analysis for a pyramids/aliens claim) because
+    // nothing constrained the shape — that was the garbage we saw live.
     const agentPromises = ACTIVE_AGENTS.map(async (agent) => {
       const startTime = Date.now();
       try {
-        // Build agent-specific JSON prompt
-        const agentPrompt = `${SYSTEM_PROMPTS[agent.id]}\n\nClaim to investigate: "${claim.trim()}"\n\nReturn a JSON object with your analysis. Be specific, evidence-based, and focus on the Egyptian context.`;
-
-        // Try NVIDIA first
         let data: Record<string, unknown> | null = null;
-        let agentProvider = 'NVIDIA NIM';
-        try {
-          const { data: nvidiaData } = await nvidiaFirstGenerateJSON(agentPrompt, {
-            systemPrompt: SYSTEM_PROMPTS[agent.id],
-            // DEMO LATENCY CAP: trimmed from 1000 → 600. Each agent's schema is
-            // a handful of short string fields; 600 tokens is ample and shaves
-            // generation time off every parallel call.
-            maxTokens: 350,
-            temperature: 0.25,
-          });
-          if (nvidiaData) data = nvidiaData as Record<string, unknown>;
-        } catch { /* fall through */ }
+        let agentProvider = 'Groq';
 
-        // Gemini fallback
-        if (!data) {
-          agentProvider = 'Gemini';
+        // PRIMARY: schema-validated structured generation (Groq-first rotator).
+        try {
           const result = await rotatingGenerateObject({
             system: SYSTEM_PROMPTS[agent.id],
-            prompt: `Investigate this claim:\n\n"${claim.trim()}"`,
+            prompt: `Investigate ONLY this exact claim and nothing else:\n\n"${claim.trim()}"\n\nFocus on the Egyptian/Middle-Eastern context. Stay strictly on this claim.`,
             schema: SCHEMAS[agent.id],
           });
           data = result.object as Record<string, unknown>;
+          if (result.provider) agentProvider = result.provider;
+        } catch { /* fall through to free-text */ }
+
+        // FALLBACK: free-text JSON via the rotator (only if structured failed —
+        // some slots don't support json_schema/structured output).
+        if (!data) {
+          agentProvider = 'Rotator';
+          const agentPrompt = `${SYSTEM_PROMPTS[agent.id]}\n\nClaim to investigate: "${claim.trim()}"\n\nReturn a JSON object with your analysis. Be specific, evidence-based, and focus ONLY on this exact claim in the Egyptian context.`;
+          const { data: jsonData, provider } = await nvidiaFirstGenerateJSON(agentPrompt, {
+            systemPrompt: SYSTEM_PROMPTS[agent.id],
+            maxTokens: 900,
+            temperature: 0.2,
+          });
+          if (jsonData) {
+            data = jsonData as Record<string, unknown>;
+            agentProvider = provider || 'Rotator';
+          }
         }
+
+        if (!data) throw new Error('No structured output from any provider');
 
         const confidence = typeof data.confidence === 'number' ? data.confidence : 0.7;
 
@@ -265,9 +273,9 @@ export async function POST(request: NextRequest) {
     // on whatever the other agents found. No hang past the Vercel wall.
     const agentResults = await Promise.all(
       agentPromises.map((p, i) =>
-        withTimeout<AgentResult>(p, 10000, {
+        withTimeout<AgentResult>(p, 22000, {
           agentId: ACTIVE_AGENTS[i].id,
-          findings: 'Agent timed out (>15s). Verdict synthesised from the agents that completed in time.',
+          findings: 'Agent timed out. Verdict synthesised from the agents that completed in time.',
           confidence: 0,
           sources: [],
           timestamp: Date.now(),
@@ -287,7 +295,7 @@ export async function POST(request: NextRequest) {
     let verdictExplanation = 'Could not determine verdict from agent findings.';
     let verdictExplanationAr = 'لم يتمكن النظام من إصدار حكم واضح.';
     let layersDetected: string[] = [];
-    let verdictProvider = 'NVIDIA NIM';
+    let verdictProvider = 'Rotator';
 
     try {
       const verdictPrompt = `You are the Chief Verdict Officer of the Angry Debunkers AI system. Synthesize findings from the specialized agents into a FINAL verdict.\n\nClaim: "${claim.trim()}"\n\nAgent Findings:\n${combinedFindings}\n\nReturn ONLY valid JSON:\n{"verdict":"TRUE|FALSE|MISLEADING|UNVERIFIED|PARTIALLY_TRUE","explanation":"Clear 2-3 sentence verdict explanation in English","explanation_ar":"شرح الحكم بالعربية في جملتين","layers_detected":["layer1","layer2"],"manipulationScore":0.0-1.0,"recommendedAction_ar":"ماذا يجب أن يفعل القارئ؟"}`;
@@ -299,11 +307,11 @@ export async function POST(request: NextRequest) {
       const { data: nvidiaVerdict } = await withTimeout(
         nvidiaFirstGenerateJSON(verdictPrompt, {
           systemPrompt: 'You are the Chief Verdict Officer synthesizing the AI agents. Return ONLY valid JSON.',
-          maxTokens: 300,
+          maxTokens: 500,
           temperature: 0.1,
         }),
-        6000,
-        { data: null }
+        12000,
+        { data: null, provider: 'timeout', raw: '' }
       );
 
       if (nvidiaVerdict) {

@@ -20,8 +20,9 @@ export async function POST(request: Request) {
 
     // ── NVIDIA NIM Egyptian Dialect & Manipulation Analysis ──
     let deepAnalysis = null;
+    let deepProvider = "none";
     if (deep) {
-      const { data } = await nvidiaFirstGenerateJSON(
+      const { data, provider } = await nvidiaFirstGenerateJSON(
         `Analyze this Arabic/Egyptian text for misinformation manipulation signals:
 "${text.substring(0, 600)}"
 
@@ -44,16 +45,17 @@ Return ONLY valid JSON:
         {
           systemPrompt: "You are an expert in Arabic linguistics and Egyptian media manipulation. Analyze text for manipulation signals. Return ONLY valid JSON.",
           temperature: 0.2,
-          maxTokens: 800,
+          maxTokens: 900,
         }
       );
       deepAnalysis = data;
+      deepProvider = provider;
     }
 
     const response = NextResponse.json({
       ...result,
       deepAnalysis,
-      aiProvider: "NVIDIA NIM",
+      aiProvider: deepProvider,
     });
 
     // If risk flags are detected, add urgent header for client-side crisis panel

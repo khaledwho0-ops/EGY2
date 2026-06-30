@@ -165,11 +165,13 @@ const FALLACY_PATTERNS: FallacyPattern[] = [
     /(?:رجل\s*(?:ال)?قش|حجة?\s*(?:ال)?قش)/i,
   ]},
   { id: "F23", patterns: [
-    /(?:he|she|they)(?:'s|'re|\s+is|\s+are)\s+(?:funded|paid|sponsored|biased|corrupt)/i,
+    /(?:he|she|they)(?:'s|'re|\s+is|\s+are)\s+(?:funded|paid|sponsored|biased|corrupt|overweight|fat|stupid|ignorant|uneducated|crazy|a\s+hypocrite|just\s+a)/i,
+    /(?:can(?:'?t|not)\s+trust|don'?t\s+trust|why\s+(?:listen\s+to|believe))\s+(?:that|this|the|him|her|them)?\s*\w*\s*(?:about|on|when)?\s*\w*[\s,—-]+(?:he|she|they|because\s+(?:he|she|they))/i,
     /ad\s+hominem/i,
     /(?:attack(?:ing)?)\s+(?:the\s+)?(?:person|character|source)\s+(?:instead|rather\s+than|not)\s+(?:the\s+)?(?:argument|evidence|data|point)/i,
-    /(?:هو|هي|هم|دول)\s*(?:بيتدفعلهم|ماخدين\s*فلوس|بتوع\s*شركات)/i,
+    /(?:هو|هي|هم|دول)\s*(?:بيتدفعلهم|ماخدين\s*فلوس|بتوع\s*شركات|تخين|سمين|غبي|جاهل|بيكذب)/i,
     /(?:اهاجم|بيهاجم|هاجم)\s*(?:ال)?(?:شخص|واحد)\s*(?:مش|ولا)\s*(?:ال)?(?:حجة?|كلام|رأي)/i,
+    /(?:ما\s*ت)?صدق(?:ش)?\s*(?:ال)?(?:دكتور|راجل|واحد).*(?:عشان|لأن)\s*(?:هو)/i,
   ]},
   { id: "F24", patterns: [
     /(?:millions?|everyone|everybody|most\s+people|so\s+many)\s+(?:use|believe|do|take|trust|support|follow)/i,
@@ -180,10 +182,11 @@ const FALLACY_PATTERNS: FallacyPattern[] = [
   ]},
   { id: "F25", patterns: [
     /(?:either|it(?:'?s)?\s+either)\s+.*\s+or\s+/i,
-    /false\s+dilemma/i,
+    /false\s+(?:dilemma|dichotomy)/i,
     /(?:only|just)\s+(?:two|2)\s+(?:options?|choices?|ways?)/i,
     /(?:يا\s*.*\s*يا\s*)/i,
-    /(?:مفيش\s*(?:غير|إلا)\s*(?:حل|اختيار|طريق)\s*(?:واحد|اتنين))/i,
+    /(?:إما|اما)\s+.*\s+(?:أو|او)\s+/i,
+    /(?:مفيش|ما\s*في|مافيش)\s*(?:غير|إلا)?\s*(?:حل|اختيار|طريق|بديل)\s*(?:واحد|اتنين|تاني|آخر)/i,
   ]},
 
   // ── ISLAMIC FALLACIES ──

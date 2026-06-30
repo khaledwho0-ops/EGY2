@@ -25,6 +25,69 @@ import {
 } from "@/lib/ai/output-enforcer";
 import { aggregateEvidence } from "@/lib/evidence/aggregate";
 import { rerankBy } from "@/lib/ai/cohere-rerank";
+import { aiGenerate, translateText } from "@/lib/ai/providers";
+
+/** Does the text contain Arabic script? */
+function hasArabic(text: string): boolean {
+  return /[؀-ۿݐ-ݿ]/.test(text);
+}
+
+/**
+ * Build the set of search queries used against the English-first academic
+ * APIs (OpenAlex / Semantic Scholar / Europe PMC / DOAJ / arXiv / CORE).
+ *
+ * THE BUG THIS FIXES: a verbatim Arabic claim (e.g. "الليمون على الريق يعالج
+ * السرطان") returns ZERO hits from these English-keyword databases, so the
+ * One-Law enforcer saw 0 admissible sources and labelled EVERY real false
+ * health claim "UNVERIFIED" — even though real Tier-A debunking papers exist
+ * (search "lemon cancer" → 6 Tier-A journal hits).
+ *
+ * Fix: when the claim is Arabic, derive English search keywords first (LLM
+ * rotator, Groq/Gemini-first; HF opus-mt translation as a fallback), and
+ * search with BOTH the English keywords AND the original text. This invents
+ * NO sources — it only lets the retriever FIND the genuine ones. Pure best
+ * effort: every step fails safe to the original claim.
+ */
+async function buildSearchQueries(claim: string): Promise<string[]> {
+  const queries = new Set<string>([claim]);
+  if (!hasArabic(claim)) return [...queries];
+
+  // (1) Preferred: LLM extracts concise English search keywords (subject +
+  //     intervention + outcome), which match academic-DB indexing far better
+  //     than a literal machine translation of a whole sentence.
+  try {
+    const { text } = await aiGenerate(
+      `Extract 3-6 concise ENGLISH search keywords (scientific/medical terms preferred) that capture the SUBJECT of this claim so it can be looked up in English academic databases. Output ONLY the keywords on one line, space-separated, no punctuation, no quotes, no explanation.\n\nClaim: "${claim}"`,
+      "You convert a claim in any language into English database search keywords. Output keywords only.",
+    );
+    const keywords = text
+      .replace(/["'`#*\-\n\r]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(" ")
+      .filter((w) => /[a-zA-Z]/.test(w))
+      .slice(0, 8)
+      .join(" ")
+      .trim();
+    if (keywords.length >= 3) queries.add(keywords);
+  } catch {
+    /* fall through to translation */
+  }
+
+  // (2) Fallback: direct AR→EN machine translation of the claim.
+  if (queries.size < 2) {
+    try {
+      const translated = await translateText(claim, "ar-en");
+      if (translated && /[a-zA-Z]/.test(translated) && translated.trim().length >= 3) {
+        queries.add(translated.trim());
+      }
+    } catch {
+      /* keep original-only */
+    }
+  }
+
+  return [...queries];
+}
 
 export interface PipelineSource {
   url: string;
@@ -49,7 +112,19 @@ export async function runVerificationPipeline(
   const timeoutMs = opts.timeoutMs ?? 8000;
 
   // (a) Reliable academic/fact sources — trust their vetted trustBand as tier.
-  const academic = await aggregateEvidence(claim, { max, rerank: false }).catch(() => []);
+  //     Search with English keywords too (Arabic claims otherwise 0-hit the
+  //     English-first academic APIs → false "UNVERIFIED"). See buildSearchQueries.
+  const queries = await buildSearchQueries(claim).catch(() => [claim]);
+  const academicBatches = await Promise.all(
+    queries.map((q) => aggregateEvidence(q, { max, rerank: false }).catch(() => [])),
+  );
+  // Merge across queries, dedup by URL (keep the first/strongest occurrence).
+  const seen = new Set<string>();
+  const academic = academicBatches.flat().filter((r) => {
+    if (!r.url || seen.has(r.url)) return false;
+    seen.add(r.url);
+    return true;
+  });
   const academicCandidates: CandidateSource[] = academic.map((r) => ({
     title: r.title,
     url: r.url,
